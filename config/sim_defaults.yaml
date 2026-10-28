@@ -1,0 +1,37 @@
+# Clearance simulation and verdict defaults. Units: SI.
+verdict:
+  success_min: 0.90          # min simulated success at normal traffic, conservative geometry bound
+  density: normal
+  bound: conservative
+
+sim:
+  dt_s: 0.1
+  timeout_factor: 3.0        # episode timeout = factor x nominal path time
+  safety_stop_distance_m: 0.5
+  replan_after_blocked_s: 10.0
+  near_miss_distance_m: 0.5
+  near_miss_min_speed_mps: 0.3
+  pedestrian_radius_m: 0.25
+  shard_size: 25
+  default_p90_scan_err_m: 0.03
+
+analysis_budget:
+  max_robots: 6
+  densities: [quiet, normal, peak]
+  bounds: [optimistic, nominal, conservative]
+  episodes: 100
+
+investigation:
+  max_steps: 8
+  max_experiments_per_robot: 6
+  probe_episodes: 30
+
+optimizer:
+  single_move_episodes: 30
+  confirm_episodes: 200
+  top_k_confirm: 5
+  pair_top_k: 3
+  max_translation_m: 0.30
+  translation_step_m: 0.05
+  rotations_deg: [0, 15, -15]
+  egress_min_width_m: 0.9

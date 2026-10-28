@@ -1,0 +1,771 @@
+{
+  "$defs": {
+    "Accuracy": {
+      "properties": {
+        "median_abs_err_m": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Median Abs Err M"
+        },
+        "method": {
+          "default": "estimated",
+          "enum": [
+            "tape_check",
+            "estimated",
+            "reference_ground_truth"
+          ],
+          "title": "Method",
+          "type": "string"
+        },
+        "p90_abs_err_m": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "P90 Abs Err M"
+        }
+      },
+      "title": "Accuracy",
+      "type": "object"
+    },
+    "ClearZone": {
+      "description": "Floor the operator confirmed clear on site: inside it, unseen (UNKNOWN) cells count as free.\nMeasured obstacles (OCCUPIED cells) are never cleared by a zone.",
+      "properties": {
+        "confirmed_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confirmed At"
+        },
+        "confirmed_by": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confirmed By"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "polygon": {
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Polygon",
+          "type": "array"
+        },
+        "reason": {
+          "default": "floor confirmed clear by operator",
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "polygon"
+      ],
+      "title": "ClearZone",
+      "type": "object"
+    },
+    "Floor": {
+      "properties": {
+        "bounds_polygon": {
+          "default": [],
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Bounds Polygon",
+          "type": "array"
+        },
+        "plane": {
+          "default": [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "items": {
+            "type": "number"
+          },
+          "title": "Plane",
+          "type": "array"
+        }
+      },
+      "title": "Floor",
+      "type": "object"
+    },
+    "Hazard": {
+      "properties": {
+        "confidence": {
+          "default": 0.5,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "frame_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Frame Refs",
+          "type": "array"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "source": {
+          "default": "vision_llm",
+          "title": "Source",
+          "type": "string"
+        },
+        "xy": {
+          "anyOf": [
+            {
+              "maxItems": 2,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Xy"
+        }
+      },
+      "required": [
+        "label"
+      ],
+      "title": "Hazard",
+      "type": "object"
+    },
+    "KeepoutZone": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "polygon": {
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Polygon",
+          "type": "array"
+        },
+        "reason": {
+          "default": "",
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "polygon"
+      ],
+      "title": "KeepoutZone",
+      "type": "object"
+    },
+    "Occupancy": {
+      "description": "PNG: 0 = occupied, 255 = free, 127 = unknown. Row 0 = max y (image convention, north up).\nCell (row r, col c) center = (origin_x + (c+0.5)*res, origin_y + (H - r - 0.5)*res).",
+      "properties": {
+        "height": {
+          "default": 0,
+          "title": "Height",
+          "type": "integer"
+        },
+        "height_band_m": {
+          "default": [
+            0.03,
+            2.0
+          ],
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Height Band M",
+          "type": "array"
+        },
+        "origin_xy": {
+          "default": [
+            0.0,
+            0.0
+          ],
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Origin Xy",
+          "type": "array"
+        },
+        "resolution_m": {
+          "default": 0.025,
+          "title": "Resolution M",
+          "type": "number"
+        },
+        "uri": {
+          "title": "Uri",
+          "type": "string"
+        },
+        "width": {
+          "default": 0,
+          "title": "Width",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "uri"
+      ],
+      "title": "Occupancy",
+      "type": "object"
+    },
+    "Pose2": {
+      "properties": {
+        "xyz": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Xyz",
+          "type": "array"
+        },
+        "yaw": {
+          "default": 0.0,
+          "title": "Yaw",
+          "type": "number"
+        }
+      },
+      "required": [
+        "xyz"
+      ],
+      "title": "Pose2",
+      "type": "object"
+    },
+    "Primitive": {
+      "properties": {
+        "confidence": {
+          "default": 1.0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "fragile": {
+          "default": false,
+          "title": "Fragile",
+          "type": "boolean"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "movable": {
+          "default": false,
+          "title": "Movable",
+          "type": "boolean"
+        },
+        "pose": {
+          "$ref": "#/$defs/Pose2"
+        },
+        "size": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Size",
+          "type": "array"
+        },
+        "source": {
+          "default": "auto",
+          "enum": [
+            "auto",
+            "user",
+            "reference"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "box",
+            "cylinder"
+          ],
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "label",
+        "pose",
+        "size"
+      ],
+      "title": "Primitive",
+      "type": "object"
+    },
+    "Threshold": {
+      "properties": {
+        "height_m": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Height M"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "segment": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "maxItems": 2,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "maxItems": 2,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            }
+          ],
+          "title": "Segment",
+          "type": "array"
+        },
+        "status": {
+          "default": "measured",
+          "enum": [
+            "measured",
+            "flagged_manual",
+            "user_entered"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "segment"
+      ],
+      "title": "Threshold",
+      "type": "object"
+    },
+    "TrafficModel": {
+      "description": "Output of J5 or user estimate. od_pairs: (from_zone, to_zone, weight).",
+      "properties": {
+        "heatmap_uri": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Heatmap Uri"
+        },
+        "od_pairs": {
+          "default": [],
+          "items": {
+            "maxItems": 3,
+            "minItems": 3,
+            "prefixItems": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Od Pairs",
+          "type": "array"
+        },
+        "persons_per_min": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "default": {
+            "normal": 6.0,
+            "peak": 14.0,
+            "quiet": 2.0
+          },
+          "title": "Persons Per Min",
+          "type": "object"
+        },
+        "source": {
+          "default": "user_estimated",
+          "enum": [
+            "observed",
+            "user_estimated"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "walk_speed_mps": {
+          "default": [
+            1.2,
+            0.25
+          ],
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Walk Speed Mps",
+          "type": "array"
+        },
+        "zones": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/TrafficZone"
+          },
+          "title": "Zones",
+          "type": "array"
+        }
+      },
+      "title": "TrafficModel",
+      "type": "object"
+    },
+    "TrafficZone": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "polygon": {
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Polygon",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "polygon"
+      ],
+      "title": "TrafficZone",
+      "type": "object"
+    },
+    "Waypoint": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "pickup",
+            "dock",
+            "dest",
+            "entrance",
+            "exit"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "xy": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Xy",
+          "type": "array"
+        },
+        "yaw": {
+          "default": 0.0,
+          "title": "Yaw",
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "xy",
+        "kind"
+      ],
+      "title": "Waypoint",
+      "type": "object"
+    }
+  },
+  "$id": "clearance/twin",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "accuracy": {
+      "$ref": "#/$defs/Accuracy",
+      "default": {
+        "median_abs_err_m": null,
+        "method": "estimated",
+        "p90_abs_err_m": null
+      }
+    },
+    "assets": {
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "default": {},
+      "title": "Assets",
+      "type": "object"
+    },
+    "clear_zones": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/ClearZone"
+      },
+      "title": "Clear Zones",
+      "type": "array"
+    },
+    "floor": {
+      "$ref": "#/$defs/Floor",
+      "default": {
+        "bounds_polygon": [],
+        "plane": [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ]
+      }
+    },
+    "geometry_source": {
+      "default": "scan",
+      "enum": [
+        "scan",
+        "reference"
+      ],
+      "title": "Geometry Source",
+      "type": "string"
+    },
+    "hazards": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Hazard"
+      },
+      "title": "Hazards",
+      "type": "array"
+    },
+    "keepout_zones": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/KeepoutZone"
+      },
+      "title": "Keepout Zones",
+      "type": "array"
+    },
+    "occupancy": {
+      "$ref": "#/$defs/Occupancy"
+    },
+    "primitives": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Primitive"
+      },
+      "title": "Primitives",
+      "type": "array"
+    },
+    "site_id": {
+      "title": "Site Id",
+      "type": "string"
+    },
+    "thresholds": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Threshold"
+      },
+      "title": "Thresholds",
+      "type": "array"
+    },
+    "traffic": {
+      "$ref": "#/$defs/TrafficModel",
+      "default": {
+        "heatmap_uri": null,
+        "od_pairs": [],
+        "persons_per_min": {
+          "normal": 6.0,
+          "peak": 14.0,
+          "quiet": 2.0
+        },
+        "source": "user_estimated",
+        "walk_speed_mps": [
+          1.2,
+          0.25
+        ],
+        "zones": []
+      }
+    },
+    "twin_id": {
+      "title": "Twin Id",
+      "type": "string"
+    },
+    "version": {
+      "default": 1,
+      "title": "Version",
+      "type": "integer"
+    },
+    "waypoints": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Waypoint"
+      },
+      "title": "Waypoints",
+      "type": "array"
+    }
+  },
+  "required": [
+    "twin_id",
+    "site_id",
+    "occupancy"
+  ],
+  "title": "Twin",
+  "type": "object"
+}

@@ -1,0 +1,123 @@
+{
+  "$defs": {
+    "VerdictCheck": {
+      "properties": {
+        "fact_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Fact Ids",
+          "type": "array"
+        },
+        "passed": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Passed"
+        },
+        "rule": {
+          "title": "Rule",
+          "type": "string"
+        },
+        "threshold": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Threshold"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "rule",
+        "passed"
+      ],
+      "title": "VerdictCheck",
+      "type": "object"
+    }
+  },
+  "$id": "clearance/verdict",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "as_is": {
+      "items": {
+        "$ref": "#/$defs/VerdictCheck"
+      },
+      "title": "As Is",
+      "type": "array"
+    },
+    "config": {
+      "additionalProperties": true,
+      "default": {},
+      "title": "Config",
+      "type": "object"
+    },
+    "label": {
+      "enum": [
+        "Cleared",
+        "Cleared with changes",
+        "Not cleared"
+      ],
+      "title": "Label",
+      "type": "string"
+    },
+    "main_reason": {
+      "title": "Main Reason",
+      "type": "string"
+    },
+    "required_changes": {
+      "default": [],
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Required Changes",
+      "type": "array"
+    },
+    "robot_id": {
+      "title": "Robot Id",
+      "type": "string"
+    },
+    "with_changes": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/VerdictCheck"
+      },
+      "title": "With Changes",
+      "type": "array"
+    }
+  },
+  "required": [
+    "robot_id",
+    "label",
+    "main_reason",
+    "as_is"
+  ],
+  "title": "Verdict",
+  "type": "object"
+}
