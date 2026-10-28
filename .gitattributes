@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.npy binary
+*.tflite binary
+*.pdf binary
+*.ps1 text eol=crlf
