@@ -1,0 +1,55 @@
+# Clearance GPU jobs (image: clearance-jobs-gpu): J2 reconstruction/fusion (Open3D, Depth Anything V2
+# Small), J3 Gaussian splat training (gsplat), J4 semantics (Grounding DINO + SAM 2), J5 traffic detection.
+# Runs on Nebius Serverless Jobs with a GPU platform (infra/jobs/recon.yaml: gpu-l40s-a 1gpu-8vcpu-32gb).
+#   docker build -f infra/Dockerfile.jobs-gpu -t clearance-jobs-gpu .
+#   docker run --rm --gpus all -e CLEARANCE_JOB_SPEC='{...}' -v "$PWD/data:/data" clearance-jobs-gpu task
+#
+# Base image: the CUDA image family used in the Nebius Serverless quickstart is
+# nvidia/cuda:13.1.1-runtime-ubuntu24.04 (docs/VERIFIED.md 2.8). gsplat compiles CUDA kernels against the
+# installed torch on first use, so this image uses the matching -devel flavour (nvcc). VERIFY:
+#   1) the devel tag exists for the same version, 2) the torch==2.14.1 wheel's CUDA major matches it.
+# Model weights are downloaded at run time into HF_HOME (container disk), never baked into the image.
+ARG CUDA_IMAGE=nvidia/cuda:13.1.1-devel-ubuntu24.04
+FROM ${CUDA_IMAGE}
+ARG SAM2_REF=main
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PYTHONPATH=/app \
+    CLEARANCE_DATA=/data \
+    HF_HOME=/cache/hf \
+    TORCH_EXTENSIONS_DIR=/cache/torch_extensions \
+    VIRTUAL_ENV=/opt/venv \
+    PATH=/opt/venv/bin:$PATH
+WORKDIR /app
+
+# Ubuntu 24.04 ships Python 3.12; we use deadsnakes 3.11 to match the rest of the project.
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends software-properties-common ca-certificates curl git \
+      libgl1 libglib2.0-0 libgomp1 \
+ && add-apt-repository -y ppa:deadsnakes/ppa \
+ && apt-get update \
+ && apt-get install -y --no-install-recommends python3.11 python3.11-venv python3.11-dev \
+ && python3.11 -m venv /opt/venv \
+ && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt requirements-cloud.txt requirements-gpu.txt ./
+RUN pip install --upgrade pip \
+ && pip install -r requirements-gpu.txt \
+ && pip install "git+https://github.com/facebookresearch/sam2.git@${SAM2_REF}"
+# SAM 2 has no release tags (THIRD_PARTY_LICENSES.md); pin SAM2_REF to a commit SHA for reproducible builds.
+
+COPY clearance_core/ clearance_core/
+COPY agents/ agents/
+COPY jobs/ jobs/
+COPY services/ services/
+COPY config/ config/
+COPY schemas/ schemas/
+COPY catalog/ catalog/
+COPY infra/nebius/ infra/nebius/
+COPY VERSION ./
+
+RUN mkdir -p /data /cache/hf /cache/torch_extensions
+ENTRYPOINT ["python", "/app/infra/nebius/entry.py"]
+CMD ["task"]
