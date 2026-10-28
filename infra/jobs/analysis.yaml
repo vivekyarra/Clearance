@@ -1,0 +1,19 @@
+# Nebius Serverless Job definition for dispatcher kind "analysis" (Clearance check: feasibility,
+# Monte Carlo batches, optimizer, Nemotron investigation, report). CPU only.
+image: ${CLEARANCE_IMAGE_JOBS_CPU}
+mode: task
+resources:
+  platform: cpu-d3              # AMD EPYC Genoa, all regions
+  preset: 16vcpu-64gb
+  timeout: 1h
+  disk_size: 30Gi               # docs: >= 20Gi for CPU-only workloads
+restart_policy: never
+volumes:
+  - s3://${CLEARANCE_S3_BUCKET}:/data:rw
+env:
+  CLEARANCE_DATA: /data
+  CLEARANCE_LLM_MODE: live
+  CLEARANCE_TAVILY_MODE: live
+env_secrets: {}                 # NEBIUS_API_KEY / TAVILY_API_KEY via SecretStash selectors
+submit_command: ["python", "infra/nebius/submit_job.py", "--kind", "{kind}", "--name", "{job_id}", "--image", "{image}", "--spec", "{spec_json}"]
+status_command: ["python", "infra/nebius/job_status.py", "--name", "{job_id}"]
