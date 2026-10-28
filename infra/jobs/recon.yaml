@@ -1,0 +1,20 @@
+# Nebius Serverless Job definition for dispatcher kind "recon" (J1 ingest + J2 reconstruct -> twin).
+# Read by services/api NebiusDispatcher (infra/jobs/<kind>.yaml) and by infra/nebius/submit_job.py.
+# Flags: https://docs.nebius.com/cli/reference/ai/job/create.md (docs/VERIFIED.md Section 2).
+# ${VAR} values are expanded by submit_job.py from the API container's environment.
+image: ${CLEARANCE_IMAGE_JOBS_GPU}
+mode: task
+resources:
+  platform: gpu-l40s-a          # L40S 48 GB, eu-north1 (Confirm with account: quota)
+  preset: 1gpu-8vcpu-32gb
+  timeout: 2h                   # docs: min 1h, max 168h
+  disk_size: 100Gi              # docs: >= 50Gi for GPU workloads
+restart_policy: never
+volumes:
+  - s3://${CLEARANCE_S3_BUCKET}:/data:rw    # results land in the same bucket the API reads
+env:
+  CLEARANCE_DATA: /data
+  CLEARANCE_LLM_MODE: live
+env_secrets: {}                 # e.g. NEBIUS_API_KEY: clearance-secrets (SecretStash selector)
+submit_command: ["python", "infra/nebius/submit_job.py", "--kind", "{kind}", "--name", "{job_id}", "--image", "{image}", "--spec", "{spec_json}"]
+status_command: ["python", "infra/nebius/job_status.py", "--name", "{job_id}"]

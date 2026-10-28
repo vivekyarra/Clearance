@@ -1,0 +1,34 @@
+# Clearance CPU jobs (image: clearance-jobs-cpu): simulation shards (J6), optimizer (J7) and the
+# Clearance check analysis job. Runs on Nebius Serverless Jobs with a cpu-d3 platform (infra/jobs/*.yaml).
+#   docker build -f infra/Dockerfile.jobs-cpu -t clearance-jobs-cpu .
+#   docker run --rm -e CLEARANCE_SHARD_SPEC="$(cat shard.json)" -v "$PWD/data:/data" clearance-jobs-cpu shard
+#   docker run --rm -e CLEARANCE_JOB_SPEC='{"job_id":...,"entrypoint":"module:fn","kwargs":{}}' clearance-jobs-cpu task
+# Modes (infra/nebius/entry.py): `shard` -> jobs.sim.api.run_shard(spec); `task` -> services.api.tasks.
+FROM python:3.11-slim
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PYTHONPATH=/app \
+    CLEARANCE_DATA=/data \
+    NUMBA_CACHE_DIR=/tmp/numba-cache
+WORKDIR /app
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends libglib2.0-0 ca-certificates \
+ && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt requirements-cloud.txt ./
+RUN pip install -r requirements-cloud.txt
+
+COPY clearance_core/ clearance_core/
+COPY agents/ agents/
+COPY jobs/ jobs/
+COPY services/ services/
+COPY config/ config/
+COPY schemas/ schemas/
+COPY catalog/ catalog/
+COPY infra/nebius/ infra/nebius/
+COPY VERSION ./
+
+RUN mkdir -p /data
+ENTRYPOINT ["python", "/app/infra/nebius/entry.py"]
+CMD ["shard"]

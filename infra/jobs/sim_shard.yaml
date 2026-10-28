@@ -1,0 +1,18 @@
+# Nebius Serverless Job definition for one simulation shard (J6): jobs.sim.api.run_shard(spec).
+# Fan-out: infra/nebius/submit_sim_shards.sh submits one job per shard; results are written to
+# spec["out_key"] in the bucket and merged with jobs.sim.api.merge_shards.
+image: ${CLEARANCE_IMAGE_JOBS_CPU}
+mode: shard
+resources:
+  platform: cpu-d3
+  preset: 4vcpu-16gb
+  timeout: 1h
+  disk_size: 20Gi
+restart_policy: on-failure
+preemptible: false              # true -> --preemptible --follows-spot-price (cheaper, can be stopped)
+volumes:
+  - s3://${CLEARANCE_S3_BUCKET}:/data:rw
+env:
+  CLEARANCE_DATA: /data
+submit_command: ["python", "infra/nebius/submit_job.py", "--kind", "{kind}", "--name", "{job_id}", "--image", "{image}", "--spec", "{spec_json}", "--mode", "shard"]
+status_command: ["python", "infra/nebius/job_status.py", "--name", "{job_id}"]

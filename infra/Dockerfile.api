@@ -1,0 +1,62 @@
+# Clearance API + built web console (image: clearance-api).
+#   docker build -f infra/Dockerfile.api -t clearance-api .            (from the repo root)
+#   docker run -p 8000:8000 clearance-api                               -> http://localhost:8000
+# Optional: --build-arg INSTALL_NEBIUS_CLI=1 adds the Nebius CLI so CLEARANCE_DISPATCHER=nebius can
+# submit Serverless Jobs (infra/jobs/*.yaml).
+
+# ---- web build ----
+FROM node:24-slim AS web
+WORKDIR /web
+COPY apps/web/package.json apps/web/package-lock.json ./
+RUN npm ci --no-audit --no-fund
+COPY apps/web/ ./
+RUN npm run build
+
+# ---- runtime ----
+FROM python:3.11-slim AS runtime
+ARG INSTALL_NEBIUS_CLI=0
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PYTHONPATH=/app \
+    CLEARANCE_DATA=/data \
+    CLEARANCE_WEB_DIST=/app/apps/web/dist \
+    CLEARANCE_LLM_MODE=offline \
+    CLEARANCE_TAVILY_MODE=offline
+WORKDIR /app
+
+# libgl/glib: OpenCV headless still links libglib; curl/jq: health checks and the Nebius CLI scripts.
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends libglib2.0-0 curl jq ca-certificates \
+ && rm -rf /var/lib/apt/lists/*
+# Installer URL from docs.nebius.com/cli/install. VERIFY the install location; we copy whatever binary it
+# installed onto PATH.
+RUN if [ "$INSTALL_NEBIUS_CLI" = "1" ]; then \
+      curl -sSL https://artifacts.nebius.cloud/cli/install.sh | bash \
+      && bin="$(find /root -type f -name nebius -perm -u+x 2>/dev/null | head -1)" \
+      && test -n "$bin" && cp "$bin" /usr/local/bin/nebius && nebius --help >/dev/null; \
+    fi
+
+COPY requirements.txt requirements-cloud.txt ./
+RUN pip install -r requirements-cloud.txt
+
+COPY clearance_core/ clearance_core/
+COPY agents/ agents/
+COPY jobs/ jobs/
+COPY services/ services/
+COPY config/ config/
+COPY schemas/ schemas/
+COPY catalog/ catalog/
+COPY sample_sites/ sample_sites/
+COPY infra/ infra/
+COPY VERSION ./
+COPY --from=web /web/dist/ apps/web/dist/
+
+# Runs as root so it can write to a bucket mounted at /data by Serverless AI (mount ownership is not
+# documented); the container runs on a VM dedicated to this endpoint.
+RUN mkdir -p /data
+VOLUME ["/data"]
+EXPOSE 8000
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s CMD curl -fsS http://127.0.0.1:8000/health || exit 1
+# --ws-max-size: WebSocket frames over 128 KiB are refused by uvicorn before the app reads them.
+CMD ["uvicorn", "services.api.main:app", "--host", "0.0.0.0", "--port", "8000", "--proxy-headers",      "--ws-max-size", "131072"]
