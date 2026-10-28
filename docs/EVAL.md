@@ -82,8 +82,9 @@ The DINERBOT T8 replay was then shown in AR on the iPhone, anchored to the same 
 ## 3. Reference Clearance checks (full pipeline, live models)
 
 Each check ran the whole pipeline in live mode (`CLEARANCE_LLM_MODE=live`, `CLEARANCE_TAVILY_MODE=live`) via
-`python scripts/release_proof.py --fresh-usage --force` (usage DB archived first, so `docs/PROOF.md` counts only
-this run): code candidate filters -> Nemotron Super candidate ordering (with live Tavily search) -> static
+`python scripts/release_proof.py --require-provider token_factory --fresh-usage --force` on 2026-10-28 (usage DB
+archived first, so `docs/PROOF.md` counts only this run; every Nemotron call was served by Nebius Token Factory):
+code candidate filters -> Nemotron Super candidate ordering (with live Tavily search) -> static
 feasibility on three geometry bounds -> Monte Carlo batches on a local process pool -> Nemotron Super investigation
 loop -> layout optimizer -> code verdicts (`clearance_core/verdict.py`) -> facts -> Clearance Report from the
 hybrid writer (code renders every table and verdict block; Nemotron Ultra writes the narrative sections, each
@@ -147,9 +148,8 @@ What the geometry did:
   the 2 legs through the kitchen door wait for the on-site measurement). With the serving spots in the aisle, every
   table waypoint is reachable for all four robots, including the 0.50 m DINERBOT T9 that previously had no pose at
   `T1`/`T3`. The DINERBOT T8 meets the success rule (100 % conservative), so it is Cleared with changes once `D1` is
-  measured within its limit. The optimizer ran on the DINERBOT T9 (move chair `CH4W` 0.05 m east: 60 % -> 74 %,
-  n=50, normal traffic, nominal bound; flagged not significant, so not recommended) and Bear Servi (no better move
-  found).
+  measured within its limit. The optimizer ran on the Keenon W3 (move chair `CH4W` 0.05 m east: 78 % -> 96 %,
+  n=50, normal traffic; flagged not significant, so not recommended) and Bear Servi (no better move found).
 - **Storeroom.** All four Class B robots pass the 0.78 m aisles statically (6/6 legs). Random clutter boxes and
   loading-door traffic cause the failures; the Pudu T300 and OTTO 100 stay above 90 % at normal traffic, both MiR
   robots reach 87.5 %. The optimizer found no layout change for either MiR.
@@ -160,19 +160,16 @@ What the geometry did:
 
 | site | robots simulated | batch episodes | wall time | candidates | feasibility | batches | investigation | optimizer | verdicts | report |
 |---|---|---|---|---|---|---|---|---|---|---|
-| ref_cafe | 4 | 1440 | 1958.4 s | 38.0 s | 10.0 s | 499.3 s | 96.7 s | 989.9 s | 95.4 s | 228.1 s |
-| ref_storeroom | 4 | 1440 | 1484.7 s | 35.5 s | 11.3 s | 1012.3 s | 49.8 s | 118.6 s | 0.1 s | 255.9 s |
-| ref_corridor | 6 | 2160 | 4948.6 s | 28.0 s | 11.0 s | 4536.3 s | 9.6 s | 7.8 s | 7.7 s | 332.7 s |
+| ref_cafe | 4 | 1440 | 3050.0 s | 75.0 s | 28.0 s | 1221.7 s | 202.5 s | 1257.7 s | 227.7 s | 27.6 s |
+| ref_storeroom | 4 | 1440 | 1409.2 s | 64.5 s | 32.4 s | 911.8 s | 151.6 s | 219.9 s | 0.3 s | 27.5 s |
+| ref_corridor | 6 | 2160 | 538.7 s | 9.9 s | 63.7 s | 406.1 s | 0.1 s | 0.6 s | 0.2 s | 56.7 s |
 
-The report stage now takes 228-333 s per site: the narrative sections are requested in parallel (4 at a time),
-each Ultra call takes 15-130 s. The single-pass writer of the previous run needed 234-356 s per site for one call.
+On Token Factory the report stage takes 28-57 s per site: the narrative sections are requested in parallel (4 at a
+time) and the median Nemotron Ultra call takes 6.9 s.
 
-These checks ran while other compute-heavy jobs at normal priority shared the machine (the checks ran at
-below-normal priority so they would not slow the API server of a concurrent phone test). The simulation stages are
-therefore 2-20 times slower than in the previous run (corridor batches 4536.3 s here vs 227.5 s there; the first
-corridor run of this proof, 494.5 s wall time and 232.4 s of batches, was repeated because its report metrics were
-not saved: with no investigation the writer had no analysis id; it now finds it from the saved facts pack). The
-wall times above are not a throughput measurement.
+Other compute-heavy jobs shared the machine during these checks, so the simulation stages vary from run to run;
+the wall times above are not a throughput measurement. The simulation results themselves use fixed seeds and match the
+previous run episode for episode.
 
 ### Simulation throughput
 
@@ -180,11 +177,11 @@ Measured over the batch stage (11 worker processes on 12 logical cores, one batc
 
 | site | episodes | batch stage | episodes / min |
 |---|---|---|---|
-| ref_cafe | 1440 | 499.3 s | 173.0 |
-| ref_storeroom | 1440 | 1012.3 s | 85.3 |
-| ref_corridor | 2160 | 4536.3 s | 28.6 |
+| ref_cafe | 1440 | 1221.7 s | 70.7 |
+| ref_storeroom | 1440 | 911.8 s | 94.8 |
+| ref_corridor | 2160 | 406.1 s | 319.1 |
 
-The previous run on a quieter machine measured 263.5, 220.9 and 569.6 episodes per minute for the same batches.
+An earlier run on a quieter machine measured 263.5, 220.9 and 569.6 episodes per minute for the same batches.
 
 ### Fact-check
 
@@ -194,18 +191,21 @@ The previous run on a quieter machine measured 263.5, 220.9 and 569.6 episodes p
 
 | report | first-pass errors, single-pass writer (previous run) | first-pass errors, hybrid writer (sum over narrative sections) | of which one runaway draft | regenerations | sentences removed | template fallbacks | published: numbers checked | published: errors | distinct fact tags |
 |---|---|---|---|---|---|---|---|---|---|
-| ref_cafe | 33 | 2 | none | 2 of 7 sections | 0 | none | 223 | 0 | 173 |
-| ref_storeroom | 41 | 171 | 165 (why Pudu T300) | 5 of 6 | 3 | none | 159 | 0 | 135 |
-| ref_corridor | 22 | 132 | 125 (trade-offs) | 6 of 8 | 2 | none | 222 | 0 | 191 |
+| ref_cafe | 33 | 3 | none | 3 of 7 sections | 0 | none | 254 | 0 | 192 |
+| ref_storeroom | 41 | 5 | none | 3 of 7 | 2 | none | 190 | 0 | 147 |
+| ref_corridor | 22 | 254 | 246 (trade-offs, 2,210 words) | 7 of 8 | 1 | none | 231 | 0 | 189 |
 
-- Without the two runaway drafts the first-pass errors are 2, 6 and 7 per report (33, 41 and 22 before). A runaway
-  draft repeats the section text until the output budget ends (9,338 and 8,980 output tokens over the two calls of
-  that section); the regeneration with the error list produced a clean section in both cases. The writer now also
-  tells the model the allowed length and sends back only the start of such a draft (unit-tested; not yet measured
-  in a live run).
+- Without the runaway draft the first-pass errors are 3, 5 and 8 per report (33, 41 and 22 with the single-pass
+  writer). The writer told the model the allowed length and sent back only the start of the runaway draft; the
+  regeneration produced a clean trade-offs section.
 - The remaining first-pass errors are `value_mismatch` (a number next to the tag of a neighbouring fact) and a few
-  `untagged_number` / `unit_mismatch`. Every section that failed was regenerated once; 5 sentences were removed in
+  `untagged_number` / `unit_mismatch`. Every section that failed was regenerated once; 3 sentences were removed in
   total, no section fell back to the template text.
+- In the first corridor report of this run, one regenerated section answered with the model's working notes
+  instead of section prose; the fact check removed every sentence with a number, but sentences without numbers
+  remained. The writer now uses the template text for any section answer more than twice its word budget or one
+  the fact check had to cut by more than 3 sentences (unit-tested), and the corridor report above was written
+  again with that rule, on Token Factory, from the same facts pack.
 - Required blocks are rendered by code and present in all three reports: the robot comparison table (one row per
   verdict, conservative-optimistic success ranges), a rule-check table per robot under its code verdict,
   "How we investigated", the Pinch Map summary, the recommended changes table, payback, hazards and manual checks,
@@ -217,29 +217,33 @@ The previous run on a quieter machine measured 263.5, 220.9 and 569.6 episodes p
 
 | site | robots investigated | experiments run | probe episodes | findings recorded |
 |---|---|---|---|---|
-| ref_cafe | 2 (Bear Servi, Keenon DINERBOT T9) | 1 | 30 | 0 |
-| ref_storeroom | 2 (MiR100, MiR250) | 0 | 0 | 0 |
+| ref_cafe | 2 (Bear Servi, Keenon W3) | 2 | 60 | 2 (both confirmed by probe) |
+| ref_storeroom | 2 (MiR100, MiR250) | 1 | 30 | 0 |
 | ref_corridor | 0 (every robot met the success rule) | 0 | 0 | 0 |
 
-- Cafe, DINERBOT T9: hypothesis "moving chair `CH4W` away from the top bottleneck widens the critical passage";
-  the probe moved `CH4W` (dx 0.5 m, dy 0.5 m): 100 % success (30 episodes) vs 48 % baseline, +52 points vs a probe
-  CI half-width of 6 points -> supported.
-- The Bear Servi, MiR100 and MiR250 loops used their 8 steps on evidence tools without running a probe; no loop
-  recorded a finding before the step limit.
+- Cafe, Bear Servi: hypothesis "moving chair `CH4W` away from the top-ranked bottleneck widens the narrow passage";
+  the probe moved `CH4W` (dx 0.5 m, dy 0.5 m): success 75 % -> 100 %, +25 points vs a probe CI half-width of
+  5.7 points -> supported, finding recorded.
+- Cafe, Keenon W3: same chair, moved dx 0.6 m, dy 0.5 m: success 70 % -> 100 %, +30 points vs 5.7 -> supported,
+  finding recorded.
+- Storeroom, MiR250: hypothesis "moving `PALLET1` away from the top pinch point opens the static no-path legs";
+  the probe moved `PALLET1` (dx 0.5 m, dy -0.5 m): inconclusive. The MiR100 loop used its 8 steps on evidence tools
+  without running a probe.
 
 ### Live model usage (from `docs/PROOF.md`)
 
-| tier | calls | failed | tokens in | tokens out | median latency |
-|---|---:|---:|---:|---:|---:|
-| Nemotron Super (candidate ordering, investigation) | 45 | 0 | 152,805 | 22,007 | 2.4 s |
-| Nemotron Ultra (report narrative sections) | 57 | 0 | 147,026 | 138,028 | 40.3 s |
-| total | 102 | 0 | 299,831 | 160,035 | |
+All on Nebius Token Factory:
 
-LLM calls by tier and site (attributed by analysis id): cafe super 19, ultra 9; storeroom super 20, ultra 11;
-corridor super 3, ultra 14. The other 23 Ultra and 3 Super calls in the usage table carry no analysis id: the first
-corridor run of this proof (before the analysis-id fix) and a concurrent Clearance check on the local API server,
-which writes to the same usage table. No call failed and no stage fell back to offline mode. Cost: the prices are
-not verified, so `docs/PROOF.md` shows "not metered".
+| tier | model | calls | failed | tokens in | tokens out | median latency | cost (list-price estimate) |
+|---|---|---:|---:|---:|---:|---:|---:|
+| Nemotron Super (candidate ordering, investigation) | `nvidia/Nemotron-3.5-Super-VL` | 39 | 0 | 140,729 | 17,633 | 2.5 s | 0.06 USD |
+| Nemotron Ultra (report narrative sections) | `nvidia/Nemotron-3-Ultra-550b-a55b` | 51 | 0 | 131,392 | 129,173 | 6.9 s | 0.52 USD |
+| total | | 90 | 0 | 272,121 | 146,806 | | 0.58 USD |
+
+LLM calls by tier and site (every call carries its analysis id): cafe super 20, ultra 10; storeroom super 17,
+ultra 10; corridor super 2, ultra 31 (two report passes, see Fact-check). No call failed and no stage fell back to
+offline mode. Cost uses the per-token prices in `config/models.yaml`; the Token Factory billing page is the
+authoritative figure. Three full reference checks cost well under 1 USD.
 
 ## 4. Next measurement step: on site (PLAN 15.3 and the gate's hardware half)
 
@@ -261,7 +265,7 @@ real room:
 ## How to reproduce
 
 ```bash
-PYTHONPATH=. python scripts/release_proof.py --fresh-usage --force
+PYTHONPATH=. python scripts/release_proof.py --require-provider token_factory --fresh-usage --force
 ```
 
 This archives the usage DB, runs the three checks in live mode, copies compact artifacts into `sample_sites/<site>/analyses/<id>/` (served by

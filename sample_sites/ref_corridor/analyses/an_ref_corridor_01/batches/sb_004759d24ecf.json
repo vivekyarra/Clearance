@@ -1,0 +1,44 @@
+{
+  "batch_id": "sb_004759d24ecf",
+  "twin_id": "twin_ref_corridor_v1",
+  "twin_version": 1,
+  "robot_id": "keenon_dinerbot_t8",
+  "task": {
+    "type": "delivery",
+    "sequence": [
+      "DOCK",
+      "PICKUP",
+      "O4",
+      "O3",
+      "O2",
+      "O1",
+      "DOCK"
+    ]
+  },
+  "density": "peak",
+  "geometry_bound": "optimistic",
+  "n_episodes": 40,
+  "seed_base": 1000,
+  "code_version": "5e14e66+sim-d77ef3d9a1",
+  "results": {
+    "success_rate": 0.925,
+    "min_gap_m": 0.10735,
+    "ci95": [
+      0.8013546984090248,
+      0.9741644432281419
+    ],
+    "median_mission_s": 96.9,
+    "near_miss_per_mission": 9.7,
+    "stops_per_mission": 13.675,
+    "fail_reasons": {
+      "no_path_static": 0,
+      "blocked_timeout": 1,
+      "collision": 2
+    },
+    "n_success": 37,
+    "n_episodes": 40
+  },
+  "episodes_uri": null,
+  "bottleneck_uri": null,
+  "wall_time_s": 101.774
+}

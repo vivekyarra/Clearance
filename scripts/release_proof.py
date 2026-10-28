@@ -387,7 +387,7 @@ def build_proof_md(rows: list[dict], config: dict, checks: list[dict], *, usage_
                 if t["unpriced"]:
                     cost += f" (lower bound, {t['unpriced']} unpriced)"
                 elif not t["price_verified"]:
-                    cost += " (price VERIFY)"
+                    cost += " (list-price estimate)"
             md.append(f"| {t['model_id']} |" + (f" {t['provider']} |" if show_provider else "")
                       + f" {t['calls']} | {t['failed']} | {_fmt_int(t['tokens_in'])} | {_fmt_int(t['tokens_out'])} "
                       f"| {t['median_latency_s']:.3f} | {cost} |")

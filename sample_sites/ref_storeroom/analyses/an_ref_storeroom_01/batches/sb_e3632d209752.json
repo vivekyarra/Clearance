@@ -1,0 +1,44 @@
+{
+  "batch_id": "sb_e3632d209752",
+  "twin_id": "twin_ref_storeroom_v1",
+  "twin_version": 1,
+  "robot_id": "pudu_t300",
+  "task": {
+    "type": "delivery",
+    "sequence": [
+      "DOCK",
+      "PICKUP",
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "DOCK"
+    ]
+  },
+  "density": "peak",
+  "geometry_bound": "optimistic",
+  "n_episodes": 40,
+  "seed_base": 1000,
+  "code_version": "5e14e66+sim-d77ef3d9a1",
+  "results": {
+    "success_rate": 1.0,
+    "min_gap_m": 0.03,
+    "ci95": [
+      0.9123754607496077,
+      1.0
+    ],
+    "median_mission_s": 127.3,
+    "near_miss_per_mission": 5.175,
+    "stops_per_mission": 7.35,
+    "fail_reasons": {
+      "no_path_static": 0,
+      "blocked_timeout": 0,
+      "collision": 0
+    },
+    "n_success": 40,
+    "n_episodes": 40
+  },
+  "episodes_uri": null,
+  "bottleneck_uri": null,
+  "wall_time_s": 223.996
+}

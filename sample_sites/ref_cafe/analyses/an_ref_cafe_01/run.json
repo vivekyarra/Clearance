@@ -56,28 +56,28 @@
     }
   },
   "status": "done",
-  "wall_time_s": 1958.4,
+  "wall_time_s": 3050.0,
   "stage_times_s": {
-    "candidates": 38.0,
-    "feasibility": 10.0,
-    "batches": 499.3,
-    "investigation": 96.7,
-    "optimizer": 989.9,
-    "verdicts": 95.4,
-    "report": 228.1
+    "candidates": 75.0,
+    "feasibility": 28.0,
+    "batches": 1221.7,
+    "investigation": 202.5,
+    "optimizer": 1257.7,
+    "verdicts": 227.7,
+    "report": 27.6
   },
   "batch_episodes": 1440,
-  "batch_stage_s": 499.3,
-  "episodes_per_min_batches": 173.0,
+  "batch_stage_s": 1221.7,
+  "episodes_per_min_batches": 70.7,
   "investigation": {
     "robots": [
       "bear_servi",
-      "keenon_dinerbot_t9"
+      "keenon_w3"
     ],
-    "experiments_run": 1,
-    "probe_episodes": 30,
-    "findings": 0,
-    "findings_confirmed": 0
+    "experiments_run": 2,
+    "probe_episodes": 60,
+    "findings": 2,
+    "findings_confirmed": 2
   },
   "factcheck": {
     "ok": true,
@@ -88,15 +88,15 @@
       "label": "Cleared with changes",
       "main_reason": "as-is: threshold D1 must be measured manually; cleared after measuring threshold D1 (holds only if it is within the robot's limit)"
     },
-    "keenon_dinerbot_t9": {
-      "label": "Not cleared",
-      "main_reason": "threshold D1 must be measured manually"
-    },
     "bear_servi": {
       "label": "Not cleared",
       "main_reason": "threshold D1 must be measured manually"
     },
     "keenon_w3": {
+      "label": "Not cleared",
+      "main_reason": "threshold D1 must be measured manually"
+    },
+    "keenon_dinerbot_t9": {
       "label": "Not cleared",
       "main_reason": "threshold D1 must be measured manually"
     }
@@ -106,5 +106,5 @@
   "machine": "Windows 10, Intel64 Family 6 Model 186 Stepping 3, GenuineIntel",
   "llm_mode": "live",
   "tavily_mode": "live",
-  "finished_at": "2026-10-28 01:56:24"
+  "finished_at": "2026-10-28 11:30:55"
 }

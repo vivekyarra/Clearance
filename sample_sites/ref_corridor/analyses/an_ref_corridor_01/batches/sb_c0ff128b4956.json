@@ -1,0 +1,56 @@
+{
+  "batch_id": "sb_c0ff128b4956",
+  "twin_id": "twin_ref_corridor_v1",
+  "twin_version": 1,
+  "robot_id": "bear_servi",
+  "task": {
+    "type": "delivery",
+    "sequence": [
+      "DOCK",
+      "PICKUP",
+      "O4",
+      "O3",
+      "O2",
+      "O1",
+      "DOCK"
+    ]
+  },
+  "density": "normal",
+  "geometry_bound": "nominal",
+  "n_episodes": 40,
+  "seed_base": 1000,
+  "code_version": "5e14e66+sim-d77ef3d9a1",
+  "results": {
+    "success_rate": 0.95,
+    "min_gap_m": 0.10944999999999999,
+    "ci95": [
+      0.834958291820748,
+      0.9861796228538989
+    ],
+    "median_mission_s": 66.35,
+    "near_miss_per_mission": 3.45,
+    "stops_per_mission": 5.0,
+    "fail_reasons": {
+      "no_path_static": 0,
+      "blocked_timeout": 0,
+      "collision": 2
+    },
+    "n_success": 38,
+    "n_episodes": 40
+  },
+  "episodes_uri": "analyses/an_ref_corridor_01/batches/sb_c0ff128b4956.episodes.jsonl",
+  "bottleneck_uri": "analyses/an_ref_corridor_01/batches/sb_c0ff128b4956.bottleneck.npy",
+  "wall_time_s": 54.925,
+  "replay_episodes": {
+    "kept_episode_indexes": [
+      0,
+      16
+    ],
+    "note": "replay subset; the full batch is summarized in results"
+  },
+  "pinch_map_scale": {
+    "dtype": "uint8",
+    "max_value": 29.600000381469727,
+    "note": "Pinch Map stored as relative intensity 0-255"
+  }
+}

@@ -4,9 +4,7 @@ Every number below links to where it came from: an on-site measurement, a cited 
 
 ## Summary
 
-The clearance check evaluated the Keenon Robotics W3, Bear Robotics Servi, Keenon Robotics DINERBOT T9, Keenon Robotics DINERBOT T8, Pudu Robotics KettyBot and Pudu Robotics T300 against the surveyed site geometry (median absolute error 0.0 cm [f_002], p90 absolute error 0.0 cm [f_003]) and simulation‑based success rates. Keenon Robotics W3 – Cleared [f_365]; Bear Robotics Servi – Cleared [f_187]; Keenon Robotics DINERBOT T9 – Cleared [f_455]; Keenon Robotics DINERBOT T8 – Cleared [f_099]; Pudu Robotics KettyBot – Cleared [f_278]; Pudu Robotics T300 – Cleared [f_545].
-
-All robots meet every rule as‑is, so each receives a Cleared verdict. The most useful next step for the site owner is to request pricing and schedule an on‑site validation.
+The site scan showed a median absolute error of 0.0 cm [f_002] and a p90 absolute error of 0.0 cm [f_003]. All robots — Keenon Robotics W3 (Cleared [f_365]), Bear Robotics Servi (Cleared [f_187]), Keenon Robotics DINERBOT T9 (Cleared [f_455]), Keenon Robotics DINERBOT T8 (Cleared [f_099]), Pudu Robotics KettyBot (Cleared [f_278]), and Pudu Robotics T300 (Cleared [f_545]) — meet every rule as-is. The most useful next step for the site owner is to confirm deployment schedules and verify on-site conditions match the scanned geometry.
 
 ## 1. Site evidence
 
@@ -33,7 +31,7 @@ Rule checks as the site is today:
 
 **Why this verdict**
 
-Keenon Robotics W3 received Cleared [f_365] because all as‑is rule checks passed: every one of the 6 [f_367] task legs is feasible on the conservative geometry bound (6 [f_368] legs total), no unresolved flagged‑manual thresholds exist on the route, and the simulated success rate at normal traffic with conservative geometry is 100% [f_370], exceeding the 90% [f_371] threshold (rule requires ≥0.9 [f_369]). The narrowest gap on the route is 1.15 m [f_300] while the robot needs only 0.46 m [f_301], so geometry is not limiting. A drop of the simulated success rate below 90% [f_371] or a leg becoming infeasible would change the verdict.
+Keenon Robotics W3 received Cleared [f_365] because it meets every as‑is rule: all 6 [f_367] of 6 [f_368] task legs are feasible on the conservative geometry, no unresolved flagged_manual thresholds exist, and simulated success at normal traffic with conservative geometry is 100% [f_370], exceeding the 0.9 [f_369] threshold. The narrowest gap is 1.15 m [f_300] while the robot needs 0.46 m [f_301]; median mission time is 79 s [f_344] with 4.70 [f_345] near‑misses per mission over 40 [f_341] episodes (CI95 low 91% [f_342] and high 100% [f_343]). Price is on request [f_295] and payback requires a quote [f_364].
 
 ### Bear Robotics Servi: Cleared [f_187]
 
@@ -49,7 +47,7 @@ Rule checks as the site is today:
 
 **Why this verdict**
 
-Bear Robotics Servi received a Cleared [f_187] verdict because all rule checks passed as‑is: every task leg is feasible on the conservative geometry bound (6 [f_189] of 6 [f_190] legs), no unresolved flagged_manual thresholds exist on the route, and the simulated success rate at normal traffic under the conservative bound is 95% [f_192], exceeding the 0.9 [f_191] (90% [f_193]) threshold. A lower success rate or a tighter gap would change the outcome.
+Bear Robotics Servi received Cleared [f_187] because all as‑is rule checks passed: 6 [f_189] of 6 [f_190] task legs are feasible on the conservative geometry bound, no unresolved flagged_manual thresholds exist on the route, and the simulated success rate at normal traffic under conservative geometry is 95% [f_192], exceeding the 90% [f_191] threshold. The narrowest gap on the route is 1.15 m [f_119] while the robot requires 0.45 m [f_120], and simulation showed 2 [f_167] collisions in 40 [f_160] episodes. The verdict would change if the success rate fell below 90% [f_191], a task leg became infeasible, or a flagged_manual threshold remained unresolved.
 
 ### Keenon Robotics DINERBOT T9: Cleared [f_455]
 
@@ -65,7 +63,7 @@ Rule checks as the site is today:
 
 **Why this verdict**
 
-The Keenon Robotics DINERBOT T9 earned a Cleared [f_455] verdict by meeting all as‑is rule checks: every task leg is feasible on the conservative geometry bound (6 [f_385] of 6 [f_384] legs), no unresolved flagged_manual thresholds exist, and the simulated success rate at normal traffic under conservative geometry meets the 0.9 [f_459] threshold with a value of 95% [f_460] (above the 90% [f_461] requirement). A success rate below 90% [f_461] or any infeasible leg would change the outcome.
+The Keenon Robotics DINERBOT T9 received Cleared [f_455] because it meets all as‑is rules: 6 [f_457] of 6 [f_458] task legs are feasible on the conservative geometry, no unresolved flagged‑manual thresholds exist, and the simulated success rate at normal traffic under conservative geometry is 95% [f_460], exceeding the 90% [f_461] threshold. The narrowest gap on the route is 1.15 m [f_387] while the robot requires 0.50 m [f_388]; 40 [f_428] simulated episodes showed 2 [f_435] collisions and 4.22 [f_432] near‑misses per mission. A lower success rate, an infeasible leg, or new flagged thresholds would change the outcome.
 
 ### Keenon Robotics DINERBOT T8: Cleared [f_099]
 
@@ -81,7 +79,7 @@ Rule checks as the site is today:
 
 **Why this verdict**
 
-The DINERBOT T8 received Cleared [f_099] because all as‑is rule checks passed: every one of the 6 [f_101] task legs is feasible on the conservative geometry bound (6 [f_102]), there are no unresolved flagged‑manual thresholds, and the simulated success rate at normal traffic under the conservative bound is 92% [f_104], exceeding the 90% [f_105] threshold (rule value 0.9 [f_103]). The narrowest gap on the route is 1.15 m [f_030] while the robot requires 0.38 m [f_031] at that point. Under normal traffic the simulation recorded 3.80 [f_075] near‑misses per mission and 3 [f_078] collisions in 40 [f_071] episodes; a drop of the success rate below 90% [f_105] or an infeasible leg would change the verdict.
+Keenon Robotics DINERBOT T8 received Cleared [f_099] because all as‑is rule checks were met: every task leg feasible on the conservative geometry bound (6 [f_101] of 6 [f_102] legs), no unresolved flagged_manual thresholds on the route, and simulated success at normal traffic (conservative bound) of 92% [f_104] exceeding the 0.9 [f_103] threshold of 90% [f_105]. The narrowest gap on the route is 1.15 m [f_030] while the robot needs 0.38 m [f_031]; median mission time is 66 s [f_074] with 3.80 near‑misses per mission [f_075] over 40 episodes [f_071] and 3 collisions [f_078]. A drop below 90% [f_105] success or an infeasible leg would change the verdict.
 
 ### Pudu Robotics KettyBot: Cleared [f_278]
 
@@ -97,7 +95,7 @@ Rule checks as the site is today:
 
 **Why this verdict**
 
-Pudu Robotics KettyBot received Cleared [f_278] because it meets every rule as‑is: all 6 [f_280] of 6 [f_281] task legs are feasible on the conservative geometry bound, no unresolved flagged_manual thresholds exist on the route, and the simulated success rate at normal traffic under the conservative bound is 92% [f_283], exceeding the 0.9 [f_282] (90% [f_284]) threshold. The narrowest gap on the route is 1.15 m [f_210] while the robot requires only 0.45 m [f_211], so clearance is adequate. In 40 [f_251] simulated episodes the robot suffered 3 [f_258] collisions. The verdict would change if the success rate fell below 90% [f_284], a leg became infeasible, or a flagged threshold appeared.
+The Pudu Robotics KettyBot verdict Cleared [f_278] follows the as‑is rule checks: every task leg feasible on the conservative geometry bound (6 [f_280] of 6 [f_281] legs), no unresolved flagged‑manual thresholds, and simulated success at normal traffic under conservative geometry 92% [f_283] exceeding the 90% [f_284] threshold. The narrowest gap on the route is 1.15 m [f_210] while the robot requires 0.45 m [f_211]. Under normal traffic, 40 [f_251] simulated episodes show 3.45 [f_255] near‑misses and 3 [f_258] collisions per mission. A lower success rate, infeasible legs, or new flagged thresholds would change the outcome.
 
 ### Pudu Robotics T300: Cleared [f_545]
 
@@ -113,11 +111,11 @@ Rule checks as the site is today:
 
 **Why this verdict**
 
-The Pudu Robotics T300 received a Cleared verdict because it satisfies all as‑is rule checks: every one of the 6 [f_547] task legs is feasible on the conservative geometry bound (6 legs [f_548]), there are no unresolved flagged‑manual thresholds on the route, and the simulated success rate at normal traffic under the conservative bound is 92% [f_550], exceeding the 90% [f_549] threshold. The narrowest gap on the route is 0.90 m [f_477] while the robot requires 0.50 m [f_478]; median mission time is 75 s [f_521] with 4.03 near‑misses per mission [f_522] over 40 simulated episodes [f_518]. A drop of the success rate below 90% [f_551] or an infeasible leg would change the verdict.
+The Pudu Robotics T300 received Cleared [f_545] because all as‑is rule checks passed: each of the 6 [f_547] task legs is feasible on the conservative geometry bound out of 6 [f_548] legs, no unresolved flagged_manual thresholds exist, and the simulated success rate at normal traffic with conservative geometry is 92% [f_550], exceeding the 0.9 [f_549] (90% [f_551]) threshold. The narrowest gap is 0.90 m [f_477] while the robot needs 0.50 m [f_478]; under normal traffic there were 3 [f_525] collisions in 40 [f_518] episodes. A success rate below 90% [f_551] or an infeasible leg would change the verdict.
 
 ## 3. How we investigated
 
-No investigation experiments were recorded for this analysis.
+The investigation loop runs simulator experiments on robots that can drive the route but fall short of the success rule. Keenon Robotics W3, Bear Robotics Servi, Keenon Robotics DINERBOT T9, Keenon Robotics DINERBOT T8, Pudu Robotics KettyBot, Pudu Robotics T300 already met every rule, so there was nothing to investigate.
 
 ## 4. Why it fails (investigation)
 
@@ -179,7 +177,11 @@ Formula: `automatable share = success rate (normal traffic, nominal geometry) x 
 
 ## 9. Trade-offs between the robots
 
-Keenon Robotics W3 achieves 100% [f_338] success with a median mission time of 79 s [f_344] and 4.70 [f_345] near‑misses; Bear Robotics Servi shows 95% [f_157] success, 66 s [f_163] median time, and 3.45 [f_164] near‑misses; Keenon Robotics DINERBOT T9 matches 95% [f_425] success, 75 s [f_431] median time, and 4.22 [f_432] near‑misses; Keenon Robotics DINERBOT T8 offers 92% [f_068] success, 66 s [f_074] median time, and 3.80 [f_075] near‑misses; Pudu Robotics KettyBot reaches 92% [f_248] success, 68 s [f_254] median time, and 3.45 [f_255] near‑misses; Pudu Robotics T300 provides 92% [f_515] success, 75 s [f_521] median time, and 4.03 [f_522] near‑misses. The narrowest gap required is 1.15 m [f_300] for W3, 1.15 m [f_119] for Servi, 1.15 m [f_387] for T9, 1.15 m [f_030] for T8, 1.15 m [f_210] for KettyBot, and 0.90 m [f_477] for T300. All units are priced on request and payback status is enter a quote.
+- Keenon Robotics W3 achieves 100% [f_338] success with 79 s [f_344] median mission time and 4.70 [f_345] near-misses; narrowest gap 1.15 m [f_300]; price on request [f_295]; payback enter a quote [f_364].
+- Bear Robotics Servi shows 95% [f_157] success, 66 s [f_163] mission time, 3.45 [f_164] near-misses; narrowest gap 1.15 m [f_119]; price on request [f_114]; payback enter a quote [f_186].
+- Keenon Robotics DINERBOT T9 offers 95% [f_425] success, 75 s [f_431] mission time, 4.22 [f_432] near-misses; narrowest gap 1.15 m [f_387]; price on request [f_382]; payback enter a quote [f_454].
+- Keenon Robotics DINERBOT T8 provides 92% [f_068] success, 66 s [f_074] mission time, 3.80 [f_075] near-misses; narrowest gap 1.15 m [f_030]; price on request [f_025]; payback enter a quote [f_097].
+- Pudu Robotics KettyBot and T300 both have 92% [f_248] success; KettyBot 68 s [f_254] mission time, 3.45 [f_255] near-misses, gap 1.15 m [f_210]; T300 75 s [f_521] mission time, 4.03 [f_522] near-misses, gap 0.90 m [f_477]; price on request [f_205] and price on request [f_472]; payback enter a quote [f_277] and enter a quote [f_544].
 
 ## 10. Hazards and manual checks
 

@@ -1,0 +1,44 @@
+{
+  "batch_id": "sb_1b2444254746",
+  "twin_id": "twin_ref_storeroom_v1",
+  "twin_version": 1,
+  "robot_id": "mir_mir100",
+  "task": {
+    "type": "delivery",
+    "sequence": [
+      "DOCK",
+      "PICKUP",
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "DOCK"
+    ]
+  },
+  "density": "peak",
+  "geometry_bound": "optimistic",
+  "n_episodes": 40,
+  "seed_base": 1000,
+  "code_version": "5e14e66+sim-d77ef3d9a1",
+  "results": {
+    "success_rate": 0.825,
+    "min_gap_m": 0.0275,
+    "ci95": [
+      0.6804970794560755,
+      0.9125469700311694
+    ],
+    "median_mission_s": 161.5,
+    "near_miss_per_mission": 3.925,
+    "stops_per_mission": 7.1,
+    "fail_reasons": {
+      "no_path_static": 5,
+      "blocked_timeout": 0,
+      "collision": 2
+    },
+    "n_success": 33,
+    "n_episodes": 40
+  },
+  "episodes_uri": null,
+  "bottleneck_uri": null,
+  "wall_time_s": 186.208
+}

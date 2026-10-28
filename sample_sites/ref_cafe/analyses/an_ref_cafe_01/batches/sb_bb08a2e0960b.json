@@ -1,0 +1,55 @@
+{
+  "batch_id": "sb_bb08a2e0960b",
+  "twin_id": "twin_ref_cafe_v1",
+  "twin_version": 1,
+  "robot_id": "keenon_dinerbot_t9",
+  "task": {
+    "type": "delivery",
+    "sequence": [
+      "DOCK",
+      "PICKUP",
+      "T1",
+      "T3",
+      "T5",
+      "DOCK"
+    ]
+  },
+  "density": "normal",
+  "geometry_bound": "nominal",
+  "n_episodes": 40,
+  "seed_base": 1000,
+  "code_version": "5e14e66+sim-d77ef3d9a1",
+  "results": {
+    "success_rate": 0.475,
+    "min_gap_m": 0.0319,
+    "ci95": [
+      0.32935229550181694,
+      0.6250289314607027
+    ],
+    "median_mission_s": 138.1,
+    "near_miss_per_mission": 0.65,
+    "stops_per_mission": 2.2,
+    "fail_reasons": {
+      "no_path_static": 21,
+      "blocked_timeout": 0,
+      "collision": 0
+    },
+    "n_success": 19,
+    "n_episodes": 40
+  },
+  "episodes_uri": "analyses/an_ref_cafe_01/batches/sb_bb08a2e0960b.episodes.jsonl",
+  "bottleneck_uri": "analyses/an_ref_cafe_01/batches/sb_bb08a2e0960b.bottleneck.npy",
+  "wall_time_s": 302.167,
+  "replay_episodes": {
+    "kept_episode_indexes": [
+      0,
+      4
+    ],
+    "note": "replay subset; the full batch is summarized in results"
+  },
+  "pinch_map_scale": {
+    "dtype": "uint8",
+    "max_value": 32.400001525878906,
+    "note": "Pinch Map stored as relative intensity 0-255"
+  }
+}

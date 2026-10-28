@@ -1,6 +1,6 @@
 {
  "generated_by": "scripts/run_reference_checks.py --web",
- "generated_at": "2026-10-28 04:02:27",
+ "generated_at": "2026-10-28 12:08:50",
  "sites": [
   {
    "site_id": "ref_cafe",
@@ -15,7 +15,7 @@
    "geometry_source": "reference",
    "sample": true,
    "readonly": true,
-   "created_at": "2026-10-27T22:32:23.401Z",
+   "created_at": "2026-10-28T06:38:47.669Z",
    "latest_twin_version": 1,
    "n_analyses": 1
   },
@@ -32,7 +32,7 @@
    "geometry_source": "reference",
    "sample": true,
    "readonly": true,
-   "created_at": "2026-10-27T22:32:24.728Z",
+   "created_at": "2026-10-28T06:38:48.556Z",
    "latest_twin_version": 1,
    "n_analyses": 1
   },
@@ -49,7 +49,7 @@
    "geometry_source": "reference",
    "sample": true,
    "readonly": true,
-   "created_at": "2026-10-27T22:32:26.207Z",
+   "created_at": "2026-10-28T06:38:49.583Z",
    "latest_twin_version": 1,
    "n_analyses": 1
   }
@@ -1167,36 +1167,28 @@
  "usage": {
   "by_model": [
    {
-    "model_id": "compute:local",
-    "calls": 2,
-    "tokens_in": 0,
-    "tokens_out": 0,
-    "cost_usd": 0.0,
-    "duration_s": 221.953
+    "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+    "calls": 51,
+    "tokens_in": 131392,
+    "tokens_out": 129173,
+    "cost_usd": 0.518911,
+    "duration_s": 390.201
    },
    {
-    "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
-    "calls": 57,
-    "tokens_in": 147026,
-    "tokens_out": 138028,
-    "cost_usd": 0.0,
-    "duration_s": 2999.098
-   },
-   {
-    "model_id": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-    "calls": 45,
-    "tokens_in": 152805,
-    "tokens_out": 22007,
-    "cost_usd": 0.0,
-    "duration_s": 172.351
+    "model_id": "nvidia/Nemotron-3.5-Super-VL",
+    "calls": 39,
+    "tokens_in": 140729,
+    "tokens_out": 17633,
+    "cost_usd": 0.058088,
+    "duration_s": 128.306
    },
    {
     "model_id": "sim",
-    "calls": 140,
+    "calls": 130,
     "tokens_in": 0,
     "tokens_out": 0,
     "cost_usd": 0.0,
-    "duration_s": 46658.316
+    "duration_s": 24774.13
    },
    {
     "model_id": "tavily",
@@ -1204,49 +1196,41 @@
     "tokens_in": 0,
     "tokens_out": 0,
     "cost_usd": 0.0,
-    "duration_s": 19.853
+    "duration_s": 30.478
    }
   ],
   "by_kind": [
    {
     "kind": "investigate",
-    "calls": 31,
-    "tokens_in": 110999,
-    "tokens_out": 12230,
-    "cost_usd": 0.0,
-    "duration_s": 102.327
-   },
-   {
-    "kind": "job:analysis",
-    "calls": 2,
-    "tokens_in": 0,
-    "tokens_out": 0,
-    "cost_usd": 0.0,
-    "duration_s": 221.953
+    "calls": 29,
+    "tokens_in": 110593,
+    "tokens_out": 11867,
+    "cost_usd": 0.043858,
+    "duration_s": 70.299
    },
    {
     "kind": "orchestrate",
-    "calls": 14,
-    "tokens_in": 41806,
-    "tokens_out": 9777,
-    "cost_usd": 0.0,
-    "duration_s": 70.025
+    "calls": 10,
+    "tokens_in": 30136,
+    "tokens_out": 5766,
+    "cost_usd": 0.01423,
+    "duration_s": 58.007
    },
    {
     "kind": "report_section",
-    "calls": 57,
-    "tokens_in": 147026,
-    "tokens_out": 138028,
-    "cost_usd": 0.0,
-    "duration_s": 2999.098
+    "calls": 51,
+    "tokens_in": 131392,
+    "tokens_out": 129173,
+    "cost_usd": 0.518911,
+    "duration_s": 390.201
    },
    {
     "kind": "sim.batch",
-    "calls": 138,
+    "calls": 126,
     "tokens_in": 0,
     "tokens_out": 0,
     "cost_usd": 0.0,
-    "duration_s": 46541.59
+    "duration_s": 24284.568
    },
    {
     "kind": "sim.confirm",
@@ -1254,15 +1238,15 @@
     "tokens_in": 0,
     "tokens_out": 0,
     "cost_usd": 0.0,
-    "duration_s": 90.654
+    "duration_s": 221.508
    },
    {
     "kind": "sim.probe",
-    "calls": 1,
+    "calls": 3,
     "tokens_in": 0,
     "tokens_out": 0,
     "cost_usd": 0.0,
-    "duration_s": 26.072
+    "duration_s": 268.054
    },
    {
     "kind": "tavily.search",
@@ -1270,36 +1254,31 @@
     "tokens_in": 0,
     "tokens_out": 0,
     "cost_usd": 0.0,
-    "duration_s": 19.853
+    "duration_s": 30.478
    }
   ],
   "totals": {
-   "calls": 250,
-   "tokens_in": 299831,
-   "tokens_out": 160035,
-   "cost_usd": 0.0,
-   "duration_s": 50071.571
+   "calls": 226,
+   "tokens_in": 272121,
+   "tokens_out": 146806,
+   "cost_usd": 0.576999,
+   "duration_s": 25323.114
   },
   "per_analysis": [
    {
-    "analysis_id": "an_860150277c4e456b",
-    "calls": 15,
-    "cost_usd": 0.0
-   },
-   {
     "analysis_id": "an_ref_cafe_01",
-    "calls": 70,
-    "cost_usd": 0.0
+    "calls": 73,
+    "cost_usd": 0.12093
    },
    {
     "analysis_id": "an_ref_corridor_01",
-    "calls": 71,
-    "cost_usd": 0.0
+    "calls": 87,
+    "cost_usd": 0.32498
    },
    {
     "analysis_id": "an_ref_storeroom_01",
-    "calls": 69,
-    "cost_usd": 0.0
+    "calls": 66,
+    "cost_usd": 0.13109
    }
   ],
   "unpriced_calls": 0,

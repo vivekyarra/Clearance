@@ -1,7 +1,7 @@
 {
   "analysis_id": "an_ref_storeroom_01",
   "status": "done",
-  "started_at": 1793132789.096347,
+  "started_at": 1793167260.9433405,
   "stages": {
     "candidates": {
       "state": "done",
@@ -508,14 +508,11 @@
     "assets": {},
     "geometry_source": "reference"
   },
-  "notes": [
-    "explanation for mir_mir250 dropped: it contained numbers",
-    "explanation for otto_100 dropped: it contained numbers"
-  ],
+  "notes": [],
   "candidates": [
     "pudu_t300",
-    "mir_mir250",
     "otto_100",
+    "mir_mir250",
     "mir_mir100"
   ],
   "candidate_details": [
@@ -531,17 +528,6 @@
       "notes": []
     },
     {
-      "robot_id": "mir_mir250",
-      "vendor": "MiR",
-      "model": "MiR250",
-      "class": "B_amr",
-      "width_m": 0.58,
-      "route_gap_m": 0.8,
-      "spec_status": "human-reviewed",
-      "gap_margin_m": 0.22,
-      "notes": []
-    },
-    {
       "robot_id": "otto_100",
       "vendor": "OTTO Motors",
       "model": "OTTO 100",
@@ -550,6 +536,17 @@
       "route_gap_m": 0.8,
       "spec_status": "human-reviewed",
       "gap_margin_m": 0.25,
+      "notes": []
+    },
+    {
+      "robot_id": "mir_mir250",
+      "vendor": "MiR",
+      "model": "MiR250",
+      "class": "B_amr",
+      "width_m": 0.58,
+      "route_gap_m": 0.8,
+      "spec_status": "human-reviewed",
+      "gap_margin_m": 0.22,
       "notes": []
     },
     {
@@ -648,6 +645,94 @@
       "verified_by_human": true,
       "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://www.pudurobotics.com/en/products/pudut300\"], \"null_fields\": [\"nominal_speed_mps\", \"max_slope_deg\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"values are the 'PUDU T300 Standard' column (the Lifting variant differs in weight and path width)\", \"runtime is the full-load figure; the page lists 12 h with no load\", \"dimensions order on page is not labelled; read as length x width x height\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.pudurobotics.com/en/products/pudut300\", \"https://www.pudurobotics.com/en/news/pudu-t300-amr-powers-ennoconn-ems-logistics-case-study\", \"https://www.pudurobotics.com/en/news/904\", \"https://cdn.robotshop.com/media/P/Pud/RB-Pud-04/pdf/pudu-t300-20240828-operational-guide.pdf\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_threshold_m\", \"min_aisle_width_vendor_m\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [], \"fields_rejected_by_validator\": 4, \"other_pages_differing\": [{\"field\": \"runtime_h\", \"value\": 6.0, \"url\": \"https://cdn.robotshop.com/media/P/Pud/RB-Pud-04/pdf/pudu-t300-20240828-operational-guide.pdf\"}]}}"
     },
+    "otto_100": {
+      "robot_id": "otto_100",
+      "class": "B_amr",
+      "vendor": "OTTO Motors",
+      "model": "OTTO 100",
+      "footprint_polygon_m": [
+        [
+          0.37,
+          0.275
+        ],
+        [
+          -0.37,
+          0.275
+        ],
+        [
+          -0.37,
+          -0.275
+        ],
+        [
+          0.37,
+          -0.275
+        ]
+      ],
+      "footprint_approx": true,
+      "height_m": 0.308,
+      "drive": "diff_drive",
+      "in_place_rotation": true,
+      "min_turn_radius_m": 0.0,
+      "max_speed_mps": 2.0,
+      "nominal_speed_mps": null,
+      "max_threshold_m": 0.013,
+      "max_slope_deg": null,
+      "min_aisle_width_vendor_m": 1.099,
+      "payload_kg": 150.0,
+      "runtime_h": 6.0,
+      "safety_stop_distance_m": null,
+      "price": {
+        "value": null,
+        "currency": "USD",
+        "is_public": false,
+        "note": "price on request",
+        "source_url": null
+      },
+      "fields_sources": {
+        "footprint_polygon_m": {
+          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+          "quote": "Dimensions 740 x 550 x 308 mm",
+          "retrieved_at": "2026-10-27T13:50:46Z"
+        },
+        "height_m": {
+          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+          "quote": "Dimensions 740 x 550 x 308 mm",
+          "retrieved_at": "2026-10-27T13:50:46Z"
+        },
+        "max_speed_mps": {
+          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+          "quote": "Max. Speed 2.0 m/sec (4.5 mph)",
+          "retrieved_at": "2026-10-27T13:50:46Z"
+        },
+        "payload_kg": {
+          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+          "quote": "Max. Capacity 150 kg (331 lb)",
+          "retrieved_at": "2026-10-27T13:50:46Z"
+        },
+        "min_aisle_width_vendor_m": {
+          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+          "quote": "Min. Aisle Width 1,099 mm (43 in)",
+          "retrieved_at": "2026-10-27T13:50:46Z"
+        },
+        "runtime_h": {
+          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+          "quote": "Runtime 6 hr",
+          "retrieved_at": "2026-10-27T13:50:46Z"
+        },
+        "max_threshold_m": {
+          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+          "quote": "Floor Obstacle 13 mm (0.5 in)",
+          "retrieved_at": "2026-10-27T13:50:46Z"
+        },
+        "in_place_rotation": {
+          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+          "quote": "Turning Radius Turn in place",
+          "retrieved_at": "2026-10-27T13:50:46Z"
+        }
+      },
+      "verified_by_human": true,
+      "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=\"], \"null_fields\": [\"nominal_speed_mps\", \"max_slope_deg\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"source is spec sheet OTTO-DS001F-EN-MAR2026\", \"payload 150 kg includes attachments and cart, per the spec sheet\", \"min aisle is the one-way figure; the sheet lists 1,975 mm for two-way traffic\", \"max_threshold_m is the sheet's 'Floor Obstacle' height; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\", \"drive is the schema default (diff_drive); awaiting review\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://ottomotors.com/100\", \"https://ottomotors.com/resources/downloads/100-data-sheet\", \"https://flowntro.com/robots/otto-100\", \"https://www.advancedmhs.com/wp-content/uploads/2025/07/2024-OTTO100-DS001C-EN-FEB2024.pdf\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_threshold_m\", \"min_aisle_width_vendor_m\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [], \"fields_rejected_by_validator\": 10, \"other_pages_differing\": []}}"
+    },
     "mir_mir250": {
       "robot_id": "mir_mir250",
       "class": "B_amr",
@@ -741,94 +826,6 @@
       "verified_by_human": true,
       "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf\", \"https://mobile-industrial-robots.com/products/robots/mir250\"], \"null_fields\": [\"nominal_speed_mps\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"source is the MiR250 specification document dated 2023-06-28 (copy hosted by distributor Hartfiel)\", \"max_slope_deg converted by code from the vendor's 5% grade (atan 0.05)\", \"min aisle is the default-footprint corridor width; the document lists narrower widths for dynamic or minimized footprints with muted protective fields\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.phoenix-mecano.ch/files/181D7B75D01/mir250-datasheet-en.pdf\", \"https://mobile-industrial-robots.com/products/robots/mir250/specifications\", \"https://shelley.com/wp-content/uploads/2024/07/MiR250-Specifications-2.81.pdf\", \"https://www.nord-modules.com/mir250-robot\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_threshold_m\", \"max_slope_deg\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [{\"field\": \"min_aisle_width_vendor_m\", \"catalog\": 1.45, \"live\": 1.0, \"live_url\": \"https://www.phoenix-mecano.ch/files/181D7B75D01/mir250-datasheet-en.pdf\", \"live_quote\": \"With dynamic footprint and SICK safety configuration: 1 000 mm | 39.4 in\", \"kept\": \"catalog\", \"why\": \"the live value is for the dynamic footprint; the catalog keeps the default-footprint corridor width (1 450 mm), which two other live pages also state\"}], \"fields_rejected_by_validator\": 4, \"other_pages_differing\": []}}"
     },
-    "otto_100": {
-      "robot_id": "otto_100",
-      "class": "B_amr",
-      "vendor": "OTTO Motors",
-      "model": "OTTO 100",
-      "footprint_polygon_m": [
-        [
-          0.37,
-          0.275
-        ],
-        [
-          -0.37,
-          0.275
-        ],
-        [
-          -0.37,
-          -0.275
-        ],
-        [
-          0.37,
-          -0.275
-        ]
-      ],
-      "footprint_approx": true,
-      "height_m": 0.308,
-      "drive": "diff_drive",
-      "in_place_rotation": true,
-      "min_turn_radius_m": 0.0,
-      "max_speed_mps": 2.0,
-      "nominal_speed_mps": null,
-      "max_threshold_m": 0.013,
-      "max_slope_deg": null,
-      "min_aisle_width_vendor_m": 1.099,
-      "payload_kg": 150.0,
-      "runtime_h": 6.0,
-      "safety_stop_distance_m": null,
-      "price": {
-        "value": null,
-        "currency": "USD",
-        "is_public": false,
-        "note": "price on request",
-        "source_url": null
-      },
-      "fields_sources": {
-        "footprint_polygon_m": {
-          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
-          "quote": "Dimensions 740 x 550 x 308 mm",
-          "retrieved_at": "2026-10-27T13:50:46Z"
-        },
-        "height_m": {
-          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
-          "quote": "Dimensions 740 x 550 x 308 mm",
-          "retrieved_at": "2026-10-27T13:50:46Z"
-        },
-        "max_speed_mps": {
-          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
-          "quote": "Max. Speed 2.0 m/sec (4.5 mph)",
-          "retrieved_at": "2026-10-27T13:50:46Z"
-        },
-        "payload_kg": {
-          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
-          "quote": "Max. Capacity 150 kg (331 lb)",
-          "retrieved_at": "2026-10-27T13:50:46Z"
-        },
-        "min_aisle_width_vendor_m": {
-          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
-          "quote": "Min. Aisle Width 1,099 mm (43 in)",
-          "retrieved_at": "2026-10-27T13:50:46Z"
-        },
-        "runtime_h": {
-          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
-          "quote": "Runtime 6 hr",
-          "retrieved_at": "2026-10-27T13:50:46Z"
-        },
-        "max_threshold_m": {
-          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
-          "quote": "Floor Obstacle 13 mm (0.5 in)",
-          "retrieved_at": "2026-10-27T13:50:46Z"
-        },
-        "in_place_rotation": {
-          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
-          "quote": "Turning Radius Turn in place",
-          "retrieved_at": "2026-10-27T13:50:46Z"
-        }
-      },
-      "verified_by_human": true,
-      "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=\"], \"null_fields\": [\"nominal_speed_mps\", \"max_slope_deg\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"source is spec sheet OTTO-DS001F-EN-MAR2026\", \"payload 150 kg includes attachments and cart, per the spec sheet\", \"min aisle is the one-way figure; the sheet lists 1,975 mm for two-way traffic\", \"max_threshold_m is the sheet's 'Floor Obstacle' height; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\", \"drive is the schema default (diff_drive); awaiting review\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://ottomotors.com/100\", \"https://ottomotors.com/resources/downloads/100-data-sheet\", \"https://flowntro.com/robots/otto-100\", \"https://www.advancedmhs.com/wp-content/uploads/2025/07/2024-OTTO100-DS001C-EN-FEB2024.pdf\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_threshold_m\", \"min_aisle_width_vendor_m\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [], \"fields_rejected_by_validator\": 10, \"other_pages_differing\": []}}"
-    },
     "mir_mir100": {
       "robot_id": "mir_mir100",
       "class": "B_amr",
@@ -920,8 +917,10 @@
   },
   "excluded": [],
   "candidate_explanations": {
-    "pudu_t300": "narrowest footprint and largest clearance margin across all route legs, with the highest payload capacity",
-    "mir_mir100": "widest required gap relative to available clearance and the lowest payload, making it the least promising"
+    "pudu_t300": "Narrowest footprint with the largest clearance margin and highest payload capacity, making it the most promising for the storeroom route.",
+    "otto_100": "Second narrowest footprint with strong travel speed and a solid clearance margin across all route legs.",
+    "mir_mir250": "Higher payload variant than its sibling with adequate clearance for the full route.",
+    "mir_mir100": "Lowest payload variant with the tightest clearance margin among the feasible candidates."
   },
   "feasibility": {
     "pudu_t300": {
@@ -1016,98 +1015,6 @@
       ],
       "all_reachable": true
     },
-    "mir_mir250": {
-      "robot_id": "mir_mir250",
-      "twin_id": "twin_ref_storeroom_v1",
-      "twin_version": 1,
-      "legs": [
-        {
-          "from_wp": "DOCK",
-          "to_wp": "PICKUP",
-          "reachable": true,
-          "narrowest_gap_m": 0.775,
-          "required_gap_m": 0.58,
-          "narrowest_xy": [
-            3.441,
-            1.825
-          ],
-          "path_length_m": 3.579,
-          "blocking_threshold": null,
-          "reason": ""
-        },
-        {
-          "from_wp": "PICKUP",
-          "to_wp": "S1",
-          "reachable": true,
-          "narrowest_gap_m": 0.775,
-          "required_gap_m": 0.58,
-          "narrowest_xy": [
-            3.831,
-            1.823
-          ],
-          "path_length_m": 10.13,
-          "blocking_threshold": null,
-          "reason": ""
-        },
-        {
-          "from_wp": "S1",
-          "to_wp": "S2",
-          "reachable": true,
-          "narrowest_gap_m": 0.775,
-          "required_gap_m": 0.58,
-          "narrowest_xy": [
-            2.054,
-            4.996
-          ],
-          "path_length_m": 8.021,
-          "blocking_threshold": null,
-          "reason": ""
-        },
-        {
-          "from_wp": "S2",
-          "to_wp": "S3",
-          "reachable": true,
-          "narrowest_gap_m": 0.775,
-          "required_gap_m": 0.58,
-          "narrowest_xy": [
-            4.652,
-            5.045
-          ],
-          "path_length_m": 9.13,
-          "blocking_threshold": null,
-          "reason": ""
-        },
-        {
-          "from_wp": "S3",
-          "to_wp": "S4",
-          "reachable": true,
-          "narrowest_gap_m": 1.375,
-          "required_gap_m": 0.58,
-          "narrowest_xy": [
-            5.242,
-            6.78
-          ],
-          "path_length_m": 4.196,
-          "blocking_threshold": null,
-          "reason": ""
-        },
-        {
-          "from_wp": "S4",
-          "to_wp": "DOCK",
-          "reachable": true,
-          "narrowest_gap_m": 1.1752,
-          "required_gap_m": 0.58,
-          "narrowest_xy": [
-            7.55,
-            3.331
-          ],
-          "path_length_m": 13.425,
-          "blocking_threshold": null,
-          "reason": ""
-        }
-      ],
-      "all_reachable": true
-    },
     "otto_100": {
       "robot_id": "otto_100",
       "twin_id": "twin_ref_storeroom_v1",
@@ -1194,6 +1101,98 @@
             3.296
           ],
           "path_length_m": 13.388,
+          "blocking_threshold": null,
+          "reason": ""
+        }
+      ],
+      "all_reachable": true
+    },
+    "mir_mir250": {
+      "robot_id": "mir_mir250",
+      "twin_id": "twin_ref_storeroom_v1",
+      "twin_version": 1,
+      "legs": [
+        {
+          "from_wp": "DOCK",
+          "to_wp": "PICKUP",
+          "reachable": true,
+          "narrowest_gap_m": 0.775,
+          "required_gap_m": 0.58,
+          "narrowest_xy": [
+            3.441,
+            1.825
+          ],
+          "path_length_m": 3.579,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "PICKUP",
+          "to_wp": "S1",
+          "reachable": true,
+          "narrowest_gap_m": 0.775,
+          "required_gap_m": 0.58,
+          "narrowest_xy": [
+            3.831,
+            1.823
+          ],
+          "path_length_m": 10.13,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S1",
+          "to_wp": "S2",
+          "reachable": true,
+          "narrowest_gap_m": 0.775,
+          "required_gap_m": 0.58,
+          "narrowest_xy": [
+            2.054,
+            4.996
+          ],
+          "path_length_m": 8.021,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S2",
+          "to_wp": "S3",
+          "reachable": true,
+          "narrowest_gap_m": 0.775,
+          "required_gap_m": 0.58,
+          "narrowest_xy": [
+            4.652,
+            5.045
+          ],
+          "path_length_m": 9.13,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S3",
+          "to_wp": "S4",
+          "reachable": true,
+          "narrowest_gap_m": 1.375,
+          "required_gap_m": 0.58,
+          "narrowest_xy": [
+            5.242,
+            6.78
+          ],
+          "path_length_m": 4.196,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S4",
+          "to_wp": "DOCK",
+          "reachable": true,
+          "narrowest_gap_m": 1.1752,
+          "required_gap_m": 0.58,
+          "narrowest_xy": [
+            7.55,
+            3.331
+          ],
+          "path_length_m": 13.425,
           "blocking_threshold": null,
           "reason": ""
         }
@@ -2408,69 +2407,45 @@
     }
   },
   "batches": [
-    "sb_62a4a91d455f",
-    "sb_318479d649c5",
-    "sb_a83843d81092",
-    "sb_774e5753d4d9",
-    "sb_ae5621cead7c",
-    "sb_599522a223fa",
-    "sb_6228255866e2",
-    "sb_02f8291b72d1",
-    "sb_6c0e4e92553b",
-    "sb_acaad38c39e9",
-    "sb_fbd802602b39",
-    "sb_de2db6c9bb85",
-    "sb_e3ccc14c1476",
-    "sb_1e9ef8dcdf61",
-    "sb_4fab0640ed9b",
-    "sb_c63223f5d0bf",
-    "sb_ff68d24cd9f5",
-    "sb_9ce556cb4d55",
-    "sb_4cc055a97e39",
-    "sb_923ab3c5e4a0",
-    "sb_0b19d69ffc27",
-    "sb_d2c34af60fbd",
-    "sb_938052ccbcec",
-    "sb_a7c4b4c8f285",
-    "sb_03d73fe6bf9a",
-    "sb_539ba4b20ade",
-    "sb_96f02e78896e",
-    "sb_a0511c46ab27",
-    "sb_82a57c4f9f6d",
-    "sb_7ac96c8888b0",
-    "sb_fc4853bd9207",
-    "sb_880ee587be27",
-    "sb_9de38e6e6c78",
-    "sb_a88b8f4302ab",
-    "sb_ccb6e9e6b36c",
-    "sb_63697ef211c7"
+    "sb_31ed5960038a",
+    "sb_4d84f24e3024",
+    "sb_e686299f0283",
+    "sb_c688bfcd6e5c",
+    "sb_500ce3d2553a",
+    "sb_41bc4c2ba2f9",
+    "sb_e3632d209752",
+    "sb_9fffb4df20bc",
+    "sb_b960825d5106",
+    "sb_ec68fa07d4d9",
+    "sb_21f530537cb3",
+    "sb_c804a5a2613a",
+    "sb_912ecd05aa47",
+    "sb_d96dd2fb87d4",
+    "sb_32365863145e",
+    "sb_5d0a216a21de",
+    "sb_2c8ce07eed75",
+    "sb_8c2e684f240f",
+    "sb_821fc6c11009",
+    "sb_b1623866f4ad",
+    "sb_413fb2a390ae",
+    "sb_de57212d3e22",
+    "sb_605a9842767b",
+    "sb_c0efaf479af5",
+    "sb_66564fd490c1",
+    "sb_810fb36d5b55",
+    "sb_03df66d32580",
+    "sb_c9e6d358e6f0",
+    "sb_51a58e3d9cf6",
+    "sb_9425af669c72",
+    "sb_d49f4d0bc2b6",
+    "sb_849435d8d9f3",
+    "sb_6d6729f9de89",
+    "sb_1b2444254746",
+    "sb_cc0f521eeb77",
+    "sb_37cdbf0abde7"
   ],
   "batch_index": {
-    "sb_62a4a91d455f": {
-      "robot_id": "pudu_t300",
-      "density": "quiet",
-      "bound": "conservative",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 1.0,
-        "min_gap_m": 0.03,
-        "ci95": [
-          0.9123754607496077,
-          1.0
-        ],
-        "median_mission_s": 108.94999999999999,
-        "near_miss_per_mission": 0.6,
-        "stops_per_mission": 1.0,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 40,
-        "n_episodes": 40
-      }
-    },
-    "sb_318479d649c5": {
+    "sb_31ed5960038a": {
       "robot_id": "pudu_t300",
       "density": "quiet",
       "bound": "nominal",
@@ -2494,31 +2469,7 @@
         "n_episodes": 40
       }
     },
-    "sb_a83843d81092": {
-      "robot_id": "pudu_t300",
-      "density": "normal",
-      "bound": "nominal",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.975,
-        "min_gap_m": 0.03,
-        "ci95": [
-          0.8711834051199223,
-          0.9955732825922052
-        ],
-        "median_mission_s": 114.6,
-        "near_miss_per_mission": 1.775,
-        "stops_per_mission": 2.7,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 1
-        },
-        "n_success": 39,
-        "n_episodes": 40
-      }
-    },
-    "sb_774e5753d4d9": {
+    "sb_4d84f24e3024": {
       "robot_id": "pudu_t300",
       "density": "quiet",
       "bound": "optimistic",
@@ -2542,7 +2493,31 @@
         "n_episodes": 40
       }
     },
-    "sb_ae5621cead7c": {
+    "sb_e686299f0283": {
+      "robot_id": "pudu_t300",
+      "density": "quiet",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.03,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 108.94999999999999,
+        "near_miss_per_mission": 0.6,
+        "stops_per_mission": 1.0,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_c688bfcd6e5c": {
       "robot_id": "pudu_t300",
       "density": "normal",
       "bound": "conservative",
@@ -2566,31 +2541,7 @@
         "n_episodes": 40
       }
     },
-    "sb_599522a223fa": {
-      "robot_id": "pudu_t300",
-      "density": "peak",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 1.0,
-        "min_gap_m": 0.03,
-        "ci95": [
-          0.9123754607496077,
-          1.0
-        ],
-        "median_mission_s": 127.3,
-        "near_miss_per_mission": 5.175,
-        "stops_per_mission": 7.35,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 40,
-        "n_episodes": 40
-      }
-    },
-    "sb_6228255866e2": {
+    "sb_500ce3d2553a": {
       "robot_id": "pudu_t300",
       "density": "normal",
       "bound": "optimistic",
@@ -2614,10 +2565,34 @@
         "n_episodes": 40
       }
     },
-    "sb_02f8291b72d1": {
+    "sb_41bc4c2ba2f9": {
+      "robot_id": "pudu_t300",
+      "density": "normal",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.975,
+        "min_gap_m": 0.03,
+        "ci95": [
+          0.8711834051199223,
+          0.9955732825922052
+        ],
+        "median_mission_s": 114.6,
+        "near_miss_per_mission": 1.775,
+        "stops_per_mission": 2.7,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 39,
+        "n_episodes": 40
+      }
+    },
+    "sb_e3632d209752": {
       "robot_id": "pudu_t300",
       "density": "peak",
-      "bound": "nominal",
+      "bound": "optimistic",
       "n_episodes": 40,
       "results": {
         "success_rate": 1.0,
@@ -2638,55 +2613,7 @@
         "n_episodes": 40
       }
     },
-    "sb_6c0e4e92553b": {
-      "robot_id": "mir_mir250",
-      "density": "quiet",
-      "bound": "nominal",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.9,
-        "min_gap_m": 0.0225,
-        "ci95": [
-          0.7694792561952611,
-          0.9604211124044252
-        ],
-        "median_mission_s": 123.80000000000001,
-        "near_miss_per_mission": 0.575,
-        "stops_per_mission": 0.875,
-        "fail_reasons": {
-          "no_path_static": 4,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 36,
-        "n_episodes": 40
-      }
-    },
-    "sb_acaad38c39e9": {
-      "robot_id": "mir_mir250",
-      "density": "quiet",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.9,
-        "min_gap_m": 0.0225,
-        "ci95": [
-          0.7694792561952611,
-          0.9604211124044252
-        ],
-        "median_mission_s": 123.80000000000001,
-        "near_miss_per_mission": 0.575,
-        "stops_per_mission": 0.875,
-        "fail_reasons": {
-          "no_path_static": 4,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 36,
-        "n_episodes": 40
-      }
-    },
-    "sb_fbd802602b39": {
+    "sb_9fffb4df20bc": {
       "robot_id": "pudu_t300",
       "density": "peak",
       "bound": "conservative",
@@ -2710,7 +2637,271 @@
         "n_episodes": 40
       }
     },
-    "sb_de2db6c9bb85": {
+    "sb_b960825d5106": {
+      "robot_id": "pudu_t300",
+      "density": "peak",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.03,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 127.3,
+        "near_miss_per_mission": 5.175,
+        "stops_per_mission": 7.35,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_ec68fa07d4d9": {
+      "robot_id": "otto_100",
+      "density": "quiet",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.975,
+        "min_gap_m": 0.0298,
+        "ci95": [
+          0.8711834051199223,
+          0.9955732825922052
+        ],
+        "median_mission_s": 121.7,
+        "near_miss_per_mission": 0.75,
+        "stops_per_mission": 0.875,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 39,
+        "n_episodes": 40
+      }
+    },
+    "sb_21f530537cb3": {
+      "robot_id": "otto_100",
+      "density": "quiet",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.975,
+        "min_gap_m": 0.0298,
+        "ci95": [
+          0.8711834051199223,
+          0.9955732825922052
+        ],
+        "median_mission_s": 121.7,
+        "near_miss_per_mission": 0.75,
+        "stops_per_mission": 0.875,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 39,
+        "n_episodes": 40
+      }
+    },
+    "sb_c804a5a2613a": {
+      "robot_id": "otto_100",
+      "density": "quiet",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.975,
+        "min_gap_m": 0.0298,
+        "ci95": [
+          0.8711834051199223,
+          0.9955732825922052
+        ],
+        "median_mission_s": 121.7,
+        "near_miss_per_mission": 0.75,
+        "stops_per_mission": 0.875,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 39,
+        "n_episodes": 40
+      }
+    },
+    "sb_912ecd05aa47": {
+      "robot_id": "otto_100",
+      "density": "normal",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.975,
+        "min_gap_m": 0.0298,
+        "ci95": [
+          0.8711834051199223,
+          0.9955732825922052
+        ],
+        "median_mission_s": 127.3,
+        "near_miss_per_mission": 2.15,
+        "stops_per_mission": 2.4,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 39,
+        "n_episodes": 40
+      }
+    },
+    "sb_d96dd2fb87d4": {
+      "robot_id": "otto_100",
+      "density": "normal",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.975,
+        "min_gap_m": 0.0298,
+        "ci95": [
+          0.8711834051199223,
+          0.9955732825922052
+        ],
+        "median_mission_s": 127.3,
+        "near_miss_per_mission": 2.15,
+        "stops_per_mission": 2.4,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 39,
+        "n_episodes": 40
+      }
+    },
+    "sb_32365863145e": {
+      "robot_id": "mir_mir250",
+      "density": "quiet",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.9,
+        "min_gap_m": 0.0225,
+        "ci95": [
+          0.7694792561952611,
+          0.9604211124044252
+        ],
+        "median_mission_s": 123.80000000000001,
+        "near_miss_per_mission": 0.575,
+        "stops_per_mission": 0.875,
+        "fail_reasons": {
+          "no_path_static": 4,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 36,
+        "n_episodes": 40
+      }
+    },
+    "sb_5d0a216a21de": {
+      "robot_id": "mir_mir250",
+      "density": "quiet",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.9,
+        "min_gap_m": 0.0225,
+        "ci95": [
+          0.7694792561952611,
+          0.9604211124044252
+        ],
+        "median_mission_s": 123.80000000000001,
+        "near_miss_per_mission": 0.575,
+        "stops_per_mission": 0.875,
+        "fail_reasons": {
+          "no_path_static": 4,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 36,
+        "n_episodes": 40
+      }
+    },
+    "sb_2c8ce07eed75": {
+      "robot_id": "otto_100",
+      "density": "normal",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.975,
+        "min_gap_m": 0.0298,
+        "ci95": [
+          0.8711834051199223,
+          0.9955732825922052
+        ],
+        "median_mission_s": 127.3,
+        "near_miss_per_mission": 2.15,
+        "stops_per_mission": 2.4,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 39,
+        "n_episodes": 40
+      }
+    },
+    "sb_8c2e684f240f": {
+      "robot_id": "otto_100",
+      "density": "peak",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.0298,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 147.45,
+        "near_miss_per_mission": 5.525,
+        "stops_per_mission": 7.1,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_821fc6c11009": {
+      "robot_id": "otto_100",
+      "density": "peak",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.0298,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 147.45,
+        "near_miss_per_mission": 5.525,
+        "stops_per_mission": 7.1,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_b1623866f4ad": {
       "robot_id": "mir_mir250",
       "density": "quiet",
       "bound": "conservative",
@@ -2734,55 +2925,7 @@
         "n_episodes": 40
       }
     },
-    "sb_e3ccc14c1476": {
-      "robot_id": "mir_mir250",
-      "density": "normal",
-      "bound": "nominal",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.875,
-        "min_gap_m": 0.0225,
-        "ci95": [
-          0.7388757932976187,
-          0.9454058022645873
-        ],
-        "median_mission_s": 125.1,
-        "near_miss_per_mission": 2.05,
-        "stops_per_mission": 2.6,
-        "fail_reasons": {
-          "no_path_static": 4,
-          "blocked_timeout": 0,
-          "collision": 1
-        },
-        "n_success": 35,
-        "n_episodes": 40
-      }
-    },
-    "sb_1e9ef8dcdf61": {
-      "robot_id": "mir_mir250",
-      "density": "normal",
-      "bound": "conservative",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.875,
-        "min_gap_m": 0.0225,
-        "ci95": [
-          0.7388757932976187,
-          0.9454058022645873
-        ],
-        "median_mission_s": 125.1,
-        "near_miss_per_mission": 2.05,
-        "stops_per_mission": 2.6,
-        "fail_reasons": {
-          "no_path_static": 4,
-          "blocked_timeout": 0,
-          "collision": 1
-        },
-        "n_success": 35,
-        "n_episodes": 40
-      }
-    },
-    "sb_4fab0640ed9b": {
+    "sb_413fb2a390ae": {
       "robot_id": "mir_mir250",
       "density": "normal",
       "bound": "optimistic",
@@ -2806,415 +2949,7 @@
         "n_episodes": 40
       }
     },
-    "sb_c63223f5d0bf": {
-      "robot_id": "otto_100",
-      "density": "quiet",
-      "bound": "conservative",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.975,
-        "min_gap_m": 0.0298,
-        "ci95": [
-          0.8711834051199223,
-          0.9955732825922052
-        ],
-        "median_mission_s": 121.7,
-        "near_miss_per_mission": 0.75,
-        "stops_per_mission": 0.875,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 1
-        },
-        "n_success": 39,
-        "n_episodes": 40
-      }
-    },
-    "sb_ff68d24cd9f5": {
-      "robot_id": "mir_mir250",
-      "density": "peak",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.875,
-        "min_gap_m": 0.0225,
-        "ci95": [
-          0.7388757932976187,
-          0.9454058022645873
-        ],
-        "median_mission_s": 139.5,
-        "near_miss_per_mission": 4.875,
-        "stops_per_mission": 6.375,
-        "fail_reasons": {
-          "no_path_static": 4,
-          "blocked_timeout": 0,
-          "collision": 1
-        },
-        "n_success": 35,
-        "n_episodes": 40
-      }
-    },
-    "sb_9ce556cb4d55": {
-      "robot_id": "otto_100",
-      "density": "quiet",
-      "bound": "nominal",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.975,
-        "min_gap_m": 0.0298,
-        "ci95": [
-          0.8711834051199223,
-          0.9955732825922052
-        ],
-        "median_mission_s": 121.7,
-        "near_miss_per_mission": 0.75,
-        "stops_per_mission": 0.875,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 1
-        },
-        "n_success": 39,
-        "n_episodes": 40
-      }
-    },
-    "sb_4cc055a97e39": {
-      "robot_id": "otto_100",
-      "density": "quiet",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.975,
-        "min_gap_m": 0.0298,
-        "ci95": [
-          0.8711834051199223,
-          0.9955732825922052
-        ],
-        "median_mission_s": 121.7,
-        "near_miss_per_mission": 0.75,
-        "stops_per_mission": 0.875,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 1
-        },
-        "n_success": 39,
-        "n_episodes": 40
-      }
-    },
-    "sb_923ab3c5e4a0": {
-      "robot_id": "mir_mir250",
-      "density": "peak",
-      "bound": "conservative",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.875,
-        "min_gap_m": 0.0225,
-        "ci95": [
-          0.7388757932976187,
-          0.9454058022645873
-        ],
-        "median_mission_s": 139.5,
-        "near_miss_per_mission": 4.875,
-        "stops_per_mission": 6.375,
-        "fail_reasons": {
-          "no_path_static": 4,
-          "blocked_timeout": 0,
-          "collision": 1
-        },
-        "n_success": 35,
-        "n_episodes": 40
-      }
-    },
-    "sb_0b19d69ffc27": {
-      "robot_id": "mir_mir250",
-      "density": "peak",
-      "bound": "nominal",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.875,
-        "min_gap_m": 0.0225,
-        "ci95": [
-          0.7388757932976187,
-          0.9454058022645873
-        ],
-        "median_mission_s": 139.5,
-        "near_miss_per_mission": 4.875,
-        "stops_per_mission": 6.375,
-        "fail_reasons": {
-          "no_path_static": 4,
-          "blocked_timeout": 0,
-          "collision": 1
-        },
-        "n_success": 35,
-        "n_episodes": 40
-      }
-    },
-    "sb_d2c34af60fbd": {
-      "robot_id": "otto_100",
-      "density": "normal",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.975,
-        "min_gap_m": 0.0298,
-        "ci95": [
-          0.8711834051199223,
-          0.9955732825922052
-        ],
-        "median_mission_s": 127.3,
-        "near_miss_per_mission": 2.15,
-        "stops_per_mission": 2.4,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 1
-        },
-        "n_success": 39,
-        "n_episodes": 40
-      }
-    },
-    "sb_938052ccbcec": {
-      "robot_id": "otto_100",
-      "density": "normal",
-      "bound": "nominal",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.975,
-        "min_gap_m": 0.0298,
-        "ci95": [
-          0.8711834051199223,
-          0.9955732825922052
-        ],
-        "median_mission_s": 127.3,
-        "near_miss_per_mission": 2.15,
-        "stops_per_mission": 2.4,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 1
-        },
-        "n_success": 39,
-        "n_episodes": 40
-      }
-    },
-    "sb_a7c4b4c8f285": {
-      "robot_id": "mir_mir100",
-      "density": "quiet",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.875,
-        "min_gap_m": 0.0275,
-        "ci95": [
-          0.7388757932976187,
-          0.9454058022645873
-        ],
-        "median_mission_s": 144.7,
-        "near_miss_per_mission": 0.75,
-        "stops_per_mission": 1.225,
-        "fail_reasons": {
-          "no_path_static": 5,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 35,
-        "n_episodes": 40
-      }
-    },
-    "sb_03d73fe6bf9a": {
-      "robot_id": "mir_mir100",
-      "density": "quiet",
-      "bound": "nominal",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.875,
-        "min_gap_m": 0.0275,
-        "ci95": [
-          0.7388757932976187,
-          0.9454058022645873
-        ],
-        "median_mission_s": 144.7,
-        "near_miss_per_mission": 0.75,
-        "stops_per_mission": 1.225,
-        "fail_reasons": {
-          "no_path_static": 5,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 35,
-        "n_episodes": 40
-      }
-    },
-    "sb_539ba4b20ade": {
-      "robot_id": "mir_mir100",
-      "density": "quiet",
-      "bound": "conservative",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.875,
-        "min_gap_m": 0.0275,
-        "ci95": [
-          0.7388757932976187,
-          0.9454058022645873
-        ],
-        "median_mission_s": 144.7,
-        "near_miss_per_mission": 0.75,
-        "stops_per_mission": 1.225,
-        "fail_reasons": {
-          "no_path_static": 5,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 35,
-        "n_episodes": 40
-      }
-    },
-    "sb_96f02e78896e": {
-      "robot_id": "mir_mir100",
-      "density": "normal",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.875,
-        "min_gap_m": 0.0275,
-        "ci95": [
-          0.7388757932976187,
-          0.9454058022645873
-        ],
-        "median_mission_s": 151.9,
-        "near_miss_per_mission": 1.75,
-        "stops_per_mission": 2.925,
-        "fail_reasons": {
-          "no_path_static": 5,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 35,
-        "n_episodes": 40
-      }
-    },
-    "sb_a0511c46ab27": {
-      "robot_id": "otto_100",
-      "density": "normal",
-      "bound": "conservative",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.975,
-        "min_gap_m": 0.0298,
-        "ci95": [
-          0.8711834051199223,
-          0.9955732825922052
-        ],
-        "median_mission_s": 127.3,
-        "near_miss_per_mission": 2.15,
-        "stops_per_mission": 2.4,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 1
-        },
-        "n_success": 39,
-        "n_episodes": 40
-      }
-    },
-    "sb_82a57c4f9f6d": {
-      "robot_id": "mir_mir100",
-      "density": "normal",
-      "bound": "conservative",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.875,
-        "min_gap_m": 0.0275,
-        "ci95": [
-          0.7388757932976187,
-          0.9454058022645873
-        ],
-        "median_mission_s": 151.9,
-        "near_miss_per_mission": 1.75,
-        "stops_per_mission": 2.925,
-        "fail_reasons": {
-          "no_path_static": 5,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 35,
-        "n_episodes": 40
-      }
-    },
-    "sb_7ac96c8888b0": {
-      "robot_id": "otto_100",
-      "density": "peak",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 1.0,
-        "min_gap_m": 0.0298,
-        "ci95": [
-          0.9123754607496077,
-          1.0
-        ],
-        "median_mission_s": 147.45,
-        "near_miss_per_mission": 5.525,
-        "stops_per_mission": 7.1,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 40,
-        "n_episodes": 40
-      }
-    },
-    "sb_fc4853bd9207": {
-      "robot_id": "mir_mir100",
-      "density": "normal",
-      "bound": "nominal",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.875,
-        "min_gap_m": 0.0275,
-        "ci95": [
-          0.7388757932976187,
-          0.9454058022645873
-        ],
-        "median_mission_s": 151.9,
-        "near_miss_per_mission": 1.75,
-        "stops_per_mission": 2.925,
-        "fail_reasons": {
-          "no_path_static": 5,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 35,
-        "n_episodes": 40
-      }
-    },
-    "sb_880ee587be27": {
-      "robot_id": "otto_100",
-      "density": "peak",
-      "bound": "nominal",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 1.0,
-        "min_gap_m": 0.0298,
-        "ci95": [
-          0.9123754607496077,
-          1.0
-        ],
-        "median_mission_s": 147.45,
-        "near_miss_per_mission": 5.525,
-        "stops_per_mission": 7.1,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 40,
-        "n_episodes": 40
-      }
-    },
-    "sb_9de38e6e6c78": {
+    "sb_de57212d3e22": {
       "robot_id": "otto_100",
       "density": "peak",
       "bound": "conservative",
@@ -3238,7 +2973,271 @@
         "n_episodes": 40
       }
     },
-    "sb_a88b8f4302ab": {
+    "sb_605a9842767b": {
+      "robot_id": "mir_mir100",
+      "density": "quiet",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0275,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 144.7,
+        "near_miss_per_mission": 0.75,
+        "stops_per_mission": 1.225,
+        "fail_reasons": {
+          "no_path_static": 5,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_c0efaf479af5": {
+      "robot_id": "mir_mir250",
+      "density": "normal",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0225,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 125.1,
+        "near_miss_per_mission": 2.05,
+        "stops_per_mission": 2.6,
+        "fail_reasons": {
+          "no_path_static": 4,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_66564fd490c1": {
+      "robot_id": "mir_mir100",
+      "density": "quiet",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0275,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 144.7,
+        "near_miss_per_mission": 0.75,
+        "stops_per_mission": 1.225,
+        "fail_reasons": {
+          "no_path_static": 5,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_810fb36d5b55": {
+      "robot_id": "mir_mir250",
+      "density": "normal",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0225,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 125.1,
+        "near_miss_per_mission": 2.05,
+        "stops_per_mission": 2.6,
+        "fail_reasons": {
+          "no_path_static": 4,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_03df66d32580": {
+      "robot_id": "mir_mir100",
+      "density": "quiet",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0275,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 144.7,
+        "near_miss_per_mission": 0.75,
+        "stops_per_mission": 1.225,
+        "fail_reasons": {
+          "no_path_static": 5,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_c9e6d358e6f0": {
+      "robot_id": "mir_mir100",
+      "density": "normal",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0275,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 151.9,
+        "near_miss_per_mission": 1.75,
+        "stops_per_mission": 2.925,
+        "fail_reasons": {
+          "no_path_static": 5,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_51a58e3d9cf6": {
+      "robot_id": "mir_mir250",
+      "density": "peak",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0225,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 139.5,
+        "near_miss_per_mission": 4.875,
+        "stops_per_mission": 6.375,
+        "fail_reasons": {
+          "no_path_static": 4,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_9425af669c72": {
+      "robot_id": "mir_mir250",
+      "density": "peak",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0225,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 139.5,
+        "near_miss_per_mission": 4.875,
+        "stops_per_mission": 6.375,
+        "fail_reasons": {
+          "no_path_static": 4,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_d49f4d0bc2b6": {
+      "robot_id": "mir_mir250",
+      "density": "peak",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0225,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 139.5,
+        "near_miss_per_mission": 4.875,
+        "stops_per_mission": 6.375,
+        "fail_reasons": {
+          "no_path_static": 4,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_849435d8d9f3": {
+      "robot_id": "mir_mir100",
+      "density": "normal",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0275,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 151.9,
+        "near_miss_per_mission": 1.75,
+        "stops_per_mission": 2.925,
+        "fail_reasons": {
+          "no_path_static": 5,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_6d6729f9de89": {
+      "robot_id": "mir_mir100",
+      "density": "normal",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0275,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 151.9,
+        "near_miss_per_mission": 1.75,
+        "stops_per_mission": 2.925,
+        "fail_reasons": {
+          "no_path_static": 5,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_1b2444254746": {
       "robot_id": "mir_mir100",
       "density": "peak",
       "bound": "optimistic",
@@ -3262,7 +3261,7 @@
         "n_episodes": 40
       }
     },
-    "sb_ccb6e9e6b36c": {
+    "sb_cc0f521eeb77": {
       "robot_id": "mir_mir100",
       "density": "peak",
       "bound": "nominal",
@@ -3286,7 +3285,7 @@
         "n_episodes": 40
       }
     },
-    "sb_63697ef211c7": {
+    "sb_37cdbf0abde7": {
       "robot_id": "mir_mir100",
       "density": "peak",
       "bound": "conservative",
@@ -3321,36 +3320,36 @@
     "mir_mir250": {
       "investigation_id": "inv_af72142b9b",
       "analysis_id": "an_ref_storeroom_01",
-      "model_id": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "model_id": "nvidia/Nemotron-3.5-Super-VL",
       "mode": "live",
       "steps": [
         {
           "i": 1,
-          "thought": "",
+          "thought": "I'll start by observing the robot's performance across its batches and identifying the pinch points.",
           "tool": "get_batch_summary",
           "args": {
-            "batch_id": "sb_0b19d69ffc27"
+            "batch_id": "sb_32365863145e"
           },
           "result_summary": {
             "ok": true,
             "robot_id": "mir_mir250",
             "batches": [
               {
-                "batch_id": "sb_0b19d69ffc27",
-                "density": "peak",
-                "bound": "nominal",
+                "batch_id": "sb_32365863145e",
+                "density": "quiet",
+                "bound": "optimistic",
                 "success_rate": {
-                  "value": 0.875,
+                  "value": 0.9,
                   "unit": "ratio",
                   "fact_id": "f_iaf721_001"
                 },
                 "ci95_low": {
-                  "value": 0.7389,
+                  "value": 0.7695,
                   "unit": "ratio",
                   "fact_id": "f_iaf721_002"
                 },
                 "ci95_high": {
-                  "value": 0.9454,
+                  "value": 0.9604,
                   "unit": "ratio",
                   "fact_id": "f_iaf721_003"
                 },
@@ -3360,7 +3359,7 @@
                   "fact_id": "f_iaf721_004"
                 },
                 "median_mission_s": {
-                  "value": 139.5,
+                  "value": 123.8,
                   "unit": "s",
                   "fact_id": "f_iaf721_005"
                 },
@@ -3370,25 +3369,20 @@
                   "fact_id": "f_iaf721_006"
                 },
                 "near_miss_per_mission": {
-                  "value": 4.875,
+                  "value": 0.575,
                   "unit": "per mission",
                   "fact_id": "f_iaf721_007"
                 },
                 "stops_per_mission": {
-                  "value": 6.375,
+                  "value": 0.875,
                   "unit": "per mission",
                   "fact_id": "f_iaf721_008"
                 },
                 "fail_reasons": {
-                  "collision": {
-                    "value": 1,
-                    "unit": "episodes",
-                    "fact_id": "f_iaf721_009"
-                  },
                   "no_path_static": {
                     "value": 4,
                     "unit": "episodes",
-                    "fact_id": "f_iaf721_010"
+                    "fact_id": "f_iaf721_009"
                   }
                 }
               }
@@ -3403,8 +3397,7 @@
             "f_iaf721_006",
             "f_iaf721_007",
             "f_iaf721_008",
-            "f_iaf721_009",
-            "f_iaf721_010"
+            "f_iaf721_009"
           ]
         },
         {
@@ -3426,7 +3419,7 @@
                 "share_of_total": {
                   "value": 0.1622,
                   "unit": "ratio",
-                  "fact_id": "f_iaf721_011"
+                  "fact_id": "f_iaf721_010"
                 },
                 "nearby_object_ids": [
                   "PALLET1",
@@ -3447,7 +3440,7 @@
                 "share_of_total": {
                   "value": 0.1288,
                   "unit": "ratio",
-                  "fact_id": "f_iaf721_012"
+                  "fact_id": "f_iaf721_011"
                 },
                 "nearby_object_ids": [
                   "SHELF_A",
@@ -3468,7 +3461,7 @@
                 "share_of_total": {
                   "value": 0.1263,
                   "unit": "ratio",
-                  "fact_id": "f_iaf721_013"
+                  "fact_id": "f_iaf721_012"
                 },
                 "nearby_object_ids": [
                   "DOCKSTN"
@@ -3488,7 +3481,7 @@
                 "share_of_total": {
                   "value": 0.0769,
                   "unit": "ratio",
-                  "fact_id": "f_iaf721_014"
+                  "fact_id": "f_iaf721_013"
                 },
                 "nearby_object_ids": [
                   "SHELF_B",
@@ -3508,7 +3501,7 @@
                 "share_of_total": {
                   "value": 0.0753,
                   "unit": "ratio",
-                  "fact_id": "f_iaf721_015"
+                  "fact_id": "f_iaf721_014"
                 },
                 "nearby_object_ids": [
                   "PALLET1",
@@ -3529,7 +3522,7 @@
                 "share_of_total": {
                   "value": 0.0746,
                   "unit": "ratio",
-                  "fact_id": "f_iaf721_016"
+                  "fact_id": "f_iaf721_015"
                 },
                 "nearby_object_ids": [
                   "SHELF_A",
@@ -3550,7 +3543,7 @@
                 "share_of_total": {
                   "value": 0.0538,
                   "unit": "ratio",
-                  "fact_id": "f_iaf721_017"
+                  "fact_id": "f_iaf721_016"
                 },
                 "nearby_object_ids": [
                   "SHELF_A",
@@ -3571,7 +3564,7 @@
                 "share_of_total": {
                   "value": 0.0513,
                   "unit": "ratio",
-                  "fact_id": "f_iaf721_018"
+                  "fact_id": "f_iaf721_017"
                 },
                 "nearby_object_ids": [
                   "SHELF_A",
@@ -3585,26 +3578,26 @@
               }
             ],
             "batches_used": [
-              "sb_0b19d69ffc27",
-              "sb_6c0e4e92553b",
-              "sb_e3ccc14c1476"
+              "sb_5d0a216a21de",
+              "sb_9425af669c72",
+              "sb_c0efaf479af5"
             ],
             "threshold_share": 0.05
           },
           "fact_ids": [
+            "f_iaf721_010",
             "f_iaf721_011",
             "f_iaf721_012",
             "f_iaf721_013",
             "f_iaf721_014",
             "f_iaf721_015",
             "f_iaf721_016",
-            "f_iaf721_017",
-            "f_iaf721_018"
+            "f_iaf721_017"
           ]
         },
         {
           "i": 3,
-          "thought": "",
+          "thought": "I have initial data. The batch shows a 0.9 success rate with a very tight min_gap of 0.0225 m and 4 \"no_path_static\" failures. The top pinch point is at [[n?], [n?]] near PALLET1 and SHELF_A. Let me examine the gap at that location and the objects there.",
           "tool": "get_gap_at",
           "args": {
             "xy": [
@@ -3622,34 +3615,202 @@
             "nearest_obstacle_m": {
               "value": 0.285,
               "unit": "m",
-              "fact_id": "f_iaf721_019"
+              "fact_id": "f_iaf721_018"
             },
             "gap_m": {
               "value": 0.5701,
               "unit": "m",
-              "fact_id": "f_iaf721_020"
+              "fact_id": "f_iaf721_019"
             },
             "robot_width_m": {
               "value": 0.58,
               "unit": "m",
-              "fact_id": "f_iaf721_021"
+              "fact_id": "f_iaf721_020"
             },
             "gap_margin_m": {
               "value": -0.0099,
               "unit": "m",
-              "fact_id": "f_iaf721_022"
+              "fact_id": "f_iaf721_021"
             }
           },
           "fact_ids": [
+            "f_iaf721_018",
             "f_iaf721_019",
             "f_iaf721_020",
-            "f_iaf721_021",
-            "f_iaf721_022"
+            "f_iaf721_021"
           ]
         },
         {
           "i": 4,
           "thought": "",
+          "tool": "get_objects_near",
+          "args": {
+            "xy": [
+              3.338,
+              1.688
+            ],
+            "r": 1
+          },
+          "result_summary": {
+            "ok": true,
+            "xy": [
+              3.338,
+              1.688
+            ],
+            "r": 1.0,
+            "objects": [
+              {
+                "id": "PALLET1",
+                "label": "pallet",
+                "movable": true,
+                "fragile": false,
+                "center_xy": [
+                  4.015,
+                  1.01
+                ],
+                "distance_m": {
+                  "value": 0.2884,
+                  "unit": "m",
+                  "fact_id": "f_iaf721_022"
+                },
+                "confidence": 1.0
+              },
+              {
+                "id": "SHELF_A",
+                "label": "shelf",
+                "movable": false,
+                "fragile": false,
+                "center_xy": [
+                  5.265,
+                  2.51
+                ],
+                "distance_m": {
+                  "value": 0.522,
+                  "unit": "m",
+                  "fact_id": "f_iaf721_023"
+                },
+                "confidence": 1.0
+              }
+            ],
+            "zone_ids": [
+              "staging"
+            ]
+          },
+          "fact_ids": [
+            "f_iaf721_022",
+            "f_iaf721_023"
+          ]
+        },
+        {
+          "i": 5,
+          "thought": "Critical finding at the top pinch point [[n?], [n?]]: the free gap is 0.5701 m but the robot width is 0.58 m, giving a negative gap margin of -0.0099 m [f_iaf721_019, f_iaf721_020, f_iaf721_021]. The nearest obstacle is the movable PALLET1 at 0.2884 m [f_iaf721_022]. This static clearance shortfall explains the \"no_path_static\" failures and low success rate.\n\nHypothesis: PALLET1 encroaches on the path, squeezing the gap below the robot's width. Moving PALLET1 away should widen the gap and raise success.\n\nLet me run a probe moving PALLET1 away from the pinch point.",
+          "tool": "run_probe",
+          "args": {
+            "hypothesis": "Moving PALLET1 away from pinch point [3.338, 1.688] widens the gap above the robot width (0.58 m), eliminating the static no-path failures and raising success rate.",
+            "overrides": {
+              "move": {
+                "PALLET1": {
+                  "dx": 0.5,
+                  "dy": -0.5,
+                  "dyaw": 0
+                }
+              }
+            },
+            "n_episodes": 30
+          },
+          "result_summary": {
+            "ok": false,
+            "error": "numbers ['3.338', '1.688', '0.58'] are not values of the cited facts; every number must come from a cited tool fact"
+          },
+          "fact_ids": []
+        },
+        {
+          "i": 6,
+          "thought": "The hypothesis text contained uncited numbers. Let me re-run the probe with a hypothesis that references the cited facts properly.",
+          "tool": "run_probe",
+          "args": {
+            "hypothesis": "Moving PALLET1 away from the top pinch point widens the gap above the robot width [f_iaf721_020], eliminating the negative gap margin [f_iaf721_021] and the static no-path failures, raising success rate.",
+            "overrides": {
+              "move": {
+                "PALLET1": {
+                  "dx": 0.5,
+                  "dy": -0.5,
+                  "dyaw": 0
+                }
+              }
+            },
+            "n_episodes": 30
+          },
+          "result_summary": {
+            "ok": true,
+            "probe_id": "sb_7c72dd6fafbe",
+            "overrides": {
+              "move": {
+                "PALLET1": {
+                  "dx": 0.5,
+                  "dy": -0.5,
+                  "dyaw": 0.0
+                }
+              }
+            },
+            "density": "normal",
+            "robot_id": "mir_mir250",
+            "baseline_ref": "sb_c0efaf479af5",
+            "ran_baseline_probe": false,
+            "success_rate": {
+              "value": 0.9,
+              "unit": "ratio",
+              "fact_id": "f_iaf721_024"
+            },
+            "ci95_low": {
+              "value": 0.7438,
+              "unit": "ratio",
+              "fact_id": "f_iaf721_025"
+            },
+            "ci95_high": {
+              "value": 0.9654,
+              "unit": "ratio",
+              "fact_id": "f_iaf721_026"
+            },
+            "n_episodes": {
+              "value": 30,
+              "unit": "episodes",
+              "fact_id": "f_iaf721_027"
+            },
+            "baseline_success_rate": {
+              "value": 0.875,
+              "unit": "ratio",
+              "fact_id": "f_iaf721_028"
+            },
+            "improvement": {
+              "value": 0.025,
+              "unit": "ratio",
+              "fact_id": "f_iaf721_029"
+            },
+            "ci_half_width": {
+              "value": 0.1108,
+              "unit": "ratio",
+              "fact_id": "f_iaf721_030"
+            },
+            "experiment_id": "ex_iaf721_01",
+            "kind": "move_object",
+            "outcome": "inconclusive",
+            "improved_beyond_ci": false,
+            "experiments_left": 5
+          },
+          "fact_ids": [
+            "f_iaf721_024",
+            "f_iaf721_025",
+            "f_iaf721_026",
+            "f_iaf721_027",
+            "f_iaf721_028",
+            "f_iaf721_029",
+            "f_iaf721_030"
+          ]
+        },
+        {
+          "i": 7,
+          "thought": "The first probe was inconclusive \u2014 moving PALLET1 improved success by only 0.025, which is within the CI half-width of 0.1108 [f_iaf721_029, f_iaf721_030]. The hypothesis is not confirmed. The min_gap of 0.0225 m [f_iaf721_006] suggests a much tighter spot elsewhere. Let me check the gap at the second-ranked bottleneck.",
           "tool": "get_gap_at",
           "args": {
             "xy": [
@@ -3667,111 +3828,50 @@
             "nearest_obstacle_m": {
               "value": 0.535,
               "unit": "m",
-              "fact_id": "f_iaf721_023"
+              "fact_id": "f_iaf721_031"
             },
             "gap_m": {
               "value": 1.07,
               "unit": "m",
-              "fact_id": "f_iaf721_024"
+              "fact_id": "f_iaf721_032"
             },
             "robot_width_m": {
               "value": 0.58,
               "unit": "m",
-              "fact_id": "f_iaf721_025"
+              "fact_id": "f_iaf721_033"
             },
             "gap_margin_m": {
               "value": 0.49,
               "unit": "m",
-              "fact_id": "f_iaf721_026"
+              "fact_id": "f_iaf721_034"
             }
           },
           "fact_ids": [
-            "f_iaf721_023",
-            "f_iaf721_024",
-            "f_iaf721_025",
-            "f_iaf721_026"
+            "f_iaf721_031",
+            "f_iaf721_032",
+            "f_iaf721_033",
+            "f_iaf721_034"
           ]
         },
         {
-          "i": 5,
-          "thought": "Rank 1 is too narrow (gap 0.570m < robot width 0.58m, margin \u2212[n?]m) near PALLET1/SHELF_A. Rank [n?] is fine statically. Let me check rank [n?] near DOCKSTN.",
-          "tool": "get_gap_at",
-          "args": {
-            "xy": [
-              0.763,
-              0.963
-            ]
-          },
-          "result_summary": {
-            "ok": true,
-            "xy": [
-              0.763,
-              0.963
-            ],
-            "in_obstacle": false,
-            "nearest_obstacle_m": {
-              "value": 0.45,
-              "unit": "m",
-              "fact_id": "f_iaf721_027"
-            },
-            "gap_m": {
-              "value": 0.9,
-              "unit": "m",
-              "fact_id": "f_iaf721_028"
-            },
-            "robot_width_m": {
-              "value": 0.58,
-              "unit": "m",
-              "fact_id": "f_iaf721_029"
-            },
-            "gap_margin_m": {
-              "value": 0.32,
-              "unit": "m",
-              "fact_id": "f_iaf721_030"
-            }
-          },
-          "fact_ids": [
-            "f_iaf721_027",
-            "f_iaf721_028",
-            "f_iaf721_029",
-            "f_iaf721_030"
-          ]
-        },
-        {
-          "i": 6,
-          "thought": "Rank 1 is the only statically too-narrow cell (gap 0.570m < robot width 0.58m, margin \u2212[n?]m) near PALLET1/SHELF_A. Let me locate PALLET1 precisely before moving it.",
+          "i": 8,
+          "thought": "",
           "tool": "get_objects_near",
           "args": {
             "xy": [
-              3.338,
-              1.688
+              1.688,
+              3.238
             ],
-            "r": 1.5
+            "r": 1
           },
           "result_summary": {
             "ok": true,
             "xy": [
-              3.338,
-              1.688
+              1.688,
+              3.238
             ],
-            "r": 1.5,
+            "r": 1.0,
             "objects": [
-              {
-                "id": "PALLET1",
-                "label": "pallet",
-                "movable": true,
-                "fragile": false,
-                "center_xy": [
-                  4.015,
-                  1.01
-                ],
-                "distance_m": {
-                  "value": 0.2884,
-                  "unit": "m",
-                  "fact_id": "f_iaf721_031"
-                },
-                "confidence": 1.0
-              },
               {
                 "id": "SHELF_A",
                 "label": "shelf",
@@ -3782,78 +3882,79 @@
                   2.51
                 ],
                 "distance_m": {
-                  "value": 0.522,
+                  "value": 0.5385,
                   "unit": "m",
-                  "fact_id": "f_iaf721_032"
+                  "fact_id": "f_iaf721_035"
+                },
+                "confidence": 1.0
+              },
+              {
+                "id": "SHELF_B",
+                "label": "shelf",
+                "movable": false,
+                "fragile": false,
+                "center_xy": [
+                  5.265,
+                  4.31
+                ],
+                "distance_m": {
+                  "value": 0.8384,
+                  "unit": "m",
+                  "fact_id": "f_iaf721_036"
                 },
                 "confidence": 1.0
               }
             ],
             "zone_ids": [
-              "staging",
               "aisles"
             ]
           },
           "fact_ids": [
-            "f_iaf721_031",
-            "f_iaf721_032"
+            "f_iaf721_035",
+            "f_iaf721_036"
           ]
-        },
-        {
-          "i": 7,
-          "thought": "PALLET1 center is at [4.015, [n?]], just 0.288m from the pinch cell [[n?], [n?]] \u2014 it's likely the obstacle pinching the gap below robot width (0.58m). Hypothesis: moving PALLET1 away from this cell widens the gap above robot width and raises success.",
-          "tool": "run_probe",
-          "args": {
-            "hypothesis": "PALLET1 sits too close to SHELF_A, pinching the aisle at [3.338, 1.688] to 0.570m (< robot width 0.58m). Moving PALLET1 away widens the gap and raises success rate.",
-            "overrides": {
-              "move": {
-                "PALLET1": {
-                  "dx": 0.5,
-                  "dy": -0.5,
-                  "dyaw": 0
-                }
-              }
-            },
-            "n_episodes": 30
-          },
-          "result_summary": {
-            "ok": false,
-            "error": "numbers ['3.338', '1.688', '0.570', '0.58'] are not values of the cited facts; every number must come from a cited tool fact"
-          },
-          "fact_ids": []
-        },
-        {
-          "i": 8,
-          "thought": "",
-          "tool": "run_probe",
-          "args": {
-            "hypothesis": "PALLET1 sits too close to SHELF_A, pinching the aisle at [3.338, 1.688] [f_iaf721_011] to gap 0.5701m [f_iaf721_020] < robot width 0.58m [f_iaf721_021] (margin -0.0099m [f_iaf721_022]). Moving PALLET1 away widens the gap and raises success rate.",
-            "overrides": {
-              "move": {
-                "PALLET1": {
-                  "dx": 0.5,
-                  "dy": -0.5,
-                  "dyaw": 0
-                }
-              }
-            },
-            "n_episodes": 30
-          },
-          "result_summary": {
-            "ok": false,
-            "error": "numbers ['3.338', '1.688'] are not values of the cited facts; every number must come from a cited tool fact"
-          },
-          "fact_ids": []
         }
       ],
-      "experiments": [],
+      "experiments": [
+        {
+          "experiment_id": "ex_iaf721_01",
+          "robot_id": "mir_mir250",
+          "hypothesis": "Moving PALLET1 away from the top pinch point widens the gap above the robot width [f_iaf721_020], eliminating the negative gap margin [f_iaf721_021] and the static no-path failures, raising success rate.",
+          "kind": "move_object",
+          "change": {
+            "move": {
+              "PALLET1": {
+                "dx": 0.5,
+                "dy": -0.5,
+                "dyaw": 0.0
+              }
+            },
+            "density": "normal"
+          },
+          "batch_id": "sb_7c72dd6fafbe",
+          "baseline_fact_ids": [
+            "f_iaf721_028"
+          ],
+          "result_fact_ids": [
+            "f_iaf721_024",
+            "f_iaf721_025",
+            "f_iaf721_026",
+            "f_iaf721_027",
+            "f_iaf721_029",
+            "f_iaf721_030"
+          ],
+          "outcome": "inconclusive",
+          "next_action": "conclude",
+          "conclusion": "Hypothesis inconclusive: success-rate change [f_iaf721_029] vs probe CI half-width [f_iaf721_030] (probe [f_iaf721_024] vs baseline [f_iaf721_028])."
+        }
+      ],
       "findings": [],
       "facts": [
         {
           "fact_id": "f_iaf721_001",
-          "value": 0.875,
+          "value": 0.9,
           "unit": "ratio",
-          "label": "Success rate, mir_mir250, peak traffic, nominal geometry (sb_0b19d69ffc27)",
+          "label": "Success rate, mir_mir250, quiet traffic, optimistic geometry (sb_32365863145e)",
           "origin": {
             "type": "investigation",
             "ref": "inv_af72142b9b#step1"
@@ -3861,9 +3962,9 @@
         },
         {
           "fact_id": "f_iaf721_002",
-          "value": 0.7389,
+          "value": 0.7695,
           "unit": "ratio",
-          "label": "Success rate 95% CI low, mir_mir250, peak traffic, nominal geometry (sb_0b19d69ffc27)",
+          "label": "Success rate 95% CI low, mir_mir250, quiet traffic, optimistic geometry (sb_32365863145e)",
           "origin": {
             "type": "investigation",
             "ref": "inv_af72142b9b#step1"
@@ -3871,9 +3972,9 @@
         },
         {
           "fact_id": "f_iaf721_003",
-          "value": 0.9454,
+          "value": 0.9604,
           "unit": "ratio",
-          "label": "Success rate 95% CI high, mir_mir250, peak traffic, nominal geometry (sb_0b19d69ffc27)",
+          "label": "Success rate 95% CI high, mir_mir250, quiet traffic, optimistic geometry (sb_32365863145e)",
           "origin": {
             "type": "investigation",
             "ref": "inv_af72142b9b#step1"
@@ -3883,7 +3984,7 @@
           "fact_id": "f_iaf721_004",
           "value": 40.0,
           "unit": "episodes",
-          "label": "Episodes, mir_mir250, peak traffic, nominal geometry (sb_0b19d69ffc27)",
+          "label": "Episodes, mir_mir250, quiet traffic, optimistic geometry (sb_32365863145e)",
           "origin": {
             "type": "investigation",
             "ref": "inv_af72142b9b#step1"
@@ -3891,9 +3992,9 @@
         },
         {
           "fact_id": "f_iaf721_005",
-          "value": 139.5,
+          "value": 123.8,
           "unit": "s",
-          "label": "Median mission time, mir_mir250, peak traffic, nominal geometry",
+          "label": "Median mission time, mir_mir250, quiet traffic, optimistic geometry",
           "origin": {
             "type": "investigation",
             "ref": "inv_af72142b9b#step1"
@@ -3903,7 +4004,7 @@
           "fact_id": "f_iaf721_006",
           "value": 0.0225,
           "unit": "m",
-          "label": "Median smallest robot-to-obstacle gap, mir_mir250, peak traffic, nominal geometry",
+          "label": "Median smallest robot-to-obstacle gap, mir_mir250, quiet traffic, optimistic geometry",
           "origin": {
             "type": "investigation",
             "ref": "inv_af72142b9b#step1"
@@ -3911,9 +4012,9 @@
         },
         {
           "fact_id": "f_iaf721_007",
-          "value": 4.875,
+          "value": 0.575,
           "unit": "per mission",
-          "label": "Near-misses per mission, mir_mir250, peak traffic, nominal geometry",
+          "label": "Near-misses per mission, mir_mir250, quiet traffic, optimistic geometry",
           "origin": {
             "type": "investigation",
             "ref": "inv_af72142b9b#step1"
@@ -3921,9 +4022,9 @@
         },
         {
           "fact_id": "f_iaf721_008",
-          "value": 6.375,
+          "value": 0.875,
           "unit": "per mission",
-          "label": "Safety stops per mission, mir_mir250, peak traffic, nominal geometry",
+          "label": "Safety stops per mission, mir_mir250, quiet traffic, optimistic geometry",
           "origin": {
             "type": "investigation",
             "ref": "inv_af72142b9b#step1"
@@ -3931,9 +4032,9 @@
         },
         {
           "fact_id": "f_iaf721_009",
-          "value": 1.0,
+          "value": 4.0,
           "unit": "episodes",
-          "label": "Failures 'collision', mir_mir250, peak traffic, nominal geometry (sb_0b19d69ffc27)",
+          "label": "Failures 'no_path_static', mir_mir250, quiet traffic, optimistic geometry (sb_32365863145e)",
           "origin": {
             "type": "investigation",
             "ref": "inv_af72142b9b#step1"
@@ -3941,16 +4042,6 @@
         },
         {
           "fact_id": "f_iaf721_010",
-          "value": 4.0,
-          "unit": "episodes",
-          "label": "Failures 'no_path_static', mir_mir250, peak traffic, nominal geometry (sb_0b19d69ffc27)",
-          "origin": {
-            "type": "investigation",
-            "ref": "inv_af72142b9b#step1"
-          }
-        },
-        {
-          "fact_id": "f_iaf721_011",
           "value": 0.1622,
           "unit": "ratio",
           "label": "Pinch Map spot #1: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
@@ -3960,7 +4051,7 @@
           }
         },
         {
-          "fact_id": "f_iaf721_012",
+          "fact_id": "f_iaf721_011",
           "value": 0.1288,
           "unit": "ratio",
           "label": "Pinch Map spot #2: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
@@ -3970,7 +4061,7 @@
           }
         },
         {
-          "fact_id": "f_iaf721_013",
+          "fact_id": "f_iaf721_012",
           "value": 0.1263,
           "unit": "ratio",
           "label": "Pinch Map spot #3: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
@@ -3980,7 +4071,7 @@
           }
         },
         {
-          "fact_id": "f_iaf721_014",
+          "fact_id": "f_iaf721_013",
           "value": 0.0769,
           "unit": "ratio",
           "label": "Pinch Map spot #4: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
@@ -3990,7 +4081,7 @@
           }
         },
         {
-          "fact_id": "f_iaf721_015",
+          "fact_id": "f_iaf721_014",
           "value": 0.0753,
           "unit": "ratio",
           "label": "Pinch Map spot #5: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
@@ -4000,7 +4091,7 @@
           }
         },
         {
-          "fact_id": "f_iaf721_016",
+          "fact_id": "f_iaf721_015",
           "value": 0.0746,
           "unit": "ratio",
           "label": "Pinch Map spot #6: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
@@ -4010,7 +4101,7 @@
           }
         },
         {
-          "fact_id": "f_iaf721_017",
+          "fact_id": "f_iaf721_016",
           "value": 0.0538,
           "unit": "ratio",
           "label": "Pinch Map spot #7: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
@@ -4020,7 +4111,7 @@
           }
         },
         {
-          "fact_id": "f_iaf721_018",
+          "fact_id": "f_iaf721_017",
           "value": 0.0513,
           "unit": "ratio",
           "label": "Pinch Map spot #8: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
@@ -4030,7 +4121,7 @@
           }
         },
         {
-          "fact_id": "f_iaf721_019",
+          "fact_id": "f_iaf721_018",
           "value": 0.285,
           "unit": "m",
           "label": "Distance from (3.34, 1.69) to nearest obstacle (nominal grid)",
@@ -4040,7 +4131,7 @@
           }
         },
         {
-          "fact_id": "f_iaf721_020",
+          "fact_id": "f_iaf721_019",
           "value": 0.5701,
           "unit": "m",
           "label": "Approximate free gap through (3.34, 1.69) (2 x nearest-obstacle distance, nominal grid)",
@@ -4050,7 +4141,7 @@
           }
         },
         {
-          "fact_id": "f_iaf721_021",
+          "fact_id": "f_iaf721_020",
           "value": 0.58,
           "unit": "m",
           "label": "Footprint width, mir_mir250",
@@ -4060,7 +4151,7 @@
           }
         },
         {
-          "fact_id": "f_iaf721_022",
+          "fact_id": "f_iaf721_021",
           "value": -0.0099,
           "unit": "m",
           "label": "Approximate gap minus robot width at (3.34, 1.69)",
@@ -4070,10 +4161,20 @@
           }
         },
         {
-          "fact_id": "f_iaf721_023",
-          "value": 0.535,
+          "fact_id": "f_iaf721_022",
+          "value": 0.2884,
           "unit": "m",
-          "label": "Distance from (1.69, 3.24) to nearest obstacle (nominal grid)",
+          "label": "Distance from (3.34, 1.69) to the edge of object PALLET1 (pallet)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step4"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_023",
+          "value": 0.522,
+          "unit": "m",
+          "label": "Distance from (3.34, 1.69) to the edge of object SHELF_A (shelf)",
           "origin": {
             "type": "investigation",
             "ref": "inv_af72142b9b#step4"
@@ -4081,105 +4182,145 @@
         },
         {
           "fact_id": "f_iaf721_024",
+          "value": 0.9,
+          "unit": "ratio",
+          "label": "Probe sb_7c72dd6fafbe success rate ({\"density\": \"normal\", \"overrides\": {\"move\": {\"PALLET1\": {\"dx\": 0.5, \"dy\": -0.5, \"dyaw\": 0.0}}}, \"robot_id\": \"mir_mir250\"}, nominal geometry)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step6"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_025",
+          "value": 0.7438,
+          "unit": "ratio",
+          "label": "Probe sb_7c72dd6fafbe 95% CI low",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step6"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_026",
+          "value": 0.9654,
+          "unit": "ratio",
+          "label": "Probe sb_7c72dd6fafbe 95% CI high",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step6"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_027",
+          "value": 30.0,
+          "unit": "episodes",
+          "label": "Probe sb_7c72dd6fafbe episodes",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step6"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_028",
+          "value": 0.875,
+          "unit": "ratio",
+          "label": "Baseline success rate for probe sb_7c72dd6fafbe (sb_c0efaf479af5, mir_mir250)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step6"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_029",
+          "value": 0.025,
+          "unit": "ratio",
+          "label": "Probe sb_7c72dd6fafbe success-rate change vs baseline",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step6"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_030",
+          "value": 0.1108,
+          "unit": "ratio",
+          "label": "Probe sb_7c72dd6fafbe 95% CI half-width",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step6"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_031",
+          "value": 0.535,
+          "unit": "m",
+          "label": "Distance from (1.69, 3.24) to nearest obstacle (nominal grid)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step7"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_032",
           "value": 1.07,
           "unit": "m",
           "label": "Approximate free gap through (1.69, 3.24) (2 x nearest-obstacle distance, nominal grid)",
           "origin": {
             "type": "investigation",
-            "ref": "inv_af72142b9b#step4"
+            "ref": "inv_af72142b9b#step7"
           }
         },
         {
-          "fact_id": "f_iaf721_025",
+          "fact_id": "f_iaf721_033",
           "value": 0.58,
           "unit": "m",
           "label": "Footprint width, mir_mir250",
           "origin": {
             "type": "investigation",
-            "ref": "inv_af72142b9b#step4"
+            "ref": "inv_af72142b9b#step7"
           }
         },
         {
-          "fact_id": "f_iaf721_026",
+          "fact_id": "f_iaf721_034",
           "value": 0.49,
           "unit": "m",
           "label": "Approximate gap minus robot width at (1.69, 3.24)",
           "origin": {
             "type": "investigation",
-            "ref": "inv_af72142b9b#step4"
+            "ref": "inv_af72142b9b#step7"
           }
         },
         {
-          "fact_id": "f_iaf721_027",
-          "value": 0.45,
+          "fact_id": "f_iaf721_035",
+          "value": 0.5385,
           "unit": "m",
-          "label": "Distance from (0.76, 0.96) to nearest obstacle (nominal grid)",
+          "label": "Distance from (1.69, 3.24) to the edge of object SHELF_A (shelf)",
           "origin": {
             "type": "investigation",
-            "ref": "inv_af72142b9b#step5"
+            "ref": "inv_af72142b9b#step8"
           }
         },
         {
-          "fact_id": "f_iaf721_028",
-          "value": 0.9,
+          "fact_id": "f_iaf721_036",
+          "value": 0.8384,
           "unit": "m",
-          "label": "Approximate free gap through (0.76, 0.96) (2 x nearest-obstacle distance, nominal grid)",
+          "label": "Distance from (1.69, 3.24) to the edge of object SHELF_B (shelf)",
           "origin": {
             "type": "investigation",
-            "ref": "inv_af72142b9b#step5"
-          }
-        },
-        {
-          "fact_id": "f_iaf721_029",
-          "value": 0.58,
-          "unit": "m",
-          "label": "Footprint width, mir_mir250",
-          "origin": {
-            "type": "investigation",
-            "ref": "inv_af72142b9b#step5"
-          }
-        },
-        {
-          "fact_id": "f_iaf721_030",
-          "value": 0.32,
-          "unit": "m",
-          "label": "Approximate gap minus robot width at (0.76, 0.96)",
-          "origin": {
-            "type": "investigation",
-            "ref": "inv_af72142b9b#step5"
-          }
-        },
-        {
-          "fact_id": "f_iaf721_031",
-          "value": 0.2884,
-          "unit": "m",
-          "label": "Distance from (3.34, 1.69) to the edge of object PALLET1 (pallet)",
-          "origin": {
-            "type": "investigation",
-            "ref": "inv_af72142b9b#step6"
-          }
-        },
-        {
-          "fact_id": "f_iaf721_032",
-          "value": 0.522,
-          "unit": "m",
-          "label": "Distance from (3.34, 1.69) to the edge of object SHELF_A (shelf)",
-          "origin": {
-            "type": "investigation",
-            "ref": "inv_af72142b9b#step6"
+            "ref": "inv_af72142b9b#step8"
           }
         }
       ],
       "stop_reason": "max_steps",
       "robot_id": "mir_mir250",
       "policy": "llm",
-      "sim_runs": 0,
+      "sim_runs": 1,
       "sim_source": "jobs.sim.api"
     },
     "mir_mir100": {
       "investigation_id": "inv_fc10c27957",
       "analysis_id": "an_ref_storeroom_01",
-      "model_id": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "model_id": "nvidia/Nemotron-3.5-Super-VL",
       "mode": "live",
       "steps": [
         {
@@ -4187,16 +4328,16 @@
           "thought": "",
           "tool": "get_batch_summary",
           "args": {
-            "batch_id": "sb_03d73fe6bf9a"
+            "batch_id": "sb_03df66d32580"
           },
           "result_summary": {
             "ok": true,
             "robot_id": "mir_mir100",
             "batches": [
               {
-                "batch_id": "sb_03d73fe6bf9a",
+                "batch_id": "sb_03df66d32580",
                 "density": "quiet",
-                "bound": "nominal",
+                "bound": "conservative",
                 "success_rate": {
                   "value": 0.875,
                   "unit": "ratio",
@@ -4262,505 +4403,552 @@
         {
           "i": 2,
           "thought": "",
-          "tool": "get_bottlenecks",
+          "tool": "get_batch_summary",
           "args": {
-            "top_k": 10
+            "batch_id": "sb_1b2444254746"
           },
           "result_summary": {
             "ok": true,
-            "bottlenecks": [
+            "robot_id": "mir_mir100",
+            "batches": [
               {
-                "rank": 1,
-                "xy": [
-                  1.663,
-                  3.588
-                ],
-                "share_of_total": {
-                  "value": 0.2074,
+                "batch_id": "sb_1b2444254746",
+                "density": "peak",
+                "bound": "optimistic",
+                "success_rate": {
+                  "value": 0.825,
                   "unit": "ratio",
                   "fact_id": "f_ifc10c_010"
                 },
-                "nearby_object_ids": [
-                  "SHELF_B",
-                  "SHELF_A"
-                ],
-                "nearby_zone_ids": [
-                  "aisles"
-                ],
-                "examined": false
-              },
-              {
-                "rank": 2,
-                "xy": [
-                  3.113,
-                  1.663
-                ],
-                "share_of_total": {
-                  "value": 0.1082,
+                "ci95_low": {
+                  "value": 0.6805,
                   "unit": "ratio",
                   "fact_id": "f_ifc10c_011"
                 },
-                "nearby_object_ids": [
-                  "PALLET1",
-                  "SHELF_A"
-                ],
-                "nearby_zone_ids": [
-                  "staging",
-                  "aisles"
-                ],
-                "examined": false
-              },
-              {
-                "rank": 3,
-                "xy": [
-                  1.113,
-                  1.712
-                ],
-                "share_of_total": {
-                  "value": 0.1015,
+                "ci95_high": {
+                  "value": 0.9125,
                   "unit": "ratio",
                   "fact_id": "f_ifc10c_012"
                 },
-                "nearby_object_ids": [
-                  "SHELF_A",
-                  "DOCKSTN"
-                ],
-                "nearby_zone_ids": [
-                  "staging",
-                  "door",
-                  "aisles"
-                ],
-                "examined": false
-              },
-              {
-                "rank": 4,
-                "xy": [
-                  4.888,
-                  3.288
-                ],
-                "share_of_total": {
-                  "value": 0.0716,
-                  "unit": "ratio",
+                "n_episodes": {
+                  "value": 40,
+                  "unit": "episodes",
                   "fact_id": "f_ifc10c_013"
                 },
-                "nearby_object_ids": [
-                  "SHELF_A",
-                  "SHELF_B"
-                ],
-                "nearby_zone_ids": [
-                  "aisles",
-                  "staging"
-                ],
-                "examined": false
-              },
-              {
-                "rank": 5,
-                "xy": [
-                  8.537,
-                  3.562
-                ],
-                "share_of_total": {
-                  "value": 0.0509,
-                  "unit": "ratio",
+                "median_mission_s": {
+                  "value": 161.5,
+                  "unit": "s",
                   "fact_id": "f_ifc10c_014"
                 },
-                "nearby_object_ids": [
-                  "SHELF_B",
-                  "SHELF_A"
-                ],
-                "nearby_zone_ids": [
-                  "aisles"
-                ],
-                "examined": false
+                "min_gap_m": {
+                  "value": 0.0275,
+                  "unit": "m",
+                  "fact_id": "f_ifc10c_015"
+                },
+                "near_miss_per_mission": {
+                  "value": 3.925,
+                  "unit": "per mission",
+                  "fact_id": "f_ifc10c_016"
+                },
+                "stops_per_mission": {
+                  "value": 7.1,
+                  "unit": "per mission",
+                  "fact_id": "f_ifc10c_017"
+                },
+                "fail_reasons": {
+                  "collision": {
+                    "value": 2,
+                    "unit": "episodes",
+                    "fact_id": "f_ifc10c_018"
+                  },
+                  "no_path_static": {
+                    "value": 5,
+                    "unit": "episodes",
+                    "fact_id": "f_ifc10c_019"
+                  }
+                }
               }
-            ],
-            "batches_used": [
-              "sb_03d73fe6bf9a",
-              "sb_ccb6e9e6b36c",
-              "sb_fc4853bd9207"
-            ],
-            "threshold_share": 0.05
+            ]
           },
           "fact_ids": [
             "f_ifc10c_010",
             "f_ifc10c_011",
             "f_ifc10c_012",
             "f_ifc10c_013",
-            "f_ifc10c_014"
+            "f_ifc10c_014",
+            "f_ifc10c_015",
+            "f_ifc10c_016",
+            "f_ifc10c_017",
+            "f_ifc10c_018",
+            "f_ifc10c_019"
           ]
         },
         {
           "i": 3,
           "thought": "",
-          "tool": "get_gap_at",
+          "tool": "get_batch_summary",
           "args": {
-            "xy": [
-              1.663,
-              3.588
-            ]
+            "batch_id": "sb_37cdbf0abde7"
           },
           "result_summary": {
             "ok": true,
-            "xy": [
-              1.663,
-              3.588
-            ],
-            "in_obstacle": false,
-            "nearest_obstacle_m": {
-              "value": 0.5506,
-              "unit": "m",
-              "fact_id": "f_ifc10c_015"
-            },
-            "gap_m": {
-              "value": 1.1011,
-              "unit": "m",
-              "fact_id": "f_ifc10c_016"
-            },
-            "robot_width_m": {
-              "value": 0.58,
-              "unit": "m",
-              "fact_id": "f_ifc10c_017"
-            },
-            "gap_margin_m": {
-              "value": 0.5211,
-              "unit": "m",
-              "fact_id": "f_ifc10c_018"
-            }
+            "robot_id": "mir_mir100",
+            "batches": [
+              {
+                "batch_id": "sb_37cdbf0abde7",
+                "density": "peak",
+                "bound": "conservative",
+                "success_rate": {
+                  "value": 0.825,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_020"
+                },
+                "ci95_low": {
+                  "value": 0.6805,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_021"
+                },
+                "ci95_high": {
+                  "value": 0.9125,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_022"
+                },
+                "n_episodes": {
+                  "value": 40,
+                  "unit": "episodes",
+                  "fact_id": "f_ifc10c_023"
+                },
+                "median_mission_s": {
+                  "value": 161.5,
+                  "unit": "s",
+                  "fact_id": "f_ifc10c_024"
+                },
+                "min_gap_m": {
+                  "value": 0.0275,
+                  "unit": "m",
+                  "fact_id": "f_ifc10c_025"
+                },
+                "near_miss_per_mission": {
+                  "value": 3.925,
+                  "unit": "per mission",
+                  "fact_id": "f_ifc10c_026"
+                },
+                "stops_per_mission": {
+                  "value": 7.1,
+                  "unit": "per mission",
+                  "fact_id": "f_ifc10c_027"
+                },
+                "fail_reasons": {
+                  "collision": {
+                    "value": 2,
+                    "unit": "episodes",
+                    "fact_id": "f_ifc10c_028"
+                  },
+                  "no_path_static": {
+                    "value": 5,
+                    "unit": "episodes",
+                    "fact_id": "f_ifc10c_029"
+                  }
+                }
+              }
+            ]
           },
           "fact_ids": [
-            "f_ifc10c_015",
-            "f_ifc10c_016",
-            "f_ifc10c_017",
-            "f_ifc10c_018"
+            "f_ifc10c_020",
+            "f_ifc10c_021",
+            "f_ifc10c_022",
+            "f_ifc10c_023",
+            "f_ifc10c_024",
+            "f_ifc10c_025",
+            "f_ifc10c_026",
+            "f_ifc10c_027",
+            "f_ifc10c_028",
+            "f_ifc10c_029"
           ]
         },
         {
           "i": 4,
           "thought": "",
-          "tool": "get_objects_near",
+          "tool": "get_batch_summary",
           "args": {
-            "xy": [
-              1.663,
-              3.588
-            ],
-            "r": 2
+            "batch_id": "sb_605a9842767b"
           },
           "result_summary": {
             "ok": true,
-            "xy": [
-              1.663,
-              3.588
-            ],
-            "r": 2.0,
-            "objects": [
+            "robot_id": "mir_mir100",
+            "batches": [
               {
-                "id": "SHELF_B",
-                "label": "shelf",
-                "movable": false,
-                "fragile": false,
-                "center_xy": [
-                  5.265,
-                  4.31
-                ],
-                "distance_m": {
-                  "value": 0.5495,
-                  "unit": "m",
-                  "fact_id": "f_ifc10c_019"
+                "batch_id": "sb_605a9842767b",
+                "density": "quiet",
+                "bound": "optimistic",
+                "success_rate": {
+                  "value": 0.875,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_030"
                 },
-                "confidence": 1.0
-              },
-              {
-                "id": "SHELF_A",
-                "label": "shelf",
-                "movable": false,
-                "fragile": false,
-                "center_xy": [
-                  5.265,
-                  2.51
-                ],
-                "distance_m": {
-                  "value": 0.8538,
-                  "unit": "m",
-                  "fact_id": "f_ifc10c_020"
+                "ci95_low": {
+                  "value": 0.7389,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_031"
                 },
-                "confidence": 1.0
-              },
-              {
-                "id": "SHELF_C",
-                "label": "shelf",
-                "movable": false,
-                "fragile": false,
-                "center_xy": [
-                  5.265,
-                  5.71
-                ],
-                "distance_m": {
-                  "value": 1.8557,
-                  "unit": "m",
-                  "fact_id": "f_ifc10c_021"
+                "ci95_high": {
+                  "value": 0.9454,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_032"
                 },
-                "confidence": 1.0
+                "n_episodes": {
+                  "value": 40,
+                  "unit": "episodes",
+                  "fact_id": "f_ifc10c_033"
+                },
+                "median_mission_s": {
+                  "value": 144.7,
+                  "unit": "s",
+                  "fact_id": "f_ifc10c_034"
+                },
+                "min_gap_m": {
+                  "value": 0.0275,
+                  "unit": "m",
+                  "fact_id": "f_ifc10c_035"
+                },
+                "near_miss_per_mission": {
+                  "value": 0.75,
+                  "unit": "per mission",
+                  "fact_id": "f_ifc10c_036"
+                },
+                "stops_per_mission": {
+                  "value": 1.225,
+                  "unit": "per mission",
+                  "fact_id": "f_ifc10c_037"
+                },
+                "fail_reasons": {
+                  "no_path_static": {
+                    "value": 5,
+                    "unit": "episodes",
+                    "fact_id": "f_ifc10c_038"
+                  }
+                }
               }
-            ],
-            "zone_ids": [
-              "aisles",
-              "staging"
             ]
           },
           "fact_ids": [
-            "f_ifc10c_019",
-            "f_ifc10c_020",
-            "f_ifc10c_021"
+            "f_ifc10c_030",
+            "f_ifc10c_031",
+            "f_ifc10c_032",
+            "f_ifc10c_033",
+            "f_ifc10c_034",
+            "f_ifc10c_035",
+            "f_ifc10c_036",
+            "f_ifc10c_037",
+            "f_ifc10c_038"
           ]
         },
         {
           "i": 5,
           "thought": "",
-          "tool": "get_gap_at",
+          "tool": "get_batch_summary",
           "args": {
-            "xy": [
-              3.113,
-              1.663
-            ]
+            "batch_id": "sb_66564fd490c1"
           },
           "result_summary": {
             "ok": true,
-            "xy": [
-              3.113,
-              1.663
-            ],
-            "in_obstacle": false,
-            "nearest_obstacle_m": {
-              "value": 0.3905,
-              "unit": "m",
-              "fact_id": "f_ifc10c_022"
-            },
-            "gap_m": {
-              "value": 0.781,
-              "unit": "m",
-              "fact_id": "f_ifc10c_023"
-            },
-            "robot_width_m": {
-              "value": 0.58,
-              "unit": "m",
-              "fact_id": "f_ifc10c_024"
-            },
-            "gap_margin_m": {
-              "value": 0.201,
-              "unit": "m",
-              "fact_id": "f_ifc10c_025"
-            }
+            "robot_id": "mir_mir100",
+            "batches": [
+              {
+                "batch_id": "sb_66564fd490c1",
+                "density": "quiet",
+                "bound": "nominal",
+                "success_rate": {
+                  "value": 0.875,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_039"
+                },
+                "ci95_low": {
+                  "value": 0.7389,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_040"
+                },
+                "ci95_high": {
+                  "value": 0.9454,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_041"
+                },
+                "n_episodes": {
+                  "value": 40,
+                  "unit": "episodes",
+                  "fact_id": "f_ifc10c_042"
+                },
+                "median_mission_s": {
+                  "value": 144.7,
+                  "unit": "s",
+                  "fact_id": "f_ifc10c_043"
+                },
+                "min_gap_m": {
+                  "value": 0.0275,
+                  "unit": "m",
+                  "fact_id": "f_ifc10c_044"
+                },
+                "near_miss_per_mission": {
+                  "value": 0.75,
+                  "unit": "per mission",
+                  "fact_id": "f_ifc10c_045"
+                },
+                "stops_per_mission": {
+                  "value": 1.225,
+                  "unit": "per mission",
+                  "fact_id": "f_ifc10c_046"
+                },
+                "fail_reasons": {
+                  "no_path_static": {
+                    "value": 5,
+                    "unit": "episodes",
+                    "fact_id": "f_ifc10c_047"
+                  }
+                }
+              }
+            ]
           },
           "fact_ids": [
-            "f_ifc10c_022",
-            "f_ifc10c_023",
-            "f_ifc10c_024",
-            "f_ifc10c_025"
+            "f_ifc10c_039",
+            "f_ifc10c_040",
+            "f_ifc10c_041",
+            "f_ifc10c_042",
+            "f_ifc10c_043",
+            "f_ifc10c_044",
+            "f_ifc10c_045",
+            "f_ifc10c_046",
+            "f_ifc10c_047"
           ]
         },
         {
           "i": 6,
           "thought": "",
-          "tool": "get_objects_near",
+          "tool": "get_batch_summary",
           "args": {
-            "xy": [
-              3.113,
-              1.663
-            ],
-            "r": 2
+            "batch_id": "sb_6d6729f9de89"
           },
           "result_summary": {
             "ok": true,
-            "xy": [
-              3.113,
-              1.663
-            ],
-            "r": 2.0,
-            "objects": [
+            "robot_id": "mir_mir100",
+            "batches": [
               {
-                "id": "PALLET1",
-                "label": "pallet",
-                "movable": true,
-                "fragile": false,
-                "center_xy": [
-                  4.015,
-                  1.01
-                ],
-                "distance_m": {
-                  "value": 0.3938,
-                  "unit": "m",
-                  "fact_id": "f_ifc10c_026"
+                "batch_id": "sb_6d6729f9de89",
+                "density": "normal",
+                "bound": "conservative",
+                "success_rate": {
+                  "value": 0.875,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_048"
                 },
-                "confidence": 1.0
-              },
-              {
-                "id": "SHELF_A",
-                "label": "shelf",
-                "movable": false,
-                "fragile": false,
-                "center_xy": [
-                  5.265,
-                  2.51
-                ],
-                "distance_m": {
-                  "value": 0.547,
-                  "unit": "m",
-                  "fact_id": "f_ifc10c_027"
+                "ci95_low": {
+                  "value": 0.7389,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_049"
                 },
-                "confidence": 1.0
+                "ci95_high": {
+                  "value": 0.9454,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_050"
+                },
+                "n_episodes": {
+                  "value": 40,
+                  "unit": "episodes",
+                  "fact_id": "f_ifc10c_051"
+                },
+                "median_mission_s": {
+                  "value": 151.9,
+                  "unit": "s",
+                  "fact_id": "f_ifc10c_052"
+                },
+                "min_gap_m": {
+                  "value": 0.0275,
+                  "unit": "m",
+                  "fact_id": "f_ifc10c_053"
+                },
+                "near_miss_per_mission": {
+                  "value": 1.75,
+                  "unit": "per mission",
+                  "fact_id": "f_ifc10c_054"
+                },
+                "stops_per_mission": {
+                  "value": 2.925,
+                  "unit": "per mission",
+                  "fact_id": "f_ifc10c_055"
+                },
+                "fail_reasons": {
+                  "no_path_static": {
+                    "value": 5,
+                    "unit": "episodes",
+                    "fact_id": "f_ifc10c_056"
+                  }
+                }
               }
-            ],
-            "zone_ids": [
-              "staging",
-              "aisles",
-              "door"
             ]
           },
           "fact_ids": [
-            "f_ifc10c_026",
-            "f_ifc10c_027"
+            "f_ifc10c_048",
+            "f_ifc10c_049",
+            "f_ifc10c_050",
+            "f_ifc10c_051",
+            "f_ifc10c_052",
+            "f_ifc10c_053",
+            "f_ifc10c_054",
+            "f_ifc10c_055",
+            "f_ifc10c_056"
           ]
         },
         {
           "i": 7,
           "thought": "",
-          "tool": "get_gap_at",
+          "tool": "get_batch_summary",
           "args": {
-            "xy": [
-              1.113,
-              1.712
-            ]
+            "batch_id": "sb_849435d8d9f3"
           },
           "result_summary": {
             "ok": true,
-            "xy": [
-              1.113,
-              1.712
-            ],
-            "in_obstacle": false,
-            "nearest_obstacle_m": {
-              "value": 1.0296,
-              "unit": "m",
-              "fact_id": "f_ifc10c_028"
-            },
-            "gap_m": {
-              "value": 2.0591,
-              "unit": "m",
-              "fact_id": "f_ifc10c_029"
-            },
-            "robot_width_m": {
-              "value": 0.58,
-              "unit": "m",
-              "fact_id": "f_ifc10c_030"
-            },
-            "gap_margin_m": {
-              "value": 1.4791,
-              "unit": "m",
-              "fact_id": "f_ifc10c_031"
-            }
-          },
-          "fact_ids": [
-            "f_ifc10c_028",
-            "f_ifc10c_029",
-            "f_ifc10c_030",
-            "f_ifc10c_031"
-          ]
-        },
-        {
-          "i": 8,
-          "thought": "",
-          "tool": "get_episode_events",
-          "args": {
-            "batch_id": "sb_03d73fe6bf9a",
-            "type": "fail",
-            "limit": 20
-          },
-          "result_summary": {
-            "ok": true,
-            "batch_id": "sb_03d73fe6bf9a",
-            "type": "fail",
-            "count": {
-              "value": 5,
-              "unit": "events",
-              "fact_id": "f_ifc10c_032"
-            },
-            "episodes_with_event": {
-              "value": 5,
-              "unit": "episodes",
-              "fact_id": "f_ifc10c_033"
-            },
-            "per_mission": {
-              "value": 0.125,
-              "unit": "per mission",
-              "fact_id": "f_ifc10c_034"
-            },
-            "sample": [
+            "robot_id": "mir_mir100",
+            "batches": [
               {
-                "episode": 3,
-                "t": 0.0,
-                "xy": [
-                  0.715,
-                  0.76
-                ],
-                "detail": {
-                  "reason": "no_path_static",
-                  "why": "leg PICKUP->S1: no_path"
-                }
-              },
-              {
-                "episode": 8,
-                "t": 0.0,
-                "xy": [
-                  0.715,
-                  0.76
-                ],
-                "detail": {
-                  "reason": "no_path_static",
-                  "why": "leg PICKUP->S1: search_limit"
-                }
-              },
-              {
-                "episode": 11,
-                "t": 0.0,
-                "xy": [
-                  0.715,
-                  0.76
-                ],
-                "detail": {
-                  "reason": "no_path_static",
-                  "why": "leg PICKUP->S1: no_path"
-                }
-              },
-              {
-                "episode": 15,
-                "t": 0.0,
-                "xy": [
-                  0.715,
-                  0.76
-                ],
-                "detail": {
-                  "reason": "no_path_static",
-                  "why": "leg PICKUP->S1: no_path"
-                }
-              },
-              {
-                "episode": 30,
-                "t": 0.0,
-                "xy": [
-                  0.715,
-                  0.76
-                ],
-                "detail": {
-                  "reason": "no_path_static",
-                  "why": "leg PICKUP->S1: no_path"
+                "batch_id": "sb_849435d8d9f3",
+                "density": "normal",
+                "bound": "nominal",
+                "success_rate": {
+                  "value": 0.875,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_057"
+                },
+                "ci95_low": {
+                  "value": 0.7389,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_058"
+                },
+                "ci95_high": {
+                  "value": 0.9454,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_059"
+                },
+                "n_episodes": {
+                  "value": 40,
+                  "unit": "episodes",
+                  "fact_id": "f_ifc10c_060"
+                },
+                "median_mission_s": {
+                  "value": 151.9,
+                  "unit": "s",
+                  "fact_id": "f_ifc10c_061"
+                },
+                "min_gap_m": {
+                  "value": 0.0275,
+                  "unit": "m",
+                  "fact_id": "f_ifc10c_062"
+                },
+                "near_miss_per_mission": {
+                  "value": 1.75,
+                  "unit": "per mission",
+                  "fact_id": "f_ifc10c_063"
+                },
+                "stops_per_mission": {
+                  "value": 2.925,
+                  "unit": "per mission",
+                  "fact_id": "f_ifc10c_064"
+                },
+                "fail_reasons": {
+                  "no_path_static": {
+                    "value": 5,
+                    "unit": "episodes",
+                    "fact_id": "f_ifc10c_065"
+                  }
                 }
               }
             ]
           },
           "fact_ids": [
-            "f_ifc10c_032",
-            "f_ifc10c_033",
-            "f_ifc10c_034"
+            "f_ifc10c_057",
+            "f_ifc10c_058",
+            "f_ifc10c_059",
+            "f_ifc10c_060",
+            "f_ifc10c_061",
+            "f_ifc10c_062",
+            "f_ifc10c_063",
+            "f_ifc10c_064",
+            "f_ifc10c_065"
+          ]
+        },
+        {
+          "i": 8,
+          "thought": "",
+          "tool": "get_batch_summary",
+          "args": {
+            "batch_id": "sb_c9e6d358e6f0"
+          },
+          "result_summary": {
+            "ok": true,
+            "robot_id": "mir_mir100",
+            "batches": [
+              {
+                "batch_id": "sb_c9e6d358e6f0",
+                "density": "normal",
+                "bound": "optimistic",
+                "success_rate": {
+                  "value": 0.875,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_066"
+                },
+                "ci95_low": {
+                  "value": 0.7389,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_067"
+                },
+                "ci95_high": {
+                  "value": 0.9454,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_068"
+                },
+                "n_episodes": {
+                  "value": 40,
+                  "unit": "episodes",
+                  "fact_id": "f_ifc10c_069"
+                },
+                "median_mission_s": {
+                  "value": 151.9,
+                  "unit": "s",
+                  "fact_id": "f_ifc10c_070"
+                },
+                "min_gap_m": {
+                  "value": 0.0275,
+                  "unit": "m",
+                  "fact_id": "f_ifc10c_071"
+                },
+                "near_miss_per_mission": {
+                  "value": 1.75,
+                  "unit": "per mission",
+                  "fact_id": "f_ifc10c_072"
+                },
+                "stops_per_mission": {
+                  "value": 2.925,
+                  "unit": "per mission",
+                  "fact_id": "f_ifc10c_073"
+                },
+                "fail_reasons": {
+                  "no_path_static": {
+                    "value": 5,
+                    "unit": "episodes",
+                    "fact_id": "f_ifc10c_074"
+                  }
+                }
+              }
+            ]
+          },
+          "fact_ids": [
+            "f_ifc10c_066",
+            "f_ifc10c_067",
+            "f_ifc10c_068",
+            "f_ifc10c_069",
+            "f_ifc10c_070",
+            "f_ifc10c_071",
+            "f_ifc10c_072",
+            "f_ifc10c_073",
+            "f_ifc10c_074"
           ]
         }
       ],
@@ -4771,7 +4959,7 @@
           "fact_id": "f_ifc10c_001",
           "value": 0.875,
           "unit": "ratio",
-          "label": "Success rate, mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+          "label": "Success rate, mir_mir100, quiet traffic, conservative geometry (sb_03df66d32580)",
           "origin": {
             "type": "investigation",
             "ref": "inv_fc10c27957#step1"
@@ -4781,7 +4969,7 @@
           "fact_id": "f_ifc10c_002",
           "value": 0.7389,
           "unit": "ratio",
-          "label": "Success rate 95% CI low, mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+          "label": "Success rate 95% CI low, mir_mir100, quiet traffic, conservative geometry (sb_03df66d32580)",
           "origin": {
             "type": "investigation",
             "ref": "inv_fc10c27957#step1"
@@ -4791,7 +4979,7 @@
           "fact_id": "f_ifc10c_003",
           "value": 0.9454,
           "unit": "ratio",
-          "label": "Success rate 95% CI high, mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+          "label": "Success rate 95% CI high, mir_mir100, quiet traffic, conservative geometry (sb_03df66d32580)",
           "origin": {
             "type": "investigation",
             "ref": "inv_fc10c27957#step1"
@@ -4801,7 +4989,7 @@
           "fact_id": "f_ifc10c_004",
           "value": 40.0,
           "unit": "episodes",
-          "label": "Episodes, mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+          "label": "Episodes, mir_mir100, quiet traffic, conservative geometry (sb_03df66d32580)",
           "origin": {
             "type": "investigation",
             "ref": "inv_fc10c27957#step1"
@@ -4811,7 +4999,7 @@
           "fact_id": "f_ifc10c_005",
           "value": 144.7,
           "unit": "s",
-          "label": "Median mission time, mir_mir100, quiet traffic, nominal geometry",
+          "label": "Median mission time, mir_mir100, quiet traffic, conservative geometry",
           "origin": {
             "type": "investigation",
             "ref": "inv_fc10c27957#step1"
@@ -4821,7 +5009,7 @@
           "fact_id": "f_ifc10c_006",
           "value": 0.0275,
           "unit": "m",
-          "label": "Median smallest robot-to-obstacle gap, mir_mir100, quiet traffic, nominal geometry",
+          "label": "Median smallest robot-to-obstacle gap, mir_mir100, quiet traffic, conservative geometry",
           "origin": {
             "type": "investigation",
             "ref": "inv_fc10c27957#step1"
@@ -4831,7 +5019,7 @@
           "fact_id": "f_ifc10c_007",
           "value": 0.75,
           "unit": "per mission",
-          "label": "Near-misses per mission, mir_mir100, quiet traffic, nominal geometry",
+          "label": "Near-misses per mission, mir_mir100, quiet traffic, conservative geometry",
           "origin": {
             "type": "investigation",
             "ref": "inv_fc10c27957#step1"
@@ -4841,7 +5029,7 @@
           "fact_id": "f_ifc10c_008",
           "value": 1.225,
           "unit": "per mission",
-          "label": "Safety stops per mission, mir_mir100, quiet traffic, nominal geometry",
+          "label": "Safety stops per mission, mir_mir100, quiet traffic, conservative geometry",
           "origin": {
             "type": "investigation",
             "ref": "inv_fc10c27957#step1"
@@ -4851,7 +5039,7 @@
           "fact_id": "f_ifc10c_009",
           "value": 5.0,
           "unit": "episodes",
-          "label": "Failures 'no_path_static', mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+          "label": "Failures 'no_path_static', mir_mir100, quiet traffic, conservative geometry (sb_03df66d32580)",
           "origin": {
             "type": "investigation",
             "ref": "inv_fc10c27957#step1"
@@ -4859,9 +5047,9 @@
         },
         {
           "fact_id": "f_ifc10c_010",
-          "value": 0.2074,
+          "value": 0.825,
           "unit": "ratio",
-          "label": "Pinch Map spot #1: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+          "label": "Success rate, mir_mir100, peak traffic, optimistic geometry (sb_1b2444254746)",
           "origin": {
             "type": "investigation",
             "ref": "inv_fc10c27957#step2"
@@ -4869,9 +5057,9 @@
         },
         {
           "fact_id": "f_ifc10c_011",
-          "value": 0.1082,
+          "value": 0.6805,
           "unit": "ratio",
-          "label": "Pinch Map spot #2: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+          "label": "Success rate 95% CI low, mir_mir100, peak traffic, optimistic geometry (sb_1b2444254746)",
           "origin": {
             "type": "investigation",
             "ref": "inv_fc10c27957#step2"
@@ -4879,9 +5067,9 @@
         },
         {
           "fact_id": "f_ifc10c_012",
-          "value": 0.1015,
+          "value": 0.9125,
           "unit": "ratio",
-          "label": "Pinch Map spot #3: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+          "label": "Success rate 95% CI high, mir_mir100, peak traffic, optimistic geometry (sb_1b2444254746)",
           "origin": {
             "type": "investigation",
             "ref": "inv_fc10c27957#step2"
@@ -4889,9 +5077,9 @@
         },
         {
           "fact_id": "f_ifc10c_013",
-          "value": 0.0716,
-          "unit": "ratio",
-          "label": "Pinch Map spot #4: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+          "value": 40.0,
+          "unit": "episodes",
+          "label": "Episodes, mir_mir100, peak traffic, optimistic geometry (sb_1b2444254746)",
           "origin": {
             "type": "investigation",
             "ref": "inv_fc10c27957#step2"
@@ -4899,9 +5087,9 @@
         },
         {
           "fact_id": "f_ifc10c_014",
-          "value": 0.0509,
-          "unit": "ratio",
-          "label": "Pinch Map spot #5: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+          "value": 161.5,
+          "unit": "s",
+          "label": "Median mission time, mir_mir100, peak traffic, optimistic geometry",
           "origin": {
             "type": "investigation",
             "ref": "inv_fc10c27957#step2"
@@ -4909,199 +5097,599 @@
         },
         {
           "fact_id": "f_ifc10c_015",
-          "value": 0.5506,
+          "value": 0.0275,
           "unit": "m",
-          "label": "Distance from (1.66, 3.59) to nearest obstacle (nominal grid)",
+          "label": "Median smallest robot-to-obstacle gap, mir_mir100, peak traffic, optimistic geometry",
           "origin": {
             "type": "investigation",
-            "ref": "inv_fc10c27957#step3"
+            "ref": "inv_fc10c27957#step2"
           }
         },
         {
           "fact_id": "f_ifc10c_016",
-          "value": 1.1011,
-          "unit": "m",
-          "label": "Approximate free gap through (1.66, 3.59) (2 x nearest-obstacle distance, nominal grid)",
+          "value": 3.925,
+          "unit": "per mission",
+          "label": "Near-misses per mission, mir_mir100, peak traffic, optimistic geometry",
           "origin": {
             "type": "investigation",
-            "ref": "inv_fc10c27957#step3"
+            "ref": "inv_fc10c27957#step2"
           }
         },
         {
           "fact_id": "f_ifc10c_017",
-          "value": 0.58,
-          "unit": "m",
-          "label": "Footprint width, mir_mir100",
+          "value": 7.1,
+          "unit": "per mission",
+          "label": "Safety stops per mission, mir_mir100, peak traffic, optimistic geometry",
           "origin": {
             "type": "investigation",
-            "ref": "inv_fc10c27957#step3"
+            "ref": "inv_fc10c27957#step2"
           }
         },
         {
           "fact_id": "f_ifc10c_018",
-          "value": 0.5211,
-          "unit": "m",
-          "label": "Approximate gap minus robot width at (1.66, 3.59)",
+          "value": 2.0,
+          "unit": "episodes",
+          "label": "Failures 'collision', mir_mir100, peak traffic, optimistic geometry (sb_1b2444254746)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step2"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_019",
+          "value": 5.0,
+          "unit": "episodes",
+          "label": "Failures 'no_path_static', mir_mir100, peak traffic, optimistic geometry (sb_1b2444254746)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step2"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_020",
+          "value": 0.825,
+          "unit": "ratio",
+          "label": "Success rate, mir_mir100, peak traffic, conservative geometry (sb_37cdbf0abde7)",
           "origin": {
             "type": "investigation",
             "ref": "inv_fc10c27957#step3"
           }
         },
         {
-          "fact_id": "f_ifc10c_019",
-          "value": 0.5495,
-          "unit": "m",
-          "label": "Distance from (1.66, 3.59) to the edge of object SHELF_B (shelf)",
-          "origin": {
-            "type": "investigation",
-            "ref": "inv_fc10c27957#step4"
-          }
-        },
-        {
-          "fact_id": "f_ifc10c_020",
-          "value": 0.8538,
-          "unit": "m",
-          "label": "Distance from (1.66, 3.59) to the edge of object SHELF_A (shelf)",
-          "origin": {
-            "type": "investigation",
-            "ref": "inv_fc10c27957#step4"
-          }
-        },
-        {
           "fact_id": "f_ifc10c_021",
-          "value": 1.8557,
-          "unit": "m",
-          "label": "Distance from (1.66, 3.59) to the edge of object SHELF_C (shelf)",
+          "value": 0.6805,
+          "unit": "ratio",
+          "label": "Success rate 95% CI low, mir_mir100, peak traffic, conservative geometry (sb_37cdbf0abde7)",
           "origin": {
             "type": "investigation",
-            "ref": "inv_fc10c27957#step4"
+            "ref": "inv_fc10c27957#step3"
           }
         },
         {
           "fact_id": "f_ifc10c_022",
-          "value": 0.3905,
-          "unit": "m",
-          "label": "Distance from (3.11, 1.66) to nearest obstacle (nominal grid)",
+          "value": 0.9125,
+          "unit": "ratio",
+          "label": "Success rate 95% CI high, mir_mir100, peak traffic, conservative geometry (sb_37cdbf0abde7)",
           "origin": {
             "type": "investigation",
-            "ref": "inv_fc10c27957#step5"
+            "ref": "inv_fc10c27957#step3"
           }
         },
         {
           "fact_id": "f_ifc10c_023",
-          "value": 0.781,
-          "unit": "m",
-          "label": "Approximate free gap through (3.11, 1.66) (2 x nearest-obstacle distance, nominal grid)",
+          "value": 40.0,
+          "unit": "episodes",
+          "label": "Episodes, mir_mir100, peak traffic, conservative geometry (sb_37cdbf0abde7)",
           "origin": {
             "type": "investigation",
-            "ref": "inv_fc10c27957#step5"
+            "ref": "inv_fc10c27957#step3"
           }
         },
         {
           "fact_id": "f_ifc10c_024",
-          "value": 0.58,
-          "unit": "m",
-          "label": "Footprint width, mir_mir100",
+          "value": 161.5,
+          "unit": "s",
+          "label": "Median mission time, mir_mir100, peak traffic, conservative geometry",
           "origin": {
             "type": "investigation",
-            "ref": "inv_fc10c27957#step5"
+            "ref": "inv_fc10c27957#step3"
           }
         },
         {
           "fact_id": "f_ifc10c_025",
-          "value": 0.201,
+          "value": 0.0275,
           "unit": "m",
-          "label": "Approximate gap minus robot width at (3.11, 1.66)",
+          "label": "Median smallest robot-to-obstacle gap, mir_mir100, peak traffic, conservative geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step3"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_026",
+          "value": 3.925,
+          "unit": "per mission",
+          "label": "Near-misses per mission, mir_mir100, peak traffic, conservative geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step3"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_027",
+          "value": 7.1,
+          "unit": "per mission",
+          "label": "Safety stops per mission, mir_mir100, peak traffic, conservative geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step3"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_028",
+          "value": 2.0,
+          "unit": "episodes",
+          "label": "Failures 'collision', mir_mir100, peak traffic, conservative geometry (sb_37cdbf0abde7)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step3"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_029",
+          "value": 5.0,
+          "unit": "episodes",
+          "label": "Failures 'no_path_static', mir_mir100, peak traffic, conservative geometry (sb_37cdbf0abde7)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step3"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_030",
+          "value": 0.875,
+          "unit": "ratio",
+          "label": "Success rate, mir_mir100, quiet traffic, optimistic geometry (sb_605a9842767b)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step4"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_031",
+          "value": 0.7389,
+          "unit": "ratio",
+          "label": "Success rate 95% CI low, mir_mir100, quiet traffic, optimistic geometry (sb_605a9842767b)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step4"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_032",
+          "value": 0.9454,
+          "unit": "ratio",
+          "label": "Success rate 95% CI high, mir_mir100, quiet traffic, optimistic geometry (sb_605a9842767b)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step4"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_033",
+          "value": 40.0,
+          "unit": "episodes",
+          "label": "Episodes, mir_mir100, quiet traffic, optimistic geometry (sb_605a9842767b)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step4"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_034",
+          "value": 144.7,
+          "unit": "s",
+          "label": "Median mission time, mir_mir100, quiet traffic, optimistic geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step4"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_035",
+          "value": 0.0275,
+          "unit": "m",
+          "label": "Median smallest robot-to-obstacle gap, mir_mir100, quiet traffic, optimistic geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step4"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_036",
+          "value": 0.75,
+          "unit": "per mission",
+          "label": "Near-misses per mission, mir_mir100, quiet traffic, optimistic geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step4"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_037",
+          "value": 1.225,
+          "unit": "per mission",
+          "label": "Safety stops per mission, mir_mir100, quiet traffic, optimistic geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step4"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_038",
+          "value": 5.0,
+          "unit": "episodes",
+          "label": "Failures 'no_path_static', mir_mir100, quiet traffic, optimistic geometry (sb_605a9842767b)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step4"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_039",
+          "value": 0.875,
+          "unit": "ratio",
+          "label": "Success rate, mir_mir100, quiet traffic, nominal geometry (sb_66564fd490c1)",
           "origin": {
             "type": "investigation",
             "ref": "inv_fc10c27957#step5"
           }
         },
         {
-          "fact_id": "f_ifc10c_026",
-          "value": 0.3938,
+          "fact_id": "f_ifc10c_040",
+          "value": 0.7389,
+          "unit": "ratio",
+          "label": "Success rate 95% CI low, mir_mir100, quiet traffic, nominal geometry (sb_66564fd490c1)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step5"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_041",
+          "value": 0.9454,
+          "unit": "ratio",
+          "label": "Success rate 95% CI high, mir_mir100, quiet traffic, nominal geometry (sb_66564fd490c1)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step5"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_042",
+          "value": 40.0,
+          "unit": "episodes",
+          "label": "Episodes, mir_mir100, quiet traffic, nominal geometry (sb_66564fd490c1)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step5"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_043",
+          "value": 144.7,
+          "unit": "s",
+          "label": "Median mission time, mir_mir100, quiet traffic, nominal geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step5"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_044",
+          "value": 0.0275,
           "unit": "m",
-          "label": "Distance from (3.11, 1.66) to the edge of object PALLET1 (pallet)",
+          "label": "Median smallest robot-to-obstacle gap, mir_mir100, quiet traffic, nominal geometry",
           "origin": {
             "type": "investigation",
-            "ref": "inv_fc10c27957#step6"
+            "ref": "inv_fc10c27957#step5"
           }
         },
         {
-          "fact_id": "f_ifc10c_027",
-          "value": 0.547,
-          "unit": "m",
-          "label": "Distance from (3.11, 1.66) to the edge of object SHELF_A (shelf)",
+          "fact_id": "f_ifc10c_045",
+          "value": 0.75,
+          "unit": "per mission",
+          "label": "Near-misses per mission, mir_mir100, quiet traffic, nominal geometry",
           "origin": {
             "type": "investigation",
-            "ref": "inv_fc10c27957#step6"
+            "ref": "inv_fc10c27957#step5"
           }
         },
         {
-          "fact_id": "f_ifc10c_028",
-          "value": 1.0296,
-          "unit": "m",
-          "label": "Distance from (1.11, 1.71) to nearest obstacle (nominal grid)",
+          "fact_id": "f_ifc10c_046",
+          "value": 1.225,
+          "unit": "per mission",
+          "label": "Safety stops per mission, mir_mir100, quiet traffic, nominal geometry",
           "origin": {
             "type": "investigation",
-            "ref": "inv_fc10c27957#step7"
+            "ref": "inv_fc10c27957#step5"
           }
         },
         {
-          "fact_id": "f_ifc10c_029",
-          "value": 2.0591,
-          "unit": "m",
-          "label": "Approximate free gap through (1.11, 1.71) (2 x nearest-obstacle distance, nominal grid)",
-          "origin": {
-            "type": "investigation",
-            "ref": "inv_fc10c27957#step7"
-          }
-        },
-        {
-          "fact_id": "f_ifc10c_030",
-          "value": 0.58,
-          "unit": "m",
-          "label": "Footprint width, mir_mir100",
-          "origin": {
-            "type": "investigation",
-            "ref": "inv_fc10c27957#step7"
-          }
-        },
-        {
-          "fact_id": "f_ifc10c_031",
-          "value": 1.4791,
-          "unit": "m",
-          "label": "Approximate gap minus robot width at (1.11, 1.71)",
-          "origin": {
-            "type": "investigation",
-            "ref": "inv_fc10c27957#step7"
-          }
-        },
-        {
-          "fact_id": "f_ifc10c_032",
-          "value": 5.0,
-          "unit": "events",
-          "label": "'fail' events in sb_03d73fe6bf9a",
-          "origin": {
-            "type": "investigation",
-            "ref": "inv_fc10c27957#step8"
-          }
-        },
-        {
-          "fact_id": "f_ifc10c_033",
+          "fact_id": "f_ifc10c_047",
           "value": 5.0,
           "unit": "episodes",
-          "label": "Episodes with a 'fail' event, sb_03d73fe6bf9a",
+          "label": "Failures 'no_path_static', mir_mir100, quiet traffic, nominal geometry (sb_66564fd490c1)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step5"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_048",
+          "value": 0.875,
+          "unit": "ratio",
+          "label": "Success rate, mir_mir100, normal traffic, conservative geometry (sb_6d6729f9de89)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step6"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_049",
+          "value": 0.7389,
+          "unit": "ratio",
+          "label": "Success rate 95% CI low, mir_mir100, normal traffic, conservative geometry (sb_6d6729f9de89)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step6"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_050",
+          "value": 0.9454,
+          "unit": "ratio",
+          "label": "Success rate 95% CI high, mir_mir100, normal traffic, conservative geometry (sb_6d6729f9de89)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step6"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_051",
+          "value": 40.0,
+          "unit": "episodes",
+          "label": "Episodes, mir_mir100, normal traffic, conservative geometry (sb_6d6729f9de89)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step6"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_052",
+          "value": 151.9,
+          "unit": "s",
+          "label": "Median mission time, mir_mir100, normal traffic, conservative geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step6"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_053",
+          "value": 0.0275,
+          "unit": "m",
+          "label": "Median smallest robot-to-obstacle gap, mir_mir100, normal traffic, conservative geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step6"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_054",
+          "value": 1.75,
+          "unit": "per mission",
+          "label": "Near-misses per mission, mir_mir100, normal traffic, conservative geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step6"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_055",
+          "value": 2.925,
+          "unit": "per mission",
+          "label": "Safety stops per mission, mir_mir100, normal traffic, conservative geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step6"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_056",
+          "value": 5.0,
+          "unit": "episodes",
+          "label": "Failures 'no_path_static', mir_mir100, normal traffic, conservative geometry (sb_6d6729f9de89)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step6"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_057",
+          "value": 0.875,
+          "unit": "ratio",
+          "label": "Success rate, mir_mir100, normal traffic, nominal geometry (sb_849435d8d9f3)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step7"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_058",
+          "value": 0.7389,
+          "unit": "ratio",
+          "label": "Success rate 95% CI low, mir_mir100, normal traffic, nominal geometry (sb_849435d8d9f3)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step7"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_059",
+          "value": 0.9454,
+          "unit": "ratio",
+          "label": "Success rate 95% CI high, mir_mir100, normal traffic, nominal geometry (sb_849435d8d9f3)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step7"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_060",
+          "value": 40.0,
+          "unit": "episodes",
+          "label": "Episodes, mir_mir100, normal traffic, nominal geometry (sb_849435d8d9f3)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step7"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_061",
+          "value": 151.9,
+          "unit": "s",
+          "label": "Median mission time, mir_mir100, normal traffic, nominal geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step7"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_062",
+          "value": 0.0275,
+          "unit": "m",
+          "label": "Median smallest robot-to-obstacle gap, mir_mir100, normal traffic, nominal geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step7"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_063",
+          "value": 1.75,
+          "unit": "per mission",
+          "label": "Near-misses per mission, mir_mir100, normal traffic, nominal geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step7"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_064",
+          "value": 2.925,
+          "unit": "per mission",
+          "label": "Safety stops per mission, mir_mir100, normal traffic, nominal geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step7"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_065",
+          "value": 5.0,
+          "unit": "episodes",
+          "label": "Failures 'no_path_static', mir_mir100, normal traffic, nominal geometry (sb_849435d8d9f3)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step7"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_066",
+          "value": 0.875,
+          "unit": "ratio",
+          "label": "Success rate, mir_mir100, normal traffic, optimistic geometry (sb_c9e6d358e6f0)",
           "origin": {
             "type": "investigation",
             "ref": "inv_fc10c27957#step8"
           }
         },
         {
-          "fact_id": "f_ifc10c_034",
-          "value": 0.125,
+          "fact_id": "f_ifc10c_067",
+          "value": 0.7389,
+          "unit": "ratio",
+          "label": "Success rate 95% CI low, mir_mir100, normal traffic, optimistic geometry (sb_c9e6d358e6f0)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step8"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_068",
+          "value": 0.9454,
+          "unit": "ratio",
+          "label": "Success rate 95% CI high, mir_mir100, normal traffic, optimistic geometry (sb_c9e6d358e6f0)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step8"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_069",
+          "value": 40.0,
+          "unit": "episodes",
+          "label": "Episodes, mir_mir100, normal traffic, optimistic geometry (sb_c9e6d358e6f0)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step8"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_070",
+          "value": 151.9,
+          "unit": "s",
+          "label": "Median mission time, mir_mir100, normal traffic, optimistic geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step8"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_071",
+          "value": 0.0275,
+          "unit": "m",
+          "label": "Median smallest robot-to-obstacle gap, mir_mir100, normal traffic, optimistic geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step8"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_072",
+          "value": 1.75,
           "unit": "per mission",
-          "label": "'fail' events per mission, sb_03d73fe6bf9a",
+          "label": "Near-misses per mission, mir_mir100, normal traffic, optimistic geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step8"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_073",
+          "value": 2.925,
+          "unit": "per mission",
+          "label": "Safety stops per mission, mir_mir100, normal traffic, optimistic geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step8"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_074",
+          "value": 5.0,
+          "unit": "episodes",
+          "label": "Failures 'no_path_static', mir_mir100, normal traffic, optimistic geometry (sb_c9e6d358e6f0)",
           "origin": {
             "type": "investigation",
             "ref": "inv_fc10c27957#step8"
@@ -5169,50 +5757,6 @@
       }
     },
     {
-      "robot_id": "mir_mir250",
-      "label": "Not cleared",
-      "main_reason": "success 88% at normal traffic (needs 90%)",
-      "as_is": [
-        {
-          "rule": "every task leg feasible on the conservative geometry bound",
-          "passed": true,
-          "value": "6/6 legs",
-          "threshold": null,
-          "fact_ids": [
-            "f_117",
-            "f_118",
-            "f_119",
-            "f_120",
-            "f_121",
-            "f_122"
-          ]
-        },
-        {
-          "rule": "no unresolved flagged_manual thresholds on the route",
-          "passed": true,
-          "value": "none",
-          "threshold": null,
-          "fact_ids": []
-        },
-        {
-          "rule": "simulated success at normal traffic (conservative bound) >= 0.90",
-          "passed": false,
-          "value": 0.875,
-          "threshold": 0.9,
-          "fact_ids": [
-            "f_159"
-          ]
-        }
-      ],
-      "with_changes": [],
-      "required_changes": [],
-      "config": {
-        "success_min": 0.9,
-        "density": "normal",
-        "bound": "conservative"
-      }
-    },
-    {
       "robot_id": "otto_100",
       "label": "Cleared",
       "main_reason": "meets every rule as-is",
@@ -5223,12 +5767,12 @@
           "value": "6/6 legs",
           "threshold": null,
           "fact_ids": [
-            "f_211",
-            "f_212",
-            "f_213",
-            "f_214",
-            "f_215",
-            "f_220"
+            "f_116",
+            "f_117",
+            "f_118",
+            "f_119",
+            "f_120",
+            "f_125"
           ]
         },
         {
@@ -5244,7 +5788,51 @@
           "value": 0.975,
           "threshold": 0.9,
           "fact_ids": [
-            "f_253"
+            "f_158"
+          ]
+        }
+      ],
+      "with_changes": [],
+      "required_changes": [],
+      "config": {
+        "success_min": 0.9,
+        "density": "normal",
+        "bound": "conservative"
+      }
+    },
+    {
+      "robot_id": "mir_mir250",
+      "label": "Not cleared",
+      "main_reason": "success 88% at normal traffic (needs 90%)",
+      "as_is": [
+        {
+          "rule": "every task leg feasible on the conservative geometry bound",
+          "passed": true,
+          "value": "6/6 legs",
+          "threshold": null,
+          "fact_ids": [
+            "f_206",
+            "f_207",
+            "f_208",
+            "f_209",
+            "f_210",
+            "f_211"
+          ]
+        },
+        {
+          "rule": "no unresolved flagged_manual thresholds on the route",
+          "passed": true,
+          "value": "none",
+          "threshold": null,
+          "fact_ids": []
+        },
+        {
+          "rule": "simulated success at normal traffic (conservative bound) >= 0.90",
+          "passed": false,
+          "value": 0.875,
+          "threshold": 0.9,
+          "fact_ids": [
+            "f_248"
           ]
         }
       ],
@@ -5305,46 +5893,46 @@
   "roi": {},
   "citations": [
     {
-      "used_for": "market check: Pudu T300 AMR payload capacity specifications",
+      "used_for": "market check: Pudu T300 AMR specifications payload navigation",
+      "url": "https://www.robotsinternational.com/PUDU-T300-Standard-Industrial-Delivery-Robot.htm",
+      "title": "PUDU T300 Standard Industrial AMR | Specs, Safety & Uses | Robots International",
+      "snippet": "The PUDU T300 Standard is a heavy-load industrial AMR designed to automate indoor material transport with a focus on 300 kg payload, narrow-aisle maneuverability (\u226560 cm), and practical site tolerance for thresholds (20 mm) and grooves (35 mm). Built on VSLAM+ and LiDAR SLAM navigation with safety features positioned for ISO 3691-4 environments, the T300 Standard is commonly evaluated for factory line-side delivery, WIP transport, and large-facility logistics where integration with elevators, [.",
+      "retrieved_at": "2026-10-28T06:01:48+00:00"
+    },
+    {
+      "used_for": "market check: Pudu T300 AMR specifications payload navigation",
       "url": "https://www.pudurobotics.com/en/products/pudut300",
       "title": "PUDU T300 AMR | Intelligent Autonomous Mobile Robot for Industrial Material Delivery",
-      "snippet": "The PUDU T300 Standard is a transport robot designed for industrial material handling and high-load commercial delivery scenarios, delivering efficient and stable heavy-duty performance. Built around a high-strength load-bearing chassis, it offers strong openness and scalability, and is equipped with an interactive touchscreen to improve usability and operational efficiency. With a maximum payload of 661 lbs (300 kg), it supports elevator access, gate/turnstile integration, and remote call [...]",
-      "retrieved_at": "2026-10-27T20:26:48+00:00"
+      "snippet": "Navigation Methods\n\nVSLAM & Lidar SLAM\n\nContact Us\n\nPUDU T300 Lifting\n\nProduct Model\n\nMachine Weight\n\n81 kg178.57 lbs\n\nMaximum load\n\n300 kg661.39 lbs\n\nLifting Height\n\n60 mm2.36 in\n\nMax. Speed\n\n1.2 m/s3.94 ft/s\n\nPath Clearance\n\nDetermined by load size\n\nThreshold Overcoming Height\n\n20 mm0.79 in\n\nGroove Crossing Width\n\n35 mm1.38 in\n\nRun-time (No Load)\n\n12 h\n\nRun-time (Full Load)\n\n8 h\n\nDimensions\n\n835 mm \\ 500 mm \\ 1350 mm32.87 in \u00d7 19.69 in \u00d7 53.15 in\n\nCharging Time\n\n2 h (0% to 90%) [...] Elevator ",
+      "retrieved_at": "2026-10-28T06:01:48+00:00"
     },
     {
-      "used_for": "market check: Pudu T300 AMR payload capacity specifications",
-      "url": "https://log-robot.com/en/amr-products/pudu-robotics/pudu-t300",
-      "title": "PUDU T300 - autonomous transport robot with a payload of up to 300 kg",
-      "snippet": "The PUDU T300 from PUDU Robotics is an autonomous transport robot designed specifically for material handling in industrial environments and has exceptional adaptability. With a load capacity of up to 300 kg and state-of-the-art navigation and safety functions, the T300 optimises internal logistics processes and significantly increases operational efficiency. For example, it can automatically follow employees during the loading process, reducing walking distances and labour. [...] Comprehensive ",
-      "retrieved_at": "2026-10-27T20:26:48+00:00"
-    },
-    {
-      "used_for": "market check: Pudu T300 AMR payload capacity specifications",
+      "used_for": "market check: Pudu T300 AMR specifications payload navigation",
       "url": "https://www.robotlab.com/store/pudu-t300",
       "title": "Pudu T300 Robot \u2014 Price, Specs & Demo \u00b7 RobotLAB",
       "snippet": "|  |  |\n --- |\n| Maximum Payload | 300 kg (661 lbs) |\n| Dimensions (L\u00d7W\u00d7H) | 835 \u00d7 500 \u00d7 1350 mm (32.87 \u00d7 19.69 \u00d7 53.15 in) |\n| Machine Weight | 65 kg (standard mode) |\n| Navigation | VSLAM & LiDAR SLAM (no preset paths) |\n| Maximum Speed | 1.2 m/s (3.94 ft/s) |\n| Battery Capacity | 30 Ah |\n| Runtime | 12 h (no load) / 6 h (fully loaded) |\n| Charging Time | 2 h (0% to 90%) |\n| Minimum Path Clearance | 60 cm (23.62 in) |\n| Threshold / Groove Crossing | 20 mm threshold / 35 mm groove | [...] The P",
-      "retrieved_at": "2026-10-27T20:26:48+00:00"
+      "retrieved_at": "2026-10-28T06:01:48+00:00"
     },
     {
-      "used_for": "market check: OTTO 100 AMR payload capacity specifications",
+      "used_for": "market check: OTTO 100 AMR specifications payload navigation",
       "url": "https://www.nord-modules.com/otto-100",
       "title": "OTTO 100 | Quality top modules for OTTO Motors AMRs",
       "snippet": "Equipped with laser and 3D camera sensors, the OTTO 100 can operate autonomously even in the most dynamic manufacturing environments, while still being safe enough to work alongside people. With a maximum speed of 2 meters per second, a runtime of 6 hours, and a maximum payload of 150kg, the OTTO 100 is a reliable, high-performance AMR that can help businesses streamline their material handling processes, increase productivity, and reduce operational costs. [...] Nord Modules\n\nSelect Page\n\n## RO",
-      "retrieved_at": "2026-10-27T20:26:51+00:00"
+      "retrieved_at": "2026-10-28T06:01:54+00:00"
     },
     {
-      "used_for": "market check: OTTO 100 AMR payload capacity specifications",
+      "used_for": "market check: OTTO 100 AMR specifications payload navigation",
       "url": "https://ottomotors.com/100",
       "title": "OTTO 100 Autonomous Mobile Robot | Autonomous Material Handling | OTTO by Rockwell Automation",
       "snippet": "get started\n\nKEY SPECIFICATIONS\n\nmetric\n\n Payload capacity\n\n  0 kg\n Maximum travel speed\n\n  0 m/s\n Total footprint\n\n  0 x 0 x 0 mm\n Runtime (90% to 10%)\n\n  0 hours\n Integrated lift\n\n  0 mm\n Charge time (10% to 90%)\n\n  0 minutes\n Standards compliance\n\n  CE Marked, ANSI/ITSDF B56.5, RIA R15.08-1, ISO 12100/13849-1/3691-4, FCC Part 15 Subpart B / ICES-003, ICES-002, EN 1175-1/60204-1\n\nWHY OTTO 100\n\n## Versatility and durability in a small, powerful package\n\n Application Versatility [...] DIFFERENTI",
-      "retrieved_at": "2026-10-27T20:26:51+00:00"
+      "retrieved_at": "2026-10-28T06:01:54+00:00"
     },
     {
-      "used_for": "market check: OTTO 100 AMR payload capacity specifications",
+      "used_for": "market check: OTTO 100 AMR specifications payload navigation",
       "url": "https://blog.hesconet.com/otto-amr-comparison-100-600-1200-1500-lifter",
       "title": "OTTO AMR Comparison: 100 vs. 600 vs. 1200 vs. 1500 vs. Lifter",
-      "snippet": "| Specification | OTTO 100 | OTTO 600 | OTTO 1200 | OTTO 1500 | OTTO Lifter |\n ---  ---  --- |\n| Max. capacity | 150 kg | 600 kg | 1,200 kg | 1,900 kg | 1,200 kg |\n| Max. speed | 2.0 m/s | 1.4 m/s | 1.4 m/s | 2.0 m/s | 1.5 m/s |\n| Footprint (mm) | 740 \u00d7 550 | 1,050 \u00d7 700 | 1,350 \u00d7 910 | 1,837 \u00d7 1,283 | 2,841 \u00d7 1,201 |\n| Height (mm) | 308 | 320 | 320 | 351 | 2,155 |\n| Min. aisle, 1-way | 1,099 mm | n/p | n/p | 1,915 mm | 3,152 mm | [...] OTTO 100 \u2014 Human-scale loads under 150 kg, cart workflows, ",
-      "retrieved_at": "2026-10-27T20:26:51+00:00"
+      "snippet": "OTTO 100 \u2014 Human-scale loads under 150 kg, cart workflows, tight aisles, high cycle counts. The 1,099 mm aisle and 18-minute charge suit lineside delivery and kitting.\n OTTO 600 / 1200 \u2014 Mid-weight loads in confined space. Same platform, speed, battery and interface \u2014 the choice between them is purely payload and footprint.\n OTTO 1500 \u2014 Heaviest payloads, longest runtime, most capable attachment interface. Moves the most material per trip. [...] | Specification | OTTO 100 | OTTO 600 | OTTO 1200 ",
+      "retrieved_at": "2026-10-28T06:01:54+00:00"
     }
   ],
   "tool_calls": [
@@ -5353,7 +5941,7 @@
       "tool": "list_candidates",
       "args": {},
       "result": {},
-      "t": 1793132791.898
+      "t": 1793167268.385
     },
     {
       "caller": "super",
@@ -5365,7 +5953,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793132795.245
+      "t": 1793167280.039
     },
     {
       "caller": "super",
@@ -5377,7 +5965,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793132796.503
+      "t": 1793167285.03
     },
     {
       "caller": "super",
@@ -5389,7 +5977,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793132797.61
+      "t": 1793167289.395
     },
     {
       "caller": "super",
@@ -5401,31 +5989,31 @@
       "result": {
         "ok": true
       },
-      "t": 1793132798.781
-    },
-    {
-      "caller": "super",
-      "tool": "tavily_search",
-      "args": {
-        "query": "Pudu T300 AMR payload capacity specifications",
-        "max_results": 3
-      },
-      "result": {
-        "mode": "live"
-      },
-      "t": 1793132808.22
+      "t": 1793167293.634
     },
     {
       "caller": "super",
       "tool": "tavily_search",
       "args": {
-        "query": "OTTO 100 AMR payload capacity specifications",
+        "query": "Pudu T300 AMR specifications payload navigation",
         "max_results": 3
       },
       "result": {
         "mode": "live"
       },
-      "t": 1793132811.548
+      "t": 1793167308.916
+    },
+    {
+      "caller": "super",
+      "tool": "tavily_search",
+      "args": {
+        "query": "OTTO 100 AMR specifications payload navigation",
+        "max_results": 3
+      },
+      "result": {
+        "mode": "live"
+      },
+      "t": 1793167314.369
     },
     {
       "caller": "code",
@@ -5437,7 +6025,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793132826.139
+      "t": 1793167328.84
     },
     {
       "caller": "code",
@@ -5449,7 +6037,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793132826.139
+      "t": 1793167328.84
     },
     {
       "caller": "code",
@@ -5461,43 +6049,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793132827.435
-    },
-    {
-      "caller": "code",
-      "tool": "run_feasibility",
-      "args": {
-        "robot_id": "mir_mir250",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true
-      },
-      "t": 1793132828.939
-    },
-    {
-      "caller": "code",
-      "tool": "run_feasibility",
-      "args": {
-        "robot_id": "mir_mir250",
-        "bound": "nominal"
-      },
-      "result": {
-        "ok": true
-      },
-      "t": 1793132828.939
-    },
-    {
-      "caller": "code",
-      "tool": "run_feasibility",
-      "args": {
-        "robot_id": "mir_mir250",
-        "bound": "conservative"
-      },
-      "result": {
-        "ok": true
-      },
-      "t": 1793132830.411
+      "t": 1793167332.281
     },
     {
       "caller": "code",
@@ -5509,7 +6061,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793132831.831
+      "t": 1793167336.587
     },
     {
       "caller": "code",
@@ -5521,7 +6073,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793132831.831
+      "t": 1793167336.587
     },
     {
       "caller": "code",
@@ -5533,7 +6085,43 @@
       "result": {
         "ok": true
       },
-      "t": 1793132833.347
+      "t": 1793167341.682
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "mir_mir250",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793167345.828
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "mir_mir250",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793167345.828
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "mir_mir250",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793167350.009
     },
     {
       "caller": "code",
@@ -5545,7 +6133,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793132834.68
+      "t": 1793167353.753
     },
     {
       "caller": "code",
@@ -5557,7 +6145,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793132834.68
+      "t": 1793167353.753
     },
     {
       "caller": "code",
@@ -5569,21 +6157,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793132835.958
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "pudu_t300",
-        "density": "quiet",
-        "bound": "conservative"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_62a4a91d455f"
-      },
-      "t": 1793132948.992
+      "t": 1793167357.742
     },
     {
       "caller": "code",
@@ -5595,23 +6169,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_318479d649c5"
+        "batch_id": "sb_31ed5960038a"
       },
-      "t": 1793132953.294
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "pudu_t300",
-        "density": "normal",
-        "bound": "nominal"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_a83843d81092"
-      },
-      "t": 1793132959.513
+      "t": 1793167545.352
     },
     {
       "caller": "code",
@@ -5623,9 +6183,23 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_774e5753d4d9"
+        "batch_id": "sb_4d84f24e3024"
       },
-      "t": 1793132959.821
+      "t": 1793167545.827
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "quiet",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_e686299f0283"
+      },
+      "t": 1793167546.781
     },
     {
       "caller": "code",
@@ -5637,23 +6211,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_ae5621cead7c"
+        "batch_id": "sb_c688bfcd6e5c"
       },
-      "t": 1793132971.827
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "pudu_t300",
-        "density": "peak",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_599522a223fa"
-      },
-      "t": 1793132976.869
+      "t": 1793167560.894
     },
     {
       "caller": "code",
@@ -5665,9 +6225,23 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_6228255866e2"
+        "batch_id": "sb_500ce3d2553a"
       },
-      "t": 1793133000.555
+      "t": 1793167561.23
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "normal",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_41bc4c2ba2f9"
+      },
+      "t": 1793167561.639
     },
     {
       "caller": "code",
@@ -5675,41 +6249,13 @@
       "args": {
         "robot_id": "pudu_t300",
         "density": "peak",
-        "bound": "nominal"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_02f8291b72d1"
-      },
-      "t": 1793133013.241
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "mir_mir250",
-        "density": "quiet",
-        "bound": "nominal"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_6c0e4e92553b"
-      },
-      "t": 1793133015.933
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "mir_mir250",
-        "density": "quiet",
         "bound": "optimistic"
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_acaad38c39e9"
+        "batch_id": "sb_e3632d209752"
       },
-      "t": 1793133021.43
+      "t": 1793167592.041
     },
     {
       "caller": "code",
@@ -5721,93 +6267,23 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_fbd802602b39"
+        "batch_id": "sb_9fffb4df20bc"
       },
-      "t": 1793133027.278
+      "t": 1793167592.357
     },
     {
       "caller": "code",
       "tool": "run_batch",
       "args": {
-        "robot_id": "mir_mir250",
-        "density": "quiet",
-        "bound": "conservative"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_de2db6c9bb85"
-      },
-      "t": 1793133208.807
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "mir_mir250",
-        "density": "normal",
+        "robot_id": "pudu_t300",
+        "density": "peak",
         "bound": "nominal"
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_e3ccc14c1476"
+        "batch_id": "sb_b960825d5106"
       },
-      "t": 1793133213.923
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "mir_mir250",
-        "density": "normal",
-        "bound": "conservative"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_1e9ef8dcdf61"
-      },
-      "t": 1793133222.232
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "mir_mir250",
-        "density": "normal",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_4fab0640ed9b"
-      },
-      "t": 1793133223.78
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "otto_100",
-        "density": "quiet",
-        "bound": "conservative"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_c63223f5d0bf"
-      },
-      "t": 1793133245.847
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "mir_mir250",
-        "density": "peak",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_ff68d24cd9f5"
-      },
-      "t": 1793133268.292
+      "t": 1793167594.007
     },
     {
       "caller": "code",
@@ -5819,9 +6295,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_9ce556cb4d55"
+        "batch_id": "sb_ec68fa07d4d9"
       },
-      "t": 1793133283.765
+      "t": 1793167649.712
     },
     {
       "caller": "code",
@@ -5833,9 +6309,275 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_4cc055a97e39"
+        "batch_id": "sb_21f530537cb3"
       },
-      "t": 1793133289.547
+      "t": 1793167650.723
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "otto_100",
+        "density": "quiet",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_c804a5a2613a"
+      },
+      "t": 1793167818.449
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "otto_100",
+        "density": "normal",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_912ecd05aa47"
+      },
+      "t": 1793167837.494
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "otto_100",
+        "density": "normal",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_d96dd2fb87d4"
+      },
+      "t": 1793167840.171
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir250",
+        "density": "quiet",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_32365863145e"
+      },
+      "t": 1793167841.245
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir250",
+        "density": "quiet",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_5d0a216a21de"
+      },
+      "t": 1793167845.645
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "otto_100",
+        "density": "normal",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_2c8ce07eed75"
+      },
+      "t": 1793167853.365
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "otto_100",
+        "density": "peak",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_8c2e684f240f"
+      },
+      "t": 1793167891.838
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "otto_100",
+        "density": "peak",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_821fc6c11009"
+      },
+      "t": 1793167894.395
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir250",
+        "density": "quiet",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_b1623866f4ad"
+      },
+      "t": 1793167897.878
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir250",
+        "density": "normal",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_413fb2a390ae"
+      },
+      "t": 1793167918.086
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "otto_100",
+        "density": "peak",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_de57212d3e22"
+      },
+      "t": 1793167921.954
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir100",
+        "density": "quiet",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_605a9842767b"
+      },
+      "t": 1793168055.758
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir250",
+        "density": "normal",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_c0efaf479af5"
+      },
+      "t": 1793168080.451
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir100",
+        "density": "quiet",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_66564fd490c1"
+      },
+      "t": 1793168094.841
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir250",
+        "density": "normal",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_810fb36d5b55"
+      },
+      "t": 1793168096.012
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir100",
+        "density": "quiet",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_03df66d32580"
+      },
+      "t": 1793168096.903
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir100",
+        "density": "normal",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_c9e6d358e6f0"
+      },
+      "t": 1793168110.601
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir250",
+        "density": "peak",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_51a58e3d9cf6"
+      },
+      "t": 1793168116.001
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir250",
+        "density": "peak",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_9425af669c72"
+      },
+      "t": 1793168119.077
     },
     {
       "caller": "code",
@@ -5847,121 +6589,23 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_923ab3c5e4a0"
+        "batch_id": "sb_d49f4d0bc2b6"
       },
-      "t": 1793133293.601
+      "t": 1793168121.149
     },
     {
       "caller": "code",
       "tool": "run_batch",
       "args": {
-        "robot_id": "mir_mir250",
-        "density": "peak",
-        "bound": "nominal"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_0b19d69ffc27"
-      },
-      "t": 1793133390.426
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "otto_100",
-        "density": "normal",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_d2c34af60fbd"
-      },
-      "t": 1793133394.297
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "otto_100",
+        "robot_id": "mir_mir100",
         "density": "normal",
         "bound": "nominal"
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_938052ccbcec"
+        "batch_id": "sb_849435d8d9f3"
       },
-      "t": 1793133603.176
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "mir_mir100",
-        "density": "quiet",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_a7c4b4c8f285"
-      },
-      "t": 1793133616.102
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "mir_mir100",
-        "density": "quiet",
-        "bound": "nominal"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_03d73fe6bf9a"
-      },
-      "t": 1793133636.71
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "mir_mir100",
-        "density": "quiet",
-        "bound": "conservative"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_539ba4b20ade"
-      },
-      "t": 1793133638.878
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "mir_mir100",
-        "density": "normal",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_96f02e78896e"
-      },
-      "t": 1793133651.173
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "otto_100",
-        "density": "normal",
-        "bound": "conservative"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_a0511c46ab27"
-      },
-      "t": 1793133684.643
+      "t": 1793168126.862
     },
     {
       "caller": "code",
@@ -5973,65 +6617,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_82a57c4f9f6d"
+        "batch_id": "sb_6d6729f9de89"
       },
-      "t": 1793133707.435
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "otto_100",
-        "density": "peak",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_7ac96c8888b0"
-      },
-      "t": 1793133710.063
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "mir_mir100",
-        "density": "normal",
-        "bound": "nominal"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_fc4853bd9207"
-      },
-      "t": 1793133712.211
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "otto_100",
-        "density": "peak",
-        "bound": "nominal"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_880ee587be27"
-      },
-      "t": 1793133744.019
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "otto_100",
-        "density": "peak",
-        "bound": "conservative"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_9de38e6e6c78"
-      },
-      "t": 1793133776.419
+      "t": 1793168128.874
     },
     {
       "caller": "code",
@@ -6043,9 +6631,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_a88b8f4302ab"
+        "batch_id": "sb_1b2444254746"
       },
-      "t": 1793133836.471
+      "t": 1793168241.968
     },
     {
       "caller": "code",
@@ -6057,9 +6645,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_ccb6e9e6b36c"
+        "batch_id": "sb_cc0f521eeb77"
       },
-      "t": 1793133838.246
+      "t": 1793168258.67
     },
     {
       "caller": "code",
@@ -6071,9 +6659,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_63697ef211c7"
+        "batch_id": "sb_37cdbf0abde7"
       },
-      "t": 1793133844.384
+      "t": 1793168268.062
     },
     {
       "caller": "code",
@@ -6086,7 +6674,7 @@
         "investigation_id": "inv_af72142b9b",
         "mode": "live"
       },
-      "t": 1793133881.373
+      "t": 1793168413.779
     },
     {
       "caller": "code",
@@ -6099,7 +6687,7 @@
         "investigation_id": "inv_fc10c27957",
         "mode": "live"
       },
-      "t": 1793133898.088
+      "t": 1793168421.042
     },
     {
       "caller": "code",
@@ -6110,7 +6698,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793133898.785
+      "t": 1793168422.374
     },
     {
       "caller": "code",
@@ -6121,7 +6709,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793134015.667
+      "t": 1793168639.226
     }
   ],
   "report": {
@@ -6167,11 +6755,11 @@
     }
   ],
   "episodes_per_batch": 40,
-  "finished_at": 1793134272.87057,
+  "finished_at": 1793168669.2612135,
   "replay_batches": {
-    "pudu_t300": "sb_a83843d81092",
-    "mir_mir250": "sb_e3ccc14c1476",
-    "otto_100": "sb_938052ccbcec",
-    "mir_mir100": "sb_fc4853bd9207"
+    "pudu_t300": "sb_41bc4c2ba2f9",
+    "otto_100": "sb_d96dd2fb87d4",
+    "mir_mir250": "sb_c0efaf479af5",
+    "mir_mir100": "sb_849435d8d9f3"
   }
 }

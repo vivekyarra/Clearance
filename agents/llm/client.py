@@ -59,16 +59,6 @@ def load_models_config(path: str | Path | None = None) -> dict:
         cfg = yaml.safe_load(f) or {}
     if "roles" not in cfg:
         raise LLMError(f"{p}: missing 'roles'")
-    # Optional machine-local additions next to the config (models.local.yaml, gitignored): extra candidates are
-    # appended to each role and marked local, so the verify script and Token Factory selection leave them alone.
-    local = p.with_name(p.stem + ".local.yaml")
-    if local.is_file() and not os.environ.get("CLEARANCE_SKIP_DOTENV"):
-        with open(local, encoding="utf-8") as f:
-            extra = yaml.safe_load(f) or {}
-        for role, rc in (extra.get("roles") or {}).items():
-            if role in cfg["roles"]:
-                cands = cfg["roles"][role].setdefault("candidates", [])
-                cands.extend({**c, "local": True} for c in (rc.get("candidates") or []))
     return cfg
 
 

@@ -1,7 +1,7 @@
 {
   "investigation_id": "inv_fc10c27957",
   "analysis_id": "an_ref_storeroom_01",
-  "model_id": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+  "model_id": "nvidia/Nemotron-3.5-Super-VL",
   "mode": "live",
   "steps": [
     {
@@ -9,16 +9,16 @@
       "thought": "",
       "tool": "get_batch_summary",
       "args": {
-        "batch_id": "sb_03d73fe6bf9a"
+        "batch_id": "sb_03df66d32580"
       },
       "result_summary": {
         "ok": true,
         "robot_id": "mir_mir100",
         "batches": [
           {
-            "batch_id": "sb_03d73fe6bf9a",
+            "batch_id": "sb_03df66d32580",
             "density": "quiet",
-            "bound": "nominal",
+            "bound": "conservative",
             "success_rate": {
               "value": 0.875,
               "unit": "ratio",
@@ -84,505 +84,552 @@
     {
       "i": 2,
       "thought": "",
-      "tool": "get_bottlenecks",
+      "tool": "get_batch_summary",
       "args": {
-        "top_k": 10
+        "batch_id": "sb_1b2444254746"
       },
       "result_summary": {
         "ok": true,
-        "bottlenecks": [
+        "robot_id": "mir_mir100",
+        "batches": [
           {
-            "rank": 1,
-            "xy": [
-              1.663,
-              3.588
-            ],
-            "share_of_total": {
-              "value": 0.2074,
+            "batch_id": "sb_1b2444254746",
+            "density": "peak",
+            "bound": "optimistic",
+            "success_rate": {
+              "value": 0.825,
               "unit": "ratio",
               "fact_id": "f_ifc10c_010"
             },
-            "nearby_object_ids": [
-              "SHELF_B",
-              "SHELF_A"
-            ],
-            "nearby_zone_ids": [
-              "aisles"
-            ],
-            "examined": false
-          },
-          {
-            "rank": 2,
-            "xy": [
-              3.113,
-              1.663
-            ],
-            "share_of_total": {
-              "value": 0.1082,
+            "ci95_low": {
+              "value": 0.6805,
               "unit": "ratio",
               "fact_id": "f_ifc10c_011"
             },
-            "nearby_object_ids": [
-              "PALLET1",
-              "SHELF_A"
-            ],
-            "nearby_zone_ids": [
-              "staging",
-              "aisles"
-            ],
-            "examined": false
-          },
-          {
-            "rank": 3,
-            "xy": [
-              1.113,
-              1.712
-            ],
-            "share_of_total": {
-              "value": 0.1015,
+            "ci95_high": {
+              "value": 0.9125,
               "unit": "ratio",
               "fact_id": "f_ifc10c_012"
             },
-            "nearby_object_ids": [
-              "SHELF_A",
-              "DOCKSTN"
-            ],
-            "nearby_zone_ids": [
-              "staging",
-              "door",
-              "aisles"
-            ],
-            "examined": false
-          },
-          {
-            "rank": 4,
-            "xy": [
-              4.888,
-              3.288
-            ],
-            "share_of_total": {
-              "value": 0.0716,
-              "unit": "ratio",
+            "n_episodes": {
+              "value": 40,
+              "unit": "episodes",
               "fact_id": "f_ifc10c_013"
             },
-            "nearby_object_ids": [
-              "SHELF_A",
-              "SHELF_B"
-            ],
-            "nearby_zone_ids": [
-              "aisles",
-              "staging"
-            ],
-            "examined": false
-          },
-          {
-            "rank": 5,
-            "xy": [
-              8.537,
-              3.562
-            ],
-            "share_of_total": {
-              "value": 0.0509,
-              "unit": "ratio",
+            "median_mission_s": {
+              "value": 161.5,
+              "unit": "s",
               "fact_id": "f_ifc10c_014"
             },
-            "nearby_object_ids": [
-              "SHELF_B",
-              "SHELF_A"
-            ],
-            "nearby_zone_ids": [
-              "aisles"
-            ],
-            "examined": false
+            "min_gap_m": {
+              "value": 0.0275,
+              "unit": "m",
+              "fact_id": "f_ifc10c_015"
+            },
+            "near_miss_per_mission": {
+              "value": 3.925,
+              "unit": "per mission",
+              "fact_id": "f_ifc10c_016"
+            },
+            "stops_per_mission": {
+              "value": 7.1,
+              "unit": "per mission",
+              "fact_id": "f_ifc10c_017"
+            },
+            "fail_reasons": {
+              "collision": {
+                "value": 2,
+                "unit": "episodes",
+                "fact_id": "f_ifc10c_018"
+              },
+              "no_path_static": {
+                "value": 5,
+                "unit": "episodes",
+                "fact_id": "f_ifc10c_019"
+              }
+            }
           }
-        ],
-        "batches_used": [
-          "sb_03d73fe6bf9a",
-          "sb_ccb6e9e6b36c",
-          "sb_fc4853bd9207"
-        ],
-        "threshold_share": 0.05
+        ]
       },
       "fact_ids": [
         "f_ifc10c_010",
         "f_ifc10c_011",
         "f_ifc10c_012",
         "f_ifc10c_013",
-        "f_ifc10c_014"
+        "f_ifc10c_014",
+        "f_ifc10c_015",
+        "f_ifc10c_016",
+        "f_ifc10c_017",
+        "f_ifc10c_018",
+        "f_ifc10c_019"
       ]
     },
     {
       "i": 3,
       "thought": "",
-      "tool": "get_gap_at",
+      "tool": "get_batch_summary",
       "args": {
-        "xy": [
-          1.663,
-          3.588
-        ]
+        "batch_id": "sb_37cdbf0abde7"
       },
       "result_summary": {
         "ok": true,
-        "xy": [
-          1.663,
-          3.588
-        ],
-        "in_obstacle": false,
-        "nearest_obstacle_m": {
-          "value": 0.5506,
-          "unit": "m",
-          "fact_id": "f_ifc10c_015"
-        },
-        "gap_m": {
-          "value": 1.1011,
-          "unit": "m",
-          "fact_id": "f_ifc10c_016"
-        },
-        "robot_width_m": {
-          "value": 0.58,
-          "unit": "m",
-          "fact_id": "f_ifc10c_017"
-        },
-        "gap_margin_m": {
-          "value": 0.5211,
-          "unit": "m",
-          "fact_id": "f_ifc10c_018"
-        }
+        "robot_id": "mir_mir100",
+        "batches": [
+          {
+            "batch_id": "sb_37cdbf0abde7",
+            "density": "peak",
+            "bound": "conservative",
+            "success_rate": {
+              "value": 0.825,
+              "unit": "ratio",
+              "fact_id": "f_ifc10c_020"
+            },
+            "ci95_low": {
+              "value": 0.6805,
+              "unit": "ratio",
+              "fact_id": "f_ifc10c_021"
+            },
+            "ci95_high": {
+              "value": 0.9125,
+              "unit": "ratio",
+              "fact_id": "f_ifc10c_022"
+            },
+            "n_episodes": {
+              "value": 40,
+              "unit": "episodes",
+              "fact_id": "f_ifc10c_023"
+            },
+            "median_mission_s": {
+              "value": 161.5,
+              "unit": "s",
+              "fact_id": "f_ifc10c_024"
+            },
+            "min_gap_m": {
+              "value": 0.0275,
+              "unit": "m",
+              "fact_id": "f_ifc10c_025"
+            },
+            "near_miss_per_mission": {
+              "value": 3.925,
+              "unit": "per mission",
+              "fact_id": "f_ifc10c_026"
+            },
+            "stops_per_mission": {
+              "value": 7.1,
+              "unit": "per mission",
+              "fact_id": "f_ifc10c_027"
+            },
+            "fail_reasons": {
+              "collision": {
+                "value": 2,
+                "unit": "episodes",
+                "fact_id": "f_ifc10c_028"
+              },
+              "no_path_static": {
+                "value": 5,
+                "unit": "episodes",
+                "fact_id": "f_ifc10c_029"
+              }
+            }
+          }
+        ]
       },
       "fact_ids": [
-        "f_ifc10c_015",
-        "f_ifc10c_016",
-        "f_ifc10c_017",
-        "f_ifc10c_018"
+        "f_ifc10c_020",
+        "f_ifc10c_021",
+        "f_ifc10c_022",
+        "f_ifc10c_023",
+        "f_ifc10c_024",
+        "f_ifc10c_025",
+        "f_ifc10c_026",
+        "f_ifc10c_027",
+        "f_ifc10c_028",
+        "f_ifc10c_029"
       ]
     },
     {
       "i": 4,
       "thought": "",
-      "tool": "get_objects_near",
+      "tool": "get_batch_summary",
       "args": {
-        "xy": [
-          1.663,
-          3.588
-        ],
-        "r": 2
+        "batch_id": "sb_605a9842767b"
       },
       "result_summary": {
         "ok": true,
-        "xy": [
-          1.663,
-          3.588
-        ],
-        "r": 2.0,
-        "objects": [
+        "robot_id": "mir_mir100",
+        "batches": [
           {
-            "id": "SHELF_B",
-            "label": "shelf",
-            "movable": false,
-            "fragile": false,
-            "center_xy": [
-              5.265,
-              4.31
-            ],
-            "distance_m": {
-              "value": 0.5495,
-              "unit": "m",
-              "fact_id": "f_ifc10c_019"
+            "batch_id": "sb_605a9842767b",
+            "density": "quiet",
+            "bound": "optimistic",
+            "success_rate": {
+              "value": 0.875,
+              "unit": "ratio",
+              "fact_id": "f_ifc10c_030"
             },
-            "confidence": 1.0
-          },
-          {
-            "id": "SHELF_A",
-            "label": "shelf",
-            "movable": false,
-            "fragile": false,
-            "center_xy": [
-              5.265,
-              2.51
-            ],
-            "distance_m": {
-              "value": 0.8538,
-              "unit": "m",
-              "fact_id": "f_ifc10c_020"
+            "ci95_low": {
+              "value": 0.7389,
+              "unit": "ratio",
+              "fact_id": "f_ifc10c_031"
             },
-            "confidence": 1.0
-          },
-          {
-            "id": "SHELF_C",
-            "label": "shelf",
-            "movable": false,
-            "fragile": false,
-            "center_xy": [
-              5.265,
-              5.71
-            ],
-            "distance_m": {
-              "value": 1.8557,
-              "unit": "m",
-              "fact_id": "f_ifc10c_021"
+            "ci95_high": {
+              "value": 0.9454,
+              "unit": "ratio",
+              "fact_id": "f_ifc10c_032"
             },
-            "confidence": 1.0
+            "n_episodes": {
+              "value": 40,
+              "unit": "episodes",
+              "fact_id": "f_ifc10c_033"
+            },
+            "median_mission_s": {
+              "value": 144.7,
+              "unit": "s",
+              "fact_id": "f_ifc10c_034"
+            },
+            "min_gap_m": {
+              "value": 0.0275,
+              "unit": "m",
+              "fact_id": "f_ifc10c_035"
+            },
+            "near_miss_per_mission": {
+              "value": 0.75,
+              "unit": "per mission",
+              "fact_id": "f_ifc10c_036"
+            },
+            "stops_per_mission": {
+              "value": 1.225,
+              "unit": "per mission",
+              "fact_id": "f_ifc10c_037"
+            },
+            "fail_reasons": {
+              "no_path_static": {
+                "value": 5,
+                "unit": "episodes",
+                "fact_id": "f_ifc10c_038"
+              }
+            }
           }
-        ],
-        "zone_ids": [
-          "aisles",
-          "staging"
         ]
       },
       "fact_ids": [
-        "f_ifc10c_019",
-        "f_ifc10c_020",
-        "f_ifc10c_021"
+        "f_ifc10c_030",
+        "f_ifc10c_031",
+        "f_ifc10c_032",
+        "f_ifc10c_033",
+        "f_ifc10c_034",
+        "f_ifc10c_035",
+        "f_ifc10c_036",
+        "f_ifc10c_037",
+        "f_ifc10c_038"
       ]
     },
     {
       "i": 5,
       "thought": "",
-      "tool": "get_gap_at",
+      "tool": "get_batch_summary",
       "args": {
-        "xy": [
-          3.113,
-          1.663
-        ]
+        "batch_id": "sb_66564fd490c1"
       },
       "result_summary": {
         "ok": true,
-        "xy": [
-          3.113,
-          1.663
-        ],
-        "in_obstacle": false,
-        "nearest_obstacle_m": {
-          "value": 0.3905,
-          "unit": "m",
-          "fact_id": "f_ifc10c_022"
-        },
-        "gap_m": {
-          "value": 0.781,
-          "unit": "m",
-          "fact_id": "f_ifc10c_023"
-        },
-        "robot_width_m": {
-          "value": 0.58,
-          "unit": "m",
-          "fact_id": "f_ifc10c_024"
-        },
-        "gap_margin_m": {
-          "value": 0.201,
-          "unit": "m",
-          "fact_id": "f_ifc10c_025"
-        }
+        "robot_id": "mir_mir100",
+        "batches": [
+          {
+            "batch_id": "sb_66564fd490c1",
+            "density": "quiet",
+            "bound": "nominal",
+            "success_rate": {
+              "value": 0.875,
+              "unit": "ratio",
+              "fact_id": "f_ifc10c_039"
+            },
+            "ci95_low": {
+              "value": 0.7389,
+              "unit": "ratio",
+              "fact_id": "f_ifc10c_040"
+            },
+            "ci95_high": {
+              "value": 0.9454,
+              "unit": "ratio",
+              "fact_id": "f_ifc10c_041"
+            },
+            "n_episodes": {
+              "value": 40,
+              "unit": "episodes",
+              "fact_id": "f_ifc10c_042"
+            },
+            "median_mission_s": {
+              "value": 144.7,
+              "unit": "s",
+              "fact_id": "f_ifc10c_043"
+            },
+            "min_gap_m": {
+              "value": 0.0275,
+              "unit": "m",
+              "fact_id": "f_ifc10c_044"
+            },
+            "near_miss_per_mission": {
+              "value": 0.75,
+              "unit": "per mission",
+              "fact_id": "f_ifc10c_045"
+            },
+            "stops_per_mission": {
+              "value": 1.225,
+              "unit": "per mission",
+              "fact_id": "f_ifc10c_046"
+            },
+            "fail_reasons": {
+              "no_path_static": {
+                "value": 5,
+                "unit": "episodes",
+                "fact_id": "f_ifc10c_047"
+              }
+            }
+          }
+        ]
       },
       "fact_ids": [
-        "f_ifc10c_022",
-        "f_ifc10c_023",
-        "f_ifc10c_024",
-        "f_ifc10c_025"
+        "f_ifc10c_039",
+        "f_ifc10c_040",
+        "f_ifc10c_041",
+        "f_ifc10c_042",
+        "f_ifc10c_043",
+        "f_ifc10c_044",
+        "f_ifc10c_045",
+        "f_ifc10c_046",
+        "f_ifc10c_047"
       ]
     },
     {
       "i": 6,
       "thought": "",
-      "tool": "get_objects_near",
+      "tool": "get_batch_summary",
       "args": {
-        "xy": [
-          3.113,
-          1.663
-        ],
-        "r": 2
+        "batch_id": "sb_6d6729f9de89"
       },
       "result_summary": {
         "ok": true,
-        "xy": [
-          3.113,
-          1.663
-        ],
-        "r": 2.0,
-        "objects": [
+        "robot_id": "mir_mir100",
+        "batches": [
           {
-            "id": "PALLET1",
-            "label": "pallet",
-            "movable": true,
-            "fragile": false,
-            "center_xy": [
-              4.015,
-              1.01
-            ],
-            "distance_m": {
-              "value": 0.3938,
-              "unit": "m",
-              "fact_id": "f_ifc10c_026"
+            "batch_id": "sb_6d6729f9de89",
+            "density": "normal",
+            "bound": "conservative",
+            "success_rate": {
+              "value": 0.875,
+              "unit": "ratio",
+              "fact_id": "f_ifc10c_048"
             },
-            "confidence": 1.0
-          },
-          {
-            "id": "SHELF_A",
-            "label": "shelf",
-            "movable": false,
-            "fragile": false,
-            "center_xy": [
-              5.265,
-              2.51
-            ],
-            "distance_m": {
-              "value": 0.547,
-              "unit": "m",
-              "fact_id": "f_ifc10c_027"
+            "ci95_low": {
+              "value": 0.7389,
+              "unit": "ratio",
+              "fact_id": "f_ifc10c_049"
             },
-            "confidence": 1.0
+            "ci95_high": {
+              "value": 0.9454,
+              "unit": "ratio",
+              "fact_id": "f_ifc10c_050"
+            },
+            "n_episodes": {
+              "value": 40,
+              "unit": "episodes",
+              "fact_id": "f_ifc10c_051"
+            },
+            "median_mission_s": {
+              "value": 151.9,
+              "unit": "s",
+              "fact_id": "f_ifc10c_052"
+            },
+            "min_gap_m": {
+              "value": 0.0275,
+              "unit": "m",
+              "fact_id": "f_ifc10c_053"
+            },
+            "near_miss_per_mission": {
+              "value": 1.75,
+              "unit": "per mission",
+              "fact_id": "f_ifc10c_054"
+            },
+            "stops_per_mission": {
+              "value": 2.925,
+              "unit": "per mission",
+              "fact_id": "f_ifc10c_055"
+            },
+            "fail_reasons": {
+              "no_path_static": {
+                "value": 5,
+                "unit": "episodes",
+                "fact_id": "f_ifc10c_056"
+              }
+            }
           }
-        ],
-        "zone_ids": [
-          "staging",
-          "aisles",
-          "door"
         ]
       },
       "fact_ids": [
-        "f_ifc10c_026",
-        "f_ifc10c_027"
+        "f_ifc10c_048",
+        "f_ifc10c_049",
+        "f_ifc10c_050",
+        "f_ifc10c_051",
+        "f_ifc10c_052",
+        "f_ifc10c_053",
+        "f_ifc10c_054",
+        "f_ifc10c_055",
+        "f_ifc10c_056"
       ]
     },
     {
       "i": 7,
       "thought": "",
-      "tool": "get_gap_at",
+      "tool": "get_batch_summary",
       "args": {
-        "xy": [
-          1.113,
-          1.712
-        ]
+        "batch_id": "sb_849435d8d9f3"
       },
       "result_summary": {
         "ok": true,
-        "xy": [
-          1.113,
-          1.712
-        ],
-        "in_obstacle": false,
-        "nearest_obstacle_m": {
-          "value": 1.0296,
-          "unit": "m",
-          "fact_id": "f_ifc10c_028"
-        },
-        "gap_m": {
-          "value": 2.0591,
-          "unit": "m",
-          "fact_id": "f_ifc10c_029"
-        },
-        "robot_width_m": {
-          "value": 0.58,
-          "unit": "m",
-          "fact_id": "f_ifc10c_030"
-        },
-        "gap_margin_m": {
-          "value": 1.4791,
-          "unit": "m",
-          "fact_id": "f_ifc10c_031"
-        }
-      },
-      "fact_ids": [
-        "f_ifc10c_028",
-        "f_ifc10c_029",
-        "f_ifc10c_030",
-        "f_ifc10c_031"
-      ]
-    },
-    {
-      "i": 8,
-      "thought": "",
-      "tool": "get_episode_events",
-      "args": {
-        "batch_id": "sb_03d73fe6bf9a",
-        "type": "fail",
-        "limit": 20
-      },
-      "result_summary": {
-        "ok": true,
-        "batch_id": "sb_03d73fe6bf9a",
-        "type": "fail",
-        "count": {
-          "value": 5,
-          "unit": "events",
-          "fact_id": "f_ifc10c_032"
-        },
-        "episodes_with_event": {
-          "value": 5,
-          "unit": "episodes",
-          "fact_id": "f_ifc10c_033"
-        },
-        "per_mission": {
-          "value": 0.125,
-          "unit": "per mission",
-          "fact_id": "f_ifc10c_034"
-        },
-        "sample": [
+        "robot_id": "mir_mir100",
+        "batches": [
           {
-            "episode": 3,
-            "t": 0.0,
-            "xy": [
-              0.715,
-              0.76
-            ],
-            "detail": {
-              "reason": "no_path_static",
-              "why": "leg PICKUP->S1: no_path"
-            }
-          },
-          {
-            "episode": 8,
-            "t": 0.0,
-            "xy": [
-              0.715,
-              0.76
-            ],
-            "detail": {
-              "reason": "no_path_static",
-              "why": "leg PICKUP->S1: search_limit"
-            }
-          },
-          {
-            "episode": 11,
-            "t": 0.0,
-            "xy": [
-              0.715,
-              0.76
-            ],
-            "detail": {
-              "reason": "no_path_static",
-              "why": "leg PICKUP->S1: no_path"
-            }
-          },
-          {
-            "episode": 15,
-            "t": 0.0,
-            "xy": [
-              0.715,
-              0.76
-            ],
-            "detail": {
-              "reason": "no_path_static",
-              "why": "leg PICKUP->S1: no_path"
-            }
-          },
-          {
-            "episode": 30,
-            "t": 0.0,
-            "xy": [
-              0.715,
-              0.76
-            ],
-            "detail": {
-              "reason": "no_path_static",
-              "why": "leg PICKUP->S1: no_path"
+            "batch_id": "sb_849435d8d9f3",
+            "density": "normal",
+            "bound": "nominal",
+            "success_rate": {
+              "value": 0.875,
+              "unit": "ratio",
+              "fact_id": "f_ifc10c_057"
+            },
+            "ci95_low": {
+              "value": 0.7389,
+              "unit": "ratio",
+              "fact_id": "f_ifc10c_058"
+            },
+            "ci95_high": {
+              "value": 0.9454,
+              "unit": "ratio",
+              "fact_id": "f_ifc10c_059"
+            },
+            "n_episodes": {
+              "value": 40,
+              "unit": "episodes",
+              "fact_id": "f_ifc10c_060"
+            },
+            "median_mission_s": {
+              "value": 151.9,
+              "unit": "s",
+              "fact_id": "f_ifc10c_061"
+            },
+            "min_gap_m": {
+              "value": 0.0275,
+              "unit": "m",
+              "fact_id": "f_ifc10c_062"
+            },
+            "near_miss_per_mission": {
+              "value": 1.75,
+              "unit": "per mission",
+              "fact_id": "f_ifc10c_063"
+            },
+            "stops_per_mission": {
+              "value": 2.925,
+              "unit": "per mission",
+              "fact_id": "f_ifc10c_064"
+            },
+            "fail_reasons": {
+              "no_path_static": {
+                "value": 5,
+                "unit": "episodes",
+                "fact_id": "f_ifc10c_065"
+              }
             }
           }
         ]
       },
       "fact_ids": [
-        "f_ifc10c_032",
-        "f_ifc10c_033",
-        "f_ifc10c_034"
+        "f_ifc10c_057",
+        "f_ifc10c_058",
+        "f_ifc10c_059",
+        "f_ifc10c_060",
+        "f_ifc10c_061",
+        "f_ifc10c_062",
+        "f_ifc10c_063",
+        "f_ifc10c_064",
+        "f_ifc10c_065"
+      ]
+    },
+    {
+      "i": 8,
+      "thought": "",
+      "tool": "get_batch_summary",
+      "args": {
+        "batch_id": "sb_c9e6d358e6f0"
+      },
+      "result_summary": {
+        "ok": true,
+        "robot_id": "mir_mir100",
+        "batches": [
+          {
+            "batch_id": "sb_c9e6d358e6f0",
+            "density": "normal",
+            "bound": "optimistic",
+            "success_rate": {
+              "value": 0.875,
+              "unit": "ratio",
+              "fact_id": "f_ifc10c_066"
+            },
+            "ci95_low": {
+              "value": 0.7389,
+              "unit": "ratio",
+              "fact_id": "f_ifc10c_067"
+            },
+            "ci95_high": {
+              "value": 0.9454,
+              "unit": "ratio",
+              "fact_id": "f_ifc10c_068"
+            },
+            "n_episodes": {
+              "value": 40,
+              "unit": "episodes",
+              "fact_id": "f_ifc10c_069"
+            },
+            "median_mission_s": {
+              "value": 151.9,
+              "unit": "s",
+              "fact_id": "f_ifc10c_070"
+            },
+            "min_gap_m": {
+              "value": 0.0275,
+              "unit": "m",
+              "fact_id": "f_ifc10c_071"
+            },
+            "near_miss_per_mission": {
+              "value": 1.75,
+              "unit": "per mission",
+              "fact_id": "f_ifc10c_072"
+            },
+            "stops_per_mission": {
+              "value": 2.925,
+              "unit": "per mission",
+              "fact_id": "f_ifc10c_073"
+            },
+            "fail_reasons": {
+              "no_path_static": {
+                "value": 5,
+                "unit": "episodes",
+                "fact_id": "f_ifc10c_074"
+              }
+            }
+          }
+        ]
+      },
+      "fact_ids": [
+        "f_ifc10c_066",
+        "f_ifc10c_067",
+        "f_ifc10c_068",
+        "f_ifc10c_069",
+        "f_ifc10c_070",
+        "f_ifc10c_071",
+        "f_ifc10c_072",
+        "f_ifc10c_073",
+        "f_ifc10c_074"
       ]
     }
   ],
@@ -593,7 +640,7 @@
       "fact_id": "f_ifc10c_001",
       "value": 0.875,
       "unit": "ratio",
-      "label": "Success rate, mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+      "label": "Success rate, mir_mir100, quiet traffic, conservative geometry (sb_03df66d32580)",
       "origin": {
         "type": "investigation",
         "ref": "inv_fc10c27957#step1"
@@ -603,7 +650,7 @@
       "fact_id": "f_ifc10c_002",
       "value": 0.7389,
       "unit": "ratio",
-      "label": "Success rate 95% CI low, mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+      "label": "Success rate 95% CI low, mir_mir100, quiet traffic, conservative geometry (sb_03df66d32580)",
       "origin": {
         "type": "investigation",
         "ref": "inv_fc10c27957#step1"
@@ -613,7 +660,7 @@
       "fact_id": "f_ifc10c_003",
       "value": 0.9454,
       "unit": "ratio",
-      "label": "Success rate 95% CI high, mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+      "label": "Success rate 95% CI high, mir_mir100, quiet traffic, conservative geometry (sb_03df66d32580)",
       "origin": {
         "type": "investigation",
         "ref": "inv_fc10c27957#step1"
@@ -623,7 +670,7 @@
       "fact_id": "f_ifc10c_004",
       "value": 40.0,
       "unit": "episodes",
-      "label": "Episodes, mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+      "label": "Episodes, mir_mir100, quiet traffic, conservative geometry (sb_03df66d32580)",
       "origin": {
         "type": "investigation",
         "ref": "inv_fc10c27957#step1"
@@ -633,7 +680,7 @@
       "fact_id": "f_ifc10c_005",
       "value": 144.7,
       "unit": "s",
-      "label": "Median mission time, mir_mir100, quiet traffic, nominal geometry",
+      "label": "Median mission time, mir_mir100, quiet traffic, conservative geometry",
       "origin": {
         "type": "investigation",
         "ref": "inv_fc10c27957#step1"
@@ -643,7 +690,7 @@
       "fact_id": "f_ifc10c_006",
       "value": 0.0275,
       "unit": "m",
-      "label": "Median smallest robot-to-obstacle gap, mir_mir100, quiet traffic, nominal geometry",
+      "label": "Median smallest robot-to-obstacle gap, mir_mir100, quiet traffic, conservative geometry",
       "origin": {
         "type": "investigation",
         "ref": "inv_fc10c27957#step1"
@@ -653,7 +700,7 @@
       "fact_id": "f_ifc10c_007",
       "value": 0.75,
       "unit": "per mission",
-      "label": "Near-misses per mission, mir_mir100, quiet traffic, nominal geometry",
+      "label": "Near-misses per mission, mir_mir100, quiet traffic, conservative geometry",
       "origin": {
         "type": "investigation",
         "ref": "inv_fc10c27957#step1"
@@ -663,7 +710,7 @@
       "fact_id": "f_ifc10c_008",
       "value": 1.225,
       "unit": "per mission",
-      "label": "Safety stops per mission, mir_mir100, quiet traffic, nominal geometry",
+      "label": "Safety stops per mission, mir_mir100, quiet traffic, conservative geometry",
       "origin": {
         "type": "investigation",
         "ref": "inv_fc10c27957#step1"
@@ -673,7 +720,7 @@
       "fact_id": "f_ifc10c_009",
       "value": 5.0,
       "unit": "episodes",
-      "label": "Failures 'no_path_static', mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+      "label": "Failures 'no_path_static', mir_mir100, quiet traffic, conservative geometry (sb_03df66d32580)",
       "origin": {
         "type": "investigation",
         "ref": "inv_fc10c27957#step1"
@@ -681,9 +728,9 @@
     },
     {
       "fact_id": "f_ifc10c_010",
-      "value": 0.2074,
+      "value": 0.825,
       "unit": "ratio",
-      "label": "Pinch Map spot #1: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+      "label": "Success rate, mir_mir100, peak traffic, optimistic geometry (sb_1b2444254746)",
       "origin": {
         "type": "investigation",
         "ref": "inv_fc10c27957#step2"
@@ -691,9 +738,9 @@
     },
     {
       "fact_id": "f_ifc10c_011",
-      "value": 0.1082,
+      "value": 0.6805,
       "unit": "ratio",
-      "label": "Pinch Map spot #2: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+      "label": "Success rate 95% CI low, mir_mir100, peak traffic, optimistic geometry (sb_1b2444254746)",
       "origin": {
         "type": "investigation",
         "ref": "inv_fc10c27957#step2"
@@ -701,9 +748,9 @@
     },
     {
       "fact_id": "f_ifc10c_012",
-      "value": 0.1015,
+      "value": 0.9125,
       "unit": "ratio",
-      "label": "Pinch Map spot #3: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+      "label": "Success rate 95% CI high, mir_mir100, peak traffic, optimistic geometry (sb_1b2444254746)",
       "origin": {
         "type": "investigation",
         "ref": "inv_fc10c27957#step2"
@@ -711,9 +758,9 @@
     },
     {
       "fact_id": "f_ifc10c_013",
-      "value": 0.0716,
-      "unit": "ratio",
-      "label": "Pinch Map spot #4: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+      "value": 40.0,
+      "unit": "episodes",
+      "label": "Episodes, mir_mir100, peak traffic, optimistic geometry (sb_1b2444254746)",
       "origin": {
         "type": "investigation",
         "ref": "inv_fc10c27957#step2"
@@ -721,9 +768,9 @@
     },
     {
       "fact_id": "f_ifc10c_014",
-      "value": 0.0509,
-      "unit": "ratio",
-      "label": "Pinch Map spot #5: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+      "value": 161.5,
+      "unit": "s",
+      "label": "Median mission time, mir_mir100, peak traffic, optimistic geometry",
       "origin": {
         "type": "investigation",
         "ref": "inv_fc10c27957#step2"
@@ -731,199 +778,599 @@
     },
     {
       "fact_id": "f_ifc10c_015",
-      "value": 0.5506,
+      "value": 0.0275,
       "unit": "m",
-      "label": "Distance from (1.66, 3.59) to nearest obstacle (nominal grid)",
+      "label": "Median smallest robot-to-obstacle gap, mir_mir100, peak traffic, optimistic geometry",
       "origin": {
         "type": "investigation",
-        "ref": "inv_fc10c27957#step3"
+        "ref": "inv_fc10c27957#step2"
       }
     },
     {
       "fact_id": "f_ifc10c_016",
-      "value": 1.1011,
-      "unit": "m",
-      "label": "Approximate free gap through (1.66, 3.59) (2 x nearest-obstacle distance, nominal grid)",
+      "value": 3.925,
+      "unit": "per mission",
+      "label": "Near-misses per mission, mir_mir100, peak traffic, optimistic geometry",
       "origin": {
         "type": "investigation",
-        "ref": "inv_fc10c27957#step3"
+        "ref": "inv_fc10c27957#step2"
       }
     },
     {
       "fact_id": "f_ifc10c_017",
-      "value": 0.58,
-      "unit": "m",
-      "label": "Footprint width, mir_mir100",
+      "value": 7.1,
+      "unit": "per mission",
+      "label": "Safety stops per mission, mir_mir100, peak traffic, optimistic geometry",
       "origin": {
         "type": "investigation",
-        "ref": "inv_fc10c27957#step3"
+        "ref": "inv_fc10c27957#step2"
       }
     },
     {
       "fact_id": "f_ifc10c_018",
-      "value": 0.5211,
-      "unit": "m",
-      "label": "Approximate gap minus robot width at (1.66, 3.59)",
+      "value": 2.0,
+      "unit": "episodes",
+      "label": "Failures 'collision', mir_mir100, peak traffic, optimistic geometry (sb_1b2444254746)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step2"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_019",
+      "value": 5.0,
+      "unit": "episodes",
+      "label": "Failures 'no_path_static', mir_mir100, peak traffic, optimistic geometry (sb_1b2444254746)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step2"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_020",
+      "value": 0.825,
+      "unit": "ratio",
+      "label": "Success rate, mir_mir100, peak traffic, conservative geometry (sb_37cdbf0abde7)",
       "origin": {
         "type": "investigation",
         "ref": "inv_fc10c27957#step3"
       }
     },
     {
-      "fact_id": "f_ifc10c_019",
-      "value": 0.5495,
-      "unit": "m",
-      "label": "Distance from (1.66, 3.59) to the edge of object SHELF_B (shelf)",
-      "origin": {
-        "type": "investigation",
-        "ref": "inv_fc10c27957#step4"
-      }
-    },
-    {
-      "fact_id": "f_ifc10c_020",
-      "value": 0.8538,
-      "unit": "m",
-      "label": "Distance from (1.66, 3.59) to the edge of object SHELF_A (shelf)",
-      "origin": {
-        "type": "investigation",
-        "ref": "inv_fc10c27957#step4"
-      }
-    },
-    {
       "fact_id": "f_ifc10c_021",
-      "value": 1.8557,
-      "unit": "m",
-      "label": "Distance from (1.66, 3.59) to the edge of object SHELF_C (shelf)",
+      "value": 0.6805,
+      "unit": "ratio",
+      "label": "Success rate 95% CI low, mir_mir100, peak traffic, conservative geometry (sb_37cdbf0abde7)",
       "origin": {
         "type": "investigation",
-        "ref": "inv_fc10c27957#step4"
+        "ref": "inv_fc10c27957#step3"
       }
     },
     {
       "fact_id": "f_ifc10c_022",
-      "value": 0.3905,
-      "unit": "m",
-      "label": "Distance from (3.11, 1.66) to nearest obstacle (nominal grid)",
+      "value": 0.9125,
+      "unit": "ratio",
+      "label": "Success rate 95% CI high, mir_mir100, peak traffic, conservative geometry (sb_37cdbf0abde7)",
       "origin": {
         "type": "investigation",
-        "ref": "inv_fc10c27957#step5"
+        "ref": "inv_fc10c27957#step3"
       }
     },
     {
       "fact_id": "f_ifc10c_023",
-      "value": 0.781,
-      "unit": "m",
-      "label": "Approximate free gap through (3.11, 1.66) (2 x nearest-obstacle distance, nominal grid)",
+      "value": 40.0,
+      "unit": "episodes",
+      "label": "Episodes, mir_mir100, peak traffic, conservative geometry (sb_37cdbf0abde7)",
       "origin": {
         "type": "investigation",
-        "ref": "inv_fc10c27957#step5"
+        "ref": "inv_fc10c27957#step3"
       }
     },
     {
       "fact_id": "f_ifc10c_024",
-      "value": 0.58,
-      "unit": "m",
-      "label": "Footprint width, mir_mir100",
+      "value": 161.5,
+      "unit": "s",
+      "label": "Median mission time, mir_mir100, peak traffic, conservative geometry",
       "origin": {
         "type": "investigation",
-        "ref": "inv_fc10c27957#step5"
+        "ref": "inv_fc10c27957#step3"
       }
     },
     {
       "fact_id": "f_ifc10c_025",
-      "value": 0.201,
+      "value": 0.0275,
       "unit": "m",
-      "label": "Approximate gap minus robot width at (3.11, 1.66)",
+      "label": "Median smallest robot-to-obstacle gap, mir_mir100, peak traffic, conservative geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step3"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_026",
+      "value": 3.925,
+      "unit": "per mission",
+      "label": "Near-misses per mission, mir_mir100, peak traffic, conservative geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step3"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_027",
+      "value": 7.1,
+      "unit": "per mission",
+      "label": "Safety stops per mission, mir_mir100, peak traffic, conservative geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step3"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_028",
+      "value": 2.0,
+      "unit": "episodes",
+      "label": "Failures 'collision', mir_mir100, peak traffic, conservative geometry (sb_37cdbf0abde7)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step3"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_029",
+      "value": 5.0,
+      "unit": "episodes",
+      "label": "Failures 'no_path_static', mir_mir100, peak traffic, conservative geometry (sb_37cdbf0abde7)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step3"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_030",
+      "value": 0.875,
+      "unit": "ratio",
+      "label": "Success rate, mir_mir100, quiet traffic, optimistic geometry (sb_605a9842767b)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step4"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_031",
+      "value": 0.7389,
+      "unit": "ratio",
+      "label": "Success rate 95% CI low, mir_mir100, quiet traffic, optimistic geometry (sb_605a9842767b)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step4"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_032",
+      "value": 0.9454,
+      "unit": "ratio",
+      "label": "Success rate 95% CI high, mir_mir100, quiet traffic, optimistic geometry (sb_605a9842767b)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step4"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_033",
+      "value": 40.0,
+      "unit": "episodes",
+      "label": "Episodes, mir_mir100, quiet traffic, optimistic geometry (sb_605a9842767b)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step4"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_034",
+      "value": 144.7,
+      "unit": "s",
+      "label": "Median mission time, mir_mir100, quiet traffic, optimistic geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step4"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_035",
+      "value": 0.0275,
+      "unit": "m",
+      "label": "Median smallest robot-to-obstacle gap, mir_mir100, quiet traffic, optimistic geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step4"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_036",
+      "value": 0.75,
+      "unit": "per mission",
+      "label": "Near-misses per mission, mir_mir100, quiet traffic, optimistic geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step4"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_037",
+      "value": 1.225,
+      "unit": "per mission",
+      "label": "Safety stops per mission, mir_mir100, quiet traffic, optimistic geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step4"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_038",
+      "value": 5.0,
+      "unit": "episodes",
+      "label": "Failures 'no_path_static', mir_mir100, quiet traffic, optimistic geometry (sb_605a9842767b)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step4"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_039",
+      "value": 0.875,
+      "unit": "ratio",
+      "label": "Success rate, mir_mir100, quiet traffic, nominal geometry (sb_66564fd490c1)",
       "origin": {
         "type": "investigation",
         "ref": "inv_fc10c27957#step5"
       }
     },
     {
-      "fact_id": "f_ifc10c_026",
-      "value": 0.3938,
+      "fact_id": "f_ifc10c_040",
+      "value": 0.7389,
+      "unit": "ratio",
+      "label": "Success rate 95% CI low, mir_mir100, quiet traffic, nominal geometry (sb_66564fd490c1)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step5"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_041",
+      "value": 0.9454,
+      "unit": "ratio",
+      "label": "Success rate 95% CI high, mir_mir100, quiet traffic, nominal geometry (sb_66564fd490c1)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step5"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_042",
+      "value": 40.0,
+      "unit": "episodes",
+      "label": "Episodes, mir_mir100, quiet traffic, nominal geometry (sb_66564fd490c1)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step5"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_043",
+      "value": 144.7,
+      "unit": "s",
+      "label": "Median mission time, mir_mir100, quiet traffic, nominal geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step5"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_044",
+      "value": 0.0275,
       "unit": "m",
-      "label": "Distance from (3.11, 1.66) to the edge of object PALLET1 (pallet)",
+      "label": "Median smallest robot-to-obstacle gap, mir_mir100, quiet traffic, nominal geometry",
       "origin": {
         "type": "investigation",
-        "ref": "inv_fc10c27957#step6"
+        "ref": "inv_fc10c27957#step5"
       }
     },
     {
-      "fact_id": "f_ifc10c_027",
-      "value": 0.547,
-      "unit": "m",
-      "label": "Distance from (3.11, 1.66) to the edge of object SHELF_A (shelf)",
+      "fact_id": "f_ifc10c_045",
+      "value": 0.75,
+      "unit": "per mission",
+      "label": "Near-misses per mission, mir_mir100, quiet traffic, nominal geometry",
       "origin": {
         "type": "investigation",
-        "ref": "inv_fc10c27957#step6"
+        "ref": "inv_fc10c27957#step5"
       }
     },
     {
-      "fact_id": "f_ifc10c_028",
-      "value": 1.0296,
-      "unit": "m",
-      "label": "Distance from (1.11, 1.71) to nearest obstacle (nominal grid)",
+      "fact_id": "f_ifc10c_046",
+      "value": 1.225,
+      "unit": "per mission",
+      "label": "Safety stops per mission, mir_mir100, quiet traffic, nominal geometry",
       "origin": {
         "type": "investigation",
-        "ref": "inv_fc10c27957#step7"
+        "ref": "inv_fc10c27957#step5"
       }
     },
     {
-      "fact_id": "f_ifc10c_029",
-      "value": 2.0591,
-      "unit": "m",
-      "label": "Approximate free gap through (1.11, 1.71) (2 x nearest-obstacle distance, nominal grid)",
-      "origin": {
-        "type": "investigation",
-        "ref": "inv_fc10c27957#step7"
-      }
-    },
-    {
-      "fact_id": "f_ifc10c_030",
-      "value": 0.58,
-      "unit": "m",
-      "label": "Footprint width, mir_mir100",
-      "origin": {
-        "type": "investigation",
-        "ref": "inv_fc10c27957#step7"
-      }
-    },
-    {
-      "fact_id": "f_ifc10c_031",
-      "value": 1.4791,
-      "unit": "m",
-      "label": "Approximate gap minus robot width at (1.11, 1.71)",
-      "origin": {
-        "type": "investigation",
-        "ref": "inv_fc10c27957#step7"
-      }
-    },
-    {
-      "fact_id": "f_ifc10c_032",
-      "value": 5.0,
-      "unit": "events",
-      "label": "'fail' events in sb_03d73fe6bf9a",
-      "origin": {
-        "type": "investigation",
-        "ref": "inv_fc10c27957#step8"
-      }
-    },
-    {
-      "fact_id": "f_ifc10c_033",
+      "fact_id": "f_ifc10c_047",
       "value": 5.0,
       "unit": "episodes",
-      "label": "Episodes with a 'fail' event, sb_03d73fe6bf9a",
+      "label": "Failures 'no_path_static', mir_mir100, quiet traffic, nominal geometry (sb_66564fd490c1)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step5"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_048",
+      "value": 0.875,
+      "unit": "ratio",
+      "label": "Success rate, mir_mir100, normal traffic, conservative geometry (sb_6d6729f9de89)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step6"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_049",
+      "value": 0.7389,
+      "unit": "ratio",
+      "label": "Success rate 95% CI low, mir_mir100, normal traffic, conservative geometry (sb_6d6729f9de89)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step6"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_050",
+      "value": 0.9454,
+      "unit": "ratio",
+      "label": "Success rate 95% CI high, mir_mir100, normal traffic, conservative geometry (sb_6d6729f9de89)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step6"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_051",
+      "value": 40.0,
+      "unit": "episodes",
+      "label": "Episodes, mir_mir100, normal traffic, conservative geometry (sb_6d6729f9de89)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step6"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_052",
+      "value": 151.9,
+      "unit": "s",
+      "label": "Median mission time, mir_mir100, normal traffic, conservative geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step6"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_053",
+      "value": 0.0275,
+      "unit": "m",
+      "label": "Median smallest robot-to-obstacle gap, mir_mir100, normal traffic, conservative geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step6"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_054",
+      "value": 1.75,
+      "unit": "per mission",
+      "label": "Near-misses per mission, mir_mir100, normal traffic, conservative geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step6"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_055",
+      "value": 2.925,
+      "unit": "per mission",
+      "label": "Safety stops per mission, mir_mir100, normal traffic, conservative geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step6"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_056",
+      "value": 5.0,
+      "unit": "episodes",
+      "label": "Failures 'no_path_static', mir_mir100, normal traffic, conservative geometry (sb_6d6729f9de89)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step6"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_057",
+      "value": 0.875,
+      "unit": "ratio",
+      "label": "Success rate, mir_mir100, normal traffic, nominal geometry (sb_849435d8d9f3)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step7"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_058",
+      "value": 0.7389,
+      "unit": "ratio",
+      "label": "Success rate 95% CI low, mir_mir100, normal traffic, nominal geometry (sb_849435d8d9f3)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step7"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_059",
+      "value": 0.9454,
+      "unit": "ratio",
+      "label": "Success rate 95% CI high, mir_mir100, normal traffic, nominal geometry (sb_849435d8d9f3)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step7"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_060",
+      "value": 40.0,
+      "unit": "episodes",
+      "label": "Episodes, mir_mir100, normal traffic, nominal geometry (sb_849435d8d9f3)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step7"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_061",
+      "value": 151.9,
+      "unit": "s",
+      "label": "Median mission time, mir_mir100, normal traffic, nominal geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step7"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_062",
+      "value": 0.0275,
+      "unit": "m",
+      "label": "Median smallest robot-to-obstacle gap, mir_mir100, normal traffic, nominal geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step7"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_063",
+      "value": 1.75,
+      "unit": "per mission",
+      "label": "Near-misses per mission, mir_mir100, normal traffic, nominal geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step7"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_064",
+      "value": 2.925,
+      "unit": "per mission",
+      "label": "Safety stops per mission, mir_mir100, normal traffic, nominal geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step7"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_065",
+      "value": 5.0,
+      "unit": "episodes",
+      "label": "Failures 'no_path_static', mir_mir100, normal traffic, nominal geometry (sb_849435d8d9f3)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step7"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_066",
+      "value": 0.875,
+      "unit": "ratio",
+      "label": "Success rate, mir_mir100, normal traffic, optimistic geometry (sb_c9e6d358e6f0)",
       "origin": {
         "type": "investigation",
         "ref": "inv_fc10c27957#step8"
       }
     },
     {
-      "fact_id": "f_ifc10c_034",
-      "value": 0.125,
+      "fact_id": "f_ifc10c_067",
+      "value": 0.7389,
+      "unit": "ratio",
+      "label": "Success rate 95% CI low, mir_mir100, normal traffic, optimistic geometry (sb_c9e6d358e6f0)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step8"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_068",
+      "value": 0.9454,
+      "unit": "ratio",
+      "label": "Success rate 95% CI high, mir_mir100, normal traffic, optimistic geometry (sb_c9e6d358e6f0)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step8"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_069",
+      "value": 40.0,
+      "unit": "episodes",
+      "label": "Episodes, mir_mir100, normal traffic, optimistic geometry (sb_c9e6d358e6f0)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step8"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_070",
+      "value": 151.9,
+      "unit": "s",
+      "label": "Median mission time, mir_mir100, normal traffic, optimistic geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step8"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_071",
+      "value": 0.0275,
+      "unit": "m",
+      "label": "Median smallest robot-to-obstacle gap, mir_mir100, normal traffic, optimistic geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step8"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_072",
+      "value": 1.75,
       "unit": "per mission",
-      "label": "'fail' events per mission, sb_03d73fe6bf9a",
+      "label": "Near-misses per mission, mir_mir100, normal traffic, optimistic geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step8"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_073",
+      "value": 2.925,
+      "unit": "per mission",
+      "label": "Safety stops per mission, mir_mir100, normal traffic, optimistic geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_fc10c27957#step8"
+      }
+    },
+    {
+      "fact_id": "f_ifc10c_074",
+      "value": 5.0,
+      "unit": "episodes",
+      "label": "Failures 'no_path_static', mir_mir100, normal traffic, optimistic geometry (sb_c9e6d358e6f0)",
       "origin": {
         "type": "investigation",
         "ref": "inv_fc10c27957#step8"

@@ -12,7 +12,8 @@
       "Keenon Robotics DINERBOT T8: min_aisle_width_vendor_m",
       "Keenon Robotics DINERBOT T8: payload_kg",
       "Keenon Robotics DINERBOT T8: runtime_h",
-      "market check: Keenon Dinerbot T8 threshold limit door sill height specification"
+      "market check: Keenon Dinerbot T8 threshold climbing capability mm specification",
+      "market check: Keenon Dinerbot T9 threshold climbing capability mm specification"
     ],
     "quotes": [
       "Dimensions(WxDxH) 38.4x46.8x111.1cm",
@@ -25,6 +26,71 @@
   },
   {
     "id": "c_02",
+    "url": "https://www.bearrobotics.ai/servi",
+    "title": "https://www.bearrobotics.ai/servi",
+    "retrieved_at": "2026-10-27T13:51:40Z",
+    "used_for": [
+      "Bear Robotics Servi: footprint_polygon_m",
+      "Bear Robotics Servi: height_m",
+      "Bear Robotics Servi: max_speed_mps",
+      "Bear Robotics Servi: payload_kg",
+      "Bear Robotics Servi: runtime_h"
+    ],
+    "quotes": [
+      "17.5 \u00d7 16.9 \u00d7 41.2 in (44.5 \u00d7 43 \u00d7 104.6 cm)",
+      "Drive speed 0.1~1.2 m/s",
+      "22 lb (10kg) per tray, total 66 lb (30kg)",
+      "Battery life 10-12 hrs"
+    ]
+  },
+  {
+    "id": "c_03",
+    "url": "https://www.bearrobotics.ai/faq",
+    "title": "https://www.bearrobotics.ai/faq",
+    "retrieved_at": "2026-10-27T13:49:53Z",
+    "used_for": [
+      "Bear Robotics Servi: price"
+    ],
+    "quotes": [
+      "Costs can vary depending on certain conditions."
+    ]
+  },
+  {
+    "id": "c_04",
+    "url": "https://www.keenon.com/en/product/W3",
+    "title": "https://www.keenon.com/en/product/W3",
+    "retrieved_at": "2026-10-27T17:39:25Z",
+    "used_for": [
+      "Keenon Robotics W3: footprint_polygon_m",
+      "Keenon Robotics W3: height_m",
+      "Keenon Robotics W3: max_slope_deg",
+      "Keenon Robotics W3: max_speed_mps",
+      "Keenon Robotics W3: min_aisle_width_vendor_m",
+      "Keenon Robotics W3: payload_kg"
+    ],
+    "quotes": [
+      "Dimensions(WxDxH) 45.9 x 54.9 x 108.1 cm(18.07\" x 21.61\" x 42.56\")",
+      "Slope Angle 7\u00b0",
+      "Max. Moving Speed 0.8m/s (2.63ft/s)",
+      "Minimum Passage Width 70cm(27.56\")",
+      "Total Load Capacity 20kg (44lbs)"
+    ]
+  },
+  {
+    "id": "c_05",
+    "url": "https://www.robotlab.com/store/keenon-w3",
+    "title": "Keenon W3 Delivery Robot \u2014 Price, Specs & Demo \u00b7 RobotLAB",
+    "retrieved_at": "2026-10-27T17:39:25Z",
+    "used_for": [
+      "Keenon Robotics W3: runtime_h",
+      "market check: Keenon W3 threshold climbing capability mm specification"
+    ],
+    "quotes": [
+      "Battery Runtime Up to 12 hours"
+    ]
+  },
+  {
+    "id": "c_06",
     "url": "https://www.keenon.com/en/product/T9",
     "title": "https://www.keenon.com/en/product/T9",
     "retrieved_at": "2026-10-27T13:51:43Z",
@@ -47,96 +113,32 @@
     ]
   },
   {
-    "id": "c_03",
-    "url": "https://www.bearrobotics.ai/servi",
-    "title": "https://www.bearrobotics.ai/servi",
-    "retrieved_at": "2026-10-27T13:51:40Z",
-    "used_for": [
-      "Bear Robotics Servi: footprint_polygon_m",
-      "Bear Robotics Servi: height_m",
-      "Bear Robotics Servi: max_speed_mps",
-      "Bear Robotics Servi: payload_kg",
-      "Bear Robotics Servi: runtime_h"
-    ],
-    "quotes": [
-      "17.5 \u00d7 16.9 \u00d7 41.2 in (44.5 \u00d7 43 \u00d7 104.6 cm)",
-      "Drive speed 0.1~1.2 m/s",
-      "22 lb (10kg) per tray, total 66 lb (30kg)",
-      "Battery life 10-12 hrs"
-    ]
-  },
-  {
-    "id": "c_04",
-    "url": "https://www.bearrobotics.ai/faq",
-    "title": "https://www.bearrobotics.ai/faq",
-    "retrieved_at": "2026-10-27T13:49:53Z",
-    "used_for": [
-      "Bear Robotics Servi: price"
-    ],
-    "quotes": [
-      "Costs can vary depending on certain conditions."
-    ]
-  },
-  {
-    "id": "c_05",
-    "url": "https://www.keenon.com/en/product/W3",
-    "title": "https://www.keenon.com/en/product/W3",
-    "retrieved_at": "2026-10-27T17:39:25Z",
-    "used_for": [
-      "Keenon Robotics W3: footprint_polygon_m",
-      "Keenon Robotics W3: height_m",
-      "Keenon Robotics W3: max_slope_deg",
-      "Keenon Robotics W3: max_speed_mps",
-      "Keenon Robotics W3: min_aisle_width_vendor_m",
-      "Keenon Robotics W3: payload_kg"
-    ],
-    "quotes": [
-      "Dimensions(WxDxH) 45.9 x 54.9 x 108.1 cm(18.07\" x 21.61\" x 42.56\")",
-      "Slope Angle 7\u00b0",
-      "Max. Moving Speed 0.8m/s (2.63ft/s)",
-      "Minimum Passage Width 70cm(27.56\")",
-      "Total Load Capacity 20kg (44lbs)"
-    ]
-  },
-  {
-    "id": "c_06",
-    "url": "https://www.robotlab.com/store/keenon-w3",
-    "title": "https://www.robotlab.com/store/keenon-w3",
-    "retrieved_at": "2026-10-27T17:39:25Z",
-    "used_for": [
-      "Keenon Robotics W3: runtime_h"
-    ],
-    "quotes": [
-      "Battery Runtime Up to 12 hours"
-    ]
-  },
-  {
     "id": "c_07",
-    "url": "https://antonrobots.com/keenon-dinerbot-t8-review",
-    "title": "KEENON DINERBOT T8 Review (2026): Specs, Pros & Cons",
-    "retrieved_at": "2026-10-27T19:54:01+00:00",
+    "url": "https://sica-robotics.nl/featured_item/keenon-dinerbot-t8",
+    "title": "Keenon Dinerbot T8 - Keenon Robots",
+    "retrieved_at": "2026-10-28T05:11:07+00:00",
     "used_for": [
-      "market check: Keenon Dinerbot T8 threshold limit door sill height specification"
+      "market check: Keenon Dinerbot T8 threshold climbing capability mm specification"
     ],
     "quotes": []
   },
   {
     "id": "c_08",
-    "url": "https://www.dentrealstore.com/products/dinerbot-t8-service-robot",
-    "title": "Dinerbot T8 \u2013 Service Robot | Keenon \u2013 DentrealStore",
-    "retrieved_at": "2026-10-27T19:54:01+00:00",
+    "url": "https://antonrobots.com/keenon-dinerbot-t8-review",
+    "title": "KEENON DINERBOT T8 Review (2026): Specs, Pros & Cons",
+    "retrieved_at": "2026-10-28T05:11:07+00:00",
     "used_for": [
-      "market check: Keenon Dinerbot T8 threshold limit door sill height specification"
+      "market check: Keenon Dinerbot T8 threshold climbing capability mm specification"
     ],
     "quotes": []
   },
   {
     "id": "c_09",
-    "url": "https://somebots.com/en/robots/trays-t8/keenon-T8",
-    "title": "Keenon T8 compact tray robot | SomeBots",
-    "retrieved_at": "2026-10-27T19:54:01+00:00",
+    "url": "https://www.robotlab.com/store/keenon-dinerbot-t8",
+    "title": "Keenon T8 Delivery Robot \u2014 Specs & Alternatives \u00b7 RobotLAB",
+    "retrieved_at": "2026-10-28T05:11:07+00:00",
     "used_for": [
-      "market check: Keenon Dinerbot T8 threshold limit door sill height specification"
+      "market check: Keenon Dinerbot T8 threshold climbing capability mm specification"
     ],
     "quotes": []
   },
@@ -144,9 +146,9 @@
     "id": "c_10",
     "url": "https://okmbot.de/en/products/keenon-dinerbot-t8",
     "title": "KEENON Dinerbot T8 \u2013 service robots in OKMbot lease or buy",
-    "retrieved_at": "2026-10-27T19:54:01+00:00",
+    "retrieved_at": "2026-10-28T05:11:07+00:00",
     "used_for": [
-      "market check: Keenon Dinerbot T8 threshold limit door sill height specification"
+      "market check: Keenon Dinerbot T8 threshold climbing capability mm specification"
     ],
     "quotes": []
   },
@@ -154,9 +156,9 @@
     "id": "c_11",
     "url": "https://antonrobots.com/bear-robotics-servi-plus-review",
     "title": "Bear Robotics Servi Plus Review 2026: Price & Specs",
-    "retrieved_at": "2026-10-27T19:54:05+00:00",
+    "retrieved_at": "2026-10-28T05:11:12+00:00",
     "used_for": [
-      "market check: Bear Robotics Servi threshold limit door sill height specification"
+      "market check: Bear Robotics Servi threshold climbing capability mm specification"
     ],
     "quotes": []
   },
@@ -164,39 +166,39 @@
     "id": "c_12",
     "url": "https://www.bearrobotics.ai/servi-plus",
     "title": "Servi Plus: Bear Robotics' Flagship AI Service Robot for Hospitality and Beyond \u2014 Bear Robotics",
-    "retrieved_at": "2026-10-27T19:54:05+00:00",
+    "retrieved_at": "2026-10-28T05:11:12+00:00",
     "used_for": [
-      "market check: Bear Robotics Servi threshold limit door sill height specification"
+      "market check: Bear Robotics Servi threshold climbing capability mm specification"
     ],
     "quotes": []
   },
   {
     "id": "c_13",
-    "url": "https://leadiq.com/c/bear-robotics-inc/5aaffbce560000d2000adbb4",
-    "title": "Bear Robotics Company Overview, Contact Details & Competitors | LeadIQ",
-    "retrieved_at": "2026-10-27T19:54:05+00:00",
+    "url": "https://www.bearrobotics.ai/blog/bear-robotics-introduces-servi-q",
+    "title": "Servi Q: The Compact Service Robot That Goes Where Others Can\u2019t \u2014 Bear Robotics",
+    "retrieved_at": "2026-10-28T05:11:12+00:00",
     "used_for": [
-      "market check: Bear Robotics Servi threshold limit door sill height specification"
+      "market check: Bear Robotics Servi threshold climbing capability mm specification"
     ],
     "quotes": []
   },
   {
     "id": "c_14",
-    "url": "https://www.robotlab.com/store/servi-delivery-robot",
-    "title": "Bear Robotics Servi \u2014 Price, Specs & Demo \u00b7 RobotLAB",
-    "retrieved_at": "2026-10-27T19:54:05+00:00",
+    "url": "https://www.robotlab.com/manufacturers/bear-robotics",
+    "title": "Bear Robotics Robots \u2014 Prices, Specs & Service \u00b7 RobotLAB",
+    "retrieved_at": "2026-10-28T05:11:12+00:00",
     "used_for": [
-      "market check: Bear Robotics Servi threshold limit door sill height specification"
+      "market check: Bear Robotics Servi threshold climbing capability mm specification"
     ],
     "quotes": []
   },
   {
     "id": "c_15",
-    "url": "https://ologicinc.com/portfolio/servi-bear-robotics",
-    "title": "Servi and Servi Mini by Bear Robotics | OLogic, Inc.",
-    "retrieved_at": "2026-10-27T19:54:05+00:00",
+    "url": "https://static1.squarespace.com/static/652cbb3fb1f91809d4610dc0/t/6683574fd99cec6481bda2c9/1719883618543/Servi+Plus_User+Manual_EN.pdf",
+    "title": "User Manual",
+    "retrieved_at": "2026-10-28T05:11:12+00:00",
     "used_for": [
-      "market check: Bear Robotics Servi threshold limit door sill height specification"
+      "market check: Bear Robotics Servi threshold climbing capability mm specification"
     ],
     "quotes": []
   },
@@ -204,19 +206,19 @@
     "id": "c_16",
     "url": "https://antonrobots.com/keenon-butlerbot-w3-review",
     "title": "KEENON BUTLERBOT W3 Review (2026): Specs, Price & Uses",
-    "retrieved_at": "2026-10-27T19:54:08+00:00",
+    "retrieved_at": "2026-10-28T05:11:17+00:00",
     "used_for": [
-      "market check: Keenon W3 threshold limit door sill height specification"
+      "market check: Keenon W3 threshold climbing capability mm specification"
     ],
     "quotes": []
   },
   {
     "id": "c_17",
-    "url": "https://www.pentagone-robotics.com/en/robots/keenon-w3",
-    "title": "Keenon W3 : restaurant delivery robot | Pentagone Robotics",
-    "retrieved_at": "2026-10-27T19:54:08+00:00",
+    "url": "https://somebots.com/en/robots/room-service/keenon-W3",
+    "title": "Keenon Butlerbot W3 room service robot | SomeBots",
+    "retrieved_at": "2026-10-28T05:11:17+00:00",
     "used_for": [
-      "market check: Keenon W3 threshold limit door sill height specification"
+      "market check: Keenon W3 threshold climbing capability mm specification"
     ],
     "quotes": []
   },
@@ -224,79 +226,59 @@
     "id": "c_18",
     "url": "https://okmbot.de/en/products/keenon-butlerbot-w3-silber",
     "title": "KEENON Butlerbot W3 \u2013 Contactless delivery robots OKMbot",
-    "retrieved_at": "2026-10-27T19:54:08+00:00",
+    "retrieved_at": "2026-10-28T05:11:17+00:00",
     "used_for": [
-      "market check: Keenon W3 threshold limit door sill height specification"
+      "market check: Keenon W3 threshold climbing capability mm specification"
     ],
     "quotes": []
   },
   {
     "id": "c_19",
-    "url": "https://www.dentrealstore.com/products/butlerbot-w3-service-robot",
-    "title": "Butlerbot W3 \u2013 Service Robot | Keenon \u2013 DentrealStore",
-    "retrieved_at": "2026-10-27T19:54:08+00:00",
+    "url": "https://www.youtube.com/watch?v=5DbdbLRaYbA",
+    "title": "Cross-floor Delivery Robot W3 Product Introduction",
+    "retrieved_at": "2026-10-28T05:11:17+00:00",
     "used_for": [
-      "market check: Keenon W3 threshold limit door sill height specification"
+      "market check: Keenon W3 threshold climbing capability mm specification"
     ],
     "quotes": []
   },
   {
     "id": "c_20",
-    "url": "https://somebots.com/en/robots/room-service/keenon-W3",
-    "title": "Keenon Butlerbot W3 room service robot | SomeBots",
-    "retrieved_at": "2026-10-27T19:54:08+00:00",
+    "url": "https://okmbot.de/en/products/keenon-dinerbot-t9",
+    "title": "KEENON Dinerbot T9 \u2013 delivery to rent a robot for OKMbot or buy",
+    "retrieved_at": "2026-10-28T05:11:22+00:00",
     "used_for": [
-      "market check: Keenon W3 threshold limit door sill height specification"
+      "market check: Keenon Dinerbot T9 threshold climbing capability mm specification"
     ],
     "quotes": []
   },
   {
     "id": "c_21",
-    "url": "https://www.robotsinternational.com/Keenon-DINERBOT-T9.htm",
-    "title": "Keenon DINERBOT T9 High-load Capacity Restaurant Robot with 5 Year Warranty",
-    "retrieved_at": "2026-10-27T19:54:11+00:00",
+    "url": "https://www.youtube.com/watch?v=5TP6MokvFnQ",
+    "title": "DINERBOT T9\uff5cDeliveries with High Load Capacity",
+    "retrieved_at": "2026-10-28T05:11:22+00:00",
     "used_for": [
-      "market check: Keenon Dinerbot T9 threshold limit door sill height specification"
+      "market check: Keenon Dinerbot T9 threshold climbing capability mm specification"
     ],
     "quotes": []
   },
   {
     "id": "c_22",
-    "url": "https://okmbot.de/en/products/keenon-dinerbot-t9",
-    "title": "KEENON Dinerbot T9 \u2013 delivery to rent a robot for OKMbot or buy",
-    "retrieved_at": "2026-10-27T19:54:11+00:00",
+    "url": "https://www.knoxlabs.com/products/keenon-dinerbot-t9-delivery-robot",
+    "title": "Keenon DinerBot T9 Delivery Robot | Knoxlabs",
+    "retrieved_at": "2026-10-28T05:11:22+00:00",
     "used_for": [
-      "market check: Keenon Dinerbot T9 threshold limit door sill height specification"
+      "market check: Keenon Dinerbot T9 threshold climbing capability mm specification"
     ],
     "quotes": []
   },
   {
     "id": "c_23",
-    "url": "https://fasta.technology/index.php/product/keenon-dinerbot-t9",
-    "title": "KEENON DINERBOT T9 - fasta.technology",
-    "retrieved_at": "2026-10-27T19:54:11+00:00",
+    "url": "https://www.grabarobot.com/blog/keenon-robotics-price-guide-2026",
+    "title": "KEENON Robot Price Guide 2026: The Same T10 Is Listed at $13,500 and $20,580 | GrabaRobot",
+    "retrieved_at": "2026-10-28T05:11:22+00:00",
     "used_for": [
-      "market check: Keenon Dinerbot T9 threshold limit door sill height specification"
-    ],
-    "quotes": []
-  },
-  {
-    "id": "c_24",
-    "url": "https://www.youtube.com/watch?v=5TP6MokvFnQ",
-    "title": "DINERBOT T9\uff5cDeliveries with High Load Capacity",
-    "retrieved_at": "2026-10-27T19:54:11+00:00",
-    "used_for": [
-      "market check: Keenon Dinerbot T9 threshold limit door sill height specification"
-    ],
-    "quotes": []
-  },
-  {
-    "id": "c_25",
-    "url": "https://antonrobots.com/keenon-dinerbot-t5-review",
-    "title": "KEENON DINERBOT T5 Review (2026): Specs & Verdict",
-    "retrieved_at": "2026-10-27T19:54:11+00:00",
-    "used_for": [
-      "market check: Keenon Dinerbot T9 threshold limit door sill height specification"
+      "market check: Keenon Dinerbot T9 threshold climbing capability mm specification"
     ],
     "quotes": []
   }
