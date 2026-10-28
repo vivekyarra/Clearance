@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clearance"
+dynamic = ["version"]
+description = "Clearance: know if a robot fits before you buy it. Phone scan -> measured twin -> simulated robot trials -> cited Clearance Report."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "THIRD_PARTY_LICENSES.md"]
+requires-python = ">=3.11,<3.12"
+authors = [{ name = "Clearance contributors" }]
+classifiers = [
+  "Programming Language :: Python :: 3.11",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+# Direct dependencies, pinned to the development environment (full lock: requirements.txt).
+dependencies = [
+  "numpy==2.4.6",
+  "scipy==1.17.1",
+  "numba==0.68.0",
+  "shapely==2.2.0",
+  "opencv-python-headless==5.0.0.93",
+  "pillow==13.0.0",
+  "fastapi==0.162.0",
+  "uvicorn==0.54.0",
+  "python-multipart==0.0.32",
+  "websockets==17.3",
+  "SQLAlchemy==2.1.6",
+  "pydantic==2.14.1",
+  "httpx==0.28.1",
+  "openai==3.39.0",
+  "tavily-python==0.8.5",
+  "PyYAML==6.0.3",
+  "jsonschema==4.26.0",
+  "qrcode==8.2",
+  "fpdf2==2.8.9",
+  "pypdf==6.21.3",
+  "python-dotenv==1.2.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1"]
+cloud = ["boto3==1.43.119", "psycopg[binary]==3.3.6"]
+gpu = [
+  "torch==2.14.1",
+  "torchvision==0.29.1",
+  "transformers==5.21.0",
+  "huggingface-hub==2.3.0",
+  "open3d==0.20.0",
+  "gsplat==1.5.3",
+  "usd-core==26.11",
+  "PySocialForce==1.1.2",
+]
+
+[project.urls]
+Repository = "https://github.com/vivekyarra/Clearance"
+
+[tool.setuptools.dynamic]
+version = { file = "VERSION" }
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["clearance_core*", "agents*", "jobs*", "services*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra"

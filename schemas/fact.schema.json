@@ -1,0 +1,72 @@
+{
+  "$defs": {
+    "FactOrigin": {
+      "properties": {
+        "ref": {
+          "title": "Ref",
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "sim_batch",
+            "measurement",
+            "source_url",
+            "user_input",
+            "formula",
+            "investigation"
+          ],
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "ref"
+      ],
+      "title": "FactOrigin",
+      "type": "object"
+    }
+  },
+  "$id": "clearance/fact",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "fact_id": {
+      "title": "Fact Id",
+      "type": "string"
+    },
+    "label": {
+      "title": "Label",
+      "type": "string"
+    },
+    "origin": {
+      "$ref": "#/$defs/FactOrigin"
+    },
+    "unit": {
+      "default": "",
+      "title": "Unit",
+      "type": "string"
+    },
+    "value": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Value"
+    }
+  },
+  "required": [
+    "fact_id",
+    "value",
+    "label",
+    "origin"
+  ],
+  "title": "Fact",
+  "type": "object"
+}
