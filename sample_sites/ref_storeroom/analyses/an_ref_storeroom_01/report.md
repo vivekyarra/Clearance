@@ -4,9 +4,7 @@ Every number below links to where it came from: an on-site measurement, a cited 
 
 ## Summary
 
-The clearance check evaluated the robots against the site scan (median absolute error 0.0 cm [f_002], p90 0.0 cm [f_003]) and simulation‑based success‑rate thresholds. OTTO Motors OTTO 100 is Cleared [f_281] and Pudu Robotics T300 is Cleared [f_097] because each meets every rule as‑is. MiR MiR100 is Not cleared [f_373] due to a simulation‑based success rate of 88% [f_375] at normal traffic, below the required 90% [f_376]. MiR MiR250 is Not cleared [f_190] for the same reason, with a success rate of 88% [f_192] versus the 90% [f_193] threshold.
-
-The most useful next step is to confirm the narrowest gap dimensions on site and, if they cannot be widened, select a robot that meets the required threshold.
+OTTO Motors OTTO 100 is Cleared [f_186] and Pudu Robotics T300 is Cleared [f_097] as each meets every rule as‑is. MiR MiR100 is Not cleared [f_373] because its success rate is 88% [f_375] at normal traffic, below the required 90% [f_376]. MiR MiR250 is Not cleared [f_279] for the same reason, with a success rate of 88% [f_281] at normal traffic against the 90% [f_282] threshold. The most useful next step for the site owner is to assess whether the MiR models can reach the required success threshold, for example by adjusting traffic conditions or site layout, and to confirm the cleared robots’ performance on site.
 
 ## 1. Site evidence
 
@@ -19,7 +17,7 @@ The most useful next step is to confirm the narrowest gap dimensions on site and
 
 Verdicts are decided by code from fixed rules; the text only explains them.
 
-### OTTO Motors OTTO 100: Cleared [f_281]
+### OTTO Motors OTTO 100: Cleared [f_186]
 
 - Main reason: meets every rule as-is.
 
@@ -27,13 +25,13 @@ Rule checks as the site is today:
 
 | Rule check | Result |
 |---|---|
-| every task leg feasible on the conservative geometry bound | met (value: 6 [f_283]/6 legs [f_284]) |
+| every task leg feasible on the conservative geometry bound | met (value: 6 [f_188]/6 legs [f_189]) |
 | no unresolved flagged_manual thresholds on the route | met (value: none) |
-| simulated success at normal traffic (conservative bound) >= 0.90 [f_285] | met (value: 98% [f_286]) |
+| simulated success at normal traffic (conservative bound) >= 0.90 [f_190] | met (value: 98% [f_191]) |
 
 **Why this verdict**
 
-The OTTO Motors OTTO 100 received a Cleared [f_281] verdict because it meets all as‑is rule checks: 6 [f_283] of 6 [f_284] task legs are feasible on the conservative geometry bound, no unresolved flagged‑manual thresholds exist on the route, and the simulated success rate at normal traffic under conservative geometry is 98% [f_286], exceeding the 90% [f_287] threshold. The narrowest gap on the route is 0.78 m [f_214] while the robot requires 0.55 m [f_215], leaving margin. Under normal traffic the median mission time is 127 s [f_259] with 2.15 [f_260] near‑misses per mission. The outcome would change if the success rate fell below 90% [f_287], a task leg became infeasible, or flagged‑manual thresholds appeared.
+OTTO Motors OTTO 100 received Cleared [f_186] because it meets all rule checks: all 6 [f_188] of 6 [f_189] task legs are feasible on the conservative geometry bound; no unresolved flagged‑manual thresholds exist on the route; and the simulated success rate at normal traffic with conservative geometry is 98% [f_191], exceeding the 90% [f_192] threshold. The verdict would change if the success rate fell below 90% [f_192], a task leg became infeasible, or a flagged‑manual threshold appeared.
 
 ### Pudu Robotics T300: Cleared [f_097]
 
@@ -49,7 +47,7 @@ Rule checks as the site is today:
 
 **Why this verdict**
 
-The Pudu Robotics T300 received Cleared [f_097] because all rule checks passed: 6 [f_099] of 6 [f_100] task legs are feasible on the conservative geometry bound, no unresolved flagged_manual thresholds exist, and the simulated success rate at normal traffic with conservative geometry is 98% [f_102], exceeding the 0.9 [f_101] threshold. The verdict would change if the success rate fell below 90% [f_103], a task leg became infeasible, or a flagged manual threshold appeared.
+The Pudu Robotics T300 received Cleared [f_097] because it meets every rule as-is: all 6 [f_099] task legs are feasible on the conservative geometry bound out of 6 [f_100] legs, no unresolved flagged_manual thresholds exist on the route, and the simulated success rate at normal traffic with conservative geometry is 98% [f_102], exceeding the 90% [f_103] threshold. The narrowest gap on the route is 0.78 m [f_030] while the robot requires 0.50 m [f_031], providing adequate clearance. Under normal traffic, 40 [f_071] simulated episodes yielded a median mission time of 115 s [f_074], 1.77 [f_075] near-misses per mission, and 1 [f_078] collision, with a 95% confidence interval of 87% [f_072] to 100% [f_073]. The verdict would change if the success rate fell below 90% [f_103], gaps narrowed below 0.50 m [f_031], or task legs became infeasible.
 
 ### MiR MiR100: Not cleared [f_373]
 
@@ -65,27 +63,34 @@ Rule checks as the site is today:
 
 **Why this verdict**
 
-MiR MiR100 received Not cleared [f_373] because the simulated success rate at normal traffic under conservative geometry was 88% [f_380], below the 90% [f_381] threshold required by the rule check simulated success at normal traffic (conservative bound) >= 0.9 [f_379]. The other rule checks passed: all 6 [f_377] of 6 [f_378] task legs are feasible on the conservative geometry, and no unresolved flagged manual thresholds exist. The narrowest gap on route is 0.78 m [f_304] while the robot needs 0.58 m [f_305], so geometry is not limiting. However, simulation over 40 [f_346] episodes showed 1.75 [f_350] near‑misses per mission and 5 [f_353] episodes with no static path, contributing to the shortfall. The verdict would change if the success rate reaches at least 90% [f_381].
+MiR MiR100 received Not cleared [f_373] because the simulated success rate at normal traffic under conservative geometry was 88% [f_380], below the required 90% [f_381] threshold; the other rule checks passed: all 6 [f_377] of 6 [f_378] task legs were feasible on the conservative geometry bound, and no unresolved flagged_manual thresholds existed. The limiting factor is the success rate under normal traffic, with 1.75 [f_350] near-misses per mission and 5 [f_353] episodes failing static pathfinding in 40 [f_346] simulated episodes. The outcome would change if the success rate reached 90% [f_381] — for example, under quiet traffic the rate remains 88% [f_330] across geometries, while peak traffic drops to 82% [f_356]; layout changes or geometry gains could raise the rate above the threshold.
 
-### MiR MiR250: Not cleared [f_190]
+### MiR MiR250: Not cleared [f_279]
 
-- Main reason: success 88% [f_192] at normal traffic (needs 90% [f_193]).
+- Main reason: success 88% [f_281] at normal traffic (needs 90% [f_282]).
 
 Rule checks as the site is today:
 
 | Rule check | Result |
 |---|---|
-| every task leg feasible on the conservative geometry bound | met (value: 6 [f_194]/6 legs [f_195]) |
+| every task leg feasible on the conservative geometry bound | met (value: 6 [f_283]/6 legs [f_284]) |
 | no unresolved flagged_manual thresholds on the route | met (value: none) |
-| simulated success at normal traffic (conservative bound) >= 0.90 [f_196] | not met (value: 88% [f_197]) |
+| simulated success at normal traffic (conservative bound) >= 0.90 [f_285] | not met (value: 88% [f_286]) |
 
 **Why this verdict**
 
-MiR MiR250 received Not cleared [f_190] because the simulated success rate at normal traffic under conservative geometry is 88% [f_192], below the required 90% [f_193] (rule check: simulated success at normal traffic (conservative bound) >= 0.9 [f_196] not met, value 88% [f_197] vs threshold 90% [f_198]). The other rule checks passed: all 6 [f_194] task legs are feasible on the conservative geometry bound (6 [f_195] legs total) and no unresolved flagged_manual thresholds exist. The narrowest gap on the route is 0.78 m [f_120] while the robot needs 0.58 m [f_121]. Median mission time is 125 s [f_165] with 2.05 [f_166] near‑misses per mission.
+MiR MiR250 received Not cleared [f_279] because the simulated success rate at normal traffic under conservative geometry (88% [f_286]) fell below the 90% [f_287] threshold required by the rule check for simulated success at normal traffic (conservative bound) >= 0.9 [f_285]; the other rule checks passed: all 6 [f_283] task legs were feasible on the conservative geometry bound (out of 6 [f_284] legs) and no unresolved flagged_manual thresholds existed. The narrowest gap on the route is 0.78 m [f_209] while the robot needs 0.58 m [f_210], so geometry is not the limiting factor; instead, simulation shows 1 [f_258] collision and 4 [f_259] no‑path‑static failures in 40 [f_251] episodes. The outcome would change if the conservative‑bound success rate reached at least 90% [f_287] or if layout changes reduced failures.
 
 ## 3. How we investigated
 
-No investigation experiments were recorded for this analysis.
+For OTTO Motors OTTO 100 and Pudu Robotics T300, baseline simulations showed sufficient clearance, so they were cleared without layout experiments. For MiR MiR100, baseline indicated failure and no experiment was pursued. For MiR MiR250, we hypothesized that moving PALLET1 away from the top pinch point would widen the gap above the robot width, eliminating the negative gap margin and static no-path failures, thereby raising the success rate. We tested this by moving PALLET1 (dx 0.50 m [f_382], dy -0.50 m [f_383], dyaw 0° [f_384]) in probe batch sb_7c72dd6fafbe. The baseline success rate was 88% [f_iaf721_028]; after the move it was 90% [f_iaf721_024] with a 95% confidence interval of 74% [f_iaf721_025] to 97% [f_iaf721_026] over 30 episodes [f_iaf721_027]. The success-rate change of 2% [f_iaf721_029] was smaller than the confidence-interval half-width of 11% [f_iaf721_030], so the hypothesis was inconclusive.
+
+### MiR MiR250
+
+1. **Hypothesis:** Moving PALLET1 away from the top pinch point widens the gap above the robot width [f_iaf721_020], eliminating the negative gap margin [f_iaf721_021] and the static no-path failures, raising success rate.
+   - **Experiment:** moved `PALLET1` (dx 0.50 m [f_382], dy -0.50 m [f_383], dyaw 0° [f_384]) (probe batch `sb_7c72dd6fafbe`).
+   - **Result:** before: value: 88% [f_iaf721_028]; after: value: 90% [f_iaf721_024]; value: 74% [f_iaf721_025]; value: 97% [f_iaf721_026]; value: 30 [f_iaf721_027]; value: 2% [f_iaf721_029]; value: 11% [f_iaf721_030].
+   - **Conclusion:** Hypothesis inconclusive: success-rate change [f_iaf721_029] vs probe CI half-width [f_iaf721_030] (probe [f_iaf721_024] vs baseline [f_iaf721_028]). Outcome: inconclusive; concluded.
 
 ## 4. Why it fails (investigation)
 
@@ -95,29 +100,29 @@ No findings were recorded; the comparison and Pinch Map below show where time is
 
 | Robot | Verdict | Legs feasible | Narrowest gap (needed) | Success, quiet traffic | Success, normal traffic | Success, peak traffic | Median mission | Near-misses per mission | Catalog specs |
 |---|---|---|---|---|---|---|---|---|---|
-| OTTO Motors OTTO 100 | Cleared | 6 [f_212] of 6 [f_211] | 0.78 m [f_214] (0.55 m [f_215]) | 98% [f_240][f_251] | 98% [f_253][f_264] | 100% [f_266][f_276] | 127 s [f_259] | 2.15 [f_260] | human-reviewed [f_210] |
+| OTTO Motors OTTO 100 | Cleared | 6 [f_117] of 6 [f_116] | 0.78 m [f_119] (0.55 m [f_120]) | 98% [f_145][f_156] | 98% [f_158][f_169] | 100% [f_171][f_181] | 127 s [f_164] | 2.15 [f_165] | human-reviewed [f_115] |
 | Pudu Robotics T300 | Cleared | 6 [f_028] of 6 [f_027] | 0.78 m [f_030] (0.50 m [f_031]) | 100% [f_056][f_066] | 98% [f_068][f_079] | 100% [f_081][f_091] | 115 s [f_074] | 1.77 [f_075] | human-reviewed [f_026] |
 | MiR MiR100 | Not cleared | 6 [f_302] of 6 [f_301] | 0.78 m [f_304] (0.58 m [f_305]) | 88% [f_330][f_341] | 88% [f_343][f_354] | 82% [f_356][f_368] | 152 s [f_349] | 1.75 [f_350] | human-reviewed [f_300] |
-| MiR MiR250 | Not cleared | 6 [f_118] of 6 [f_117] | 0.78 m [f_120] (0.58 m [f_121]) | 90% [f_146][f_157] | 88% [f_159][f_171] | 88% [f_173][f_185] | 125 s [f_165] | 2.05 [f_166] | human-reviewed [f_116] |
+| MiR MiR250 | Not cleared | 6 [f_207] of 6 [f_206] | 0.78 m [f_209] (0.58 m [f_210]) | 90% [f_235][f_246] | 88% [f_248][f_260] | 88% [f_262][f_274] | 125 s [f_254] | 2.05 [f_255] | human-reviewed [f_205] |
 
 Success ranges run from the conservative to the optimistic geometry bound. Mission time and near-misses are at the reference traffic level on the nominal geometry.
 
-- OTTO Motors OTTO 100, normal traffic, nominal geometry: 98% [f_255] (CI95 87–100% [f_257][f_258]) over 40 [f_256] episodes.
+- OTTO Motors OTTO 100, normal traffic, nominal geometry: 98% [f_160] (CI95 87–100% [f_162][f_163]) over 40 [f_161] episodes.
 - Pudu Robotics T300, normal traffic, nominal geometry: 98% [f_070] (CI95 87–100% [f_072][f_073]) over 40 [f_071] episodes.
 - MiR MiR100, normal traffic, nominal geometry: 88% [f_345] (CI95 74–95% [f_347][f_348]) over 40 [f_346] episodes.
-- MiR MiR250, normal traffic, nominal geometry: 88% [f_161] (CI95 74–95% [f_163][f_164]) over 40 [f_162] episodes.
+- MiR MiR250, normal traffic, nominal geometry: 88% [f_250] (CI95 74–95% [f_252][f_253]) over 40 [f_251] episodes.
 
 ## 6. Pinch Map
 
 The Pinch Map in the Clearance console shows where robots stop, wait or pass close to people. The tightest points and the main reasons for unsuccessful episodes:
 
-- OTTO Motors OTTO 100, normal traffic: collision in 1 [f_263] of 40 [f_256] episodes.
+- OTTO Motors OTTO 100, normal traffic: collision in 1 [f_168] of 40 [f_161] episodes.
 - Pudu Robotics T300, normal traffic: collision in 1 [f_078] of 40 [f_071] episodes.
 - MiR MiR100, normal traffic: no path static in 5 [f_353] of 40 [f_346] episodes.
 - MiR MiR100: success falls from 88% [f_332] at quiet traffic to 82% [f_358] at peak traffic (nominal geometry).
-- MiR MiR250, normal traffic: no path static in 4 [f_170] of 40 [f_162] episodes.
-- MiR MiR250, normal traffic: collision in 1 [f_169] of 40 [f_162] episodes.
-- MiR MiR250: success falls from 90% [f_148] at quiet traffic to 88% [f_175] at peak traffic (nominal geometry).
+- MiR MiR250, normal traffic: no path static in 4 [f_259] of 40 [f_251] episodes.
+- MiR MiR250, normal traffic: collision in 1 [f_258] of 40 [f_251] episodes.
+- MiR MiR250: success falls from 90% [f_237] at quiet traffic to 88% [f_264] at peak traffic (nominal geometry).
 
 ## 7. Recommended changes
 
@@ -129,23 +134,23 @@ Your inputs: staff cost $22/h [f_011]; staff hours per day on the task 4 [f_012]
 
 | Robot | Price | Automatable share | Monthly saving | Running costs | Net monthly | Payback |
 |---|---|---|---|---|---|---|
-| OTTO Motors OTTO 100 | price on request [f_209] | 98% [f_278] | $1,859/month [f_279] | — | — | enter a quote [f_280] |
+| OTTO Motors OTTO 100 | price on request [f_114] | 98% [f_183] | $1,859/month [f_184] | — | — | enter a quote [f_185] |
 | Pudu Robotics T300 | price on request [f_025] | 98% [f_093] | $1,859/month [f_094] | — | — | enter a quote [f_095] |
 | MiR MiR100 | price on request [f_299] | 88% [f_370] | $1,668/month [f_371] | — | — | enter a quote [f_372] |
-| MiR MiR250 | price on request [f_115] | 88% [f_187] | $1,668/month [f_188] | — | — | enter a quote [f_189] |
+| MiR MiR250 | price on request [f_204] | 88% [f_276] | $1,668/month [f_277] | — | — | enter a quote [f_278] |
 
 Formula: `automatable share = success rate (normal traffic, nominal geometry) x feasible leg fraction`; `monthly saving = staff cost x task hours x automatable share x days per month`; `payback = price / (monthly saving - monthly running costs)`.
 
 ## 9. Trade-offs between the robots
 
-Both Cleared robots, OTTO Motors OTTO 100 and Pudu Robotics T300, achieve 98% [f_253] success rate (conservative geometry) with median mission times of 127 s [f_259] and 115 s [f_074] respectively, and near-misses of 2.15 [f_260] and 1.77 [f_075]. The Not cleared MiR MiR100 and MiR MiR250 show 88% [f_343] success rate, with mission times of 152 s [f_349] and 125 s [f_165] and near-misses of 1.75 [f_350] and 2.05 [f_166]. All robots face the same narrowest gap of 0.78 m [f_214] on route, implying similar layout constraints. Pricing for all units is price on request [f_209] with payback status enter a quote [f_280].
+OTTO Motors OTTO 100 and Pudu Robotics T300 are Cleared [f_186] and Cleared [f_097] with 98% [f_158] and 98% [f_169] for OTTO, and 98% [f_068] and 98% [f_079] for Pudu, while MiR MiR100 and MiR MiR250 are Not cleared [f_373] and Not cleared [f_279] with 88% [f_343] and 88% [f_354] for MiR100, and 88% [f_248] and 88% [f_260] for MiR250. Median mission times are 127 s [f_164] for OTTO, 115 s [f_074] for Pudu, 152 s [f_349] for MiR100, and 125 s [f_254] for MiR250. Near-misses per mission are 2.15 [f_165] for OTTO, 1.77 [f_075] for Pudu, 1.75 [f_350] for MiR100, and 2.05 [f_255] for MiR250. All robots share a narrowest gap of 0.78 m [f_119], 0.78 m [f_030], 0.78 m [f_304], and 0.78 m [f_209]; no layout changes are specified. Pricing is price on request [f_114], price on request [f_025], price on request [f_299], and price on request [f_204] with payback status enter a quote [f_185], enter a quote [f_095], enter a quote [f_372], and enter a quote [f_278].
 
 ## 10. Hazards and manual checks
 
-- OTTO Motors OTTO 100 price: price on request [f_209]; enter a quote to see payback.
+- OTTO Motors OTTO 100 price: price on request [f_114]; enter a quote to see payback.
 - Pudu Robotics T300 price: price on request [f_025]; enter a quote to see payback.
 - MiR MiR100 price: price on request [f_299]; enter a quote to see payback.
-- MiR MiR250 price: price on request [f_115]; enter a quote to see payback.
+- MiR MiR250 price: price on request [f_204]; enter a quote to see payback.
 - Traffic is user-estimated [f_006]; a fixed observer phone at peak time would replace the estimate.
 
 ## 11. Methodology
@@ -166,12 +171,12 @@ Both Cleared robots, OTTO Motors OTTO 100 and Pudu Robotics T300, achieve 98% [f
 ## 13. Sources
 
 - [PUDU T300 AMR | Intelligent Autonomous Mobile Robot for Industrial Material Delivery](https://www.pudurobotics.com/en/products/pudut300), retrieved 2026-10-27; used for Pudu Robotics T300: footprint_polygon_m, Pudu Robotics T300: height_m, Pudu Robotics T300: max_speed_mps, Pudu Robotics T300: max_threshold_m, Pudu Robotics T300: min_aisle_width_vendor_m, Pudu Robotics T300: payload_kg
+- [https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=](https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=), retrieved 2026-10-27; used for OTTO Motors OTTO 100: footprint_polygon_m, OTTO Motors OTTO 100: height_m, OTTO Motors OTTO 100: in_place_rotation, OTTO Motors OTTO 100: max_speed_mps, OTTO Motors OTTO 100: max_threshold_m, OTTO Motors OTTO 100: min_aisle_width_vendor_m
 - [https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf](https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf), retrieved 2026-10-27; used for MiR MiR250: footprint_polygon_m, MiR MiR250: height_m, MiR MiR250: max_slope_deg, MiR MiR250: max_speed_mps, MiR MiR250: max_threshold_m, MiR MiR250: min_aisle_width_vendor_m
 - [https://mobile-industrial-robots.com/products/robots/mir250](https://mobile-industrial-robots.com/products/robots/mir250), retrieved 2026-10-27; used for MiR MiR250: price
-- [https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=](https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=), retrieved 2026-10-27; used for OTTO Motors OTTO 100: footprint_polygon_m, OTTO Motors OTTO 100: height_m, OTTO Motors OTTO 100: in_place_rotation, OTTO Motors OTTO 100: max_speed_mps, OTTO Motors OTTO 100: max_threshold_m, OTTO Motors OTTO 100: min_aisle_width_vendor_m
 - [https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf](https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf), retrieved 2026-10-27; used for MiR MiR100: footprint_polygon_m, MiR MiR100: height_m, MiR MiR100: max_slope_deg, MiR MiR100: max_speed_mps, MiR MiR100: max_threshold_m, MiR MiR100: min_aisle_width_vendor_m
-- [PUDU T300 - autonomous transport robot with a payload of up to 300 kg](https://log-robot.com/en/amr-products/pudu-robotics/pudu-t300), retrieved 2026-10-27; used for market check: Pudu T300 AMR payload capacity specifications
-- [Pudu T300 Robot — Price, Specs & Demo · RobotLAB](https://www.robotlab.com/store/pudu-t300), retrieved 2026-10-27; used for market check: Pudu T300 AMR payload capacity specifications
-- [OTTO 100 | Quality top modules for OTTO Motors AMRs](https://www.nord-modules.com/otto-100), retrieved 2026-10-27; used for market check: OTTO 100 AMR payload capacity specifications
-- [OTTO 100 Autonomous Mobile Robot | Autonomous Material Handling | OTTO by Rockwell Automation](https://ottomotors.com/100), retrieved 2026-10-27; used for market check: OTTO 100 AMR payload capacity specifications
-- [OTTO AMR Comparison: 100 vs. 600 vs. 1200 vs. 1500 vs. Lifter](https://blog.hesconet.com/otto-amr-comparison-100-600-1200-1500-lifter), retrieved 2026-10-27; used for market check: OTTO 100 AMR payload capacity specifications
+- [PUDU T300 Standard Industrial AMR | Specs, Safety & Uses | Robots International](https://www.robotsinternational.com/PUDU-T300-Standard-Industrial-Delivery-Robot.htm), retrieved 2026-10-28; used for market check: Pudu T300 AMR specifications payload navigation
+- [Pudu T300 Robot — Price, Specs & Demo · RobotLAB](https://www.robotlab.com/store/pudu-t300), retrieved 2026-10-28; used for market check: Pudu T300 AMR specifications payload navigation
+- [OTTO 100 | Quality top modules for OTTO Motors AMRs](https://www.nord-modules.com/otto-100), retrieved 2026-10-28; used for market check: OTTO 100 AMR specifications payload navigation
+- [OTTO 100 Autonomous Mobile Robot | Autonomous Material Handling | OTTO by Rockwell Automation](https://ottomotors.com/100), retrieved 2026-10-28; used for market check: OTTO 100 AMR specifications payload navigation
+- [OTTO AMR Comparison: 100 vs. 600 vs. 1200 vs. 1500 vs. Lifter](https://blog.hesconet.com/otto-amr-comparison-100-600-1200-1500-lifter), retrieved 2026-10-28; used for market check: OTTO 100 AMR specifications payload navigation

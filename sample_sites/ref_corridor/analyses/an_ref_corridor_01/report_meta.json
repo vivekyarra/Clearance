@@ -4,16 +4,20 @@
   "analysis_id": "an_ref_corridor_01",
   "sections": {
     "summary": {
-      "llm_calls": 1,
-      "first_pass_errors": 0,
-      "regenerated": false,
-      "errors_after_regeneration": null,
-      "sentences_removed": 0,
+      "llm_calls": 2,
+      "first_pass_errors": 2,
+      "regenerated": true,
+      "errors_after_regeneration": 1,
+      "sentences_removed": 1,
       "fallback": null,
       "allowed_facts": 32,
-      "tokens_out": 1174,
-      "errors_first_pass_types": [],
-      "wall_s": 24.5
+      "tokens_out": 1841,
+      "first_pass_words": 94,
+      "errors_first_pass_types": [
+        "non_numeric_fact",
+        "untagged_number"
+      ],
+      "wall_s": 11.6
     },
     "why|keenon_w3": {
       "llm_calls": 2,
@@ -23,39 +27,40 @@
       "sentences_removed": 0,
       "fallback": null,
       "allowed_facts": 27,
-      "tokens_out": 2451,
+      "tokens_out": 6120,
+      "first_pass_words": 111,
       "errors_first_pass_types": [
         "value_mismatch"
       ],
-      "wall_s": 85.4
+      "wall_s": 20.2
     },
     "why|bear_servi": {
       "llm_calls": 2,
       "first_pass_errors": 1,
       "regenerated": true,
-      "errors_after_regeneration": 1,
-      "sentences_removed": 1,
+      "errors_after_regeneration": 0,
+      "sentences_removed": 0,
       "fallback": null,
       "allowed_facts": 28,
-      "tokens_out": 5116,
+      "tokens_out": 2364,
+      "first_pass_words": 104,
       "errors_first_pass_types": [
         "value_mismatch"
       ],
-      "wall_s": 82.5
+      "wall_s": 12.8
     },
     "why|keenon_dinerbot_t9": {
-      "llm_calls": 2,
-      "first_pass_errors": 2,
-      "regenerated": true,
-      "errors_after_regeneration": 1,
-      "sentences_removed": 1,
+      "llm_calls": 1,
+      "first_pass_errors": 0,
+      "regenerated": false,
+      "errors_after_regeneration": null,
+      "sentences_removed": 0,
       "fallback": null,
       "allowed_facts": 28,
-      "tokens_out": 7803,
-      "errors_first_pass_types": [
-        "value_mismatch"
-      ],
-      "wall_s": 146.1
+      "tokens_out": 2054,
+      "first_pass_words": 97,
+      "errors_first_pass_types": [],
+      "wall_s": 8.6
     },
     "why|keenon_dinerbot_t8": {
       "llm_calls": 2,
@@ -65,24 +70,28 @@
       "sentences_removed": 0,
       "fallback": null,
       "allowed_facts": 28,
-      "tokens_out": 6070,
+      "tokens_out": 4585,
+      "first_pass_words": 106,
       "errors_first_pass_types": [
-        "unit_mismatch",
+        "untagged_number",
         "value_mismatch"
       ],
-      "wall_s": 141.3
+      "wall_s": 15.5
     },
     "why|pudu_kettybot": {
-      "llm_calls": 1,
-      "first_pass_errors": 0,
-      "regenerated": false,
-      "errors_after_regeneration": null,
+      "llm_calls": 2,
+      "first_pass_errors": 1,
+      "regenerated": true,
+      "errors_after_regeneration": 0,
       "sentences_removed": 0,
       "fallback": null,
       "allowed_facts": 28,
-      "tokens_out": 2995,
-      "errors_first_pass_types": [],
-      "wall_s": 55.4
+      "tokens_out": 4430,
+      "first_pass_words": 106,
+      "errors_first_pass_types": [
+        "value_mismatch"
+      ],
+      "wall_s": 13.8
     },
     "why|pudu_t300": {
       "llm_calls": 2,
@@ -92,36 +101,37 @@
       "sentences_removed": 0,
       "fallback": null,
       "allowed_facts": 28,
-      "tokens_out": 2750,
+      "tokens_out": 4273,
+      "first_pass_words": 99,
       "errors_first_pass_types": [
         "value_mismatch"
       ],
-      "wall_s": 44.9
+      "wall_s": 12.7
     },
     "tradeoffs": {
       "llm_calls": 2,
-      "first_pass_errors": 125,
+      "first_pass_errors": 246,
       "regenerated": true,
       "errors_after_regeneration": 0,
       "sentences_removed": 0,
       "fallback": null,
       "allowed_facts": 48,
-      "tokens_out": 8980,
+      "tokens_out": 11133,
+      "first_pass_words": 2210,
       "errors_first_pass_types": [
         "non_numeric_fact",
-        "unit_mismatch",
         "untagged_number",
         "value_mismatch"
       ],
-      "wall_s": 116.9
+      "wall_s": 31.0
     }
   },
   "totals": {
     "sections": 8,
-    "llm_calls": 14,
-    "first_pass_errors": 132,
-    "regenerations": 6,
-    "sentences_removed": 2,
+    "llm_calls": 15,
+    "first_pass_errors": 254,
+    "regenerations": 7,
+    "sentences_removed": 1,
     "fallbacks": []
   },
   "final_check": {
@@ -135,5 +145,5 @@
     "how_we_investigated": true,
     "sources": true
   },
-  "wall_s": 267.8
+  "wall_s": 51.6
 }

@@ -53,26 +53,26 @@
     }
   },
   "status": "done",
-  "wall_time_s": 1484.7,
+  "wall_time_s": 1409.2,
   "stage_times_s": {
-    "candidates": 35.5,
-    "feasibility": 11.3,
-    "batches": 1012.3,
-    "investigation": 49.8,
-    "optimizer": 118.6,
-    "verdicts": 0.1,
-    "report": 255.9
+    "candidates": 64.5,
+    "feasibility": 32.4,
+    "batches": 911.8,
+    "investigation": 151.6,
+    "optimizer": 219.9,
+    "verdicts": 0.3,
+    "report": 27.5
   },
   "batch_episodes": 1440,
-  "batch_stage_s": 1012.3,
-  "episodes_per_min_batches": 85.3,
+  "batch_stage_s": 911.8,
+  "episodes_per_min_batches": 94.8,
   "investigation": {
     "robots": [
       "mir_mir100",
       "mir_mir250"
     ],
-    "experiments_run": 0,
-    "probe_episodes": 0,
+    "experiments_run": 1,
+    "probe_episodes": 30,
     "findings": 0,
     "findings_confirmed": 0
   },
@@ -85,13 +85,13 @@
       "label": "Cleared",
       "main_reason": "meets every rule as-is"
     },
-    "mir_mir250": {
-      "label": "Not cleared",
-      "main_reason": "success 88% at normal traffic (needs 90%)"
-    },
     "otto_100": {
       "label": "Cleared",
       "main_reason": "meets every rule as-is"
+    },
+    "mir_mir250": {
+      "label": "Not cleared",
+      "main_reason": "success 88% at normal traffic (needs 90%)"
     },
     "mir_mir100": {
       "label": "Not cleared",
@@ -103,5 +103,5 @@
   "machine": "Windows 10, Intel64 Family 6 Model 186 Stepping 3, GenuineIntel",
   "llm_mode": "live",
   "tavily_mode": "live",
-  "finished_at": "2026-10-28 02:21:12"
+  "finished_at": "2026-10-28 11:54:29"
 }

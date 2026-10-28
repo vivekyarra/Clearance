@@ -1,7 +1,7 @@
 {
   "analysis_id": "an_ref_corridor_01",
   "status": "done",
-  "started_at": 1793134917.901628,
+  "started_at": 1793168675.862564,
   "stages": {
     "candidates": {
       "state": "done",
@@ -543,9 +543,7 @@
     "assets": {},
     "geometry_source": "reference"
   },
-  "notes": [
-    "explanation for pudu_t300 dropped: it contained numbers"
-  ],
+  "notes": [],
   "candidates": [
     "keenon_dinerbot_t8",
     "bear_servi",
@@ -1155,11 +1153,12 @@
     }
   ],
   "candidate_explanations": {
-    "keenon_dinerbot_t8": "Narrowest width and largest clearance margin across all corridor legs make it the most promising candidate.",
-    "bear_servi": "Slightly wider than the top choice but still comfortable clearance on every leg of the route.",
-    "pudu_kettybot": "Very similar width to bear_servi with nearly identical clearance margins on all legs.",
-    "keenon_w3": "Marginally wider than pudu_kettybot, reducing clearance slightly while remaining fully feasible.",
-    "keenon_dinerbot_t9": "Wider still at half a meter, leaving less room to maneuver through the corridor's narrowest points."
+    "keenon_dinerbot_t8": "Narrowest width and largest gap margin give it the most clearance for tight corridor navigation.",
+    "bear_servi": "Strong gap margin and proven service-class design make it a reliable second choice for corridor tasks.",
+    "pudu_kettybot": "Competitive width and gap margin with a solid service robot track record.",
+    "keenon_w3": "Slightly wider than the top three but still offers comfortable clearance for the corridor route.",
+    "keenon_dinerbot_t9": "Wider footprint reduces margin but remains viable as a service-class robot for this task.",
+    "pudu_t300": "Largest width among candidates with the smallest gap margin, making it the least promising for tight corridor navigation."
   },
   "feasibility": {
     "keenon_dinerbot_t8": {
@@ -1717,7 +1716,7 @@
   },
   "feasibility_by_bound": {
     "keenon_dinerbot_t8": {
-      "nominal": {
+      "optimistic": {
         "robot_id": "keenon_dinerbot_t8",
         "twin_id": "twin_ref_corridor_v1",
         "twin_version": 1,
@@ -1809,7 +1808,7 @@
         ],
         "all_reachable": true
       },
-      "optimistic": {
+      "nominal": {
         "robot_id": "keenon_dinerbot_t8",
         "twin_id": "twin_ref_corridor_v1",
         "twin_version": 1,
@@ -1995,7 +1994,7 @@
       }
     },
     "bear_servi": {
-      "nominal": {
+      "optimistic": {
         "robot_id": "bear_servi",
         "twin_id": "twin_ref_corridor_v1",
         "twin_version": 1,
@@ -2087,7 +2086,7 @@
         ],
         "all_reachable": true
       },
-      "optimistic": {
+      "nominal": {
         "robot_id": "bear_servi",
         "twin_id": "twin_ref_corridor_v1",
         "twin_version": 1,
@@ -2273,7 +2272,7 @@
       }
     },
     "pudu_kettybot": {
-      "nominal": {
+      "optimistic": {
         "robot_id": "pudu_kettybot",
         "twin_id": "twin_ref_corridor_v1",
         "twin_version": 1,
@@ -2365,7 +2364,7 @@
         ],
         "all_reachable": true
       },
-      "optimistic": {
+      "nominal": {
         "robot_id": "pudu_kettybot",
         "twin_id": "twin_ref_corridor_v1",
         "twin_version": 1,
@@ -2551,7 +2550,7 @@
       }
     },
     "keenon_w3": {
-      "nominal": {
+      "optimistic": {
         "robot_id": "keenon_w3",
         "twin_id": "twin_ref_corridor_v1",
         "twin_version": 1,
@@ -2643,7 +2642,7 @@
         ],
         "all_reachable": true
       },
-      "optimistic": {
+      "nominal": {
         "robot_id": "keenon_w3",
         "twin_id": "twin_ref_corridor_v1",
         "twin_version": 1,
@@ -2829,7 +2828,7 @@
       }
     },
     "keenon_dinerbot_t9": {
-      "nominal": {
+      "optimistic": {
         "robot_id": "keenon_dinerbot_t9",
         "twin_id": "twin_ref_corridor_v1",
         "twin_version": 1,
@@ -2921,7 +2920,7 @@
         ],
         "all_reachable": true
       },
-      "optimistic": {
+      "nominal": {
         "robot_id": "keenon_dinerbot_t9",
         "twin_id": "twin_ref_corridor_v1",
         "twin_version": 1,
@@ -3107,7 +3106,7 @@
       }
     },
     "pudu_t300": {
-      "nominal": {
+      "optimistic": {
         "robot_id": "pudu_t300",
         "twin_id": "twin_ref_corridor_v1",
         "twin_version": 1,
@@ -3199,7 +3198,7 @@
         ],
         "all_reachable": true
       },
-      "optimistic": {
+      "nominal": {
         "robot_id": "pudu_t300",
         "twin_id": "twin_ref_corridor_v1",
         "twin_version": 1,
@@ -3386,135 +3385,63 @@
     }
   },
   "batches": [
-    "sb_d0e6e2070eb5",
-    "sb_b1b83bffe50f",
-    "sb_ef707dea6880",
-    "sb_a2efc5b0931b",
-    "sb_d693ff018637",
-    "sb_8139cf5c4470",
-    "sb_979ad47ec78c",
-    "sb_95b878470915",
-    "sb_cad387bf7378",
-    "sb_17063cd9b267",
-    "sb_071d393f5171",
-    "sb_593c904f1842",
-    "sb_1db01426f956",
-    "sb_66f267bd7c2d",
-    "sb_75858c483564",
-    "sb_32f58c01c786",
-    "sb_fcb635af5f24",
-    "sb_8233589f1bf0",
-    "sb_d4a855fc7576",
-    "sb_32be9cf2a263",
-    "sb_72cce149076d",
-    "sb_194838a95e6c",
-    "sb_816a16f412c5",
-    "sb_f96c7e949eff",
-    "sb_d729ed67dd11",
-    "sb_d2b53511b957",
-    "sb_37916d2b47fd",
-    "sb_5ebd9f921581",
-    "sb_c937c9e505c9",
-    "sb_11ee6f0782f4",
-    "sb_47a26669243f",
-    "sb_61c46ec0af64",
-    "sb_e285a50405f3",
-    "sb_b333c272994a",
-    "sb_765cb6f48709",
-    "sb_3bc2a9c7de83",
-    "sb_a6ff401274e6",
-    "sb_78ce66ca7b50",
-    "sb_efc1fa3c1770",
-    "sb_00fab14fa702",
-    "sb_26803c956feb",
-    "sb_9121f3fe6d23",
-    "sb_70c3e78b9785",
-    "sb_14767a360968",
-    "sb_4e9b0ea7d6e0",
-    "sb_55222ab9a89d",
-    "sb_f673be977fba",
-    "sb_f5532b6af279",
-    "sb_42dcd6e93645",
-    "sb_c455f4561ac5",
-    "sb_33ec807bc9a0",
-    "sb_d0b7a3db74ce",
-    "sb_4b9bff155af5",
-    "sb_aa83abd3b65a"
+    "sb_b2182b67d2f7",
+    "sb_27f3f97fa2d1",
+    "sb_058d9c7c1975",
+    "sb_7ed92fb4bc85",
+    "sb_cf31a2438cab",
+    "sb_8f302f31b557",
+    "sb_7f700eda8eb6",
+    "sb_d37139145d7e",
+    "sb_60f9b75a199d",
+    "sb_004759d24ecf",
+    "sb_4006b0ed5dee",
+    "sb_c0ff128b4956",
+    "sb_6815bdadb98b",
+    "sb_3a7e89cd5e0d",
+    "sb_569ad7e85c40",
+    "sb_03dd3900cce9",
+    "sb_cb3f2f090ffc",
+    "sb_faa467622c63",
+    "sb_ec39f1999209",
+    "sb_8a25748cc473",
+    "sb_65a828a0d2c4",
+    "sb_284c214b6e25",
+    "sb_d8b3b4d3a3c5",
+    "sb_c1fae27bf0a8",
+    "sb_fa5d213d320f",
+    "sb_8eaa6a7a07c2",
+    "sb_e9784dfbe6b2",
+    "sb_ed15fc03efe4",
+    "sb_908941eab776",
+    "sb_cbe53288c8ff",
+    "sb_91db9c44274c",
+    "sb_5fe24c869732",
+    "sb_3f4e69595532",
+    "sb_8f90c5b1978c",
+    "sb_579fe4285a5a",
+    "sb_40938549beb6",
+    "sb_b3e9b3c5173e",
+    "sb_c64b9c81df4e",
+    "sb_1ff06d056f2c",
+    "sb_c55dbd32c0f7",
+    "sb_323ea21b2ba7",
+    "sb_4785947f1f89",
+    "sb_f519c9bab8eb",
+    "sb_9c3fcfc771b1",
+    "sb_74398a8f2588",
+    "sb_d52a206e77b3",
+    "sb_0806d0cb5c4c",
+    "sb_9eac456452cf",
+    "sb_0a9e7b27f04c",
+    "sb_603de7481be1",
+    "sb_c96226b65141",
+    "sb_72e2536076f9",
+    "sb_6ac29fd4afbf",
+    "sb_8249de06ad1f"
   ],
   "batch_index": {
-    "sb_d0e6e2070eb5": {
-      "robot_id": "keenon_dinerbot_t8",
-      "density": "quiet",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 1.0,
-        "min_gap_m": 0.113,
-        "ci95": [
-          0.9123754607496077,
-          1.0
-        ],
-        "median_mission_s": 59.05,
-        "near_miss_per_mission": 1.25,
-        "stops_per_mission": 1.85,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 40,
-        "n_episodes": 40
-      }
-    },
-    "sb_b1b83bffe50f": {
-      "robot_id": "keenon_dinerbot_t8",
-      "density": "normal",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.925,
-        "min_gap_m": 0.11810000000000001,
-        "ci95": [
-          0.8013546984090248,
-          0.9741644432281419
-        ],
-        "median_mission_s": 66.4,
-        "near_miss_per_mission": 3.8,
-        "stops_per_mission": 5.075,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 3
-        },
-        "n_success": 37,
-        "n_episodes": 40
-      }
-    },
-    "sb_ef707dea6880": {
-      "robot_id": "keenon_dinerbot_t8",
-      "density": "normal",
-      "bound": "nominal",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.925,
-        "min_gap_m": 0.11810000000000001,
-        "ci95": [
-          0.8013546984090248,
-          0.9741644432281419
-        ],
-        "median_mission_s": 66.4,
-        "near_miss_per_mission": 3.8,
-        "stops_per_mission": 5.075,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 3
-        },
-        "n_success": 37,
-        "n_episodes": 40
-      }
-    },
-    "sb_a2efc5b0931b": {
+    "sb_b2182b67d2f7": {
       "robot_id": "keenon_dinerbot_t8",
       "density": "normal",
       "bound": "conservative",
@@ -3538,20 +3465,44 @@
         "n_episodes": 40
       }
     },
-    "sb_d693ff018637": {
-      "robot_id": "bear_servi",
+    "sb_27f3f97fa2d1": {
+      "robot_id": "keenon_dinerbot_t8",
+      "density": "normal",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.11810000000000001,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 66.4,
+        "near_miss_per_mission": 3.8,
+        "stops_per_mission": 5.075,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 3
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_058d9c7c1975": {
+      "robot_id": "keenon_dinerbot_t8",
       "density": "quiet",
-      "bound": "nominal",
+      "bound": "optimistic",
       "n_episodes": 40,
       "results": {
         "success_rate": 1.0,
-        "min_gap_m": 0.10944999999999999,
+        "min_gap_m": 0.113,
         "ci95": [
           0.9123754607496077,
           1.0
         ],
-        "median_mission_s": 57.1,
-        "near_miss_per_mission": 1.05,
+        "median_mission_s": 59.05,
+        "near_miss_per_mission": 1.25,
         "stops_per_mission": 1.85,
         "fail_reasons": {
           "no_path_static": 0,
@@ -3562,7 +3513,7 @@
         "n_episodes": 40
       }
     },
-    "sb_8139cf5c4470": {
+    "sb_7ed92fb4bc85": {
       "robot_id": "keenon_dinerbot_t8",
       "density": "quiet",
       "bound": "conservative",
@@ -3586,7 +3537,7 @@
         "n_episodes": 40
       }
     },
-    "sb_979ad47ec78c": {
+    "sb_cf31a2438cab": {
       "robot_id": "keenon_dinerbot_t8",
       "density": "quiet",
       "bound": "nominal",
@@ -3610,7 +3561,31 @@
         "n_episodes": 40
       }
     },
-    "sb_95b878470915": {
+    "sb_8f302f31b557": {
+      "robot_id": "keenon_dinerbot_t8",
+      "density": "peak",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.10735,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 96.9,
+        "near_miss_per_mission": 9.7,
+        "stops_per_mission": 13.675,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 1,
+          "collision": 2
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_7f700eda8eb6": {
       "robot_id": "bear_servi",
       "density": "quiet",
       "bound": "optimistic",
@@ -3634,31 +3609,55 @@
         "n_episodes": 40
       }
     },
-    "sb_cad387bf7378": {
+    "sb_d37139145d7e": {
       "robot_id": "keenon_dinerbot_t8",
-      "density": "peak",
-      "bound": "conservative",
+      "density": "normal",
+      "bound": "nominal",
       "n_episodes": 40,
       "results": {
         "success_rate": 0.925,
-        "min_gap_m": 0.10735,
+        "min_gap_m": 0.11810000000000001,
         "ci95": [
           0.8013546984090248,
           0.9741644432281419
         ],
-        "median_mission_s": 96.9,
-        "near_miss_per_mission": 9.7,
-        "stops_per_mission": 13.675,
+        "median_mission_s": 66.4,
+        "near_miss_per_mission": 3.8,
+        "stops_per_mission": 5.075,
         "fail_reasons": {
           "no_path_static": 0,
-          "blocked_timeout": 1,
-          "collision": 2
+          "blocked_timeout": 0,
+          "collision": 3
         },
         "n_success": 37,
         "n_episodes": 40
       }
     },
-    "sb_17063cd9b267": {
+    "sb_60f9b75a199d": {
+      "robot_id": "bear_servi",
+      "density": "quiet",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10944999999999999,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 57.1,
+        "near_miss_per_mission": 1.05,
+        "stops_per_mission": 1.85,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_004759d24ecf": {
       "robot_id": "keenon_dinerbot_t8",
       "density": "peak",
       "bound": "optimistic",
@@ -3682,31 +3681,7 @@
         "n_episodes": 40
       }
     },
-    "sb_071d393f5171": {
-      "robot_id": "keenon_dinerbot_t8",
-      "density": "peak",
-      "bound": "nominal",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.925,
-        "min_gap_m": 0.10735,
-        "ci95": [
-          0.8013546984090248,
-          0.9741644432281419
-        ],
-        "median_mission_s": 96.9,
-        "near_miss_per_mission": 9.7,
-        "stops_per_mission": 13.675,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 1,
-          "collision": 2
-        },
-        "n_success": 37,
-        "n_episodes": 40
-      }
-    },
-    "sb_593c904f1842": {
+    "sb_4006b0ed5dee": {
       "robot_id": "bear_servi",
       "density": "quiet",
       "bound": "conservative",
@@ -3730,79 +3705,7 @@
         "n_episodes": 40
       }
     },
-    "sb_1db01426f956": {
-      "robot_id": "bear_servi",
-      "density": "normal",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.95,
-        "min_gap_m": 0.10944999999999999,
-        "ci95": [
-          0.834958291820748,
-          0.9861796228538989
-        ],
-        "median_mission_s": 66.35,
-        "near_miss_per_mission": 3.45,
-        "stops_per_mission": 5.0,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 2
-        },
-        "n_success": 38,
-        "n_episodes": 40
-      }
-    },
-    "sb_66f267bd7c2d": {
-      "robot_id": "pudu_kettybot",
-      "density": "quiet",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 1.0,
-        "min_gap_m": 0.10655,
-        "ci95": [
-          0.9123754607496077,
-          1.0
-        ],
-        "median_mission_s": 56.650000000000006,
-        "near_miss_per_mission": 1.1,
-        "stops_per_mission": 1.725,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 40,
-        "n_episodes": 40
-      }
-    },
-    "sb_75858c483564": {
-      "robot_id": "bear_servi",
-      "density": "normal",
-      "bound": "conservative",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.95,
-        "min_gap_m": 0.10944999999999999,
-        "ci95": [
-          0.834958291820748,
-          0.9861796228538989
-        ],
-        "median_mission_s": 66.35,
-        "near_miss_per_mission": 3.45,
-        "stops_per_mission": 5.0,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 2
-        },
-        "n_success": 38,
-        "n_episodes": 40
-      }
-    },
-    "sb_32f58c01c786": {
+    "sb_c0ff128b4956": {
       "robot_id": "bear_servi",
       "density": "normal",
       "bound": "nominal",
@@ -3826,7 +3729,55 @@
         "n_episodes": 40
       }
     },
-    "sb_fcb635af5f24": {
+    "sb_6815bdadb98b": {
+      "robot_id": "keenon_dinerbot_t8",
+      "density": "peak",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.10735,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 96.9,
+        "near_miss_per_mission": 9.7,
+        "stops_per_mission": 13.675,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 1,
+          "collision": 2
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_3a7e89cd5e0d": {
+      "robot_id": "bear_servi",
+      "density": "normal",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.95,
+        "min_gap_m": 0.10944999999999999,
+        "ci95": [
+          0.834958291820748,
+          0.9861796228538989
+        ],
+        "median_mission_s": 66.35,
+        "near_miss_per_mission": 3.45,
+        "stops_per_mission": 5.0,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 2
+        },
+        "n_success": 38,
+        "n_episodes": 40
+      }
+    },
+    "sb_569ad7e85c40": {
       "robot_id": "pudu_kettybot",
       "density": "quiet",
       "bound": "nominal",
@@ -3850,7 +3801,79 @@
         "n_episodes": 40
       }
     },
-    "sb_8233589f1bf0": {
+    "sb_03dd3900cce9": {
+      "robot_id": "bear_servi",
+      "density": "normal",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.95,
+        "min_gap_m": 0.10944999999999999,
+        "ci95": [
+          0.834958291820748,
+          0.9861796228538989
+        ],
+        "median_mission_s": 66.35,
+        "near_miss_per_mission": 3.45,
+        "stops_per_mission": 5.0,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 2
+        },
+        "n_success": 38,
+        "n_episodes": 40
+      }
+    },
+    "sb_cb3f2f090ffc": {
+      "robot_id": "pudu_kettybot",
+      "density": "quiet",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10655,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 56.650000000000006,
+        "near_miss_per_mission": 1.1,
+        "stops_per_mission": 1.725,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_faa467622c63": {
+      "robot_id": "bear_servi",
+      "density": "peak",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.10414999999999999,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 103.8,
+        "near_miss_per_mission": 9.375,
+        "stops_per_mission": 12.35,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 1,
+          "collision": 2
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_ec39f1999209": {
       "robot_id": "pudu_kettybot",
       "density": "quiet",
       "bound": "conservative",
@@ -3874,7 +3897,7 @@
         "n_episodes": 40
       }
     },
-    "sb_d4a855fc7576": {
+    "sb_8a25748cc473": {
       "robot_id": "bear_servi",
       "density": "peak",
       "bound": "conservative",
@@ -3898,7 +3921,7 @@
         "n_episodes": 40
       }
     },
-    "sb_32be9cf2a263": {
+    "sb_65a828a0d2c4": {
       "robot_id": "bear_servi",
       "density": "peak",
       "bound": "nominal",
@@ -3922,31 +3945,7 @@
         "n_episodes": 40
       }
     },
-    "sb_72cce149076d": {
-      "robot_id": "bear_servi",
-      "density": "peak",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.925,
-        "min_gap_m": 0.10414999999999999,
-        "ci95": [
-          0.8013546984090248,
-          0.9741644432281419
-        ],
-        "median_mission_s": 103.8,
-        "near_miss_per_mission": 9.375,
-        "stops_per_mission": 12.35,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 1,
-          "collision": 2
-        },
-        "n_success": 37,
-        "n_episodes": 40
-      }
-    },
-    "sb_194838a95e6c": {
+    "sb_284c214b6e25": {
       "robot_id": "pudu_kettybot",
       "density": "normal",
       "bound": "optimistic",
@@ -3970,7 +3969,7 @@
         "n_episodes": 40
       }
     },
-    "sb_816a16f412c5": {
+    "sb_d8b3b4d3a3c5": {
       "robot_id": "pudu_kettybot",
       "density": "normal",
       "bound": "nominal",
@@ -3994,7 +3993,7 @@
         "n_episodes": 40
       }
     },
-    "sb_f96c7e949eff": {
+    "sb_c1fae27bf0a8": {
       "robot_id": "pudu_kettybot",
       "density": "normal",
       "bound": "conservative",
@@ -4018,127 +4017,7 @@
         "n_episodes": 40
       }
     },
-    "sb_d729ed67dd11": {
-      "robot_id": "keenon_w3",
-      "density": "quiet",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 1.0,
-        "min_gap_m": 0.10785,
-        "ci95": [
-          0.9123754607496077,
-          1.0
-        ],
-        "median_mission_s": 67.5,
-        "near_miss_per_mission": 1.65,
-        "stops_per_mission": 2.425,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 40,
-        "n_episodes": 40
-      }
-    },
-    "sb_d2b53511b957": {
-      "robot_id": "keenon_w3",
-      "density": "quiet",
-      "bound": "nominal",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 1.0,
-        "min_gap_m": 0.10785,
-        "ci95": [
-          0.9123754607496077,
-          1.0
-        ],
-        "median_mission_s": 67.5,
-        "near_miss_per_mission": 1.65,
-        "stops_per_mission": 2.425,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 40,
-        "n_episodes": 40
-      }
-    },
-    "sb_37916d2b47fd": {
-      "robot_id": "pudu_kettybot",
-      "density": "peak",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.9,
-        "min_gap_m": 0.1052,
-        "ci95": [
-          0.7694792561952611,
-          0.9604211124044252
-        ],
-        "median_mission_s": 95.8,
-        "near_miss_per_mission": 9.5,
-        "stops_per_mission": 11.975,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 1,
-          "collision": 3
-        },
-        "n_success": 36,
-        "n_episodes": 40
-      }
-    },
-    "sb_5ebd9f921581": {
-      "robot_id": "keenon_w3",
-      "density": "quiet",
-      "bound": "conservative",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 1.0,
-        "min_gap_m": 0.10785,
-        "ci95": [
-          0.9123754607496077,
-          1.0
-        ],
-        "median_mission_s": 67.5,
-        "near_miss_per_mission": 1.65,
-        "stops_per_mission": 2.425,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 40,
-        "n_episodes": 40
-      }
-    },
-    "sb_c937c9e505c9": {
-      "robot_id": "pudu_kettybot",
-      "density": "peak",
-      "bound": "conservative",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.9,
-        "min_gap_m": 0.1052,
-        "ci95": [
-          0.7694792561952611,
-          0.9604211124044252
-        ],
-        "median_mission_s": 95.8,
-        "near_miss_per_mission": 9.5,
-        "stops_per_mission": 11.975,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 1,
-          "collision": 3
-        },
-        "n_success": 36,
-        "n_episodes": 40
-      }
-    },
-    "sb_11ee6f0782f4": {
+    "sb_fa5d213d320f": {
       "robot_id": "pudu_kettybot",
       "density": "peak",
       "bound": "nominal",
@@ -4162,7 +4041,151 @@
         "n_episodes": 40
       }
     },
-    "sb_47a26669243f": {
+    "sb_8eaa6a7a07c2": {
+      "robot_id": "keenon_w3",
+      "density": "quiet",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10785,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 67.5,
+        "near_miss_per_mission": 1.65,
+        "stops_per_mission": 2.425,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_e9784dfbe6b2": {
+      "robot_id": "pudu_kettybot",
+      "density": "peak",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.9,
+        "min_gap_m": 0.1052,
+        "ci95": [
+          0.7694792561952611,
+          0.9604211124044252
+        ],
+        "median_mission_s": 95.8,
+        "near_miss_per_mission": 9.5,
+        "stops_per_mission": 11.975,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 1,
+          "collision": 3
+        },
+        "n_success": 36,
+        "n_episodes": 40
+      }
+    },
+    "sb_ed15fc03efe4": {
+      "robot_id": "keenon_w3",
+      "density": "quiet",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10785,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 67.5,
+        "near_miss_per_mission": 1.65,
+        "stops_per_mission": 2.425,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_908941eab776": {
+      "robot_id": "pudu_kettybot",
+      "density": "peak",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.9,
+        "min_gap_m": 0.1052,
+        "ci95": [
+          0.7694792561952611,
+          0.9604211124044252
+        ],
+        "median_mission_s": 95.8,
+        "near_miss_per_mission": 9.5,
+        "stops_per_mission": 11.975,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 1,
+          "collision": 3
+        },
+        "n_success": 36,
+        "n_episodes": 40
+      }
+    },
+    "sb_cbe53288c8ff": {
+      "robot_id": "keenon_w3",
+      "density": "quiet",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10785,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 67.5,
+        "near_miss_per_mission": 1.65,
+        "stops_per_mission": 2.425,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_91db9c44274c": {
+      "robot_id": "keenon_w3",
+      "density": "normal",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10869999999999999,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 79.4,
+        "near_miss_per_mission": 4.7,
+        "stops_per_mission": 6.85,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_5fe24c869732": {
       "robot_id": "keenon_w3",
       "density": "normal",
       "bound": "nominal",
@@ -4186,7 +4209,31 @@
         "n_episodes": 40
       }
     },
-    "sb_61c46ec0af64": {
+    "sb_3f4e69595532": {
+      "robot_id": "keenon_dinerbot_t9",
+      "density": "quiet",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.11805,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 60.8,
+        "near_miss_per_mission": 1.325,
+        "stops_per_mission": 2.125,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_8f90c5b1978c": {
       "robot_id": "keenon_w3",
       "density": "normal",
       "bound": "conservative",
@@ -4210,55 +4257,7 @@
         "n_episodes": 40
       }
     },
-    "sb_e285a50405f3": {
-      "robot_id": "keenon_w3",
-      "density": "normal",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 1.0,
-        "min_gap_m": 0.10869999999999999,
-        "ci95": [
-          0.9123754607496077,
-          1.0
-        ],
-        "median_mission_s": 79.4,
-        "near_miss_per_mission": 4.7,
-        "stops_per_mission": 6.85,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 40,
-        "n_episodes": 40
-      }
-    },
-    "sb_b333c272994a": {
-      "robot_id": "keenon_dinerbot_t9",
-      "density": "quiet",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 1.0,
-        "min_gap_m": 0.11805,
-        "ci95": [
-          0.9123754607496077,
-          1.0
-        ],
-        "median_mission_s": 60.8,
-        "near_miss_per_mission": 1.325,
-        "stops_per_mission": 2.125,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 40,
-        "n_episodes": 40
-      }
-    },
-    "sb_765cb6f48709": {
+    "sb_579fe4285a5a": {
       "robot_id": "keenon_dinerbot_t9",
       "density": "quiet",
       "bound": "nominal",
@@ -4282,7 +4281,103 @@
         "n_episodes": 40
       }
     },
-    "sb_3bc2a9c7de83": {
+    "sb_40938549beb6": {
+      "robot_id": "keenon_w3",
+      "density": "peak",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10915,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 112.25,
+        "near_miss_per_mission": 11.825,
+        "stops_per_mission": 15.2,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_b3e9b3c5173e": {
+      "robot_id": "keenon_w3",
+      "density": "peak",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10915,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 112.25,
+        "near_miss_per_mission": 11.825,
+        "stops_per_mission": 15.2,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_c64b9c81df4e": {
+      "robot_id": "keenon_dinerbot_t9",
+      "density": "normal",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.95,
+        "min_gap_m": 0.1185,
+        "ci95": [
+          0.834958291820748,
+          0.9861796228538989
+        ],
+        "median_mission_s": 74.8,
+        "near_miss_per_mission": 4.225,
+        "stops_per_mission": 5.925,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 2
+        },
+        "n_success": 38,
+        "n_episodes": 40
+      }
+    },
+    "sb_1ff06d056f2c": {
+      "robot_id": "keenon_dinerbot_t9",
+      "density": "normal",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.95,
+        "min_gap_m": 0.1185,
+        "ci95": [
+          0.834958291820748,
+          0.9861796228538989
+        ],
+        "median_mission_s": 74.8,
+        "near_miss_per_mission": 4.225,
+        "stops_per_mission": 5.925,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 2
+        },
+        "n_success": 38,
+        "n_episodes": 40
+      }
+    },
+    "sb_c55dbd32c0f7": {
       "robot_id": "keenon_dinerbot_t9",
       "density": "quiet",
       "bound": "conservative",
@@ -4306,127 +4401,7 @@
         "n_episodes": 40
       }
     },
-    "sb_a6ff401274e6": {
-      "robot_id": "keenon_w3",
-      "density": "peak",
-      "bound": "nominal",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 1.0,
-        "min_gap_m": 0.10915,
-        "ci95": [
-          0.9123754607496077,
-          1.0
-        ],
-        "median_mission_s": 112.25,
-        "near_miss_per_mission": 11.825,
-        "stops_per_mission": 15.2,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 40,
-        "n_episodes": 40
-      }
-    },
-    "sb_78ce66ca7b50": {
-      "robot_id": "keenon_w3",
-      "density": "peak",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 1.0,
-        "min_gap_m": 0.10915,
-        "ci95": [
-          0.9123754607496077,
-          1.0
-        ],
-        "median_mission_s": 112.25,
-        "near_miss_per_mission": 11.825,
-        "stops_per_mission": 15.2,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 0
-        },
-        "n_success": 40,
-        "n_episodes": 40
-      }
-    },
-    "sb_efc1fa3c1770": {
-      "robot_id": "keenon_dinerbot_t9",
-      "density": "normal",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.95,
-        "min_gap_m": 0.1185,
-        "ci95": [
-          0.834958291820748,
-          0.9861796228538989
-        ],
-        "median_mission_s": 74.8,
-        "near_miss_per_mission": 4.225,
-        "stops_per_mission": 5.925,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 2
-        },
-        "n_success": 38,
-        "n_episodes": 40
-      }
-    },
-    "sb_00fab14fa702": {
-      "robot_id": "keenon_dinerbot_t9",
-      "density": "normal",
-      "bound": "nominal",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.95,
-        "min_gap_m": 0.1185,
-        "ci95": [
-          0.834958291820748,
-          0.9861796228538989
-        ],
-        "median_mission_s": 74.8,
-        "near_miss_per_mission": 4.225,
-        "stops_per_mission": 5.925,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 2
-        },
-        "n_success": 38,
-        "n_episodes": 40
-      }
-    },
-    "sb_26803c956feb": {
-      "robot_id": "keenon_dinerbot_t9",
-      "density": "normal",
-      "bound": "conservative",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.95,
-        "min_gap_m": 0.1185,
-        "ci95": [
-          0.834958291820748,
-          0.9861796228538989
-        ],
-        "median_mission_s": 74.8,
-        "near_miss_per_mission": 4.225,
-        "stops_per_mission": 5.925,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 2
-        },
-        "n_success": 38,
-        "n_episodes": 40
-      }
-    },
-    "sb_9121f3fe6d23": {
+    "sb_323ea21b2ba7": {
       "robot_id": "keenon_w3",
       "density": "peak",
       "bound": "conservative",
@@ -4450,7 +4425,31 @@
         "n_episodes": 40
       }
     },
-    "sb_70c3e78b9785": {
+    "sb_4785947f1f89": {
+      "robot_id": "keenon_dinerbot_t9",
+      "density": "normal",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.95,
+        "min_gap_m": 0.1185,
+        "ci95": [
+          0.834958291820748,
+          0.9861796228538989
+        ],
+        "median_mission_s": 74.8,
+        "near_miss_per_mission": 4.225,
+        "stops_per_mission": 5.925,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 2
+        },
+        "n_success": 38,
+        "n_episodes": 40
+      }
+    },
+    "sb_f519c9bab8eb": {
       "robot_id": "pudu_t300",
       "density": "quiet",
       "bound": "optimistic",
@@ -4474,7 +4473,7 @@
         "n_episodes": 40
       }
     },
-    "sb_14767a360968": {
+    "sb_9c3fcfc771b1": {
       "robot_id": "pudu_t300",
       "density": "quiet",
       "bound": "nominal",
@@ -4498,7 +4497,7 @@
         "n_episodes": 40
       }
     },
-    "sb_4e9b0ea7d6e0": {
+    "sb_74398a8f2588": {
       "robot_id": "pudu_t300",
       "density": "quiet",
       "bound": "conservative",
@@ -4522,31 +4521,7 @@
         "n_episodes": 40
       }
     },
-    "sb_55222ab9a89d": {
-      "robot_id": "keenon_dinerbot_t9",
-      "density": "peak",
-      "bound": "nominal",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.925,
-        "min_gap_m": 0.11574999999999999,
-        "ci95": [
-          0.8013546984090248,
-          0.9741644432281419
-        ],
-        "median_mission_s": 110.5,
-        "near_miss_per_mission": 11.375,
-        "stops_per_mission": 15.975,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 2,
-          "collision": 1
-        },
-        "n_success": 37,
-        "n_episodes": 40
-      }
-    },
-    "sb_f673be977fba": {
+    "sb_d52a206e77b3": {
       "robot_id": "keenon_dinerbot_t9",
       "density": "peak",
       "bound": "optimistic",
@@ -4570,79 +4545,31 @@
         "n_episodes": 40
       }
     },
-    "sb_f5532b6af279": {
-      "robot_id": "pudu_t300",
-      "density": "normal",
-      "bound": "optimistic",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.925,
-        "min_gap_m": 0.04865,
-        "ci95": [
-          0.8013546984090248,
-          0.9741644432281419
-        ],
-        "median_mission_s": 75.1,
-        "near_miss_per_mission": 4.025,
-        "stops_per_mission": 5.8,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 3
-        },
-        "n_success": 37,
-        "n_episodes": 40
-      }
-    },
-    "sb_42dcd6e93645": {
-      "robot_id": "pudu_t300",
-      "density": "normal",
+    "sb_0806d0cb5c4c": {
+      "robot_id": "keenon_dinerbot_t9",
+      "density": "peak",
       "bound": "nominal",
       "n_episodes": 40,
       "results": {
         "success_rate": 0.925,
-        "min_gap_m": 0.04865,
+        "min_gap_m": 0.11574999999999999,
         "ci95": [
           0.8013546984090248,
           0.9741644432281419
         ],
-        "median_mission_s": 75.1,
-        "near_miss_per_mission": 4.025,
-        "stops_per_mission": 5.8,
+        "median_mission_s": 110.5,
+        "near_miss_per_mission": 11.375,
+        "stops_per_mission": 15.975,
         "fail_reasons": {
           "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 3
+          "blocked_timeout": 2,
+          "collision": 1
         },
         "n_success": 37,
         "n_episodes": 40
       }
     },
-    "sb_c455f4561ac5": {
-      "robot_id": "pudu_t300",
-      "density": "normal",
-      "bound": "conservative",
-      "n_episodes": 40,
-      "results": {
-        "success_rate": 0.925,
-        "min_gap_m": 0.04865,
-        "ci95": [
-          0.8013546984090248,
-          0.9741644432281419
-        ],
-        "median_mission_s": 75.1,
-        "near_miss_per_mission": 4.025,
-        "stops_per_mission": 5.8,
-        "fail_reasons": {
-          "no_path_static": 0,
-          "blocked_timeout": 0,
-          "collision": 3
-        },
-        "n_success": 37,
-        "n_episodes": 40
-      }
-    },
-    "sb_33ec807bc9a0": {
+    "sb_9eac456452cf": {
       "robot_id": "keenon_dinerbot_t9",
       "density": "peak",
       "bound": "conservative",
@@ -4666,7 +4593,79 @@
         "n_episodes": 40
       }
     },
-    "sb_d0b7a3db74ce": {
+    "sb_0a9e7b27f04c": {
+      "robot_id": "pudu_t300",
+      "density": "normal",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.04865,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 75.1,
+        "near_miss_per_mission": 4.025,
+        "stops_per_mission": 5.8,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 3
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_603de7481be1": {
+      "robot_id": "pudu_t300",
+      "density": "normal",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.04865,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 75.1,
+        "near_miss_per_mission": 4.025,
+        "stops_per_mission": 5.8,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 3
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_c96226b65141": {
+      "robot_id": "pudu_t300",
+      "density": "normal",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.04865,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 75.1,
+        "near_miss_per_mission": 4.025,
+        "stops_per_mission": 5.8,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 3
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_72e2536076f9": {
       "robot_id": "pudu_t300",
       "density": "peak",
       "bound": "optimistic",
@@ -4690,7 +4689,7 @@
         "n_episodes": 40
       }
     },
-    "sb_4b9bff155af5": {
+    "sb_6ac29fd4afbf": {
       "robot_id": "pudu_t300",
       "density": "peak",
       "bound": "nominal",
@@ -4714,7 +4713,7 @@
         "n_episodes": 40
       }
     },
-    "sb_aa83abd3b65a": {
+    "sb_8249de06ad1f": {
       "robot_id": "pudu_t300",
       "density": "peak",
       "bound": "conservative",
@@ -5020,79 +5019,7 @@
       "tool": "list_candidates",
       "args": {},
       "result": {},
-      "t": 1793134922.516
-    },
-    {
-      "caller": "super",
-      "tool": "run_feasibility",
-      "args": {
-        "robot_id": "keenon_dinerbot_t8",
-        "bound": "nominal"
-      },
-      "result": {
-        "ok": true
-      },
-      "t": 1793134936.959
-    },
-    {
-      "caller": "super",
-      "tool": "run_feasibility",
-      "args": {
-        "robot_id": "bear_servi",
-        "bound": "nominal"
-      },
-      "result": {
-        "ok": true
-      },
-      "t": 1793134937.857
-    },
-    {
-      "caller": "super",
-      "tool": "run_feasibility",
-      "args": {
-        "robot_id": "pudu_kettybot",
-        "bound": "nominal"
-      },
-      "result": {
-        "ok": true
-      },
-      "t": 1793134938.602
-    },
-    {
-      "caller": "super",
-      "tool": "run_feasibility",
-      "args": {
-        "robot_id": "keenon_w3",
-        "bound": "nominal"
-      },
-      "result": {
-        "ok": true
-      },
-      "t": 1793134939.533
-    },
-    {
-      "caller": "super",
-      "tool": "run_feasibility",
-      "args": {
-        "robot_id": "keenon_dinerbot_t9",
-        "bound": "nominal"
-      },
-      "result": {
-        "ok": true
-      },
-      "t": 1793134940.419
-    },
-    {
-      "caller": "super",
-      "tool": "run_feasibility",
-      "args": {
-        "robot_id": "pudu_t300",
-        "bound": "nominal"
-      },
-      "result": {
-        "ok": true
-      },
-      "t": 1793134941.281
+      "t": 1793168681.896
     },
     {
       "caller": "code",
@@ -5104,7 +5031,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793134946.888
+      "t": 1793168693.631
     },
     {
       "caller": "code",
@@ -5116,7 +5043,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793134946.888
+      "t": 1793168696.769
     },
     {
       "caller": "code",
@@ -5128,7 +5055,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793134947.759
+      "t": 1793168699.825
     },
     {
       "caller": "code",
@@ -5140,7 +5067,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793134948.876
+      "t": 1793168703.295
     },
     {
       "caller": "code",
@@ -5152,7 +5079,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793134948.876
+      "t": 1793168706.5
     },
     {
       "caller": "code",
@@ -5164,7 +5091,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793134950.125
+      "t": 1793168709.759
     },
     {
       "caller": "code",
@@ -5176,7 +5103,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793134950.938
+      "t": 1793168713.262
     },
     {
       "caller": "code",
@@ -5188,7 +5115,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793134950.938
+      "t": 1793168716.612
     },
     {
       "caller": "code",
@@ -5200,7 +5127,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793134951.804
+      "t": 1793168719.887
     },
     {
       "caller": "code",
@@ -5212,7 +5139,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793134952.675
+      "t": 1793168723.189
     },
     {
       "caller": "code",
@@ -5224,7 +5151,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793134952.675
+      "t": 1793168726.368
     },
     {
       "caller": "code",
@@ -5236,7 +5163,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793134953.381
+      "t": 1793168729.666
     },
     {
       "caller": "code",
@@ -5248,7 +5175,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793134954.189
+      "t": 1793168732.898
     },
     {
       "caller": "code",
@@ -5260,7 +5187,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793134954.189
+      "t": 1793168735.972
     },
     {
       "caller": "code",
@@ -5272,7 +5199,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793134954.993
+      "t": 1793168738.95
     },
     {
       "caller": "code",
@@ -5284,7 +5211,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793134955.959
+      "t": 1793168742.569
     },
     {
       "caller": "code",
@@ -5296,7 +5223,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793134955.959
+      "t": 1793168745.994
     },
     {
       "caller": "code",
@@ -5308,49 +5235,7 @@
       "result": {
         "ok": true
       },
-      "t": 1793134956.899
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "keenon_dinerbot_t8",
-        "density": "quiet",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_d0e6e2070eb5"
-      },
-      "t": 1793135075.4
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "keenon_dinerbot_t8",
-        "density": "normal",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_b1b83bffe50f"
-      },
-      "t": 1793135118.222
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "keenon_dinerbot_t8",
-        "density": "normal",
-        "bound": "nominal"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_ef707dea6880"
-      },
-      "t": 1793135119.075
+      "t": 1793168749.339
     },
     {
       "caller": "code",
@@ -5362,23 +5247,37 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_a2efc5b0931b"
+        "batch_id": "sb_b2182b67d2f7"
       },
-      "t": 1793135124.716
+      "t": 1793168822.89
     },
     {
       "caller": "code",
       "tool": "run_batch",
       "args": {
-        "robot_id": "bear_servi",
-        "density": "quiet",
-        "bound": "nominal"
+        "robot_id": "keenon_dinerbot_t8",
+        "density": "normal",
+        "bound": "optimistic"
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_d693ff018637"
+        "batch_id": "sb_27f3f97fa2d1"
       },
-      "t": 1793135127.366
+      "t": 1793168823.843
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t8",
+        "density": "quiet",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_058d9c7c1975"
+      },
+      "t": 1793168826.163
     },
     {
       "caller": "code",
@@ -5390,9 +5289,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_8139cf5c4470"
+        "batch_id": "sb_7ed92fb4bc85"
       },
-      "t": 1793135130.687
+      "t": 1793168826.292
     },
     {
       "caller": "code",
@@ -5404,51 +5303,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_979ad47ec78c"
+        "batch_id": "sb_cf31a2438cab"
       },
-      "t": 1793135131.513
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "bear_servi",
-        "density": "quiet",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_95b878470915"
-      },
-      "t": 1793135132.497
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "keenon_dinerbot_t8",
-        "density": "peak",
-        "bound": "conservative"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_cad387bf7378"
-      },
-      "t": 1793135160.049
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "keenon_dinerbot_t8",
-        "density": "peak",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_17063cd9b267"
-      },
-      "t": 1793135167.663
+      "t": 1793168828.571
     },
     {
       "caller": "code",
@@ -5460,9 +5317,65 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_071d393f5171"
+        "batch_id": "sb_8f302f31b557"
       },
-      "t": 1793135191.047
+      "t": 1793168842.21
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "bear_servi",
+        "density": "quiet",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_7f700eda8eb6"
+      },
+      "t": 1793168842.334
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t8",
+        "density": "normal",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_d37139145d7e"
+      },
+      "t": 1793168842.463
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "bear_servi",
+        "density": "quiet",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_60f9b75a199d"
+      },
+      "t": 1793168846.167
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t8",
+        "density": "peak",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_004759d24ecf"
+      },
+      "t": 1793168856.207
     },
     {
       "caller": "code",
@@ -5474,51 +5387,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_593c904f1842"
+        "batch_id": "sb_4006b0ed5dee"
       },
-      "t": 1793135196.815
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "bear_servi",
-        "density": "normal",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_1db01426f956"
-      },
-      "t": 1793135211.787
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "pudu_kettybot",
-        "density": "quiet",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_66f267bd7c2d"
-      },
-      "t": 1793135215.239
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "bear_servi",
-        "density": "normal",
-        "bound": "conservative"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_75858c483564"
-      },
-      "t": 1793135216.906
+      "t": 1793168879.392
     },
     {
       "caller": "code",
@@ -5530,9 +5401,37 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_32f58c01c786"
+        "batch_id": "sb_c0ff128b4956"
       },
-      "t": 1793135220.584
+      "t": 1793168881.09
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t8",
+        "density": "peak",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_6815bdadb98b"
+      },
+      "t": 1793168881.523
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "bear_servi",
+        "density": "normal",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_3a7e89cd5e0d"
+      },
+      "t": 1793168888.02
     },
     {
       "caller": "code",
@@ -5544,9 +5443,51 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_fcb635af5f24"
+        "batch_id": "sb_569ad7e85c40"
       },
-      "t": 1793135242.045
+      "t": 1793168893.638
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "bear_servi",
+        "density": "normal",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_03dd3900cce9"
+      },
+      "t": 1793168898.818
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_kettybot",
+        "density": "quiet",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_cb3f2f090ffc"
+      },
+      "t": 1793168909.301
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "bear_servi",
+        "density": "peak",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_faa467622c63"
+      },
+      "t": 1793168918.21
     },
     {
       "caller": "code",
@@ -5558,9 +5499,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_8233589f1bf0"
+        "batch_id": "sb_ec39f1999209"
       },
-      "t": 1793135249.471
+      "t": 1793168925.6
     },
     {
       "caller": "code",
@@ -5572,9 +5513,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_d4a855fc7576"
+        "batch_id": "sb_8a25748cc473"
       },
-      "t": 1793135250.902
+      "t": 1793168928.566
     },
     {
       "caller": "code",
@@ -5586,23 +5527,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_32be9cf2a263"
+        "batch_id": "sb_65a828a0d2c4"
       },
-      "t": 1793135256.477
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "bear_servi",
-        "density": "peak",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_72cce149076d"
-      },
-      "t": 1793135258.464
+      "t": 1793168931.21
     },
     {
       "caller": "code",
@@ -5614,9 +5541,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_194838a95e6c"
+        "batch_id": "sb_284c214b6e25"
       },
-      "t": 1793135264.304
+      "t": 1793168932.688
     },
     {
       "caller": "code",
@@ -5628,9 +5555,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_816a16f412c5"
+        "batch_id": "sb_d8b3b4d3a3c5"
       },
-      "t": 1793135268.388
+      "t": 1793168933.419
     },
     {
       "caller": "code",
@@ -5642,79 +5569,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_f96c7e949eff"
+        "batch_id": "sb_c1fae27bf0a8"
       },
-      "t": 1793135278.661
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "keenon_w3",
-        "density": "quiet",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_d729ed67dd11"
-      },
-      "t": 1793135291.988
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "keenon_w3",
-        "density": "quiet",
-        "bound": "nominal"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_d2b53511b957"
-      },
-      "t": 1793135297.67
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "pudu_kettybot",
-        "density": "peak",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_37916d2b47fd"
-      },
-      "t": 1793135306.158
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "keenon_w3",
-        "density": "quiet",
-        "bound": "conservative"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_5ebd9f921581"
-      },
-      "t": 1793135306.435
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "pudu_kettybot",
-        "density": "peak",
-        "bound": "conservative"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_c937c9e505c9"
-      },
-      "t": 1793135308.221
+      "t": 1793168938.437
     },
     {
       "caller": "code",
@@ -5726,9 +5583,93 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_11ee6f0782f4"
+        "batch_id": "sb_fa5d213d320f"
       },
-      "t": 1793135308.842
+      "t": 1793168956.138
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_w3",
+        "density": "quiet",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_8eaa6a7a07c2"
+      },
+      "t": 1793168957.541
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_kettybot",
+        "density": "peak",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_e9784dfbe6b2"
+      },
+      "t": 1793168959.299
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_w3",
+        "density": "quiet",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_ed15fc03efe4"
+      },
+      "t": 1793168973.17
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_kettybot",
+        "density": "peak",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_908941eab776"
+      },
+      "t": 1793168974.73
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_w3",
+        "density": "quiet",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_cbe53288c8ff"
+      },
+      "t": 1793168976.958
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_w3",
+        "density": "normal",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_91db9c44274c"
+      },
+      "t": 1793168977.865
     },
     {
       "caller": "code",
@@ -5740,9 +5681,23 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_47a26669243f"
+        "batch_id": "sb_5fe24c869732"
       },
-      "t": 1793135316.086
+      "t": 1793168991.806
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t9",
+        "density": "quiet",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_3f4e69595532"
+      },
+      "t": 1793169002.361
     },
     {
       "caller": "code",
@@ -5754,37 +5709,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_61c46ec0af64"
+        "batch_id": "sb_8f90c5b1978c"
       },
-      "t": 1793135323.981
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "keenon_w3",
-        "density": "normal",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_e285a50405f3"
-      },
-      "t": 1793135327.124
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "keenon_dinerbot_t9",
-        "density": "quiet",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_b333c272994a"
-      },
-      "t": 1793135340.235
+      "t": 1793169004.472
     },
     {
       "caller": "code",
@@ -5796,37 +5723,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_765cb6f48709"
+        "batch_id": "sb_579fe4285a5a"
       },
-      "t": 1793135346.266
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "keenon_dinerbot_t9",
-        "density": "quiet",
-        "bound": "conservative"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_3bc2a9c7de83"
-      },
-      "t": 1793135428.582
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "keenon_w3",
-        "density": "peak",
-        "bound": "nominal"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_a6ff401274e6"
-      },
-      "t": 1793135675.486
+      "t": 1793169018.223
     },
     {
       "caller": "code",
@@ -5838,23 +5737,23 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_78ce66ca7b50"
+        "batch_id": "sb_40938549beb6"
       },
-      "t": 1793135798.866
+      "t": 1793169030.299
     },
     {
       "caller": "code",
       "tool": "run_batch",
       "args": {
-        "robot_id": "keenon_dinerbot_t9",
-        "density": "normal",
-        "bound": "optimistic"
+        "robot_id": "keenon_w3",
+        "density": "peak",
+        "bound": "nominal"
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_efc1fa3c1770"
+        "batch_id": "sb_b3e9b3c5173e"
       },
-      "t": 1793135920.859
+      "t": 1793169031.338
     },
     {
       "caller": "code",
@@ -5866,9 +5765,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_00fab14fa702"
+        "batch_id": "sb_c64b9c81df4e"
       },
-      "t": 1793135975.211
+      "t": 1793169037.551
     },
     {
       "caller": "code",
@@ -5876,13 +5775,27 @@
       "args": {
         "robot_id": "keenon_dinerbot_t9",
         "density": "normal",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_1ff06d056f2c"
+      },
+      "t": 1793169037.603
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t9",
+        "density": "quiet",
         "bound": "conservative"
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_26803c956feb"
+        "batch_id": "sb_c55dbd32c0f7"
       },
-      "t": 1793136118.759
+      "t": 1793169038.304
     },
     {
       "caller": "code",
@@ -5894,9 +5807,23 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_9121f3fe6d23"
+        "batch_id": "sb_323ea21b2ba7"
       },
-      "t": 1793136198.254
+      "t": 1793169048.065
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t9",
+        "density": "normal",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_4785947f1f89"
+      },
+      "t": 1793169049.866
     },
     {
       "caller": "code",
@@ -5908,9 +5835,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_70c3e78b9785"
+        "batch_id": "sb_f519c9bab8eb"
       },
-      "t": 1793136769.945
+      "t": 1793169072.519
     },
     {
       "caller": "code",
@@ -5922,9 +5849,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_14767a360968"
+        "batch_id": "sb_9c3fcfc771b1"
       },
-      "t": 1793136961.639
+      "t": 1793169088.503
     },
     {
       "caller": "code",
@@ -5936,23 +5863,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_4e9b0ea7d6e0"
+        "batch_id": "sb_74398a8f2588"
       },
-      "t": 1793137179.367
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "keenon_dinerbot_t9",
-        "density": "peak",
-        "bound": "nominal"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_55222ab9a89d"
-      },
-      "t": 1793137204.088
+      "t": 1793169089.407
     },
     {
       "caller": "code",
@@ -5964,51 +5877,23 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_f673be977fba"
+        "batch_id": "sb_d52a206e77b3"
       },
-      "t": 1793137308.984
+      "t": 1793169094.305
     },
     {
       "caller": "code",
       "tool": "run_batch",
       "args": {
-        "robot_id": "pudu_t300",
-        "density": "normal",
-        "bound": "optimistic"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_f5532b6af279"
-      },
-      "t": 1793137554.294
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "pudu_t300",
-        "density": "normal",
+        "robot_id": "keenon_dinerbot_t9",
+        "density": "peak",
         "bound": "nominal"
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_42dcd6e93645"
+        "batch_id": "sb_0806d0cb5c4c"
       },
-      "t": 1793137638.77
-    },
-    {
-      "caller": "code",
-      "tool": "run_batch",
-      "args": {
-        "robot_id": "pudu_t300",
-        "density": "normal",
-        "bound": "conservative"
-      },
-      "result": {
-        "ok": true,
-        "batch_id": "sb_c455f4561ac5"
-      },
-      "t": 1793137728.908
+      "t": 1793169094.933
     },
     {
       "caller": "code",
@@ -6020,9 +5905,51 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_33ec807bc9a0"
+        "batch_id": "sb_9eac456452cf"
       },
-      "t": 1793137787.986
+      "t": 1793169095.716
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "normal",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_0a9e7b27f04c"
+      },
+      "t": 1793169100.787
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "normal",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_603de7481be1"
+      },
+      "t": 1793169101.743
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "normal",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_c96226b65141"
+      },
+      "t": 1793169105.431
     },
     {
       "caller": "code",
@@ -6034,9 +5961,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_d0b7a3db74ce"
+        "batch_id": "sb_72e2536076f9"
       },
-      "t": 1793138730.996
+      "t": 1793169132.144
     },
     {
       "caller": "code",
@@ -6048,9 +5975,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_4b9bff155af5"
+        "batch_id": "sb_6ac29fd4afbf"
       },
-      "t": 1793138786.437
+      "t": 1793169135.358
     },
     {
       "caller": "code",
@@ -6062,9 +5989,9 @@
       },
       "result": {
         "ok": true,
-        "batch_id": "sb_aa83abd3b65a"
+        "batch_id": "sb_8249de06ad1f"
       },
-      "t": 1793139428.788
+      "t": 1793169153.973
     }
   ],
   "report": {
@@ -6110,13 +6037,13 @@
     }
   ],
   "episodes_per_batch": 40,
-  "finished_at": 1793139861.3098497,
+  "finished_at": 1793169213.6029055,
   "replay_batches": {
-    "keenon_dinerbot_t8": "sb_ef707dea6880",
-    "bear_servi": "sb_32f58c01c786",
-    "pudu_kettybot": "sb_816a16f412c5",
-    "keenon_w3": "sb_47a26669243f",
-    "keenon_dinerbot_t9": "sb_00fab14fa702",
-    "pudu_t300": "sb_42dcd6e93645"
+    "keenon_dinerbot_t8": "sb_d37139145d7e",
+    "bear_servi": "sb_c0ff128b4956",
+    "pudu_kettybot": "sb_d8b3b4d3a3c5",
+    "keenon_w3": "sb_5fe24c869732",
+    "keenon_dinerbot_t9": "sb_c64b9c81df4e",
+    "pudu_t300": "sb_603de7481be1"
   }
 }

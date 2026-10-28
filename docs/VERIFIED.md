@@ -58,7 +58,26 @@ Note: the Nov 2026 page also says "Update the `model` and `base_url` values in y
 
 ## Token Factory
 
-Live check section, written by `scripts/verify_token_factory.py` (it replaces this whole section). It has not run yet because we have no `NEBIUS_API_KEY`. Until it runs, every model ID above stays at the status shown in Section 1A.
+Checked 2026-10-28T05:09:38+00:00 by `scripts/verify_token_factory.py` against `https://api.tokenfactory.nebius.com/v1/`.
+
+GET /v1/models returned 30 models; NVIDIA-related: `nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B`, `nvidia/Nemotron-3-Ultra-550b-a55b`, `nvidia/Nemotron-3.5-Super-VL`, `nvidia/Nemotron-3_5-Lightning`, `nvidia/nemotron-3-super-120b-a12b`
+
+| Role | Candidate | Provider | Listed | Retires | Active | Hello-world |
+|---|---|---|---|---|---|---|
+| nano | `nvidia/Nemotron-3_5-Lightning` | token_factory | yes |  | yes | ok, 2.94 s, 23+2 tok |
+| nano | `nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B` | token_factory | yes | 2026-11-09 |  |  |
+| super | `nvidia/Nemotron-3.5-Super-VL` | token_factory | yes |  | yes | ok, 0.85 s, 23+26 tok |
+| super | `nvidia/nemotron-3-super-120b-a12b` | token_factory | yes | 2026-11-09 |  |  |
+| ultra | `nvidia/Nemotron-3-Ultra-550b-a55b` | token_factory | yes |  | yes | ok, 0.46 s, 23+16 tok |
+| vision | `nvidia/Cosmos-Reason2-8B` | self_hosted_vllm | not checked |  |  |  |
+| vision | `nvidia/Nemotron-3.5-Super-VL` | token_factory | yes |  | yes | ok, 0.79 s, 23+38 tok |
+
+Retirement notices:
+- nano: `nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B` retires 2026-11-09
+- super: `nvidia/nemotron-3-super-120b-a12b` retires 2026-11-09
+
+Self-hosted vision endpoint (CLEARANCE_VISION_BASE_URL): unset, not checked.
+Prices in config/models.yaml are not checked by this script (no pricing API): confirm with account.
 
 ## 2. Nebius AI Cloud: Serverless AI (jobs and endpoints)
 
