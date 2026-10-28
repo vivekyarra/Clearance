@@ -1,0 +1,44 @@
+{
+  "batch_id": "sb_d0b7a3db74ce",
+  "twin_id": "twin_ref_corridor_v1",
+  "twin_version": 1,
+  "robot_id": "pudu_t300",
+  "task": {
+    "type": "delivery",
+    "sequence": [
+      "DOCK",
+      "PICKUP",
+      "O4",
+      "O3",
+      "O2",
+      "O1",
+      "DOCK"
+    ]
+  },
+  "density": "peak",
+  "geometry_bound": "optimistic",
+  "n_episodes": 40,
+  "seed_base": 1000,
+  "code_version": "f3a233c+sim-d77ef3d9a1",
+  "results": {
+    "success_rate": 0.9,
+    "min_gap_m": 0.051500000000000004,
+    "ci95": [
+      0.7694792561952611,
+      0.9604211124044252
+    ],
+    "median_mission_s": 112.65,
+    "near_miss_per_mission": 10.775,
+    "stops_per_mission": 14.7,
+    "fail_reasons": {
+      "no_path_static": 0,
+      "blocked_timeout": 1,
+      "collision": 3
+    },
+    "n_success": 36,
+    "n_episodes": 40
+  },
+  "episodes_uri": null,
+  "bottleneck_uri": null,
+  "wall_time_s": 2609.673
+}

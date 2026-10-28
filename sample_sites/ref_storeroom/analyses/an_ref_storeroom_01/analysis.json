@@ -1,0 +1,6177 @@
+{
+  "analysis_id": "an_ref_storeroom_01",
+  "status": "done",
+  "started_at": 1793132789.096347,
+  "stages": {
+    "candidates": {
+      "state": "done",
+      "progress": 1.0,
+      "detail": "4 candidate(s); ordering by Super"
+    },
+    "feasibility": {
+      "state": "done",
+      "progress": 1.0
+    },
+    "batches": {
+      "state": "done",
+      "progress": 1.0,
+      "detail": "36 batch(es), 40 episodes each"
+    },
+    "investigation": {
+      "state": "done",
+      "progress": 1.0,
+      "detail": "investigated mir_mir250, mir_mir100"
+    },
+    "optimizer": {
+      "state": "done",
+      "progress": 1.0
+    },
+    "verdicts": {
+      "state": "done",
+      "progress": 1.0
+    },
+    "report": {
+      "state": "done",
+      "progress": 1.0
+    }
+  },
+  "inputs": {
+    "site_id": "ref_storeroom",
+    "twin_id": "twin_ref_storeroom_v1",
+    "twin_version": 1,
+    "robot_ids": [
+      "mir_mir100",
+      "mir_mir250",
+      "otto_100",
+      "pudu_t300"
+    ],
+    "task": {
+      "type": "delivery",
+      "sequence": [
+        "DOCK",
+        "PICKUP",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "DOCK"
+      ]
+    },
+    "business": {
+      "staff_cost_per_hour": 22.0,
+      "task_hours_per_day": 4.0,
+      "days_per_week": 5,
+      "maintenance_pct_per_year": 10.0,
+      "currency": "USD",
+      "robot_class": "B_amr",
+      "payload_kg": 60.0,
+      "note": "example operator inputs entered by the user (reference site)"
+    },
+    "budget": {
+      "max_robots": 6,
+      "densities": [
+        "quiet",
+        "normal",
+        "peak"
+      ],
+      "bounds": [
+        "optimistic",
+        "nominal",
+        "conservative"
+      ],
+      "episodes": 40,
+      "seed_base": 1000,
+      "max_total_episodes": null,
+      "investigate_max_robots": 2,
+      "optimizer_max_robots": 2,
+      "confirm_episodes": 50,
+      "llm_rounds": 6,
+      "max_workers": 11,
+      "optimizer": {
+        "screen_episodes": 30,
+        "confirm_episodes": 50,
+        "top_k_confirm": 3,
+        "top_k_combo": 2,
+        "max_objects": 4,
+        "max_moves_per_object": 8,
+        "max_episodes": 900
+      },
+      "investigation": {
+        "max_steps": 8,
+        "max_experiments": 6,
+        "probe_episodes": 30
+      },
+      "include_awaiting_review": true
+    },
+    "include_awaiting_review": true
+  },
+  "twin": {
+    "twin_id": "twin_ref_storeroom_v1",
+    "site_id": "ref_storeroom",
+    "version": 1,
+    "accuracy": {
+      "method": "reference_ground_truth",
+      "median_abs_err_m": 0.0,
+      "p90_abs_err_m": 0.0
+    },
+    "floor": {
+      "plane": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "bounds_polygon": [
+        [
+          0.014832972528886395,
+          0.010039148399467391
+        ],
+        [
+          10.014832972528886,
+          0.010039148399467391
+        ],
+        [
+          10.014832972528886,
+          8.010039148399468
+        ],
+        [
+          0.014832972528886395,
+          8.010039148399468
+        ]
+      ]
+    },
+    "occupancy": {
+      "uri": "sites/ref_storeroom/twin_v1/occ.png",
+      "resolution_m": 0.025,
+      "origin_xy": [
+        -0.5,
+        -0.5
+      ],
+      "width": 441,
+      "height": 361,
+      "height_band_m": [
+        0.03,
+        2.0
+      ]
+    },
+    "primitives": [
+      {
+        "id": "SHELF_A",
+        "type": "box",
+        "label": "shelf",
+        "pose": {
+          "xyz": [
+            5.264832972528886,
+            2.5100391483994673,
+            1.0
+          ],
+          "yaw": 0.0
+        },
+        "size": [
+          6.5,
+          0.5999999999999996,
+          2.0
+        ],
+        "movable": false,
+        "fragile": false,
+        "confidence": 1.0,
+        "source": "reference"
+      },
+      {
+        "id": "SHELF_B",
+        "type": "box",
+        "label": "shelf",
+        "pose": {
+          "xyz": [
+            5.264832972528886,
+            4.310039148399468,
+            1.0
+          ],
+          "yaw": 0.0
+        },
+        "size": [
+          6.5,
+          0.5999999999999996,
+          2.0
+        ],
+        "movable": false,
+        "fragile": false,
+        "confidence": 1.0,
+        "source": "reference"
+      },
+      {
+        "id": "SHELF_C",
+        "type": "box",
+        "label": "shelf",
+        "pose": {
+          "xyz": [
+            5.264832972528886,
+            5.710039148399468,
+            1.0
+          ],
+          "yaw": 0.0
+        },
+        "size": [
+          6.5,
+          0.5999999999999996,
+          2.0
+        ],
+        "movable": false,
+        "fragile": false,
+        "confidence": 1.0,
+        "source": "reference"
+      },
+      {
+        "id": "SHELF_D",
+        "type": "box",
+        "label": "shelf",
+        "pose": {
+          "xyz": [
+            5.264832972528886,
+            7.710039148399468,
+            1.0
+          ],
+          "yaw": 0.0
+        },
+        "size": [
+          6.5,
+          0.5999999999999996,
+          2.0
+        ],
+        "movable": false,
+        "fragile": false,
+        "confidence": 1.0,
+        "source": "reference"
+      },
+      {
+        "id": "PALLET1",
+        "type": "box",
+        "label": "pallet",
+        "pose": {
+          "xyz": [
+            4.014832972528886,
+            1.0100391483994673,
+            0.075
+          ],
+          "yaw": 0.0
+        },
+        "size": [
+          1.1999999999999997,
+          0.7999999999999999,
+          0.15
+        ],
+        "movable": true,
+        "fragile": false,
+        "confidence": 1.0,
+        "source": "reference"
+      },
+      {
+        "id": "CART1",
+        "type": "box",
+        "label": "cart",
+        "pose": {
+          "xyz": [
+            6.528529141261031,
+            0.9870178197758545,
+            0.45
+          ],
+          "yaw": -0.045902647606380534
+        },
+        "size": [
+          0.9,
+          0.6,
+          0.9
+        ],
+        "movable": true,
+        "fragile": false,
+        "confidence": 1.0,
+        "source": "reference"
+      },
+      {
+        "id": "PILLAR1",
+        "type": "cylinder",
+        "label": "pillar",
+        "pose": {
+          "xyz": [
+            1.0148329725288865,
+            5.710039148399468,
+            1.25
+          ],
+          "yaw": 0.0
+        },
+        "size": [
+          0.4,
+          0.4,
+          2.5
+        ],
+        "movable": false,
+        "fragile": false,
+        "confidence": 1.0,
+        "source": "reference"
+      },
+      {
+        "id": "DOCKSTN",
+        "type": "box",
+        "label": "dock",
+        "pose": {
+          "xyz": [
+            0.1648329725288864,
+            0.7600391483994674,
+            0.15
+          ],
+          "yaw": 0.0
+        },
+        "size": [
+          0.3,
+          0.5,
+          0.3
+        ],
+        "movable": false,
+        "fragile": false,
+        "confidence": 1.0,
+        "source": "reference"
+      }
+    ],
+    "thresholds": [],
+    "keepout_zones": [],
+    "clear_zones": [],
+    "waypoints": [
+      {
+        "id": "DOCK",
+        "xy": [
+          0.7148329725288863,
+          0.7600391483994674
+        ],
+        "yaw": 0.0,
+        "kind": "dock"
+      },
+      {
+        "id": "PICKUP",
+        "xy": [
+          4.014832972528886,
+          1.8100391483994673
+        ],
+        "yaw": -1.5707963267948966,
+        "kind": "pickup"
+      },
+      {
+        "id": "S1",
+        "xy": [
+          5.014832972528886,
+          3.410039148399467
+        ],
+        "yaw": 0.0,
+        "kind": "dest"
+      },
+      {
+        "id": "S2",
+        "xy": [
+          5.014832972528886,
+          5.010039148399468
+        ],
+        "yaw": 0.0,
+        "kind": "dest"
+      },
+      {
+        "id": "S3",
+        "xy": [
+          5.014832972528886,
+          6.710039148399468
+        ],
+        "yaw": 0.0,
+        "kind": "dest"
+      },
+      {
+        "id": "S4",
+        "xy": [
+          9.214832972528885,
+          7.010039148399468
+        ],
+        "yaw": 0.0,
+        "kind": "dest"
+      },
+      {
+        "id": "ENTRANCE",
+        "xy": [
+          1.3148329725288865,
+          0.3600391483994674
+        ],
+        "yaw": 0.0,
+        "kind": "entrance"
+      },
+      {
+        "id": "EXIT",
+        "xy": [
+          1.1148329725288866,
+          -0.08996085160053262
+        ],
+        "yaw": 0.0,
+        "kind": "exit"
+      }
+    ],
+    "hazards": [],
+    "traffic": {
+      "source": "user_estimated",
+      "zones": [
+        {
+          "id": "door",
+          "polygon": [
+            [
+              0.5148329725288864,
+              0.010039148399467391
+            ],
+            [
+              1.7148329725288864,
+              0.010039148399467391
+            ],
+            [
+              1.7148329725288864,
+              0.8100391483994674
+            ],
+            [
+              0.5148329725288864,
+              0.8100391483994674
+            ]
+          ]
+        },
+        {
+          "id": "staging",
+          "polygon": [
+            [
+              2.0148329725288865,
+              0.2100391483994674
+            ],
+            [
+              8.014832972528886,
+              0.2100391483994674
+            ],
+            [
+              8.014832972528886,
+              2.1100391483994674
+            ],
+            [
+              2.0148329725288865,
+              2.1100391483994674
+            ]
+          ]
+        },
+        {
+          "id": "aisles",
+          "polygon": [
+            [
+              2.0148329725288865,
+              2.910039148399467
+            ],
+            [
+              8.514832972528886,
+              2.910039148399467
+            ],
+            [
+              8.514832972528886,
+              7.310039148399468
+            ],
+            [
+              2.0148329725288865,
+              7.310039148399468
+            ]
+          ]
+        }
+      ],
+      "od_pairs": [
+        [
+          "door",
+          "staging",
+          0.5
+        ],
+        [
+          "staging",
+          "aisles",
+          0.4
+        ],
+        [
+          "aisles",
+          "door",
+          0.1
+        ]
+      ],
+      "persons_per_min": {
+        "quiet": 2.0,
+        "normal": 6.0,
+        "peak": 14.0
+      },
+      "walk_speed_mps": [
+        1.2,
+        0.25
+      ],
+      "heatmap_uri": null
+    },
+    "assets": {},
+    "geometry_source": "reference"
+  },
+  "notes": [
+    "explanation for mir_mir250 dropped: it contained numbers",
+    "explanation for otto_100 dropped: it contained numbers"
+  ],
+  "candidates": [
+    "pudu_t300",
+    "mir_mir250",
+    "otto_100",
+    "mir_mir100"
+  ],
+  "candidate_details": [
+    {
+      "robot_id": "pudu_t300",
+      "vendor": "Pudu Robotics",
+      "model": "T300",
+      "class": "B_amr",
+      "width_m": 0.5,
+      "route_gap_m": 0.8,
+      "spec_status": "human-reviewed",
+      "gap_margin_m": 0.3,
+      "notes": []
+    },
+    {
+      "robot_id": "mir_mir250",
+      "vendor": "MiR",
+      "model": "MiR250",
+      "class": "B_amr",
+      "width_m": 0.58,
+      "route_gap_m": 0.8,
+      "spec_status": "human-reviewed",
+      "gap_margin_m": 0.22,
+      "notes": []
+    },
+    {
+      "robot_id": "otto_100",
+      "vendor": "OTTO Motors",
+      "model": "OTTO 100",
+      "class": "B_amr",
+      "width_m": 0.55,
+      "route_gap_m": 0.8,
+      "spec_status": "human-reviewed",
+      "gap_margin_m": 0.25,
+      "notes": []
+    },
+    {
+      "robot_id": "mir_mir100",
+      "vendor": "MiR",
+      "model": "MiR100",
+      "class": "B_amr",
+      "width_m": 0.58,
+      "route_gap_m": 0.8,
+      "spec_status": "human-reviewed",
+      "gap_margin_m": 0.22,
+      "notes": []
+    }
+  ],
+  "robots": {
+    "pudu_t300": {
+      "robot_id": "pudu_t300",
+      "class": "B_amr",
+      "vendor": "Pudu Robotics",
+      "model": "T300",
+      "footprint_polygon_m": [
+        [
+          0.4175,
+          0.25
+        ],
+        [
+          -0.4175,
+          0.25
+        ],
+        [
+          -0.4175,
+          -0.25
+        ],
+        [
+          0.4175,
+          -0.25
+        ]
+      ],
+      "footprint_approx": true,
+      "height_m": 1.35,
+      "drive": "diff_drive",
+      "in_place_rotation": true,
+      "min_turn_radius_m": 0.0,
+      "max_speed_mps": 1.2,
+      "nominal_speed_mps": null,
+      "max_threshold_m": 0.02,
+      "max_slope_deg": null,
+      "min_aisle_width_vendor_m": 0.6,
+      "payload_kg": 300.0,
+      "runtime_h": 8.0,
+      "safety_stop_distance_m": null,
+      "price": {
+        "value": null,
+        "currency": "USD",
+        "is_public": false,
+        "note": "price on request",
+        "source_url": null
+      },
+      "fields_sources": {
+        "footprint_polygon_m": {
+          "url": "https://www.pudurobotics.com/en/products/pudut300",
+          "quote": "835 mm * 500 mm * 1350 mm",
+          "retrieved_at": "2026-10-27T13:53:27Z"
+        },
+        "height_m": {
+          "url": "https://www.pudurobotics.com/en/products/pudut300",
+          "quote": "835 mm * 500 mm * 1350 mm",
+          "retrieved_at": "2026-10-27T13:53:27Z"
+        },
+        "max_speed_mps": {
+          "url": "https://www.pudurobotics.com/en/products/pudut300",
+          "quote": "Max. Speed 1.2 m/s",
+          "retrieved_at": "2026-10-27T13:53:27Z"
+        },
+        "payload_kg": {
+          "url": "https://www.pudurobotics.com/en/products/pudut300",
+          "quote": "Maximum load 300 kg",
+          "retrieved_at": "2026-10-27T13:53:27Z"
+        },
+        "max_threshold_m": {
+          "url": "https://www.pudurobotics.com/en/products/pudut300",
+          "quote": "Threshold Overcoming Height 20 mm",
+          "retrieved_at": "2026-10-27T13:53:27Z"
+        },
+        "min_aisle_width_vendor_m": {
+          "url": "https://www.pudurobotics.com/en/products/pudut300",
+          "quote": "Path Clearance \u226560 cm",
+          "retrieved_at": "2026-10-27T13:53:27Z"
+        },
+        "runtime_h": {
+          "url": "https://www.pudurobotics.com/en/products/pudut300",
+          "quote": "Run-time (Full Load) 8 h",
+          "retrieved_at": "2026-10-27T13:53:27Z"
+        }
+      },
+      "verified_by_human": true,
+      "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://www.pudurobotics.com/en/products/pudut300\"], \"null_fields\": [\"nominal_speed_mps\", \"max_slope_deg\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"values are the 'PUDU T300 Standard' column (the Lifting variant differs in weight and path width)\", \"runtime is the full-load figure; the page lists 12 h with no load\", \"dimensions order on page is not labelled; read as length x width x height\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.pudurobotics.com/en/products/pudut300\", \"https://www.pudurobotics.com/en/news/pudu-t300-amr-powers-ennoconn-ems-logistics-case-study\", \"https://www.pudurobotics.com/en/news/904\", \"https://cdn.robotshop.com/media/P/Pud/RB-Pud-04/pdf/pudu-t300-20240828-operational-guide.pdf\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_threshold_m\", \"min_aisle_width_vendor_m\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [], \"fields_rejected_by_validator\": 4, \"other_pages_differing\": [{\"field\": \"runtime_h\", \"value\": 6.0, \"url\": \"https://cdn.robotshop.com/media/P/Pud/RB-Pud-04/pdf/pudu-t300-20240828-operational-guide.pdf\"}]}}"
+    },
+    "mir_mir250": {
+      "robot_id": "mir_mir250",
+      "class": "B_amr",
+      "vendor": "MiR",
+      "model": "MiR250",
+      "footprint_polygon_m": [
+        [
+          0.4,
+          0.29
+        ],
+        [
+          -0.4,
+          0.29
+        ],
+        [
+          -0.4,
+          -0.29
+        ],
+        [
+          0.4,
+          -0.29
+        ]
+      ],
+      "footprint_approx": true,
+      "height_m": 0.3,
+      "drive": "diff_drive",
+      "in_place_rotation": true,
+      "min_turn_radius_m": 0.0,
+      "max_speed_mps": 2.0,
+      "nominal_speed_mps": null,
+      "max_threshold_m": 0.02,
+      "max_slope_deg": 2.86241,
+      "min_aisle_width_vendor_m": 1.45,
+      "payload_kg": 250.0,
+      "runtime_h": 13.0,
+      "safety_stop_distance_m": null,
+      "price": {
+        "value": null,
+        "currency": "USD",
+        "is_public": false,
+        "note": "price on request",
+        "source_url": "https://mobile-industrial-robots.com/products/robots/mir250"
+      },
+      "fields_sources": {
+        "footprint_polygon_m": {
+          "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+          "quote": "Length 800 mm | 31.5 in Width 580 mm | 22.8 in Height 300 mm",
+          "retrieved_at": "2026-10-27T13:50:50Z"
+        },
+        "height_m": {
+          "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+          "quote": "Length 800 mm | 31.5 in Width 580 mm | 22.8 in Height 300 mm",
+          "retrieved_at": "2026-10-27T13:50:50Z"
+        },
+        "max_speed_mps": {
+          "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+          "quote": "Maximum speed (with maximum payload on a flat surface) 2.0 m/s (7.2 km/h)",
+          "retrieved_at": "2026-10-27T13:50:50Z"
+        },
+        "payload_kg": {
+          "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+          "quote": "Maximum payload 250 kg | 551 lbs",
+          "retrieved_at": "2026-10-27T13:50:50Z"
+        },
+        "max_threshold_m": {
+          "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+          "quote": "Traversable gap and step tolerance 0-20 mm",
+          "retrieved_at": "2026-10-27T13:50:50Z"
+        },
+        "max_slope_deg": {
+          "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+          "quote": "Maximum incline/decline \u00b1 5% at 0.5 m/s",
+          "retrieved_at": "2026-10-27T13:50:50Z"
+        },
+        "min_aisle_width_vendor_m": {
+          "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+          "quote": "Operational corridor width With default footprint and SICK safety configuration: 1 450 mm",
+          "retrieved_at": "2026-10-27T13:50:50Z"
+        },
+        "runtime_h": {
+          "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+          "quote": "Active operation time with maximum payload 13 h",
+          "retrieved_at": "2026-10-27T13:50:50Z"
+        },
+        "price": {
+          "url": "https://mobile-industrial-robots.com/products/robots/mir250",
+          "quote": "Contact Sales",
+          "retrieved_at": "2026-10-27T13:49:55Z"
+        }
+      },
+      "verified_by_human": true,
+      "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf\", \"https://mobile-industrial-robots.com/products/robots/mir250\"], \"null_fields\": [\"nominal_speed_mps\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"source is the MiR250 specification document dated 2023-06-28 (copy hosted by distributor Hartfiel)\", \"max_slope_deg converted by code from the vendor's 5% grade (atan 0.05)\", \"min aisle is the default-footprint corridor width; the document lists narrower widths for dynamic or minimized footprints with muted protective fields\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.phoenix-mecano.ch/files/181D7B75D01/mir250-datasheet-en.pdf\", \"https://mobile-industrial-robots.com/products/robots/mir250/specifications\", \"https://shelley.com/wp-content/uploads/2024/07/MiR250-Specifications-2.81.pdf\", \"https://www.nord-modules.com/mir250-robot\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_threshold_m\", \"max_slope_deg\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [{\"field\": \"min_aisle_width_vendor_m\", \"catalog\": 1.45, \"live\": 1.0, \"live_url\": \"https://www.phoenix-mecano.ch/files/181D7B75D01/mir250-datasheet-en.pdf\", \"live_quote\": \"With dynamic footprint and SICK safety configuration: 1 000 mm | 39.4 in\", \"kept\": \"catalog\", \"why\": \"the live value is for the dynamic footprint; the catalog keeps the default-footprint corridor width (1 450 mm), which two other live pages also state\"}], \"fields_rejected_by_validator\": 4, \"other_pages_differing\": []}}"
+    },
+    "otto_100": {
+      "robot_id": "otto_100",
+      "class": "B_amr",
+      "vendor": "OTTO Motors",
+      "model": "OTTO 100",
+      "footprint_polygon_m": [
+        [
+          0.37,
+          0.275
+        ],
+        [
+          -0.37,
+          0.275
+        ],
+        [
+          -0.37,
+          -0.275
+        ],
+        [
+          0.37,
+          -0.275
+        ]
+      ],
+      "footprint_approx": true,
+      "height_m": 0.308,
+      "drive": "diff_drive",
+      "in_place_rotation": true,
+      "min_turn_radius_m": 0.0,
+      "max_speed_mps": 2.0,
+      "nominal_speed_mps": null,
+      "max_threshold_m": 0.013,
+      "max_slope_deg": null,
+      "min_aisle_width_vendor_m": 1.099,
+      "payload_kg": 150.0,
+      "runtime_h": 6.0,
+      "safety_stop_distance_m": null,
+      "price": {
+        "value": null,
+        "currency": "USD",
+        "is_public": false,
+        "note": "price on request",
+        "source_url": null
+      },
+      "fields_sources": {
+        "footprint_polygon_m": {
+          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+          "quote": "Dimensions 740 x 550 x 308 mm",
+          "retrieved_at": "2026-10-27T13:50:46Z"
+        },
+        "height_m": {
+          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+          "quote": "Dimensions 740 x 550 x 308 mm",
+          "retrieved_at": "2026-10-27T13:50:46Z"
+        },
+        "max_speed_mps": {
+          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+          "quote": "Max. Speed 2.0 m/sec (4.5 mph)",
+          "retrieved_at": "2026-10-27T13:50:46Z"
+        },
+        "payload_kg": {
+          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+          "quote": "Max. Capacity 150 kg (331 lb)",
+          "retrieved_at": "2026-10-27T13:50:46Z"
+        },
+        "min_aisle_width_vendor_m": {
+          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+          "quote": "Min. Aisle Width 1,099 mm (43 in)",
+          "retrieved_at": "2026-10-27T13:50:46Z"
+        },
+        "runtime_h": {
+          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+          "quote": "Runtime 6 hr",
+          "retrieved_at": "2026-10-27T13:50:46Z"
+        },
+        "max_threshold_m": {
+          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+          "quote": "Floor Obstacle 13 mm (0.5 in)",
+          "retrieved_at": "2026-10-27T13:50:46Z"
+        },
+        "in_place_rotation": {
+          "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+          "quote": "Turning Radius Turn in place",
+          "retrieved_at": "2026-10-27T13:50:46Z"
+        }
+      },
+      "verified_by_human": true,
+      "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=\"], \"null_fields\": [\"nominal_speed_mps\", \"max_slope_deg\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"source is spec sheet OTTO-DS001F-EN-MAR2026\", \"payload 150 kg includes attachments and cart, per the spec sheet\", \"min aisle is the one-way figure; the sheet lists 1,975 mm for two-way traffic\", \"max_threshold_m is the sheet's 'Floor Obstacle' height; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\", \"drive is the schema default (diff_drive); awaiting review\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://ottomotors.com/100\", \"https://ottomotors.com/resources/downloads/100-data-sheet\", \"https://flowntro.com/robots/otto-100\", \"https://www.advancedmhs.com/wp-content/uploads/2025/07/2024-OTTO100-DS001C-EN-FEB2024.pdf\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_threshold_m\", \"min_aisle_width_vendor_m\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [], \"fields_rejected_by_validator\": 10, \"other_pages_differing\": []}}"
+    },
+    "mir_mir100": {
+      "robot_id": "mir_mir100",
+      "class": "B_amr",
+      "vendor": "MiR",
+      "model": "MiR100",
+      "footprint_polygon_m": [
+        [
+          0.445,
+          0.29
+        ],
+        [
+          -0.445,
+          0.29
+        ],
+        [
+          -0.445,
+          -0.29
+        ],
+        [
+          0.445,
+          -0.29
+        ]
+      ],
+      "footprint_approx": true,
+      "height_m": 0.352,
+      "drive": "diff_drive",
+      "in_place_rotation": true,
+      "min_turn_radius_m": 0.0,
+      "max_speed_mps": 1.5,
+      "nominal_speed_mps": null,
+      "max_threshold_m": 0.02,
+      "max_slope_deg": 2.86241,
+      "min_aisle_width_vendor_m": 1.0,
+      "payload_kg": 100.0,
+      "runtime_h": 10.0,
+      "safety_stop_distance_m": null,
+      "price": {
+        "value": null,
+        "currency": "USD",
+        "is_public": false,
+        "note": "price on request",
+        "source_url": null
+      },
+      "fields_sources": {
+        "footprint_polygon_m": {
+          "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+          "quote": "Length 890 mm / 35 in Width 580 mm / 22.8 in Height 352 mm",
+          "retrieved_at": "2026-10-27T13:52:59Z"
+        },
+        "height_m": {
+          "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+          "quote": "Length 890 mm / 35 in Width 580 mm / 22.8 in Height 352 mm",
+          "retrieved_at": "2026-10-27T13:52:59Z"
+        },
+        "max_speed_mps": {
+          "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+          "quote": "Forwards: 1.5 m/s (5.4 km/h)",
+          "retrieved_at": "2026-10-27T13:52:59Z"
+        },
+        "payload_kg": {
+          "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+          "quote": "Maximum payload 100 kg / 220 lbs (maximum 5% incline)",
+          "retrieved_at": "2026-10-27T13:52:59Z"
+        },
+        "max_slope_deg": {
+          "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+          "quote": "Maximum payload 100 kg / 220 lbs (maximum 5% incline)",
+          "retrieved_at": "2026-10-27T13:52:59Z"
+        },
+        "max_threshold_m": {
+          "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+          "quote": "Traversable gap and sill tolerance 20 mm / 0.8 in",
+          "retrieved_at": "2026-10-27T13:52:59Z"
+        },
+        "min_aisle_width_vendor_m": {
+          "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+          "quote": "Minimum corridor width 1.0 m (default footprint)",
+          "retrieved_at": "2026-10-27T13:52:59Z"
+        },
+        "runtime_h": {
+          "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+          "quote": "Active operation time with maximum payload 10 hours",
+          "retrieved_at": "2026-10-27T13:52:59Z"
+        }
+      },
+      "verified_by_human": true,
+      "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf\"], \"null_fields\": [\"nominal_speed_mps\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"source is a MiR100 datasheet copy hosted by howtorobot.com; MiR's current lineup should be checked\", \"max_slope_deg converted by code from the 5% incline stated for maximum payload (atan 0.05)\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://24279054.fs1.hubspotusercontent-na1.net/hubfs/24279054/Resources/MiR/MiR100%20Specifications%202.57.pdf\", \"https://www.nord-modules.com/the-mir100\", \"https://sp-automation.co.uk/sp-elements/mir-autonomous-mobile-robots/mir100\", \"https://shop.hartfiel.com/products/MiR100%20Mobile%20Robot\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_slope_deg\", \"payload_kg\"], \"fields_added\": [], \"values_differing\": [{\"field\": \"min_aisle_width_vendor_m\", \"catalog\": 1.0, \"live\": 1.1, \"live_url\": \"https://24279054.fs1.hubspotusercontent-na1.net/hubfs/24279054/Resources/MiR/MiR100%20Specifications%202.57.pdf\", \"live_quote\": \"With minimized footprint and SICK safety configuration and no payload: 1 100 mm | 43.3 in\", \"kept\": \"catalog\", \"why\": \"the live value is for the minimized footprint, SICK safety configuration and no payload; the catalog keeps the default-footprint corridor width\"}, {\"field\": \"runtime_h\", \"catalog\": 10.0, \"live\": 6.88333, \"live_url\": \"https://24279054.fs1.hubspotusercontent-na1.net/hubfs/24279054/Resources/MiR/MiR100%20Specifications%202.57.pdf\", \"live_quote\": \"Up to 6 h 53 min (24V Standard battery)\", \"kept\": \"catalog\", \"why\": \"the live page (MiR100 Specifications 2.57, hosted by a third party) states 'Up to 6 h 53 min (24V Standard battery)'; the catalog keeps the MiR datasheet's 10 h active operation time at maximum payload. The two documents describe different versions or batteries; please confirm which applies\"}], \"fields_rejected_by_validator\": 1, \"other_pages_differing\": []}}"
+    }
+  },
+  "excluded": [],
+  "candidate_explanations": {
+    "pudu_t300": "narrowest footprint and largest clearance margin across all route legs, with the highest payload capacity",
+    "mir_mir100": "widest required gap relative to available clearance and the lowest payload, making it the least promising"
+  },
+  "feasibility": {
+    "pudu_t300": {
+      "robot_id": "pudu_t300",
+      "twin_id": "twin_ref_storeroom_v1",
+      "twin_version": 1,
+      "legs": [
+        {
+          "from_wp": "DOCK",
+          "to_wp": "PICKUP",
+          "reachable": true,
+          "narrowest_gap_m": 0.7754,
+          "required_gap_m": 0.5,
+          "narrowest_xy": [
+            3.453,
+            1.827
+          ],
+          "path_length_m": 3.439,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "PICKUP",
+          "to_wp": "S1",
+          "reachable": true,
+          "narrowest_gap_m": 0.775,
+          "required_gap_m": 0.5,
+          "narrowest_xy": [
+            3.783,
+            1.805
+          ],
+          "path_length_m": 7.118,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S1",
+          "to_wp": "S2",
+          "reachable": true,
+          "narrowest_gap_m": 0.7752,
+          "required_gap_m": 0.5,
+          "narrowest_xy": [
+            8.31,
+            4.975
+          ],
+          "path_length_m": 9.021,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S2",
+          "to_wp": "S3",
+          "reachable": true,
+          "narrowest_gap_m": 0.7751,
+          "required_gap_m": 0.5,
+          "narrowest_xy": [
+            5.369,
+            5.039
+          ],
+          "path_length_m": 8.016,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S3",
+          "to_wp": "S4",
+          "reachable": true,
+          "narrowest_gap_m": 1.3751,
+          "required_gap_m": 0.5,
+          "narrowest_xy": [
+            5.43,
+            6.737
+          ],
+          "path_length_m": 4.23,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S4",
+          "to_wp": "DOCK",
+          "reachable": true,
+          "narrowest_gap_m": 1.1768,
+          "required_gap_m": 0.5,
+          "narrowest_xy": [
+            8.46,
+            3.565
+          ],
+          "path_length_m": 13.436,
+          "blocking_threshold": null,
+          "reason": ""
+        }
+      ],
+      "all_reachable": true
+    },
+    "mir_mir250": {
+      "robot_id": "mir_mir250",
+      "twin_id": "twin_ref_storeroom_v1",
+      "twin_version": 1,
+      "legs": [
+        {
+          "from_wp": "DOCK",
+          "to_wp": "PICKUP",
+          "reachable": true,
+          "narrowest_gap_m": 0.775,
+          "required_gap_m": 0.58,
+          "narrowest_xy": [
+            3.441,
+            1.825
+          ],
+          "path_length_m": 3.579,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "PICKUP",
+          "to_wp": "S1",
+          "reachable": true,
+          "narrowest_gap_m": 0.775,
+          "required_gap_m": 0.58,
+          "narrowest_xy": [
+            3.831,
+            1.823
+          ],
+          "path_length_m": 10.13,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S1",
+          "to_wp": "S2",
+          "reachable": true,
+          "narrowest_gap_m": 0.775,
+          "required_gap_m": 0.58,
+          "narrowest_xy": [
+            2.054,
+            4.996
+          ],
+          "path_length_m": 8.021,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S2",
+          "to_wp": "S3",
+          "reachable": true,
+          "narrowest_gap_m": 0.775,
+          "required_gap_m": 0.58,
+          "narrowest_xy": [
+            4.652,
+            5.045
+          ],
+          "path_length_m": 9.13,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S3",
+          "to_wp": "S4",
+          "reachable": true,
+          "narrowest_gap_m": 1.375,
+          "required_gap_m": 0.58,
+          "narrowest_xy": [
+            5.242,
+            6.78
+          ],
+          "path_length_m": 4.196,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S4",
+          "to_wp": "DOCK",
+          "reachable": true,
+          "narrowest_gap_m": 1.1752,
+          "required_gap_m": 0.58,
+          "narrowest_xy": [
+            7.55,
+            3.331
+          ],
+          "path_length_m": 13.425,
+          "blocking_threshold": null,
+          "reason": ""
+        }
+      ],
+      "all_reachable": true
+    },
+    "otto_100": {
+      "robot_id": "otto_100",
+      "twin_id": "twin_ref_storeroom_v1",
+      "twin_version": 1,
+      "legs": [
+        {
+          "from_wp": "DOCK",
+          "to_wp": "PICKUP",
+          "reachable": true,
+          "narrowest_gap_m": 0.7777,
+          "required_gap_m": 0.55,
+          "narrowest_xy": [
+            3.573,
+            1.784
+          ],
+          "path_length_m": 3.625,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "PICKUP",
+          "to_wp": "S1",
+          "reachable": true,
+          "narrowest_gap_m": 0.775,
+          "required_gap_m": 0.55,
+          "narrowest_xy": [
+            4.0,
+            1.821
+          ],
+          "path_length_m": 10.099,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S1",
+          "to_wp": "S2",
+          "reachable": true,
+          "narrowest_gap_m": 0.7751,
+          "required_gap_m": 0.55,
+          "narrowest_xy": [
+            2.061,
+            4.974
+          ],
+          "path_length_m": 8.02,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S2",
+          "to_wp": "S3",
+          "reachable": true,
+          "narrowest_gap_m": 0.7751,
+          "required_gap_m": 0.55,
+          "narrowest_xy": [
+            4.842,
+            5.019
+          ],
+          "path_length_m": 9.076,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S3",
+          "to_wp": "S4",
+          "reachable": true,
+          "narrowest_gap_m": 1.3786,
+          "required_gap_m": 0.55,
+          "narrowest_xy": [
+            5.956,
+            6.652
+          ],
+          "path_length_m": 4.246,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S4",
+          "to_wp": "DOCK",
+          "reachable": true,
+          "narrowest_gap_m": 1.1752,
+          "required_gap_m": 0.55,
+          "narrowest_xy": [
+            5.648,
+            3.296
+          ],
+          "path_length_m": 13.388,
+          "blocking_threshold": null,
+          "reason": ""
+        }
+      ],
+      "all_reachable": true
+    },
+    "mir_mir100": {
+      "robot_id": "mir_mir100",
+      "twin_id": "twin_ref_storeroom_v1",
+      "twin_version": 1,
+      "legs": [
+        {
+          "from_wp": "DOCK",
+          "to_wp": "PICKUP",
+          "reachable": true,
+          "narrowest_gap_m": 0.776,
+          "required_gap_m": 0.58,
+          "narrowest_xy": [
+            3.458,
+            1.794
+          ],
+          "path_length_m": 3.523,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "PICKUP",
+          "to_wp": "S1",
+          "reachable": true,
+          "narrowest_gap_m": 0.775,
+          "required_gap_m": 0.58,
+          "narrowest_xy": [
+            3.573,
+            1.819
+          ],
+          "path_length_m": 10.168,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S1",
+          "to_wp": "S2",
+          "reachable": true,
+          "narrowest_gap_m": 0.775,
+          "required_gap_m": 0.58,
+          "narrowest_xy": [
+            2.015,
+            5.032
+          ],
+          "path_length_m": 7.993,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S2",
+          "to_wp": "S3",
+          "reachable": true,
+          "narrowest_gap_m": 0.775,
+          "required_gap_m": 0.58,
+          "narrowest_xy": [
+            4.566,
+            5.02
+          ],
+          "path_length_m": 9.239,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S3",
+          "to_wp": "S4",
+          "reachable": true,
+          "narrowest_gap_m": 1.375,
+          "required_gap_m": 0.58,
+          "narrowest_xy": [
+            5.473,
+            6.731
+          ],
+          "path_length_m": 4.174,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "S4",
+          "to_wp": "DOCK",
+          "reachable": true,
+          "narrowest_gap_m": 1.1752,
+          "required_gap_m": 0.58,
+          "narrowest_xy": [
+            6.218,
+            3.321
+          ],
+          "path_length_m": 13.453,
+          "blocking_threshold": null,
+          "reason": ""
+        }
+      ],
+      "all_reachable": true
+    }
+  },
+  "feasibility_by_bound": {
+    "pudu_t300": {
+      "nominal": {
+        "robot_id": "pudu_t300",
+        "twin_id": "twin_ref_storeroom_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 0.7754,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              3.453,
+              1.827
+            ],
+            "path_length_m": 3.439,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "S1",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              3.783,
+              1.805
+            ],
+            "path_length_m": 7.118,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S1",
+            "to_wp": "S2",
+            "reachable": true,
+            "narrowest_gap_m": 0.7752,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              8.31,
+              4.975
+            ],
+            "path_length_m": 9.021,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S2",
+            "to_wp": "S3",
+            "reachable": true,
+            "narrowest_gap_m": 0.7751,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              5.369,
+              5.039
+            ],
+            "path_length_m": 8.016,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S3",
+            "to_wp": "S4",
+            "reachable": true,
+            "narrowest_gap_m": 1.3751,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              5.43,
+              6.737
+            ],
+            "path_length_m": 4.23,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S4",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.1768,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              8.46,
+              3.565
+            ],
+            "path_length_m": 13.436,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "optimistic": {
+        "robot_id": "pudu_t300",
+        "twin_id": "twin_ref_storeroom_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 0.7754,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              3.453,
+              1.827
+            ],
+            "path_length_m": 3.439,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "S1",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              3.783,
+              1.805
+            ],
+            "path_length_m": 7.118,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S1",
+            "to_wp": "S2",
+            "reachable": true,
+            "narrowest_gap_m": 0.7752,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              8.31,
+              4.975
+            ],
+            "path_length_m": 9.021,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S2",
+            "to_wp": "S3",
+            "reachable": true,
+            "narrowest_gap_m": 0.7751,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              5.369,
+              5.039
+            ],
+            "path_length_m": 8.016,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S3",
+            "to_wp": "S4",
+            "reachable": true,
+            "narrowest_gap_m": 1.3751,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              5.43,
+              6.737
+            ],
+            "path_length_m": 4.23,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S4",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.1768,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              8.46,
+              3.565
+            ],
+            "path_length_m": 13.436,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "conservative": {
+        "robot_id": "pudu_t300",
+        "twin_id": "twin_ref_storeroom_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 0.7754,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              3.453,
+              1.827
+            ],
+            "path_length_m": 3.439,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "S1",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              3.783,
+              1.805
+            ],
+            "path_length_m": 7.118,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S1",
+            "to_wp": "S2",
+            "reachable": true,
+            "narrowest_gap_m": 0.7752,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              8.31,
+              4.975
+            ],
+            "path_length_m": 9.021,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S2",
+            "to_wp": "S3",
+            "reachable": true,
+            "narrowest_gap_m": 0.7751,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              5.369,
+              5.039
+            ],
+            "path_length_m": 8.016,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S3",
+            "to_wp": "S4",
+            "reachable": true,
+            "narrowest_gap_m": 1.3751,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              5.43,
+              6.737
+            ],
+            "path_length_m": 4.23,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S4",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.1768,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              8.46,
+              3.565
+            ],
+            "path_length_m": 13.436,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      }
+    },
+    "otto_100": {
+      "nominal": {
+        "robot_id": "otto_100",
+        "twin_id": "twin_ref_storeroom_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 0.7777,
+            "required_gap_m": 0.55,
+            "narrowest_xy": [
+              3.573,
+              1.784
+            ],
+            "path_length_m": 3.625,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "S1",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.55,
+            "narrowest_xy": [
+              4.0,
+              1.821
+            ],
+            "path_length_m": 10.099,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S1",
+            "to_wp": "S2",
+            "reachable": true,
+            "narrowest_gap_m": 0.7751,
+            "required_gap_m": 0.55,
+            "narrowest_xy": [
+              2.061,
+              4.974
+            ],
+            "path_length_m": 8.02,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S2",
+            "to_wp": "S3",
+            "reachable": true,
+            "narrowest_gap_m": 0.7751,
+            "required_gap_m": 0.55,
+            "narrowest_xy": [
+              4.842,
+              5.019
+            ],
+            "path_length_m": 9.076,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S3",
+            "to_wp": "S4",
+            "reachable": true,
+            "narrowest_gap_m": 1.3786,
+            "required_gap_m": 0.55,
+            "narrowest_xy": [
+              5.956,
+              6.652
+            ],
+            "path_length_m": 4.246,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S4",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.1752,
+            "required_gap_m": 0.55,
+            "narrowest_xy": [
+              5.648,
+              3.296
+            ],
+            "path_length_m": 13.388,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "optimistic": {
+        "robot_id": "otto_100",
+        "twin_id": "twin_ref_storeroom_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 0.7777,
+            "required_gap_m": 0.55,
+            "narrowest_xy": [
+              3.573,
+              1.784
+            ],
+            "path_length_m": 3.625,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "S1",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.55,
+            "narrowest_xy": [
+              4.0,
+              1.821
+            ],
+            "path_length_m": 10.099,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S1",
+            "to_wp": "S2",
+            "reachable": true,
+            "narrowest_gap_m": 0.7751,
+            "required_gap_m": 0.55,
+            "narrowest_xy": [
+              2.061,
+              4.974
+            ],
+            "path_length_m": 8.02,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S2",
+            "to_wp": "S3",
+            "reachable": true,
+            "narrowest_gap_m": 0.7751,
+            "required_gap_m": 0.55,
+            "narrowest_xy": [
+              4.842,
+              5.019
+            ],
+            "path_length_m": 9.076,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S3",
+            "to_wp": "S4",
+            "reachable": true,
+            "narrowest_gap_m": 1.3786,
+            "required_gap_m": 0.55,
+            "narrowest_xy": [
+              5.956,
+              6.652
+            ],
+            "path_length_m": 4.246,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S4",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.1752,
+            "required_gap_m": 0.55,
+            "narrowest_xy": [
+              5.648,
+              3.296
+            ],
+            "path_length_m": 13.388,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "conservative": {
+        "robot_id": "otto_100",
+        "twin_id": "twin_ref_storeroom_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 0.7777,
+            "required_gap_m": 0.55,
+            "narrowest_xy": [
+              3.573,
+              1.784
+            ],
+            "path_length_m": 3.625,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "S1",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.55,
+            "narrowest_xy": [
+              4.0,
+              1.821
+            ],
+            "path_length_m": 10.099,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S1",
+            "to_wp": "S2",
+            "reachable": true,
+            "narrowest_gap_m": 0.7751,
+            "required_gap_m": 0.55,
+            "narrowest_xy": [
+              2.061,
+              4.974
+            ],
+            "path_length_m": 8.02,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S2",
+            "to_wp": "S3",
+            "reachable": true,
+            "narrowest_gap_m": 0.7751,
+            "required_gap_m": 0.55,
+            "narrowest_xy": [
+              4.842,
+              5.019
+            ],
+            "path_length_m": 9.076,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S3",
+            "to_wp": "S4",
+            "reachable": true,
+            "narrowest_gap_m": 1.3786,
+            "required_gap_m": 0.55,
+            "narrowest_xy": [
+              5.956,
+              6.652
+            ],
+            "path_length_m": 4.246,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S4",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.1752,
+            "required_gap_m": 0.55,
+            "narrowest_xy": [
+              5.648,
+              3.296
+            ],
+            "path_length_m": 13.388,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      }
+    },
+    "mir_mir100": {
+      "nominal": {
+        "robot_id": "mir_mir100",
+        "twin_id": "twin_ref_storeroom_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 0.776,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              3.458,
+              1.794
+            ],
+            "path_length_m": 3.523,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "S1",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              3.573,
+              1.819
+            ],
+            "path_length_m": 10.168,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S1",
+            "to_wp": "S2",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              2.015,
+              5.032
+            ],
+            "path_length_m": 7.993,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S2",
+            "to_wp": "S3",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              4.566,
+              5.02
+            ],
+            "path_length_m": 9.239,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S3",
+            "to_wp": "S4",
+            "reachable": true,
+            "narrowest_gap_m": 1.375,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              5.473,
+              6.731
+            ],
+            "path_length_m": 4.174,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S4",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.1752,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              6.218,
+              3.321
+            ],
+            "path_length_m": 13.453,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "optimistic": {
+        "robot_id": "mir_mir100",
+        "twin_id": "twin_ref_storeroom_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 0.776,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              3.458,
+              1.794
+            ],
+            "path_length_m": 3.523,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "S1",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              3.573,
+              1.819
+            ],
+            "path_length_m": 10.168,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S1",
+            "to_wp": "S2",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              2.015,
+              5.032
+            ],
+            "path_length_m": 7.993,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S2",
+            "to_wp": "S3",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              4.566,
+              5.02
+            ],
+            "path_length_m": 9.239,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S3",
+            "to_wp": "S4",
+            "reachable": true,
+            "narrowest_gap_m": 1.375,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              5.473,
+              6.731
+            ],
+            "path_length_m": 4.174,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S4",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.1752,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              6.218,
+              3.321
+            ],
+            "path_length_m": 13.453,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "conservative": {
+        "robot_id": "mir_mir100",
+        "twin_id": "twin_ref_storeroom_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 0.776,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              3.458,
+              1.794
+            ],
+            "path_length_m": 3.523,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "S1",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              3.573,
+              1.819
+            ],
+            "path_length_m": 10.168,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S1",
+            "to_wp": "S2",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              2.015,
+              5.032
+            ],
+            "path_length_m": 7.993,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S2",
+            "to_wp": "S3",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              4.566,
+              5.02
+            ],
+            "path_length_m": 9.239,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S3",
+            "to_wp": "S4",
+            "reachable": true,
+            "narrowest_gap_m": 1.375,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              5.473,
+              6.731
+            ],
+            "path_length_m": 4.174,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S4",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.1752,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              6.218,
+              3.321
+            ],
+            "path_length_m": 13.453,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      }
+    },
+    "mir_mir250": {
+      "nominal": {
+        "robot_id": "mir_mir250",
+        "twin_id": "twin_ref_storeroom_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              3.441,
+              1.825
+            ],
+            "path_length_m": 3.579,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "S1",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              3.831,
+              1.823
+            ],
+            "path_length_m": 10.13,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S1",
+            "to_wp": "S2",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              2.054,
+              4.996
+            ],
+            "path_length_m": 8.021,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S2",
+            "to_wp": "S3",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              4.652,
+              5.045
+            ],
+            "path_length_m": 9.13,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S3",
+            "to_wp": "S4",
+            "reachable": true,
+            "narrowest_gap_m": 1.375,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              5.242,
+              6.78
+            ],
+            "path_length_m": 4.196,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S4",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.1752,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              7.55,
+              3.331
+            ],
+            "path_length_m": 13.425,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "optimistic": {
+        "robot_id": "mir_mir250",
+        "twin_id": "twin_ref_storeroom_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              3.441,
+              1.825
+            ],
+            "path_length_m": 3.579,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "S1",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              3.831,
+              1.823
+            ],
+            "path_length_m": 10.13,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S1",
+            "to_wp": "S2",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              2.054,
+              4.996
+            ],
+            "path_length_m": 8.021,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S2",
+            "to_wp": "S3",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              4.652,
+              5.045
+            ],
+            "path_length_m": 9.13,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S3",
+            "to_wp": "S4",
+            "reachable": true,
+            "narrowest_gap_m": 1.375,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              5.242,
+              6.78
+            ],
+            "path_length_m": 4.196,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S4",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.1752,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              7.55,
+              3.331
+            ],
+            "path_length_m": 13.425,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "conservative": {
+        "robot_id": "mir_mir250",
+        "twin_id": "twin_ref_storeroom_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              3.441,
+              1.825
+            ],
+            "path_length_m": 3.579,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "S1",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              3.831,
+              1.823
+            ],
+            "path_length_m": 10.13,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S1",
+            "to_wp": "S2",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              2.054,
+              4.996
+            ],
+            "path_length_m": 8.021,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S2",
+            "to_wp": "S3",
+            "reachable": true,
+            "narrowest_gap_m": 0.775,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              4.652,
+              5.045
+            ],
+            "path_length_m": 9.13,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S3",
+            "to_wp": "S4",
+            "reachable": true,
+            "narrowest_gap_m": 1.375,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              5.242,
+              6.78
+            ],
+            "path_length_m": 4.196,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "S4",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.1752,
+            "required_gap_m": 0.58,
+            "narrowest_xy": [
+              7.55,
+              3.331
+            ],
+            "path_length_m": 13.425,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      }
+    }
+  },
+  "batches": [
+    "sb_62a4a91d455f",
+    "sb_318479d649c5",
+    "sb_a83843d81092",
+    "sb_774e5753d4d9",
+    "sb_ae5621cead7c",
+    "sb_599522a223fa",
+    "sb_6228255866e2",
+    "sb_02f8291b72d1",
+    "sb_6c0e4e92553b",
+    "sb_acaad38c39e9",
+    "sb_fbd802602b39",
+    "sb_de2db6c9bb85",
+    "sb_e3ccc14c1476",
+    "sb_1e9ef8dcdf61",
+    "sb_4fab0640ed9b",
+    "sb_c63223f5d0bf",
+    "sb_ff68d24cd9f5",
+    "sb_9ce556cb4d55",
+    "sb_4cc055a97e39",
+    "sb_923ab3c5e4a0",
+    "sb_0b19d69ffc27",
+    "sb_d2c34af60fbd",
+    "sb_938052ccbcec",
+    "sb_a7c4b4c8f285",
+    "sb_03d73fe6bf9a",
+    "sb_539ba4b20ade",
+    "sb_96f02e78896e",
+    "sb_a0511c46ab27",
+    "sb_82a57c4f9f6d",
+    "sb_7ac96c8888b0",
+    "sb_fc4853bd9207",
+    "sb_880ee587be27",
+    "sb_9de38e6e6c78",
+    "sb_a88b8f4302ab",
+    "sb_ccb6e9e6b36c",
+    "sb_63697ef211c7"
+  ],
+  "batch_index": {
+    "sb_62a4a91d455f": {
+      "robot_id": "pudu_t300",
+      "density": "quiet",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.03,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 108.94999999999999,
+        "near_miss_per_mission": 0.6,
+        "stops_per_mission": 1.0,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_318479d649c5": {
+      "robot_id": "pudu_t300",
+      "density": "quiet",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.03,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 108.94999999999999,
+        "near_miss_per_mission": 0.6,
+        "stops_per_mission": 1.0,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_a83843d81092": {
+      "robot_id": "pudu_t300",
+      "density": "normal",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.975,
+        "min_gap_m": 0.03,
+        "ci95": [
+          0.8711834051199223,
+          0.9955732825922052
+        ],
+        "median_mission_s": 114.6,
+        "near_miss_per_mission": 1.775,
+        "stops_per_mission": 2.7,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 39,
+        "n_episodes": 40
+      }
+    },
+    "sb_774e5753d4d9": {
+      "robot_id": "pudu_t300",
+      "density": "quiet",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.03,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 108.94999999999999,
+        "near_miss_per_mission": 0.6,
+        "stops_per_mission": 1.0,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_ae5621cead7c": {
+      "robot_id": "pudu_t300",
+      "density": "normal",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.975,
+        "min_gap_m": 0.03,
+        "ci95": [
+          0.8711834051199223,
+          0.9955732825922052
+        ],
+        "median_mission_s": 114.6,
+        "near_miss_per_mission": 1.775,
+        "stops_per_mission": 2.7,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 39,
+        "n_episodes": 40
+      }
+    },
+    "sb_599522a223fa": {
+      "robot_id": "pudu_t300",
+      "density": "peak",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.03,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 127.3,
+        "near_miss_per_mission": 5.175,
+        "stops_per_mission": 7.35,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_6228255866e2": {
+      "robot_id": "pudu_t300",
+      "density": "normal",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.975,
+        "min_gap_m": 0.03,
+        "ci95": [
+          0.8711834051199223,
+          0.9955732825922052
+        ],
+        "median_mission_s": 114.6,
+        "near_miss_per_mission": 1.775,
+        "stops_per_mission": 2.7,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 39,
+        "n_episodes": 40
+      }
+    },
+    "sb_02f8291b72d1": {
+      "robot_id": "pudu_t300",
+      "density": "peak",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.03,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 127.3,
+        "near_miss_per_mission": 5.175,
+        "stops_per_mission": 7.35,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_6c0e4e92553b": {
+      "robot_id": "mir_mir250",
+      "density": "quiet",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.9,
+        "min_gap_m": 0.0225,
+        "ci95": [
+          0.7694792561952611,
+          0.9604211124044252
+        ],
+        "median_mission_s": 123.80000000000001,
+        "near_miss_per_mission": 0.575,
+        "stops_per_mission": 0.875,
+        "fail_reasons": {
+          "no_path_static": 4,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 36,
+        "n_episodes": 40
+      }
+    },
+    "sb_acaad38c39e9": {
+      "robot_id": "mir_mir250",
+      "density": "quiet",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.9,
+        "min_gap_m": 0.0225,
+        "ci95": [
+          0.7694792561952611,
+          0.9604211124044252
+        ],
+        "median_mission_s": 123.80000000000001,
+        "near_miss_per_mission": 0.575,
+        "stops_per_mission": 0.875,
+        "fail_reasons": {
+          "no_path_static": 4,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 36,
+        "n_episodes": 40
+      }
+    },
+    "sb_fbd802602b39": {
+      "robot_id": "pudu_t300",
+      "density": "peak",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.03,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 127.3,
+        "near_miss_per_mission": 5.175,
+        "stops_per_mission": 7.35,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_de2db6c9bb85": {
+      "robot_id": "mir_mir250",
+      "density": "quiet",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.9,
+        "min_gap_m": 0.0225,
+        "ci95": [
+          0.7694792561952611,
+          0.9604211124044252
+        ],
+        "median_mission_s": 123.80000000000001,
+        "near_miss_per_mission": 0.575,
+        "stops_per_mission": 0.875,
+        "fail_reasons": {
+          "no_path_static": 4,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 36,
+        "n_episodes": 40
+      }
+    },
+    "sb_e3ccc14c1476": {
+      "robot_id": "mir_mir250",
+      "density": "normal",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0225,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 125.1,
+        "near_miss_per_mission": 2.05,
+        "stops_per_mission": 2.6,
+        "fail_reasons": {
+          "no_path_static": 4,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_1e9ef8dcdf61": {
+      "robot_id": "mir_mir250",
+      "density": "normal",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0225,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 125.1,
+        "near_miss_per_mission": 2.05,
+        "stops_per_mission": 2.6,
+        "fail_reasons": {
+          "no_path_static": 4,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_4fab0640ed9b": {
+      "robot_id": "mir_mir250",
+      "density": "normal",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0225,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 125.1,
+        "near_miss_per_mission": 2.05,
+        "stops_per_mission": 2.6,
+        "fail_reasons": {
+          "no_path_static": 4,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_c63223f5d0bf": {
+      "robot_id": "otto_100",
+      "density": "quiet",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.975,
+        "min_gap_m": 0.0298,
+        "ci95": [
+          0.8711834051199223,
+          0.9955732825922052
+        ],
+        "median_mission_s": 121.7,
+        "near_miss_per_mission": 0.75,
+        "stops_per_mission": 0.875,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 39,
+        "n_episodes": 40
+      }
+    },
+    "sb_ff68d24cd9f5": {
+      "robot_id": "mir_mir250",
+      "density": "peak",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0225,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 139.5,
+        "near_miss_per_mission": 4.875,
+        "stops_per_mission": 6.375,
+        "fail_reasons": {
+          "no_path_static": 4,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_9ce556cb4d55": {
+      "robot_id": "otto_100",
+      "density": "quiet",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.975,
+        "min_gap_m": 0.0298,
+        "ci95": [
+          0.8711834051199223,
+          0.9955732825922052
+        ],
+        "median_mission_s": 121.7,
+        "near_miss_per_mission": 0.75,
+        "stops_per_mission": 0.875,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 39,
+        "n_episodes": 40
+      }
+    },
+    "sb_4cc055a97e39": {
+      "robot_id": "otto_100",
+      "density": "quiet",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.975,
+        "min_gap_m": 0.0298,
+        "ci95": [
+          0.8711834051199223,
+          0.9955732825922052
+        ],
+        "median_mission_s": 121.7,
+        "near_miss_per_mission": 0.75,
+        "stops_per_mission": 0.875,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 39,
+        "n_episodes": 40
+      }
+    },
+    "sb_923ab3c5e4a0": {
+      "robot_id": "mir_mir250",
+      "density": "peak",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0225,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 139.5,
+        "near_miss_per_mission": 4.875,
+        "stops_per_mission": 6.375,
+        "fail_reasons": {
+          "no_path_static": 4,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_0b19d69ffc27": {
+      "robot_id": "mir_mir250",
+      "density": "peak",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0225,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 139.5,
+        "near_miss_per_mission": 4.875,
+        "stops_per_mission": 6.375,
+        "fail_reasons": {
+          "no_path_static": 4,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_d2c34af60fbd": {
+      "robot_id": "otto_100",
+      "density": "normal",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.975,
+        "min_gap_m": 0.0298,
+        "ci95": [
+          0.8711834051199223,
+          0.9955732825922052
+        ],
+        "median_mission_s": 127.3,
+        "near_miss_per_mission": 2.15,
+        "stops_per_mission": 2.4,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 39,
+        "n_episodes": 40
+      }
+    },
+    "sb_938052ccbcec": {
+      "robot_id": "otto_100",
+      "density": "normal",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.975,
+        "min_gap_m": 0.0298,
+        "ci95": [
+          0.8711834051199223,
+          0.9955732825922052
+        ],
+        "median_mission_s": 127.3,
+        "near_miss_per_mission": 2.15,
+        "stops_per_mission": 2.4,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 39,
+        "n_episodes": 40
+      }
+    },
+    "sb_a7c4b4c8f285": {
+      "robot_id": "mir_mir100",
+      "density": "quiet",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0275,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 144.7,
+        "near_miss_per_mission": 0.75,
+        "stops_per_mission": 1.225,
+        "fail_reasons": {
+          "no_path_static": 5,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_03d73fe6bf9a": {
+      "robot_id": "mir_mir100",
+      "density": "quiet",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0275,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 144.7,
+        "near_miss_per_mission": 0.75,
+        "stops_per_mission": 1.225,
+        "fail_reasons": {
+          "no_path_static": 5,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_539ba4b20ade": {
+      "robot_id": "mir_mir100",
+      "density": "quiet",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0275,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 144.7,
+        "near_miss_per_mission": 0.75,
+        "stops_per_mission": 1.225,
+        "fail_reasons": {
+          "no_path_static": 5,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_96f02e78896e": {
+      "robot_id": "mir_mir100",
+      "density": "normal",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0275,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 151.9,
+        "near_miss_per_mission": 1.75,
+        "stops_per_mission": 2.925,
+        "fail_reasons": {
+          "no_path_static": 5,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_a0511c46ab27": {
+      "robot_id": "otto_100",
+      "density": "normal",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.975,
+        "min_gap_m": 0.0298,
+        "ci95": [
+          0.8711834051199223,
+          0.9955732825922052
+        ],
+        "median_mission_s": 127.3,
+        "near_miss_per_mission": 2.15,
+        "stops_per_mission": 2.4,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 1
+        },
+        "n_success": 39,
+        "n_episodes": 40
+      }
+    },
+    "sb_82a57c4f9f6d": {
+      "robot_id": "mir_mir100",
+      "density": "normal",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0275,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 151.9,
+        "near_miss_per_mission": 1.75,
+        "stops_per_mission": 2.925,
+        "fail_reasons": {
+          "no_path_static": 5,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_7ac96c8888b0": {
+      "robot_id": "otto_100",
+      "density": "peak",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.0298,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 147.45,
+        "near_miss_per_mission": 5.525,
+        "stops_per_mission": 7.1,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_fc4853bd9207": {
+      "robot_id": "mir_mir100",
+      "density": "normal",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.875,
+        "min_gap_m": 0.0275,
+        "ci95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "median_mission_s": 151.9,
+        "near_miss_per_mission": 1.75,
+        "stops_per_mission": 2.925,
+        "fail_reasons": {
+          "no_path_static": 5,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 35,
+        "n_episodes": 40
+      }
+    },
+    "sb_880ee587be27": {
+      "robot_id": "otto_100",
+      "density": "peak",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.0298,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 147.45,
+        "near_miss_per_mission": 5.525,
+        "stops_per_mission": 7.1,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_9de38e6e6c78": {
+      "robot_id": "otto_100",
+      "density": "peak",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.0298,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 147.45,
+        "near_miss_per_mission": 5.525,
+        "stops_per_mission": 7.1,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_a88b8f4302ab": {
+      "robot_id": "mir_mir100",
+      "density": "peak",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.825,
+        "min_gap_m": 0.0275,
+        "ci95": [
+          0.6804970794560755,
+          0.9125469700311694
+        ],
+        "median_mission_s": 161.5,
+        "near_miss_per_mission": 3.925,
+        "stops_per_mission": 7.1,
+        "fail_reasons": {
+          "no_path_static": 5,
+          "blocked_timeout": 0,
+          "collision": 2
+        },
+        "n_success": 33,
+        "n_episodes": 40
+      }
+    },
+    "sb_ccb6e9e6b36c": {
+      "robot_id": "mir_mir100",
+      "density": "peak",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.825,
+        "min_gap_m": 0.0275,
+        "ci95": [
+          0.6804970794560755,
+          0.9125469700311694
+        ],
+        "median_mission_s": 161.5,
+        "near_miss_per_mission": 3.925,
+        "stops_per_mission": 7.1,
+        "fail_reasons": {
+          "no_path_static": 5,
+          "blocked_timeout": 0,
+          "collision": 2
+        },
+        "n_success": 33,
+        "n_episodes": 40
+      }
+    },
+    "sb_63697ef211c7": {
+      "robot_id": "mir_mir100",
+      "density": "peak",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.825,
+        "min_gap_m": 0.0275,
+        "ci95": [
+          0.6804970794560755,
+          0.9125469700311694
+        ],
+        "median_mission_s": 161.5,
+        "near_miss_per_mission": 3.925,
+        "stops_per_mission": 7.1,
+        "fail_reasons": {
+          "no_path_static": 5,
+          "blocked_timeout": 0,
+          "collision": 2
+        },
+        "n_success": 33,
+        "n_episodes": 40
+      }
+    }
+  },
+  "skipped_batches": [],
+  "investigation_id": "inv_af72142b9b",
+  "investigation_ids": {
+    "mir_mir250": "inv_af72142b9b",
+    "mir_mir100": "inv_fc10c27957"
+  },
+  "investigations": {
+    "mir_mir250": {
+      "investigation_id": "inv_af72142b9b",
+      "analysis_id": "an_ref_storeroom_01",
+      "model_id": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "mode": "live",
+      "steps": [
+        {
+          "i": 1,
+          "thought": "",
+          "tool": "get_batch_summary",
+          "args": {
+            "batch_id": "sb_0b19d69ffc27"
+          },
+          "result_summary": {
+            "ok": true,
+            "robot_id": "mir_mir250",
+            "batches": [
+              {
+                "batch_id": "sb_0b19d69ffc27",
+                "density": "peak",
+                "bound": "nominal",
+                "success_rate": {
+                  "value": 0.875,
+                  "unit": "ratio",
+                  "fact_id": "f_iaf721_001"
+                },
+                "ci95_low": {
+                  "value": 0.7389,
+                  "unit": "ratio",
+                  "fact_id": "f_iaf721_002"
+                },
+                "ci95_high": {
+                  "value": 0.9454,
+                  "unit": "ratio",
+                  "fact_id": "f_iaf721_003"
+                },
+                "n_episodes": {
+                  "value": 40,
+                  "unit": "episodes",
+                  "fact_id": "f_iaf721_004"
+                },
+                "median_mission_s": {
+                  "value": 139.5,
+                  "unit": "s",
+                  "fact_id": "f_iaf721_005"
+                },
+                "min_gap_m": {
+                  "value": 0.0225,
+                  "unit": "m",
+                  "fact_id": "f_iaf721_006"
+                },
+                "near_miss_per_mission": {
+                  "value": 4.875,
+                  "unit": "per mission",
+                  "fact_id": "f_iaf721_007"
+                },
+                "stops_per_mission": {
+                  "value": 6.375,
+                  "unit": "per mission",
+                  "fact_id": "f_iaf721_008"
+                },
+                "fail_reasons": {
+                  "collision": {
+                    "value": 1,
+                    "unit": "episodes",
+                    "fact_id": "f_iaf721_009"
+                  },
+                  "no_path_static": {
+                    "value": 4,
+                    "unit": "episodes",
+                    "fact_id": "f_iaf721_010"
+                  }
+                }
+              }
+            ]
+          },
+          "fact_ids": [
+            "f_iaf721_001",
+            "f_iaf721_002",
+            "f_iaf721_003",
+            "f_iaf721_004",
+            "f_iaf721_005",
+            "f_iaf721_006",
+            "f_iaf721_007",
+            "f_iaf721_008",
+            "f_iaf721_009",
+            "f_iaf721_010"
+          ]
+        },
+        {
+          "i": 2,
+          "thought": "",
+          "tool": "get_bottlenecks",
+          "args": {
+            "top_k": 10
+          },
+          "result_summary": {
+            "ok": true,
+            "bottlenecks": [
+              {
+                "rank": 1,
+                "xy": [
+                  3.338,
+                  1.688
+                ],
+                "share_of_total": {
+                  "value": 0.1622,
+                  "unit": "ratio",
+                  "fact_id": "f_iaf721_011"
+                },
+                "nearby_object_ids": [
+                  "PALLET1",
+                  "SHELF_A"
+                ],
+                "nearby_zone_ids": [
+                  "staging",
+                  "aisles"
+                ],
+                "examined": false
+              },
+              {
+                "rank": 2,
+                "xy": [
+                  1.688,
+                  3.238
+                ],
+                "share_of_total": {
+                  "value": 0.1288,
+                  "unit": "ratio",
+                  "fact_id": "f_iaf721_012"
+                },
+                "nearby_object_ids": [
+                  "SHELF_A",
+                  "SHELF_B"
+                ],
+                "nearby_zone_ids": [
+                  "aisles",
+                  "staging"
+                ],
+                "examined": false
+              },
+              {
+                "rank": 3,
+                "xy": [
+                  0.763,
+                  0.963
+                ],
+                "share_of_total": {
+                  "value": 0.1263,
+                  "unit": "ratio",
+                  "fact_id": "f_iaf721_013"
+                },
+                "nearby_object_ids": [
+                  "DOCKSTN"
+                ],
+                "nearby_zone_ids": [
+                  "door",
+                  "staging"
+                ],
+                "examined": false
+              },
+              {
+                "rank": 4,
+                "xy": [
+                  8.588,
+                  3.588
+                ],
+                "share_of_total": {
+                  "value": 0.0769,
+                  "unit": "ratio",
+                  "fact_id": "f_iaf721_014"
+                },
+                "nearby_object_ids": [
+                  "SHELF_B",
+                  "SHELF_A"
+                ],
+                "nearby_zone_ids": [
+                  "aisles"
+                ],
+                "examined": false
+              },
+              {
+                "rank": 5,
+                "xy": [
+                  2.213,
+                  0.963
+                ],
+                "share_of_total": {
+                  "value": 0.0753,
+                  "unit": "ratio",
+                  "fact_id": "f_iaf721_015"
+                },
+                "nearby_object_ids": [
+                  "PALLET1",
+                  "SHELF_A"
+                ],
+                "nearby_zone_ids": [
+                  "staging",
+                  "door"
+                ],
+                "examined": false
+              },
+              {
+                "rank": 6,
+                "xy": [
+                  5.188,
+                  3.288
+                ],
+                "share_of_total": {
+                  "value": 0.0746,
+                  "unit": "ratio",
+                  "fact_id": "f_iaf721_016"
+                },
+                "nearby_object_ids": [
+                  "SHELF_A",
+                  "SHELF_B"
+                ],
+                "nearby_zone_ids": [
+                  "aisles",
+                  "staging"
+                ],
+                "examined": false
+              },
+              {
+                "rank": 7,
+                "xy": [
+                  3.338,
+                  3.263
+                ],
+                "share_of_total": {
+                  "value": 0.0538,
+                  "unit": "ratio",
+                  "fact_id": "f_iaf721_017"
+                },
+                "nearby_object_ids": [
+                  "SHELF_A",
+                  "SHELF_B"
+                ],
+                "nearby_zone_ids": [
+                  "aisles",
+                  "staging"
+                ],
+                "examined": false
+              },
+              {
+                "rank": 8,
+                "xy": [
+                  7.488,
+                  3.338
+                ],
+                "share_of_total": {
+                  "value": 0.0513,
+                  "unit": "ratio",
+                  "fact_id": "f_iaf721_018"
+                },
+                "nearby_object_ids": [
+                  "SHELF_A",
+                  "SHELF_B"
+                ],
+                "nearby_zone_ids": [
+                  "aisles",
+                  "staging"
+                ],
+                "examined": false
+              }
+            ],
+            "batches_used": [
+              "sb_0b19d69ffc27",
+              "sb_6c0e4e92553b",
+              "sb_e3ccc14c1476"
+            ],
+            "threshold_share": 0.05
+          },
+          "fact_ids": [
+            "f_iaf721_011",
+            "f_iaf721_012",
+            "f_iaf721_013",
+            "f_iaf721_014",
+            "f_iaf721_015",
+            "f_iaf721_016",
+            "f_iaf721_017",
+            "f_iaf721_018"
+          ]
+        },
+        {
+          "i": 3,
+          "thought": "",
+          "tool": "get_gap_at",
+          "args": {
+            "xy": [
+              3.338,
+              1.688
+            ]
+          },
+          "result_summary": {
+            "ok": true,
+            "xy": [
+              3.338,
+              1.688
+            ],
+            "in_obstacle": false,
+            "nearest_obstacle_m": {
+              "value": 0.285,
+              "unit": "m",
+              "fact_id": "f_iaf721_019"
+            },
+            "gap_m": {
+              "value": 0.5701,
+              "unit": "m",
+              "fact_id": "f_iaf721_020"
+            },
+            "robot_width_m": {
+              "value": 0.58,
+              "unit": "m",
+              "fact_id": "f_iaf721_021"
+            },
+            "gap_margin_m": {
+              "value": -0.0099,
+              "unit": "m",
+              "fact_id": "f_iaf721_022"
+            }
+          },
+          "fact_ids": [
+            "f_iaf721_019",
+            "f_iaf721_020",
+            "f_iaf721_021",
+            "f_iaf721_022"
+          ]
+        },
+        {
+          "i": 4,
+          "thought": "",
+          "tool": "get_gap_at",
+          "args": {
+            "xy": [
+              1.688,
+              3.238
+            ]
+          },
+          "result_summary": {
+            "ok": true,
+            "xy": [
+              1.688,
+              3.238
+            ],
+            "in_obstacle": false,
+            "nearest_obstacle_m": {
+              "value": 0.535,
+              "unit": "m",
+              "fact_id": "f_iaf721_023"
+            },
+            "gap_m": {
+              "value": 1.07,
+              "unit": "m",
+              "fact_id": "f_iaf721_024"
+            },
+            "robot_width_m": {
+              "value": 0.58,
+              "unit": "m",
+              "fact_id": "f_iaf721_025"
+            },
+            "gap_margin_m": {
+              "value": 0.49,
+              "unit": "m",
+              "fact_id": "f_iaf721_026"
+            }
+          },
+          "fact_ids": [
+            "f_iaf721_023",
+            "f_iaf721_024",
+            "f_iaf721_025",
+            "f_iaf721_026"
+          ]
+        },
+        {
+          "i": 5,
+          "thought": "Rank 1 is too narrow (gap 0.570m < robot width 0.58m, margin \u2212[n?]m) near PALLET1/SHELF_A. Rank [n?] is fine statically. Let me check rank [n?] near DOCKSTN.",
+          "tool": "get_gap_at",
+          "args": {
+            "xy": [
+              0.763,
+              0.963
+            ]
+          },
+          "result_summary": {
+            "ok": true,
+            "xy": [
+              0.763,
+              0.963
+            ],
+            "in_obstacle": false,
+            "nearest_obstacle_m": {
+              "value": 0.45,
+              "unit": "m",
+              "fact_id": "f_iaf721_027"
+            },
+            "gap_m": {
+              "value": 0.9,
+              "unit": "m",
+              "fact_id": "f_iaf721_028"
+            },
+            "robot_width_m": {
+              "value": 0.58,
+              "unit": "m",
+              "fact_id": "f_iaf721_029"
+            },
+            "gap_margin_m": {
+              "value": 0.32,
+              "unit": "m",
+              "fact_id": "f_iaf721_030"
+            }
+          },
+          "fact_ids": [
+            "f_iaf721_027",
+            "f_iaf721_028",
+            "f_iaf721_029",
+            "f_iaf721_030"
+          ]
+        },
+        {
+          "i": 6,
+          "thought": "Rank 1 is the only statically too-narrow cell (gap 0.570m < robot width 0.58m, margin \u2212[n?]m) near PALLET1/SHELF_A. Let me locate PALLET1 precisely before moving it.",
+          "tool": "get_objects_near",
+          "args": {
+            "xy": [
+              3.338,
+              1.688
+            ],
+            "r": 1.5
+          },
+          "result_summary": {
+            "ok": true,
+            "xy": [
+              3.338,
+              1.688
+            ],
+            "r": 1.5,
+            "objects": [
+              {
+                "id": "PALLET1",
+                "label": "pallet",
+                "movable": true,
+                "fragile": false,
+                "center_xy": [
+                  4.015,
+                  1.01
+                ],
+                "distance_m": {
+                  "value": 0.2884,
+                  "unit": "m",
+                  "fact_id": "f_iaf721_031"
+                },
+                "confidence": 1.0
+              },
+              {
+                "id": "SHELF_A",
+                "label": "shelf",
+                "movable": false,
+                "fragile": false,
+                "center_xy": [
+                  5.265,
+                  2.51
+                ],
+                "distance_m": {
+                  "value": 0.522,
+                  "unit": "m",
+                  "fact_id": "f_iaf721_032"
+                },
+                "confidence": 1.0
+              }
+            ],
+            "zone_ids": [
+              "staging",
+              "aisles"
+            ]
+          },
+          "fact_ids": [
+            "f_iaf721_031",
+            "f_iaf721_032"
+          ]
+        },
+        {
+          "i": 7,
+          "thought": "PALLET1 center is at [4.015, [n?]], just 0.288m from the pinch cell [[n?], [n?]] \u2014 it's likely the obstacle pinching the gap below robot width (0.58m). Hypothesis: moving PALLET1 away from this cell widens the gap above robot width and raises success.",
+          "tool": "run_probe",
+          "args": {
+            "hypothesis": "PALLET1 sits too close to SHELF_A, pinching the aisle at [3.338, 1.688] to 0.570m (< robot width 0.58m). Moving PALLET1 away widens the gap and raises success rate.",
+            "overrides": {
+              "move": {
+                "PALLET1": {
+                  "dx": 0.5,
+                  "dy": -0.5,
+                  "dyaw": 0
+                }
+              }
+            },
+            "n_episodes": 30
+          },
+          "result_summary": {
+            "ok": false,
+            "error": "numbers ['3.338', '1.688', '0.570', '0.58'] are not values of the cited facts; every number must come from a cited tool fact"
+          },
+          "fact_ids": []
+        },
+        {
+          "i": 8,
+          "thought": "",
+          "tool": "run_probe",
+          "args": {
+            "hypothesis": "PALLET1 sits too close to SHELF_A, pinching the aisle at [3.338, 1.688] [f_iaf721_011] to gap 0.5701m [f_iaf721_020] < robot width 0.58m [f_iaf721_021] (margin -0.0099m [f_iaf721_022]). Moving PALLET1 away widens the gap and raises success rate.",
+            "overrides": {
+              "move": {
+                "PALLET1": {
+                  "dx": 0.5,
+                  "dy": -0.5,
+                  "dyaw": 0
+                }
+              }
+            },
+            "n_episodes": 30
+          },
+          "result_summary": {
+            "ok": false,
+            "error": "numbers ['3.338', '1.688'] are not values of the cited facts; every number must come from a cited tool fact"
+          },
+          "fact_ids": []
+        }
+      ],
+      "experiments": [],
+      "findings": [],
+      "facts": [
+        {
+          "fact_id": "f_iaf721_001",
+          "value": 0.875,
+          "unit": "ratio",
+          "label": "Success rate, mir_mir250, peak traffic, nominal geometry (sb_0b19d69ffc27)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step1"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_002",
+          "value": 0.7389,
+          "unit": "ratio",
+          "label": "Success rate 95% CI low, mir_mir250, peak traffic, nominal geometry (sb_0b19d69ffc27)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step1"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_003",
+          "value": 0.9454,
+          "unit": "ratio",
+          "label": "Success rate 95% CI high, mir_mir250, peak traffic, nominal geometry (sb_0b19d69ffc27)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step1"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_004",
+          "value": 40.0,
+          "unit": "episodes",
+          "label": "Episodes, mir_mir250, peak traffic, nominal geometry (sb_0b19d69ffc27)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step1"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_005",
+          "value": 139.5,
+          "unit": "s",
+          "label": "Median mission time, mir_mir250, peak traffic, nominal geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step1"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_006",
+          "value": 0.0225,
+          "unit": "m",
+          "label": "Median smallest robot-to-obstacle gap, mir_mir250, peak traffic, nominal geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step1"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_007",
+          "value": 4.875,
+          "unit": "per mission",
+          "label": "Near-misses per mission, mir_mir250, peak traffic, nominal geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step1"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_008",
+          "value": 6.375,
+          "unit": "per mission",
+          "label": "Safety stops per mission, mir_mir250, peak traffic, nominal geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step1"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_009",
+          "value": 1.0,
+          "unit": "episodes",
+          "label": "Failures 'collision', mir_mir250, peak traffic, nominal geometry (sb_0b19d69ffc27)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step1"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_010",
+          "value": 4.0,
+          "unit": "episodes",
+          "label": "Failures 'no_path_static', mir_mir250, peak traffic, nominal geometry (sb_0b19d69ffc27)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step1"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_011",
+          "value": 0.1622,
+          "unit": "ratio",
+          "label": "Pinch Map spot #1: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step2"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_012",
+          "value": 0.1288,
+          "unit": "ratio",
+          "label": "Pinch Map spot #2: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step2"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_013",
+          "value": 0.1263,
+          "unit": "ratio",
+          "label": "Pinch Map spot #3: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step2"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_014",
+          "value": 0.0769,
+          "unit": "ratio",
+          "label": "Pinch Map spot #4: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step2"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_015",
+          "value": 0.0753,
+          "unit": "ratio",
+          "label": "Pinch Map spot #5: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step2"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_016",
+          "value": 0.0746,
+          "unit": "ratio",
+          "label": "Pinch Map spot #6: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step2"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_017",
+          "value": 0.0538,
+          "unit": "ratio",
+          "label": "Pinch Map spot #7: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step2"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_018",
+          "value": 0.0513,
+          "unit": "ratio",
+          "label": "Pinch Map spot #8: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step2"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_019",
+          "value": 0.285,
+          "unit": "m",
+          "label": "Distance from (3.34, 1.69) to nearest obstacle (nominal grid)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step3"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_020",
+          "value": 0.5701,
+          "unit": "m",
+          "label": "Approximate free gap through (3.34, 1.69) (2 x nearest-obstacle distance, nominal grid)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step3"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_021",
+          "value": 0.58,
+          "unit": "m",
+          "label": "Footprint width, mir_mir250",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step3"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_022",
+          "value": -0.0099,
+          "unit": "m",
+          "label": "Approximate gap minus robot width at (3.34, 1.69)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step3"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_023",
+          "value": 0.535,
+          "unit": "m",
+          "label": "Distance from (1.69, 3.24) to nearest obstacle (nominal grid)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step4"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_024",
+          "value": 1.07,
+          "unit": "m",
+          "label": "Approximate free gap through (1.69, 3.24) (2 x nearest-obstacle distance, nominal grid)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step4"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_025",
+          "value": 0.58,
+          "unit": "m",
+          "label": "Footprint width, mir_mir250",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step4"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_026",
+          "value": 0.49,
+          "unit": "m",
+          "label": "Approximate gap minus robot width at (1.69, 3.24)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step4"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_027",
+          "value": 0.45,
+          "unit": "m",
+          "label": "Distance from (0.76, 0.96) to nearest obstacle (nominal grid)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step5"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_028",
+          "value": 0.9,
+          "unit": "m",
+          "label": "Approximate free gap through (0.76, 0.96) (2 x nearest-obstacle distance, nominal grid)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step5"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_029",
+          "value": 0.58,
+          "unit": "m",
+          "label": "Footprint width, mir_mir250",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step5"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_030",
+          "value": 0.32,
+          "unit": "m",
+          "label": "Approximate gap minus robot width at (0.76, 0.96)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step5"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_031",
+          "value": 0.2884,
+          "unit": "m",
+          "label": "Distance from (3.34, 1.69) to the edge of object PALLET1 (pallet)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step6"
+          }
+        },
+        {
+          "fact_id": "f_iaf721_032",
+          "value": 0.522,
+          "unit": "m",
+          "label": "Distance from (3.34, 1.69) to the edge of object SHELF_A (shelf)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_af72142b9b#step6"
+          }
+        }
+      ],
+      "stop_reason": "max_steps",
+      "robot_id": "mir_mir250",
+      "policy": "llm",
+      "sim_runs": 0,
+      "sim_source": "jobs.sim.api"
+    },
+    "mir_mir100": {
+      "investigation_id": "inv_fc10c27957",
+      "analysis_id": "an_ref_storeroom_01",
+      "model_id": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "mode": "live",
+      "steps": [
+        {
+          "i": 1,
+          "thought": "",
+          "tool": "get_batch_summary",
+          "args": {
+            "batch_id": "sb_03d73fe6bf9a"
+          },
+          "result_summary": {
+            "ok": true,
+            "robot_id": "mir_mir100",
+            "batches": [
+              {
+                "batch_id": "sb_03d73fe6bf9a",
+                "density": "quiet",
+                "bound": "nominal",
+                "success_rate": {
+                  "value": 0.875,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_001"
+                },
+                "ci95_low": {
+                  "value": 0.7389,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_002"
+                },
+                "ci95_high": {
+                  "value": 0.9454,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_003"
+                },
+                "n_episodes": {
+                  "value": 40,
+                  "unit": "episodes",
+                  "fact_id": "f_ifc10c_004"
+                },
+                "median_mission_s": {
+                  "value": 144.7,
+                  "unit": "s",
+                  "fact_id": "f_ifc10c_005"
+                },
+                "min_gap_m": {
+                  "value": 0.0275,
+                  "unit": "m",
+                  "fact_id": "f_ifc10c_006"
+                },
+                "near_miss_per_mission": {
+                  "value": 0.75,
+                  "unit": "per mission",
+                  "fact_id": "f_ifc10c_007"
+                },
+                "stops_per_mission": {
+                  "value": 1.225,
+                  "unit": "per mission",
+                  "fact_id": "f_ifc10c_008"
+                },
+                "fail_reasons": {
+                  "no_path_static": {
+                    "value": 5,
+                    "unit": "episodes",
+                    "fact_id": "f_ifc10c_009"
+                  }
+                }
+              }
+            ]
+          },
+          "fact_ids": [
+            "f_ifc10c_001",
+            "f_ifc10c_002",
+            "f_ifc10c_003",
+            "f_ifc10c_004",
+            "f_ifc10c_005",
+            "f_ifc10c_006",
+            "f_ifc10c_007",
+            "f_ifc10c_008",
+            "f_ifc10c_009"
+          ]
+        },
+        {
+          "i": 2,
+          "thought": "",
+          "tool": "get_bottlenecks",
+          "args": {
+            "top_k": 10
+          },
+          "result_summary": {
+            "ok": true,
+            "bottlenecks": [
+              {
+                "rank": 1,
+                "xy": [
+                  1.663,
+                  3.588
+                ],
+                "share_of_total": {
+                  "value": 0.2074,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_010"
+                },
+                "nearby_object_ids": [
+                  "SHELF_B",
+                  "SHELF_A"
+                ],
+                "nearby_zone_ids": [
+                  "aisles"
+                ],
+                "examined": false
+              },
+              {
+                "rank": 2,
+                "xy": [
+                  3.113,
+                  1.663
+                ],
+                "share_of_total": {
+                  "value": 0.1082,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_011"
+                },
+                "nearby_object_ids": [
+                  "PALLET1",
+                  "SHELF_A"
+                ],
+                "nearby_zone_ids": [
+                  "staging",
+                  "aisles"
+                ],
+                "examined": false
+              },
+              {
+                "rank": 3,
+                "xy": [
+                  1.113,
+                  1.712
+                ],
+                "share_of_total": {
+                  "value": 0.1015,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_012"
+                },
+                "nearby_object_ids": [
+                  "SHELF_A",
+                  "DOCKSTN"
+                ],
+                "nearby_zone_ids": [
+                  "staging",
+                  "door",
+                  "aisles"
+                ],
+                "examined": false
+              },
+              {
+                "rank": 4,
+                "xy": [
+                  4.888,
+                  3.288
+                ],
+                "share_of_total": {
+                  "value": 0.0716,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_013"
+                },
+                "nearby_object_ids": [
+                  "SHELF_A",
+                  "SHELF_B"
+                ],
+                "nearby_zone_ids": [
+                  "aisles",
+                  "staging"
+                ],
+                "examined": false
+              },
+              {
+                "rank": 5,
+                "xy": [
+                  8.537,
+                  3.562
+                ],
+                "share_of_total": {
+                  "value": 0.0509,
+                  "unit": "ratio",
+                  "fact_id": "f_ifc10c_014"
+                },
+                "nearby_object_ids": [
+                  "SHELF_B",
+                  "SHELF_A"
+                ],
+                "nearby_zone_ids": [
+                  "aisles"
+                ],
+                "examined": false
+              }
+            ],
+            "batches_used": [
+              "sb_03d73fe6bf9a",
+              "sb_ccb6e9e6b36c",
+              "sb_fc4853bd9207"
+            ],
+            "threshold_share": 0.05
+          },
+          "fact_ids": [
+            "f_ifc10c_010",
+            "f_ifc10c_011",
+            "f_ifc10c_012",
+            "f_ifc10c_013",
+            "f_ifc10c_014"
+          ]
+        },
+        {
+          "i": 3,
+          "thought": "",
+          "tool": "get_gap_at",
+          "args": {
+            "xy": [
+              1.663,
+              3.588
+            ]
+          },
+          "result_summary": {
+            "ok": true,
+            "xy": [
+              1.663,
+              3.588
+            ],
+            "in_obstacle": false,
+            "nearest_obstacle_m": {
+              "value": 0.5506,
+              "unit": "m",
+              "fact_id": "f_ifc10c_015"
+            },
+            "gap_m": {
+              "value": 1.1011,
+              "unit": "m",
+              "fact_id": "f_ifc10c_016"
+            },
+            "robot_width_m": {
+              "value": 0.58,
+              "unit": "m",
+              "fact_id": "f_ifc10c_017"
+            },
+            "gap_margin_m": {
+              "value": 0.5211,
+              "unit": "m",
+              "fact_id": "f_ifc10c_018"
+            }
+          },
+          "fact_ids": [
+            "f_ifc10c_015",
+            "f_ifc10c_016",
+            "f_ifc10c_017",
+            "f_ifc10c_018"
+          ]
+        },
+        {
+          "i": 4,
+          "thought": "",
+          "tool": "get_objects_near",
+          "args": {
+            "xy": [
+              1.663,
+              3.588
+            ],
+            "r": 2
+          },
+          "result_summary": {
+            "ok": true,
+            "xy": [
+              1.663,
+              3.588
+            ],
+            "r": 2.0,
+            "objects": [
+              {
+                "id": "SHELF_B",
+                "label": "shelf",
+                "movable": false,
+                "fragile": false,
+                "center_xy": [
+                  5.265,
+                  4.31
+                ],
+                "distance_m": {
+                  "value": 0.5495,
+                  "unit": "m",
+                  "fact_id": "f_ifc10c_019"
+                },
+                "confidence": 1.0
+              },
+              {
+                "id": "SHELF_A",
+                "label": "shelf",
+                "movable": false,
+                "fragile": false,
+                "center_xy": [
+                  5.265,
+                  2.51
+                ],
+                "distance_m": {
+                  "value": 0.8538,
+                  "unit": "m",
+                  "fact_id": "f_ifc10c_020"
+                },
+                "confidence": 1.0
+              },
+              {
+                "id": "SHELF_C",
+                "label": "shelf",
+                "movable": false,
+                "fragile": false,
+                "center_xy": [
+                  5.265,
+                  5.71
+                ],
+                "distance_m": {
+                  "value": 1.8557,
+                  "unit": "m",
+                  "fact_id": "f_ifc10c_021"
+                },
+                "confidence": 1.0
+              }
+            ],
+            "zone_ids": [
+              "aisles",
+              "staging"
+            ]
+          },
+          "fact_ids": [
+            "f_ifc10c_019",
+            "f_ifc10c_020",
+            "f_ifc10c_021"
+          ]
+        },
+        {
+          "i": 5,
+          "thought": "",
+          "tool": "get_gap_at",
+          "args": {
+            "xy": [
+              3.113,
+              1.663
+            ]
+          },
+          "result_summary": {
+            "ok": true,
+            "xy": [
+              3.113,
+              1.663
+            ],
+            "in_obstacle": false,
+            "nearest_obstacle_m": {
+              "value": 0.3905,
+              "unit": "m",
+              "fact_id": "f_ifc10c_022"
+            },
+            "gap_m": {
+              "value": 0.781,
+              "unit": "m",
+              "fact_id": "f_ifc10c_023"
+            },
+            "robot_width_m": {
+              "value": 0.58,
+              "unit": "m",
+              "fact_id": "f_ifc10c_024"
+            },
+            "gap_margin_m": {
+              "value": 0.201,
+              "unit": "m",
+              "fact_id": "f_ifc10c_025"
+            }
+          },
+          "fact_ids": [
+            "f_ifc10c_022",
+            "f_ifc10c_023",
+            "f_ifc10c_024",
+            "f_ifc10c_025"
+          ]
+        },
+        {
+          "i": 6,
+          "thought": "",
+          "tool": "get_objects_near",
+          "args": {
+            "xy": [
+              3.113,
+              1.663
+            ],
+            "r": 2
+          },
+          "result_summary": {
+            "ok": true,
+            "xy": [
+              3.113,
+              1.663
+            ],
+            "r": 2.0,
+            "objects": [
+              {
+                "id": "PALLET1",
+                "label": "pallet",
+                "movable": true,
+                "fragile": false,
+                "center_xy": [
+                  4.015,
+                  1.01
+                ],
+                "distance_m": {
+                  "value": 0.3938,
+                  "unit": "m",
+                  "fact_id": "f_ifc10c_026"
+                },
+                "confidence": 1.0
+              },
+              {
+                "id": "SHELF_A",
+                "label": "shelf",
+                "movable": false,
+                "fragile": false,
+                "center_xy": [
+                  5.265,
+                  2.51
+                ],
+                "distance_m": {
+                  "value": 0.547,
+                  "unit": "m",
+                  "fact_id": "f_ifc10c_027"
+                },
+                "confidence": 1.0
+              }
+            ],
+            "zone_ids": [
+              "staging",
+              "aisles",
+              "door"
+            ]
+          },
+          "fact_ids": [
+            "f_ifc10c_026",
+            "f_ifc10c_027"
+          ]
+        },
+        {
+          "i": 7,
+          "thought": "",
+          "tool": "get_gap_at",
+          "args": {
+            "xy": [
+              1.113,
+              1.712
+            ]
+          },
+          "result_summary": {
+            "ok": true,
+            "xy": [
+              1.113,
+              1.712
+            ],
+            "in_obstacle": false,
+            "nearest_obstacle_m": {
+              "value": 1.0296,
+              "unit": "m",
+              "fact_id": "f_ifc10c_028"
+            },
+            "gap_m": {
+              "value": 2.0591,
+              "unit": "m",
+              "fact_id": "f_ifc10c_029"
+            },
+            "robot_width_m": {
+              "value": 0.58,
+              "unit": "m",
+              "fact_id": "f_ifc10c_030"
+            },
+            "gap_margin_m": {
+              "value": 1.4791,
+              "unit": "m",
+              "fact_id": "f_ifc10c_031"
+            }
+          },
+          "fact_ids": [
+            "f_ifc10c_028",
+            "f_ifc10c_029",
+            "f_ifc10c_030",
+            "f_ifc10c_031"
+          ]
+        },
+        {
+          "i": 8,
+          "thought": "",
+          "tool": "get_episode_events",
+          "args": {
+            "batch_id": "sb_03d73fe6bf9a",
+            "type": "fail",
+            "limit": 20
+          },
+          "result_summary": {
+            "ok": true,
+            "batch_id": "sb_03d73fe6bf9a",
+            "type": "fail",
+            "count": {
+              "value": 5,
+              "unit": "events",
+              "fact_id": "f_ifc10c_032"
+            },
+            "episodes_with_event": {
+              "value": 5,
+              "unit": "episodes",
+              "fact_id": "f_ifc10c_033"
+            },
+            "per_mission": {
+              "value": 0.125,
+              "unit": "per mission",
+              "fact_id": "f_ifc10c_034"
+            },
+            "sample": [
+              {
+                "episode": 3,
+                "t": 0.0,
+                "xy": [
+                  0.715,
+                  0.76
+                ],
+                "detail": {
+                  "reason": "no_path_static",
+                  "why": "leg PICKUP->S1: no_path"
+                }
+              },
+              {
+                "episode": 8,
+                "t": 0.0,
+                "xy": [
+                  0.715,
+                  0.76
+                ],
+                "detail": {
+                  "reason": "no_path_static",
+                  "why": "leg PICKUP->S1: search_limit"
+                }
+              },
+              {
+                "episode": 11,
+                "t": 0.0,
+                "xy": [
+                  0.715,
+                  0.76
+                ],
+                "detail": {
+                  "reason": "no_path_static",
+                  "why": "leg PICKUP->S1: no_path"
+                }
+              },
+              {
+                "episode": 15,
+                "t": 0.0,
+                "xy": [
+                  0.715,
+                  0.76
+                ],
+                "detail": {
+                  "reason": "no_path_static",
+                  "why": "leg PICKUP->S1: no_path"
+                }
+              },
+              {
+                "episode": 30,
+                "t": 0.0,
+                "xy": [
+                  0.715,
+                  0.76
+                ],
+                "detail": {
+                  "reason": "no_path_static",
+                  "why": "leg PICKUP->S1: no_path"
+                }
+              }
+            ]
+          },
+          "fact_ids": [
+            "f_ifc10c_032",
+            "f_ifc10c_033",
+            "f_ifc10c_034"
+          ]
+        }
+      ],
+      "experiments": [],
+      "findings": [],
+      "facts": [
+        {
+          "fact_id": "f_ifc10c_001",
+          "value": 0.875,
+          "unit": "ratio",
+          "label": "Success rate, mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step1"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_002",
+          "value": 0.7389,
+          "unit": "ratio",
+          "label": "Success rate 95% CI low, mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step1"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_003",
+          "value": 0.9454,
+          "unit": "ratio",
+          "label": "Success rate 95% CI high, mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step1"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_004",
+          "value": 40.0,
+          "unit": "episodes",
+          "label": "Episodes, mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step1"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_005",
+          "value": 144.7,
+          "unit": "s",
+          "label": "Median mission time, mir_mir100, quiet traffic, nominal geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step1"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_006",
+          "value": 0.0275,
+          "unit": "m",
+          "label": "Median smallest robot-to-obstacle gap, mir_mir100, quiet traffic, nominal geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step1"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_007",
+          "value": 0.75,
+          "unit": "per mission",
+          "label": "Near-misses per mission, mir_mir100, quiet traffic, nominal geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step1"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_008",
+          "value": 1.225,
+          "unit": "per mission",
+          "label": "Safety stops per mission, mir_mir100, quiet traffic, nominal geometry",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step1"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_009",
+          "value": 5.0,
+          "unit": "episodes",
+          "label": "Failures 'no_path_static', mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step1"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_010",
+          "value": 0.2074,
+          "unit": "ratio",
+          "label": "Pinch Map spot #1: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step2"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_011",
+          "value": 0.1082,
+          "unit": "ratio",
+          "label": "Pinch Map spot #2: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step2"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_012",
+          "value": 0.1015,
+          "unit": "ratio",
+          "label": "Pinch Map spot #3: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step2"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_013",
+          "value": 0.0716,
+          "unit": "ratio",
+          "label": "Pinch Map spot #4: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step2"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_014",
+          "value": 0.0509,
+          "unit": "ratio",
+          "label": "Pinch Map spot #5: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step2"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_015",
+          "value": 0.5506,
+          "unit": "m",
+          "label": "Distance from (1.66, 3.59) to nearest obstacle (nominal grid)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step3"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_016",
+          "value": 1.1011,
+          "unit": "m",
+          "label": "Approximate free gap through (1.66, 3.59) (2 x nearest-obstacle distance, nominal grid)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step3"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_017",
+          "value": 0.58,
+          "unit": "m",
+          "label": "Footprint width, mir_mir100",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step3"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_018",
+          "value": 0.5211,
+          "unit": "m",
+          "label": "Approximate gap minus robot width at (1.66, 3.59)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step3"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_019",
+          "value": 0.5495,
+          "unit": "m",
+          "label": "Distance from (1.66, 3.59) to the edge of object SHELF_B (shelf)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step4"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_020",
+          "value": 0.8538,
+          "unit": "m",
+          "label": "Distance from (1.66, 3.59) to the edge of object SHELF_A (shelf)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step4"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_021",
+          "value": 1.8557,
+          "unit": "m",
+          "label": "Distance from (1.66, 3.59) to the edge of object SHELF_C (shelf)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step4"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_022",
+          "value": 0.3905,
+          "unit": "m",
+          "label": "Distance from (3.11, 1.66) to nearest obstacle (nominal grid)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step5"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_023",
+          "value": 0.781,
+          "unit": "m",
+          "label": "Approximate free gap through (3.11, 1.66) (2 x nearest-obstacle distance, nominal grid)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step5"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_024",
+          "value": 0.58,
+          "unit": "m",
+          "label": "Footprint width, mir_mir100",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step5"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_025",
+          "value": 0.201,
+          "unit": "m",
+          "label": "Approximate gap minus robot width at (3.11, 1.66)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step5"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_026",
+          "value": 0.3938,
+          "unit": "m",
+          "label": "Distance from (3.11, 1.66) to the edge of object PALLET1 (pallet)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step6"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_027",
+          "value": 0.547,
+          "unit": "m",
+          "label": "Distance from (3.11, 1.66) to the edge of object SHELF_A (shelf)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step6"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_028",
+          "value": 1.0296,
+          "unit": "m",
+          "label": "Distance from (1.11, 1.71) to nearest obstacle (nominal grid)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step7"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_029",
+          "value": 2.0591,
+          "unit": "m",
+          "label": "Approximate free gap through (1.11, 1.71) (2 x nearest-obstacle distance, nominal grid)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step7"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_030",
+          "value": 0.58,
+          "unit": "m",
+          "label": "Footprint width, mir_mir100",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step7"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_031",
+          "value": 1.4791,
+          "unit": "m",
+          "label": "Approximate gap minus robot width at (1.11, 1.71)",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step7"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_032",
+          "value": 5.0,
+          "unit": "events",
+          "label": "'fail' events in sb_03d73fe6bf9a",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step8"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_033",
+          "value": 5.0,
+          "unit": "episodes",
+          "label": "Episodes with a 'fail' event, sb_03d73fe6bf9a",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step8"
+          }
+        },
+        {
+          "fact_id": "f_ifc10c_034",
+          "value": 0.125,
+          "unit": "per mission",
+          "label": "'fail' events per mission, sb_03d73fe6bf9a",
+          "origin": {
+            "type": "investigation",
+            "ref": "inv_fc10c27957#step8"
+          }
+        }
+      ],
+      "stop_reason": "max_steps",
+      "robot_id": "mir_mir100",
+      "policy": "llm",
+      "sim_runs": 0,
+      "sim_source": "jobs.sim.api"
+    }
+  },
+  "optimizer": {
+    "mir_mir250": [],
+    "mir_mir100": []
+  },
+  "optimizer_hints": {
+    "mir_mir250": [],
+    "mir_mir100": []
+  },
+  "verdicts": [
+    {
+      "robot_id": "pudu_t300",
+      "label": "Cleared",
+      "main_reason": "meets every rule as-is",
+      "as_is": [
+        {
+          "rule": "every task leg feasible on the conservative geometry bound",
+          "passed": true,
+          "value": "6/6 legs",
+          "threshold": null,
+          "fact_ids": [
+            "f_027",
+            "f_028",
+            "f_029",
+            "f_030",
+            "f_031",
+            "f_036"
+          ]
+        },
+        {
+          "rule": "no unresolved flagged_manual thresholds on the route",
+          "passed": true,
+          "value": "none",
+          "threshold": null,
+          "fact_ids": []
+        },
+        {
+          "rule": "simulated success at normal traffic (conservative bound) >= 0.90",
+          "passed": true,
+          "value": 0.975,
+          "threshold": 0.9,
+          "fact_ids": [
+            "f_068"
+          ]
+        }
+      ],
+      "with_changes": [],
+      "required_changes": [],
+      "config": {
+        "success_min": 0.9,
+        "density": "normal",
+        "bound": "conservative"
+      }
+    },
+    {
+      "robot_id": "mir_mir250",
+      "label": "Not cleared",
+      "main_reason": "success 88% at normal traffic (needs 90%)",
+      "as_is": [
+        {
+          "rule": "every task leg feasible on the conservative geometry bound",
+          "passed": true,
+          "value": "6/6 legs",
+          "threshold": null,
+          "fact_ids": [
+            "f_117",
+            "f_118",
+            "f_119",
+            "f_120",
+            "f_121",
+            "f_122"
+          ]
+        },
+        {
+          "rule": "no unresolved flagged_manual thresholds on the route",
+          "passed": true,
+          "value": "none",
+          "threshold": null,
+          "fact_ids": []
+        },
+        {
+          "rule": "simulated success at normal traffic (conservative bound) >= 0.90",
+          "passed": false,
+          "value": 0.875,
+          "threshold": 0.9,
+          "fact_ids": [
+            "f_159"
+          ]
+        }
+      ],
+      "with_changes": [],
+      "required_changes": [],
+      "config": {
+        "success_min": 0.9,
+        "density": "normal",
+        "bound": "conservative"
+      }
+    },
+    {
+      "robot_id": "otto_100",
+      "label": "Cleared",
+      "main_reason": "meets every rule as-is",
+      "as_is": [
+        {
+          "rule": "every task leg feasible on the conservative geometry bound",
+          "passed": true,
+          "value": "6/6 legs",
+          "threshold": null,
+          "fact_ids": [
+            "f_211",
+            "f_212",
+            "f_213",
+            "f_214",
+            "f_215",
+            "f_220"
+          ]
+        },
+        {
+          "rule": "no unresolved flagged_manual thresholds on the route",
+          "passed": true,
+          "value": "none",
+          "threshold": null,
+          "fact_ids": []
+        },
+        {
+          "rule": "simulated success at normal traffic (conservative bound) >= 0.90",
+          "passed": true,
+          "value": 0.975,
+          "threshold": 0.9,
+          "fact_ids": [
+            "f_253"
+          ]
+        }
+      ],
+      "with_changes": [],
+      "required_changes": [],
+      "config": {
+        "success_min": 0.9,
+        "density": "normal",
+        "bound": "conservative"
+      }
+    },
+    {
+      "robot_id": "mir_mir100",
+      "label": "Not cleared",
+      "main_reason": "success 88% at normal traffic (needs 90%)",
+      "as_is": [
+        {
+          "rule": "every task leg feasible on the conservative geometry bound",
+          "passed": true,
+          "value": "6/6 legs",
+          "threshold": null,
+          "fact_ids": [
+            "f_301",
+            "f_302",
+            "f_303",
+            "f_304",
+            "f_305",
+            "f_310"
+          ]
+        },
+        {
+          "rule": "no unresolved flagged_manual thresholds on the route",
+          "passed": true,
+          "value": "none",
+          "threshold": null,
+          "fact_ids": []
+        },
+        {
+          "rule": "simulated success at normal traffic (conservative bound) >= 0.90",
+          "passed": false,
+          "value": 0.875,
+          "threshold": 0.9,
+          "fact_ids": [
+            "f_343"
+          ]
+        }
+      ],
+      "with_changes": [],
+      "required_changes": [],
+      "config": {
+        "success_min": 0.9,
+        "density": "normal",
+        "bound": "conservative"
+      }
+    }
+  ],
+  "confirmation_batches": {},
+  "roi": {},
+  "citations": [
+    {
+      "used_for": "market check: Pudu T300 AMR payload capacity specifications",
+      "url": "https://www.pudurobotics.com/en/products/pudut300",
+      "title": "PUDU T300 AMR | Intelligent Autonomous Mobile Robot for Industrial Material Delivery",
+      "snippet": "The PUDU T300 Standard is a transport robot designed for industrial material handling and high-load commercial delivery scenarios, delivering efficient and stable heavy-duty performance. Built around a high-strength load-bearing chassis, it offers strong openness and scalability, and is equipped with an interactive touchscreen to improve usability and operational efficiency. With a maximum payload of 661 lbs (300 kg), it supports elevator access, gate/turnstile integration, and remote call [...]",
+      "retrieved_at": "2026-10-27T20:26:48+00:00"
+    },
+    {
+      "used_for": "market check: Pudu T300 AMR payload capacity specifications",
+      "url": "https://log-robot.com/en/amr-products/pudu-robotics/pudu-t300",
+      "title": "PUDU T300 - autonomous transport robot with a payload of up to 300 kg",
+      "snippet": "The PUDU T300 from PUDU Robotics is an autonomous transport robot designed specifically for material handling in industrial environments and has exceptional adaptability. With a load capacity of up to 300 kg and state-of-the-art navigation and safety functions, the T300 optimises internal logistics processes and significantly increases operational efficiency. For example, it can automatically follow employees during the loading process, reducing walking distances and labour. [...] Comprehensive ",
+      "retrieved_at": "2026-10-27T20:26:48+00:00"
+    },
+    {
+      "used_for": "market check: Pudu T300 AMR payload capacity specifications",
+      "url": "https://www.robotlab.com/store/pudu-t300",
+      "title": "Pudu T300 Robot \u2014 Price, Specs & Demo \u00b7 RobotLAB",
+      "snippet": "|  |  |\n --- |\n| Maximum Payload | 300 kg (661 lbs) |\n| Dimensions (L\u00d7W\u00d7H) | 835 \u00d7 500 \u00d7 1350 mm (32.87 \u00d7 19.69 \u00d7 53.15 in) |\n| Machine Weight | 65 kg (standard mode) |\n| Navigation | VSLAM & LiDAR SLAM (no preset paths) |\n| Maximum Speed | 1.2 m/s (3.94 ft/s) |\n| Battery Capacity | 30 Ah |\n| Runtime | 12 h (no load) / 6 h (fully loaded) |\n| Charging Time | 2 h (0% to 90%) |\n| Minimum Path Clearance | 60 cm (23.62 in) |\n| Threshold / Groove Crossing | 20 mm threshold / 35 mm groove | [...] The P",
+      "retrieved_at": "2026-10-27T20:26:48+00:00"
+    },
+    {
+      "used_for": "market check: OTTO 100 AMR payload capacity specifications",
+      "url": "https://www.nord-modules.com/otto-100",
+      "title": "OTTO 100 | Quality top modules for OTTO Motors AMRs",
+      "snippet": "Equipped with laser and 3D camera sensors, the OTTO 100 can operate autonomously even in the most dynamic manufacturing environments, while still being safe enough to work alongside people. With a maximum speed of 2 meters per second, a runtime of 6 hours, and a maximum payload of 150kg, the OTTO 100 is a reliable, high-performance AMR that can help businesses streamline their material handling processes, increase productivity, and reduce operational costs. [...] Nord Modules\n\nSelect Page\n\n## RO",
+      "retrieved_at": "2026-10-27T20:26:51+00:00"
+    },
+    {
+      "used_for": "market check: OTTO 100 AMR payload capacity specifications",
+      "url": "https://ottomotors.com/100",
+      "title": "OTTO 100 Autonomous Mobile Robot | Autonomous Material Handling | OTTO by Rockwell Automation",
+      "snippet": "get started\n\nKEY SPECIFICATIONS\n\nmetric\n\n Payload capacity\n\n  0 kg\n Maximum travel speed\n\n  0 m/s\n Total footprint\n\n  0 x 0 x 0 mm\n Runtime (90% to 10%)\n\n  0 hours\n Integrated lift\n\n  0 mm\n Charge time (10% to 90%)\n\n  0 minutes\n Standards compliance\n\n  CE Marked, ANSI/ITSDF B56.5, RIA R15.08-1, ISO 12100/13849-1/3691-4, FCC Part 15 Subpart B / ICES-003, ICES-002, EN 1175-1/60204-1\n\nWHY OTTO 100\n\n## Versatility and durability in a small, powerful package\n\n Application Versatility [...] DIFFERENTI",
+      "retrieved_at": "2026-10-27T20:26:51+00:00"
+    },
+    {
+      "used_for": "market check: OTTO 100 AMR payload capacity specifications",
+      "url": "https://blog.hesconet.com/otto-amr-comparison-100-600-1200-1500-lifter",
+      "title": "OTTO AMR Comparison: 100 vs. 600 vs. 1200 vs. 1500 vs. Lifter",
+      "snippet": "| Specification | OTTO 100 | OTTO 600 | OTTO 1200 | OTTO 1500 | OTTO Lifter |\n ---  ---  --- |\n| Max. capacity | 150 kg | 600 kg | 1,200 kg | 1,900 kg | 1,200 kg |\n| Max. speed | 2.0 m/s | 1.4 m/s | 1.4 m/s | 2.0 m/s | 1.5 m/s |\n| Footprint (mm) | 740 \u00d7 550 | 1,050 \u00d7 700 | 1,350 \u00d7 910 | 1,837 \u00d7 1,283 | 2,841 \u00d7 1,201 |\n| Height (mm) | 308 | 320 | 320 | 351 | 2,155 |\n| Min. aisle, 1-way | 1,099 mm | n/p | n/p | 1,915 mm | 3,152 mm | [...] OTTO 100 \u2014 Human-scale loads under 150 kg, cart workflows, ",
+      "retrieved_at": "2026-10-27T20:26:51+00:00"
+    }
+  ],
+  "tool_calls": [
+    {
+      "caller": "super",
+      "tool": "list_candidates",
+      "args": {},
+      "result": {},
+      "t": 1793132791.898
+    },
+    {
+      "caller": "super",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "pudu_t300",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793132795.245
+    },
+    {
+      "caller": "super",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "otto_100",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793132796.503
+    },
+    {
+      "caller": "super",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "mir_mir100",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793132797.61
+    },
+    {
+      "caller": "super",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "mir_mir250",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793132798.781
+    },
+    {
+      "caller": "super",
+      "tool": "tavily_search",
+      "args": {
+        "query": "Pudu T300 AMR payload capacity specifications",
+        "max_results": 3
+      },
+      "result": {
+        "mode": "live"
+      },
+      "t": 1793132808.22
+    },
+    {
+      "caller": "super",
+      "tool": "tavily_search",
+      "args": {
+        "query": "OTTO 100 AMR payload capacity specifications",
+        "max_results": 3
+      },
+      "result": {
+        "mode": "live"
+      },
+      "t": 1793132811.548
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "pudu_t300",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793132826.139
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "pudu_t300",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793132826.139
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "pudu_t300",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793132827.435
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "mir_mir250",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793132828.939
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "mir_mir250",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793132828.939
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "mir_mir250",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793132830.411
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "otto_100",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793132831.831
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "otto_100",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793132831.831
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "otto_100",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793132833.347
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "mir_mir100",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793132834.68
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "mir_mir100",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793132834.68
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "mir_mir100",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793132835.958
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "quiet",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_62a4a91d455f"
+      },
+      "t": 1793132948.992
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "quiet",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_318479d649c5"
+      },
+      "t": 1793132953.294
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "normal",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_a83843d81092"
+      },
+      "t": 1793132959.513
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "quiet",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_774e5753d4d9"
+      },
+      "t": 1793132959.821
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "normal",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_ae5621cead7c"
+      },
+      "t": 1793132971.827
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "peak",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_599522a223fa"
+      },
+      "t": 1793132976.869
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "normal",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_6228255866e2"
+      },
+      "t": 1793133000.555
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "peak",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_02f8291b72d1"
+      },
+      "t": 1793133013.241
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir250",
+        "density": "quiet",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_6c0e4e92553b"
+      },
+      "t": 1793133015.933
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir250",
+        "density": "quiet",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_acaad38c39e9"
+      },
+      "t": 1793133021.43
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "peak",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_fbd802602b39"
+      },
+      "t": 1793133027.278
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir250",
+        "density": "quiet",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_de2db6c9bb85"
+      },
+      "t": 1793133208.807
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir250",
+        "density": "normal",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_e3ccc14c1476"
+      },
+      "t": 1793133213.923
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir250",
+        "density": "normal",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_1e9ef8dcdf61"
+      },
+      "t": 1793133222.232
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir250",
+        "density": "normal",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_4fab0640ed9b"
+      },
+      "t": 1793133223.78
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "otto_100",
+        "density": "quiet",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_c63223f5d0bf"
+      },
+      "t": 1793133245.847
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir250",
+        "density": "peak",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_ff68d24cd9f5"
+      },
+      "t": 1793133268.292
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "otto_100",
+        "density": "quiet",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_9ce556cb4d55"
+      },
+      "t": 1793133283.765
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "otto_100",
+        "density": "quiet",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_4cc055a97e39"
+      },
+      "t": 1793133289.547
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir250",
+        "density": "peak",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_923ab3c5e4a0"
+      },
+      "t": 1793133293.601
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir250",
+        "density": "peak",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_0b19d69ffc27"
+      },
+      "t": 1793133390.426
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "otto_100",
+        "density": "normal",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_d2c34af60fbd"
+      },
+      "t": 1793133394.297
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "otto_100",
+        "density": "normal",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_938052ccbcec"
+      },
+      "t": 1793133603.176
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir100",
+        "density": "quiet",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_a7c4b4c8f285"
+      },
+      "t": 1793133616.102
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir100",
+        "density": "quiet",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_03d73fe6bf9a"
+      },
+      "t": 1793133636.71
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir100",
+        "density": "quiet",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_539ba4b20ade"
+      },
+      "t": 1793133638.878
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir100",
+        "density": "normal",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_96f02e78896e"
+      },
+      "t": 1793133651.173
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "otto_100",
+        "density": "normal",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_a0511c46ab27"
+      },
+      "t": 1793133684.643
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir100",
+        "density": "normal",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_82a57c4f9f6d"
+      },
+      "t": 1793133707.435
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "otto_100",
+        "density": "peak",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_7ac96c8888b0"
+      },
+      "t": 1793133710.063
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir100",
+        "density": "normal",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_fc4853bd9207"
+      },
+      "t": 1793133712.211
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "otto_100",
+        "density": "peak",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_880ee587be27"
+      },
+      "t": 1793133744.019
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "otto_100",
+        "density": "peak",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_9de38e6e6c78"
+      },
+      "t": 1793133776.419
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir100",
+        "density": "peak",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_a88b8f4302ab"
+      },
+      "t": 1793133836.471
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir100",
+        "density": "peak",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_ccb6e9e6b36c"
+      },
+      "t": 1793133838.246
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "mir_mir100",
+        "density": "peak",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_63697ef211c7"
+      },
+      "t": 1793133844.384
+    },
+    {
+      "caller": "code",
+      "tool": "investigate",
+      "args": {
+        "robot_id": "mir_mir250"
+      },
+      "result": {
+        "ok": true,
+        "investigation_id": "inv_af72142b9b",
+        "mode": "live"
+      },
+      "t": 1793133881.373
+    },
+    {
+      "caller": "code",
+      "tool": "investigate",
+      "args": {
+        "robot_id": "mir_mir100"
+      },
+      "result": {
+        "ok": true,
+        "investigation_id": "inv_fc10c27957",
+        "mode": "live"
+      },
+      "t": 1793133898.088
+    },
+    {
+      "caller": "code",
+      "tool": "run_optimizer",
+      "args": {
+        "robot_id": "mir_mir250"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793133898.785
+    },
+    {
+      "caller": "code",
+      "tool": "run_optimizer",
+      "args": {
+        "robot_id": "mir_mir100"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134015.667
+    }
+  ],
+  "report": {
+    "md_key": "analyses/an_ref_storeroom_01/report.md",
+    "facts_key": "analyses/an_ref_storeroom_01/facts.json",
+    "citations_key": "analyses/an_ref_storeroom_01/citations.json",
+    "factcheck": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  "sim_source": "jobs.sim.api",
+  "route_gaps": [
+    {
+      "from": "DOCK",
+      "to": "PICKUP",
+      "gap_m": 0.8
+    },
+    {
+      "from": "PICKUP",
+      "to": "S1",
+      "gap_m": 0.8
+    },
+    {
+      "from": "S1",
+      "to": "S2",
+      "gap_m": 0.8
+    },
+    {
+      "from": "S2",
+      "to": "S3",
+      "gap_m": 0.8
+    },
+    {
+      "from": "S3",
+      "to": "S4",
+      "gap_m": 1.4
+    },
+    {
+      "from": "S4",
+      "to": "DOCK",
+      "gap_m": 1.2
+    }
+  ],
+  "episodes_per_batch": 40,
+  "finished_at": 1793134272.87057,
+  "replay_batches": {
+    "pudu_t300": "sb_a83843d81092",
+    "mir_mir250": "sb_e3ccc14c1476",
+    "otto_100": "sb_938052ccbcec",
+    "mir_mir100": "sb_fc4853bd9207"
+  }
+}
