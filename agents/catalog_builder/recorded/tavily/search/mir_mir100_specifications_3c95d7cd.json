@@ -1,0 +1,16 @@
+{
+  "query": "MiR MiR100 specifications",
+  "answer": null,
+  "images": [],
+  "results": [
+    {
+      "title": "MiR MiR100",
+      "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+      "content": "MiR100\nThe MiR100 is a safe, cost-eﬀective mobile robot that quickly automates your\ninternal transportation and logistics. The robot optimizes workﬂows, freeing staﬀ\nresources so you can increase prod",
+      "score": 0.9,
+      "raw_content": null
+    }
+  ],
+  "response_time": 0.0,
+  "_recorded": "URL list from catalog research (2026-10-27), stored in the Tavily search response shape"
+}
