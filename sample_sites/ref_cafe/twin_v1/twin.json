@@ -1,0 +1,792 @@
+{
+  "twin_id": "twin_ref_cafe_v1",
+  "site_id": "ref_cafe",
+  "version": 1,
+  "accuracy": {
+    "method": "reference_ground_truth",
+    "median_abs_err_m": 0.0013,
+    "p90_abs_err_m": 0.0144
+  },
+  "floor": {
+    "plane": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "bounds_polygon": [
+      [
+        0.014832972528886395,
+        0.010039148399467391
+      ],
+      [
+        8.014832972528886,
+        0.010039148399467391
+      ],
+      [
+        8.014832972528886,
+        6.010039148399468
+      ],
+      [
+        0.014832972528886395,
+        6.010039148399468
+      ]
+    ]
+  },
+  "occupancy": {
+    "uri": "sites/ref_cafe/twin_v1/occ.png",
+    "resolution_m": 0.025,
+    "origin_xy": [
+      -0.5,
+      -0.5
+    ],
+    "width": 361,
+    "height": 281,
+    "height_band_m": [
+      0.03,
+      2.0
+    ]
+  },
+  "primitives": [
+    {
+      "id": "COUNTER",
+      "type": "box",
+      "label": "counter",
+      "pose": {
+        "xyz": [
+          4.014832972528886,
+          5.635039148399468,
+          0.525
+        ],
+        "yaw": 0.0
+      },
+      "size": [
+        2.8000000000000003,
+        0.75,
+        1.05
+      ],
+      "movable": false,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "KITCHEN_PASS",
+      "type": "box",
+      "label": "counter",
+      "pose": {
+        "xyz": [
+          7.164832972528886,
+          5.710039148399468,
+          0.45
+        ],
+        "yaw": 0.0
+      },
+      "size": [
+        1.7000000000000002,
+        0.5999999999999996,
+        0.9
+      ],
+      "movable": false,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "TABLE1",
+      "type": "box",
+      "label": "table",
+      "pose": {
+        "xyz": [
+          1.6230506737681738,
+          1.2962263512252996,
+          0.375
+        ],
+        "yaw": 0.0
+      },
+      "size": [
+        0.75,
+        0.75,
+        0.75
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "CH1W",
+      "type": "box",
+      "label": "chair",
+      "pose": {
+        "xyz": [
+          1.0389533213745543,
+          1.257548562067582,
+          0.45
+        ],
+        "yaw": 0.05012323827204358
+      },
+      "size": [
+        0.45,
+        0.45,
+        0.9
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "CH1E",
+      "type": "box",
+      "label": "chair",
+      "pose": {
+        "xyz": [
+          2.294326231495946,
+          1.304757213286674,
+          0.45
+        ],
+        "yaw": 0.03671944975743975
+      },
+      "size": [
+        0.45,
+        0.45,
+        0.9
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "TABLE2",
+      "type": "box",
+      "label": "table",
+      "pose": {
+        "xyz": [
+          3.617450472016812,
+          1.3361434938267334,
+          0.375
+        ],
+        "yaw": 0.0
+      },
+      "size": [
+        0.75,
+        0.75,
+        0.75
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "CH2W",
+      "type": "box",
+      "label": "chair",
+      "pose": {
+        "xyz": [
+          2.955865116604659,
+          1.2963625738403453,
+          0.45
+        ],
+        "yaw": 0.05718468425401109
+      },
+      "size": [
+        0.45,
+        0.45,
+        0.9
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "CH2E",
+      "type": "box",
+      "label": "chair",
+      "pose": {
+        "xyz": [
+          4.200809029547358,
+          1.3545159295411289,
+          0.45
+        ],
+        "yaw": -0.05189510070359056
+      },
+      "size": [
+        0.45,
+        0.45,
+        0.9
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "TABLE3",
+      "type": "box",
+      "label": "table",
+      "pose": {
+        "xyz": [
+          5.636623707869879,
+          1.3125268216144128,
+          0.375
+        ],
+        "yaw": 0.0
+      },
+      "size": [
+        0.75,
+        0.75,
+        0.75
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "CH3W",
+      "type": "box",
+      "label": "chair",
+      "pose": {
+        "xyz": [
+          5.026652518816141,
+          1.3063417993102255,
+          0.45
+        ],
+        "yaw": -0.07546885261672592
+      },
+      "size": [
+        0.45,
+        0.45,
+        0.9
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "CH3E",
+      "type": "box",
+      "label": "chair",
+      "pose": {
+        "xyz": [
+          6.229052035519835,
+          1.3261767747899031,
+          0.45
+        ],
+        "yaw": 0.02355032185188001
+      },
+      "size": [
+        0.45,
+        0.45,
+        0.9
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "TABLE4",
+      "type": "box",
+      "label": "table",
+      "pose": {
+        "xyz": [
+          1.6217560792177619,
+          3.0030598016551804,
+          0.375
+        ],
+        "yaw": 0.0
+      },
+      "size": [
+        0.75,
+        0.75,
+        0.75
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "CH4W",
+      "type": "box",
+      "label": "chair",
+      "pose": {
+        "xyz": [
+          0.9420350856388406,
+          3.041526628757279,
+          0.45
+        ],
+        "yaw": 0.029686717516911154
+      },
+      "size": [
+        0.45,
+        0.45,
+        0.9
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "CH4E",
+      "type": "box",
+      "label": "chair",
+      "pose": {
+        "xyz": [
+          2.2668020068445434,
+          3.0181355401008556,
+          0.45
+        ],
+        "yaw": -0.017772572163343395
+      },
+      "size": [
+        0.45,
+        0.45,
+        0.9
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "TABLE5",
+      "type": "box",
+      "label": "table",
+      "pose": {
+        "xyz": [
+          3.592938762830231,
+          3.023328448811112,
+          0.375
+        ],
+        "yaw": 0.0
+      },
+      "size": [
+        0.75,
+        0.75,
+        0.75
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "CH5W",
+      "type": "box",
+      "label": "chair",
+      "pose": {
+        "xyz": [
+          2.9604033305826585,
+          3.0081477988558287,
+          0.45
+        ],
+        "yaw": -0.0022663425869137444
+      },
+      "size": [
+        0.45,
+        0.45,
+        0.9
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "CH5E",
+      "type": "box",
+      "label": "chair",
+      "pose": {
+        "xyz": [
+          4.261887546265131,
+          3.058051930087612,
+          0.45
+        ],
+        "yaw": -0.022752768526548763
+      },
+      "size": [
+        0.45,
+        0.45,
+        0.9
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "TABLE6",
+      "type": "box",
+      "label": "table",
+      "pose": {
+        "xyz": [
+          5.619124762372671,
+          2.999351311864024,
+          0.375
+        ],
+        "yaw": 0.0
+      },
+      "size": [
+        0.75,
+        0.75,
+        0.75
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "CH6W",
+      "type": "box",
+      "label": "chair",
+      "pose": {
+        "xyz": [
+          4.979694759352701,
+          2.9863842099045943,
+          0.45
+        ],
+        "yaw": -0.017340959915494197
+      },
+      "size": [
+        0.45,
+        0.45,
+        0.9
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "CH6E",
+      "type": "box",
+      "label": "chair",
+      "pose": {
+        "xyz": [
+          6.28815219757315,
+          2.977523919346694,
+          0.45
+        ],
+        "yaw": 0.01970994314976679
+      },
+      "size": [
+        0.45,
+        0.45,
+        0.9
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "PLANT1",
+      "type": "cylinder",
+      "label": "plant",
+      "pose": {
+        "xyz": [
+          0.6148329725288864,
+          5.310039148399468,
+          0.6
+        ],
+        "yaw": 0.0
+      },
+      "size": [
+        0.5,
+        0.5,
+        1.2
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "BIN1",
+      "type": "cylinder",
+      "label": "bin",
+      "pose": {
+        "xyz": [
+          7.764832972528886,
+          0.3100391483994674,
+          0.4
+        ],
+        "yaw": 0.0
+      },
+      "size": [
+        0.35,
+        0.35,
+        0.8
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "DOCKSTN",
+      "type": "box",
+      "label": "dock",
+      "pose": {
+        "xyz": [
+          0.1898329725288864,
+          4.1850391483994684,
+          0.15
+        ],
+        "yaw": 0.0
+      },
+      "size": [
+        0.35,
+        0.4500000000000002,
+        0.3
+      ],
+      "movable": false,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    }
+  ],
+  "thresholds": [
+    {
+      "id": "D1",
+      "segment": [
+        [
+          6.714832972528886,
+          3.560039148399467
+        ],
+        [
+          7.614832972528886,
+          3.560039148399467
+        ]
+      ],
+      "height_m": 0.02,
+      "status": "measured"
+    }
+  ],
+  "keepout_zones": [],
+  "waypoints": [
+    {
+      "id": "T1",
+      "xy": [
+        1.6230506737681738,
+        2.0912263512252998
+      ],
+      "yaw": 0.0,
+      "kind": "dest"
+    },
+    {
+      "id": "T2",
+      "xy": [
+        3.617450472016812,
+        2.1311434938267335
+      ],
+      "yaw": 0.0,
+      "kind": "dest"
+    },
+    {
+      "id": "T3",
+      "xy": [
+        5.636623707869879,
+        2.1075268216144125
+      ],
+      "yaw": 0.0,
+      "kind": "dest"
+    },
+    {
+      "id": "T4",
+      "xy": [
+        1.6217560792177619,
+        2.2080598016551805
+      ],
+      "yaw": 0.0,
+      "kind": "dest"
+    },
+    {
+      "id": "T5",
+      "xy": [
+        3.592938762830231,
+        2.228328448811112
+      ],
+      "yaw": 0.0,
+      "kind": "dest"
+    },
+    {
+      "id": "T6",
+      "xy": [
+        5.619124762372671,
+        2.204351311864024
+      ],
+      "yaw": 0.0,
+      "kind": "dest"
+    },
+    {
+      "id": "DOCK",
+      "xy": [
+        0.8148329725288864,
+        4.185039148399468
+      ],
+      "yaw": 0.0,
+      "kind": "dock"
+    },
+    {
+      "id": "PICKUP",
+      "xy": [
+        7.164832972528886,
+        5.010039148399468
+      ],
+      "yaw": 1.5707963267948966,
+      "kind": "pickup"
+    },
+    {
+      "id": "ENTRANCE",
+      "xy": [
+        1.1148329725288866,
+        0.4100391483994674
+      ],
+      "yaw": 0.0,
+      "kind": "entrance"
+    },
+    {
+      "id": "EXIT",
+      "xy": [
+        1.1148329725288866,
+        -0.06496085160053261
+      ],
+      "yaw": 0.0,
+      "kind": "exit"
+    }
+  ],
+  "hazards": [],
+  "traffic": {
+    "source": "user_estimated",
+    "zones": [
+      {
+        "id": "entrance",
+        "polygon": [
+          [
+            0.6148329725288864,
+            0.010039148399467391
+          ],
+          [
+            1.6148329725288866,
+            0.010039148399467391
+          ],
+          [
+            1.6148329725288866,
+            0.8100391483994674
+          ],
+          [
+            0.6148329725288864,
+            0.8100391483994674
+          ]
+        ]
+      },
+      {
+        "id": "counter",
+        "polygon": [
+          [
+            2.6148329725288866,
+            4.410039148399468
+          ],
+          [
+            5.414832972528886,
+            4.410039148399468
+          ],
+          [
+            5.414832972528886,
+            5.210039148399468
+          ],
+          [
+            2.6148329725288866,
+            5.210039148399468
+          ]
+        ]
+      },
+      {
+        "id": "seating",
+        "polygon": [
+          [
+            1.0148329725288865,
+            0.4100391483994674
+          ],
+          [
+            6.014832972528886,
+            0.4100391483994674
+          ],
+          [
+            6.014832972528886,
+            3.410039148399467
+          ],
+          [
+            1.0148329725288865,
+            3.410039148399467
+          ]
+        ]
+      },
+      {
+        "id": "kitchen",
+        "polygon": [
+          [
+            6.214832972528886,
+            3.7100391483994675
+          ],
+          [
+            7.914832972528886,
+            3.7100391483994675
+          ],
+          [
+            7.914832972528886,
+            5.310039148399468
+          ],
+          [
+            6.214832972528886,
+            5.310039148399468
+          ]
+        ]
+      }
+    ],
+    "od_pairs": [
+      [
+        "entrance",
+        "counter",
+        0.5
+      ],
+      [
+        "counter",
+        "seating",
+        0.3
+      ],
+      [
+        "seating",
+        "entrance",
+        0.15
+      ],
+      [
+        "kitchen",
+        "counter",
+        0.05
+      ]
+    ],
+    "persons_per_min": {
+      "quiet": 2.0,
+      "normal": 6.0,
+      "peak": 14.0
+    },
+    "walk_speed_mps": [
+      1.2,
+      0.25
+    ],
+    "heatmap_uri": null
+  },
+  "assets": {},
+  "geometry_source": "reference"
+}

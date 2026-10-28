@@ -1,0 +1,43 @@
+{
+  "batch_id": "sb_ce46c04a2ef7",
+  "twin_id": "twin_ref_cafe_v1",
+  "twin_version": 1,
+  "robot_id": "keenon_w3",
+  "task": {
+    "type": "delivery",
+    "sequence": [
+      "DOCK",
+      "PICKUP",
+      "T1",
+      "T3",
+      "T5",
+      "DOCK"
+    ]
+  },
+  "density": "normal",
+  "geometry_bound": "optimistic",
+  "n_episodes": 40,
+  "seed_base": 1000,
+  "code_version": "f3a233c+sim-772a0fe9e8",
+  "results": {
+    "success_rate": 0.75,
+    "min_gap_m": 0.016649999999999998,
+    "ci95": [
+      0.598057409330299,
+      0.8581303210445048
+    ],
+    "median_mission_s": 109.80000000000001,
+    "near_miss_per_mission": 1.15,
+    "stops_per_mission": 2.575,
+    "fail_reasons": {
+      "no_path_static": 10,
+      "blocked_timeout": 0,
+      "collision": 0
+    },
+    "n_success": 30,
+    "n_episodes": 40
+  },
+  "episodes_uri": null,
+  "bottleneck_uri": null,
+  "wall_time_s": 136.669
+}

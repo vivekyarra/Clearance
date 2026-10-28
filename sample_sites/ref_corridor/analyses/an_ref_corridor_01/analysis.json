@@ -1,0 +1,6122 @@
+{
+  "analysis_id": "an_ref_corridor_01",
+  "status": "done",
+  "started_at": 1793134917.901628,
+  "stages": {
+    "candidates": {
+      "state": "done",
+      "progress": 1.0,
+      "detail": "6 candidate(s); ordering by Super"
+    },
+    "feasibility": {
+      "state": "done",
+      "progress": 1.0
+    },
+    "batches": {
+      "state": "done",
+      "progress": 1.0,
+      "detail": "54 batch(es), 40 episodes each"
+    },
+    "investigation": {
+      "state": "done",
+      "progress": 1.0,
+      "detail": "every simulated robot met the success threshold; nothing to investigate"
+    },
+    "optimizer": {
+      "state": "done",
+      "progress": 1.0,
+      "detail": "no robot needed layout changes"
+    },
+    "verdicts": {
+      "state": "done",
+      "progress": 1.0
+    },
+    "report": {
+      "state": "done",
+      "progress": 1.0
+    }
+  },
+  "inputs": {
+    "site_id": "ref_corridor",
+    "twin_id": "twin_ref_corridor_v1",
+    "twin_version": 1,
+    "robot_ids": [
+      "bear_servi",
+      "bear_servi_plus",
+      "keenon_dinerbot_t8",
+      "keenon_dinerbot_t9",
+      "keenon_w3",
+      "mir_mir100",
+      "mir_mir250",
+      "otto_100",
+      "pudu_bellabot",
+      "pudu_kettybot",
+      "pudu_pudubot_2",
+      "pudu_t300"
+    ],
+    "task": {
+      "type": "delivery",
+      "sequence": [
+        "DOCK",
+        "PICKUP",
+        "O4",
+        "O3",
+        "O2",
+        "O1",
+        "DOCK"
+      ]
+    },
+    "business": {
+      "staff_cost_per_hour": 20.0,
+      "task_hours_per_day": 2.0,
+      "days_per_week": 5,
+      "maintenance_pct_per_year": 10.0,
+      "currency": "USD",
+      "payload_kg": 10.0,
+      "note": "example operator inputs entered by the user (reference site)"
+    },
+    "budget": {
+      "max_robots": 6,
+      "densities": [
+        "quiet",
+        "normal",
+        "peak"
+      ],
+      "bounds": [
+        "optimistic",
+        "nominal",
+        "conservative"
+      ],
+      "episodes": 40,
+      "seed_base": 1000,
+      "max_total_episodes": null,
+      "investigate_max_robots": 2,
+      "optimizer_max_robots": 2,
+      "confirm_episodes": 50,
+      "llm_rounds": 6,
+      "max_workers": 11,
+      "optimizer": {
+        "screen_episodes": 30,
+        "confirm_episodes": 50,
+        "top_k_confirm": 3,
+        "top_k_combo": 2,
+        "max_objects": 4,
+        "max_moves_per_object": 8,
+        "max_episodes": 900
+      },
+      "investigation": {
+        "max_steps": 8,
+        "max_experiments": 6,
+        "probe_episodes": 30
+      },
+      "include_awaiting_review": true
+    },
+    "include_awaiting_review": true
+  },
+  "twin": {
+    "twin_id": "twin_ref_corridor_v1",
+    "site_id": "ref_corridor",
+    "version": 1,
+    "accuracy": {
+      "method": "reference_ground_truth",
+      "median_abs_err_m": 0.0,
+      "p90_abs_err_m": 0.0
+    },
+    "floor": {
+      "plane": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "bounds_polygon": [
+        [
+          0.014832972528886395,
+          0.010039148399467391
+        ],
+        [
+          16.014832972528886,
+          0.010039148399467391
+        ],
+        [
+          16.014832972528886,
+          1.8100391483994673
+        ],
+        [
+          0.014832972528886395,
+          1.8100391483994673
+        ]
+      ]
+    },
+    "occupancy": {
+      "uri": "sites/ref_corridor/twin_v1/occ.png",
+      "resolution_m": 0.025,
+      "origin_xy": [
+        -0.5,
+        -0.5
+      ],
+      "width": 681,
+      "height": 113,
+      "height_band_m": [
+        0.03,
+        2.0
+      ]
+    },
+    "primitives": [
+      {
+        "id": "DOOR_N1",
+        "type": "box",
+        "label": "door",
+        "pose": {
+          "xyz": [
+            2.4648329725288867,
+            1.9400391483994672,
+            1.05
+          ],
+          "yaw": 0.0
+        },
+        "size": [
+          0.8999999999999999,
+          0.040000000000000036,
+          2.1
+        ],
+        "movable": false,
+        "fragile": false,
+        "confidence": 1.0,
+        "source": "reference"
+      },
+      {
+        "id": "DOOR_N2",
+        "type": "box",
+        "label": "door",
+        "pose": {
+          "xyz": [
+            6.464832972528886,
+            1.9400391483994672,
+            1.05
+          ],
+          "yaw": 0.0
+        },
+        "size": [
+          0.9000000000000004,
+          0.040000000000000036,
+          2.1
+        ],
+        "movable": false,
+        "fragile": false,
+        "confidence": 1.0,
+        "source": "reference"
+      },
+      {
+        "id": "DOOR_N3",
+        "type": "box",
+        "label": "door",
+        "pose": {
+          "xyz": [
+            10.464832972528885,
+            1.9400391483994672,
+            1.05
+          ],
+          "yaw": 0.0
+        },
+        "size": [
+          0.9000000000000004,
+          0.040000000000000036,
+          2.1
+        ],
+        "movable": false,
+        "fragile": false,
+        "confidence": 1.0,
+        "source": "reference"
+      },
+      {
+        "id": "DOOR_S1",
+        "type": "box",
+        "label": "door",
+        "pose": {
+          "xyz": [
+            4.464832972528886,
+            -0.11996085160053262,
+            1.05
+          ],
+          "yaw": 0.0
+        },
+        "size": [
+          0.9000000000000004,
+          0.04000000000000001,
+          2.1
+        ],
+        "movable": false,
+        "fragile": false,
+        "confidence": 1.0,
+        "source": "reference"
+      },
+      {
+        "id": "DOOR_S2",
+        "type": "box",
+        "label": "door",
+        "pose": {
+          "xyz": [
+            12.464832972528885,
+            -0.11996085160053262,
+            1.05
+          ],
+          "yaw": 0.0
+        },
+        "size": [
+          0.9000000000000004,
+          0.04000000000000001,
+          2.1
+        ],
+        "movable": false,
+        "fragile": false,
+        "confidence": 1.0,
+        "source": "reference"
+      },
+      {
+        "id": "BENCH1",
+        "type": "box",
+        "label": "bench",
+        "pose": {
+          "xyz": [
+            8.264832972528886,
+            0.2350391483994674,
+            0.225
+          ],
+          "yaw": 0.0
+        },
+        "size": [
+          1.5,
+          0.45,
+          0.45
+        ],
+        "movable": true,
+        "fragile": false,
+        "confidence": 1.0,
+        "source": "reference"
+      },
+      {
+        "id": "PRINTER1",
+        "type": "box",
+        "label": "printer",
+        "pose": {
+          "xyz": [
+            14.514832972528886,
+            1.4600391483994672,
+            0.5
+          ],
+          "yaw": 0.0
+        },
+        "size": [
+          0.6,
+          0.6,
+          1.0
+        ],
+        "movable": false,
+        "fragile": false,
+        "confidence": 1.0,
+        "source": "reference"
+      },
+      {
+        "id": "COOLER1",
+        "type": "cylinder",
+        "label": "water_cooler",
+        "pose": {
+          "xyz": [
+            0.4148329725288864,
+            1.5100391483994673,
+            0.55
+          ],
+          "yaw": 0.0
+        },
+        "size": [
+          0.35,
+          0.35,
+          1.1
+        ],
+        "movable": true,
+        "fragile": false,
+        "confidence": 1.0,
+        "source": "reference"
+      },
+      {
+        "id": "PLANT1",
+        "type": "cylinder",
+        "label": "plant",
+        "pose": {
+          "xyz": [
+            11.614832972528886,
+            0.3100391483994674,
+            0.5
+          ],
+          "yaw": 0.0
+        },
+        "size": [
+          0.45,
+          0.45,
+          1.0
+        ],
+        "movable": true,
+        "fragile": false,
+        "confidence": 1.0,
+        "source": "reference"
+      }
+    ],
+    "thresholds": [],
+    "keepout_zones": [],
+    "clear_zones": [],
+    "waypoints": [
+      {
+        "id": "DOCK",
+        "xy": [
+          0.6148329725288864,
+          0.6100391483994674
+        ],
+        "yaw": 0.0,
+        "kind": "dock"
+      },
+      {
+        "id": "PICKUP",
+        "xy": [
+          14.514832972528886,
+          0.5600391483994674
+        ],
+        "yaw": 0.0,
+        "kind": "pickup"
+      },
+      {
+        "id": "O1",
+        "xy": [
+          2.4648329725288867,
+          1.4600391483994672
+        ],
+        "yaw": 0.0,
+        "kind": "dest"
+      },
+      {
+        "id": "O2",
+        "xy": [
+          4.464832972528886,
+          0.3600391483994674
+        ],
+        "yaw": 0.0,
+        "kind": "dest"
+      },
+      {
+        "id": "O3",
+        "xy": [
+          6.464832972528886,
+          1.4600391483994672
+        ],
+        "yaw": 0.0,
+        "kind": "dest"
+      },
+      {
+        "id": "O4",
+        "xy": [
+          10.464832972528885,
+          1.4600391483994672
+        ],
+        "yaw": 0.0,
+        "kind": "dest"
+      },
+      {
+        "id": "ENTRANCE",
+        "xy": [
+          4.464832972528886,
+          -0.06496085160053261
+        ],
+        "yaw": 0.0,
+        "kind": "entrance"
+      },
+      {
+        "id": "EXIT",
+        "xy": [
+          12.464832972528885,
+          -0.06496085160053261
+        ],
+        "yaw": 0.0,
+        "kind": "exit"
+      }
+    ],
+    "hazards": [],
+    "traffic": {
+      "source": "user_estimated",
+      "zones": [
+        {
+          "id": "west",
+          "polygon": [
+            [
+              0.014832972528886395,
+              0.010039148399467391
+            ],
+            [
+              3.0148329725288865,
+              0.010039148399467391
+            ],
+            [
+              3.0148329725288865,
+              1.8100391483994673
+            ],
+            [
+              0.014832972528886395,
+              1.8100391483994673
+            ]
+          ]
+        },
+        {
+          "id": "middle",
+          "polygon": [
+            [
+              5.014832972528886,
+              0.010039148399467391
+            ],
+            [
+              11.014832972528886,
+              0.010039148399467391
+            ],
+            [
+              11.014832972528886,
+              1.8100391483994673
+            ],
+            [
+              5.014832972528886,
+              1.8100391483994673
+            ]
+          ]
+        },
+        {
+          "id": "east",
+          "polygon": [
+            [
+              12.014832972528886,
+              0.010039148399467391
+            ],
+            [
+              16.014832972528886,
+              0.010039148399467391
+            ],
+            [
+              16.014832972528886,
+              1.8100391483994673
+            ],
+            [
+              12.014832972528886,
+              1.8100391483994673
+            ]
+          ]
+        }
+      ],
+      "od_pairs": [
+        [
+          "west",
+          "east",
+          0.4
+        ],
+        [
+          "east",
+          "west",
+          0.4
+        ],
+        [
+          "middle",
+          "west",
+          0.1
+        ],
+        [
+          "middle",
+          "east",
+          0.1
+        ]
+      ],
+      "persons_per_min": {
+        "quiet": 2.0,
+        "normal": 6.0,
+        "peak": 14.0
+      },
+      "walk_speed_mps": [
+        1.2,
+        0.25
+      ],
+      "heatmap_uri": null
+    },
+    "assets": {},
+    "geometry_source": "reference"
+  },
+  "notes": [
+    "explanation for pudu_t300 dropped: it contained numbers"
+  ],
+  "candidates": [
+    "keenon_dinerbot_t8",
+    "bear_servi",
+    "pudu_kettybot",
+    "keenon_w3",
+    "keenon_dinerbot_t9",
+    "pudu_t300"
+  ],
+  "candidate_details": [
+    {
+      "robot_id": "keenon_dinerbot_t8",
+      "vendor": "Keenon Robotics",
+      "model": "DINERBOT T8",
+      "class": "A_service",
+      "width_m": 0.384,
+      "route_gap_m": 1.15,
+      "spec_status": "human-reviewed",
+      "gap_margin_m": 0.766,
+      "notes": []
+    },
+    {
+      "robot_id": "bear_servi",
+      "vendor": "Bear Robotics",
+      "model": "Servi",
+      "class": "A_service",
+      "width_m": 0.445,
+      "route_gap_m": 1.15,
+      "spec_status": "human-reviewed",
+      "gap_margin_m": 0.705,
+      "notes": []
+    },
+    {
+      "robot_id": "pudu_kettybot",
+      "vendor": "Pudu Robotics",
+      "model": "KettyBot",
+      "class": "A_service",
+      "width_m": 0.45,
+      "route_gap_m": 1.15,
+      "spec_status": "human-reviewed",
+      "gap_margin_m": 0.7,
+      "notes": []
+    },
+    {
+      "robot_id": "keenon_w3",
+      "vendor": "Keenon Robotics",
+      "model": "W3",
+      "class": "A_service",
+      "width_m": 0.459,
+      "route_gap_m": 1.15,
+      "spec_status": "human-reviewed",
+      "gap_margin_m": 0.691,
+      "notes": []
+    },
+    {
+      "robot_id": "keenon_dinerbot_t9",
+      "vendor": "Keenon Robotics",
+      "model": "DINERBOT T9",
+      "class": "A_service",
+      "width_m": 0.5,
+      "route_gap_m": 1.15,
+      "spec_status": "human-reviewed",
+      "gap_margin_m": 0.65,
+      "notes": []
+    },
+    {
+      "robot_id": "pudu_t300",
+      "vendor": "Pudu Robotics",
+      "model": "T300",
+      "class": "B_amr",
+      "width_m": 0.5,
+      "route_gap_m": 1.15,
+      "spec_status": "human-reviewed",
+      "gap_margin_m": 0.65,
+      "notes": []
+    }
+  ],
+  "robots": {
+    "keenon_dinerbot_t8": {
+      "robot_id": "keenon_dinerbot_t8",
+      "class": "A_service",
+      "vendor": "Keenon Robotics",
+      "model": "DINERBOT T8",
+      "footprint_polygon_m": [
+        [
+          0.234,
+          0.192
+        ],
+        [
+          -0.234,
+          0.192
+        ],
+        [
+          -0.234,
+          -0.192
+        ],
+        [
+          0.234,
+          -0.192
+        ]
+      ],
+      "footprint_approx": true,
+      "height_m": 1.111,
+      "drive": "diff_drive",
+      "in_place_rotation": true,
+      "min_turn_radius_m": 0.0,
+      "max_speed_mps": 1.0,
+      "nominal_speed_mps": null,
+      "max_threshold_m": null,
+      "max_slope_deg": 5.0,
+      "min_aisle_width_vendor_m": 0.55,
+      "payload_kg": 20.0,
+      "runtime_h": 15.0,
+      "safety_stop_distance_m": null,
+      "price": {
+        "value": null,
+        "currency": "USD",
+        "is_public": false,
+        "note": "price on request",
+        "source_url": null
+      },
+      "fields_sources": {
+        "footprint_polygon_m": {
+          "url": "https://www.keenon.com/en/product/T8",
+          "quote": "Dimensions(WxDxH) 38.4x46.8x111.1cm",
+          "retrieved_at": "2026-10-27T13:49:49Z"
+        },
+        "height_m": {
+          "url": "https://www.keenon.com/en/product/T8",
+          "quote": "Dimensions(WxDxH) 38.4x46.8x111.1cm",
+          "retrieved_at": "2026-10-27T13:49:49Z"
+        },
+        "max_speed_mps": {
+          "url": "https://www.keenon.com/en/product/T8",
+          "quote": "Moving Speed 1.0m/s (3.28ft/s)",
+          "retrieved_at": "2026-10-27T13:49:49Z"
+        },
+        "max_slope_deg": {
+          "url": "https://www.keenon.com/en/product/T8",
+          "quote": "Slope Angle 5\u00b0",
+          "retrieved_at": "2026-10-27T13:49:49Z"
+        },
+        "payload_kg": {
+          "url": "https://www.keenon.com/en/product/T8",
+          "quote": "Total Load Capacity 20 kg (44 lbs)",
+          "retrieved_at": "2026-10-27T13:49:49Z"
+        },
+        "runtime_h": {
+          "url": "https://www.keenon.com/en/product/T8",
+          "quote": "Battery Life Up to 15h",
+          "retrieved_at": "2026-10-27T13:49:49Z"
+        },
+        "min_aisle_width_vendor_m": {
+          "url": "https://www.keenon.com/en/product/T8",
+          "quote": "Minimum Passage Width 55 cm",
+          "retrieved_at": "2026-10-27T13:49:49Z"
+        }
+      },
+      "verified_by_human": true,
+      "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://www.keenon.com/en/product/T8\"], \"null_fields\": [\"nominal_speed_mps\", \"max_threshold_m\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"runtime is the vendor's 'up to' figure; the page notes battery claims vary with use\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.keenon.com/en/product/T8\", \"https://doc.keenonrobot.com/dashboard/en/foods/t8\", \"https://robotsourced.com/robots/service/keenon-t8\", \"https://www.dentrealstore.com/products/dinerbot-t8-service-robot\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_slope_deg\", \"min_aisle_width_vendor_m\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [], \"fields_rejected_by_validator\": 1, \"other_pages_differing\": []}, \"candidate_fields\": [{\"field\": \"max_threshold_m\", \"value\": 0.01, \"url\": \"https://somebots.com/en/robots/trays-t8/keenon-T8\", \"quote\": \"avoid steps over 1 cm\", \"retrieved_at\": \"2026-10-27T17:29:00Z\", \"status\": \"passed the validator; not applied\", \"why\": \"a reseller page (somebots.com) words it as operating advice, not a vendor capability; with 0.01 m the simulator treats the reference cafe thresholds as impassable for this robot, so a reviewer should confirm the vendor figure first\"}]}"
+    },
+    "bear_servi": {
+      "robot_id": "bear_servi",
+      "class": "A_service",
+      "vendor": "Bear Robotics",
+      "model": "Servi",
+      "footprint_polygon_m": [
+        [
+          0.215,
+          0.2225
+        ],
+        [
+          -0.215,
+          0.2225
+        ],
+        [
+          -0.215,
+          -0.2225
+        ],
+        [
+          0.215,
+          -0.2225
+        ]
+      ],
+      "footprint_approx": true,
+      "height_m": 1.046,
+      "drive": "diff_drive",
+      "in_place_rotation": true,
+      "min_turn_radius_m": 0.0,
+      "max_speed_mps": 1.2,
+      "nominal_speed_mps": null,
+      "max_threshold_m": null,
+      "max_slope_deg": null,
+      "min_aisle_width_vendor_m": null,
+      "payload_kg": 30.0,
+      "runtime_h": 10.0,
+      "safety_stop_distance_m": null,
+      "price": {
+        "value": null,
+        "currency": "USD",
+        "is_public": false,
+        "note": "price on request",
+        "source_url": "https://www.bearrobotics.ai/faq"
+      },
+      "fields_sources": {
+        "footprint_polygon_m": {
+          "url": "https://www.bearrobotics.ai/servi",
+          "quote": "17.5 \u00d7 16.9 \u00d7 41.2 in (44.5 \u00d7 43 \u00d7 104.6 cm)",
+          "retrieved_at": "2026-10-27T13:51:40Z"
+        },
+        "height_m": {
+          "url": "https://www.bearrobotics.ai/servi",
+          "quote": "17.5 \u00d7 16.9 \u00d7 41.2 in (44.5 \u00d7 43 \u00d7 104.6 cm)",
+          "retrieved_at": "2026-10-27T13:51:40Z"
+        },
+        "max_speed_mps": {
+          "url": "https://www.bearrobotics.ai/servi",
+          "quote": "Drive speed 0.1~1.2 m/s",
+          "retrieved_at": "2026-10-27T13:51:40Z"
+        },
+        "payload_kg": {
+          "url": "https://www.bearrobotics.ai/servi",
+          "quote": "22 lb (10kg) per tray, total 66 lb (30kg)",
+          "retrieved_at": "2026-10-27T13:51:40Z"
+        },
+        "runtime_h": {
+          "url": "https://www.bearrobotics.ai/servi",
+          "quote": "Battery life 10-12 hrs",
+          "retrieved_at": "2026-10-27T13:51:40Z"
+        },
+        "price": {
+          "url": "https://www.bearrobotics.ai/faq",
+          "quote": "Costs can vary depending on certain conditions.",
+          "retrieved_at": "2026-10-27T13:49:53Z"
+        }
+      },
+      "verified_by_human": true,
+      "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://www.bearrobotics.ai/servi\", \"https://www.bearrobotics.ai/faq\"], \"null_fields\": [\"nominal_speed_mps\", \"max_threshold_m\", \"max_slope_deg\", \"min_aisle_width_vendor_m\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"specs are the first Servi column on the page (2 trays, 1 bus tub)\", \"runtime is the lower end of the vendor's 10-12 hrs range\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.bearrobotics.ai/servi\", \"https://restauranttools.ai/tools/bear-robotics\", \"https://www.therobotreport.com/servi-bussing-robot-product-bear-robotics-softbank-partnership\", \"https://www.softbankrobotics.com/news/20200928a\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [], \"fields_rejected_by_validator\": 1, \"other_pages_differing\": [{\"field\": \"runtime_h\", \"value\": 8.0, \"url\": \"https://restauranttools.ai/tools/bear-robotics\"}], \"note\": \"A first live run ranked a sibling model's page (Servi Plus) above this model's page; values from that page were not used. The search ranking now puts pages that name the exact model first, and the re-run agrees with the catalog.\"}}"
+    },
+    "pudu_kettybot": {
+      "robot_id": "pudu_kettybot",
+      "class": "A_service",
+      "vendor": "Pudu Robotics",
+      "model": "KettyBot",
+      "footprint_polygon_m": [
+        [
+          0.2175,
+          0.225
+        ],
+        [
+          -0.2175,
+          0.225
+        ],
+        [
+          -0.2175,
+          -0.225
+        ],
+        [
+          0.2175,
+          -0.225
+        ]
+      ],
+      "footprint_approx": true,
+      "height_m": 1.12,
+      "drive": "diff_drive",
+      "in_place_rotation": true,
+      "min_turn_radius_m": 0.0,
+      "max_speed_mps": 1.2,
+      "nominal_speed_mps": null,
+      "max_threshold_m": 0.005,
+      "max_slope_deg": 5.0,
+      "min_aisle_width_vendor_m": 0.55,
+      "payload_kg": 30.0,
+      "runtime_h": 8.0,
+      "safety_stop_distance_m": null,
+      "price": {
+        "value": null,
+        "currency": "USD",
+        "is_public": false,
+        "note": "price on request",
+        "source_url": null
+      },
+      "fields_sources": {
+        "max_speed_mps": {
+          "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+          "quote": "Set the delivery speed and cruise speed with the options of 0.5m/s\u20141.2m/s.",
+          "retrieved_at": "2026-10-27T17:40:54Z"
+        },
+        "payload_kg": {
+          "url": "https://robotsourced.com/robots/service/pudu-kettybot",
+          "quote": "Payload 30 kg",
+          "retrieved_at": "2026-10-27T17:40:54Z"
+        },
+        "runtime_h": {
+          "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+          "quote": "4.5h >8h",
+          "retrieved_at": "2026-10-27T17:40:54Z"
+        },
+        "max_threshold_m": {
+          "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+          "quote": "Make sure that the protrusions are no more than 0.5cm high",
+          "retrieved_at": "2026-10-27T17:40:54Z"
+        },
+        "max_slope_deg": {
+          "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+          "quote": "The maximum possible slope is 5\u00b0 for the robot",
+          "retrieved_at": "2026-10-27T17:40:54Z"
+        },
+        "min_aisle_width_vendor_m": {
+          "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+          "quote": "Minimum pass width 0.55m",
+          "retrieved_at": "2026-10-27T17:40:54Z"
+        },
+        "height_m": {
+          "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+          "quote": "435*450*1120 (mm)",
+          "retrieved_at": "2026-10-27T17:40:54Z"
+        },
+        "footprint_polygon_m": {
+          "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+          "quote": "435*450*1120 (mm)",
+          "retrieved_at": "2026-10-27T17:40:54Z"
+        }
+      },
+      "verified_by_human": true,
+      "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"llm_nano\"], \"sources_considered\": [\"https://robotsourced.com/robots/service/pudu-kettybot\", \"https://www.generationrobots.com/en/404251-pudu-kettybot-home-robot.html\", \"https://todorobotics.com/feeds/category/kettybot-pudu-price\", \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\"], \"null_fields\": [\"nominal_speed_mps\", \"safety_stop_distance_m\"], \"rejected_fields\": [{\"field\": \"runtime_h\", \"url\": \"https://todorobotics.com/feeds/category/kettybot-pudu-price\", \"reason\": \"no time quantity in quote equals 8\", \"quote\": \"8+ hour runtime\"}, {\"field\": \"payload_kg\", \"url\": \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\", \"reason\": \"the 10 in the quote is labelled as another item\", \"quote\": \"10kg/tray\"}, {\"field\": \"min_turn_radius_m\", \"url\": \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\", \"reason\": \"unit: unknown unit ''\", \"quote\": null}], \"conflicts\": [{\"field\": \"max_speed_mps\", \"kept\": 1.2, \"kept_url\": \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\", \"other\": 0.9, \"other_url\": \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\", \"detail\": \"speed setting range vs spec-table cruise speed\"}, {\"field\": \"runtime_h\", \"kept\": 8.0, \"kept_url\": \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\", \"other\": 10.0, \"other_url\": \"https://robotsourced.com/robots/service/pudu-kettybot\"}], \"comments\": [\"built by the live pipeline; the KettyBot Pro is a separate model and its pages were not used\", \"max_speed_mps: the user manual's speed setting range tops out at 1.2 m/s; its specification table lists cruise speed 'Adjustable between 0.5~0.9m/s'. A reseller page (robotsourced.com) also states 1.2 m/s\", \"runtime_h: the user manual's specification table states battery life '>8h' (charging time 4.5h precedes it in the same column dump); we keep the lower bound 8 h. A reseller page (robotsourced.com) states 10 h\", \"payload_kg comes from a reseller page (robotsourced.com); the user manual gives 10 kg per tray with two trays plus a storage basket and no total, and the same reseller page lists a robot weight (55 kg) that differs from the manual (38 kg), so please confirm the total payload with the vendor\", \"dimensions order in the manual is not labelled; read as length x width x height\", \"the user manual is a Pudu document hosted by a distributor\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\", \"price: the live pipeline found a price-related line on a third-party page (www.generationrobots.com); we take no third-party prices, so the price stays on request\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://robotsourced.com/robots/service/pudu-kettybot\", \"https://www.generationrobots.com/en/404251-pudu-kettybot-home-robot.html\", \"https://todorobotics.com/feeds/category/kettybot-pudu-price\", \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\"], \"fields_rejected_by_validator\": 3}}"
+    },
+    "keenon_w3": {
+      "robot_id": "keenon_w3",
+      "class": "A_service",
+      "vendor": "Keenon Robotics",
+      "model": "W3",
+      "footprint_polygon_m": [
+        [
+          0.2745,
+          0.2295
+        ],
+        [
+          -0.2745,
+          0.2295
+        ],
+        [
+          -0.2745,
+          -0.2295
+        ],
+        [
+          0.2745,
+          -0.2295
+        ]
+      ],
+      "footprint_approx": true,
+      "height_m": 1.081,
+      "drive": "diff_drive",
+      "in_place_rotation": true,
+      "min_turn_radius_m": 0.0,
+      "max_speed_mps": 0.8,
+      "nominal_speed_mps": null,
+      "max_threshold_m": null,
+      "max_slope_deg": 7.0,
+      "min_aisle_width_vendor_m": 0.7,
+      "payload_kg": 20.0,
+      "runtime_h": 12.0,
+      "safety_stop_distance_m": null,
+      "price": {
+        "value": null,
+        "currency": "USD",
+        "is_public": false,
+        "note": "price on request",
+        "source_url": null
+      },
+      "fields_sources": {
+        "max_speed_mps": {
+          "url": "https://www.keenon.com/en/product/W3",
+          "quote": "Max. Moving Speed 0.8m/s (2.63ft/s)",
+          "retrieved_at": "2026-10-27T17:39:25Z"
+        },
+        "max_slope_deg": {
+          "url": "https://www.keenon.com/en/product/W3",
+          "quote": "Slope Angle 7\u00b0",
+          "retrieved_at": "2026-10-27T17:39:25Z"
+        },
+        "min_aisle_width_vendor_m": {
+          "url": "https://www.keenon.com/en/product/W3",
+          "quote": "Minimum Passage Width 70cm(27.56\")",
+          "retrieved_at": "2026-10-27T17:39:25Z"
+        },
+        "payload_kg": {
+          "url": "https://www.keenon.com/en/product/W3",
+          "quote": "Total Load Capacity 20kg (44lbs)",
+          "retrieved_at": "2026-10-27T17:39:25Z"
+        },
+        "height_m": {
+          "url": "https://www.keenon.com/en/product/W3",
+          "quote": "Dimensions(WxDxH) 45.9 x 54.9 x 108.1 cm(18.07\" x 21.61\" x 42.56\")",
+          "retrieved_at": "2026-10-27T17:39:25Z"
+        },
+        "footprint_polygon_m": {
+          "url": "https://www.keenon.com/en/product/W3",
+          "quote": "Dimensions(WxDxH) 45.9 x 54.9 x 108.1 cm(18.07\" x 21.61\" x 42.56\")",
+          "retrieved_at": "2026-10-27T17:39:25Z"
+        },
+        "runtime_h": {
+          "url": "https://www.robotlab.com/store/keenon-w3",
+          "quote": "Battery Runtime Up to 12 hours",
+          "retrieved_at": "2026-10-27T17:39:25Z"
+        }
+      },
+      "verified_by_human": true,
+      "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"llm_nano\"], \"sources_considered\": [\"https://www.keenon.com/en/product/W3\", \"https://antonrobots.com/keenon-butlerbot-w3-review\", \"https://www.robotlab.com/store/keenon-w3\", \"https://www.dentrealstore.com/products/butlerbot-w3-service-robot\"], \"null_fields\": [\"nominal_speed_mps\", \"max_threshold_m\", \"safety_stop_distance_m\"], \"rejected_fields\": [{\"field\": \"runtime_h\", \"url\": \"https://www.keenon.com/en/product/W3\", \"reason\": \"no time quantity in quote equals 12\", \"quote\": \"Battery Life Up to12h\"}, {\"field\": \"runtime_h\", \"url\": \"https://antonrobots.com/keenon-butlerbot-w3-review\", \"reason\": \"quote not found in page text\", \"quote\": \"Published battery life up to 12 hours\"}], \"conflicts\": [], \"comments\": [\"built by the live pipeline; KEENON markets this robot as BUTLERBOT W3\", \"runtime is the reseller's 'Up to 12 hours' (robotlab.com); the vendor page shows the same figure as 'Up to12h', which the number reader does not split, so it is not the cited quote\", \"footprint is read from the vendor's W x D x H order (D = length)\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\", \"price: the live pipeline found a price-related line on a third-party page (antonrobots.com); we take no third-party prices, so the price stays on request\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.keenon.com/en/product/W3\", \"https://antonrobots.com/keenon-butlerbot-w3-review\", \"https://www.robotlab.com/store/keenon-w3\", \"https://www.dentrealstore.com/products/butlerbot-w3-service-robot\"], \"fields_rejected_by_validator\": 2}}"
+    },
+    "keenon_dinerbot_t9": {
+      "robot_id": "keenon_dinerbot_t9",
+      "class": "A_service",
+      "vendor": "Keenon Robotics",
+      "model": "DINERBOT T9",
+      "footprint_polygon_m": [
+        [
+          0.2635,
+          0.25
+        ],
+        [
+          -0.2635,
+          0.25
+        ],
+        [
+          -0.2635,
+          -0.25
+        ],
+        [
+          0.2635,
+          -0.25
+        ]
+      ],
+      "footprint_approx": true,
+      "height_m": 1.266,
+      "drive": "diff_drive",
+      "in_place_rotation": true,
+      "min_turn_radius_m": 0.0,
+      "max_speed_mps": 1.0,
+      "nominal_speed_mps": null,
+      "max_threshold_m": null,
+      "max_slope_deg": 5.0,
+      "min_aisle_width_vendor_m": 0.7,
+      "payload_kg": 40.0,
+      "runtime_h": 18.0,
+      "safety_stop_distance_m": null,
+      "price": {
+        "value": null,
+        "currency": "USD",
+        "is_public": false,
+        "note": "price on request",
+        "source_url": null
+      },
+      "fields_sources": {
+        "footprint_polygon_m": {
+          "url": "https://www.keenon.com/en/product/T9",
+          "quote": "Dimensions(WxDxH) 50.0 x 52.7 x 126.6cm",
+          "retrieved_at": "2026-10-27T13:51:43Z"
+        },
+        "height_m": {
+          "url": "https://www.keenon.com/en/product/T9",
+          "quote": "Dimensions(WxDxH) 50.0 x 52.7 x 126.6cm",
+          "retrieved_at": "2026-10-27T13:51:43Z"
+        },
+        "max_speed_mps": {
+          "url": "https://www.keenon.com/en/product/T9",
+          "quote": "Moving Speed 0.1-1.0 m/s",
+          "retrieved_at": "2026-10-27T13:51:43Z"
+        },
+        "runtime_h": {
+          "url": "https://www.keenon.com/en/product/T9",
+          "quote": "Battery Life Up to 18h",
+          "retrieved_at": "2026-10-27T13:51:43Z"
+        },
+        "max_slope_deg": {
+          "url": "https://www.keenon.com/en/product/T9",
+          "quote": "Slope Angle 5\u00b0",
+          "retrieved_at": "2026-10-27T13:51:43Z"
+        },
+        "payload_kg": {
+          "url": "https://www.keenon.com/en/product/T9",
+          "quote": "Total Load Capacity 40kg (88lbs)",
+          "retrieved_at": "2026-10-27T13:51:43Z"
+        },
+        "min_aisle_width_vendor_m": {
+          "url": "https://www.keenon.com/en/product/T9",
+          "quote": "Minimum Passage Width 70cm",
+          "retrieved_at": "2026-10-27T13:51:43Z"
+        }
+      },
+      "verified_by_human": true,
+      "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://www.keenon.com/en/product/T9\"], \"null_fields\": [\"nominal_speed_mps\", \"max_threshold_m\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"runtime is the vendor's 'up to' figure; the page notes battery claims vary with use\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.keenon.com/en/product/T9\", \"https://www.robotsinternational.com/Keenon-DINERBOT-T9.htm\", \"https://sonnyrobotics.com/products/keenon-t9\", \"https://www.robomarket.ae/robots/dinerbot-t9\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_slope_deg\", \"min_aisle_width_vendor_m\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [], \"fields_rejected_by_validator\": 3, \"other_pages_differing\": [{\"field\": \"max_speed_mps\", \"value\": 0.8, \"url\": \"https://sonnyrobotics.com/products/keenon-t9\"}]}}"
+    },
+    "pudu_t300": {
+      "robot_id": "pudu_t300",
+      "class": "B_amr",
+      "vendor": "Pudu Robotics",
+      "model": "T300",
+      "footprint_polygon_m": [
+        [
+          0.4175,
+          0.25
+        ],
+        [
+          -0.4175,
+          0.25
+        ],
+        [
+          -0.4175,
+          -0.25
+        ],
+        [
+          0.4175,
+          -0.25
+        ]
+      ],
+      "footprint_approx": true,
+      "height_m": 1.35,
+      "drive": "diff_drive",
+      "in_place_rotation": true,
+      "min_turn_radius_m": 0.0,
+      "max_speed_mps": 1.2,
+      "nominal_speed_mps": null,
+      "max_threshold_m": 0.02,
+      "max_slope_deg": null,
+      "min_aisle_width_vendor_m": 0.6,
+      "payload_kg": 300.0,
+      "runtime_h": 8.0,
+      "safety_stop_distance_m": null,
+      "price": {
+        "value": null,
+        "currency": "USD",
+        "is_public": false,
+        "note": "price on request",
+        "source_url": null
+      },
+      "fields_sources": {
+        "footprint_polygon_m": {
+          "url": "https://www.pudurobotics.com/en/products/pudut300",
+          "quote": "835 mm * 500 mm * 1350 mm",
+          "retrieved_at": "2026-10-27T13:53:27Z"
+        },
+        "height_m": {
+          "url": "https://www.pudurobotics.com/en/products/pudut300",
+          "quote": "835 mm * 500 mm * 1350 mm",
+          "retrieved_at": "2026-10-27T13:53:27Z"
+        },
+        "max_speed_mps": {
+          "url": "https://www.pudurobotics.com/en/products/pudut300",
+          "quote": "Max. Speed 1.2 m/s",
+          "retrieved_at": "2026-10-27T13:53:27Z"
+        },
+        "payload_kg": {
+          "url": "https://www.pudurobotics.com/en/products/pudut300",
+          "quote": "Maximum load 300 kg",
+          "retrieved_at": "2026-10-27T13:53:27Z"
+        },
+        "max_threshold_m": {
+          "url": "https://www.pudurobotics.com/en/products/pudut300",
+          "quote": "Threshold Overcoming Height 20 mm",
+          "retrieved_at": "2026-10-27T13:53:27Z"
+        },
+        "min_aisle_width_vendor_m": {
+          "url": "https://www.pudurobotics.com/en/products/pudut300",
+          "quote": "Path Clearance \u226560 cm",
+          "retrieved_at": "2026-10-27T13:53:27Z"
+        },
+        "runtime_h": {
+          "url": "https://www.pudurobotics.com/en/products/pudut300",
+          "quote": "Run-time (Full Load) 8 h",
+          "retrieved_at": "2026-10-27T13:53:27Z"
+        }
+      },
+      "verified_by_human": true,
+      "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://www.pudurobotics.com/en/products/pudut300\"], \"null_fields\": [\"nominal_speed_mps\", \"max_slope_deg\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"values are the 'PUDU T300 Standard' column (the Lifting variant differs in weight and path width)\", \"runtime is the full-load figure; the page lists 12 h with no load\", \"dimensions order on page is not labelled; read as length x width x height\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.pudurobotics.com/en/products/pudut300\", \"https://www.pudurobotics.com/en/news/pudu-t300-amr-powers-ennoconn-ems-logistics-case-study\", \"https://www.pudurobotics.com/en/news/904\", \"https://cdn.robotshop.com/media/P/Pud/RB-Pud-04/pdf/pudu-t300-20240828-operational-guide.pdf\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_threshold_m\", \"min_aisle_width_vendor_m\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [], \"fields_rejected_by_validator\": 4, \"other_pages_differing\": [{\"field\": \"runtime_h\", \"value\": 6.0, \"url\": \"https://cdn.robotshop.com/media/P/Pud/RB-Pud-04/pdf/pudu-t300-20240828-operational-guide.pdf\"}]}}"
+    }
+  },
+  "excluded": [
+    {
+      "robot_id": "bear_servi_plus",
+      "rule": "budget",
+      "reason": "budget allows 6 robots"
+    },
+    {
+      "robot_id": "pudu_pudubot_2",
+      "rule": "budget",
+      "reason": "budget allows 6 robots"
+    },
+    {
+      "robot_id": "pudu_bellabot",
+      "rule": "budget",
+      "reason": "budget allows 6 robots"
+    },
+    {
+      "robot_id": "otto_100",
+      "rule": "budget",
+      "reason": "budget allows 6 robots"
+    },
+    {
+      "robot_id": "mir_mir100",
+      "rule": "budget",
+      "reason": "budget allows 6 robots"
+    },
+    {
+      "robot_id": "mir_mir250",
+      "rule": "budget",
+      "reason": "budget allows 6 robots"
+    }
+  ],
+  "candidate_explanations": {
+    "keenon_dinerbot_t8": "Narrowest width and largest clearance margin across all corridor legs make it the most promising candidate.",
+    "bear_servi": "Slightly wider than the top choice but still comfortable clearance on every leg of the route.",
+    "pudu_kettybot": "Very similar width to bear_servi with nearly identical clearance margins on all legs.",
+    "keenon_w3": "Marginally wider than pudu_kettybot, reducing clearance slightly while remaining fully feasible.",
+    "keenon_dinerbot_t9": "Wider still at half a meter, leaving less room to maneuver through the corridor's narrowest points."
+  },
+  "feasibility": {
+    "keenon_dinerbot_t8": {
+      "robot_id": "keenon_dinerbot_t8",
+      "twin_id": "twin_ref_corridor_v1",
+      "twin_version": 1,
+      "legs": [
+        {
+          "from_wp": "DOCK",
+          "to_wp": "PICKUP",
+          "reachable": true,
+          "narrowest_gap_m": 1.157,
+          "required_gap_m": 0.384,
+          "narrowest_xy": [
+            14.252,
+            0.677
+          ],
+          "path_length_m": 13.968,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "PICKUP",
+          "to_wp": "O4",
+          "reachable": true,
+          "narrowest_gap_m": 1.1504,
+          "required_gap_m": 0.384,
+          "narrowest_xy": [
+            14.331,
+            0.685
+          ],
+          "path_length_m": 4.134,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O4",
+          "to_wp": "O3",
+          "reachable": true,
+          "narrowest_gap_m": 1.325,
+          "required_gap_m": 0.384,
+          "narrowest_xy": [
+            9.022,
+            1.469
+          ],
+          "path_length_m": 4.012,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O3",
+          "to_wp": "O2",
+          "reachable": true,
+          "narrowest_gap_m": 1.9,
+          "required_gap_m": 0.384,
+          "narrowest_xy": [
+            6.695,
+            1.469
+          ],
+          "path_length_m": 2.284,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O2",
+          "to_wp": "O1",
+          "reachable": true,
+          "narrowest_gap_m": 1.8933,
+          "required_gap_m": 0.384,
+          "narrowest_xy": [
+            3.461,
+            0.897
+          ],
+          "path_length_m": 2.28,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O1",
+          "to_wp": "DOCK",
+          "reachable": true,
+          "narrowest_gap_m": 1.3568,
+          "required_gap_m": 0.384,
+          "narrowest_xy": [
+            0.577,
+            0.623
+          ],
+          "path_length_m": 2.064,
+          "blocking_threshold": null,
+          "reason": ""
+        }
+      ],
+      "all_reachable": true
+    },
+    "bear_servi": {
+      "robot_id": "bear_servi",
+      "twin_id": "twin_ref_corridor_v1",
+      "twin_version": 1,
+      "legs": [
+        {
+          "from_wp": "DOCK",
+          "to_wp": "PICKUP",
+          "reachable": true,
+          "narrowest_gap_m": 1.15,
+          "required_gap_m": 0.445,
+          "narrowest_xy": [
+            14.319,
+            0.607
+          ],
+          "path_length_m": 14.042,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "PICKUP",
+          "to_wp": "O4",
+          "reachable": true,
+          "narrowest_gap_m": 1.15,
+          "required_gap_m": 0.445,
+          "narrowest_xy": [
+            14.513,
+            0.536
+          ],
+          "path_length_m": 4.149,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O4",
+          "to_wp": "O3",
+          "reachable": true,
+          "narrowest_gap_m": 1.325,
+          "required_gap_m": 0.445,
+          "narrowest_xy": [
+            9.021,
+            1.466
+          ],
+          "path_length_m": 4.012,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O3",
+          "to_wp": "O2",
+          "reachable": true,
+          "narrowest_gap_m": 1.8954,
+          "required_gap_m": 0.445,
+          "narrowest_xy": [
+            5.488,
+            0.942
+          ],
+          "path_length_m": 2.314,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O2",
+          "to_wp": "O1",
+          "reachable": true,
+          "narrowest_gap_m": 1.8923,
+          "required_gap_m": 0.445,
+          "narrowest_xy": [
+            3.505,
+            0.868
+          ],
+          "path_length_m": 2.242,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O1",
+          "to_wp": "DOCK",
+          "reachable": true,
+          "narrowest_gap_m": 1.3626,
+          "required_gap_m": 0.445,
+          "narrowest_xy": [
+            0.593,
+            0.619
+          ],
+          "path_length_m": 2.004,
+          "blocking_threshold": null,
+          "reason": ""
+        }
+      ],
+      "all_reachable": true
+    },
+    "pudu_kettybot": {
+      "robot_id": "pudu_kettybot",
+      "twin_id": "twin_ref_corridor_v1",
+      "twin_version": 1,
+      "legs": [
+        {
+          "from_wp": "DOCK",
+          "to_wp": "PICKUP",
+          "reachable": true,
+          "narrowest_gap_m": 1.15,
+          "required_gap_m": 0.45,
+          "narrowest_xy": [
+            14.319,
+            0.607
+          ],
+          "path_length_m": 14.042,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "PICKUP",
+          "to_wp": "O4",
+          "reachable": true,
+          "narrowest_gap_m": 1.15,
+          "required_gap_m": 0.45,
+          "narrowest_xy": [
+            14.513,
+            0.536
+          ],
+          "path_length_m": 4.125,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O4",
+          "to_wp": "O3",
+          "reachable": true,
+          "narrowest_gap_m": 1.325,
+          "required_gap_m": 0.45,
+          "narrowest_xy": [
+            9.007,
+            1.445
+          ],
+          "path_length_m": 4.012,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O3",
+          "to_wp": "O2",
+          "reachable": true,
+          "narrowest_gap_m": 1.8923,
+          "required_gap_m": 0.45,
+          "narrowest_xy": [
+            5.651,
+            1.009
+          ],
+          "path_length_m": 2.316,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O2",
+          "to_wp": "O1",
+          "reachable": true,
+          "narrowest_gap_m": 1.9011,
+          "required_gap_m": 0.45,
+          "narrowest_xy": [
+            3.548,
+            0.85
+          ],
+          "path_length_m": 2.261,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O1",
+          "to_wp": "DOCK",
+          "reachable": true,
+          "narrowest_gap_m": 1.3659,
+          "required_gap_m": 0.45,
+          "narrowest_xy": [
+            0.588,
+            0.619
+          ],
+          "path_length_m": 2.038,
+          "blocking_threshold": null,
+          "reason": ""
+        }
+      ],
+      "all_reachable": true
+    },
+    "keenon_w3": {
+      "robot_id": "keenon_w3",
+      "twin_id": "twin_ref_corridor_v1",
+      "twin_version": 1,
+      "legs": [
+        {
+          "from_wp": "DOCK",
+          "to_wp": "PICKUP",
+          "reachable": true,
+          "narrowest_gap_m": 1.15,
+          "required_gap_m": 0.459,
+          "narrowest_xy": [
+            14.285,
+            0.664
+          ],
+          "path_length_m": 14.005,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "PICKUP",
+          "to_wp": "O4",
+          "reachable": true,
+          "narrowest_gap_m": 1.15,
+          "required_gap_m": 0.459,
+          "narrowest_xy": [
+            14.515,
+            0.581
+          ],
+          "path_length_m": 4.126,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O4",
+          "to_wp": "O3",
+          "reachable": true,
+          "narrowest_gap_m": 1.325,
+          "required_gap_m": 0.459,
+          "narrowest_xy": [
+            9.027,
+            1.435
+          ],
+          "path_length_m": 4.011,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O3",
+          "to_wp": "O2",
+          "reachable": true,
+          "narrowest_gap_m": 1.8942,
+          "required_gap_m": 0.459,
+          "narrowest_xy": [
+            5.571,
+            0.969
+          ],
+          "path_length_m": 2.308,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O2",
+          "to_wp": "O1",
+          "reachable": true,
+          "narrowest_gap_m": 1.9006,
+          "required_gap_m": 0.459,
+          "narrowest_xy": [
+            3.469,
+            0.887
+          ],
+          "path_length_m": 2.253,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O1",
+          "to_wp": "DOCK",
+          "reachable": true,
+          "narrowest_gap_m": 1.358,
+          "required_gap_m": 0.459,
+          "narrowest_xy": [
+            0.634,
+            0.65
+          ],
+          "path_length_m": 2.093,
+          "blocking_threshold": null,
+          "reason": ""
+        }
+      ],
+      "all_reachable": true
+    },
+    "keenon_dinerbot_t9": {
+      "robot_id": "keenon_dinerbot_t9",
+      "twin_id": "twin_ref_corridor_v1",
+      "twin_version": 1,
+      "legs": [
+        {
+          "from_wp": "DOCK",
+          "to_wp": "PICKUP",
+          "reachable": true,
+          "narrowest_gap_m": 1.15,
+          "required_gap_m": 0.5,
+          "narrowest_xy": [
+            14.215,
+            0.531
+          ],
+          "path_length_m": 14.064,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "PICKUP",
+          "to_wp": "O4",
+          "reachable": true,
+          "narrowest_gap_m": 1.15,
+          "required_gap_m": 0.5,
+          "narrowest_xy": [
+            14.271,
+            0.531
+          ],
+          "path_length_m": 4.182,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O4",
+          "to_wp": "O3",
+          "reachable": true,
+          "narrowest_gap_m": 1.325,
+          "required_gap_m": 0.5,
+          "narrowest_xy": [
+            9.007,
+            1.449
+          ],
+          "path_length_m": 4.012,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O3",
+          "to_wp": "O2",
+          "reachable": true,
+          "narrowest_gap_m": 1.8905,
+          "required_gap_m": 0.5,
+          "narrowest_xy": [
+            5.499,
+            0.939
+          ],
+          "path_length_m": 2.285,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O2",
+          "to_wp": "O1",
+          "reachable": true,
+          "narrowest_gap_m": 1.8896,
+          "required_gap_m": 0.5,
+          "narrowest_xy": [
+            3.478,
+            0.891
+          ],
+          "path_length_m": 2.264,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O1",
+          "to_wp": "DOCK",
+          "reachable": true,
+          "narrowest_gap_m": 1.3624,
+          "required_gap_m": 0.5,
+          "narrowest_xy": [
+            0.651,
+            0.66
+          ],
+          "path_length_m": 2.01,
+          "blocking_threshold": null,
+          "reason": ""
+        }
+      ],
+      "all_reachable": true
+    },
+    "pudu_t300": {
+      "robot_id": "pudu_t300",
+      "twin_id": "twin_ref_corridor_v1",
+      "twin_version": 1,
+      "legs": [
+        {
+          "from_wp": "DOCK",
+          "to_wp": "PICKUP",
+          "reachable": true,
+          "narrowest_gap_m": 1.1516,
+          "required_gap_m": 0.5,
+          "narrowest_xy": [
+            14.234,
+            0.677
+          ],
+          "path_length_m": 13.976,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "PICKUP",
+          "to_wp": "O4",
+          "reachable": true,
+          "narrowest_gap_m": 1.1501,
+          "required_gap_m": 0.5,
+          "narrowest_xy": [
+            14.276,
+            0.584
+          ],
+          "path_length_m": 4.3,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O4",
+          "to_wp": "O3",
+          "reachable": true,
+          "narrowest_gap_m": 1.325,
+          "required_gap_m": 0.5,
+          "narrowest_xy": [
+            9.011,
+            1.428
+          ],
+          "path_length_m": 3.975,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O3",
+          "to_wp": "O2",
+          "reachable": true,
+          "narrowest_gap_m": 1.7917,
+          "required_gap_m": 0.5,
+          "narrowest_xy": [
+            6.826,
+            1.607
+          ],
+          "path_length_m": 2.28,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O2",
+          "to_wp": "O1",
+          "reachable": true,
+          "narrowest_gap_m": 1.8189,
+          "required_gap_m": 0.5,
+          "narrowest_xy": [
+            3.652,
+            0.81
+          ],
+          "path_length_m": 2.271,
+          "blocking_threshold": null,
+          "reason": ""
+        },
+        {
+          "from_wp": "O1",
+          "to_wp": "DOCK",
+          "reachable": true,
+          "narrowest_gap_m": 0.8989,
+          "required_gap_m": 0.5,
+          "narrowest_xy": [
+            0.314,
+            0.347
+          ],
+          "path_length_m": 2.086,
+          "blocking_threshold": null,
+          "reason": ""
+        }
+      ],
+      "all_reachable": true
+    }
+  },
+  "feasibility_by_bound": {
+    "keenon_dinerbot_t8": {
+      "nominal": {
+        "robot_id": "keenon_dinerbot_t8",
+        "twin_id": "twin_ref_corridor_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 1.157,
+            "required_gap_m": 0.384,
+            "narrowest_xy": [
+              14.252,
+              0.677
+            ],
+            "path_length_m": 13.968,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "O4",
+            "reachable": true,
+            "narrowest_gap_m": 1.1504,
+            "required_gap_m": 0.384,
+            "narrowest_xy": [
+              14.331,
+              0.685
+            ],
+            "path_length_m": 4.134,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O4",
+            "to_wp": "O3",
+            "reachable": true,
+            "narrowest_gap_m": 1.325,
+            "required_gap_m": 0.384,
+            "narrowest_xy": [
+              9.022,
+              1.469
+            ],
+            "path_length_m": 4.012,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O3",
+            "to_wp": "O2",
+            "reachable": true,
+            "narrowest_gap_m": 1.9,
+            "required_gap_m": 0.384,
+            "narrowest_xy": [
+              6.695,
+              1.469
+            ],
+            "path_length_m": 2.284,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O2",
+            "to_wp": "O1",
+            "reachable": true,
+            "narrowest_gap_m": 1.8933,
+            "required_gap_m": 0.384,
+            "narrowest_xy": [
+              3.461,
+              0.897
+            ],
+            "path_length_m": 2.28,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O1",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.3568,
+            "required_gap_m": 0.384,
+            "narrowest_xy": [
+              0.577,
+              0.623
+            ],
+            "path_length_m": 2.064,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "optimistic": {
+        "robot_id": "keenon_dinerbot_t8",
+        "twin_id": "twin_ref_corridor_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 1.157,
+            "required_gap_m": 0.384,
+            "narrowest_xy": [
+              14.252,
+              0.677
+            ],
+            "path_length_m": 13.968,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "O4",
+            "reachable": true,
+            "narrowest_gap_m": 1.1504,
+            "required_gap_m": 0.384,
+            "narrowest_xy": [
+              14.331,
+              0.685
+            ],
+            "path_length_m": 4.134,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O4",
+            "to_wp": "O3",
+            "reachable": true,
+            "narrowest_gap_m": 1.325,
+            "required_gap_m": 0.384,
+            "narrowest_xy": [
+              9.022,
+              1.469
+            ],
+            "path_length_m": 4.012,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O3",
+            "to_wp": "O2",
+            "reachable": true,
+            "narrowest_gap_m": 1.9,
+            "required_gap_m": 0.384,
+            "narrowest_xy": [
+              6.695,
+              1.469
+            ],
+            "path_length_m": 2.284,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O2",
+            "to_wp": "O1",
+            "reachable": true,
+            "narrowest_gap_m": 1.8933,
+            "required_gap_m": 0.384,
+            "narrowest_xy": [
+              3.461,
+              0.897
+            ],
+            "path_length_m": 2.28,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O1",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.3568,
+            "required_gap_m": 0.384,
+            "narrowest_xy": [
+              0.577,
+              0.623
+            ],
+            "path_length_m": 2.064,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "conservative": {
+        "robot_id": "keenon_dinerbot_t8",
+        "twin_id": "twin_ref_corridor_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 1.157,
+            "required_gap_m": 0.384,
+            "narrowest_xy": [
+              14.252,
+              0.677
+            ],
+            "path_length_m": 13.968,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "O4",
+            "reachable": true,
+            "narrowest_gap_m": 1.1504,
+            "required_gap_m": 0.384,
+            "narrowest_xy": [
+              14.331,
+              0.685
+            ],
+            "path_length_m": 4.134,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O4",
+            "to_wp": "O3",
+            "reachable": true,
+            "narrowest_gap_m": 1.325,
+            "required_gap_m": 0.384,
+            "narrowest_xy": [
+              9.022,
+              1.469
+            ],
+            "path_length_m": 4.012,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O3",
+            "to_wp": "O2",
+            "reachable": true,
+            "narrowest_gap_m": 1.9,
+            "required_gap_m": 0.384,
+            "narrowest_xy": [
+              6.695,
+              1.469
+            ],
+            "path_length_m": 2.284,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O2",
+            "to_wp": "O1",
+            "reachable": true,
+            "narrowest_gap_m": 1.8933,
+            "required_gap_m": 0.384,
+            "narrowest_xy": [
+              3.461,
+              0.897
+            ],
+            "path_length_m": 2.28,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O1",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.3568,
+            "required_gap_m": 0.384,
+            "narrowest_xy": [
+              0.577,
+              0.623
+            ],
+            "path_length_m": 2.064,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      }
+    },
+    "bear_servi": {
+      "nominal": {
+        "robot_id": "bear_servi",
+        "twin_id": "twin_ref_corridor_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.445,
+            "narrowest_xy": [
+              14.319,
+              0.607
+            ],
+            "path_length_m": 14.042,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "O4",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.445,
+            "narrowest_xy": [
+              14.513,
+              0.536
+            ],
+            "path_length_m": 4.149,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O4",
+            "to_wp": "O3",
+            "reachable": true,
+            "narrowest_gap_m": 1.325,
+            "required_gap_m": 0.445,
+            "narrowest_xy": [
+              9.021,
+              1.466
+            ],
+            "path_length_m": 4.012,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O3",
+            "to_wp": "O2",
+            "reachable": true,
+            "narrowest_gap_m": 1.8954,
+            "required_gap_m": 0.445,
+            "narrowest_xy": [
+              5.488,
+              0.942
+            ],
+            "path_length_m": 2.314,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O2",
+            "to_wp": "O1",
+            "reachable": true,
+            "narrowest_gap_m": 1.8923,
+            "required_gap_m": 0.445,
+            "narrowest_xy": [
+              3.505,
+              0.868
+            ],
+            "path_length_m": 2.242,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O1",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.3626,
+            "required_gap_m": 0.445,
+            "narrowest_xy": [
+              0.593,
+              0.619
+            ],
+            "path_length_m": 2.004,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "optimistic": {
+        "robot_id": "bear_servi",
+        "twin_id": "twin_ref_corridor_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.445,
+            "narrowest_xy": [
+              14.319,
+              0.607
+            ],
+            "path_length_m": 14.042,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "O4",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.445,
+            "narrowest_xy": [
+              14.513,
+              0.536
+            ],
+            "path_length_m": 4.149,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O4",
+            "to_wp": "O3",
+            "reachable": true,
+            "narrowest_gap_m": 1.325,
+            "required_gap_m": 0.445,
+            "narrowest_xy": [
+              9.021,
+              1.466
+            ],
+            "path_length_m": 4.012,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O3",
+            "to_wp": "O2",
+            "reachable": true,
+            "narrowest_gap_m": 1.8954,
+            "required_gap_m": 0.445,
+            "narrowest_xy": [
+              5.488,
+              0.942
+            ],
+            "path_length_m": 2.314,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O2",
+            "to_wp": "O1",
+            "reachable": true,
+            "narrowest_gap_m": 1.8923,
+            "required_gap_m": 0.445,
+            "narrowest_xy": [
+              3.505,
+              0.868
+            ],
+            "path_length_m": 2.242,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O1",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.3626,
+            "required_gap_m": 0.445,
+            "narrowest_xy": [
+              0.593,
+              0.619
+            ],
+            "path_length_m": 2.004,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "conservative": {
+        "robot_id": "bear_servi",
+        "twin_id": "twin_ref_corridor_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.445,
+            "narrowest_xy": [
+              14.319,
+              0.607
+            ],
+            "path_length_m": 14.042,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "O4",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.445,
+            "narrowest_xy": [
+              14.513,
+              0.536
+            ],
+            "path_length_m": 4.149,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O4",
+            "to_wp": "O3",
+            "reachable": true,
+            "narrowest_gap_m": 1.325,
+            "required_gap_m": 0.445,
+            "narrowest_xy": [
+              9.021,
+              1.466
+            ],
+            "path_length_m": 4.012,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O3",
+            "to_wp": "O2",
+            "reachable": true,
+            "narrowest_gap_m": 1.8954,
+            "required_gap_m": 0.445,
+            "narrowest_xy": [
+              5.488,
+              0.942
+            ],
+            "path_length_m": 2.314,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O2",
+            "to_wp": "O1",
+            "reachable": true,
+            "narrowest_gap_m": 1.8923,
+            "required_gap_m": 0.445,
+            "narrowest_xy": [
+              3.505,
+              0.868
+            ],
+            "path_length_m": 2.242,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O1",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.3626,
+            "required_gap_m": 0.445,
+            "narrowest_xy": [
+              0.593,
+              0.619
+            ],
+            "path_length_m": 2.004,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      }
+    },
+    "pudu_kettybot": {
+      "nominal": {
+        "robot_id": "pudu_kettybot",
+        "twin_id": "twin_ref_corridor_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.45,
+            "narrowest_xy": [
+              14.319,
+              0.607
+            ],
+            "path_length_m": 14.042,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "O4",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.45,
+            "narrowest_xy": [
+              14.513,
+              0.536
+            ],
+            "path_length_m": 4.125,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O4",
+            "to_wp": "O3",
+            "reachable": true,
+            "narrowest_gap_m": 1.325,
+            "required_gap_m": 0.45,
+            "narrowest_xy": [
+              9.007,
+              1.445
+            ],
+            "path_length_m": 4.012,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O3",
+            "to_wp": "O2",
+            "reachable": true,
+            "narrowest_gap_m": 1.8923,
+            "required_gap_m": 0.45,
+            "narrowest_xy": [
+              5.651,
+              1.009
+            ],
+            "path_length_m": 2.316,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O2",
+            "to_wp": "O1",
+            "reachable": true,
+            "narrowest_gap_m": 1.9011,
+            "required_gap_m": 0.45,
+            "narrowest_xy": [
+              3.548,
+              0.85
+            ],
+            "path_length_m": 2.261,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O1",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.3659,
+            "required_gap_m": 0.45,
+            "narrowest_xy": [
+              0.588,
+              0.619
+            ],
+            "path_length_m": 2.038,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "optimistic": {
+        "robot_id": "pudu_kettybot",
+        "twin_id": "twin_ref_corridor_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.45,
+            "narrowest_xy": [
+              14.319,
+              0.607
+            ],
+            "path_length_m": 14.042,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "O4",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.45,
+            "narrowest_xy": [
+              14.513,
+              0.536
+            ],
+            "path_length_m": 4.125,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O4",
+            "to_wp": "O3",
+            "reachable": true,
+            "narrowest_gap_m": 1.325,
+            "required_gap_m": 0.45,
+            "narrowest_xy": [
+              9.007,
+              1.445
+            ],
+            "path_length_m": 4.012,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O3",
+            "to_wp": "O2",
+            "reachable": true,
+            "narrowest_gap_m": 1.8923,
+            "required_gap_m": 0.45,
+            "narrowest_xy": [
+              5.651,
+              1.009
+            ],
+            "path_length_m": 2.316,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O2",
+            "to_wp": "O1",
+            "reachable": true,
+            "narrowest_gap_m": 1.9011,
+            "required_gap_m": 0.45,
+            "narrowest_xy": [
+              3.548,
+              0.85
+            ],
+            "path_length_m": 2.261,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O1",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.3659,
+            "required_gap_m": 0.45,
+            "narrowest_xy": [
+              0.588,
+              0.619
+            ],
+            "path_length_m": 2.038,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "conservative": {
+        "robot_id": "pudu_kettybot",
+        "twin_id": "twin_ref_corridor_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.45,
+            "narrowest_xy": [
+              14.319,
+              0.607
+            ],
+            "path_length_m": 14.042,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "O4",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.45,
+            "narrowest_xy": [
+              14.513,
+              0.536
+            ],
+            "path_length_m": 4.125,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O4",
+            "to_wp": "O3",
+            "reachable": true,
+            "narrowest_gap_m": 1.325,
+            "required_gap_m": 0.45,
+            "narrowest_xy": [
+              9.007,
+              1.445
+            ],
+            "path_length_m": 4.012,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O3",
+            "to_wp": "O2",
+            "reachable": true,
+            "narrowest_gap_m": 1.8923,
+            "required_gap_m": 0.45,
+            "narrowest_xy": [
+              5.651,
+              1.009
+            ],
+            "path_length_m": 2.316,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O2",
+            "to_wp": "O1",
+            "reachable": true,
+            "narrowest_gap_m": 1.9011,
+            "required_gap_m": 0.45,
+            "narrowest_xy": [
+              3.548,
+              0.85
+            ],
+            "path_length_m": 2.261,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O1",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.3659,
+            "required_gap_m": 0.45,
+            "narrowest_xy": [
+              0.588,
+              0.619
+            ],
+            "path_length_m": 2.038,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      }
+    },
+    "keenon_w3": {
+      "nominal": {
+        "robot_id": "keenon_w3",
+        "twin_id": "twin_ref_corridor_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.459,
+            "narrowest_xy": [
+              14.285,
+              0.664
+            ],
+            "path_length_m": 14.005,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "O4",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.459,
+            "narrowest_xy": [
+              14.515,
+              0.581
+            ],
+            "path_length_m": 4.126,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O4",
+            "to_wp": "O3",
+            "reachable": true,
+            "narrowest_gap_m": 1.325,
+            "required_gap_m": 0.459,
+            "narrowest_xy": [
+              9.027,
+              1.435
+            ],
+            "path_length_m": 4.011,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O3",
+            "to_wp": "O2",
+            "reachable": true,
+            "narrowest_gap_m": 1.8942,
+            "required_gap_m": 0.459,
+            "narrowest_xy": [
+              5.571,
+              0.969
+            ],
+            "path_length_m": 2.308,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O2",
+            "to_wp": "O1",
+            "reachable": true,
+            "narrowest_gap_m": 1.9006,
+            "required_gap_m": 0.459,
+            "narrowest_xy": [
+              3.469,
+              0.887
+            ],
+            "path_length_m": 2.253,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O1",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.358,
+            "required_gap_m": 0.459,
+            "narrowest_xy": [
+              0.634,
+              0.65
+            ],
+            "path_length_m": 2.093,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "optimistic": {
+        "robot_id": "keenon_w3",
+        "twin_id": "twin_ref_corridor_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.459,
+            "narrowest_xy": [
+              14.285,
+              0.664
+            ],
+            "path_length_m": 14.005,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "O4",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.459,
+            "narrowest_xy": [
+              14.515,
+              0.581
+            ],
+            "path_length_m": 4.126,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O4",
+            "to_wp": "O3",
+            "reachable": true,
+            "narrowest_gap_m": 1.325,
+            "required_gap_m": 0.459,
+            "narrowest_xy": [
+              9.027,
+              1.435
+            ],
+            "path_length_m": 4.011,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O3",
+            "to_wp": "O2",
+            "reachable": true,
+            "narrowest_gap_m": 1.8942,
+            "required_gap_m": 0.459,
+            "narrowest_xy": [
+              5.571,
+              0.969
+            ],
+            "path_length_m": 2.308,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O2",
+            "to_wp": "O1",
+            "reachable": true,
+            "narrowest_gap_m": 1.9006,
+            "required_gap_m": 0.459,
+            "narrowest_xy": [
+              3.469,
+              0.887
+            ],
+            "path_length_m": 2.253,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O1",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.358,
+            "required_gap_m": 0.459,
+            "narrowest_xy": [
+              0.634,
+              0.65
+            ],
+            "path_length_m": 2.093,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "conservative": {
+        "robot_id": "keenon_w3",
+        "twin_id": "twin_ref_corridor_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.459,
+            "narrowest_xy": [
+              14.285,
+              0.664
+            ],
+            "path_length_m": 14.005,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "O4",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.459,
+            "narrowest_xy": [
+              14.515,
+              0.581
+            ],
+            "path_length_m": 4.126,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O4",
+            "to_wp": "O3",
+            "reachable": true,
+            "narrowest_gap_m": 1.325,
+            "required_gap_m": 0.459,
+            "narrowest_xy": [
+              9.027,
+              1.435
+            ],
+            "path_length_m": 4.011,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O3",
+            "to_wp": "O2",
+            "reachable": true,
+            "narrowest_gap_m": 1.8942,
+            "required_gap_m": 0.459,
+            "narrowest_xy": [
+              5.571,
+              0.969
+            ],
+            "path_length_m": 2.308,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O2",
+            "to_wp": "O1",
+            "reachable": true,
+            "narrowest_gap_m": 1.9006,
+            "required_gap_m": 0.459,
+            "narrowest_xy": [
+              3.469,
+              0.887
+            ],
+            "path_length_m": 2.253,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O1",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.358,
+            "required_gap_m": 0.459,
+            "narrowest_xy": [
+              0.634,
+              0.65
+            ],
+            "path_length_m": 2.093,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      }
+    },
+    "keenon_dinerbot_t9": {
+      "nominal": {
+        "robot_id": "keenon_dinerbot_t9",
+        "twin_id": "twin_ref_corridor_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              14.215,
+              0.531
+            ],
+            "path_length_m": 14.064,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "O4",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              14.271,
+              0.531
+            ],
+            "path_length_m": 4.182,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O4",
+            "to_wp": "O3",
+            "reachable": true,
+            "narrowest_gap_m": 1.325,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              9.007,
+              1.449
+            ],
+            "path_length_m": 4.012,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O3",
+            "to_wp": "O2",
+            "reachable": true,
+            "narrowest_gap_m": 1.8905,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              5.499,
+              0.939
+            ],
+            "path_length_m": 2.285,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O2",
+            "to_wp": "O1",
+            "reachable": true,
+            "narrowest_gap_m": 1.8896,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              3.478,
+              0.891
+            ],
+            "path_length_m": 2.264,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O1",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.3624,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              0.651,
+              0.66
+            ],
+            "path_length_m": 2.01,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "optimistic": {
+        "robot_id": "keenon_dinerbot_t9",
+        "twin_id": "twin_ref_corridor_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              14.215,
+              0.531
+            ],
+            "path_length_m": 14.064,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "O4",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              14.271,
+              0.531
+            ],
+            "path_length_m": 4.182,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O4",
+            "to_wp": "O3",
+            "reachable": true,
+            "narrowest_gap_m": 1.325,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              9.007,
+              1.449
+            ],
+            "path_length_m": 4.012,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O3",
+            "to_wp": "O2",
+            "reachable": true,
+            "narrowest_gap_m": 1.8905,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              5.499,
+              0.939
+            ],
+            "path_length_m": 2.285,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O2",
+            "to_wp": "O1",
+            "reachable": true,
+            "narrowest_gap_m": 1.8896,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              3.478,
+              0.891
+            ],
+            "path_length_m": 2.264,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O1",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.3624,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              0.651,
+              0.66
+            ],
+            "path_length_m": 2.01,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "conservative": {
+        "robot_id": "keenon_dinerbot_t9",
+        "twin_id": "twin_ref_corridor_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              14.215,
+              0.531
+            ],
+            "path_length_m": 14.064,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "O4",
+            "reachable": true,
+            "narrowest_gap_m": 1.15,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              14.271,
+              0.531
+            ],
+            "path_length_m": 4.182,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O4",
+            "to_wp": "O3",
+            "reachable": true,
+            "narrowest_gap_m": 1.325,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              9.007,
+              1.449
+            ],
+            "path_length_m": 4.012,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O3",
+            "to_wp": "O2",
+            "reachable": true,
+            "narrowest_gap_m": 1.8905,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              5.499,
+              0.939
+            ],
+            "path_length_m": 2.285,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O2",
+            "to_wp": "O1",
+            "reachable": true,
+            "narrowest_gap_m": 1.8896,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              3.478,
+              0.891
+            ],
+            "path_length_m": 2.264,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O1",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 1.3624,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              0.651,
+              0.66
+            ],
+            "path_length_m": 2.01,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      }
+    },
+    "pudu_t300": {
+      "nominal": {
+        "robot_id": "pudu_t300",
+        "twin_id": "twin_ref_corridor_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 1.1516,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              14.234,
+              0.677
+            ],
+            "path_length_m": 13.976,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "O4",
+            "reachable": true,
+            "narrowest_gap_m": 1.1501,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              14.276,
+              0.584
+            ],
+            "path_length_m": 4.3,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O4",
+            "to_wp": "O3",
+            "reachable": true,
+            "narrowest_gap_m": 1.325,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              9.011,
+              1.428
+            ],
+            "path_length_m": 3.975,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O3",
+            "to_wp": "O2",
+            "reachable": true,
+            "narrowest_gap_m": 1.7917,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              6.826,
+              1.607
+            ],
+            "path_length_m": 2.28,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O2",
+            "to_wp": "O1",
+            "reachable": true,
+            "narrowest_gap_m": 1.8189,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              3.652,
+              0.81
+            ],
+            "path_length_m": 2.271,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O1",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 0.8989,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              0.314,
+              0.347
+            ],
+            "path_length_m": 2.086,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "optimistic": {
+        "robot_id": "pudu_t300",
+        "twin_id": "twin_ref_corridor_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 1.1516,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              14.234,
+              0.677
+            ],
+            "path_length_m": 13.976,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "O4",
+            "reachable": true,
+            "narrowest_gap_m": 1.1501,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              14.276,
+              0.584
+            ],
+            "path_length_m": 4.3,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O4",
+            "to_wp": "O3",
+            "reachable": true,
+            "narrowest_gap_m": 1.325,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              9.011,
+              1.428
+            ],
+            "path_length_m": 3.975,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O3",
+            "to_wp": "O2",
+            "reachable": true,
+            "narrowest_gap_m": 1.7917,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              6.826,
+              1.607
+            ],
+            "path_length_m": 2.28,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O2",
+            "to_wp": "O1",
+            "reachable": true,
+            "narrowest_gap_m": 1.8189,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              3.652,
+              0.81
+            ],
+            "path_length_m": 2.271,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O1",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 0.8989,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              0.314,
+              0.347
+            ],
+            "path_length_m": 2.086,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      },
+      "conservative": {
+        "robot_id": "pudu_t300",
+        "twin_id": "twin_ref_corridor_v1",
+        "twin_version": 1,
+        "legs": [
+          {
+            "from_wp": "DOCK",
+            "to_wp": "PICKUP",
+            "reachable": true,
+            "narrowest_gap_m": 1.1516,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              14.234,
+              0.677
+            ],
+            "path_length_m": 13.976,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "PICKUP",
+            "to_wp": "O4",
+            "reachable": true,
+            "narrowest_gap_m": 1.1501,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              14.276,
+              0.584
+            ],
+            "path_length_m": 4.3,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O4",
+            "to_wp": "O3",
+            "reachable": true,
+            "narrowest_gap_m": 1.325,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              9.011,
+              1.428
+            ],
+            "path_length_m": 3.975,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O3",
+            "to_wp": "O2",
+            "reachable": true,
+            "narrowest_gap_m": 1.7917,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              6.826,
+              1.607
+            ],
+            "path_length_m": 2.28,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O2",
+            "to_wp": "O1",
+            "reachable": true,
+            "narrowest_gap_m": 1.8189,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              3.652,
+              0.81
+            ],
+            "path_length_m": 2.271,
+            "blocking_threshold": null,
+            "reason": ""
+          },
+          {
+            "from_wp": "O1",
+            "to_wp": "DOCK",
+            "reachable": true,
+            "narrowest_gap_m": 0.8989,
+            "required_gap_m": 0.5,
+            "narrowest_xy": [
+              0.314,
+              0.347
+            ],
+            "path_length_m": 2.086,
+            "blocking_threshold": null,
+            "reason": ""
+          }
+        ],
+        "all_reachable": true
+      }
+    }
+  },
+  "batches": [
+    "sb_d0e6e2070eb5",
+    "sb_b1b83bffe50f",
+    "sb_ef707dea6880",
+    "sb_a2efc5b0931b",
+    "sb_d693ff018637",
+    "sb_8139cf5c4470",
+    "sb_979ad47ec78c",
+    "sb_95b878470915",
+    "sb_cad387bf7378",
+    "sb_17063cd9b267",
+    "sb_071d393f5171",
+    "sb_593c904f1842",
+    "sb_1db01426f956",
+    "sb_66f267bd7c2d",
+    "sb_75858c483564",
+    "sb_32f58c01c786",
+    "sb_fcb635af5f24",
+    "sb_8233589f1bf0",
+    "sb_d4a855fc7576",
+    "sb_32be9cf2a263",
+    "sb_72cce149076d",
+    "sb_194838a95e6c",
+    "sb_816a16f412c5",
+    "sb_f96c7e949eff",
+    "sb_d729ed67dd11",
+    "sb_d2b53511b957",
+    "sb_37916d2b47fd",
+    "sb_5ebd9f921581",
+    "sb_c937c9e505c9",
+    "sb_11ee6f0782f4",
+    "sb_47a26669243f",
+    "sb_61c46ec0af64",
+    "sb_e285a50405f3",
+    "sb_b333c272994a",
+    "sb_765cb6f48709",
+    "sb_3bc2a9c7de83",
+    "sb_a6ff401274e6",
+    "sb_78ce66ca7b50",
+    "sb_efc1fa3c1770",
+    "sb_00fab14fa702",
+    "sb_26803c956feb",
+    "sb_9121f3fe6d23",
+    "sb_70c3e78b9785",
+    "sb_14767a360968",
+    "sb_4e9b0ea7d6e0",
+    "sb_55222ab9a89d",
+    "sb_f673be977fba",
+    "sb_f5532b6af279",
+    "sb_42dcd6e93645",
+    "sb_c455f4561ac5",
+    "sb_33ec807bc9a0",
+    "sb_d0b7a3db74ce",
+    "sb_4b9bff155af5",
+    "sb_aa83abd3b65a"
+  ],
+  "batch_index": {
+    "sb_d0e6e2070eb5": {
+      "robot_id": "keenon_dinerbot_t8",
+      "density": "quiet",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.113,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 59.05,
+        "near_miss_per_mission": 1.25,
+        "stops_per_mission": 1.85,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_b1b83bffe50f": {
+      "robot_id": "keenon_dinerbot_t8",
+      "density": "normal",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.11810000000000001,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 66.4,
+        "near_miss_per_mission": 3.8,
+        "stops_per_mission": 5.075,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 3
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_ef707dea6880": {
+      "robot_id": "keenon_dinerbot_t8",
+      "density": "normal",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.11810000000000001,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 66.4,
+        "near_miss_per_mission": 3.8,
+        "stops_per_mission": 5.075,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 3
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_a2efc5b0931b": {
+      "robot_id": "keenon_dinerbot_t8",
+      "density": "normal",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.11810000000000001,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 66.4,
+        "near_miss_per_mission": 3.8,
+        "stops_per_mission": 5.075,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 3
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_d693ff018637": {
+      "robot_id": "bear_servi",
+      "density": "quiet",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10944999999999999,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 57.1,
+        "near_miss_per_mission": 1.05,
+        "stops_per_mission": 1.85,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_8139cf5c4470": {
+      "robot_id": "keenon_dinerbot_t8",
+      "density": "quiet",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.113,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 59.05,
+        "near_miss_per_mission": 1.25,
+        "stops_per_mission": 1.85,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_979ad47ec78c": {
+      "robot_id": "keenon_dinerbot_t8",
+      "density": "quiet",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.113,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 59.05,
+        "near_miss_per_mission": 1.25,
+        "stops_per_mission": 1.85,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_95b878470915": {
+      "robot_id": "bear_servi",
+      "density": "quiet",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10944999999999999,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 57.1,
+        "near_miss_per_mission": 1.05,
+        "stops_per_mission": 1.85,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_cad387bf7378": {
+      "robot_id": "keenon_dinerbot_t8",
+      "density": "peak",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.10735,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 96.9,
+        "near_miss_per_mission": 9.7,
+        "stops_per_mission": 13.675,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 1,
+          "collision": 2
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_17063cd9b267": {
+      "robot_id": "keenon_dinerbot_t8",
+      "density": "peak",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.10735,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 96.9,
+        "near_miss_per_mission": 9.7,
+        "stops_per_mission": 13.675,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 1,
+          "collision": 2
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_071d393f5171": {
+      "robot_id": "keenon_dinerbot_t8",
+      "density": "peak",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.10735,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 96.9,
+        "near_miss_per_mission": 9.7,
+        "stops_per_mission": 13.675,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 1,
+          "collision": 2
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_593c904f1842": {
+      "robot_id": "bear_servi",
+      "density": "quiet",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10944999999999999,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 57.1,
+        "near_miss_per_mission": 1.05,
+        "stops_per_mission": 1.85,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_1db01426f956": {
+      "robot_id": "bear_servi",
+      "density": "normal",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.95,
+        "min_gap_m": 0.10944999999999999,
+        "ci95": [
+          0.834958291820748,
+          0.9861796228538989
+        ],
+        "median_mission_s": 66.35,
+        "near_miss_per_mission": 3.45,
+        "stops_per_mission": 5.0,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 2
+        },
+        "n_success": 38,
+        "n_episodes": 40
+      }
+    },
+    "sb_66f267bd7c2d": {
+      "robot_id": "pudu_kettybot",
+      "density": "quiet",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10655,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 56.650000000000006,
+        "near_miss_per_mission": 1.1,
+        "stops_per_mission": 1.725,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_75858c483564": {
+      "robot_id": "bear_servi",
+      "density": "normal",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.95,
+        "min_gap_m": 0.10944999999999999,
+        "ci95": [
+          0.834958291820748,
+          0.9861796228538989
+        ],
+        "median_mission_s": 66.35,
+        "near_miss_per_mission": 3.45,
+        "stops_per_mission": 5.0,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 2
+        },
+        "n_success": 38,
+        "n_episodes": 40
+      }
+    },
+    "sb_32f58c01c786": {
+      "robot_id": "bear_servi",
+      "density": "normal",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.95,
+        "min_gap_m": 0.10944999999999999,
+        "ci95": [
+          0.834958291820748,
+          0.9861796228538989
+        ],
+        "median_mission_s": 66.35,
+        "near_miss_per_mission": 3.45,
+        "stops_per_mission": 5.0,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 2
+        },
+        "n_success": 38,
+        "n_episodes": 40
+      }
+    },
+    "sb_fcb635af5f24": {
+      "robot_id": "pudu_kettybot",
+      "density": "quiet",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10655,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 56.650000000000006,
+        "near_miss_per_mission": 1.1,
+        "stops_per_mission": 1.725,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_8233589f1bf0": {
+      "robot_id": "pudu_kettybot",
+      "density": "quiet",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10655,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 56.650000000000006,
+        "near_miss_per_mission": 1.1,
+        "stops_per_mission": 1.725,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_d4a855fc7576": {
+      "robot_id": "bear_servi",
+      "density": "peak",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.10414999999999999,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 103.8,
+        "near_miss_per_mission": 9.375,
+        "stops_per_mission": 12.35,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 1,
+          "collision": 2
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_32be9cf2a263": {
+      "robot_id": "bear_servi",
+      "density": "peak",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.10414999999999999,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 103.8,
+        "near_miss_per_mission": 9.375,
+        "stops_per_mission": 12.35,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 1,
+          "collision": 2
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_72cce149076d": {
+      "robot_id": "bear_servi",
+      "density": "peak",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.10414999999999999,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 103.8,
+        "near_miss_per_mission": 9.375,
+        "stops_per_mission": 12.35,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 1,
+          "collision": 2
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_194838a95e6c": {
+      "robot_id": "pudu_kettybot",
+      "density": "normal",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.10655,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 67.6,
+        "near_miss_per_mission": 3.45,
+        "stops_per_mission": 4.925,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 3
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_816a16f412c5": {
+      "robot_id": "pudu_kettybot",
+      "density": "normal",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.10655,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 67.6,
+        "near_miss_per_mission": 3.45,
+        "stops_per_mission": 4.925,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 3
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_f96c7e949eff": {
+      "robot_id": "pudu_kettybot",
+      "density": "normal",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.10655,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 67.6,
+        "near_miss_per_mission": 3.45,
+        "stops_per_mission": 4.925,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 3
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_d729ed67dd11": {
+      "robot_id": "keenon_w3",
+      "density": "quiet",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10785,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 67.5,
+        "near_miss_per_mission": 1.65,
+        "stops_per_mission": 2.425,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_d2b53511b957": {
+      "robot_id": "keenon_w3",
+      "density": "quiet",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10785,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 67.5,
+        "near_miss_per_mission": 1.65,
+        "stops_per_mission": 2.425,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_37916d2b47fd": {
+      "robot_id": "pudu_kettybot",
+      "density": "peak",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.9,
+        "min_gap_m": 0.1052,
+        "ci95": [
+          0.7694792561952611,
+          0.9604211124044252
+        ],
+        "median_mission_s": 95.8,
+        "near_miss_per_mission": 9.5,
+        "stops_per_mission": 11.975,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 1,
+          "collision": 3
+        },
+        "n_success": 36,
+        "n_episodes": 40
+      }
+    },
+    "sb_5ebd9f921581": {
+      "robot_id": "keenon_w3",
+      "density": "quiet",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10785,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 67.5,
+        "near_miss_per_mission": 1.65,
+        "stops_per_mission": 2.425,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_c937c9e505c9": {
+      "robot_id": "pudu_kettybot",
+      "density": "peak",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.9,
+        "min_gap_m": 0.1052,
+        "ci95": [
+          0.7694792561952611,
+          0.9604211124044252
+        ],
+        "median_mission_s": 95.8,
+        "near_miss_per_mission": 9.5,
+        "stops_per_mission": 11.975,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 1,
+          "collision": 3
+        },
+        "n_success": 36,
+        "n_episodes": 40
+      }
+    },
+    "sb_11ee6f0782f4": {
+      "robot_id": "pudu_kettybot",
+      "density": "peak",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.9,
+        "min_gap_m": 0.1052,
+        "ci95": [
+          0.7694792561952611,
+          0.9604211124044252
+        ],
+        "median_mission_s": 95.8,
+        "near_miss_per_mission": 9.5,
+        "stops_per_mission": 11.975,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 1,
+          "collision": 3
+        },
+        "n_success": 36,
+        "n_episodes": 40
+      }
+    },
+    "sb_47a26669243f": {
+      "robot_id": "keenon_w3",
+      "density": "normal",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10869999999999999,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 79.4,
+        "near_miss_per_mission": 4.7,
+        "stops_per_mission": 6.85,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_61c46ec0af64": {
+      "robot_id": "keenon_w3",
+      "density": "normal",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10869999999999999,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 79.4,
+        "near_miss_per_mission": 4.7,
+        "stops_per_mission": 6.85,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_e285a50405f3": {
+      "robot_id": "keenon_w3",
+      "density": "normal",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10869999999999999,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 79.4,
+        "near_miss_per_mission": 4.7,
+        "stops_per_mission": 6.85,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_b333c272994a": {
+      "robot_id": "keenon_dinerbot_t9",
+      "density": "quiet",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.11805,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 60.8,
+        "near_miss_per_mission": 1.325,
+        "stops_per_mission": 2.125,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_765cb6f48709": {
+      "robot_id": "keenon_dinerbot_t9",
+      "density": "quiet",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.11805,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 60.8,
+        "near_miss_per_mission": 1.325,
+        "stops_per_mission": 2.125,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_3bc2a9c7de83": {
+      "robot_id": "keenon_dinerbot_t9",
+      "density": "quiet",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.11805,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 60.8,
+        "near_miss_per_mission": 1.325,
+        "stops_per_mission": 2.125,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_a6ff401274e6": {
+      "robot_id": "keenon_w3",
+      "density": "peak",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10915,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 112.25,
+        "near_miss_per_mission": 11.825,
+        "stops_per_mission": 15.2,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_78ce66ca7b50": {
+      "robot_id": "keenon_w3",
+      "density": "peak",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10915,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 112.25,
+        "near_miss_per_mission": 11.825,
+        "stops_per_mission": 15.2,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_efc1fa3c1770": {
+      "robot_id": "keenon_dinerbot_t9",
+      "density": "normal",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.95,
+        "min_gap_m": 0.1185,
+        "ci95": [
+          0.834958291820748,
+          0.9861796228538989
+        ],
+        "median_mission_s": 74.8,
+        "near_miss_per_mission": 4.225,
+        "stops_per_mission": 5.925,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 2
+        },
+        "n_success": 38,
+        "n_episodes": 40
+      }
+    },
+    "sb_00fab14fa702": {
+      "robot_id": "keenon_dinerbot_t9",
+      "density": "normal",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.95,
+        "min_gap_m": 0.1185,
+        "ci95": [
+          0.834958291820748,
+          0.9861796228538989
+        ],
+        "median_mission_s": 74.8,
+        "near_miss_per_mission": 4.225,
+        "stops_per_mission": 5.925,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 2
+        },
+        "n_success": 38,
+        "n_episodes": 40
+      }
+    },
+    "sb_26803c956feb": {
+      "robot_id": "keenon_dinerbot_t9",
+      "density": "normal",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.95,
+        "min_gap_m": 0.1185,
+        "ci95": [
+          0.834958291820748,
+          0.9861796228538989
+        ],
+        "median_mission_s": 74.8,
+        "near_miss_per_mission": 4.225,
+        "stops_per_mission": 5.925,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 2
+        },
+        "n_success": 38,
+        "n_episodes": 40
+      }
+    },
+    "sb_9121f3fe6d23": {
+      "robot_id": "keenon_w3",
+      "density": "peak",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.10915,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 112.25,
+        "near_miss_per_mission": 11.825,
+        "stops_per_mission": 15.2,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_70c3e78b9785": {
+      "robot_id": "pudu_t300",
+      "density": "quiet",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.03875,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 61.2,
+        "near_miss_per_mission": 1.225,
+        "stops_per_mission": 2.25,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_14767a360968": {
+      "robot_id": "pudu_t300",
+      "density": "quiet",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.03875,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 61.2,
+        "near_miss_per_mission": 1.225,
+        "stops_per_mission": 2.25,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_4e9b0ea7d6e0": {
+      "robot_id": "pudu_t300",
+      "density": "quiet",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 1.0,
+        "min_gap_m": 0.03875,
+        "ci95": [
+          0.9123754607496077,
+          1.0
+        ],
+        "median_mission_s": 61.2,
+        "near_miss_per_mission": 1.225,
+        "stops_per_mission": 2.25,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 0
+        },
+        "n_success": 40,
+        "n_episodes": 40
+      }
+    },
+    "sb_55222ab9a89d": {
+      "robot_id": "keenon_dinerbot_t9",
+      "density": "peak",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.11574999999999999,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 110.5,
+        "near_miss_per_mission": 11.375,
+        "stops_per_mission": 15.975,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 2,
+          "collision": 1
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_f673be977fba": {
+      "robot_id": "keenon_dinerbot_t9",
+      "density": "peak",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.11574999999999999,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 110.5,
+        "near_miss_per_mission": 11.375,
+        "stops_per_mission": 15.975,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 2,
+          "collision": 1
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_f5532b6af279": {
+      "robot_id": "pudu_t300",
+      "density": "normal",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.04865,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 75.1,
+        "near_miss_per_mission": 4.025,
+        "stops_per_mission": 5.8,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 3
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_42dcd6e93645": {
+      "robot_id": "pudu_t300",
+      "density": "normal",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.04865,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 75.1,
+        "near_miss_per_mission": 4.025,
+        "stops_per_mission": 5.8,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 3
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_c455f4561ac5": {
+      "robot_id": "pudu_t300",
+      "density": "normal",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.04865,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 75.1,
+        "near_miss_per_mission": 4.025,
+        "stops_per_mission": 5.8,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 0,
+          "collision": 3
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_33ec807bc9a0": {
+      "robot_id": "keenon_dinerbot_t9",
+      "density": "peak",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.925,
+        "min_gap_m": 0.11574999999999999,
+        "ci95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "median_mission_s": 110.5,
+        "near_miss_per_mission": 11.375,
+        "stops_per_mission": 15.975,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 2,
+          "collision": 1
+        },
+        "n_success": 37,
+        "n_episodes": 40
+      }
+    },
+    "sb_d0b7a3db74ce": {
+      "robot_id": "pudu_t300",
+      "density": "peak",
+      "bound": "optimistic",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.9,
+        "min_gap_m": 0.051500000000000004,
+        "ci95": [
+          0.7694792561952611,
+          0.9604211124044252
+        ],
+        "median_mission_s": 112.65,
+        "near_miss_per_mission": 10.775,
+        "stops_per_mission": 14.7,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 1,
+          "collision": 3
+        },
+        "n_success": 36,
+        "n_episodes": 40
+      }
+    },
+    "sb_4b9bff155af5": {
+      "robot_id": "pudu_t300",
+      "density": "peak",
+      "bound": "nominal",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.9,
+        "min_gap_m": 0.051500000000000004,
+        "ci95": [
+          0.7694792561952611,
+          0.9604211124044252
+        ],
+        "median_mission_s": 112.65,
+        "near_miss_per_mission": 10.775,
+        "stops_per_mission": 14.7,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 1,
+          "collision": 3
+        },
+        "n_success": 36,
+        "n_episodes": 40
+      }
+    },
+    "sb_aa83abd3b65a": {
+      "robot_id": "pudu_t300",
+      "density": "peak",
+      "bound": "conservative",
+      "n_episodes": 40,
+      "results": {
+        "success_rate": 0.9,
+        "min_gap_m": 0.051500000000000004,
+        "ci95": [
+          0.7694792561952611,
+          0.9604211124044252
+        ],
+        "median_mission_s": 112.65,
+        "near_miss_per_mission": 10.775,
+        "stops_per_mission": 14.7,
+        "fail_reasons": {
+          "no_path_static": 0,
+          "blocked_timeout": 1,
+          "collision": 3
+        },
+        "n_success": 36,
+        "n_episodes": 40
+      }
+    }
+  },
+  "skipped_batches": [],
+  "investigation_id": null,
+  "investigation_ids": {},
+  "investigations": {},
+  "optimizer": {},
+  "optimizer_hints": {},
+  "verdicts": [
+    {
+      "robot_id": "keenon_dinerbot_t8",
+      "label": "Cleared",
+      "main_reason": "meets every rule as-is",
+      "as_is": [
+        {
+          "rule": "every task leg feasible on the conservative geometry bound",
+          "passed": true,
+          "value": "6/6 legs",
+          "threshold": null,
+          "fact_ids": [
+            "f_027",
+            "f_028",
+            "f_029",
+            "f_030",
+            "f_031",
+            "f_036"
+          ]
+        },
+        {
+          "rule": "no unresolved flagged_manual thresholds on the route",
+          "passed": true,
+          "value": "none",
+          "threshold": null,
+          "fact_ids": []
+        },
+        {
+          "rule": "simulated success at normal traffic (conservative bound) >= 0.90",
+          "passed": true,
+          "value": 0.925,
+          "threshold": 0.9,
+          "fact_ids": [
+            "f_068"
+          ]
+        }
+      ],
+      "with_changes": [],
+      "required_changes": [],
+      "config": {
+        "success_min": 0.9,
+        "density": "normal",
+        "bound": "conservative"
+      }
+    },
+    {
+      "robot_id": "bear_servi",
+      "label": "Cleared",
+      "main_reason": "meets every rule as-is",
+      "as_is": [
+        {
+          "rule": "every task leg feasible on the conservative geometry bound",
+          "passed": true,
+          "value": "6/6 legs",
+          "threshold": null,
+          "fact_ids": [
+            "f_116",
+            "f_117",
+            "f_118",
+            "f_119",
+            "f_120",
+            "f_121"
+          ]
+        },
+        {
+          "rule": "no unresolved flagged_manual thresholds on the route",
+          "passed": true,
+          "value": "none",
+          "threshold": null,
+          "fact_ids": []
+        },
+        {
+          "rule": "simulated success at normal traffic (conservative bound) >= 0.90",
+          "passed": true,
+          "value": 0.95,
+          "threshold": 0.9,
+          "fact_ids": [
+            "f_157"
+          ]
+        }
+      ],
+      "with_changes": [],
+      "required_changes": [],
+      "config": {
+        "success_min": 0.9,
+        "density": "normal",
+        "bound": "conservative"
+      }
+    },
+    {
+      "robot_id": "pudu_kettybot",
+      "label": "Cleared",
+      "main_reason": "meets every rule as-is",
+      "as_is": [
+        {
+          "rule": "every task leg feasible on the conservative geometry bound",
+          "passed": true,
+          "value": "6/6 legs",
+          "threshold": null,
+          "fact_ids": [
+            "f_207",
+            "f_208",
+            "f_209",
+            "f_210",
+            "f_211",
+            "f_212"
+          ]
+        },
+        {
+          "rule": "no unresolved flagged_manual thresholds on the route",
+          "passed": true,
+          "value": "none",
+          "threshold": null,
+          "fact_ids": []
+        },
+        {
+          "rule": "simulated success at normal traffic (conservative bound) >= 0.90",
+          "passed": true,
+          "value": 0.925,
+          "threshold": 0.9,
+          "fact_ids": [
+            "f_248"
+          ]
+        }
+      ],
+      "with_changes": [],
+      "required_changes": [],
+      "config": {
+        "success_min": 0.9,
+        "density": "normal",
+        "bound": "conservative"
+      }
+    },
+    {
+      "robot_id": "keenon_w3",
+      "label": "Cleared",
+      "main_reason": "meets every rule as-is",
+      "as_is": [
+        {
+          "rule": "every task leg feasible on the conservative geometry bound",
+          "passed": true,
+          "value": "6/6 legs",
+          "threshold": null,
+          "fact_ids": [
+            "f_297",
+            "f_298",
+            "f_299",
+            "f_300",
+            "f_301",
+            "f_302"
+          ]
+        },
+        {
+          "rule": "no unresolved flagged_manual thresholds on the route",
+          "passed": true,
+          "value": "none",
+          "threshold": null,
+          "fact_ids": []
+        },
+        {
+          "rule": "simulated success at normal traffic (conservative bound) >= 0.90",
+          "passed": true,
+          "value": 1.0,
+          "threshold": 0.9,
+          "fact_ids": [
+            "f_338"
+          ]
+        }
+      ],
+      "with_changes": [],
+      "required_changes": [],
+      "config": {
+        "success_min": 0.9,
+        "density": "normal",
+        "bound": "conservative"
+      }
+    },
+    {
+      "robot_id": "keenon_dinerbot_t9",
+      "label": "Cleared",
+      "main_reason": "meets every rule as-is",
+      "as_is": [
+        {
+          "rule": "every task leg feasible on the conservative geometry bound",
+          "passed": true,
+          "value": "6/6 legs",
+          "threshold": null,
+          "fact_ids": [
+            "f_384",
+            "f_385",
+            "f_386",
+            "f_387",
+            "f_388",
+            "f_389"
+          ]
+        },
+        {
+          "rule": "no unresolved flagged_manual thresholds on the route",
+          "passed": true,
+          "value": "none",
+          "threshold": null,
+          "fact_ids": []
+        },
+        {
+          "rule": "simulated success at normal traffic (conservative bound) >= 0.90",
+          "passed": true,
+          "value": 0.95,
+          "threshold": 0.9,
+          "fact_ids": [
+            "f_425"
+          ]
+        }
+      ],
+      "with_changes": [],
+      "required_changes": [],
+      "config": {
+        "success_min": 0.9,
+        "density": "normal",
+        "bound": "conservative"
+      }
+    },
+    {
+      "robot_id": "pudu_t300",
+      "label": "Cleared",
+      "main_reason": "meets every rule as-is",
+      "as_is": [
+        {
+          "rule": "every task leg feasible on the conservative geometry bound",
+          "passed": true,
+          "value": "6/6 legs",
+          "threshold": null,
+          "fact_ids": [
+            "f_474",
+            "f_475",
+            "f_476",
+            "f_477",
+            "f_478",
+            "f_499"
+          ]
+        },
+        {
+          "rule": "no unresolved flagged_manual thresholds on the route",
+          "passed": true,
+          "value": "none",
+          "threshold": null,
+          "fact_ids": []
+        },
+        {
+          "rule": "simulated success at normal traffic (conservative bound) >= 0.90",
+          "passed": true,
+          "value": 0.925,
+          "threshold": 0.9,
+          "fact_ids": [
+            "f_515"
+          ]
+        }
+      ],
+      "with_changes": [],
+      "required_changes": [],
+      "config": {
+        "success_min": 0.9,
+        "density": "normal",
+        "bound": "conservative"
+      }
+    }
+  ],
+  "confirmation_batches": {},
+  "roi": {},
+  "citations": [],
+  "tool_calls": [
+    {
+      "caller": "super",
+      "tool": "list_candidates",
+      "args": {},
+      "result": {},
+      "t": 1793134922.516
+    },
+    {
+      "caller": "super",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "keenon_dinerbot_t8",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134936.959
+    },
+    {
+      "caller": "super",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "bear_servi",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134937.857
+    },
+    {
+      "caller": "super",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "pudu_kettybot",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134938.602
+    },
+    {
+      "caller": "super",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "keenon_w3",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134939.533
+    },
+    {
+      "caller": "super",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "keenon_dinerbot_t9",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134940.419
+    },
+    {
+      "caller": "super",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "pudu_t300",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134941.281
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "keenon_dinerbot_t8",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134946.888
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "keenon_dinerbot_t8",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134946.888
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "keenon_dinerbot_t8",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134947.759
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "bear_servi",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134948.876
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "bear_servi",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134948.876
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "bear_servi",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134950.125
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "pudu_kettybot",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134950.938
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "pudu_kettybot",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134950.938
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "pudu_kettybot",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134951.804
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "keenon_w3",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134952.675
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "keenon_w3",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134952.675
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "keenon_w3",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134953.381
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "keenon_dinerbot_t9",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134954.189
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "keenon_dinerbot_t9",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134954.189
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "keenon_dinerbot_t9",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134954.993
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "pudu_t300",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134955.959
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "pudu_t300",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134955.959
+    },
+    {
+      "caller": "code",
+      "tool": "run_feasibility",
+      "args": {
+        "robot_id": "pudu_t300",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true
+      },
+      "t": 1793134956.899
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t8",
+        "density": "quiet",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_d0e6e2070eb5"
+      },
+      "t": 1793135075.4
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t8",
+        "density": "normal",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_b1b83bffe50f"
+      },
+      "t": 1793135118.222
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t8",
+        "density": "normal",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_ef707dea6880"
+      },
+      "t": 1793135119.075
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t8",
+        "density": "normal",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_a2efc5b0931b"
+      },
+      "t": 1793135124.716
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "bear_servi",
+        "density": "quiet",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_d693ff018637"
+      },
+      "t": 1793135127.366
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t8",
+        "density": "quiet",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_8139cf5c4470"
+      },
+      "t": 1793135130.687
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t8",
+        "density": "quiet",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_979ad47ec78c"
+      },
+      "t": 1793135131.513
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "bear_servi",
+        "density": "quiet",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_95b878470915"
+      },
+      "t": 1793135132.497
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t8",
+        "density": "peak",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_cad387bf7378"
+      },
+      "t": 1793135160.049
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t8",
+        "density": "peak",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_17063cd9b267"
+      },
+      "t": 1793135167.663
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t8",
+        "density": "peak",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_071d393f5171"
+      },
+      "t": 1793135191.047
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "bear_servi",
+        "density": "quiet",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_593c904f1842"
+      },
+      "t": 1793135196.815
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "bear_servi",
+        "density": "normal",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_1db01426f956"
+      },
+      "t": 1793135211.787
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_kettybot",
+        "density": "quiet",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_66f267bd7c2d"
+      },
+      "t": 1793135215.239
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "bear_servi",
+        "density": "normal",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_75858c483564"
+      },
+      "t": 1793135216.906
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "bear_servi",
+        "density": "normal",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_32f58c01c786"
+      },
+      "t": 1793135220.584
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_kettybot",
+        "density": "quiet",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_fcb635af5f24"
+      },
+      "t": 1793135242.045
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_kettybot",
+        "density": "quiet",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_8233589f1bf0"
+      },
+      "t": 1793135249.471
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "bear_servi",
+        "density": "peak",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_d4a855fc7576"
+      },
+      "t": 1793135250.902
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "bear_servi",
+        "density": "peak",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_32be9cf2a263"
+      },
+      "t": 1793135256.477
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "bear_servi",
+        "density": "peak",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_72cce149076d"
+      },
+      "t": 1793135258.464
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_kettybot",
+        "density": "normal",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_194838a95e6c"
+      },
+      "t": 1793135264.304
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_kettybot",
+        "density": "normal",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_816a16f412c5"
+      },
+      "t": 1793135268.388
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_kettybot",
+        "density": "normal",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_f96c7e949eff"
+      },
+      "t": 1793135278.661
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_w3",
+        "density": "quiet",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_d729ed67dd11"
+      },
+      "t": 1793135291.988
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_w3",
+        "density": "quiet",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_d2b53511b957"
+      },
+      "t": 1793135297.67
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_kettybot",
+        "density": "peak",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_37916d2b47fd"
+      },
+      "t": 1793135306.158
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_w3",
+        "density": "quiet",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_5ebd9f921581"
+      },
+      "t": 1793135306.435
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_kettybot",
+        "density": "peak",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_c937c9e505c9"
+      },
+      "t": 1793135308.221
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_kettybot",
+        "density": "peak",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_11ee6f0782f4"
+      },
+      "t": 1793135308.842
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_w3",
+        "density": "normal",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_47a26669243f"
+      },
+      "t": 1793135316.086
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_w3",
+        "density": "normal",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_61c46ec0af64"
+      },
+      "t": 1793135323.981
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_w3",
+        "density": "normal",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_e285a50405f3"
+      },
+      "t": 1793135327.124
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t9",
+        "density": "quiet",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_b333c272994a"
+      },
+      "t": 1793135340.235
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t9",
+        "density": "quiet",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_765cb6f48709"
+      },
+      "t": 1793135346.266
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t9",
+        "density": "quiet",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_3bc2a9c7de83"
+      },
+      "t": 1793135428.582
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_w3",
+        "density": "peak",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_a6ff401274e6"
+      },
+      "t": 1793135675.486
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_w3",
+        "density": "peak",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_78ce66ca7b50"
+      },
+      "t": 1793135798.866
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t9",
+        "density": "normal",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_efc1fa3c1770"
+      },
+      "t": 1793135920.859
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t9",
+        "density": "normal",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_00fab14fa702"
+      },
+      "t": 1793135975.211
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t9",
+        "density": "normal",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_26803c956feb"
+      },
+      "t": 1793136118.759
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_w3",
+        "density": "peak",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_9121f3fe6d23"
+      },
+      "t": 1793136198.254
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "quiet",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_70c3e78b9785"
+      },
+      "t": 1793136769.945
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "quiet",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_14767a360968"
+      },
+      "t": 1793136961.639
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "quiet",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_4e9b0ea7d6e0"
+      },
+      "t": 1793137179.367
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t9",
+        "density": "peak",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_55222ab9a89d"
+      },
+      "t": 1793137204.088
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t9",
+        "density": "peak",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_f673be977fba"
+      },
+      "t": 1793137308.984
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "normal",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_f5532b6af279"
+      },
+      "t": 1793137554.294
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "normal",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_42dcd6e93645"
+      },
+      "t": 1793137638.77
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "normal",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_c455f4561ac5"
+      },
+      "t": 1793137728.908
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "keenon_dinerbot_t9",
+        "density": "peak",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_33ec807bc9a0"
+      },
+      "t": 1793137787.986
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "peak",
+        "bound": "optimistic"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_d0b7a3db74ce"
+      },
+      "t": 1793138730.996
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "peak",
+        "bound": "nominal"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_4b9bff155af5"
+      },
+      "t": 1793138786.437
+    },
+    {
+      "caller": "code",
+      "tool": "run_batch",
+      "args": {
+        "robot_id": "pudu_t300",
+        "density": "peak",
+        "bound": "conservative"
+      },
+      "result": {
+        "ok": true,
+        "batch_id": "sb_aa83abd3b65a"
+      },
+      "t": 1793139428.788
+    }
+  ],
+  "report": {
+    "md_key": "analyses/an_ref_corridor_01/report.md",
+    "facts_key": "analyses/an_ref_corridor_01/facts.json",
+    "citations_key": "analyses/an_ref_corridor_01/citations.json",
+    "factcheck": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  "sim_source": "jobs.sim.api",
+  "route_gaps": [
+    {
+      "from": "DOCK",
+      "to": "PICKUP",
+      "gap_m": 1.15
+    },
+    {
+      "from": "PICKUP",
+      "to": "O4",
+      "gap_m": 1.15
+    },
+    {
+      "from": "O4",
+      "to": "O3",
+      "gap_m": 1.35
+    },
+    {
+      "from": "O3",
+      "to": "O2",
+      "gap_m": 1.5
+    },
+    {
+      "from": "O2",
+      "to": "O1",
+      "gap_m": 1.5
+    },
+    {
+      "from": "O1",
+      "to": "DOCK",
+      "gap_m": 1.45
+    }
+  ],
+  "episodes_per_batch": 40,
+  "finished_at": 1793139861.3098497,
+  "replay_batches": {
+    "keenon_dinerbot_t8": "sb_ef707dea6880",
+    "bear_servi": "sb_32f58c01c786",
+    "pudu_kettybot": "sb_816a16f412c5",
+    "keenon_w3": "sb_47a26669243f",
+    "keenon_dinerbot_t9": "sb_00fab14fa702",
+    "pudu_t300": "sb_42dcd6e93645"
+  }
+}

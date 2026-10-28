@@ -1,0 +1,107 @@
+{
+  "analysis_id": "an_ref_storeroom_01",
+  "site_id": "ref_storeroom",
+  "task": [
+    "DOCK",
+    "PICKUP",
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "DOCK"
+  ],
+  "task_note": "Picking round: dock, staging pickup, shelf aisles S1-S3, back corner S4, back to dock.",
+  "robot_class": "B_amr",
+  "robots_considered": [
+    "mir_mir100",
+    "mir_mir250",
+    "otto_100",
+    "pudu_t300"
+  ],
+  "budget": {
+    "max_robots": 6,
+    "densities": [
+      "quiet",
+      "normal",
+      "peak"
+    ],
+    "bounds": [
+      "optimistic",
+      "nominal",
+      "conservative"
+    ],
+    "episodes": 40,
+    "seed_base": 1000,
+    "max_workers": 11,
+    "investigate_max_robots": 2,
+    "optimizer_max_robots": 2,
+    "confirm_episodes": 50,
+    "include_awaiting_review": true,
+    "investigation": {
+      "max_steps": 8,
+      "max_experiments": 6,
+      "probe_episodes": 30
+    },
+    "optimizer": {
+      "screen_episodes": 30,
+      "confirm_episodes": 50,
+      "top_k_confirm": 3,
+      "top_k_combo": 2,
+      "max_objects": 4,
+      "max_moves_per_object": 8,
+      "max_episodes": 900
+    }
+  },
+  "status": "done",
+  "wall_time_s": 1484.7,
+  "stage_times_s": {
+    "candidates": 35.5,
+    "feasibility": 11.3,
+    "batches": 1012.3,
+    "investigation": 49.8,
+    "optimizer": 118.6,
+    "verdicts": 0.1,
+    "report": 255.9
+  },
+  "batch_episodes": 1440,
+  "batch_stage_s": 1012.3,
+  "episodes_per_min_batches": 85.3,
+  "investigation": {
+    "robots": [
+      "mir_mir100",
+      "mir_mir250"
+    ],
+    "experiments_run": 0,
+    "probe_episodes": 0,
+    "findings": 0,
+    "findings_confirmed": 0
+  },
+  "factcheck": {
+    "ok": true,
+    "errors": []
+  },
+  "verdicts": {
+    "pudu_t300": {
+      "label": "Cleared",
+      "main_reason": "meets every rule as-is"
+    },
+    "mir_mir250": {
+      "label": "Not cleared",
+      "main_reason": "success 88% at normal traffic (needs 90%)"
+    },
+    "otto_100": {
+      "label": "Cleared",
+      "main_reason": "meets every rule as-is"
+    },
+    "mir_mir100": {
+      "label": "Not cleared",
+      "main_reason": "success 88% at normal traffic (needs 90%)"
+    }
+  },
+  "workers": 11,
+  "cpu_count": 12,
+  "machine": "Windows 10, Intel64 Family 6 Model 186 Stepping 3, GenuineIntel",
+  "llm_mode": "live",
+  "tavily_mode": "live",
+  "finished_at": "2026-10-28 02:21:12"
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "id": "c_01",
+    "url": "https://www.pudurobotics.com/en/products/pudut300",
+    "title": "PUDU T300 AMR | Intelligent Autonomous Mobile Robot for Industrial Material Delivery",
+    "retrieved_at": "2026-10-27T13:53:27Z",
+    "used_for": [
+      "Pudu Robotics T300: footprint_polygon_m",
+      "Pudu Robotics T300: height_m",
+      "Pudu Robotics T300: max_speed_mps",
+      "Pudu Robotics T300: max_threshold_m",
+      "Pudu Robotics T300: min_aisle_width_vendor_m",
+      "Pudu Robotics T300: payload_kg",
+      "Pudu Robotics T300: runtime_h",
+      "market check: Pudu T300 AMR payload capacity specifications"
+    ],
+    "quotes": [
+      "835 mm * 500 mm * 1350 mm",
+      "Max. Speed 1.2 m/s",
+      "Threshold Overcoming Height 20 mm",
+      "Path Clearance \u226560 cm",
+      "Maximum load 300 kg",
+      "Run-time (Full Load) 8 h"
+    ]
+  },
+  {
+    "id": "c_02",
+    "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+    "title": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+    "retrieved_at": "2026-10-27T13:50:50Z",
+    "used_for": [
+      "MiR MiR250: footprint_polygon_m",
+      "MiR MiR250: height_m",
+      "MiR MiR250: max_slope_deg",
+      "MiR MiR250: max_speed_mps",
+      "MiR MiR250: max_threshold_m",
+      "MiR MiR250: min_aisle_width_vendor_m",
+      "MiR MiR250: payload_kg",
+      "MiR MiR250: runtime_h"
+    ],
+    "quotes": [
+      "Length 800 mm | 31.5 in Width 580 mm | 22.8 in Height 300 mm",
+      "Maximum incline/decline \u00b1 5% at 0.5 m/s",
+      "Maximum speed (with maximum payload on a flat surface) 2.0 m/s (7.2 km/h)",
+      "Traversable gap and step tolerance 0-20 mm",
+      "Operational corridor width With default footprint and SICK safety configuration: 1 450 mm",
+      "Maximum payload 250 kg | 551 lbs",
+      "Active operation time with maximum payload 13 h"
+    ]
+  },
+  {
+    "id": "c_03",
+    "url": "https://mobile-industrial-robots.com/products/robots/mir250",
+    "title": "https://mobile-industrial-robots.com/products/robots/mir250",
+    "retrieved_at": "2026-10-27T13:49:55Z",
+    "used_for": [
+      "MiR MiR250: price"
+    ],
+    "quotes": [
+      "Contact Sales"
+    ]
+  },
+  {
+    "id": "c_04",
+    "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+    "title": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+    "retrieved_at": "2026-10-27T13:50:46Z",
+    "used_for": [
+      "OTTO Motors OTTO 100: footprint_polygon_m",
+      "OTTO Motors OTTO 100: height_m",
+      "OTTO Motors OTTO 100: in_place_rotation",
+      "OTTO Motors OTTO 100: max_speed_mps",
+      "OTTO Motors OTTO 100: max_threshold_m",
+      "OTTO Motors OTTO 100: min_aisle_width_vendor_m",
+      "OTTO Motors OTTO 100: payload_kg",
+      "OTTO Motors OTTO 100: runtime_h"
+    ],
+    "quotes": [
+      "Dimensions 740 x 550 x 308 mm",
+      "Turning Radius Turn in place",
+      "Max. Speed 2.0 m/sec (4.5 mph)",
+      "Floor Obstacle 13 mm (0.5 in)",
+      "Min. Aisle Width 1,099 mm (43 in)",
+      "Max. Capacity 150 kg (331 lb)",
+      "Runtime 6 hr"
+    ]
+  },
+  {
+    "id": "c_05",
+    "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+    "title": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+    "retrieved_at": "2026-10-27T13:52:59Z",
+    "used_for": [
+      "MiR MiR100: footprint_polygon_m",
+      "MiR MiR100: height_m",
+      "MiR MiR100: max_slope_deg",
+      "MiR MiR100: max_speed_mps",
+      "MiR MiR100: max_threshold_m",
+      "MiR MiR100: min_aisle_width_vendor_m",
+      "MiR MiR100: payload_kg",
+      "MiR MiR100: runtime_h"
+    ],
+    "quotes": [
+      "Length 890 mm / 35 in Width 580 mm / 22.8 in Height 352 mm",
+      "Maximum payload 100 kg / 220 lbs (maximum 5% incline)",
+      "Forwards: 1.5 m/s (5.4 km/h)",
+      "Traversable gap and sill tolerance 20 mm / 0.8 in",
+      "Minimum corridor width 1.0 m (default footprint)",
+      "Active operation time with maximum payload 10 hours"
+    ]
+  },
+  {
+    "id": "c_06",
+    "url": "https://log-robot.com/en/amr-products/pudu-robotics/pudu-t300",
+    "title": "PUDU T300 - autonomous transport robot with a payload of up to 300 kg",
+    "retrieved_at": "2026-10-27T20:26:48+00:00",
+    "used_for": [
+      "market check: Pudu T300 AMR payload capacity specifications"
+    ],
+    "quotes": []
+  },
+  {
+    "id": "c_07",
+    "url": "https://www.robotlab.com/store/pudu-t300",
+    "title": "Pudu T300 Robot \u2014 Price, Specs & Demo \u00b7 RobotLAB",
+    "retrieved_at": "2026-10-27T20:26:48+00:00",
+    "used_for": [
+      "market check: Pudu T300 AMR payload capacity specifications"
+    ],
+    "quotes": []
+  },
+  {
+    "id": "c_08",
+    "url": "https://www.nord-modules.com/otto-100",
+    "title": "OTTO 100 | Quality top modules for OTTO Motors AMRs",
+    "retrieved_at": "2026-10-27T20:26:51+00:00",
+    "used_for": [
+      "market check: OTTO 100 AMR payload capacity specifications"
+    ],
+    "quotes": []
+  },
+  {
+    "id": "c_09",
+    "url": "https://ottomotors.com/100",
+    "title": "OTTO 100 Autonomous Mobile Robot | Autonomous Material Handling | OTTO by Rockwell Automation",
+    "retrieved_at": "2026-10-27T20:26:51+00:00",
+    "used_for": [
+      "market check: OTTO 100 AMR payload capacity specifications"
+    ],
+    "quotes": []
+  },
+  {
+    "id": "c_10",
+    "url": "https://blog.hesconet.com/otto-amr-comparison-100-600-1200-1500-lifter",
+    "title": "OTTO AMR Comparison: 100 vs. 600 vs. 1200 vs. 1500 vs. Lifter",
+    "retrieved_at": "2026-10-27T20:26:51+00:00",
+    "used_for": [
+      "market check: OTTO 100 AMR payload capacity specifications"
+    ],
+    "quotes": []
+  }
+]

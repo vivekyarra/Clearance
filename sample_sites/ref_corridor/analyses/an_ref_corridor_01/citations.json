@@ -1,0 +1,170 @@
+[
+  {
+    "id": "c_01",
+    "url": "https://www.keenon.com/en/product/T8",
+    "title": "https://www.keenon.com/en/product/T8",
+    "retrieved_at": "2026-10-27T13:49:49Z",
+    "used_for": [
+      "Keenon Robotics DINERBOT T8: footprint_polygon_m",
+      "Keenon Robotics DINERBOT T8: height_m",
+      "Keenon Robotics DINERBOT T8: max_slope_deg",
+      "Keenon Robotics DINERBOT T8: max_speed_mps",
+      "Keenon Robotics DINERBOT T8: min_aisle_width_vendor_m",
+      "Keenon Robotics DINERBOT T8: payload_kg",
+      "Keenon Robotics DINERBOT T8: runtime_h"
+    ],
+    "quotes": [
+      "Dimensions(WxDxH) 38.4x46.8x111.1cm",
+      "Slope Angle 5\u00b0",
+      "Moving Speed 1.0m/s (3.28ft/s)",
+      "Minimum Passage Width 55 cm",
+      "Total Load Capacity 20 kg (44 lbs)",
+      "Battery Life Up to 15h"
+    ]
+  },
+  {
+    "id": "c_02",
+    "url": "https://www.bearrobotics.ai/servi",
+    "title": "https://www.bearrobotics.ai/servi",
+    "retrieved_at": "2026-10-27T13:51:40Z",
+    "used_for": [
+      "Bear Robotics Servi: footprint_polygon_m",
+      "Bear Robotics Servi: height_m",
+      "Bear Robotics Servi: max_speed_mps",
+      "Bear Robotics Servi: payload_kg",
+      "Bear Robotics Servi: runtime_h"
+    ],
+    "quotes": [
+      "17.5 \u00d7 16.9 \u00d7 41.2 in (44.5 \u00d7 43 \u00d7 104.6 cm)",
+      "Drive speed 0.1~1.2 m/s",
+      "22 lb (10kg) per tray, total 66 lb (30kg)",
+      "Battery life 10-12 hrs"
+    ]
+  },
+  {
+    "id": "c_03",
+    "url": "https://www.bearrobotics.ai/faq",
+    "title": "https://www.bearrobotics.ai/faq",
+    "retrieved_at": "2026-10-27T13:49:53Z",
+    "used_for": [
+      "Bear Robotics Servi: price"
+    ],
+    "quotes": [
+      "Costs can vary depending on certain conditions."
+    ]
+  },
+  {
+    "id": "c_04",
+    "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+    "title": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+    "retrieved_at": "2026-10-27T17:40:54Z",
+    "used_for": [
+      "Pudu Robotics KettyBot: footprint_polygon_m",
+      "Pudu Robotics KettyBot: height_m",
+      "Pudu Robotics KettyBot: max_slope_deg",
+      "Pudu Robotics KettyBot: max_speed_mps",
+      "Pudu Robotics KettyBot: max_threshold_m",
+      "Pudu Robotics KettyBot: min_aisle_width_vendor_m",
+      "Pudu Robotics KettyBot: runtime_h"
+    ],
+    "quotes": [
+      "435*450*1120 (mm)",
+      "The maximum possible slope is 5\u00b0 for the robot",
+      "Set the delivery speed and cruise speed with the options of 0.5m/s\u20141.2m/s.",
+      "Make sure that the protrusions are no more than 0.5cm high",
+      "Minimum pass width 0.55m",
+      "4.5h >8h"
+    ]
+  },
+  {
+    "id": "c_05",
+    "url": "https://robotsourced.com/robots/service/pudu-kettybot",
+    "title": "https://robotsourced.com/robots/service/pudu-kettybot",
+    "retrieved_at": "2026-10-27T17:40:54Z",
+    "used_for": [
+      "Pudu Robotics KettyBot: payload_kg"
+    ],
+    "quotes": [
+      "Payload 30 kg"
+    ]
+  },
+  {
+    "id": "c_06",
+    "url": "https://www.keenon.com/en/product/W3",
+    "title": "https://www.keenon.com/en/product/W3",
+    "retrieved_at": "2026-10-27T17:39:25Z",
+    "used_for": [
+      "Keenon Robotics W3: footprint_polygon_m",
+      "Keenon Robotics W3: height_m",
+      "Keenon Robotics W3: max_slope_deg",
+      "Keenon Robotics W3: max_speed_mps",
+      "Keenon Robotics W3: min_aisle_width_vendor_m",
+      "Keenon Robotics W3: payload_kg"
+    ],
+    "quotes": [
+      "Dimensions(WxDxH) 45.9 x 54.9 x 108.1 cm(18.07\" x 21.61\" x 42.56\")",
+      "Slope Angle 7\u00b0",
+      "Max. Moving Speed 0.8m/s (2.63ft/s)",
+      "Minimum Passage Width 70cm(27.56\")",
+      "Total Load Capacity 20kg (44lbs)"
+    ]
+  },
+  {
+    "id": "c_07",
+    "url": "https://www.robotlab.com/store/keenon-w3",
+    "title": "https://www.robotlab.com/store/keenon-w3",
+    "retrieved_at": "2026-10-27T17:39:25Z",
+    "used_for": [
+      "Keenon Robotics W3: runtime_h"
+    ],
+    "quotes": [
+      "Battery Runtime Up to 12 hours"
+    ]
+  },
+  {
+    "id": "c_08",
+    "url": "https://www.keenon.com/en/product/T9",
+    "title": "https://www.keenon.com/en/product/T9",
+    "retrieved_at": "2026-10-27T13:51:43Z",
+    "used_for": [
+      "Keenon Robotics DINERBOT T9: footprint_polygon_m",
+      "Keenon Robotics DINERBOT T9: height_m",
+      "Keenon Robotics DINERBOT T9: max_slope_deg",
+      "Keenon Robotics DINERBOT T9: max_speed_mps",
+      "Keenon Robotics DINERBOT T9: min_aisle_width_vendor_m",
+      "Keenon Robotics DINERBOT T9: payload_kg",
+      "Keenon Robotics DINERBOT T9: runtime_h"
+    ],
+    "quotes": [
+      "Dimensions(WxDxH) 50.0 x 52.7 x 126.6cm",
+      "Slope Angle 5\u00b0",
+      "Moving Speed 0.1-1.0 m/s",
+      "Minimum Passage Width 70cm",
+      "Total Load Capacity 40kg (88lbs)",
+      "Battery Life Up to 18h"
+    ]
+  },
+  {
+    "id": "c_09",
+    "url": "https://www.pudurobotics.com/en/products/pudut300",
+    "title": "https://www.pudurobotics.com/en/products/pudut300",
+    "retrieved_at": "2026-10-27T13:53:27Z",
+    "used_for": [
+      "Pudu Robotics T300: footprint_polygon_m",
+      "Pudu Robotics T300: height_m",
+      "Pudu Robotics T300: max_speed_mps",
+      "Pudu Robotics T300: max_threshold_m",
+      "Pudu Robotics T300: min_aisle_width_vendor_m",
+      "Pudu Robotics T300: payload_kg",
+      "Pudu Robotics T300: runtime_h"
+    ],
+    "quotes": [
+      "835 mm * 500 mm * 1350 mm",
+      "Max. Speed 1.2 m/s",
+      "Threshold Overcoming Height 20 mm",
+      "Path Clearance \u226560 cm",
+      "Maximum load 300 kg",
+      "Run-time (Full Load) 8 h"
+    ]
+  }
+]

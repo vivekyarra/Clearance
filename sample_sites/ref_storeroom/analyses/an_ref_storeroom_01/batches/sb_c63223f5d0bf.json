@@ -1,0 +1,44 @@
+{
+  "batch_id": "sb_c63223f5d0bf",
+  "twin_id": "twin_ref_storeroom_v1",
+  "twin_version": 1,
+  "robot_id": "otto_100",
+  "task": {
+    "type": "delivery",
+    "sequence": [
+      "DOCK",
+      "PICKUP",
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "DOCK"
+    ]
+  },
+  "density": "quiet",
+  "geometry_bound": "conservative",
+  "n_episodes": 40,
+  "seed_base": 1000,
+  "code_version": "f3a233c+sim-d77ef3d9a1",
+  "results": {
+    "success_rate": 0.975,
+    "min_gap_m": 0.0298,
+    "ci95": [
+      0.8711834051199223,
+      0.9955732825922052
+    ],
+    "median_mission_s": 121.7,
+    "near_miss_per_mission": 0.75,
+    "stops_per_mission": 0.875,
+    "fail_reasons": {
+      "no_path_static": 0,
+      "blocked_timeout": 0,
+      "collision": 1
+    },
+    "n_success": 39,
+    "n_episodes": 40
+  },
+  "episodes_uri": null,
+  "bottleneck_uri": null,
+  "wall_time_s": 224.321
+}
