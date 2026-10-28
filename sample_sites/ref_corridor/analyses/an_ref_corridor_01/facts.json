@@ -1,0 +1,6063 @@
+[
+  {
+    "fact_id": "f_001",
+    "value": "reference geometry (known ground truth)",
+    "unit": "",
+    "label": "Scan accuracy method",
+    "origin": {
+      "type": "measurement",
+      "ref": "twin_ref_corridor_v1:accuracy"
+    },
+    "key": "site.accuracy_method"
+  },
+  {
+    "fact_id": "f_002",
+    "value": 0.0,
+    "unit": "m",
+    "label": "Scan median absolute error",
+    "origin": {
+      "type": "measurement",
+      "ref": "twin_ref_corridor_v1:accuracy"
+    },
+    "key": "site.median_err_m"
+  },
+  {
+    "fact_id": "f_003",
+    "value": 0.0,
+    "unit": "m",
+    "label": "Scan p90 absolute error (sets the conservative/optimistic geometry bounds)",
+    "origin": {
+      "type": "measurement",
+      "ref": "twin_ref_corridor_v1:accuracy"
+    },
+    "key": "site.p90_err_m"
+  },
+  {
+    "fact_id": "f_004",
+    "value": 28.8,
+    "unit": "m2",
+    "label": "Floor area inside the scanned bounds",
+    "origin": {
+      "type": "measurement",
+      "ref": "twin_ref_corridor_v1:floor"
+    },
+    "key": "site.floor_area_m2"
+  },
+  {
+    "fact_id": "f_005",
+    "value": "reference site (known ground-truth geometry)",
+    "unit": "",
+    "label": "Geometry source",
+    "origin": {
+      "type": "measurement",
+      "ref": "twin_ref_corridor_v1:meta"
+    },
+    "key": "site.geometry_source"
+  },
+  {
+    "fact_id": "f_006",
+    "value": "user-estimated",
+    "unit": "",
+    "label": "Pedestrian traffic source",
+    "origin": {
+      "type": "user_input",
+      "ref": "twin_ref_corridor_v1:traffic"
+    },
+    "key": "site.traffic_source"
+  },
+  {
+    "fact_id": "f_007",
+    "value": 2.0,
+    "unit": "persons/min",
+    "label": "Pedestrian arrivals per minute, quiet traffic",
+    "origin": {
+      "type": "user_input",
+      "ref": "twin_ref_corridor_v1:traffic:quiet"
+    },
+    "key": "site.ppm|quiet"
+  },
+  {
+    "fact_id": "f_008",
+    "value": 6.0,
+    "unit": "persons/min",
+    "label": "Pedestrian arrivals per minute, normal traffic",
+    "origin": {
+      "type": "user_input",
+      "ref": "twin_ref_corridor_v1:traffic:normal"
+    },
+    "key": "site.ppm|normal"
+  },
+  {
+    "fact_id": "f_009",
+    "value": 14.0,
+    "unit": "persons/min",
+    "label": "Pedestrian arrivals per minute, peak traffic",
+    "origin": {
+      "type": "user_input",
+      "ref": "twin_ref_corridor_v1:traffic:peak"
+    },
+    "key": "site.ppm|peak"
+  },
+  {
+    "fact_id": "f_010",
+    "value": 0.0,
+    "unit": "count",
+    "label": "Hazards tagged in the twin",
+    "origin": {
+      "type": "measurement",
+      "ref": "twin_ref_corridor_v1:hazards"
+    },
+    "key": "site.hazard_count"
+  },
+  {
+    "fact_id": "f_011",
+    "value": 20.0,
+    "unit": "USD/h",
+    "label": "Staff cost per hour",
+    "origin": {
+      "type": "user_input",
+      "ref": "business.staff_cost_per_hour"
+    },
+    "key": "biz.staff_cost_per_hour"
+  },
+  {
+    "fact_id": "f_012",
+    "value": 2.0,
+    "unit": "h/day",
+    "label": "Staff hours per day spent on the task",
+    "origin": {
+      "type": "user_input",
+      "ref": "business.task_hours_per_day"
+    },
+    "key": "biz.task_hours_per_day"
+  },
+  {
+    "fact_id": "f_013",
+    "value": 5.0,
+    "unit": "days/week",
+    "label": "Operating days per week",
+    "origin": {
+      "type": "user_input",
+      "ref": "business.days_per_week"
+    },
+    "key": "biz.days_per_week"
+  },
+  {
+    "fact_id": "f_014",
+    "value": 10.0,
+    "unit": "percent",
+    "label": "Maintenance per year as % of price",
+    "origin": {
+      "type": "user_input",
+      "ref": "business.maintenance_pct_per_year"
+    },
+    "key": "biz.maintenance_pct_per_year"
+  },
+  {
+    "fact_id": "f_015",
+    "value": "Keenon Robotics DINERBOT T8",
+    "unit": "",
+    "label": "Robot model (keenon_dinerbot_t8)",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:keenon_dinerbot_t8"
+    },
+    "key": "robot.name|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_016",
+    "value": "service robot",
+    "unit": "",
+    "label": "Robot class, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:keenon_dinerbot_t8"
+    },
+    "key": "robot.class|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_017",
+    "value": 0.468,
+    "unit": "m",
+    "label": "Footprint length, Keenon Robotics DINERBOT T8 (bounding box)",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/T8"
+    },
+    "key": "robot.length_m|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_018",
+    "value": 0.384,
+    "unit": "m",
+    "label": "Footprint width, Keenon Robotics DINERBOT T8 (bounding box)",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/T8"
+    },
+    "key": "robot.width_m|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_019",
+    "value": 1.111,
+    "unit": "m",
+    "label": "Height, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/T8"
+    },
+    "key": "robot.height_m|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_020",
+    "value": 1.0,
+    "unit": "m/s",
+    "label": "Max speed (vendor), Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/T8"
+    },
+    "key": "robot.max_speed_mps|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_021",
+    "value": 5.0,
+    "unit": "deg",
+    "label": "Max slope (vendor), Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/T8"
+    },
+    "key": "robot.max_slope_deg|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_022",
+    "value": 0.55,
+    "unit": "m",
+    "label": "Minimum aisle width (vendor), Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/T8"
+    },
+    "key": "robot.min_aisle_m|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_023",
+    "value": 20.0,
+    "unit": "kg",
+    "label": "Payload (vendor), Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/T8"
+    },
+    "key": "robot.payload_kg|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_024",
+    "value": 15.0,
+    "unit": "h",
+    "label": "Runtime per charge (vendor), Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/T8"
+    },
+    "key": "robot.runtime_h|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_025",
+    "value": "price on request",
+    "unit": "",
+    "label": "Price, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:keenon_dinerbot_t8"
+    },
+    "key": "robot.price_status|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_026",
+    "value": "human-reviewed",
+    "unit": "",
+    "label": "Catalog review status, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:keenon_dinerbot_t8"
+    },
+    "key": "robot.verified|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_027",
+    "value": 6.0,
+    "unit": "count",
+    "label": "Task legs, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1"
+    },
+    "key": "feas.legs_total|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_028",
+    "value": 6.0,
+    "unit": "count",
+    "label": "Task legs feasible (static check), Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1"
+    },
+    "key": "feas.legs_ok|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_029",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Fraction of task legs feasible, Keenon Robotics DINERBOT T8 (pending legs count as not feasible)",
+    "origin": {
+      "type": "formula",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:feasible/total"
+    },
+    "key": "feas.frac|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_030",
+    "value": 1.1504,
+    "unit": "m",
+    "label": "Narrowest gap on route, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.narrowest_gap_m|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_031",
+    "value": 0.384,
+    "unit": "m",
+    "label": "Gap the robot needs at the narrowest point, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.narrowest_required_m|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_032",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg DOCK to PICKUP, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_status|keenon_dinerbot_t8|0"
+  },
+  {
+    "fact_id": "f_033",
+    "value": 1.157,
+    "unit": "m",
+    "label": "Narrowest gap, leg DOCK to PICKUP, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_gap|keenon_dinerbot_t8|0"
+  },
+  {
+    "fact_id": "f_034",
+    "value": 0.384,
+    "unit": "m",
+    "label": "Gap needed, leg DOCK to PICKUP, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_required|keenon_dinerbot_t8|0"
+  },
+  {
+    "fact_id": "f_035",
+    "value": 13.968,
+    "unit": "m",
+    "label": "Path length, leg DOCK to PICKUP, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_len|keenon_dinerbot_t8|0"
+  },
+  {
+    "fact_id": "f_036",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg PICKUP to O4, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_status|keenon_dinerbot_t8|1"
+  },
+  {
+    "fact_id": "f_037",
+    "value": 1.1504,
+    "unit": "m",
+    "label": "Narrowest gap, leg PICKUP to O4, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_gap|keenon_dinerbot_t8|1"
+  },
+  {
+    "fact_id": "f_038",
+    "value": 0.384,
+    "unit": "m",
+    "label": "Gap needed, leg PICKUP to O4, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_required|keenon_dinerbot_t8|1"
+  },
+  {
+    "fact_id": "f_039",
+    "value": 4.134,
+    "unit": "m",
+    "label": "Path length, leg PICKUP to O4, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_len|keenon_dinerbot_t8|1"
+  },
+  {
+    "fact_id": "f_040",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O4 to O3, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_status|keenon_dinerbot_t8|2"
+  },
+  {
+    "fact_id": "f_041",
+    "value": 1.325,
+    "unit": "m",
+    "label": "Narrowest gap, leg O4 to O3, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_gap|keenon_dinerbot_t8|2"
+  },
+  {
+    "fact_id": "f_042",
+    "value": 0.384,
+    "unit": "m",
+    "label": "Gap needed, leg O4 to O3, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_required|keenon_dinerbot_t8|2"
+  },
+  {
+    "fact_id": "f_043",
+    "value": 4.012,
+    "unit": "m",
+    "label": "Path length, leg O4 to O3, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_len|keenon_dinerbot_t8|2"
+  },
+  {
+    "fact_id": "f_044",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O3 to O2, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_status|keenon_dinerbot_t8|3"
+  },
+  {
+    "fact_id": "f_045",
+    "value": 1.9,
+    "unit": "m",
+    "label": "Narrowest gap, leg O3 to O2, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_gap|keenon_dinerbot_t8|3"
+  },
+  {
+    "fact_id": "f_046",
+    "value": 0.384,
+    "unit": "m",
+    "label": "Gap needed, leg O3 to O2, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_required|keenon_dinerbot_t8|3"
+  },
+  {
+    "fact_id": "f_047",
+    "value": 2.284,
+    "unit": "m",
+    "label": "Path length, leg O3 to O2, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_len|keenon_dinerbot_t8|3"
+  },
+  {
+    "fact_id": "f_048",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O2 to O1, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_status|keenon_dinerbot_t8|4"
+  },
+  {
+    "fact_id": "f_049",
+    "value": 1.8933,
+    "unit": "m",
+    "label": "Narrowest gap, leg O2 to O1, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_gap|keenon_dinerbot_t8|4"
+  },
+  {
+    "fact_id": "f_050",
+    "value": 0.384,
+    "unit": "m",
+    "label": "Gap needed, leg O2 to O1, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_required|keenon_dinerbot_t8|4"
+  },
+  {
+    "fact_id": "f_051",
+    "value": 2.28,
+    "unit": "m",
+    "label": "Path length, leg O2 to O1, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_len|keenon_dinerbot_t8|4"
+  },
+  {
+    "fact_id": "f_052",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O1 to DOCK, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_status|keenon_dinerbot_t8|5"
+  },
+  {
+    "fact_id": "f_053",
+    "value": 1.3568,
+    "unit": "m",
+    "label": "Narrowest gap, leg O1 to DOCK, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_gap|keenon_dinerbot_t8|5"
+  },
+  {
+    "fact_id": "f_054",
+    "value": 0.384,
+    "unit": "m",
+    "label": "Gap needed, leg O1 to DOCK, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_required|keenon_dinerbot_t8|5"
+  },
+  {
+    "fact_id": "f_055",
+    "value": 2.064,
+    "unit": "m",
+    "label": "Path length, leg O1 to DOCK, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t8:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_len|keenon_dinerbot_t8|5"
+  },
+  {
+    "fact_id": "f_056",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics DINERBOT T8, quiet traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_8139cf5c4470"
+    },
+    "key": "sim.success|keenon_dinerbot_t8|quiet|conservative"
+  },
+  {
+    "fact_id": "f_057",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics DINERBOT T8, quiet traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_8139cf5c4470"
+    },
+    "key": "sim.n|keenon_dinerbot_t8|quiet|conservative"
+  },
+  {
+    "fact_id": "f_058",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics DINERBOT T8, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_979ad47ec78c"
+    },
+    "key": "sim.success|keenon_dinerbot_t8|quiet|nominal"
+  },
+  {
+    "fact_id": "f_059",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics DINERBOT T8, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_979ad47ec78c"
+    },
+    "key": "sim.n|keenon_dinerbot_t8|quiet|nominal"
+  },
+  {
+    "fact_id": "f_060",
+    "value": 0.9123754607496077,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, Keenon Robotics DINERBOT T8, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_979ad47ec78c"
+    },
+    "key": "sim.ci_lo|keenon_dinerbot_t8|quiet"
+  },
+  {
+    "fact_id": "f_061",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, Keenon Robotics DINERBOT T8, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_979ad47ec78c"
+    },
+    "key": "sim.ci_hi|keenon_dinerbot_t8|quiet"
+  },
+  {
+    "fact_id": "f_062",
+    "value": 59.05,
+    "unit": "s",
+    "label": "Median mission time, Keenon Robotics DINERBOT T8, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_979ad47ec78c"
+    },
+    "key": "sim.mission_s|keenon_dinerbot_t8|quiet"
+  },
+  {
+    "fact_id": "f_063",
+    "value": 1.25,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, Keenon Robotics DINERBOT T8, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_979ad47ec78c"
+    },
+    "key": "sim.near_miss|keenon_dinerbot_t8|quiet"
+  },
+  {
+    "fact_id": "f_064",
+    "value": 1.85,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, Keenon Robotics DINERBOT T8, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_979ad47ec78c"
+    },
+    "key": "sim.stops|keenon_dinerbot_t8|quiet"
+  },
+  {
+    "fact_id": "f_065",
+    "value": 0.113,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, Keenon Robotics DINERBOT T8, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_979ad47ec78c"
+    },
+    "key": "sim.min_gap_m|keenon_dinerbot_t8|quiet"
+  },
+  {
+    "fact_id": "f_066",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics DINERBOT T8, quiet traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d0e6e2070eb5"
+    },
+    "key": "sim.success|keenon_dinerbot_t8|quiet|optimistic"
+  },
+  {
+    "fact_id": "f_067",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics DINERBOT T8, quiet traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d0e6e2070eb5"
+    },
+    "key": "sim.n|keenon_dinerbot_t8|quiet|optimistic"
+  },
+  {
+    "fact_id": "f_068",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics DINERBOT T8, normal traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_a2efc5b0931b"
+    },
+    "key": "sim.success|keenon_dinerbot_t8|normal|conservative"
+  },
+  {
+    "fact_id": "f_069",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics DINERBOT T8, normal traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_a2efc5b0931b"
+    },
+    "key": "sim.n|keenon_dinerbot_t8|normal|conservative"
+  },
+  {
+    "fact_id": "f_070",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics DINERBOT T8, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_ef707dea6880"
+    },
+    "key": "sim.success|keenon_dinerbot_t8|normal|nominal"
+  },
+  {
+    "fact_id": "f_071",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics DINERBOT T8, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_ef707dea6880"
+    },
+    "key": "sim.n|keenon_dinerbot_t8|normal|nominal"
+  },
+  {
+    "fact_id": "f_072",
+    "value": 0.8013546984090248,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, Keenon Robotics DINERBOT T8, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_ef707dea6880"
+    },
+    "key": "sim.ci_lo|keenon_dinerbot_t8|normal"
+  },
+  {
+    "fact_id": "f_073",
+    "value": 0.9741644432281419,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, Keenon Robotics DINERBOT T8, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_ef707dea6880"
+    },
+    "key": "sim.ci_hi|keenon_dinerbot_t8|normal"
+  },
+  {
+    "fact_id": "f_074",
+    "value": 66.4,
+    "unit": "s",
+    "label": "Median mission time, Keenon Robotics DINERBOT T8, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_ef707dea6880"
+    },
+    "key": "sim.mission_s|keenon_dinerbot_t8|normal"
+  },
+  {
+    "fact_id": "f_075",
+    "value": 3.8,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, Keenon Robotics DINERBOT T8, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_ef707dea6880"
+    },
+    "key": "sim.near_miss|keenon_dinerbot_t8|normal"
+  },
+  {
+    "fact_id": "f_076",
+    "value": 5.075,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, Keenon Robotics DINERBOT T8, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_ef707dea6880"
+    },
+    "key": "sim.stops|keenon_dinerbot_t8|normal"
+  },
+  {
+    "fact_id": "f_077",
+    "value": 0.11810000000000001,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, Keenon Robotics DINERBOT T8, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_ef707dea6880"
+    },
+    "key": "sim.min_gap_m|keenon_dinerbot_t8|normal"
+  },
+  {
+    "fact_id": "f_078",
+    "value": 3.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (collision), Keenon Robotics DINERBOT T8, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_ef707dea6880"
+    },
+    "key": "sim.fail|keenon_dinerbot_t8|normal|collision"
+  },
+  {
+    "fact_id": "f_079",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics DINERBOT T8, normal traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_b1b83bffe50f"
+    },
+    "key": "sim.success|keenon_dinerbot_t8|normal|optimistic"
+  },
+  {
+    "fact_id": "f_080",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics DINERBOT T8, normal traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_b1b83bffe50f"
+    },
+    "key": "sim.n|keenon_dinerbot_t8|normal|optimistic"
+  },
+  {
+    "fact_id": "f_081",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics DINERBOT T8, peak traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_cad387bf7378"
+    },
+    "key": "sim.success|keenon_dinerbot_t8|peak|conservative"
+  },
+  {
+    "fact_id": "f_082",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics DINERBOT T8, peak traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_cad387bf7378"
+    },
+    "key": "sim.n|keenon_dinerbot_t8|peak|conservative"
+  },
+  {
+    "fact_id": "f_083",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_071d393f5171"
+    },
+    "key": "sim.success|keenon_dinerbot_t8|peak|nominal"
+  },
+  {
+    "fact_id": "f_084",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_071d393f5171"
+    },
+    "key": "sim.n|keenon_dinerbot_t8|peak|nominal"
+  },
+  {
+    "fact_id": "f_085",
+    "value": 0.8013546984090248,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_071d393f5171"
+    },
+    "key": "sim.ci_lo|keenon_dinerbot_t8|peak"
+  },
+  {
+    "fact_id": "f_086",
+    "value": 0.9741644432281419,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_071d393f5171"
+    },
+    "key": "sim.ci_hi|keenon_dinerbot_t8|peak"
+  },
+  {
+    "fact_id": "f_087",
+    "value": 96.9,
+    "unit": "s",
+    "label": "Median mission time, Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_071d393f5171"
+    },
+    "key": "sim.mission_s|keenon_dinerbot_t8|peak"
+  },
+  {
+    "fact_id": "f_088",
+    "value": 9.7,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_071d393f5171"
+    },
+    "key": "sim.near_miss|keenon_dinerbot_t8|peak"
+  },
+  {
+    "fact_id": "f_089",
+    "value": 13.675,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_071d393f5171"
+    },
+    "key": "sim.stops|keenon_dinerbot_t8|peak"
+  },
+  {
+    "fact_id": "f_090",
+    "value": 0.10735,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_071d393f5171"
+    },
+    "key": "sim.min_gap_m|keenon_dinerbot_t8|peak"
+  },
+  {
+    "fact_id": "f_091",
+    "value": 1.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (blocked timeout), Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_071d393f5171"
+    },
+    "key": "sim.fail|keenon_dinerbot_t8|peak|blocked_timeout"
+  },
+  {
+    "fact_id": "f_092",
+    "value": 2.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (collision), Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_071d393f5171"
+    },
+    "key": "sim.fail|keenon_dinerbot_t8|peak|collision"
+  },
+  {
+    "fact_id": "f_093",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics DINERBOT T8, peak traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_17063cd9b267"
+    },
+    "key": "sim.success|keenon_dinerbot_t8|peak|optimistic"
+  },
+  {
+    "fact_id": "f_094",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics DINERBOT T8, peak traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_17063cd9b267"
+    },
+    "key": "sim.n|keenon_dinerbot_t8|peak|optimistic"
+  },
+  {
+    "fact_id": "f_095",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Automatable share of the task, Keenon Robotics DINERBOT T8 (success rate x feasible leg fraction)",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:keenon_dinerbot_t8"
+    },
+    "key": "roi.share|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_096",
+    "value": 801.6666666666666,
+    "unit": "USD/month",
+    "label": "Monthly staff-time saving, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:keenon_dinerbot_t8"
+    },
+    "key": "roi.saving|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_097",
+    "value": "enter a quote",
+    "unit": "",
+    "label": "Payback status, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:keenon_dinerbot_t8"
+    },
+    "key": "roi.status|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_098",
+    "value": 21.666666666666664,
+    "unit": "days/month",
+    "label": "Operating days per month (days per week x 52 / 12)",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:days_per_month"
+    },
+    "key": "biz.days_per_month"
+  },
+  {
+    "fact_id": "f_099",
+    "value": "Cleared",
+    "unit": "",
+    "label": "Verdict, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_dinerbot_t8"
+    },
+    "key": "verdict|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_100",
+    "value": "meets every rule as-is",
+    "unit": "",
+    "label": "Verdict main reason, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_dinerbot_t8"
+    },
+    "key": "verdict.reason|keenon_dinerbot_t8"
+  },
+  {
+    "fact_id": "f_101",
+    "value": 6.0,
+    "unit": "",
+    "label": "Verdict check value, Keenon Robotics DINERBOT T8 (value 1)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_dinerbot_t8:as_is:0"
+    },
+    "key": "verdict.value_num|keenon_dinerbot_t8|as_is|0|0"
+  },
+  {
+    "fact_id": "f_102",
+    "value": 6.0,
+    "unit": "legs",
+    "label": "Verdict check value, Keenon Robotics DINERBOT T8 (value 2)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_dinerbot_t8:as_is:0"
+    },
+    "key": "verdict.value_num|keenon_dinerbot_t8|as_is|0|1"
+  },
+  {
+    "fact_id": "f_103",
+    "value": 0.9,
+    "unit": "",
+    "label": "Verdict rule, Keenon Robotics DINERBOT T8 (value 1)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_dinerbot_t8:as_is:2"
+    },
+    "key": "verdict.rule_num|keenon_dinerbot_t8|as_is|2|0"
+  },
+  {
+    "fact_id": "f_104",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Verdict check value (as-is), Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_dinerbot_t8:as_is:2"
+    },
+    "key": "verdict.value|keenon_dinerbot_t8|as_is|2"
+  },
+  {
+    "fact_id": "f_105",
+    "value": 0.9,
+    "unit": "ratio",
+    "label": "Verdict rule threshold, Keenon Robotics DINERBOT T8",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_dinerbot_t8:as_is:2"
+    },
+    "key": "verdict.threshold|keenon_dinerbot_t8|as_is|2"
+  },
+  {
+    "fact_id": "f_106",
+    "value": "Bear Robotics Servi",
+    "unit": "",
+    "label": "Robot model (bear_servi)",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:bear_servi"
+    },
+    "key": "robot.name|bear_servi"
+  },
+  {
+    "fact_id": "f_107",
+    "value": "service robot",
+    "unit": "",
+    "label": "Robot class, Bear Robotics Servi",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:bear_servi"
+    },
+    "key": "robot.class|bear_servi"
+  },
+  {
+    "fact_id": "f_108",
+    "value": 0.43,
+    "unit": "m",
+    "label": "Footprint length, Bear Robotics Servi (bounding box)",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.bearrobotics.ai/servi"
+    },
+    "key": "robot.length_m|bear_servi"
+  },
+  {
+    "fact_id": "f_109",
+    "value": 0.445,
+    "unit": "m",
+    "label": "Footprint width, Bear Robotics Servi (bounding box)",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.bearrobotics.ai/servi"
+    },
+    "key": "robot.width_m|bear_servi"
+  },
+  {
+    "fact_id": "f_110",
+    "value": 1.046,
+    "unit": "m",
+    "label": "Height, Bear Robotics Servi",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.bearrobotics.ai/servi"
+    },
+    "key": "robot.height_m|bear_servi"
+  },
+  {
+    "fact_id": "f_111",
+    "value": 1.2,
+    "unit": "m/s",
+    "label": "Max speed (vendor), Bear Robotics Servi",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.bearrobotics.ai/servi"
+    },
+    "key": "robot.max_speed_mps|bear_servi"
+  },
+  {
+    "fact_id": "f_112",
+    "value": 30.0,
+    "unit": "kg",
+    "label": "Payload (vendor), Bear Robotics Servi",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.bearrobotics.ai/servi"
+    },
+    "key": "robot.payload_kg|bear_servi"
+  },
+  {
+    "fact_id": "f_113",
+    "value": 10.0,
+    "unit": "h",
+    "label": "Runtime per charge (vendor), Bear Robotics Servi",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.bearrobotics.ai/servi"
+    },
+    "key": "robot.runtime_h|bear_servi"
+  },
+  {
+    "fact_id": "f_114",
+    "value": "price on request",
+    "unit": "",
+    "label": "Price, Bear Robotics Servi",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.bearrobotics.ai/faq"
+    },
+    "key": "robot.price_status|bear_servi"
+  },
+  {
+    "fact_id": "f_115",
+    "value": "human-reviewed",
+    "unit": "",
+    "label": "Catalog review status, Bear Robotics Servi",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:bear_servi"
+    },
+    "key": "robot.verified|bear_servi"
+  },
+  {
+    "fact_id": "f_116",
+    "value": 6.0,
+    "unit": "count",
+    "label": "Task legs, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1"
+    },
+    "key": "feas.legs_total|bear_servi"
+  },
+  {
+    "fact_id": "f_117",
+    "value": 6.0,
+    "unit": "count",
+    "label": "Task legs feasible (static check), Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1"
+    },
+    "key": "feas.legs_ok|bear_servi"
+  },
+  {
+    "fact_id": "f_118",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Fraction of task legs feasible, Bear Robotics Servi (pending legs count as not feasible)",
+    "origin": {
+      "type": "formula",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:feasible/total"
+    },
+    "key": "feas.frac|bear_servi"
+  },
+  {
+    "fact_id": "f_119",
+    "value": 1.15,
+    "unit": "m",
+    "label": "Narrowest gap on route, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.narrowest_gap_m|bear_servi"
+  },
+  {
+    "fact_id": "f_120",
+    "value": 0.445,
+    "unit": "m",
+    "label": "Gap the robot needs at the narrowest point, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.narrowest_required_m|bear_servi"
+  },
+  {
+    "fact_id": "f_121",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg DOCK to PICKUP, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_status|bear_servi|0"
+  },
+  {
+    "fact_id": "f_122",
+    "value": 1.15,
+    "unit": "m",
+    "label": "Narrowest gap, leg DOCK to PICKUP, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_gap|bear_servi|0"
+  },
+  {
+    "fact_id": "f_123",
+    "value": 0.445,
+    "unit": "m",
+    "label": "Gap needed, leg DOCK to PICKUP, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_required|bear_servi|0"
+  },
+  {
+    "fact_id": "f_124",
+    "value": 14.042,
+    "unit": "m",
+    "label": "Path length, leg DOCK to PICKUP, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_len|bear_servi|0"
+  },
+  {
+    "fact_id": "f_125",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg PICKUP to O4, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_status|bear_servi|1"
+  },
+  {
+    "fact_id": "f_126",
+    "value": 1.15,
+    "unit": "m",
+    "label": "Narrowest gap, leg PICKUP to O4, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_gap|bear_servi|1"
+  },
+  {
+    "fact_id": "f_127",
+    "value": 0.445,
+    "unit": "m",
+    "label": "Gap needed, leg PICKUP to O4, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_required|bear_servi|1"
+  },
+  {
+    "fact_id": "f_128",
+    "value": 4.149,
+    "unit": "m",
+    "label": "Path length, leg PICKUP to O4, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_len|bear_servi|1"
+  },
+  {
+    "fact_id": "f_129",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O4 to O3, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_status|bear_servi|2"
+  },
+  {
+    "fact_id": "f_130",
+    "value": 1.325,
+    "unit": "m",
+    "label": "Narrowest gap, leg O4 to O3, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_gap|bear_servi|2"
+  },
+  {
+    "fact_id": "f_131",
+    "value": 0.445,
+    "unit": "m",
+    "label": "Gap needed, leg O4 to O3, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_required|bear_servi|2"
+  },
+  {
+    "fact_id": "f_132",
+    "value": 4.012,
+    "unit": "m",
+    "label": "Path length, leg O4 to O3, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_len|bear_servi|2"
+  },
+  {
+    "fact_id": "f_133",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O3 to O2, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_status|bear_servi|3"
+  },
+  {
+    "fact_id": "f_134",
+    "value": 1.8954,
+    "unit": "m",
+    "label": "Narrowest gap, leg O3 to O2, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_gap|bear_servi|3"
+  },
+  {
+    "fact_id": "f_135",
+    "value": 0.445,
+    "unit": "m",
+    "label": "Gap needed, leg O3 to O2, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_required|bear_servi|3"
+  },
+  {
+    "fact_id": "f_136",
+    "value": 2.314,
+    "unit": "m",
+    "label": "Path length, leg O3 to O2, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_len|bear_servi|3"
+  },
+  {
+    "fact_id": "f_137",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O2 to O1, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_status|bear_servi|4"
+  },
+  {
+    "fact_id": "f_138",
+    "value": 1.8923,
+    "unit": "m",
+    "label": "Narrowest gap, leg O2 to O1, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_gap|bear_servi|4"
+  },
+  {
+    "fact_id": "f_139",
+    "value": 0.445,
+    "unit": "m",
+    "label": "Gap needed, leg O2 to O1, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_required|bear_servi|4"
+  },
+  {
+    "fact_id": "f_140",
+    "value": 2.242,
+    "unit": "m",
+    "label": "Path length, leg O2 to O1, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_len|bear_servi|4"
+  },
+  {
+    "fact_id": "f_141",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O1 to DOCK, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_status|bear_servi|5"
+  },
+  {
+    "fact_id": "f_142",
+    "value": 1.3626,
+    "unit": "m",
+    "label": "Narrowest gap, leg O1 to DOCK, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_gap|bear_servi|5"
+  },
+  {
+    "fact_id": "f_143",
+    "value": 0.445,
+    "unit": "m",
+    "label": "Gap needed, leg O1 to DOCK, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_required|bear_servi|5"
+  },
+  {
+    "fact_id": "f_144",
+    "value": 2.004,
+    "unit": "m",
+    "label": "Path length, leg O1 to DOCK, Bear Robotics Servi",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:bear_servi:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_len|bear_servi|5"
+  },
+  {
+    "fact_id": "f_145",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Bear Robotics Servi, quiet traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_593c904f1842"
+    },
+    "key": "sim.success|bear_servi|quiet|conservative"
+  },
+  {
+    "fact_id": "f_146",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Bear Robotics Servi, quiet traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_593c904f1842"
+    },
+    "key": "sim.n|bear_servi|quiet|conservative"
+  },
+  {
+    "fact_id": "f_147",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Bear Robotics Servi, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d693ff018637"
+    },
+    "key": "sim.success|bear_servi|quiet|nominal"
+  },
+  {
+    "fact_id": "f_148",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Bear Robotics Servi, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d693ff018637"
+    },
+    "key": "sim.n|bear_servi|quiet|nominal"
+  },
+  {
+    "fact_id": "f_149",
+    "value": 0.9123754607496077,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, Bear Robotics Servi, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d693ff018637"
+    },
+    "key": "sim.ci_lo|bear_servi|quiet"
+  },
+  {
+    "fact_id": "f_150",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, Bear Robotics Servi, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d693ff018637"
+    },
+    "key": "sim.ci_hi|bear_servi|quiet"
+  },
+  {
+    "fact_id": "f_151",
+    "value": 57.1,
+    "unit": "s",
+    "label": "Median mission time, Bear Robotics Servi, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d693ff018637"
+    },
+    "key": "sim.mission_s|bear_servi|quiet"
+  },
+  {
+    "fact_id": "f_152",
+    "value": 1.05,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, Bear Robotics Servi, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d693ff018637"
+    },
+    "key": "sim.near_miss|bear_servi|quiet"
+  },
+  {
+    "fact_id": "f_153",
+    "value": 1.85,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, Bear Robotics Servi, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d693ff018637"
+    },
+    "key": "sim.stops|bear_servi|quiet"
+  },
+  {
+    "fact_id": "f_154",
+    "value": 0.10944999999999999,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, Bear Robotics Servi, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d693ff018637"
+    },
+    "key": "sim.min_gap_m|bear_servi|quiet"
+  },
+  {
+    "fact_id": "f_155",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Bear Robotics Servi, quiet traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_95b878470915"
+    },
+    "key": "sim.success|bear_servi|quiet|optimistic"
+  },
+  {
+    "fact_id": "f_156",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Bear Robotics Servi, quiet traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_95b878470915"
+    },
+    "key": "sim.n|bear_servi|quiet|optimistic"
+  },
+  {
+    "fact_id": "f_157",
+    "value": 0.95,
+    "unit": "ratio",
+    "label": "Success rate, Bear Robotics Servi, normal traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_75858c483564"
+    },
+    "key": "sim.success|bear_servi|normal|conservative"
+  },
+  {
+    "fact_id": "f_158",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Bear Robotics Servi, normal traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_75858c483564"
+    },
+    "key": "sim.n|bear_servi|normal|conservative"
+  },
+  {
+    "fact_id": "f_159",
+    "value": 0.95,
+    "unit": "ratio",
+    "label": "Success rate, Bear Robotics Servi, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32f58c01c786"
+    },
+    "key": "sim.success|bear_servi|normal|nominal"
+  },
+  {
+    "fact_id": "f_160",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Bear Robotics Servi, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32f58c01c786"
+    },
+    "key": "sim.n|bear_servi|normal|nominal"
+  },
+  {
+    "fact_id": "f_161",
+    "value": 0.834958291820748,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, Bear Robotics Servi, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32f58c01c786"
+    },
+    "key": "sim.ci_lo|bear_servi|normal"
+  },
+  {
+    "fact_id": "f_162",
+    "value": 0.9861796228538989,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, Bear Robotics Servi, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32f58c01c786"
+    },
+    "key": "sim.ci_hi|bear_servi|normal"
+  },
+  {
+    "fact_id": "f_163",
+    "value": 66.35,
+    "unit": "s",
+    "label": "Median mission time, Bear Robotics Servi, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32f58c01c786"
+    },
+    "key": "sim.mission_s|bear_servi|normal"
+  },
+  {
+    "fact_id": "f_164",
+    "value": 3.45,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, Bear Robotics Servi, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32f58c01c786"
+    },
+    "key": "sim.near_miss|bear_servi|normal"
+  },
+  {
+    "fact_id": "f_165",
+    "value": 5.0,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, Bear Robotics Servi, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32f58c01c786"
+    },
+    "key": "sim.stops|bear_servi|normal"
+  },
+  {
+    "fact_id": "f_166",
+    "value": 0.10944999999999999,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, Bear Robotics Servi, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32f58c01c786"
+    },
+    "key": "sim.min_gap_m|bear_servi|normal"
+  },
+  {
+    "fact_id": "f_167",
+    "value": 2.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (collision), Bear Robotics Servi, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32f58c01c786"
+    },
+    "key": "sim.fail|bear_servi|normal|collision"
+  },
+  {
+    "fact_id": "f_168",
+    "value": 0.95,
+    "unit": "ratio",
+    "label": "Success rate, Bear Robotics Servi, normal traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_1db01426f956"
+    },
+    "key": "sim.success|bear_servi|normal|optimistic"
+  },
+  {
+    "fact_id": "f_169",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Bear Robotics Servi, normal traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_1db01426f956"
+    },
+    "key": "sim.n|bear_servi|normal|optimistic"
+  },
+  {
+    "fact_id": "f_170",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Success rate, Bear Robotics Servi, peak traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d4a855fc7576"
+    },
+    "key": "sim.success|bear_servi|peak|conservative"
+  },
+  {
+    "fact_id": "f_171",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Bear Robotics Servi, peak traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d4a855fc7576"
+    },
+    "key": "sim.n|bear_servi|peak|conservative"
+  },
+  {
+    "fact_id": "f_172",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Success rate, Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32be9cf2a263"
+    },
+    "key": "sim.success|bear_servi|peak|nominal"
+  },
+  {
+    "fact_id": "f_173",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32be9cf2a263"
+    },
+    "key": "sim.n|bear_servi|peak|nominal"
+  },
+  {
+    "fact_id": "f_174",
+    "value": 0.8013546984090248,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32be9cf2a263"
+    },
+    "key": "sim.ci_lo|bear_servi|peak"
+  },
+  {
+    "fact_id": "f_175",
+    "value": 0.9741644432281419,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32be9cf2a263"
+    },
+    "key": "sim.ci_hi|bear_servi|peak"
+  },
+  {
+    "fact_id": "f_176",
+    "value": 103.8,
+    "unit": "s",
+    "label": "Median mission time, Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32be9cf2a263"
+    },
+    "key": "sim.mission_s|bear_servi|peak"
+  },
+  {
+    "fact_id": "f_177",
+    "value": 9.375,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32be9cf2a263"
+    },
+    "key": "sim.near_miss|bear_servi|peak"
+  },
+  {
+    "fact_id": "f_178",
+    "value": 12.35,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32be9cf2a263"
+    },
+    "key": "sim.stops|bear_servi|peak"
+  },
+  {
+    "fact_id": "f_179",
+    "value": 0.10414999999999999,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32be9cf2a263"
+    },
+    "key": "sim.min_gap_m|bear_servi|peak"
+  },
+  {
+    "fact_id": "f_180",
+    "value": 1.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (blocked timeout), Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32be9cf2a263"
+    },
+    "key": "sim.fail|bear_servi|peak|blocked_timeout"
+  },
+  {
+    "fact_id": "f_181",
+    "value": 2.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (collision), Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32be9cf2a263"
+    },
+    "key": "sim.fail|bear_servi|peak|collision"
+  },
+  {
+    "fact_id": "f_182",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Success rate, Bear Robotics Servi, peak traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_72cce149076d"
+    },
+    "key": "sim.success|bear_servi|peak|optimistic"
+  },
+  {
+    "fact_id": "f_183",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Bear Robotics Servi, peak traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_72cce149076d"
+    },
+    "key": "sim.n|bear_servi|peak|optimistic"
+  },
+  {
+    "fact_id": "f_184",
+    "value": 0.95,
+    "unit": "ratio",
+    "label": "Automatable share of the task, Bear Robotics Servi (success rate x feasible leg fraction)",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:bear_servi"
+    },
+    "key": "roi.share|bear_servi"
+  },
+  {
+    "fact_id": "f_185",
+    "value": 823.3333333333333,
+    "unit": "USD/month",
+    "label": "Monthly staff-time saving, Bear Robotics Servi",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:bear_servi"
+    },
+    "key": "roi.saving|bear_servi"
+  },
+  {
+    "fact_id": "f_186",
+    "value": "enter a quote",
+    "unit": "",
+    "label": "Payback status, Bear Robotics Servi",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:bear_servi"
+    },
+    "key": "roi.status|bear_servi"
+  },
+  {
+    "fact_id": "f_187",
+    "value": "Cleared",
+    "unit": "",
+    "label": "Verdict, Bear Robotics Servi",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:bear_servi"
+    },
+    "key": "verdict|bear_servi"
+  },
+  {
+    "fact_id": "f_188",
+    "value": "meets every rule as-is",
+    "unit": "",
+    "label": "Verdict main reason, Bear Robotics Servi",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:bear_servi"
+    },
+    "key": "verdict.reason|bear_servi"
+  },
+  {
+    "fact_id": "f_189",
+    "value": 6.0,
+    "unit": "",
+    "label": "Verdict check value, Bear Robotics Servi (value 1)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:bear_servi:as_is:0"
+    },
+    "key": "verdict.value_num|bear_servi|as_is|0|0"
+  },
+  {
+    "fact_id": "f_190",
+    "value": 6.0,
+    "unit": "legs",
+    "label": "Verdict check value, Bear Robotics Servi (value 2)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:bear_servi:as_is:0"
+    },
+    "key": "verdict.value_num|bear_servi|as_is|0|1"
+  },
+  {
+    "fact_id": "f_191",
+    "value": 0.9,
+    "unit": "",
+    "label": "Verdict rule, Bear Robotics Servi (value 1)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:bear_servi:as_is:2"
+    },
+    "key": "verdict.rule_num|bear_servi|as_is|2|0"
+  },
+  {
+    "fact_id": "f_192",
+    "value": 0.95,
+    "unit": "ratio",
+    "label": "Verdict check value (as-is), Bear Robotics Servi",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:bear_servi:as_is:2"
+    },
+    "key": "verdict.value|bear_servi|as_is|2"
+  },
+  {
+    "fact_id": "f_193",
+    "value": 0.9,
+    "unit": "ratio",
+    "label": "Verdict rule threshold, Bear Robotics Servi",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:bear_servi:as_is:2"
+    },
+    "key": "verdict.threshold|bear_servi|as_is|2"
+  },
+  {
+    "fact_id": "f_194",
+    "value": "Pudu Robotics KettyBot",
+    "unit": "",
+    "label": "Robot model (pudu_kettybot)",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:pudu_kettybot"
+    },
+    "key": "robot.name|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_195",
+    "value": "service robot",
+    "unit": "",
+    "label": "Robot class, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:pudu_kettybot"
+    },
+    "key": "robot.class|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_196",
+    "value": 0.435,
+    "unit": "m",
+    "label": "Footprint length, Pudu Robotics KettyBot (bounding box)",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf"
+    },
+    "key": "robot.length_m|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_197",
+    "value": 0.45,
+    "unit": "m",
+    "label": "Footprint width, Pudu Robotics KettyBot (bounding box)",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf"
+    },
+    "key": "robot.width_m|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_198",
+    "value": 1.12,
+    "unit": "m",
+    "label": "Height, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf"
+    },
+    "key": "robot.height_m|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_199",
+    "value": 1.2,
+    "unit": "m/s",
+    "label": "Max speed (vendor), Pudu Robotics KettyBot",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf"
+    },
+    "key": "robot.max_speed_mps|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_200",
+    "value": 0.005,
+    "unit": "m",
+    "label": "Max threshold height (vendor), Pudu Robotics KettyBot",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf"
+    },
+    "key": "robot.max_threshold_m|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_201",
+    "value": 5.0,
+    "unit": "deg",
+    "label": "Max slope (vendor), Pudu Robotics KettyBot",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf"
+    },
+    "key": "robot.max_slope_deg|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_202",
+    "value": 0.55,
+    "unit": "m",
+    "label": "Minimum aisle width (vendor), Pudu Robotics KettyBot",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf"
+    },
+    "key": "robot.min_aisle_m|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_203",
+    "value": 30.0,
+    "unit": "kg",
+    "label": "Payload (vendor), Pudu Robotics KettyBot",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://robotsourced.com/robots/service/pudu-kettybot"
+    },
+    "key": "robot.payload_kg|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_204",
+    "value": 8.0,
+    "unit": "h",
+    "label": "Runtime per charge (vendor), Pudu Robotics KettyBot",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf"
+    },
+    "key": "robot.runtime_h|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_205",
+    "value": "price on request",
+    "unit": "",
+    "label": "Price, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:pudu_kettybot"
+    },
+    "key": "robot.price_status|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_206",
+    "value": "human-reviewed",
+    "unit": "",
+    "label": "Catalog review status, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:pudu_kettybot"
+    },
+    "key": "robot.verified|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_207",
+    "value": 6.0,
+    "unit": "count",
+    "label": "Task legs, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1"
+    },
+    "key": "feas.legs_total|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_208",
+    "value": 6.0,
+    "unit": "count",
+    "label": "Task legs feasible (static check), Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1"
+    },
+    "key": "feas.legs_ok|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_209",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Fraction of task legs feasible, Pudu Robotics KettyBot (pending legs count as not feasible)",
+    "origin": {
+      "type": "formula",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:feasible/total"
+    },
+    "key": "feas.frac|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_210",
+    "value": 1.15,
+    "unit": "m",
+    "label": "Narrowest gap on route, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.narrowest_gap_m|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_211",
+    "value": 0.45,
+    "unit": "m",
+    "label": "Gap the robot needs at the narrowest point, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.narrowest_required_m|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_212",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg DOCK to PICKUP, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_status|pudu_kettybot|0"
+  },
+  {
+    "fact_id": "f_213",
+    "value": 1.15,
+    "unit": "m",
+    "label": "Narrowest gap, leg DOCK to PICKUP, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_gap|pudu_kettybot|0"
+  },
+  {
+    "fact_id": "f_214",
+    "value": 0.45,
+    "unit": "m",
+    "label": "Gap needed, leg DOCK to PICKUP, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_required|pudu_kettybot|0"
+  },
+  {
+    "fact_id": "f_215",
+    "value": 14.042,
+    "unit": "m",
+    "label": "Path length, leg DOCK to PICKUP, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_len|pudu_kettybot|0"
+  },
+  {
+    "fact_id": "f_216",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg PICKUP to O4, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_status|pudu_kettybot|1"
+  },
+  {
+    "fact_id": "f_217",
+    "value": 1.15,
+    "unit": "m",
+    "label": "Narrowest gap, leg PICKUP to O4, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_gap|pudu_kettybot|1"
+  },
+  {
+    "fact_id": "f_218",
+    "value": 0.45,
+    "unit": "m",
+    "label": "Gap needed, leg PICKUP to O4, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_required|pudu_kettybot|1"
+  },
+  {
+    "fact_id": "f_219",
+    "value": 4.125,
+    "unit": "m",
+    "label": "Path length, leg PICKUP to O4, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_len|pudu_kettybot|1"
+  },
+  {
+    "fact_id": "f_220",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O4 to O3, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_status|pudu_kettybot|2"
+  },
+  {
+    "fact_id": "f_221",
+    "value": 1.325,
+    "unit": "m",
+    "label": "Narrowest gap, leg O4 to O3, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_gap|pudu_kettybot|2"
+  },
+  {
+    "fact_id": "f_222",
+    "value": 0.45,
+    "unit": "m",
+    "label": "Gap needed, leg O4 to O3, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_required|pudu_kettybot|2"
+  },
+  {
+    "fact_id": "f_223",
+    "value": 4.012,
+    "unit": "m",
+    "label": "Path length, leg O4 to O3, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_len|pudu_kettybot|2"
+  },
+  {
+    "fact_id": "f_224",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O3 to O2, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_status|pudu_kettybot|3"
+  },
+  {
+    "fact_id": "f_225",
+    "value": 1.8923,
+    "unit": "m",
+    "label": "Narrowest gap, leg O3 to O2, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_gap|pudu_kettybot|3"
+  },
+  {
+    "fact_id": "f_226",
+    "value": 0.45,
+    "unit": "m",
+    "label": "Gap needed, leg O3 to O2, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_required|pudu_kettybot|3"
+  },
+  {
+    "fact_id": "f_227",
+    "value": 2.316,
+    "unit": "m",
+    "label": "Path length, leg O3 to O2, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_len|pudu_kettybot|3"
+  },
+  {
+    "fact_id": "f_228",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O2 to O1, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_status|pudu_kettybot|4"
+  },
+  {
+    "fact_id": "f_229",
+    "value": 1.9011,
+    "unit": "m",
+    "label": "Narrowest gap, leg O2 to O1, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_gap|pudu_kettybot|4"
+  },
+  {
+    "fact_id": "f_230",
+    "value": 0.45,
+    "unit": "m",
+    "label": "Gap needed, leg O2 to O1, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_required|pudu_kettybot|4"
+  },
+  {
+    "fact_id": "f_231",
+    "value": 2.261,
+    "unit": "m",
+    "label": "Path length, leg O2 to O1, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_len|pudu_kettybot|4"
+  },
+  {
+    "fact_id": "f_232",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O1 to DOCK, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_status|pudu_kettybot|5"
+  },
+  {
+    "fact_id": "f_233",
+    "value": 1.3659,
+    "unit": "m",
+    "label": "Narrowest gap, leg O1 to DOCK, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_gap|pudu_kettybot|5"
+  },
+  {
+    "fact_id": "f_234",
+    "value": 0.45,
+    "unit": "m",
+    "label": "Gap needed, leg O1 to DOCK, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_required|pudu_kettybot|5"
+  },
+  {
+    "fact_id": "f_235",
+    "value": 2.038,
+    "unit": "m",
+    "label": "Path length, leg O1 to DOCK, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_kettybot:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_len|pudu_kettybot|5"
+  },
+  {
+    "fact_id": "f_236",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Pudu Robotics KettyBot, quiet traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_8233589f1bf0"
+    },
+    "key": "sim.success|pudu_kettybot|quiet|conservative"
+  },
+  {
+    "fact_id": "f_237",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Pudu Robotics KettyBot, quiet traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_8233589f1bf0"
+    },
+    "key": "sim.n|pudu_kettybot|quiet|conservative"
+  },
+  {
+    "fact_id": "f_238",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Pudu Robotics KettyBot, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_fcb635af5f24"
+    },
+    "key": "sim.success|pudu_kettybot|quiet|nominal"
+  },
+  {
+    "fact_id": "f_239",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Pudu Robotics KettyBot, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_fcb635af5f24"
+    },
+    "key": "sim.n|pudu_kettybot|quiet|nominal"
+  },
+  {
+    "fact_id": "f_240",
+    "value": 0.9123754607496077,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, Pudu Robotics KettyBot, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_fcb635af5f24"
+    },
+    "key": "sim.ci_lo|pudu_kettybot|quiet"
+  },
+  {
+    "fact_id": "f_241",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, Pudu Robotics KettyBot, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_fcb635af5f24"
+    },
+    "key": "sim.ci_hi|pudu_kettybot|quiet"
+  },
+  {
+    "fact_id": "f_242",
+    "value": 56.650000000000006,
+    "unit": "s",
+    "label": "Median mission time, Pudu Robotics KettyBot, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_fcb635af5f24"
+    },
+    "key": "sim.mission_s|pudu_kettybot|quiet"
+  },
+  {
+    "fact_id": "f_243",
+    "value": 1.1,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, Pudu Robotics KettyBot, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_fcb635af5f24"
+    },
+    "key": "sim.near_miss|pudu_kettybot|quiet"
+  },
+  {
+    "fact_id": "f_244",
+    "value": 1.725,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, Pudu Robotics KettyBot, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_fcb635af5f24"
+    },
+    "key": "sim.stops|pudu_kettybot|quiet"
+  },
+  {
+    "fact_id": "f_245",
+    "value": 0.10655,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, Pudu Robotics KettyBot, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_fcb635af5f24"
+    },
+    "key": "sim.min_gap_m|pudu_kettybot|quiet"
+  },
+  {
+    "fact_id": "f_246",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Pudu Robotics KettyBot, quiet traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_66f267bd7c2d"
+    },
+    "key": "sim.success|pudu_kettybot|quiet|optimistic"
+  },
+  {
+    "fact_id": "f_247",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Pudu Robotics KettyBot, quiet traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_66f267bd7c2d"
+    },
+    "key": "sim.n|pudu_kettybot|quiet|optimistic"
+  },
+  {
+    "fact_id": "f_248",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Success rate, Pudu Robotics KettyBot, normal traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_f96c7e949eff"
+    },
+    "key": "sim.success|pudu_kettybot|normal|conservative"
+  },
+  {
+    "fact_id": "f_249",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Pudu Robotics KettyBot, normal traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_f96c7e949eff"
+    },
+    "key": "sim.n|pudu_kettybot|normal|conservative"
+  },
+  {
+    "fact_id": "f_250",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Success rate, Pudu Robotics KettyBot, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_816a16f412c5"
+    },
+    "key": "sim.success|pudu_kettybot|normal|nominal"
+  },
+  {
+    "fact_id": "f_251",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Pudu Robotics KettyBot, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_816a16f412c5"
+    },
+    "key": "sim.n|pudu_kettybot|normal|nominal"
+  },
+  {
+    "fact_id": "f_252",
+    "value": 0.8013546984090248,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, Pudu Robotics KettyBot, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_816a16f412c5"
+    },
+    "key": "sim.ci_lo|pudu_kettybot|normal"
+  },
+  {
+    "fact_id": "f_253",
+    "value": 0.9741644432281419,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, Pudu Robotics KettyBot, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_816a16f412c5"
+    },
+    "key": "sim.ci_hi|pudu_kettybot|normal"
+  },
+  {
+    "fact_id": "f_254",
+    "value": 67.6,
+    "unit": "s",
+    "label": "Median mission time, Pudu Robotics KettyBot, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_816a16f412c5"
+    },
+    "key": "sim.mission_s|pudu_kettybot|normal"
+  },
+  {
+    "fact_id": "f_255",
+    "value": 3.45,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, Pudu Robotics KettyBot, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_816a16f412c5"
+    },
+    "key": "sim.near_miss|pudu_kettybot|normal"
+  },
+  {
+    "fact_id": "f_256",
+    "value": 4.925,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, Pudu Robotics KettyBot, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_816a16f412c5"
+    },
+    "key": "sim.stops|pudu_kettybot|normal"
+  },
+  {
+    "fact_id": "f_257",
+    "value": 0.10655,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, Pudu Robotics KettyBot, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_816a16f412c5"
+    },
+    "key": "sim.min_gap_m|pudu_kettybot|normal"
+  },
+  {
+    "fact_id": "f_258",
+    "value": 3.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (collision), Pudu Robotics KettyBot, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_816a16f412c5"
+    },
+    "key": "sim.fail|pudu_kettybot|normal|collision"
+  },
+  {
+    "fact_id": "f_259",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Success rate, Pudu Robotics KettyBot, normal traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_194838a95e6c"
+    },
+    "key": "sim.success|pudu_kettybot|normal|optimistic"
+  },
+  {
+    "fact_id": "f_260",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Pudu Robotics KettyBot, normal traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_194838a95e6c"
+    },
+    "key": "sim.n|pudu_kettybot|normal|optimistic"
+  },
+  {
+    "fact_id": "f_261",
+    "value": 0.9,
+    "unit": "ratio",
+    "label": "Success rate, Pudu Robotics KettyBot, peak traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_c937c9e505c9"
+    },
+    "key": "sim.success|pudu_kettybot|peak|conservative"
+  },
+  {
+    "fact_id": "f_262",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Pudu Robotics KettyBot, peak traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_c937c9e505c9"
+    },
+    "key": "sim.n|pudu_kettybot|peak|conservative"
+  },
+  {
+    "fact_id": "f_263",
+    "value": 0.9,
+    "unit": "ratio",
+    "label": "Success rate, Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_11ee6f0782f4"
+    },
+    "key": "sim.success|pudu_kettybot|peak|nominal"
+  },
+  {
+    "fact_id": "f_264",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_11ee6f0782f4"
+    },
+    "key": "sim.n|pudu_kettybot|peak|nominal"
+  },
+  {
+    "fact_id": "f_265",
+    "value": 0.7694792561952611,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_11ee6f0782f4"
+    },
+    "key": "sim.ci_lo|pudu_kettybot|peak"
+  },
+  {
+    "fact_id": "f_266",
+    "value": 0.9604211124044252,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_11ee6f0782f4"
+    },
+    "key": "sim.ci_hi|pudu_kettybot|peak"
+  },
+  {
+    "fact_id": "f_267",
+    "value": 95.8,
+    "unit": "s",
+    "label": "Median mission time, Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_11ee6f0782f4"
+    },
+    "key": "sim.mission_s|pudu_kettybot|peak"
+  },
+  {
+    "fact_id": "f_268",
+    "value": 9.5,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_11ee6f0782f4"
+    },
+    "key": "sim.near_miss|pudu_kettybot|peak"
+  },
+  {
+    "fact_id": "f_269",
+    "value": 11.975,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_11ee6f0782f4"
+    },
+    "key": "sim.stops|pudu_kettybot|peak"
+  },
+  {
+    "fact_id": "f_270",
+    "value": 0.1052,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_11ee6f0782f4"
+    },
+    "key": "sim.min_gap_m|pudu_kettybot|peak"
+  },
+  {
+    "fact_id": "f_271",
+    "value": 1.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (blocked timeout), Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_11ee6f0782f4"
+    },
+    "key": "sim.fail|pudu_kettybot|peak|blocked_timeout"
+  },
+  {
+    "fact_id": "f_272",
+    "value": 3.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (collision), Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_11ee6f0782f4"
+    },
+    "key": "sim.fail|pudu_kettybot|peak|collision"
+  },
+  {
+    "fact_id": "f_273",
+    "value": 0.9,
+    "unit": "ratio",
+    "label": "Success rate, Pudu Robotics KettyBot, peak traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_37916d2b47fd"
+    },
+    "key": "sim.success|pudu_kettybot|peak|optimistic"
+  },
+  {
+    "fact_id": "f_274",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Pudu Robotics KettyBot, peak traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_37916d2b47fd"
+    },
+    "key": "sim.n|pudu_kettybot|peak|optimistic"
+  },
+  {
+    "fact_id": "f_275",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Automatable share of the task, Pudu Robotics KettyBot (success rate x feasible leg fraction)",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:pudu_kettybot"
+    },
+    "key": "roi.share|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_276",
+    "value": 801.6666666666666,
+    "unit": "USD/month",
+    "label": "Monthly staff-time saving, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:pudu_kettybot"
+    },
+    "key": "roi.saving|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_277",
+    "value": "enter a quote",
+    "unit": "",
+    "label": "Payback status, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:pudu_kettybot"
+    },
+    "key": "roi.status|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_278",
+    "value": "Cleared",
+    "unit": "",
+    "label": "Verdict, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:pudu_kettybot"
+    },
+    "key": "verdict|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_279",
+    "value": "meets every rule as-is",
+    "unit": "",
+    "label": "Verdict main reason, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:pudu_kettybot"
+    },
+    "key": "verdict.reason|pudu_kettybot"
+  },
+  {
+    "fact_id": "f_280",
+    "value": 6.0,
+    "unit": "",
+    "label": "Verdict check value, Pudu Robotics KettyBot (value 1)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:pudu_kettybot:as_is:0"
+    },
+    "key": "verdict.value_num|pudu_kettybot|as_is|0|0"
+  },
+  {
+    "fact_id": "f_281",
+    "value": 6.0,
+    "unit": "legs",
+    "label": "Verdict check value, Pudu Robotics KettyBot (value 2)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:pudu_kettybot:as_is:0"
+    },
+    "key": "verdict.value_num|pudu_kettybot|as_is|0|1"
+  },
+  {
+    "fact_id": "f_282",
+    "value": 0.9,
+    "unit": "",
+    "label": "Verdict rule, Pudu Robotics KettyBot (value 1)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:pudu_kettybot:as_is:2"
+    },
+    "key": "verdict.rule_num|pudu_kettybot|as_is|2|0"
+  },
+  {
+    "fact_id": "f_283",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Verdict check value (as-is), Pudu Robotics KettyBot",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:pudu_kettybot:as_is:2"
+    },
+    "key": "verdict.value|pudu_kettybot|as_is|2"
+  },
+  {
+    "fact_id": "f_284",
+    "value": 0.9,
+    "unit": "ratio",
+    "label": "Verdict rule threshold, Pudu Robotics KettyBot",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:pudu_kettybot:as_is:2"
+    },
+    "key": "verdict.threshold|pudu_kettybot|as_is|2"
+  },
+  {
+    "fact_id": "f_285",
+    "value": "Keenon Robotics W3",
+    "unit": "",
+    "label": "Robot model (keenon_w3)",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:keenon_w3"
+    },
+    "key": "robot.name|keenon_w3"
+  },
+  {
+    "fact_id": "f_286",
+    "value": "service robot",
+    "unit": "",
+    "label": "Robot class, Keenon Robotics W3",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:keenon_w3"
+    },
+    "key": "robot.class|keenon_w3"
+  },
+  {
+    "fact_id": "f_287",
+    "value": 0.549,
+    "unit": "m",
+    "label": "Footprint length, Keenon Robotics W3 (bounding box)",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/W3"
+    },
+    "key": "robot.length_m|keenon_w3"
+  },
+  {
+    "fact_id": "f_288",
+    "value": 0.459,
+    "unit": "m",
+    "label": "Footprint width, Keenon Robotics W3 (bounding box)",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/W3"
+    },
+    "key": "robot.width_m|keenon_w3"
+  },
+  {
+    "fact_id": "f_289",
+    "value": 1.081,
+    "unit": "m",
+    "label": "Height, Keenon Robotics W3",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/W3"
+    },
+    "key": "robot.height_m|keenon_w3"
+  },
+  {
+    "fact_id": "f_290",
+    "value": 0.8,
+    "unit": "m/s",
+    "label": "Max speed (vendor), Keenon Robotics W3",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/W3"
+    },
+    "key": "robot.max_speed_mps|keenon_w3"
+  },
+  {
+    "fact_id": "f_291",
+    "value": 7.0,
+    "unit": "deg",
+    "label": "Max slope (vendor), Keenon Robotics W3",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/W3"
+    },
+    "key": "robot.max_slope_deg|keenon_w3"
+  },
+  {
+    "fact_id": "f_292",
+    "value": 0.7,
+    "unit": "m",
+    "label": "Minimum aisle width (vendor), Keenon Robotics W3",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/W3"
+    },
+    "key": "robot.min_aisle_m|keenon_w3"
+  },
+  {
+    "fact_id": "f_293",
+    "value": 20.0,
+    "unit": "kg",
+    "label": "Payload (vendor), Keenon Robotics W3",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/W3"
+    },
+    "key": "robot.payload_kg|keenon_w3"
+  },
+  {
+    "fact_id": "f_294",
+    "value": 12.0,
+    "unit": "h",
+    "label": "Runtime per charge (vendor), Keenon Robotics W3",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.robotlab.com/store/keenon-w3"
+    },
+    "key": "robot.runtime_h|keenon_w3"
+  },
+  {
+    "fact_id": "f_295",
+    "value": "price on request",
+    "unit": "",
+    "label": "Price, Keenon Robotics W3",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:keenon_w3"
+    },
+    "key": "robot.price_status|keenon_w3"
+  },
+  {
+    "fact_id": "f_296",
+    "value": "human-reviewed",
+    "unit": "",
+    "label": "Catalog review status, Keenon Robotics W3",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:keenon_w3"
+    },
+    "key": "robot.verified|keenon_w3"
+  },
+  {
+    "fact_id": "f_297",
+    "value": 6.0,
+    "unit": "count",
+    "label": "Task legs, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1"
+    },
+    "key": "feas.legs_total|keenon_w3"
+  },
+  {
+    "fact_id": "f_298",
+    "value": 6.0,
+    "unit": "count",
+    "label": "Task legs feasible (static check), Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1"
+    },
+    "key": "feas.legs_ok|keenon_w3"
+  },
+  {
+    "fact_id": "f_299",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Fraction of task legs feasible, Keenon Robotics W3 (pending legs count as not feasible)",
+    "origin": {
+      "type": "formula",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:feasible/total"
+    },
+    "key": "feas.frac|keenon_w3"
+  },
+  {
+    "fact_id": "f_300",
+    "value": 1.15,
+    "unit": "m",
+    "label": "Narrowest gap on route, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.narrowest_gap_m|keenon_w3"
+  },
+  {
+    "fact_id": "f_301",
+    "value": 0.459,
+    "unit": "m",
+    "label": "Gap the robot needs at the narrowest point, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.narrowest_required_m|keenon_w3"
+  },
+  {
+    "fact_id": "f_302",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg DOCK to PICKUP, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_status|keenon_w3|0"
+  },
+  {
+    "fact_id": "f_303",
+    "value": 1.15,
+    "unit": "m",
+    "label": "Narrowest gap, leg DOCK to PICKUP, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_gap|keenon_w3|0"
+  },
+  {
+    "fact_id": "f_304",
+    "value": 0.459,
+    "unit": "m",
+    "label": "Gap needed, leg DOCK to PICKUP, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_required|keenon_w3|0"
+  },
+  {
+    "fact_id": "f_305",
+    "value": 14.005,
+    "unit": "m",
+    "label": "Path length, leg DOCK to PICKUP, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_len|keenon_w3|0"
+  },
+  {
+    "fact_id": "f_306",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg PICKUP to O4, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_status|keenon_w3|1"
+  },
+  {
+    "fact_id": "f_307",
+    "value": 1.15,
+    "unit": "m",
+    "label": "Narrowest gap, leg PICKUP to O4, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_gap|keenon_w3|1"
+  },
+  {
+    "fact_id": "f_308",
+    "value": 0.459,
+    "unit": "m",
+    "label": "Gap needed, leg PICKUP to O4, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_required|keenon_w3|1"
+  },
+  {
+    "fact_id": "f_309",
+    "value": 4.126,
+    "unit": "m",
+    "label": "Path length, leg PICKUP to O4, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_len|keenon_w3|1"
+  },
+  {
+    "fact_id": "f_310",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O4 to O3, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_status|keenon_w3|2"
+  },
+  {
+    "fact_id": "f_311",
+    "value": 1.325,
+    "unit": "m",
+    "label": "Narrowest gap, leg O4 to O3, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_gap|keenon_w3|2"
+  },
+  {
+    "fact_id": "f_312",
+    "value": 0.459,
+    "unit": "m",
+    "label": "Gap needed, leg O4 to O3, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_required|keenon_w3|2"
+  },
+  {
+    "fact_id": "f_313",
+    "value": 4.011,
+    "unit": "m",
+    "label": "Path length, leg O4 to O3, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_len|keenon_w3|2"
+  },
+  {
+    "fact_id": "f_314",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O3 to O2, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_status|keenon_w3|3"
+  },
+  {
+    "fact_id": "f_315",
+    "value": 1.8942,
+    "unit": "m",
+    "label": "Narrowest gap, leg O3 to O2, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_gap|keenon_w3|3"
+  },
+  {
+    "fact_id": "f_316",
+    "value": 0.459,
+    "unit": "m",
+    "label": "Gap needed, leg O3 to O2, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_required|keenon_w3|3"
+  },
+  {
+    "fact_id": "f_317",
+    "value": 2.308,
+    "unit": "m",
+    "label": "Path length, leg O3 to O2, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_len|keenon_w3|3"
+  },
+  {
+    "fact_id": "f_318",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O2 to O1, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_status|keenon_w3|4"
+  },
+  {
+    "fact_id": "f_319",
+    "value": 1.9006,
+    "unit": "m",
+    "label": "Narrowest gap, leg O2 to O1, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_gap|keenon_w3|4"
+  },
+  {
+    "fact_id": "f_320",
+    "value": 0.459,
+    "unit": "m",
+    "label": "Gap needed, leg O2 to O1, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_required|keenon_w3|4"
+  },
+  {
+    "fact_id": "f_321",
+    "value": 2.253,
+    "unit": "m",
+    "label": "Path length, leg O2 to O1, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_len|keenon_w3|4"
+  },
+  {
+    "fact_id": "f_322",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O1 to DOCK, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_status|keenon_w3|5"
+  },
+  {
+    "fact_id": "f_323",
+    "value": 1.358,
+    "unit": "m",
+    "label": "Narrowest gap, leg O1 to DOCK, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_gap|keenon_w3|5"
+  },
+  {
+    "fact_id": "f_324",
+    "value": 0.459,
+    "unit": "m",
+    "label": "Gap needed, leg O1 to DOCK, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_required|keenon_w3|5"
+  },
+  {
+    "fact_id": "f_325",
+    "value": 2.093,
+    "unit": "m",
+    "label": "Path length, leg O1 to DOCK, Keenon Robotics W3",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_w3:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_len|keenon_w3|5"
+  },
+  {
+    "fact_id": "f_326",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics W3, quiet traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_5ebd9f921581"
+    },
+    "key": "sim.success|keenon_w3|quiet|conservative"
+  },
+  {
+    "fact_id": "f_327",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics W3, quiet traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_5ebd9f921581"
+    },
+    "key": "sim.n|keenon_w3|quiet|conservative"
+  },
+  {
+    "fact_id": "f_328",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics W3, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d2b53511b957"
+    },
+    "key": "sim.success|keenon_w3|quiet|nominal"
+  },
+  {
+    "fact_id": "f_329",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics W3, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d2b53511b957"
+    },
+    "key": "sim.n|keenon_w3|quiet|nominal"
+  },
+  {
+    "fact_id": "f_330",
+    "value": 0.9123754607496077,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, Keenon Robotics W3, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d2b53511b957"
+    },
+    "key": "sim.ci_lo|keenon_w3|quiet"
+  },
+  {
+    "fact_id": "f_331",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, Keenon Robotics W3, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d2b53511b957"
+    },
+    "key": "sim.ci_hi|keenon_w3|quiet"
+  },
+  {
+    "fact_id": "f_332",
+    "value": 67.5,
+    "unit": "s",
+    "label": "Median mission time, Keenon Robotics W3, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d2b53511b957"
+    },
+    "key": "sim.mission_s|keenon_w3|quiet"
+  },
+  {
+    "fact_id": "f_333",
+    "value": 1.65,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, Keenon Robotics W3, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d2b53511b957"
+    },
+    "key": "sim.near_miss|keenon_w3|quiet"
+  },
+  {
+    "fact_id": "f_334",
+    "value": 2.425,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, Keenon Robotics W3, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d2b53511b957"
+    },
+    "key": "sim.stops|keenon_w3|quiet"
+  },
+  {
+    "fact_id": "f_335",
+    "value": 0.10785,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, Keenon Robotics W3, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d2b53511b957"
+    },
+    "key": "sim.min_gap_m|keenon_w3|quiet"
+  },
+  {
+    "fact_id": "f_336",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics W3, quiet traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d729ed67dd11"
+    },
+    "key": "sim.success|keenon_w3|quiet|optimistic"
+  },
+  {
+    "fact_id": "f_337",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics W3, quiet traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d729ed67dd11"
+    },
+    "key": "sim.n|keenon_w3|quiet|optimistic"
+  },
+  {
+    "fact_id": "f_338",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics W3, normal traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_61c46ec0af64"
+    },
+    "key": "sim.success|keenon_w3|normal|conservative"
+  },
+  {
+    "fact_id": "f_339",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics W3, normal traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_61c46ec0af64"
+    },
+    "key": "sim.n|keenon_w3|normal|conservative"
+  },
+  {
+    "fact_id": "f_340",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics W3, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_47a26669243f"
+    },
+    "key": "sim.success|keenon_w3|normal|nominal"
+  },
+  {
+    "fact_id": "f_341",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics W3, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_47a26669243f"
+    },
+    "key": "sim.n|keenon_w3|normal|nominal"
+  },
+  {
+    "fact_id": "f_342",
+    "value": 0.9123754607496077,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, Keenon Robotics W3, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_47a26669243f"
+    },
+    "key": "sim.ci_lo|keenon_w3|normal"
+  },
+  {
+    "fact_id": "f_343",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, Keenon Robotics W3, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_47a26669243f"
+    },
+    "key": "sim.ci_hi|keenon_w3|normal"
+  },
+  {
+    "fact_id": "f_344",
+    "value": 79.4,
+    "unit": "s",
+    "label": "Median mission time, Keenon Robotics W3, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_47a26669243f"
+    },
+    "key": "sim.mission_s|keenon_w3|normal"
+  },
+  {
+    "fact_id": "f_345",
+    "value": 4.7,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, Keenon Robotics W3, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_47a26669243f"
+    },
+    "key": "sim.near_miss|keenon_w3|normal"
+  },
+  {
+    "fact_id": "f_346",
+    "value": 6.85,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, Keenon Robotics W3, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_47a26669243f"
+    },
+    "key": "sim.stops|keenon_w3|normal"
+  },
+  {
+    "fact_id": "f_347",
+    "value": 0.10869999999999999,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, Keenon Robotics W3, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_47a26669243f"
+    },
+    "key": "sim.min_gap_m|keenon_w3|normal"
+  },
+  {
+    "fact_id": "f_348",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics W3, normal traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_e285a50405f3"
+    },
+    "key": "sim.success|keenon_w3|normal|optimistic"
+  },
+  {
+    "fact_id": "f_349",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics W3, normal traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_e285a50405f3"
+    },
+    "key": "sim.n|keenon_w3|normal|optimistic"
+  },
+  {
+    "fact_id": "f_350",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics W3, peak traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_9121f3fe6d23"
+    },
+    "key": "sim.success|keenon_w3|peak|conservative"
+  },
+  {
+    "fact_id": "f_351",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics W3, peak traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_9121f3fe6d23"
+    },
+    "key": "sim.n|keenon_w3|peak|conservative"
+  },
+  {
+    "fact_id": "f_352",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics W3, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_a6ff401274e6"
+    },
+    "key": "sim.success|keenon_w3|peak|nominal"
+  },
+  {
+    "fact_id": "f_353",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics W3, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_a6ff401274e6"
+    },
+    "key": "sim.n|keenon_w3|peak|nominal"
+  },
+  {
+    "fact_id": "f_354",
+    "value": 0.9123754607496077,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, Keenon Robotics W3, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_a6ff401274e6"
+    },
+    "key": "sim.ci_lo|keenon_w3|peak"
+  },
+  {
+    "fact_id": "f_355",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, Keenon Robotics W3, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_a6ff401274e6"
+    },
+    "key": "sim.ci_hi|keenon_w3|peak"
+  },
+  {
+    "fact_id": "f_356",
+    "value": 112.25,
+    "unit": "s",
+    "label": "Median mission time, Keenon Robotics W3, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_a6ff401274e6"
+    },
+    "key": "sim.mission_s|keenon_w3|peak"
+  },
+  {
+    "fact_id": "f_357",
+    "value": 11.825,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, Keenon Robotics W3, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_a6ff401274e6"
+    },
+    "key": "sim.near_miss|keenon_w3|peak"
+  },
+  {
+    "fact_id": "f_358",
+    "value": 15.2,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, Keenon Robotics W3, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_a6ff401274e6"
+    },
+    "key": "sim.stops|keenon_w3|peak"
+  },
+  {
+    "fact_id": "f_359",
+    "value": 0.10915,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, Keenon Robotics W3, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_a6ff401274e6"
+    },
+    "key": "sim.min_gap_m|keenon_w3|peak"
+  },
+  {
+    "fact_id": "f_360",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics W3, peak traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_78ce66ca7b50"
+    },
+    "key": "sim.success|keenon_w3|peak|optimistic"
+  },
+  {
+    "fact_id": "f_361",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics W3, peak traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_78ce66ca7b50"
+    },
+    "key": "sim.n|keenon_w3|peak|optimistic"
+  },
+  {
+    "fact_id": "f_362",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Automatable share of the task, Keenon Robotics W3 (success rate x feasible leg fraction)",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:keenon_w3"
+    },
+    "key": "roi.share|keenon_w3"
+  },
+  {
+    "fact_id": "f_363",
+    "value": 866.6666666666665,
+    "unit": "USD/month",
+    "label": "Monthly staff-time saving, Keenon Robotics W3",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:keenon_w3"
+    },
+    "key": "roi.saving|keenon_w3"
+  },
+  {
+    "fact_id": "f_364",
+    "value": "enter a quote",
+    "unit": "",
+    "label": "Payback status, Keenon Robotics W3",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:keenon_w3"
+    },
+    "key": "roi.status|keenon_w3"
+  },
+  {
+    "fact_id": "f_365",
+    "value": "Cleared",
+    "unit": "",
+    "label": "Verdict, Keenon Robotics W3",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_w3"
+    },
+    "key": "verdict|keenon_w3"
+  },
+  {
+    "fact_id": "f_366",
+    "value": "meets every rule as-is",
+    "unit": "",
+    "label": "Verdict main reason, Keenon Robotics W3",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_w3"
+    },
+    "key": "verdict.reason|keenon_w3"
+  },
+  {
+    "fact_id": "f_367",
+    "value": 6.0,
+    "unit": "",
+    "label": "Verdict check value, Keenon Robotics W3 (value 1)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_w3:as_is:0"
+    },
+    "key": "verdict.value_num|keenon_w3|as_is|0|0"
+  },
+  {
+    "fact_id": "f_368",
+    "value": 6.0,
+    "unit": "legs",
+    "label": "Verdict check value, Keenon Robotics W3 (value 2)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_w3:as_is:0"
+    },
+    "key": "verdict.value_num|keenon_w3|as_is|0|1"
+  },
+  {
+    "fact_id": "f_369",
+    "value": 0.9,
+    "unit": "",
+    "label": "Verdict rule, Keenon Robotics W3 (value 1)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_w3:as_is:2"
+    },
+    "key": "verdict.rule_num|keenon_w3|as_is|2|0"
+  },
+  {
+    "fact_id": "f_370",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Verdict check value (as-is), Keenon Robotics W3",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_w3:as_is:2"
+    },
+    "key": "verdict.value|keenon_w3|as_is|2"
+  },
+  {
+    "fact_id": "f_371",
+    "value": 0.9,
+    "unit": "ratio",
+    "label": "Verdict rule threshold, Keenon Robotics W3",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_w3:as_is:2"
+    },
+    "key": "verdict.threshold|keenon_w3|as_is|2"
+  },
+  {
+    "fact_id": "f_372",
+    "value": "Keenon Robotics DINERBOT T9",
+    "unit": "",
+    "label": "Robot model (keenon_dinerbot_t9)",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:keenon_dinerbot_t9"
+    },
+    "key": "robot.name|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_373",
+    "value": "service robot",
+    "unit": "",
+    "label": "Robot class, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:keenon_dinerbot_t9"
+    },
+    "key": "robot.class|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_374",
+    "value": 0.527,
+    "unit": "m",
+    "label": "Footprint length, Keenon Robotics DINERBOT T9 (bounding box)",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/T9"
+    },
+    "key": "robot.length_m|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_375",
+    "value": 0.5,
+    "unit": "m",
+    "label": "Footprint width, Keenon Robotics DINERBOT T9 (bounding box)",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/T9"
+    },
+    "key": "robot.width_m|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_376",
+    "value": 1.266,
+    "unit": "m",
+    "label": "Height, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/T9"
+    },
+    "key": "robot.height_m|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_377",
+    "value": 1.0,
+    "unit": "m/s",
+    "label": "Max speed (vendor), Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/T9"
+    },
+    "key": "robot.max_speed_mps|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_378",
+    "value": 5.0,
+    "unit": "deg",
+    "label": "Max slope (vendor), Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/T9"
+    },
+    "key": "robot.max_slope_deg|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_379",
+    "value": 0.7,
+    "unit": "m",
+    "label": "Minimum aisle width (vendor), Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/T9"
+    },
+    "key": "robot.min_aisle_m|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_380",
+    "value": 40.0,
+    "unit": "kg",
+    "label": "Payload (vendor), Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/T9"
+    },
+    "key": "robot.payload_kg|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_381",
+    "value": 18.0,
+    "unit": "h",
+    "label": "Runtime per charge (vendor), Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.keenon.com/en/product/T9"
+    },
+    "key": "robot.runtime_h|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_382",
+    "value": "price on request",
+    "unit": "",
+    "label": "Price, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:keenon_dinerbot_t9"
+    },
+    "key": "robot.price_status|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_383",
+    "value": "human-reviewed",
+    "unit": "",
+    "label": "Catalog review status, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:keenon_dinerbot_t9"
+    },
+    "key": "robot.verified|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_384",
+    "value": 6.0,
+    "unit": "count",
+    "label": "Task legs, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1"
+    },
+    "key": "feas.legs_total|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_385",
+    "value": 6.0,
+    "unit": "count",
+    "label": "Task legs feasible (static check), Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1"
+    },
+    "key": "feas.legs_ok|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_386",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Fraction of task legs feasible, Keenon Robotics DINERBOT T9 (pending legs count as not feasible)",
+    "origin": {
+      "type": "formula",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:feasible/total"
+    },
+    "key": "feas.frac|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_387",
+    "value": 1.15,
+    "unit": "m",
+    "label": "Narrowest gap on route, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.narrowest_gap_m|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_388",
+    "value": 0.5,
+    "unit": "m",
+    "label": "Gap the robot needs at the narrowest point, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.narrowest_required_m|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_389",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg DOCK to PICKUP, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_status|keenon_dinerbot_t9|0"
+  },
+  {
+    "fact_id": "f_390",
+    "value": 1.15,
+    "unit": "m",
+    "label": "Narrowest gap, leg DOCK to PICKUP, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_gap|keenon_dinerbot_t9|0"
+  },
+  {
+    "fact_id": "f_391",
+    "value": 0.5,
+    "unit": "m",
+    "label": "Gap needed, leg DOCK to PICKUP, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_required|keenon_dinerbot_t9|0"
+  },
+  {
+    "fact_id": "f_392",
+    "value": 14.064,
+    "unit": "m",
+    "label": "Path length, leg DOCK to PICKUP, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_len|keenon_dinerbot_t9|0"
+  },
+  {
+    "fact_id": "f_393",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg PICKUP to O4, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_status|keenon_dinerbot_t9|1"
+  },
+  {
+    "fact_id": "f_394",
+    "value": 1.15,
+    "unit": "m",
+    "label": "Narrowest gap, leg PICKUP to O4, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_gap|keenon_dinerbot_t9|1"
+  },
+  {
+    "fact_id": "f_395",
+    "value": 0.5,
+    "unit": "m",
+    "label": "Gap needed, leg PICKUP to O4, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_required|keenon_dinerbot_t9|1"
+  },
+  {
+    "fact_id": "f_396",
+    "value": 4.182,
+    "unit": "m",
+    "label": "Path length, leg PICKUP to O4, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_len|keenon_dinerbot_t9|1"
+  },
+  {
+    "fact_id": "f_397",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O4 to O3, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_status|keenon_dinerbot_t9|2"
+  },
+  {
+    "fact_id": "f_398",
+    "value": 1.325,
+    "unit": "m",
+    "label": "Narrowest gap, leg O4 to O3, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_gap|keenon_dinerbot_t9|2"
+  },
+  {
+    "fact_id": "f_399",
+    "value": 0.5,
+    "unit": "m",
+    "label": "Gap needed, leg O4 to O3, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_required|keenon_dinerbot_t9|2"
+  },
+  {
+    "fact_id": "f_400",
+    "value": 4.012,
+    "unit": "m",
+    "label": "Path length, leg O4 to O3, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_len|keenon_dinerbot_t9|2"
+  },
+  {
+    "fact_id": "f_401",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O3 to O2, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_status|keenon_dinerbot_t9|3"
+  },
+  {
+    "fact_id": "f_402",
+    "value": 1.8905,
+    "unit": "m",
+    "label": "Narrowest gap, leg O3 to O2, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_gap|keenon_dinerbot_t9|3"
+  },
+  {
+    "fact_id": "f_403",
+    "value": 0.5,
+    "unit": "m",
+    "label": "Gap needed, leg O3 to O2, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_required|keenon_dinerbot_t9|3"
+  },
+  {
+    "fact_id": "f_404",
+    "value": 2.285,
+    "unit": "m",
+    "label": "Path length, leg O3 to O2, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_len|keenon_dinerbot_t9|3"
+  },
+  {
+    "fact_id": "f_405",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O2 to O1, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_status|keenon_dinerbot_t9|4"
+  },
+  {
+    "fact_id": "f_406",
+    "value": 1.8896,
+    "unit": "m",
+    "label": "Narrowest gap, leg O2 to O1, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_gap|keenon_dinerbot_t9|4"
+  },
+  {
+    "fact_id": "f_407",
+    "value": 0.5,
+    "unit": "m",
+    "label": "Gap needed, leg O2 to O1, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_required|keenon_dinerbot_t9|4"
+  },
+  {
+    "fact_id": "f_408",
+    "value": 2.264,
+    "unit": "m",
+    "label": "Path length, leg O2 to O1, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_len|keenon_dinerbot_t9|4"
+  },
+  {
+    "fact_id": "f_409",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O1 to DOCK, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_status|keenon_dinerbot_t9|5"
+  },
+  {
+    "fact_id": "f_410",
+    "value": 1.3624,
+    "unit": "m",
+    "label": "Narrowest gap, leg O1 to DOCK, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_gap|keenon_dinerbot_t9|5"
+  },
+  {
+    "fact_id": "f_411",
+    "value": 0.5,
+    "unit": "m",
+    "label": "Gap needed, leg O1 to DOCK, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_required|keenon_dinerbot_t9|5"
+  },
+  {
+    "fact_id": "f_412",
+    "value": 2.01,
+    "unit": "m",
+    "label": "Path length, leg O1 to DOCK, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:keenon_dinerbot_t9:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_len|keenon_dinerbot_t9|5"
+  },
+  {
+    "fact_id": "f_413",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics DINERBOT T9, quiet traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_3bc2a9c7de83"
+    },
+    "key": "sim.success|keenon_dinerbot_t9|quiet|conservative"
+  },
+  {
+    "fact_id": "f_414",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics DINERBOT T9, quiet traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_3bc2a9c7de83"
+    },
+    "key": "sim.n|keenon_dinerbot_t9|quiet|conservative"
+  },
+  {
+    "fact_id": "f_415",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics DINERBOT T9, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_765cb6f48709"
+    },
+    "key": "sim.success|keenon_dinerbot_t9|quiet|nominal"
+  },
+  {
+    "fact_id": "f_416",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics DINERBOT T9, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_765cb6f48709"
+    },
+    "key": "sim.n|keenon_dinerbot_t9|quiet|nominal"
+  },
+  {
+    "fact_id": "f_417",
+    "value": 0.9123754607496077,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, Keenon Robotics DINERBOT T9, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_765cb6f48709"
+    },
+    "key": "sim.ci_lo|keenon_dinerbot_t9|quiet"
+  },
+  {
+    "fact_id": "f_418",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, Keenon Robotics DINERBOT T9, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_765cb6f48709"
+    },
+    "key": "sim.ci_hi|keenon_dinerbot_t9|quiet"
+  },
+  {
+    "fact_id": "f_419",
+    "value": 60.8,
+    "unit": "s",
+    "label": "Median mission time, Keenon Robotics DINERBOT T9, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_765cb6f48709"
+    },
+    "key": "sim.mission_s|keenon_dinerbot_t9|quiet"
+  },
+  {
+    "fact_id": "f_420",
+    "value": 1.325,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, Keenon Robotics DINERBOT T9, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_765cb6f48709"
+    },
+    "key": "sim.near_miss|keenon_dinerbot_t9|quiet"
+  },
+  {
+    "fact_id": "f_421",
+    "value": 2.125,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, Keenon Robotics DINERBOT T9, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_765cb6f48709"
+    },
+    "key": "sim.stops|keenon_dinerbot_t9|quiet"
+  },
+  {
+    "fact_id": "f_422",
+    "value": 0.11805,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, Keenon Robotics DINERBOT T9, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_765cb6f48709"
+    },
+    "key": "sim.min_gap_m|keenon_dinerbot_t9|quiet"
+  },
+  {
+    "fact_id": "f_423",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics DINERBOT T9, quiet traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_b333c272994a"
+    },
+    "key": "sim.success|keenon_dinerbot_t9|quiet|optimistic"
+  },
+  {
+    "fact_id": "f_424",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics DINERBOT T9, quiet traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_b333c272994a"
+    },
+    "key": "sim.n|keenon_dinerbot_t9|quiet|optimistic"
+  },
+  {
+    "fact_id": "f_425",
+    "value": 0.95,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics DINERBOT T9, normal traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_26803c956feb"
+    },
+    "key": "sim.success|keenon_dinerbot_t9|normal|conservative"
+  },
+  {
+    "fact_id": "f_426",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics DINERBOT T9, normal traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_26803c956feb"
+    },
+    "key": "sim.n|keenon_dinerbot_t9|normal|conservative"
+  },
+  {
+    "fact_id": "f_427",
+    "value": 0.95,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics DINERBOT T9, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_00fab14fa702"
+    },
+    "key": "sim.success|keenon_dinerbot_t9|normal|nominal"
+  },
+  {
+    "fact_id": "f_428",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics DINERBOT T9, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_00fab14fa702"
+    },
+    "key": "sim.n|keenon_dinerbot_t9|normal|nominal"
+  },
+  {
+    "fact_id": "f_429",
+    "value": 0.834958291820748,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, Keenon Robotics DINERBOT T9, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_00fab14fa702"
+    },
+    "key": "sim.ci_lo|keenon_dinerbot_t9|normal"
+  },
+  {
+    "fact_id": "f_430",
+    "value": 0.9861796228538989,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, Keenon Robotics DINERBOT T9, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_00fab14fa702"
+    },
+    "key": "sim.ci_hi|keenon_dinerbot_t9|normal"
+  },
+  {
+    "fact_id": "f_431",
+    "value": 74.8,
+    "unit": "s",
+    "label": "Median mission time, Keenon Robotics DINERBOT T9, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_00fab14fa702"
+    },
+    "key": "sim.mission_s|keenon_dinerbot_t9|normal"
+  },
+  {
+    "fact_id": "f_432",
+    "value": 4.225,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, Keenon Robotics DINERBOT T9, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_00fab14fa702"
+    },
+    "key": "sim.near_miss|keenon_dinerbot_t9|normal"
+  },
+  {
+    "fact_id": "f_433",
+    "value": 5.925,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, Keenon Robotics DINERBOT T9, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_00fab14fa702"
+    },
+    "key": "sim.stops|keenon_dinerbot_t9|normal"
+  },
+  {
+    "fact_id": "f_434",
+    "value": 0.1185,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, Keenon Robotics DINERBOT T9, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_00fab14fa702"
+    },
+    "key": "sim.min_gap_m|keenon_dinerbot_t9|normal"
+  },
+  {
+    "fact_id": "f_435",
+    "value": 2.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (collision), Keenon Robotics DINERBOT T9, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_00fab14fa702"
+    },
+    "key": "sim.fail|keenon_dinerbot_t9|normal|collision"
+  },
+  {
+    "fact_id": "f_436",
+    "value": 0.95,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics DINERBOT T9, normal traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_efc1fa3c1770"
+    },
+    "key": "sim.success|keenon_dinerbot_t9|normal|optimistic"
+  },
+  {
+    "fact_id": "f_437",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics DINERBOT T9, normal traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_efc1fa3c1770"
+    },
+    "key": "sim.n|keenon_dinerbot_t9|normal|optimistic"
+  },
+  {
+    "fact_id": "f_438",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics DINERBOT T9, peak traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_33ec807bc9a0"
+    },
+    "key": "sim.success|keenon_dinerbot_t9|peak|conservative"
+  },
+  {
+    "fact_id": "f_439",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics DINERBOT T9, peak traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_33ec807bc9a0"
+    },
+    "key": "sim.n|keenon_dinerbot_t9|peak|conservative"
+  },
+  {
+    "fact_id": "f_440",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_55222ab9a89d"
+    },
+    "key": "sim.success|keenon_dinerbot_t9|peak|nominal"
+  },
+  {
+    "fact_id": "f_441",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_55222ab9a89d"
+    },
+    "key": "sim.n|keenon_dinerbot_t9|peak|nominal"
+  },
+  {
+    "fact_id": "f_442",
+    "value": 0.8013546984090248,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_55222ab9a89d"
+    },
+    "key": "sim.ci_lo|keenon_dinerbot_t9|peak"
+  },
+  {
+    "fact_id": "f_443",
+    "value": 0.9741644432281419,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_55222ab9a89d"
+    },
+    "key": "sim.ci_hi|keenon_dinerbot_t9|peak"
+  },
+  {
+    "fact_id": "f_444",
+    "value": 110.5,
+    "unit": "s",
+    "label": "Median mission time, Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_55222ab9a89d"
+    },
+    "key": "sim.mission_s|keenon_dinerbot_t9|peak"
+  },
+  {
+    "fact_id": "f_445",
+    "value": 11.375,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_55222ab9a89d"
+    },
+    "key": "sim.near_miss|keenon_dinerbot_t9|peak"
+  },
+  {
+    "fact_id": "f_446",
+    "value": 15.975,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_55222ab9a89d"
+    },
+    "key": "sim.stops|keenon_dinerbot_t9|peak"
+  },
+  {
+    "fact_id": "f_447",
+    "value": 0.11574999999999999,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_55222ab9a89d"
+    },
+    "key": "sim.min_gap_m|keenon_dinerbot_t9|peak"
+  },
+  {
+    "fact_id": "f_448",
+    "value": 2.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (blocked timeout), Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_55222ab9a89d"
+    },
+    "key": "sim.fail|keenon_dinerbot_t9|peak|blocked_timeout"
+  },
+  {
+    "fact_id": "f_449",
+    "value": 1.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (collision), Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_55222ab9a89d"
+    },
+    "key": "sim.fail|keenon_dinerbot_t9|peak|collision"
+  },
+  {
+    "fact_id": "f_450",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Success rate, Keenon Robotics DINERBOT T9, peak traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_f673be977fba"
+    },
+    "key": "sim.success|keenon_dinerbot_t9|peak|optimistic"
+  },
+  {
+    "fact_id": "f_451",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Keenon Robotics DINERBOT T9, peak traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_f673be977fba"
+    },
+    "key": "sim.n|keenon_dinerbot_t9|peak|optimistic"
+  },
+  {
+    "fact_id": "f_452",
+    "value": 0.95,
+    "unit": "ratio",
+    "label": "Automatable share of the task, Keenon Robotics DINERBOT T9 (success rate x feasible leg fraction)",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:keenon_dinerbot_t9"
+    },
+    "key": "roi.share|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_453",
+    "value": 823.3333333333333,
+    "unit": "USD/month",
+    "label": "Monthly staff-time saving, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:keenon_dinerbot_t9"
+    },
+    "key": "roi.saving|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_454",
+    "value": "enter a quote",
+    "unit": "",
+    "label": "Payback status, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:keenon_dinerbot_t9"
+    },
+    "key": "roi.status|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_455",
+    "value": "Cleared",
+    "unit": "",
+    "label": "Verdict, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_dinerbot_t9"
+    },
+    "key": "verdict|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_456",
+    "value": "meets every rule as-is",
+    "unit": "",
+    "label": "Verdict main reason, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_dinerbot_t9"
+    },
+    "key": "verdict.reason|keenon_dinerbot_t9"
+  },
+  {
+    "fact_id": "f_457",
+    "value": 6.0,
+    "unit": "",
+    "label": "Verdict check value, Keenon Robotics DINERBOT T9 (value 1)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_dinerbot_t9:as_is:0"
+    },
+    "key": "verdict.value_num|keenon_dinerbot_t9|as_is|0|0"
+  },
+  {
+    "fact_id": "f_458",
+    "value": 6.0,
+    "unit": "legs",
+    "label": "Verdict check value, Keenon Robotics DINERBOT T9 (value 2)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_dinerbot_t9:as_is:0"
+    },
+    "key": "verdict.value_num|keenon_dinerbot_t9|as_is|0|1"
+  },
+  {
+    "fact_id": "f_459",
+    "value": 0.9,
+    "unit": "",
+    "label": "Verdict rule, Keenon Robotics DINERBOT T9 (value 1)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_dinerbot_t9:as_is:2"
+    },
+    "key": "verdict.rule_num|keenon_dinerbot_t9|as_is|2|0"
+  },
+  {
+    "fact_id": "f_460",
+    "value": 0.95,
+    "unit": "ratio",
+    "label": "Verdict check value (as-is), Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_dinerbot_t9:as_is:2"
+    },
+    "key": "verdict.value|keenon_dinerbot_t9|as_is|2"
+  },
+  {
+    "fact_id": "f_461",
+    "value": 0.9,
+    "unit": "ratio",
+    "label": "Verdict rule threshold, Keenon Robotics DINERBOT T9",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:keenon_dinerbot_t9:as_is:2"
+    },
+    "key": "verdict.threshold|keenon_dinerbot_t9|as_is|2"
+  },
+  {
+    "fact_id": "f_462",
+    "value": "Pudu Robotics T300",
+    "unit": "",
+    "label": "Robot model (pudu_t300)",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:pudu_t300"
+    },
+    "key": "robot.name|pudu_t300"
+  },
+  {
+    "fact_id": "f_463",
+    "value": "indoor AMR",
+    "unit": "",
+    "label": "Robot class, Pudu Robotics T300",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:pudu_t300"
+    },
+    "key": "robot.class|pudu_t300"
+  },
+  {
+    "fact_id": "f_464",
+    "value": 0.835,
+    "unit": "m",
+    "label": "Footprint length, Pudu Robotics T300 (bounding box)",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.pudurobotics.com/en/products/pudut300"
+    },
+    "key": "robot.length_m|pudu_t300"
+  },
+  {
+    "fact_id": "f_465",
+    "value": 0.5,
+    "unit": "m",
+    "label": "Footprint width, Pudu Robotics T300 (bounding box)",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.pudurobotics.com/en/products/pudut300"
+    },
+    "key": "robot.width_m|pudu_t300"
+  },
+  {
+    "fact_id": "f_466",
+    "value": 1.35,
+    "unit": "m",
+    "label": "Height, Pudu Robotics T300",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.pudurobotics.com/en/products/pudut300"
+    },
+    "key": "robot.height_m|pudu_t300"
+  },
+  {
+    "fact_id": "f_467",
+    "value": 1.2,
+    "unit": "m/s",
+    "label": "Max speed (vendor), Pudu Robotics T300",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.pudurobotics.com/en/products/pudut300"
+    },
+    "key": "robot.max_speed_mps|pudu_t300"
+  },
+  {
+    "fact_id": "f_468",
+    "value": 0.02,
+    "unit": "m",
+    "label": "Max threshold height (vendor), Pudu Robotics T300",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.pudurobotics.com/en/products/pudut300"
+    },
+    "key": "robot.max_threshold_m|pudu_t300"
+  },
+  {
+    "fact_id": "f_469",
+    "value": 0.6,
+    "unit": "m",
+    "label": "Minimum aisle width (vendor), Pudu Robotics T300",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.pudurobotics.com/en/products/pudut300"
+    },
+    "key": "robot.min_aisle_m|pudu_t300"
+  },
+  {
+    "fact_id": "f_470",
+    "value": 300.0,
+    "unit": "kg",
+    "label": "Payload (vendor), Pudu Robotics T300",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.pudurobotics.com/en/products/pudut300"
+    },
+    "key": "robot.payload_kg|pudu_t300"
+  },
+  {
+    "fact_id": "f_471",
+    "value": 8.0,
+    "unit": "h",
+    "label": "Runtime per charge (vendor), Pudu Robotics T300",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.pudurobotics.com/en/products/pudut300"
+    },
+    "key": "robot.runtime_h|pudu_t300"
+  },
+  {
+    "fact_id": "f_472",
+    "value": "price on request",
+    "unit": "",
+    "label": "Price, Pudu Robotics T300",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:pudu_t300"
+    },
+    "key": "robot.price_status|pudu_t300"
+  },
+  {
+    "fact_id": "f_473",
+    "value": "human-reviewed",
+    "unit": "",
+    "label": "Catalog review status, Pudu Robotics T300",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:pudu_t300"
+    },
+    "key": "robot.verified|pudu_t300"
+  },
+  {
+    "fact_id": "f_474",
+    "value": 6.0,
+    "unit": "count",
+    "label": "Task legs, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1"
+    },
+    "key": "feas.legs_total|pudu_t300"
+  },
+  {
+    "fact_id": "f_475",
+    "value": 6.0,
+    "unit": "count",
+    "label": "Task legs feasible (static check), Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1"
+    },
+    "key": "feas.legs_ok|pudu_t300"
+  },
+  {
+    "fact_id": "f_476",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Fraction of task legs feasible, Pudu Robotics T300 (pending legs count as not feasible)",
+    "origin": {
+      "type": "formula",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:feasible/total"
+    },
+    "key": "feas.frac|pudu_t300"
+  },
+  {
+    "fact_id": "f_477",
+    "value": 0.8989,
+    "unit": "m",
+    "label": "Narrowest gap on route, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.narrowest_gap_m|pudu_t300"
+  },
+  {
+    "fact_id": "f_478",
+    "value": 0.5,
+    "unit": "m",
+    "label": "Gap the robot needs at the narrowest point, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.narrowest_required_m|pudu_t300"
+  },
+  {
+    "fact_id": "f_479",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg DOCK to PICKUP, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_status|pudu_t300|0"
+  },
+  {
+    "fact_id": "f_480",
+    "value": 1.1516,
+    "unit": "m",
+    "label": "Narrowest gap, leg DOCK to PICKUP, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_gap|pudu_t300|0"
+  },
+  {
+    "fact_id": "f_481",
+    "value": 0.5,
+    "unit": "m",
+    "label": "Gap needed, leg DOCK to PICKUP, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_required|pudu_t300|0"
+  },
+  {
+    "fact_id": "f_482",
+    "value": 13.976,
+    "unit": "m",
+    "label": "Path length, leg DOCK to PICKUP, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg0"
+    },
+    "key": "feas.leg_len|pudu_t300|0"
+  },
+  {
+    "fact_id": "f_483",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg PICKUP to O4, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_status|pudu_t300|1"
+  },
+  {
+    "fact_id": "f_484",
+    "value": 1.1501,
+    "unit": "m",
+    "label": "Narrowest gap, leg PICKUP to O4, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_gap|pudu_t300|1"
+  },
+  {
+    "fact_id": "f_485",
+    "value": 0.5,
+    "unit": "m",
+    "label": "Gap needed, leg PICKUP to O4, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_required|pudu_t300|1"
+  },
+  {
+    "fact_id": "f_486",
+    "value": 4.3,
+    "unit": "m",
+    "label": "Path length, leg PICKUP to O4, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg1"
+    },
+    "key": "feas.leg_len|pudu_t300|1"
+  },
+  {
+    "fact_id": "f_487",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O4 to O3, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_status|pudu_t300|2"
+  },
+  {
+    "fact_id": "f_488",
+    "value": 1.325,
+    "unit": "m",
+    "label": "Narrowest gap, leg O4 to O3, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_gap|pudu_t300|2"
+  },
+  {
+    "fact_id": "f_489",
+    "value": 0.5,
+    "unit": "m",
+    "label": "Gap needed, leg O4 to O3, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_required|pudu_t300|2"
+  },
+  {
+    "fact_id": "f_490",
+    "value": 3.975,
+    "unit": "m",
+    "label": "Path length, leg O4 to O3, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg2"
+    },
+    "key": "feas.leg_len|pudu_t300|2"
+  },
+  {
+    "fact_id": "f_491",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O3 to O2, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_status|pudu_t300|3"
+  },
+  {
+    "fact_id": "f_492",
+    "value": 1.7917,
+    "unit": "m",
+    "label": "Narrowest gap, leg O3 to O2, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_gap|pudu_t300|3"
+  },
+  {
+    "fact_id": "f_493",
+    "value": 0.5,
+    "unit": "m",
+    "label": "Gap needed, leg O3 to O2, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_required|pudu_t300|3"
+  },
+  {
+    "fact_id": "f_494",
+    "value": 2.28,
+    "unit": "m",
+    "label": "Path length, leg O3 to O2, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg3"
+    },
+    "key": "feas.leg_len|pudu_t300|3"
+  },
+  {
+    "fact_id": "f_495",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O2 to O1, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_status|pudu_t300|4"
+  },
+  {
+    "fact_id": "f_496",
+    "value": 1.8189,
+    "unit": "m",
+    "label": "Narrowest gap, leg O2 to O1, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_gap|pudu_t300|4"
+  },
+  {
+    "fact_id": "f_497",
+    "value": 0.5,
+    "unit": "m",
+    "label": "Gap needed, leg O2 to O1, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_required|pudu_t300|4"
+  },
+  {
+    "fact_id": "f_498",
+    "value": 2.271,
+    "unit": "m",
+    "label": "Path length, leg O2 to O1, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg4"
+    },
+    "key": "feas.leg_len|pudu_t300|4"
+  },
+  {
+    "fact_id": "f_499",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg O1 to DOCK, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_status|pudu_t300|5"
+  },
+  {
+    "fact_id": "f_500",
+    "value": 0.8989,
+    "unit": "m",
+    "label": "Narrowest gap, leg O1 to DOCK, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_gap|pudu_t300|5"
+  },
+  {
+    "fact_id": "f_501",
+    "value": 0.5,
+    "unit": "m",
+    "label": "Gap needed, leg O1 to DOCK, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_required|pudu_t300|5"
+  },
+  {
+    "fact_id": "f_502",
+    "value": 2.086,
+    "unit": "m",
+    "label": "Path length, leg O1 to DOCK, Pudu Robotics T300",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:pudu_t300:twin_ref_corridor_v1:v1:leg5"
+    },
+    "key": "feas.leg_len|pudu_t300|5"
+  },
+  {
+    "fact_id": "f_503",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Pudu Robotics T300, quiet traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_4e9b0ea7d6e0"
+    },
+    "key": "sim.success|pudu_t300|quiet|conservative"
+  },
+  {
+    "fact_id": "f_504",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Pudu Robotics T300, quiet traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_4e9b0ea7d6e0"
+    },
+    "key": "sim.n|pudu_t300|quiet|conservative"
+  },
+  {
+    "fact_id": "f_505",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_14767a360968"
+    },
+    "key": "sim.success|pudu_t300|quiet|nominal"
+  },
+  {
+    "fact_id": "f_506",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_14767a360968"
+    },
+    "key": "sim.n|pudu_t300|quiet|nominal"
+  },
+  {
+    "fact_id": "f_507",
+    "value": 0.9123754607496077,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_14767a360968"
+    },
+    "key": "sim.ci_lo|pudu_t300|quiet"
+  },
+  {
+    "fact_id": "f_508",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_14767a360968"
+    },
+    "key": "sim.ci_hi|pudu_t300|quiet"
+  },
+  {
+    "fact_id": "f_509",
+    "value": 61.2,
+    "unit": "s",
+    "label": "Median mission time, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_14767a360968"
+    },
+    "key": "sim.mission_s|pudu_t300|quiet"
+  },
+  {
+    "fact_id": "f_510",
+    "value": 1.225,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_14767a360968"
+    },
+    "key": "sim.near_miss|pudu_t300|quiet"
+  },
+  {
+    "fact_id": "f_511",
+    "value": 2.25,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_14767a360968"
+    },
+    "key": "sim.stops|pudu_t300|quiet"
+  },
+  {
+    "fact_id": "f_512",
+    "value": 0.03875,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_14767a360968"
+    },
+    "key": "sim.min_gap_m|pudu_t300|quiet"
+  },
+  {
+    "fact_id": "f_513",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Success rate, Pudu Robotics T300, quiet traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_70c3e78b9785"
+    },
+    "key": "sim.success|pudu_t300|quiet|optimistic"
+  },
+  {
+    "fact_id": "f_514",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Pudu Robotics T300, quiet traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_70c3e78b9785"
+    },
+    "key": "sim.n|pudu_t300|quiet|optimistic"
+  },
+  {
+    "fact_id": "f_515",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Success rate, Pudu Robotics T300, normal traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_c455f4561ac5"
+    },
+    "key": "sim.success|pudu_t300|normal|conservative"
+  },
+  {
+    "fact_id": "f_516",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Pudu Robotics T300, normal traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_c455f4561ac5"
+    },
+    "key": "sim.n|pudu_t300|normal|conservative"
+  },
+  {
+    "fact_id": "f_517",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Success rate, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_42dcd6e93645"
+    },
+    "key": "sim.success|pudu_t300|normal|nominal"
+  },
+  {
+    "fact_id": "f_518",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_42dcd6e93645"
+    },
+    "key": "sim.n|pudu_t300|normal|nominal"
+  },
+  {
+    "fact_id": "f_519",
+    "value": 0.8013546984090248,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_42dcd6e93645"
+    },
+    "key": "sim.ci_lo|pudu_t300|normal"
+  },
+  {
+    "fact_id": "f_520",
+    "value": 0.9741644432281419,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_42dcd6e93645"
+    },
+    "key": "sim.ci_hi|pudu_t300|normal"
+  },
+  {
+    "fact_id": "f_521",
+    "value": 75.1,
+    "unit": "s",
+    "label": "Median mission time, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_42dcd6e93645"
+    },
+    "key": "sim.mission_s|pudu_t300|normal"
+  },
+  {
+    "fact_id": "f_522",
+    "value": 4.025,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_42dcd6e93645"
+    },
+    "key": "sim.near_miss|pudu_t300|normal"
+  },
+  {
+    "fact_id": "f_523",
+    "value": 5.8,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_42dcd6e93645"
+    },
+    "key": "sim.stops|pudu_t300|normal"
+  },
+  {
+    "fact_id": "f_524",
+    "value": 0.04865,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_42dcd6e93645"
+    },
+    "key": "sim.min_gap_m|pudu_t300|normal"
+  },
+  {
+    "fact_id": "f_525",
+    "value": 3.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (collision), Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_42dcd6e93645"
+    },
+    "key": "sim.fail|pudu_t300|normal|collision"
+  },
+  {
+    "fact_id": "f_526",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Success rate, Pudu Robotics T300, normal traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_f5532b6af279"
+    },
+    "key": "sim.success|pudu_t300|normal|optimistic"
+  },
+  {
+    "fact_id": "f_527",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Pudu Robotics T300, normal traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_f5532b6af279"
+    },
+    "key": "sim.n|pudu_t300|normal|optimistic"
+  },
+  {
+    "fact_id": "f_528",
+    "value": 0.9,
+    "unit": "ratio",
+    "label": "Success rate, Pudu Robotics T300, peak traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_aa83abd3b65a"
+    },
+    "key": "sim.success|pudu_t300|peak|conservative"
+  },
+  {
+    "fact_id": "f_529",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Pudu Robotics T300, peak traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_aa83abd3b65a"
+    },
+    "key": "sim.n|pudu_t300|peak|conservative"
+  },
+  {
+    "fact_id": "f_530",
+    "value": 0.9,
+    "unit": "ratio",
+    "label": "Success rate, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_4b9bff155af5"
+    },
+    "key": "sim.success|pudu_t300|peak|nominal"
+  },
+  {
+    "fact_id": "f_531",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_4b9bff155af5"
+    },
+    "key": "sim.n|pudu_t300|peak|nominal"
+  },
+  {
+    "fact_id": "f_532",
+    "value": 0.7694792561952611,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_4b9bff155af5"
+    },
+    "key": "sim.ci_lo|pudu_t300|peak"
+  },
+  {
+    "fact_id": "f_533",
+    "value": 0.9604211124044252,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_4b9bff155af5"
+    },
+    "key": "sim.ci_hi|pudu_t300|peak"
+  },
+  {
+    "fact_id": "f_534",
+    "value": 112.65,
+    "unit": "s",
+    "label": "Median mission time, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_4b9bff155af5"
+    },
+    "key": "sim.mission_s|pudu_t300|peak"
+  },
+  {
+    "fact_id": "f_535",
+    "value": 10.775,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_4b9bff155af5"
+    },
+    "key": "sim.near_miss|pudu_t300|peak"
+  },
+  {
+    "fact_id": "f_536",
+    "value": 14.7,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_4b9bff155af5"
+    },
+    "key": "sim.stops|pudu_t300|peak"
+  },
+  {
+    "fact_id": "f_537",
+    "value": 0.051500000000000004,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_4b9bff155af5"
+    },
+    "key": "sim.min_gap_m|pudu_t300|peak"
+  },
+  {
+    "fact_id": "f_538",
+    "value": 1.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (blocked timeout), Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_4b9bff155af5"
+    },
+    "key": "sim.fail|pudu_t300|peak|blocked_timeout"
+  },
+  {
+    "fact_id": "f_539",
+    "value": 3.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (collision), Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_4b9bff155af5"
+    },
+    "key": "sim.fail|pudu_t300|peak|collision"
+  },
+  {
+    "fact_id": "f_540",
+    "value": 0.9,
+    "unit": "ratio",
+    "label": "Success rate, Pudu Robotics T300, peak traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d0b7a3db74ce"
+    },
+    "key": "sim.success|pudu_t300|peak|optimistic"
+  },
+  {
+    "fact_id": "f_541",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, Pudu Robotics T300, peak traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d0b7a3db74ce"
+    },
+    "key": "sim.n|pudu_t300|peak|optimistic"
+  },
+  {
+    "fact_id": "f_542",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Automatable share of the task, Pudu Robotics T300 (success rate x feasible leg fraction)",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:pudu_t300"
+    },
+    "key": "roi.share|pudu_t300"
+  },
+  {
+    "fact_id": "f_543",
+    "value": 801.6666666666666,
+    "unit": "USD/month",
+    "label": "Monthly staff-time saving, Pudu Robotics T300",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:pudu_t300"
+    },
+    "key": "roi.saving|pudu_t300"
+  },
+  {
+    "fact_id": "f_544",
+    "value": "enter a quote",
+    "unit": "",
+    "label": "Payback status, Pudu Robotics T300",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:pudu_t300"
+    },
+    "key": "roi.status|pudu_t300"
+  },
+  {
+    "fact_id": "f_545",
+    "value": "Cleared",
+    "unit": "",
+    "label": "Verdict, Pudu Robotics T300",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:pudu_t300"
+    },
+    "key": "verdict|pudu_t300"
+  },
+  {
+    "fact_id": "f_546",
+    "value": "meets every rule as-is",
+    "unit": "",
+    "label": "Verdict main reason, Pudu Robotics T300",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:pudu_t300"
+    },
+    "key": "verdict.reason|pudu_t300"
+  },
+  {
+    "fact_id": "f_547",
+    "value": 6.0,
+    "unit": "",
+    "label": "Verdict check value, Pudu Robotics T300 (value 1)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:pudu_t300:as_is:0"
+    },
+    "key": "verdict.value_num|pudu_t300|as_is|0|0"
+  },
+  {
+    "fact_id": "f_548",
+    "value": 6.0,
+    "unit": "legs",
+    "label": "Verdict check value, Pudu Robotics T300 (value 2)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:pudu_t300:as_is:0"
+    },
+    "key": "verdict.value_num|pudu_t300|as_is|0|1"
+  },
+  {
+    "fact_id": "f_549",
+    "value": 0.9,
+    "unit": "",
+    "label": "Verdict rule, Pudu Robotics T300 (value 1)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:pudu_t300:as_is:2"
+    },
+    "key": "verdict.rule_num|pudu_t300|as_is|2|0"
+  },
+  {
+    "fact_id": "f_550",
+    "value": 0.925,
+    "unit": "ratio",
+    "label": "Verdict check value (as-is), Pudu Robotics T300",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:pudu_t300:as_is:2"
+    },
+    "key": "verdict.value|pudu_t300|as_is|2"
+  },
+  {
+    "fact_id": "f_551",
+    "value": 0.9,
+    "unit": "ratio",
+    "label": "Verdict rule threshold, Pudu Robotics T300",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:pudu_t300:as_is:2"
+    },
+    "key": "verdict.threshold|pudu_t300|as_is|2"
+  }
+]

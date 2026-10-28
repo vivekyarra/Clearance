@@ -1,0 +1,111 @@
+{
+  "writer": "hybrid",
+  "mode": "live",
+  "analysis_id": "an_ref_storeroom_01",
+  "sections": {
+    "summary": {
+      "llm_calls": 1,
+      "first_pass_errors": 0,
+      "regenerated": false,
+      "errors_after_regeneration": null,
+      "sentences_removed": 0,
+      "fallback": null,
+      "allowed_facts": 26,
+      "tokens_out": 3190,
+      "errors_first_pass_types": [],
+      "wall_s": 73.2
+    },
+    "why|otto_100": {
+      "llm_calls": 2,
+      "first_pass_errors": 1,
+      "regenerated": true,
+      "errors_after_regeneration": 0,
+      "sentences_removed": 0,
+      "fallback": null,
+      "allowed_facts": 28,
+      "tokens_out": 2341,
+      "errors_first_pass_types": [
+        "value_mismatch"
+      ],
+      "wall_s": 48.7
+    },
+    "why|pudu_t300": {
+      "llm_calls": 2,
+      "first_pass_errors": 165,
+      "regenerated": true,
+      "errors_after_regeneration": 1,
+      "sentences_removed": 1,
+      "fallback": null,
+      "allowed_facts": 28,
+      "tokens_out": 9338,
+      "errors_first_pass_types": [
+        "non_numeric_fact",
+        "unit_mismatch",
+        "untagged_number",
+        "value_mismatch"
+      ],
+      "wall_s": 254.9
+    },
+    "why|mir_mir100": {
+      "llm_calls": 2,
+      "first_pass_errors": 2,
+      "regenerated": true,
+      "errors_after_regeneration": 0,
+      "sentences_removed": 0,
+      "fallback": null,
+      "allowed_facts": 30,
+      "tokens_out": 3868,
+      "errors_first_pass_types": [
+        "value_mismatch"
+      ],
+      "wall_s": 82.9
+    },
+    "why|mir_mir250": {
+      "llm_calls": 2,
+      "first_pass_errors": 3,
+      "regenerated": true,
+      "errors_after_regeneration": 2,
+      "sentences_removed": 2,
+      "fallback": null,
+      "allowed_facts": 31,
+      "tokens_out": 5329,
+      "errors_first_pass_types": [
+        "untagged_number",
+        "value_mismatch"
+      ],
+      "wall_s": 141.4
+    },
+    "tradeoffs": {
+      "llm_calls": 2,
+      "first_pass_errors": 0,
+      "regenerated": true,
+      "errors_after_regeneration": 0,
+      "sentences_removed": 0,
+      "fallback": null,
+      "allowed_facts": 32,
+      "tokens_out": 7657,
+      "errors_first_pass_types": [],
+      "wall_s": 165.4
+    }
+  },
+  "totals": {
+    "sections": 6,
+    "llm_calls": 11,
+    "first_pass_errors": 171,
+    "regenerations": 5,
+    "sentences_removed": 3,
+    "fallbacks": []
+  },
+  "final_check": {
+    "ok": true,
+    "errors": 0
+  },
+  "required_blocks": {
+    "comparison_table": true,
+    "verdict_rule_tables": true,
+    "awaiting_review_labels": true,
+    "how_we_investigated": true,
+    "sources": true
+  },
+  "wall_s": 255.0
+}

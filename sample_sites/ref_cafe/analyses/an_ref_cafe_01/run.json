@@ -1,0 +1,110 @@
+{
+  "analysis_id": "an_ref_cafe_01",
+  "site_id": "ref_cafe",
+  "task": [
+    "DOCK",
+    "PICKUP",
+    "T1",
+    "T3",
+    "T5",
+    "DOCK"
+  ],
+  "task_note": "Delivery round: dock, kitchen pass-through (PICKUP), tables 1, 3 and 5, back to dock.",
+  "robot_class": "A_service",
+  "robots_considered": [
+    "bear_servi",
+    "bear_servi_plus",
+    "keenon_dinerbot_t8",
+    "keenon_dinerbot_t9",
+    "keenon_w3",
+    "pudu_bellabot",
+    "pudu_kettybot",
+    "pudu_pudubot_2"
+  ],
+  "budget": {
+    "max_robots": 6,
+    "densities": [
+      "quiet",
+      "normal",
+      "peak"
+    ],
+    "bounds": [
+      "optimistic",
+      "nominal",
+      "conservative"
+    ],
+    "episodes": 40,
+    "seed_base": 1000,
+    "max_workers": 11,
+    "investigate_max_robots": 2,
+    "optimizer_max_robots": 2,
+    "confirm_episodes": 50,
+    "include_awaiting_review": true,
+    "investigation": {
+      "max_steps": 8,
+      "max_experiments": 6,
+      "probe_episodes": 30
+    },
+    "optimizer": {
+      "screen_episodes": 30,
+      "confirm_episodes": 50,
+      "top_k_confirm": 3,
+      "top_k_combo": 2,
+      "max_objects": 4,
+      "max_moves_per_object": 8,
+      "max_episodes": 900
+    }
+  },
+  "status": "done",
+  "wall_time_s": 1958.4,
+  "stage_times_s": {
+    "candidates": 38.0,
+    "feasibility": 10.0,
+    "batches": 499.3,
+    "investigation": 96.7,
+    "optimizer": 989.9,
+    "verdicts": 95.4,
+    "report": 228.1
+  },
+  "batch_episodes": 1440,
+  "batch_stage_s": 499.3,
+  "episodes_per_min_batches": 173.0,
+  "investigation": {
+    "robots": [
+      "bear_servi",
+      "keenon_dinerbot_t9"
+    ],
+    "experiments_run": 1,
+    "probe_episodes": 30,
+    "findings": 0,
+    "findings_confirmed": 0
+  },
+  "factcheck": {
+    "ok": true,
+    "errors": []
+  },
+  "verdicts": {
+    "keenon_dinerbot_t8": {
+      "label": "Cleared with changes",
+      "main_reason": "as-is: threshold D1 must be measured manually; cleared after measuring threshold D1 (holds only if it is within the robot's limit)"
+    },
+    "keenon_dinerbot_t9": {
+      "label": "Not cleared",
+      "main_reason": "threshold D1 must be measured manually"
+    },
+    "bear_servi": {
+      "label": "Not cleared",
+      "main_reason": "threshold D1 must be measured manually"
+    },
+    "keenon_w3": {
+      "label": "Not cleared",
+      "main_reason": "threshold D1 must be measured manually"
+    }
+  },
+  "workers": 11,
+  "cpu_count": 12,
+  "machine": "Windows 10, Intel64 Family 6 Model 186 Stepping 3, GenuineIntel",
+  "llm_mode": "live",
+  "tavily_mode": "live",
+  "finished_at": "2026-10-28 01:56:24"
+}
