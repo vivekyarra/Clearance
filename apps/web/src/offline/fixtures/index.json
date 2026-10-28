@@ -1,0 +1,1314 @@
+{
+ "generated_by": "scripts/run_reference_checks.py --web",
+ "generated_at": "2026-10-28 04:02:27",
+ "sites": [
+  {
+   "site_id": "ref_cafe",
+   "name": "Reference cafe (seed 0)",
+   "type": "cafe",
+   "area_m2": 48.0,
+   "marker": {
+    "family": "tag36h11",
+    "id": 0,
+    "size_m": 0.16
+   },
+   "geometry_source": "reference",
+   "sample": true,
+   "readonly": true,
+   "created_at": "2026-10-27T22:32:23.401Z",
+   "latest_twin_version": 1,
+   "n_analyses": 1
+  },
+  {
+   "site_id": "ref_corridor",
+   "name": "Reference corridor (seed 0)",
+   "type": "other",
+   "area_m2": 28.8,
+   "marker": {
+    "family": "tag36h11",
+    "id": 0,
+    "size_m": 0.16
+   },
+   "geometry_source": "reference",
+   "sample": true,
+   "readonly": true,
+   "created_at": "2026-10-27T22:32:24.728Z",
+   "latest_twin_version": 1,
+   "n_analyses": 1
+  },
+  {
+   "site_id": "ref_storeroom",
+   "name": "Reference storeroom (seed 0)",
+   "type": "storeroom",
+   "area_m2": 80.0,
+   "marker": {
+    "family": "tag36h11",
+    "id": 0,
+    "size_m": 0.16
+   },
+   "geometry_source": "reference",
+   "sample": true,
+   "readonly": true,
+   "created_at": "2026-10-27T22:32:26.207Z",
+   "latest_twin_version": 1,
+   "n_analyses": 1
+  }
+ ],
+ "robots": [
+  {
+   "robot_id": "bear_servi",
+   "class": "A_service",
+   "vendor": "Bear Robotics",
+   "model": "Servi",
+   "footprint_polygon_m": [
+    [
+     0.215,
+     0.2225
+    ],
+    [
+     -0.215,
+     0.2225
+    ],
+    [
+     -0.215,
+     -0.2225
+    ],
+    [
+     0.215,
+     -0.2225
+    ]
+   ],
+   "footprint_approx": true,
+   "height_m": 1.046,
+   "drive": "diff_drive",
+   "in_place_rotation": true,
+   "min_turn_radius_m": 0.0,
+   "max_speed_mps": 1.2,
+   "nominal_speed_mps": null,
+   "max_threshold_m": null,
+   "max_slope_deg": null,
+   "min_aisle_width_vendor_m": null,
+   "payload_kg": 30.0,
+   "runtime_h": 10.0,
+   "safety_stop_distance_m": null,
+   "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": "https://www.bearrobotics.ai/faq"
+   },
+   "fields_sources": {
+    "footprint_polygon_m": {
+     "url": "https://www.bearrobotics.ai/servi",
+     "quote": "17.5 \u00d7 16.9 \u00d7 41.2 in (44.5 \u00d7 43 \u00d7 104.6 cm)",
+     "retrieved_at": "2026-10-27T13:51:40Z"
+    },
+    "height_m": {
+     "url": "https://www.bearrobotics.ai/servi",
+     "quote": "17.5 \u00d7 16.9 \u00d7 41.2 in (44.5 \u00d7 43 \u00d7 104.6 cm)",
+     "retrieved_at": "2026-10-27T13:51:40Z"
+    },
+    "max_speed_mps": {
+     "url": "https://www.bearrobotics.ai/servi",
+     "quote": "Drive speed 0.1~1.2 m/s",
+     "retrieved_at": "2026-10-27T13:51:40Z"
+    },
+    "payload_kg": {
+     "url": "https://www.bearrobotics.ai/servi",
+     "quote": "22 lb (10kg) per tray, total 66 lb (30kg)",
+     "retrieved_at": "2026-10-27T13:51:40Z"
+    },
+    "runtime_h": {
+     "url": "https://www.bearrobotics.ai/servi",
+     "quote": "Battery life 10-12 hrs",
+     "retrieved_at": "2026-10-27T13:51:40Z"
+    },
+    "price": {
+     "url": "https://www.bearrobotics.ai/faq",
+     "quote": "Costs can vary depending on certain conditions.",
+     "retrieved_at": "2026-10-27T13:49:53Z"
+    }
+   },
+   "verified_by_human": true,
+   "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://www.bearrobotics.ai/servi\", \"https://www.bearrobotics.ai/faq\"], \"null_fields\": [\"nominal_speed_mps\", \"max_threshold_m\", \"max_slope_deg\", \"min_aisle_width_vendor_m\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"specs are the first Servi column on the page (2 trays, 1 bus tub)\", \"runtime is the lower end of the vendor's 10-12 hrs range\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.bearrobotics.ai/servi\", \"https://restauranttools.ai/tools/bear-robotics\", \"https://www.therobotreport.com/servi-bussing-robot-product-bear-robotics-softbank-partnership\", \"https://www.softbankrobotics.com/news/20200928a\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [], \"fields_rejected_by_validator\": 1, \"other_pages_differing\": [{\"field\": \"runtime_h\", \"value\": 8.0, \"url\": \"https://restauranttools.ai/tools/bear-robotics\"}], \"note\": \"A first live run ranked a sibling model's page (Servi Plus) above this model's page; values from that page were not used. The search ranking now puts pages that name the exact model first, and the re-run agrees with the catalog.\"}}",
+   "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:15.082Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+   }
+  },
+  {
+   "robot_id": "bear_servi_plus",
+   "class": "A_service",
+   "vendor": "Bear Robotics",
+   "model": "Servi Plus",
+   "footprint_polygon_m": [
+    [
+     0.295,
+     0.2675
+    ],
+    [
+     -0.295,
+     0.2675
+    ],
+    [
+     -0.295,
+     -0.2675
+    ],
+    [
+     0.295,
+     -0.2675
+    ]
+   ],
+   "footprint_approx": true,
+   "height_m": 1.23,
+   "drive": "diff_drive",
+   "in_place_rotation": true,
+   "min_turn_radius_m": 0.0,
+   "max_speed_mps": 1.2,
+   "nominal_speed_mps": null,
+   "max_threshold_m": 0.0127,
+   "max_slope_deg": 7.0,
+   "min_aisle_width_vendor_m": 0.65,
+   "payload_kg": 40.0,
+   "runtime_h": 10.0,
+   "safety_stop_distance_m": null,
+   "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": "https://www.bearrobotics.ai/servi-plus"
+   },
+   "fields_sources": {
+    "footprint_polygon_m": {
+     "url": "https://www.bearrobotics.ai/servi-plus",
+     "quote": "21 \u00d7 23 \u00d7 48 in (53.5 \u00d7 59 \u00d7 123 cm)",
+     "retrieved_at": "2026-10-27T13:51:39Z"
+    },
+    "height_m": {
+     "url": "https://www.bearrobotics.ai/servi-plus",
+     "quote": "21 \u00d7 23 \u00d7 48 in (53.5 \u00d7 59 \u00d7 123 cm)",
+     "retrieved_at": "2026-10-27T13:51:39Z"
+    },
+    "min_aisle_width_vendor_m": {
+     "url": "https://www.bearrobotics.ai/servi-plus",
+     "quote": "Pass width Minimum 25.6 in (65 cm)",
+     "retrieved_at": "2026-10-27T13:51:39Z"
+    },
+    "max_speed_mps": {
+     "url": "https://www.bearrobotics.ai/servi-plus",
+     "quote": "Drive speed 0.1~1.2 m/s",
+     "retrieved_at": "2026-10-27T13:51:39Z"
+    },
+    "payload_kg": {
+     "url": "https://www.bearrobotics.ai/servi-plus",
+     "quote": "22 lb (10 kg) per tray, total 88 lb (40 kg)",
+     "retrieved_at": "2026-10-27T13:51:39Z"
+    },
+    "runtime_h": {
+     "url": "https://www.bearrobotics.ai/servi-plus",
+     "quote": "Battery Life 10-12 hrs",
+     "retrieved_at": "2026-10-27T13:51:39Z"
+    },
+    "max_threshold_m": {
+     "url": "https://www.bearrobotics.ai/servi-plus",
+     "quote": "ADA ramps, and thresholds up to 1/2\".",
+     "retrieved_at": "2026-10-27T13:51:39Z"
+    },
+    "price": {
+     "url": "https://www.bearrobotics.ai/servi-plus",
+     "quote": "Get a quote",
+     "retrieved_at": "2026-10-27T13:51:39Z"
+    },
+    "max_slope_deg": {
+     "url": "https://antonrobots.com/bear-robotics-servi-plus-review",
+     "quote": "Published gradient 7\u00b0",
+     "retrieved_at": "2026-10-27T17:33:47Z"
+    }
+   },
+   "verified_by_human": true,
+   "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\", \"llm_nano (live pipeline)\"], \"sources_considered\": [\"https://www.bearrobotics.ai/servi-plus\", \"https://antonrobots.com/bear-robotics-servi-plus-review\"], \"null_fields\": [\"nominal_speed_mps\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"runtime is the lower end of the vendor's 10-12 hrs range\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\", \"max_slope_deg comes from a third-party review page (antonrobots.com) found by the live pipeline; the vendor page states no slope, so please confirm with the vendor\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.bearrobotics.ai/servi-plus\", \"https://www.bearrobotics.ai/blog/introducing-servi-plus\", \"https://www.bearrobotics.ai/blog/empower-your-restaurant-with-a-servi-plus-team-revolutionize-service-and-boost-profits\", \"https://antonrobots.com/bear-robotics-servi-plus-review\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_threshold_m\", \"min_aisle_width_vendor_m\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [\"max_slope_deg\"], \"values_differing\": [], \"fields_rejected_by_validator\": 1, \"other_pages_differing\": [{\"field\": \"max_threshold_m\", \"value\": 0.012, \"url\": \"https://antonrobots.com/bear-robotics-servi-plus-review\"}, {\"field\": \"runtime_h\", \"value\": 8.0, \"url\": \"https://antonrobots.com/bear-robotics-servi-plus-review\"}], \"note\": \"A first live run took the footprint from the Servi page after the Servi Plus row was read in the wrong order and rejected; the re-run with the model-aware ranking does not use the Servi page.\"}}",
+   "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:15.755Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+   }
+  },
+  {
+   "robot_id": "keenon_dinerbot_t8",
+   "class": "A_service",
+   "vendor": "Keenon Robotics",
+   "model": "DINERBOT T8",
+   "footprint_polygon_m": [
+    [
+     0.234,
+     0.192
+    ],
+    [
+     -0.234,
+     0.192
+    ],
+    [
+     -0.234,
+     -0.192
+    ],
+    [
+     0.234,
+     -0.192
+    ]
+   ],
+   "footprint_approx": true,
+   "height_m": 1.111,
+   "drive": "diff_drive",
+   "in_place_rotation": true,
+   "min_turn_radius_m": 0.0,
+   "max_speed_mps": 1.0,
+   "nominal_speed_mps": null,
+   "max_threshold_m": null,
+   "max_slope_deg": 5.0,
+   "min_aisle_width_vendor_m": 0.55,
+   "payload_kg": 20.0,
+   "runtime_h": 15.0,
+   "safety_stop_distance_m": null,
+   "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": null
+   },
+   "fields_sources": {
+    "footprint_polygon_m": {
+     "url": "https://www.keenon.com/en/product/T8",
+     "quote": "Dimensions(WxDxH) 38.4x46.8x111.1cm",
+     "retrieved_at": "2026-10-27T13:49:49Z"
+    },
+    "height_m": {
+     "url": "https://www.keenon.com/en/product/T8",
+     "quote": "Dimensions(WxDxH) 38.4x46.8x111.1cm",
+     "retrieved_at": "2026-10-27T13:49:49Z"
+    },
+    "max_speed_mps": {
+     "url": "https://www.keenon.com/en/product/T8",
+     "quote": "Moving Speed 1.0m/s (3.28ft/s)",
+     "retrieved_at": "2026-10-27T13:49:49Z"
+    },
+    "max_slope_deg": {
+     "url": "https://www.keenon.com/en/product/T8",
+     "quote": "Slope Angle 5\u00b0",
+     "retrieved_at": "2026-10-27T13:49:49Z"
+    },
+    "payload_kg": {
+     "url": "https://www.keenon.com/en/product/T8",
+     "quote": "Total Load Capacity 20 kg (44 lbs)",
+     "retrieved_at": "2026-10-27T13:49:49Z"
+    },
+    "runtime_h": {
+     "url": "https://www.keenon.com/en/product/T8",
+     "quote": "Battery Life Up to 15h",
+     "retrieved_at": "2026-10-27T13:49:49Z"
+    },
+    "min_aisle_width_vendor_m": {
+     "url": "https://www.keenon.com/en/product/T8",
+     "quote": "Minimum Passage Width 55 cm",
+     "retrieved_at": "2026-10-27T13:49:49Z"
+    }
+   },
+   "verified_by_human": true,
+   "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://www.keenon.com/en/product/T8\"], \"null_fields\": [\"nominal_speed_mps\", \"max_threshold_m\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"runtime is the vendor's 'up to' figure; the page notes battery claims vary with use\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.keenon.com/en/product/T8\", \"https://doc.keenonrobot.com/dashboard/en/foods/t8\", \"https://robotsourced.com/robots/service/keenon-t8\", \"https://www.dentrealstore.com/products/dinerbot-t8-service-robot\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_slope_deg\", \"min_aisle_width_vendor_m\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [], \"fields_rejected_by_validator\": 1, \"other_pages_differing\": []}, \"candidate_fields\": [{\"field\": \"max_threshold_m\", \"value\": 0.01, \"url\": \"https://somebots.com/en/robots/trays-t8/keenon-T8\", \"quote\": \"avoid steps over 1 cm\", \"retrieved_at\": \"2026-10-27T17:29:00Z\", \"status\": \"passed the validator; not applied\", \"why\": \"a reseller page (somebots.com) words it as operating advice, not a vendor capability; with 0.01 m the simulator treats the reference cafe thresholds as impassable for this robot, so a reviewer should confirm the vendor figure first\"}]}",
+   "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:16.285Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+   }
+  },
+  {
+   "robot_id": "keenon_dinerbot_t9",
+   "class": "A_service",
+   "vendor": "Keenon Robotics",
+   "model": "DINERBOT T9",
+   "footprint_polygon_m": [
+    [
+     0.2635,
+     0.25
+    ],
+    [
+     -0.2635,
+     0.25
+    ],
+    [
+     -0.2635,
+     -0.25
+    ],
+    [
+     0.2635,
+     -0.25
+    ]
+   ],
+   "footprint_approx": true,
+   "height_m": 1.266,
+   "drive": "diff_drive",
+   "in_place_rotation": true,
+   "min_turn_radius_m": 0.0,
+   "max_speed_mps": 1.0,
+   "nominal_speed_mps": null,
+   "max_threshold_m": null,
+   "max_slope_deg": 5.0,
+   "min_aisle_width_vendor_m": 0.7,
+   "payload_kg": 40.0,
+   "runtime_h": 18.0,
+   "safety_stop_distance_m": null,
+   "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": null
+   },
+   "fields_sources": {
+    "footprint_polygon_m": {
+     "url": "https://www.keenon.com/en/product/T9",
+     "quote": "Dimensions(WxDxH) 50.0 x 52.7 x 126.6cm",
+     "retrieved_at": "2026-10-27T13:51:43Z"
+    },
+    "height_m": {
+     "url": "https://www.keenon.com/en/product/T9",
+     "quote": "Dimensions(WxDxH) 50.0 x 52.7 x 126.6cm",
+     "retrieved_at": "2026-10-27T13:51:43Z"
+    },
+    "max_speed_mps": {
+     "url": "https://www.keenon.com/en/product/T9",
+     "quote": "Moving Speed 0.1-1.0 m/s",
+     "retrieved_at": "2026-10-27T13:51:43Z"
+    },
+    "runtime_h": {
+     "url": "https://www.keenon.com/en/product/T9",
+     "quote": "Battery Life Up to 18h",
+     "retrieved_at": "2026-10-27T13:51:43Z"
+    },
+    "max_slope_deg": {
+     "url": "https://www.keenon.com/en/product/T9",
+     "quote": "Slope Angle 5\u00b0",
+     "retrieved_at": "2026-10-27T13:51:43Z"
+    },
+    "payload_kg": {
+     "url": "https://www.keenon.com/en/product/T9",
+     "quote": "Total Load Capacity 40kg (88lbs)",
+     "retrieved_at": "2026-10-27T13:51:43Z"
+    },
+    "min_aisle_width_vendor_m": {
+     "url": "https://www.keenon.com/en/product/T9",
+     "quote": "Minimum Passage Width 70cm",
+     "retrieved_at": "2026-10-27T13:51:43Z"
+    }
+   },
+   "verified_by_human": true,
+   "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://www.keenon.com/en/product/T9\"], \"null_fields\": [\"nominal_speed_mps\", \"max_threshold_m\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"runtime is the vendor's 'up to' figure; the page notes battery claims vary with use\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.keenon.com/en/product/T9\", \"https://www.robotsinternational.com/Keenon-DINERBOT-T9.htm\", \"https://sonnyrobotics.com/products/keenon-t9\", \"https://www.robomarket.ae/robots/dinerbot-t9\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_slope_deg\", \"min_aisle_width_vendor_m\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [], \"fields_rejected_by_validator\": 3, \"other_pages_differing\": [{\"field\": \"max_speed_mps\", \"value\": 0.8, \"url\": \"https://sonnyrobotics.com/products/keenon-t9\"}]}}",
+   "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:16.728Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+   }
+  },
+  {
+   "robot_id": "keenon_w3",
+   "class": "A_service",
+   "vendor": "Keenon Robotics",
+   "model": "W3",
+   "footprint_polygon_m": [
+    [
+     0.2745,
+     0.2295
+    ],
+    [
+     -0.2745,
+     0.2295
+    ],
+    [
+     -0.2745,
+     -0.2295
+    ],
+    [
+     0.2745,
+     -0.2295
+    ]
+   ],
+   "footprint_approx": true,
+   "height_m": 1.081,
+   "drive": "diff_drive",
+   "in_place_rotation": true,
+   "min_turn_radius_m": 0.0,
+   "max_speed_mps": 0.8,
+   "nominal_speed_mps": null,
+   "max_threshold_m": null,
+   "max_slope_deg": 7.0,
+   "min_aisle_width_vendor_m": 0.7,
+   "payload_kg": 20.0,
+   "runtime_h": 12.0,
+   "safety_stop_distance_m": null,
+   "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": null
+   },
+   "fields_sources": {
+    "max_speed_mps": {
+     "url": "https://www.keenon.com/en/product/W3",
+     "quote": "Max. Moving Speed 0.8m/s (2.63ft/s)",
+     "retrieved_at": "2026-10-27T17:39:25Z"
+    },
+    "max_slope_deg": {
+     "url": "https://www.keenon.com/en/product/W3",
+     "quote": "Slope Angle 7\u00b0",
+     "retrieved_at": "2026-10-27T17:39:25Z"
+    },
+    "min_aisle_width_vendor_m": {
+     "url": "https://www.keenon.com/en/product/W3",
+     "quote": "Minimum Passage Width 70cm(27.56\")",
+     "retrieved_at": "2026-10-27T17:39:25Z"
+    },
+    "payload_kg": {
+     "url": "https://www.keenon.com/en/product/W3",
+     "quote": "Total Load Capacity 20kg (44lbs)",
+     "retrieved_at": "2026-10-27T17:39:25Z"
+    },
+    "height_m": {
+     "url": "https://www.keenon.com/en/product/W3",
+     "quote": "Dimensions(WxDxH) 45.9 x 54.9 x 108.1 cm(18.07\" x 21.61\" x 42.56\")",
+     "retrieved_at": "2026-10-27T17:39:25Z"
+    },
+    "footprint_polygon_m": {
+     "url": "https://www.keenon.com/en/product/W3",
+     "quote": "Dimensions(WxDxH) 45.9 x 54.9 x 108.1 cm(18.07\" x 21.61\" x 42.56\")",
+     "retrieved_at": "2026-10-27T17:39:25Z"
+    },
+    "runtime_h": {
+     "url": "https://www.robotlab.com/store/keenon-w3",
+     "quote": "Battery Runtime Up to 12 hours",
+     "retrieved_at": "2026-10-27T17:39:25Z"
+    }
+   },
+   "verified_by_human": true,
+   "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"llm_nano\"], \"sources_considered\": [\"https://www.keenon.com/en/product/W3\", \"https://antonrobots.com/keenon-butlerbot-w3-review\", \"https://www.robotlab.com/store/keenon-w3\", \"https://www.dentrealstore.com/products/butlerbot-w3-service-robot\"], \"null_fields\": [\"nominal_speed_mps\", \"max_threshold_m\", \"safety_stop_distance_m\"], \"rejected_fields\": [{\"field\": \"runtime_h\", \"url\": \"https://www.keenon.com/en/product/W3\", \"reason\": \"no time quantity in quote equals 12\", \"quote\": \"Battery Life Up to12h\"}, {\"field\": \"runtime_h\", \"url\": \"https://antonrobots.com/keenon-butlerbot-w3-review\", \"reason\": \"quote not found in page text\", \"quote\": \"Published battery life up to 12 hours\"}], \"conflicts\": [], \"comments\": [\"built by the live pipeline; KEENON markets this robot as BUTLERBOT W3\", \"runtime is the reseller's 'Up to 12 hours' (robotlab.com); the vendor page shows the same figure as 'Up to12h', which the number reader does not split, so it is not the cited quote\", \"footprint is read from the vendor's W x D x H order (D = length)\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\", \"price: the live pipeline found a price-related line on a third-party page (antonrobots.com); we take no third-party prices, so the price stays on request\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.keenon.com/en/product/W3\", \"https://antonrobots.com/keenon-butlerbot-w3-review\", \"https://www.robotlab.com/store/keenon-w3\", \"https://www.dentrealstore.com/products/butlerbot-w3-service-robot\"], \"fields_rejected_by_validator\": 2}}",
+   "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:17.200Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+   }
+  },
+  {
+   "robot_id": "mir_mir100",
+   "class": "B_amr",
+   "vendor": "MiR",
+   "model": "MiR100",
+   "footprint_polygon_m": [
+    [
+     0.445,
+     0.29
+    ],
+    [
+     -0.445,
+     0.29
+    ],
+    [
+     -0.445,
+     -0.29
+    ],
+    [
+     0.445,
+     -0.29
+    ]
+   ],
+   "footprint_approx": true,
+   "height_m": 0.352,
+   "drive": "diff_drive",
+   "in_place_rotation": true,
+   "min_turn_radius_m": 0.0,
+   "max_speed_mps": 1.5,
+   "nominal_speed_mps": null,
+   "max_threshold_m": 0.02,
+   "max_slope_deg": 2.86241,
+   "min_aisle_width_vendor_m": 1.0,
+   "payload_kg": 100.0,
+   "runtime_h": 10.0,
+   "safety_stop_distance_m": null,
+   "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": null
+   },
+   "fields_sources": {
+    "footprint_polygon_m": {
+     "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+     "quote": "Length 890 mm / 35 in Width 580 mm / 22.8 in Height 352 mm",
+     "retrieved_at": "2026-10-27T13:52:59Z"
+    },
+    "height_m": {
+     "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+     "quote": "Length 890 mm / 35 in Width 580 mm / 22.8 in Height 352 mm",
+     "retrieved_at": "2026-10-27T13:52:59Z"
+    },
+    "max_speed_mps": {
+     "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+     "quote": "Forwards: 1.5 m/s (5.4 km/h)",
+     "retrieved_at": "2026-10-27T13:52:59Z"
+    },
+    "payload_kg": {
+     "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+     "quote": "Maximum payload 100 kg / 220 lbs (maximum 5% incline)",
+     "retrieved_at": "2026-10-27T13:52:59Z"
+    },
+    "max_slope_deg": {
+     "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+     "quote": "Maximum payload 100 kg / 220 lbs (maximum 5% incline)",
+     "retrieved_at": "2026-10-27T13:52:59Z"
+    },
+    "max_threshold_m": {
+     "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+     "quote": "Traversable gap and sill tolerance 20 mm / 0.8 in",
+     "retrieved_at": "2026-10-27T13:52:59Z"
+    },
+    "min_aisle_width_vendor_m": {
+     "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+     "quote": "Minimum corridor width 1.0 m (default footprint)",
+     "retrieved_at": "2026-10-27T13:52:59Z"
+    },
+    "runtime_h": {
+     "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+     "quote": "Active operation time with maximum payload 10 hours",
+     "retrieved_at": "2026-10-27T13:52:59Z"
+    }
+   },
+   "verified_by_human": true,
+   "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf\"], \"null_fields\": [\"nominal_speed_mps\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"source is a MiR100 datasheet copy hosted by howtorobot.com; MiR's current lineup should be checked\", \"max_slope_deg converted by code from the 5% incline stated for maximum payload (atan 0.05)\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://24279054.fs1.hubspotusercontent-na1.net/hubfs/24279054/Resources/MiR/MiR100%20Specifications%202.57.pdf\", \"https://www.nord-modules.com/the-mir100\", \"https://sp-automation.co.uk/sp-elements/mir-autonomous-mobile-robots/mir100\", \"https://shop.hartfiel.com/products/MiR100%20Mobile%20Robot\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_slope_deg\", \"payload_kg\"], \"fields_added\": [], \"values_differing\": [{\"field\": \"min_aisle_width_vendor_m\", \"catalog\": 1.0, \"live\": 1.1, \"live_url\": \"https://24279054.fs1.hubspotusercontent-na1.net/hubfs/24279054/Resources/MiR/MiR100%20Specifications%202.57.pdf\", \"live_quote\": \"With minimized footprint and SICK safety configuration and no payload: 1 100 mm | 43.3 in\", \"kept\": \"catalog\", \"why\": \"the live value is for the minimized footprint, SICK safety configuration and no payload; the catalog keeps the default-footprint corridor width\"}, {\"field\": \"runtime_h\", \"catalog\": 10.0, \"live\": 6.88333, \"live_url\": \"https://24279054.fs1.hubspotusercontent-na1.net/hubfs/24279054/Resources/MiR/MiR100%20Specifications%202.57.pdf\", \"live_quote\": \"Up to 6 h 53 min (24V Standard battery)\", \"kept\": \"catalog\", \"why\": \"the live page (MiR100 Specifications 2.57, hosted by a third party) states 'Up to 6 h 53 min (24V Standard battery)'; the catalog keeps the MiR datasheet's 10 h active operation time at maximum payload. The two documents describe different versions or batteries; please confirm which applies\"}], \"fields_rejected_by_validator\": 1, \"other_pages_differing\": []}}",
+   "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:17.615Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+   }
+  },
+  {
+   "robot_id": "mir_mir250",
+   "class": "B_amr",
+   "vendor": "MiR",
+   "model": "MiR250",
+   "footprint_polygon_m": [
+    [
+     0.4,
+     0.29
+    ],
+    [
+     -0.4,
+     0.29
+    ],
+    [
+     -0.4,
+     -0.29
+    ],
+    [
+     0.4,
+     -0.29
+    ]
+   ],
+   "footprint_approx": true,
+   "height_m": 0.3,
+   "drive": "diff_drive",
+   "in_place_rotation": true,
+   "min_turn_radius_m": 0.0,
+   "max_speed_mps": 2.0,
+   "nominal_speed_mps": null,
+   "max_threshold_m": 0.02,
+   "max_slope_deg": 2.86241,
+   "min_aisle_width_vendor_m": 1.45,
+   "payload_kg": 250.0,
+   "runtime_h": 13.0,
+   "safety_stop_distance_m": null,
+   "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": "https://mobile-industrial-robots.com/products/robots/mir250"
+   },
+   "fields_sources": {
+    "footprint_polygon_m": {
+     "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+     "quote": "Length 800 mm | 31.5 in Width 580 mm | 22.8 in Height 300 mm",
+     "retrieved_at": "2026-10-27T13:50:50Z"
+    },
+    "height_m": {
+     "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+     "quote": "Length 800 mm | 31.5 in Width 580 mm | 22.8 in Height 300 mm",
+     "retrieved_at": "2026-10-27T13:50:50Z"
+    },
+    "max_speed_mps": {
+     "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+     "quote": "Maximum speed (with maximum payload on a flat surface) 2.0 m/s (7.2 km/h)",
+     "retrieved_at": "2026-10-27T13:50:50Z"
+    },
+    "payload_kg": {
+     "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+     "quote": "Maximum payload 250 kg | 551 lbs",
+     "retrieved_at": "2026-10-27T13:50:50Z"
+    },
+    "max_threshold_m": {
+     "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+     "quote": "Traversable gap and step tolerance 0-20 mm",
+     "retrieved_at": "2026-10-27T13:50:50Z"
+    },
+    "max_slope_deg": {
+     "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+     "quote": "Maximum incline/decline \u00b1 5% at 0.5 m/s",
+     "retrieved_at": "2026-10-27T13:50:50Z"
+    },
+    "min_aisle_width_vendor_m": {
+     "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+     "quote": "Operational corridor width With default footprint and SICK safety configuration: 1 450 mm",
+     "retrieved_at": "2026-10-27T13:50:50Z"
+    },
+    "runtime_h": {
+     "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+     "quote": "Active operation time with maximum payload 13 h",
+     "retrieved_at": "2026-10-27T13:50:50Z"
+    },
+    "price": {
+     "url": "https://mobile-industrial-robots.com/products/robots/mir250",
+     "quote": "Contact Sales",
+     "retrieved_at": "2026-10-27T13:49:55Z"
+    }
+   },
+   "verified_by_human": true,
+   "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf\", \"https://mobile-industrial-robots.com/products/robots/mir250\"], \"null_fields\": [\"nominal_speed_mps\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"source is the MiR250 specification document dated 2023-06-28 (copy hosted by distributor Hartfiel)\", \"max_slope_deg converted by code from the vendor's 5% grade (atan 0.05)\", \"min aisle is the default-footprint corridor width; the document lists narrower widths for dynamic or minimized footprints with muted protective fields\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.phoenix-mecano.ch/files/181D7B75D01/mir250-datasheet-en.pdf\", \"https://mobile-industrial-robots.com/products/robots/mir250/specifications\", \"https://shelley.com/wp-content/uploads/2024/07/MiR250-Specifications-2.81.pdf\", \"https://www.nord-modules.com/mir250-robot\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_threshold_m\", \"max_slope_deg\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [{\"field\": \"min_aisle_width_vendor_m\", \"catalog\": 1.45, \"live\": 1.0, \"live_url\": \"https://www.phoenix-mecano.ch/files/181D7B75D01/mir250-datasheet-en.pdf\", \"live_quote\": \"With dynamic footprint and SICK safety configuration: 1 000 mm | 39.4 in\", \"kept\": \"catalog\", \"why\": \"the live value is for the dynamic footprint; the catalog keeps the default-footprint corridor width (1 450 mm), which two other live pages also state\"}], \"fields_rejected_by_validator\": 4, \"other_pages_differing\": []}}",
+   "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:18.035Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+   }
+  },
+  {
+   "robot_id": "otto_100",
+   "class": "B_amr",
+   "vendor": "OTTO Motors",
+   "model": "OTTO 100",
+   "footprint_polygon_m": [
+    [
+     0.37,
+     0.275
+    ],
+    [
+     -0.37,
+     0.275
+    ],
+    [
+     -0.37,
+     -0.275
+    ],
+    [
+     0.37,
+     -0.275
+    ]
+   ],
+   "footprint_approx": true,
+   "height_m": 0.308,
+   "drive": "diff_drive",
+   "in_place_rotation": true,
+   "min_turn_radius_m": 0.0,
+   "max_speed_mps": 2.0,
+   "nominal_speed_mps": null,
+   "max_threshold_m": 0.013,
+   "max_slope_deg": null,
+   "min_aisle_width_vendor_m": 1.099,
+   "payload_kg": 150.0,
+   "runtime_h": 6.0,
+   "safety_stop_distance_m": null,
+   "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": null
+   },
+   "fields_sources": {
+    "footprint_polygon_m": {
+     "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+     "quote": "Dimensions 740 x 550 x 308 mm",
+     "retrieved_at": "2026-10-27T13:50:46Z"
+    },
+    "height_m": {
+     "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+     "quote": "Dimensions 740 x 550 x 308 mm",
+     "retrieved_at": "2026-10-27T13:50:46Z"
+    },
+    "max_speed_mps": {
+     "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+     "quote": "Max. Speed 2.0 m/sec (4.5 mph)",
+     "retrieved_at": "2026-10-27T13:50:46Z"
+    },
+    "payload_kg": {
+     "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+     "quote": "Max. Capacity 150 kg (331 lb)",
+     "retrieved_at": "2026-10-27T13:50:46Z"
+    },
+    "min_aisle_width_vendor_m": {
+     "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+     "quote": "Min. Aisle Width 1,099 mm (43 in)",
+     "retrieved_at": "2026-10-27T13:50:46Z"
+    },
+    "runtime_h": {
+     "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+     "quote": "Runtime 6 hr",
+     "retrieved_at": "2026-10-27T13:50:46Z"
+    },
+    "max_threshold_m": {
+     "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+     "quote": "Floor Obstacle 13 mm (0.5 in)",
+     "retrieved_at": "2026-10-27T13:50:46Z"
+    },
+    "in_place_rotation": {
+     "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+     "quote": "Turning Radius Turn in place",
+     "retrieved_at": "2026-10-27T13:50:46Z"
+    }
+   },
+   "verified_by_human": true,
+   "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=\"], \"null_fields\": [\"nominal_speed_mps\", \"max_slope_deg\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"source is spec sheet OTTO-DS001F-EN-MAR2026\", \"payload 150 kg includes attachments and cart, per the spec sheet\", \"min aisle is the one-way figure; the sheet lists 1,975 mm for two-way traffic\", \"max_threshold_m is the sheet's 'Floor Obstacle' height; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\", \"drive is the schema default (diff_drive); awaiting review\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://ottomotors.com/100\", \"https://ottomotors.com/resources/downloads/100-data-sheet\", \"https://flowntro.com/robots/otto-100\", \"https://www.advancedmhs.com/wp-content/uploads/2025/07/2024-OTTO100-DS001C-EN-FEB2024.pdf\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_threshold_m\", \"min_aisle_width_vendor_m\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [], \"fields_rejected_by_validator\": 10, \"other_pages_differing\": []}}",
+   "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:18.545Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+   }
+  },
+  {
+   "robot_id": "pudu_bellabot",
+   "class": "A_service",
+   "vendor": "Pudu Robotics",
+   "model": "BellaBot",
+   "footprint_polygon_m": [
+    [
+     0.2825,
+     0.2685
+    ],
+    [
+     -0.2825,
+     0.2685
+    ],
+    [
+     -0.2825,
+     -0.2685
+    ],
+    [
+     0.2825,
+     -0.2685
+    ]
+   ],
+   "footprint_approx": true,
+   "height_m": 1.29,
+   "drive": "diff_drive",
+   "in_place_rotation": true,
+   "min_turn_radius_m": 0.0,
+   "max_speed_mps": 1.2,
+   "nominal_speed_mps": null,
+   "max_threshold_m": 0.01,
+   "max_slope_deg": 5.0,
+   "min_aisle_width_vendor_m": 0.7,
+   "payload_kg": 40.0,
+   "runtime_h": 13.0,
+   "safety_stop_distance_m": null,
+   "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": null
+   },
+   "fields_sources": {
+    "footprint_polygon_m": {
+     "url": "https://academy.pudutech.com/en/docs/chan-pin-jie-shao",
+     "quote": "565 mm\u00d7537 mm\u00d71290 mm",
+     "retrieved_at": "2026-10-27T13:49:47Z"
+    },
+    "height_m": {
+     "url": "https://academy.pudutech.com/en/docs/chan-pin-jie-shao",
+     "quote": "565 mm\u00d7537 mm\u00d71290 mm",
+     "retrieved_at": "2026-10-27T13:49:47Z"
+    },
+    "max_threshold_m": {
+     "url": "https://academy.pudutech.com/en/docs/chan-pin-jie-shao",
+     "quote": "Max. surmountable height 10 mm (0.39 in)",
+     "retrieved_at": "2026-10-27T13:49:47Z"
+    },
+    "max_slope_deg": {
+     "url": "https://academy.pudutech.com/en/docs/chan-pin-jie-shao",
+     "quote": "Max. climbing angle 5 \u00b0",
+     "retrieved_at": "2026-10-27T13:49:47Z"
+    },
+    "min_aisle_width_vendor_m": {
+     "url": "https://academy.pudutech.com/en/docs/chan-pin-jie-shao",
+     "quote": "Min. travel width 70 cm (27.56 in)",
+     "retrieved_at": "2026-10-27T13:49:47Z"
+    },
+    "max_speed_mps": {
+     "url": "https://www.pudurobotics.com/en/products/bellabot",
+     "quote": "Speed: 0.5-1.2 m/s (Adjustable)",
+     "retrieved_at": "2026-10-27T13:49:44Z"
+    },
+    "payload_kg": {
+     "url": "https://www.pudurobotics.com/en/products/bellabot",
+     "quote": "Max 40 kg",
+     "retrieved_at": "2026-10-27T13:49:44Z"
+    },
+    "runtime_h": {
+     "url": "https://www.pudurobotics.com/en/products/bellabot",
+     "quote": "13h (None load)",
+     "retrieved_at": "2026-10-27T13:49:44Z"
+    }
+   },
+   "verified_by_human": true,
+   "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://academy.pudutech.com/en/docs/chan-pin-jie-shao\", \"https://www.pudurobotics.com/en/products/bellabot\"], \"null_fields\": [\"nominal_speed_mps\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"runtime is the vendor's no-load figure; the product documentation also lists 'Battery life 12\u201324 h'\", \"dimensions order on page is not labelled; read as length x width x height\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.pudurobotics.com/en/products/bellabot\", \"https://www.pudurobotics.com/product/detail/bellabot\", \"https://www.robotlab.com/store/bellabot\", \"https://www.generationrobots.com/en/404257-pudu-bellabot-server-robot.html\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_slope_deg\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [], \"fields_rejected_by_validator\": 7, \"other_pages_differing\": [{\"field\": \"runtime_h\", \"value\": 10.0, \"url\": \"https://www.robotlab.com/store/bellabot\"}, {\"field\": \"runtime_h\", \"value\": 12.0, \"url\": \"https://www.generationrobots.com/en/404257-pudu-bellabot-server-robot.html\"}], \"note\": \"A first live run ranked a sibling model's page (BellaBot Pro) above this model's page; values from that page were not used. The search ranking now puts pages that name the exact model first, and the re-run agrees with the catalog.\"}}",
+   "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:18.938Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+   }
+  },
+  {
+   "robot_id": "pudu_kettybot",
+   "class": "A_service",
+   "vendor": "Pudu Robotics",
+   "model": "KettyBot",
+   "footprint_polygon_m": [
+    [
+     0.2175,
+     0.225
+    ],
+    [
+     -0.2175,
+     0.225
+    ],
+    [
+     -0.2175,
+     -0.225
+    ],
+    [
+     0.2175,
+     -0.225
+    ]
+   ],
+   "footprint_approx": true,
+   "height_m": 1.12,
+   "drive": "diff_drive",
+   "in_place_rotation": true,
+   "min_turn_radius_m": 0.0,
+   "max_speed_mps": 1.2,
+   "nominal_speed_mps": null,
+   "max_threshold_m": 0.005,
+   "max_slope_deg": 5.0,
+   "min_aisle_width_vendor_m": 0.55,
+   "payload_kg": 30.0,
+   "runtime_h": 8.0,
+   "safety_stop_distance_m": null,
+   "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": null
+   },
+   "fields_sources": {
+    "max_speed_mps": {
+     "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+     "quote": "Set the delivery speed and cruise speed with the options of 0.5m/s\u20141.2m/s.",
+     "retrieved_at": "2026-10-27T17:40:54Z"
+    },
+    "payload_kg": {
+     "url": "https://robotsourced.com/robots/service/pudu-kettybot",
+     "quote": "Payload 30 kg",
+     "retrieved_at": "2026-10-27T17:40:54Z"
+    },
+    "runtime_h": {
+     "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+     "quote": "4.5h >8h",
+     "retrieved_at": "2026-10-27T17:40:54Z"
+    },
+    "max_threshold_m": {
+     "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+     "quote": "Make sure that the protrusions are no more than 0.5cm high",
+     "retrieved_at": "2026-10-27T17:40:54Z"
+    },
+    "max_slope_deg": {
+     "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+     "quote": "The maximum possible slope is 5\u00b0 for the robot",
+     "retrieved_at": "2026-10-27T17:40:54Z"
+    },
+    "min_aisle_width_vendor_m": {
+     "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+     "quote": "Minimum pass width 0.55m",
+     "retrieved_at": "2026-10-27T17:40:54Z"
+    },
+    "height_m": {
+     "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+     "quote": "435*450*1120 (mm)",
+     "retrieved_at": "2026-10-27T17:40:54Z"
+    },
+    "footprint_polygon_m": {
+     "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+     "quote": "435*450*1120 (mm)",
+     "retrieved_at": "2026-10-27T17:40:54Z"
+    }
+   },
+   "verified_by_human": true,
+   "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"llm_nano\"], \"sources_considered\": [\"https://robotsourced.com/robots/service/pudu-kettybot\", \"https://www.generationrobots.com/en/404251-pudu-kettybot-home-robot.html\", \"https://todorobotics.com/feeds/category/kettybot-pudu-price\", \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\"], \"null_fields\": [\"nominal_speed_mps\", \"safety_stop_distance_m\"], \"rejected_fields\": [{\"field\": \"runtime_h\", \"url\": \"https://todorobotics.com/feeds/category/kettybot-pudu-price\", \"reason\": \"no time quantity in quote equals 8\", \"quote\": \"8+ hour runtime\"}, {\"field\": \"payload_kg\", \"url\": \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\", \"reason\": \"the 10 in the quote is labelled as another item\", \"quote\": \"10kg/tray\"}, {\"field\": \"min_turn_radius_m\", \"url\": \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\", \"reason\": \"unit: unknown unit ''\", \"quote\": null}], \"conflicts\": [{\"field\": \"max_speed_mps\", \"kept\": 1.2, \"kept_url\": \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\", \"other\": 0.9, \"other_url\": \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\", \"detail\": \"speed setting range vs spec-table cruise speed\"}, {\"field\": \"runtime_h\", \"kept\": 8.0, \"kept_url\": \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\", \"other\": 10.0, \"other_url\": \"https://robotsourced.com/robots/service/pudu-kettybot\"}], \"comments\": [\"built by the live pipeline; the KettyBot Pro is a separate model and its pages were not used\", \"max_speed_mps: the user manual's speed setting range tops out at 1.2 m/s; its specification table lists cruise speed 'Adjustable between 0.5~0.9m/s'. A reseller page (robotsourced.com) also states 1.2 m/s\", \"runtime_h: the user manual's specification table states battery life '>8h' (charging time 4.5h precedes it in the same column dump); we keep the lower bound 8 h. A reseller page (robotsourced.com) states 10 h\", \"payload_kg comes from a reseller page (robotsourced.com); the user manual gives 10 kg per tray with two trays plus a storage basket and no total, and the same reseller page lists a robot weight (55 kg) that differs from the manual (38 kg), so please confirm the total payload with the vendor\", \"dimensions order in the manual is not labelled; read as length x width x height\", \"the user manual is a Pudu document hosted by a distributor\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\", \"price: the live pipeline found a price-related line on a third-party page (www.generationrobots.com); we take no third-party prices, so the price stays on request\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://robotsourced.com/robots/service/pudu-kettybot\", \"https://www.generationrobots.com/en/404251-pudu-kettybot-home-robot.html\", \"https://todorobotics.com/feeds/category/kettybot-pudu-price\", \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\"], \"fields_rejected_by_validator\": 3}}",
+   "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:19.365Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+   }
+  },
+  {
+   "robot_id": "pudu_pudubot_2",
+   "class": "A_service",
+   "vendor": "Pudu Robotics",
+   "model": "PuduBot 2",
+   "footprint_polygon_m": [
+    [
+     0.29,
+     0.2675
+    ],
+    [
+     -0.29,
+     0.2675
+    ],
+    [
+     -0.29,
+     -0.2675
+    ],
+    [
+     0.29,
+     -0.2675
+    ]
+   ],
+   "footprint_approx": true,
+   "height_m": 1.29,
+   "drive": "diff_drive",
+   "in_place_rotation": true,
+   "min_turn_radius_m": 0.0,
+   "max_speed_mps": 1.2,
+   "nominal_speed_mps": null,
+   "max_threshold_m": 0.01,
+   "max_slope_deg": 5.0,
+   "min_aisle_width_vendor_m": 0.8,
+   "payload_kg": 40.0,
+   "runtime_h": 12.0,
+   "safety_stop_distance_m": null,
+   "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": null
+   },
+   "fields_sources": {
+    "footprint_polygon_m": {
+     "url": "https://www.pudurobotics.com/en/products/pudubot2",
+     "quote": "Machine Size 58*53.5*129 cm",
+     "retrieved_at": "2026-10-27T13:51:41Z"
+    },
+    "height_m": {
+     "url": "https://www.pudurobotics.com/en/products/pudubot2",
+     "quote": "Machine Size 58*53.5*129 cm",
+     "retrieved_at": "2026-10-27T13:51:41Z"
+    },
+    "max_speed_mps": {
+     "url": "https://www.pudurobotics.com/en/products/pudubot2",
+     "quote": "Cruise Speed 0.5 m/s~1.2 m/s",
+     "retrieved_at": "2026-10-27T13:51:41Z"
+    },
+    "payload_kg": {
+     "url": "https://www.pudurobotics.com/en/products/pudubot2",
+     "quote": "Maximum Loads 40 kg",
+     "retrieved_at": "2026-10-27T13:51:41Z"
+    },
+    "runtime_h": {
+     "url": "https://www.pudurobotics.com/en/products/pudubot2",
+     "quote": "Battery Life 12h (None load)",
+     "retrieved_at": "2026-10-27T13:51:41Z"
+    },
+    "min_aisle_width_vendor_m": {
+     "url": "https://www.pudurobotics.com/en/products/pudubot2",
+     "quote": "Path Width 80 cm",
+     "retrieved_at": "2026-10-27T13:51:41Z"
+    },
+    "max_threshold_m": {
+     "url": "https://antonrobots.com/pudubot-2-review",
+     "quote": "Maximum threshold 10 mm",
+     "retrieved_at": "2026-10-27T17:32:00Z"
+    },
+    "max_slope_deg": {
+     "url": "https://antonrobots.com/pudubot-2-review",
+     "quote": "Maximum slope 5\u00b0",
+     "retrieved_at": "2026-10-27T17:32:00Z"
+    }
+   },
+   "verified_by_human": true,
+   "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\", \"llm_nano (live pipeline)\"], \"sources_considered\": [\"https://www.pudurobotics.com/en/products/pudubot2\", \"https://antonrobots.com/pudubot-2-review\"], \"null_fields\": [\"nominal_speed_mps\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"runtime is the vendor's no-load figure\", \"dimensions order on page is not labelled; read as length x width x height\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\", \"max_threshold_m comes from a third-party review page (antonrobots.com) found by the live pipeline; please confirm with the vendor\", \"max_slope_deg comes from a third-party review page (antonrobots.com) found by the live pipeline; please confirm with the vendor\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.pudurobotics.com/product/detail/pudubot2\", \"https://www.pudurobotics.com/en/products/pudubot2\", \"https://www.pudurobotics.com/my/product/detail/pudubot2\", \"https://antonrobots.com/pudubot-2-review\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"min_aisle_width_vendor_m\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [\"max_threshold_m\", \"max_slope_deg\"], \"values_differing\": [], \"fields_rejected_by_validator\": 3, \"other_pages_differing\": []}}",
+   "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:19.696Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+   }
+  },
+  {
+   "robot_id": "pudu_t300",
+   "class": "B_amr",
+   "vendor": "Pudu Robotics",
+   "model": "T300",
+   "footprint_polygon_m": [
+    [
+     0.4175,
+     0.25
+    ],
+    [
+     -0.4175,
+     0.25
+    ],
+    [
+     -0.4175,
+     -0.25
+    ],
+    [
+     0.4175,
+     -0.25
+    ]
+   ],
+   "footprint_approx": true,
+   "height_m": 1.35,
+   "drive": "diff_drive",
+   "in_place_rotation": true,
+   "min_turn_radius_m": 0.0,
+   "max_speed_mps": 1.2,
+   "nominal_speed_mps": null,
+   "max_threshold_m": 0.02,
+   "max_slope_deg": null,
+   "min_aisle_width_vendor_m": 0.6,
+   "payload_kg": 300.0,
+   "runtime_h": 8.0,
+   "safety_stop_distance_m": null,
+   "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": null
+   },
+   "fields_sources": {
+    "footprint_polygon_m": {
+     "url": "https://www.pudurobotics.com/en/products/pudut300",
+     "quote": "835 mm * 500 mm * 1350 mm",
+     "retrieved_at": "2026-10-27T13:53:27Z"
+    },
+    "height_m": {
+     "url": "https://www.pudurobotics.com/en/products/pudut300",
+     "quote": "835 mm * 500 mm * 1350 mm",
+     "retrieved_at": "2026-10-27T13:53:27Z"
+    },
+    "max_speed_mps": {
+     "url": "https://www.pudurobotics.com/en/products/pudut300",
+     "quote": "Max. Speed 1.2 m/s",
+     "retrieved_at": "2026-10-27T13:53:27Z"
+    },
+    "payload_kg": {
+     "url": "https://www.pudurobotics.com/en/products/pudut300",
+     "quote": "Maximum load 300 kg",
+     "retrieved_at": "2026-10-27T13:53:27Z"
+    },
+    "max_threshold_m": {
+     "url": "https://www.pudurobotics.com/en/products/pudut300",
+     "quote": "Threshold Overcoming Height 20 mm",
+     "retrieved_at": "2026-10-27T13:53:27Z"
+    },
+    "min_aisle_width_vendor_m": {
+     "url": "https://www.pudurobotics.com/en/products/pudut300",
+     "quote": "Path Clearance \u226560 cm",
+     "retrieved_at": "2026-10-27T13:53:27Z"
+    },
+    "runtime_h": {
+     "url": "https://www.pudurobotics.com/en/products/pudut300",
+     "quote": "Run-time (Full Load) 8 h",
+     "retrieved_at": "2026-10-27T13:53:27Z"
+    }
+   },
+   "verified_by_human": true,
+   "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://www.pudurobotics.com/en/products/pudut300\"], \"null_fields\": [\"nominal_speed_mps\", \"max_slope_deg\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"values are the 'PUDU T300 Standard' column (the Lifting variant differs in weight and path width)\", \"runtime is the full-load figure; the page lists 12 h with no load\", \"dimensions order on page is not labelled; read as length x width x height\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.pudurobotics.com/en/products/pudut300\", \"https://www.pudurobotics.com/en/news/pudu-t300-amr-powers-ennoconn-ems-logistics-case-study\", \"https://www.pudurobotics.com/en/news/904\", \"https://cdn.robotshop.com/media/P/Pud/RB-Pud-04/pdf/pudu-t300-20240828-operational-guide.pdf\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_threshold_m\", \"min_aisle_width_vendor_m\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [], \"fields_rejected_by_validator\": 4, \"other_pages_differing\": [{\"field\": \"runtime_h\", \"value\": 6.0, \"url\": \"https://cdn.robotshop.com/media/P/Pud/RB-Pud-04/pdf/pudu-t300-20240828-operational-guide.pdf\"}]}}",
+   "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:20.031Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+   }
+  }
+ ],
+ "usage": {
+  "by_model": [
+   {
+    "model_id": "compute:local",
+    "calls": 2,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "cost_usd": 0.0,
+    "duration_s": 221.953
+   },
+   {
+    "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+    "calls": 57,
+    "tokens_in": 147026,
+    "tokens_out": 138028,
+    "cost_usd": 0.0,
+    "duration_s": 2999.098
+   },
+   {
+    "model_id": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+    "calls": 45,
+    "tokens_in": 152805,
+    "tokens_out": 22007,
+    "cost_usd": 0.0,
+    "duration_s": 172.351
+   },
+   {
+    "model_id": "sim",
+    "calls": 140,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "cost_usd": 0.0,
+    "duration_s": 46658.316
+   },
+   {
+    "model_id": "tavily",
+    "calls": 6,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "cost_usd": 0.0,
+    "duration_s": 19.853
+   }
+  ],
+  "by_kind": [
+   {
+    "kind": "investigate",
+    "calls": 31,
+    "tokens_in": 110999,
+    "tokens_out": 12230,
+    "cost_usd": 0.0,
+    "duration_s": 102.327
+   },
+   {
+    "kind": "job:analysis",
+    "calls": 2,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "cost_usd": 0.0,
+    "duration_s": 221.953
+   },
+   {
+    "kind": "orchestrate",
+    "calls": 14,
+    "tokens_in": 41806,
+    "tokens_out": 9777,
+    "cost_usd": 0.0,
+    "duration_s": 70.025
+   },
+   {
+    "kind": "report_section",
+    "calls": 57,
+    "tokens_in": 147026,
+    "tokens_out": 138028,
+    "cost_usd": 0.0,
+    "duration_s": 2999.098
+   },
+   {
+    "kind": "sim.batch",
+    "calls": 138,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "cost_usd": 0.0,
+    "duration_s": 46541.59
+   },
+   {
+    "kind": "sim.confirm",
+    "calls": 1,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "cost_usd": 0.0,
+    "duration_s": 90.654
+   },
+   {
+    "kind": "sim.probe",
+    "calls": 1,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "cost_usd": 0.0,
+    "duration_s": 26.072
+   },
+   {
+    "kind": "tavily.search",
+    "calls": 6,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "cost_usd": 0.0,
+    "duration_s": 19.853
+   }
+  ],
+  "totals": {
+   "calls": 250,
+   "tokens_in": 299831,
+   "tokens_out": 160035,
+   "cost_usd": 0.0,
+   "duration_s": 50071.571
+  },
+  "per_analysis": [
+   {
+    "analysis_id": "an_860150277c4e456b",
+    "calls": 15,
+    "cost_usd": 0.0
+   },
+   {
+    "analysis_id": "an_ref_cafe_01",
+    "calls": 70,
+    "cost_usd": 0.0
+   },
+   {
+    "analysis_id": "an_ref_corridor_01",
+    "calls": 71,
+    "cost_usd": 0.0
+   },
+   {
+    "analysis_id": "an_ref_storeroom_01",
+    "calls": 69,
+    "cost_usd": 0.0
+   }
+  ],
+  "unpriced_calls": 0,
+  "cost_complete": true,
+  "prices_verified": false
+ },
+ "analyses": {
+  "an_ref_cafe_01": "ref_cafe",
+  "an_ref_storeroom_01": "ref_storeroom",
+  "an_ref_corridor_01": "ref_corridor"
+ }
+}
