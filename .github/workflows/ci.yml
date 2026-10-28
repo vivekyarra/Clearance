@@ -38,3 +38,31 @@ jobs:
 
       - name: Run tests
         run: PYTHONPATH=. pytest -q tests
+
+  web:
+    name: Web build (apps/web)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: apps/web
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: apps/web/package-lock.json
+
+      - name: Install
+        run: npm ci --no-audit --no-fund
+
+      - name: Type check
+        run: npx tsc --noEmit
+
+      - name: Unit tests
+        run: npm test --if-present -- --passWithNoTests
+
+      - name: Build
+        run: npm run build
