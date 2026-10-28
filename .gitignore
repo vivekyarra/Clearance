@@ -1,0 +1,69 @@
+# --- runtime data (captures, twins, analyses, local DB) ---
+data/
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# --- secrets ---
+.env
+.env.*
+!.env.example
+infra/.env
+infra/nebius/config.env
+*.pem
+*.key
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# --- Node / web ---
+node_modules/
+dist/
+*.tsbuildinfo
+.vite/
+npm-debug.log*
+
+# --- model weights and caches (keep these on C:\Users\<you>\.cache, never in the repo) ---
+weights/
+checkpoints/
+.cache/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.gguf
+*.engine
+*.bin
+!apps/**/*.bin
+
+# --- iOS / Xcode ---
+apps/ios/**/xcuserdata/
+apps/ios/**/DerivedData/
+*.xcuserstate
+
+# --- editors / OS ---
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+
+# --- local-only settings ---
+*.local.yaml
+
+# --- local tool settings ---
+.claude/
