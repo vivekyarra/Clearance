@@ -1,0 +1,99 @@
+{
+  "robot_id": "mir_mir250",
+  "class": "B_amr",
+  "vendor": "MiR",
+  "model": "MiR250",
+  "footprint_polygon_m": [
+    [
+      0.4,
+      0.29
+    ],
+    [
+      -0.4,
+      0.29
+    ],
+    [
+      -0.4,
+      -0.29
+    ],
+    [
+      0.4,
+      -0.29
+    ]
+  ],
+  "footprint_approx": true,
+  "height_m": 0.3,
+  "drive": "diff_drive",
+  "in_place_rotation": true,
+  "min_turn_radius_m": 0.0,
+  "max_speed_mps": 2.0,
+  "nominal_speed_mps": null,
+  "max_threshold_m": 0.02,
+  "max_slope_deg": 2.86241,
+  "min_aisle_width_vendor_m": 1.45,
+  "payload_kg": 250.0,
+  "runtime_h": 13.0,
+  "safety_stop_distance_m": null,
+  "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": "https://mobile-industrial-robots.com/products/robots/mir250"
+  },
+  "fields_sources": {
+    "footprint_polygon_m": {
+      "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+      "quote": "Length 800 mm | 31.5 in Width 580 mm | 22.8 in Height 300 mm",
+      "retrieved_at": "2026-10-27T13:50:50Z"
+    },
+    "height_m": {
+      "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+      "quote": "Length 800 mm | 31.5 in Width 580 mm | 22.8 in Height 300 mm",
+      "retrieved_at": "2026-10-27T13:50:50Z"
+    },
+    "max_speed_mps": {
+      "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+      "quote": "Maximum speed (with maximum payload on a flat surface) 2.0 m/s (7.2 km/h)",
+      "retrieved_at": "2026-10-27T13:50:50Z"
+    },
+    "payload_kg": {
+      "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+      "quote": "Maximum payload 250 kg | 551 lbs",
+      "retrieved_at": "2026-10-27T13:50:50Z"
+    },
+    "max_threshold_m": {
+      "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+      "quote": "Traversable gap and step tolerance 0-20 mm",
+      "retrieved_at": "2026-10-27T13:50:50Z"
+    },
+    "max_slope_deg": {
+      "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+      "quote": "Maximum incline/decline \u00b1 5% at 0.5 m/s",
+      "retrieved_at": "2026-10-27T13:50:50Z"
+    },
+    "min_aisle_width_vendor_m": {
+      "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+      "quote": "Operational corridor width With default footprint and SICK safety configuration: 1 450 mm",
+      "retrieved_at": "2026-10-27T13:50:50Z"
+    },
+    "runtime_h": {
+      "url": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+      "quote": "Active operation time with maximum payload 13 h",
+      "retrieved_at": "2026-10-27T13:50:50Z"
+    },
+    "price": {
+      "url": "https://mobile-industrial-robots.com/products/robots/mir250",
+      "quote": "Contact Sales",
+      "retrieved_at": "2026-10-27T13:49:55Z"
+    }
+  },
+  "verified_by_human": true,
+  "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf\", \"https://mobile-industrial-robots.com/products/robots/mir250\"], \"null_fields\": [\"nominal_speed_mps\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"source is the MiR250 specification document dated 2023-06-28 (copy hosted by distributor Hartfiel)\", \"max_slope_deg converted by code from the vendor's 5% grade (atan 0.05)\", \"min aisle is the default-footprint corridor width; the document lists narrower widths for dynamic or minimized footprints with muted protective fields\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.phoenix-mecano.ch/files/181D7B75D01/mir250-datasheet-en.pdf\", \"https://mobile-industrial-robots.com/products/robots/mir250/specifications\", \"https://shelley.com/wp-content/uploads/2024/07/MiR250-Specifications-2.81.pdf\", \"https://www.nord-modules.com/mir250-robot\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_threshold_m\", \"max_slope_deg\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [{\"field\": \"min_aisle_width_vendor_m\", \"catalog\": 1.45, \"live\": 1.0, \"live_url\": \"https://www.phoenix-mecano.ch/files/181D7B75D01/mir250-datasheet-en.pdf\", \"live_quote\": \"With dynamic footprint and SICK safety configuration: 1 000 mm | 39.4 in\", \"kept\": \"catalog\", \"why\": \"the live value is for the dynamic footprint; the catalog keeps the default-footprint corridor width (1 450 mm), which two other live pages also state\"}], \"fields_rejected_by_validator\": 4, \"other_pages_differing\": []}}",
+  "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:18.035Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+  }
+}

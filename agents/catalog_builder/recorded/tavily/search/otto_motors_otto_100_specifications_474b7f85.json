@@ -1,0 +1,23 @@
+{
+  "query": "OTTO Motors OTTO 100 specifications",
+  "answer": null,
+  "images": [],
+  "results": [
+    {
+      "title": "OTTO Motors OTTO 100",
+      "url": "https://ottomotors.com/100/",
+      "content": "Contact\n\nPlease allow all cookies to access this form.\n\nBack to menu\n\nIndustries\n\nAMRs\n\nSoftware\n\nServices\n\nResources\n\nCompany\n\nContact Us\n\nIndustries\n\nAutomotive\n\nConsumer Products\n\nFood & Beverage\n\n",
+      "score": 0.9,
+      "raw_content": null
+    },
+    {
+      "title": "OTTO Motors OTTO 100",
+      "url": "https://cdn.sanity.io/files/armc7p5y/production/ec1dac3528cb906c23589c86c036b565f27e36cf.pdf?dl=",
+      "content": "01OTTO BY ROCKWELL AUTOMATION OTTO 100 SPEC SHEET OTTO-DS001F-EN-MAR2026\nWith an all-metal body,\nrely on OTTO 100 to\ncontinue moving your\nmaterials in challenging\nenvironments, year after\nyear.\nRELIAB",
+      "score": 0.8,
+      "raw_content": null
+    }
+  ],
+  "response_time": 0.0,
+  "_recorded": "URL list from catalog research (2026-10-27), stored in the Tavily search response shape"
+}

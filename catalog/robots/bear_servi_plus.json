@@ -1,0 +1,99 @@
+{
+  "robot_id": "bear_servi_plus",
+  "class": "A_service",
+  "vendor": "Bear Robotics",
+  "model": "Servi Plus",
+  "footprint_polygon_m": [
+    [
+      0.295,
+      0.2675
+    ],
+    [
+      -0.295,
+      0.2675
+    ],
+    [
+      -0.295,
+      -0.2675
+    ],
+    [
+      0.295,
+      -0.2675
+    ]
+  ],
+  "footprint_approx": true,
+  "height_m": 1.23,
+  "drive": "diff_drive",
+  "in_place_rotation": true,
+  "min_turn_radius_m": 0.0,
+  "max_speed_mps": 1.2,
+  "nominal_speed_mps": null,
+  "max_threshold_m": 0.0127,
+  "max_slope_deg": 7.0,
+  "min_aisle_width_vendor_m": 0.65,
+  "payload_kg": 40.0,
+  "runtime_h": 10.0,
+  "safety_stop_distance_m": null,
+  "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": "https://www.bearrobotics.ai/servi-plus"
+  },
+  "fields_sources": {
+    "footprint_polygon_m": {
+      "url": "https://www.bearrobotics.ai/servi-plus",
+      "quote": "21 \u00d7 23 \u00d7 48 in (53.5 \u00d7 59 \u00d7 123 cm)",
+      "retrieved_at": "2026-10-27T13:51:39Z"
+    },
+    "height_m": {
+      "url": "https://www.bearrobotics.ai/servi-plus",
+      "quote": "21 \u00d7 23 \u00d7 48 in (53.5 \u00d7 59 \u00d7 123 cm)",
+      "retrieved_at": "2026-10-27T13:51:39Z"
+    },
+    "min_aisle_width_vendor_m": {
+      "url": "https://www.bearrobotics.ai/servi-plus",
+      "quote": "Pass width Minimum 25.6 in (65 cm)",
+      "retrieved_at": "2026-10-27T13:51:39Z"
+    },
+    "max_speed_mps": {
+      "url": "https://www.bearrobotics.ai/servi-plus",
+      "quote": "Drive speed 0.1~1.2 m/s",
+      "retrieved_at": "2026-10-27T13:51:39Z"
+    },
+    "payload_kg": {
+      "url": "https://www.bearrobotics.ai/servi-plus",
+      "quote": "22 lb (10 kg) per tray, total 88 lb (40 kg)",
+      "retrieved_at": "2026-10-27T13:51:39Z"
+    },
+    "runtime_h": {
+      "url": "https://www.bearrobotics.ai/servi-plus",
+      "quote": "Battery Life 10-12 hrs",
+      "retrieved_at": "2026-10-27T13:51:39Z"
+    },
+    "max_threshold_m": {
+      "url": "https://www.bearrobotics.ai/servi-plus",
+      "quote": "ADA ramps, and thresholds up to 1/2\".",
+      "retrieved_at": "2026-10-27T13:51:39Z"
+    },
+    "price": {
+      "url": "https://www.bearrobotics.ai/servi-plus",
+      "quote": "Get a quote",
+      "retrieved_at": "2026-10-27T13:51:39Z"
+    },
+    "max_slope_deg": {
+      "url": "https://antonrobots.com/bear-robotics-servi-plus-review",
+      "quote": "Published gradient 7\u00b0",
+      "retrieved_at": "2026-10-27T17:33:47Z"
+    }
+  },
+  "verified_by_human": true,
+  "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\", \"llm_nano (live pipeline)\"], \"sources_considered\": [\"https://www.bearrobotics.ai/servi-plus\", \"https://antonrobots.com/bear-robotics-servi-plus-review\"], \"null_fields\": [\"nominal_speed_mps\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"runtime is the lower end of the vendor's 10-12 hrs range\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\", \"max_slope_deg comes from a third-party review page (antonrobots.com) found by the live pipeline; the vendor page states no slope, so please confirm with the vendor\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.bearrobotics.ai/servi-plus\", \"https://www.bearrobotics.ai/blog/introducing-servi-plus\", \"https://www.bearrobotics.ai/blog/empower-your-restaurant-with-a-servi-plus-team-revolutionize-service-and-boost-profits\", \"https://antonrobots.com/bear-robotics-servi-plus-review\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_threshold_m\", \"min_aisle_width_vendor_m\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [\"max_slope_deg\"], \"values_differing\": [], \"fields_rejected_by_validator\": 1, \"other_pages_differing\": [{\"field\": \"max_threshold_m\", \"value\": 0.012, \"url\": \"https://antonrobots.com/bear-robotics-servi-plus-review\"}, {\"field\": \"runtime_h\", \"value\": 8.0, \"url\": \"https://antonrobots.com/bear-robotics-servi-plus-review\"}], \"note\": \"A first live run took the footprint from the Servi page after the Servi Plus row was read in the wrong order and rejected; the re-run with the model-aware ranking does not use the Servi page.\"}}",
+  "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:15.755Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+  }
+}
