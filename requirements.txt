@@ -1,0 +1,67 @@
+# Clearance runtime + test dependencies (lean: CPU only, no torch / open3d).
+# Pinned to the versions in the development venv on 2026-10-27 (Python 3.11).
+# Cloud extras (S3, Postgres): requirements-cloud.txt. GPU jobs: requirements-gpu.txt.
+
+# --- direct dependencies ---
+numpy==2.4.6
+scipy==1.17.1
+numba==0.68.0
+shapely==2.2.0
+opencv-python-headless==5.0.0.93
+pillow==13.0.0
+fastapi==0.162.0
+uvicorn==0.54.0
+python-multipart==0.0.32
+websockets==17.3
+SQLAlchemy==2.1.6
+pydantic==2.14.1
+httpx==0.28.1
+openai==3.39.0
+tavily-python==0.8.5
+PyYAML==6.0.3
+jsonschema==4.26.0
+qrcode==8.2
+fpdf2==2.8.9
+pypdf==6.21.3
+python-dotenv==1.2.4
+pytest==9.1.1
+
+# --- transitive dependencies (pinned for reproducible CI) ---
+annotated-doc==0.0.5
+annotated-types==0.8.0
+anyio==4.15.1
+attrs==26.1.0
+certifi==2026.10.23
+charset-normalizer==3.5.2
+click==8.5.0
+colorama==0.4.6
+defusedxml==0.7.1
+fonttools==4.67.0
+h11==0.16.0
+httpcore==1.0.9
+httpcore2==2.16.0
+httptools==0.9.0
+httpx2==2.16.0
+idna==3.20
+iniconfig==2.3.1
+jiter==0.18.0
+jsonschema-specifications==2025.9.1
+llvmlite==0.50.0
+opentelemetry-api==1.45.1
+packaging==26.3
+pluggy==1.7.0
+pydantic_core==2.50.1
+Pygments==2.21.0
+pypdfium2==5.14.0
+referencing==0.37.0
+regex==2026.9.29
+requests==2.34.2
+rpds-py==2026.9.1
+sniffio==1.3.1
+starlette==1.10.0
+tiktoken==0.14.0
+truststore==0.10.5
+typing-inspection==0.4.4
+typing_extensions==4.16.0
+urllib3==2.8.0
+watchfiles==1.3.0

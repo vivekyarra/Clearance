@@ -1,0 +1,278 @@
+{
+  "$defs": {
+    "CaptureFiles": {
+      "properties": {
+        "confidence": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        },
+        "depth": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Depth"
+        },
+        "feature_points": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Feature Points"
+        },
+        "frames": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Frames"
+        },
+        "observer_pose": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Observer Pose"
+        },
+        "poses": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": "poses.jsonl",
+          "title": "Poses"
+        },
+        "relative_depth": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Relative Depth"
+        },
+        "video": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Video"
+        }
+      },
+      "title": "CaptureFiles",
+      "type": "object"
+    },
+    "Device": {
+      "properties": {
+        "model": {
+          "title": "Model",
+          "type": "string"
+        },
+        "os": {
+          "default": "",
+          "title": "Os",
+          "type": "string"
+        },
+        "tier": {
+          "enum": [
+            "T1_LIDAR",
+            "T2_VIO_MONO",
+            "T3_FIXED_OBSERVER",
+            "T0_COACH"
+          ],
+          "title": "Tier",
+          "type": "string"
+        }
+      },
+      "required": [
+        "model",
+        "tier"
+      ],
+      "title": "Device",
+      "type": "object"
+    },
+    "Marker": {
+      "properties": {
+        "family": {
+          "default": "tag36h11",
+          "title": "Family",
+          "type": "string"
+        },
+        "id": {
+          "default": 0,
+          "title": "Id",
+          "type": "integer"
+        },
+        "size_m": {
+          "default": 0.16,
+          "title": "Size M",
+          "type": "number"
+        }
+      },
+      "title": "Marker",
+      "type": "object"
+    }
+  },
+  "$id": "clearance/capture",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "anchoring": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Anchoring"
+    },
+    "app": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "App"
+    },
+    "capture_id": {
+      "title": "Capture Id",
+      "type": "string"
+    },
+    "clock": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Clock"
+    },
+    "device": {
+      "$ref": "#/$defs/Device"
+    },
+    "duration_s": {
+      "default": 0.0,
+      "title": "Duration S",
+      "type": "number"
+    },
+    "files": {
+      "$ref": "#/$defs/CaptureFiles",
+      "default": {
+        "confidence": null,
+        "depth": null,
+        "feature_points": null,
+        "frames": null,
+        "observer_pose": null,
+        "poses": "poses.jsonl",
+        "relative_depth": null,
+        "video": null
+      }
+    },
+    "marker": {
+      "$ref": "#/$defs/Marker",
+      "default": {
+        "family": "tag36h11",
+        "id": 0,
+        "size_m": 0.16
+      }
+    },
+    "privacy": {
+      "additionalProperties": true,
+      "default": {
+        "faces_blurred_on_device": true
+      },
+      "title": "Privacy",
+      "type": "object"
+    },
+    "role": {
+      "enum": [
+        "scanner",
+        "observer"
+      ],
+      "title": "Role",
+      "type": "string"
+    },
+    "site_id": {
+      "title": "Site Id",
+      "type": "string"
+    },
+    "started_at": {
+      "default": "",
+      "title": "Started At",
+      "type": "string"
+    },
+    "stats": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Stats"
+    }
+  },
+  "required": [
+    "capture_id",
+    "site_id",
+    "device",
+    "role"
+  ],
+  "title": "Capture",
+  "type": "object"
+}

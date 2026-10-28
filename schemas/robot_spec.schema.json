@@ -1,0 +1,290 @@
+{
+  "$defs": {
+    "FieldSource": {
+      "properties": {
+        "quote": {
+          "title": "Quote",
+          "type": "string"
+        },
+        "retrieved_at": {
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "quote",
+        "retrieved_at"
+      ],
+      "title": "FieldSource",
+      "type": "object"
+    },
+    "Price": {
+      "properties": {
+        "currency": {
+          "default": "USD",
+          "title": "Currency",
+          "type": "string"
+        },
+        "is_public": {
+          "default": false,
+          "title": "Is Public",
+          "type": "boolean"
+        },
+        "note": {
+          "default": "price on request",
+          "title": "Note",
+          "type": "string"
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Url"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "title": "Price",
+      "type": "object"
+    }
+  },
+  "$id": "clearance/robot_spec",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "class": {
+      "enum": [
+        "A_service",
+        "B_amr"
+      ],
+      "title": "Class",
+      "type": "string"
+    },
+    "drive": {
+      "default": "diff_drive",
+      "enum": [
+        "diff_drive",
+        "omni",
+        "ackermann"
+      ],
+      "title": "Drive",
+      "type": "string"
+    },
+    "fields_sources": {
+      "additionalProperties": {
+        "$ref": "#/$defs/FieldSource"
+      },
+      "default": {},
+      "title": "Fields Sources",
+      "type": "object"
+    },
+    "footprint_approx": {
+      "default": false,
+      "title": "Footprint Approx",
+      "type": "boolean"
+    },
+    "footprint_polygon_m": {
+      "anyOf": [
+        {
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Footprint Polygon M"
+    },
+    "height_m": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Height M"
+    },
+    "in_place_rotation": {
+      "default": true,
+      "title": "In Place Rotation",
+      "type": "boolean"
+    },
+    "max_slope_deg": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Max Slope Deg"
+    },
+    "max_speed_mps": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Max Speed Mps"
+    },
+    "max_threshold_m": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Max Threshold M"
+    },
+    "min_aisle_width_vendor_m": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Min Aisle Width Vendor M"
+    },
+    "min_turn_radius_m": {
+      "default": 0.0,
+      "title": "Min Turn Radius M",
+      "type": "number"
+    },
+    "model": {
+      "title": "Model",
+      "type": "string"
+    },
+    "nominal_speed_mps": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Nominal Speed Mps"
+    },
+    "notes": {
+      "default": "",
+      "title": "Notes",
+      "type": "string"
+    },
+    "payload_kg": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Payload Kg"
+    },
+    "price": {
+      "$ref": "#/$defs/Price",
+      "default": {
+        "currency": "USD",
+        "is_public": false,
+        "note": "price on request",
+        "source_url": null,
+        "value": null
+      }
+    },
+    "robot_id": {
+      "title": "Robot Id",
+      "type": "string"
+    },
+    "runtime_h": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Runtime H"
+    },
+    "safety_stop_distance_m": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Safety Stop Distance M"
+    },
+    "vendor": {
+      "title": "Vendor",
+      "type": "string"
+    },
+    "verified_by_human": {
+      "default": false,
+      "title": "Verified By Human",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "robot_id",
+    "class",
+    "vendor",
+    "model"
+  ],
+  "title": "RobotSpec",
+  "type": "object"
+}
