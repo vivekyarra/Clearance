@@ -1,0 +1,80 @@
+# XcodeGen spec for the Clearance iOS app. On a Mac: `brew install xcodegen && xcodegen` in
+# apps/ios, then open Clearance.xcodeproj. Set your signing team in Xcode (Signing & Capabilities)
+# or pass DEVELOPMENT_TEAM=XXXXXXXXXX to xcodebuild.
+name: Clearance
+options:
+  bundleIdPrefix: dev.tabularis
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    SWIFT_STRICT_CONCURRENCY: minimal
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+packages:
+  ClearanceKit:
+    path: ClearanceKit
+targets:
+  Clearance:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: Clearance
+        excludes:
+          - "**/.DS_Store"
+    dependencies:
+      - package: ClearanceKit
+    info:
+      path: Clearance/Info.plist
+      properties:
+        CFBundleDisplayName: Clearance
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSRequiresIPhoneOS: true
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UIRequiredDeviceCapabilities:
+          - arkit
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UIStatusBarStyle: UIStatusBarStyleLightContent
+        NSCameraUsageDescription: "Clearance uses the camera to scan this space with ARKit, to read the site QR code, and to place the robot replay in the room. Faces are blurred on the phone before any image is saved."
+        NSLocalNetworkUsageDescription: "Clearance uploads scans to the Clearance server on your local network and loads replays from it."
+        # https everywhere except the local network (SiteJoin's APIHostPolicy refuses other http hosts).
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+        UIFileSharingEnabled: true
+        LSSupportsOpeningDocumentsInPlace: true
+        ITSAppUsesNonExemptEncryption: false
+        CFBundleURLTypes:
+          - CFBundleURLName: dev.tabularis.clearance.join
+            CFBundleURLSchemes:
+              - clearance
+    settings:
+      base:
+        PRODUCT_NAME: Clearance
+        PRODUCT_BUNDLE_IDENTIFIER: dev.tabularis.clearance
+        TARGETED_DEVICE_FAMILY: "1,2"
+        GENERATE_INFOPLIST_FILE: NO
+        CODE_SIGN_STYLE: Automatic
+        ENABLE_PREVIEWS: YES
+        ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: NO
+schemes:
+  Clearance:
+    build:
+      targets:
+        Clearance: all
+    run:
+      config: Debug
+    archive:
+      config: Release
