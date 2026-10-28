@@ -1,0 +1,94 @@
+{
+  "robot_id": "pudu_kettybot",
+  "class": "A_service",
+  "vendor": "Pudu Robotics",
+  "model": "KettyBot",
+  "footprint_polygon_m": [
+    [
+      0.2175,
+      0.225
+    ],
+    [
+      -0.2175,
+      0.225
+    ],
+    [
+      -0.2175,
+      -0.225
+    ],
+    [
+      0.2175,
+      -0.225
+    ]
+  ],
+  "footprint_approx": true,
+  "height_m": 1.12,
+  "drive": "diff_drive",
+  "in_place_rotation": true,
+  "min_turn_radius_m": 0.0,
+  "max_speed_mps": 1.2,
+  "nominal_speed_mps": null,
+  "max_threshold_m": 0.005,
+  "max_slope_deg": 5.0,
+  "min_aisle_width_vendor_m": 0.55,
+  "payload_kg": 30.0,
+  "runtime_h": 8.0,
+  "safety_stop_distance_m": null,
+  "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": null
+  },
+  "fields_sources": {
+    "max_speed_mps": {
+      "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+      "quote": "Set the delivery speed and cruise speed with the options of 0.5m/s\u20141.2m/s.",
+      "retrieved_at": "2026-10-27T17:40:54Z"
+    },
+    "payload_kg": {
+      "url": "https://robotsourced.com/robots/service/pudu-kettybot",
+      "quote": "Payload 30 kg",
+      "retrieved_at": "2026-10-27T17:40:54Z"
+    },
+    "runtime_h": {
+      "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+      "quote": "4.5h >8h",
+      "retrieved_at": "2026-10-27T17:40:54Z"
+    },
+    "max_threshold_m": {
+      "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+      "quote": "Make sure that the protrusions are no more than 0.5cm high",
+      "retrieved_at": "2026-10-27T17:40:54Z"
+    },
+    "max_slope_deg": {
+      "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+      "quote": "The maximum possible slope is 5\u00b0 for the robot",
+      "retrieved_at": "2026-10-27T17:40:54Z"
+    },
+    "min_aisle_width_vendor_m": {
+      "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+      "quote": "Minimum pass width 0.55m",
+      "retrieved_at": "2026-10-27T17:40:54Z"
+    },
+    "height_m": {
+      "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+      "quote": "435*450*1120 (mm)",
+      "retrieved_at": "2026-10-27T17:40:54Z"
+    },
+    "footprint_polygon_m": {
+      "url": "https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf",
+      "quote": "435*450*1120 (mm)",
+      "retrieved_at": "2026-10-27T17:40:54Z"
+    }
+  },
+  "verified_by_human": true,
+  "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"llm_nano\"], \"sources_considered\": [\"https://robotsourced.com/robots/service/pudu-kettybot\", \"https://www.generationrobots.com/en/404251-pudu-kettybot-home-robot.html\", \"https://todorobotics.com/feeds/category/kettybot-pudu-price\", \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\"], \"null_fields\": [\"nominal_speed_mps\", \"safety_stop_distance_m\"], \"rejected_fields\": [{\"field\": \"runtime_h\", \"url\": \"https://todorobotics.com/feeds/category/kettybot-pudu-price\", \"reason\": \"no time quantity in quote equals 8\", \"quote\": \"8+ hour runtime\"}, {\"field\": \"payload_kg\", \"url\": \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\", \"reason\": \"the 10 in the quote is labelled as another item\", \"quote\": \"10kg/tray\"}, {\"field\": \"min_turn_radius_m\", \"url\": \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\", \"reason\": \"unit: unknown unit ''\", \"quote\": null}], \"conflicts\": [{\"field\": \"max_speed_mps\", \"kept\": 1.2, \"kept_url\": \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\", \"other\": 0.9, \"other_url\": \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\", \"detail\": \"speed setting range vs spec-table cruise speed\"}, {\"field\": \"runtime_h\", \"kept\": 8.0, \"kept_url\": \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\", \"other\": 10.0, \"other_url\": \"https://robotsourced.com/robots/service/pudu-kettybot\"}], \"comments\": [\"built by the live pipeline; the KettyBot Pro is a separate model and its pages were not used\", \"max_speed_mps: the user manual's speed setting range tops out at 1.2 m/s; its specification table lists cruise speed 'Adjustable between 0.5~0.9m/s'. A reseller page (robotsourced.com) also states 1.2 m/s\", \"runtime_h: the user manual's specification table states battery life '>8h' (charging time 4.5h precedes it in the same column dump); we keep the lower bound 8 h. A reseller page (robotsourced.com) states 10 h\", \"payload_kg comes from a reseller page (robotsourced.com); the user manual gives 10 kg per tray with two trays plus a storage basket and no total, and the same reseller page lists a robot weight (55 kg) that differs from the manual (38 kg), so please confirm the total payload with the vendor\", \"dimensions order in the manual is not labelled; read as length x width x height\", \"the user manual is a Pudu document hosted by a distributor\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\", \"price: the live pipeline found a price-related line on a third-party page (www.generationrobots.com); we take no third-party prices, so the price stays on request\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://robotsourced.com/robots/service/pudu-kettybot\", \"https://www.generationrobots.com/en/404251-pudu-kettybot-home-robot.html\", \"https://todorobotics.com/feeds/category/kettybot-pudu-price\", \"https://6083570.fs1.hubspotusercontent-na1.net/hubfs/6083570/2022%20Robotics/Kettybot%20User%20Manual.pdf\"], \"fields_rejected_by_validator\": 3}}",
+  "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:19.365Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+  }
+}

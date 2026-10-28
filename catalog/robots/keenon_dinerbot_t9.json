@@ -1,0 +1,89 @@
+{
+  "robot_id": "keenon_dinerbot_t9",
+  "class": "A_service",
+  "vendor": "Keenon Robotics",
+  "model": "DINERBOT T9",
+  "footprint_polygon_m": [
+    [
+      0.2635,
+      0.25
+    ],
+    [
+      -0.2635,
+      0.25
+    ],
+    [
+      -0.2635,
+      -0.25
+    ],
+    [
+      0.2635,
+      -0.25
+    ]
+  ],
+  "footprint_approx": true,
+  "height_m": 1.266,
+  "drive": "diff_drive",
+  "in_place_rotation": true,
+  "min_turn_radius_m": 0.0,
+  "max_speed_mps": 1.0,
+  "nominal_speed_mps": null,
+  "max_threshold_m": null,
+  "max_slope_deg": 5.0,
+  "min_aisle_width_vendor_m": 0.7,
+  "payload_kg": 40.0,
+  "runtime_h": 18.0,
+  "safety_stop_distance_m": null,
+  "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": null
+  },
+  "fields_sources": {
+    "footprint_polygon_m": {
+      "url": "https://www.keenon.com/en/product/T9",
+      "quote": "Dimensions(WxDxH) 50.0 x 52.7 x 126.6cm",
+      "retrieved_at": "2026-10-27T13:51:43Z"
+    },
+    "height_m": {
+      "url": "https://www.keenon.com/en/product/T9",
+      "quote": "Dimensions(WxDxH) 50.0 x 52.7 x 126.6cm",
+      "retrieved_at": "2026-10-27T13:51:43Z"
+    },
+    "max_speed_mps": {
+      "url": "https://www.keenon.com/en/product/T9",
+      "quote": "Moving Speed 0.1-1.0 m/s",
+      "retrieved_at": "2026-10-27T13:51:43Z"
+    },
+    "runtime_h": {
+      "url": "https://www.keenon.com/en/product/T9",
+      "quote": "Battery Life Up to 18h",
+      "retrieved_at": "2026-10-27T13:51:43Z"
+    },
+    "max_slope_deg": {
+      "url": "https://www.keenon.com/en/product/T9",
+      "quote": "Slope Angle 5\u00b0",
+      "retrieved_at": "2026-10-27T13:51:43Z"
+    },
+    "payload_kg": {
+      "url": "https://www.keenon.com/en/product/T9",
+      "quote": "Total Load Capacity 40kg (88lbs)",
+      "retrieved_at": "2026-10-27T13:51:43Z"
+    },
+    "min_aisle_width_vendor_m": {
+      "url": "https://www.keenon.com/en/product/T9",
+      "quote": "Minimum Passage Width 70cm",
+      "retrieved_at": "2026-10-27T13:51:43Z"
+    }
+  },
+  "verified_by_human": true,
+  "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://www.keenon.com/en/product/T9\"], \"null_fields\": [\"nominal_speed_mps\", \"max_threshold_m\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"runtime is the vendor's 'up to' figure; the page notes battery claims vary with use\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.keenon.com/en/product/T9\", \"https://www.robotsinternational.com/Keenon-DINERBOT-T9.htm\", \"https://sonnyrobotics.com/products/keenon-t9\", \"https://www.robomarket.ae/robots/dinerbot-t9\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_slope_deg\", \"min_aisle_width_vendor_m\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [], \"fields_rejected_by_validator\": 3, \"other_pages_differing\": [{\"field\": \"max_speed_mps\", \"value\": 0.8, \"url\": \"https://sonnyrobotics.com/products/keenon-t9\"}]}}",
+  "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:16.728Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+  }
+}
