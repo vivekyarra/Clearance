@@ -1,0 +1,98 @@
+# Local stack for Clearance.
+#   docker compose -f infra/docker-compose.yml up --build                     # API + web on :8000, SQLite
+#   docker compose -f infra/docker-compose.yml --profile postgres up --build  # + Postgres
+#   docker compose -f infra/docker-compose.yml --profile s3 up --build        # + MinIO (S3 API like Nebius Object Storage)
+# Profiles combine. Point the API at them with an infra/.env file next to this compose file, e.g.
+#   CLEARANCE_DATABASE_URL=postgresql+psycopg://clearance:clearance@postgres:5432/clearance
+#   CLEARANCE_S3_BUCKET=clearance-data
+#   CLEARANCE_S3_ENDPOINT=http://minio:9000
+# Keys for live mode (NEBIUS_API_KEY, TAVILY_API_KEY) are read from the same .env; without them the API
+# runs in offline mode.
+name: clearance
+
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.api
+    image: clearance-api:local
+    ports:
+      - "8000:8000"
+    environment:
+      CLEARANCE_DATA: /data
+      CLEARANCE_LLM_MODE: ${CLEARANCE_LLM_MODE:-offline}
+      CLEARANCE_TAVILY_MODE: ${CLEARANCE_TAVILY_MODE:-offline}
+      CLEARANCE_DATABASE_URL: ${CLEARANCE_DATABASE_URL:-}
+      CLEARANCE_S3_BUCKET: ${CLEARANCE_S3_BUCKET:-}
+      CLEARANCE_S3_ENDPOINT: ${CLEARANCE_S3_ENDPOINT:-}
+      CLEARANCE_S3_REGION: ${CLEARANCE_S3_REGION:-eu-north1}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-clearance}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-clearance-secret}
+      CLEARANCE_PUBLIC_API_BASE: ${CLEARANCE_PUBLIC_API_BASE:-}
+      NEBIUS_API_KEY: ${NEBIUS_API_KEY:-}
+      TAVILY_API_KEY: ${TAVILY_API_KEY:-}
+      CLEARANCE_VISION_BASE_URL: ${CLEARANCE_VISION_BASE_URL:-}
+      CLEARANCE_VISION_API_KEY: ${CLEARANCE_VISION_API_KEY:-}
+    volumes:
+      - ../data:/data
+    restart: unless-stopped
+
+  # CPU job image, for running one shard or task locally exactly as Serverless Jobs would:
+  #   docker compose -f infra/docker-compose.yml run --rm -e CLEARANCE_SHARD_SPEC="$(cat spec.json)" jobs-cpu shard
+  jobs-cpu:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.jobs-cpu
+    image: clearance-jobs-cpu:local
+    profiles: ["jobs"]
+    environment:
+      CLEARANCE_DATA: /data
+    volumes:
+      - ../data:/data
+
+  postgres:
+    image: postgres:16-alpine
+    profiles: ["postgres"]
+    environment:
+      POSTGRES_USER: clearance
+      POSTGRES_PASSWORD: clearance
+      POSTGRES_DB: clearance
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U clearance"]
+      interval: 5s
+      retries: 10
+
+  minio:
+    image: minio/minio:latest
+    profiles: ["s3"]
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${AWS_ACCESS_KEY_ID:-clearance}
+      MINIO_ROOT_PASSWORD: ${AWS_SECRET_ACCESS_KEY:-clearance-secret}
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - miniodata:/data
+
+  minio-init:
+    image: minio/mc:latest
+    profiles: ["s3"]
+    depends_on: [minio]
+    entrypoint: >
+      /bin/sh -c "
+      until mc alias set local http://minio:9000 $${MINIO_ROOT_USER} $${MINIO_ROOT_PASSWORD}; do sleep 1; done;
+      mc mb --ignore-existing local/$${BUCKET};
+      "
+    environment:
+      MINIO_ROOT_USER: ${AWS_ACCESS_KEY_ID:-clearance}
+      MINIO_ROOT_PASSWORD: ${AWS_SECRET_ACCESS_KEY:-clearance-secret}
+      BUCKET: ${CLEARANCE_S3_BUCKET:-clearance-data}
+
+volumes:
+  pgdata:
+  miniodata:
