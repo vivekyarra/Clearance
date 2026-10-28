@@ -1,0 +1,44 @@
+{
+  "batch_id": "sb_d693ff018637",
+  "twin_id": "twin_ref_corridor_v1",
+  "twin_version": 1,
+  "robot_id": "bear_servi",
+  "task": {
+    "type": "delivery",
+    "sequence": [
+      "DOCK",
+      "PICKUP",
+      "O4",
+      "O3",
+      "O2",
+      "O1",
+      "DOCK"
+    ]
+  },
+  "density": "quiet",
+  "geometry_bound": "nominal",
+  "n_episodes": 40,
+  "seed_base": 1000,
+  "code_version": "f3a233c+sim-d77ef3d9a1",
+  "results": {
+    "success_rate": 1.0,
+    "min_gap_m": 0.10944999999999999,
+    "ci95": [
+      0.9123754607496077,
+      1.0
+    ],
+    "median_mission_s": 57.1,
+    "near_miss_per_mission": 1.05,
+    "stops_per_mission": 1.85,
+    "fail_reasons": {
+      "no_path_static": 0,
+      "blocked_timeout": 0,
+      "collision": 0
+    },
+    "n_success": 40,
+    "n_episodes": 40
+  },
+  "episodes_uri": null,
+  "bottleneck_uri": null,
+  "wall_time_s": 159.229
+}

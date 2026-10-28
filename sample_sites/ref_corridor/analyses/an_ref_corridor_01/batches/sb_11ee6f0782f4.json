@@ -1,0 +1,44 @@
+{
+  "batch_id": "sb_11ee6f0782f4",
+  "twin_id": "twin_ref_corridor_v1",
+  "twin_version": 1,
+  "robot_id": "pudu_kettybot",
+  "task": {
+    "type": "delivery",
+    "sequence": [
+      "DOCK",
+      "PICKUP",
+      "O4",
+      "O3",
+      "O2",
+      "O1",
+      "DOCK"
+    ]
+  },
+  "density": "peak",
+  "geometry_bound": "nominal",
+  "n_episodes": 40,
+  "seed_base": 1000,
+  "code_version": "f3a233c+sim-d77ef3d9a1",
+  "results": {
+    "success_rate": 0.9,
+    "min_gap_m": 0.1052,
+    "ci95": [
+      0.7694792561952611,
+      0.9604211124044252
+    ],
+    "median_mission_s": 95.8,
+    "near_miss_per_mission": 9.5,
+    "stops_per_mission": 11.975,
+    "fail_reasons": {
+      "no_path_static": 0,
+      "blocked_timeout": 1,
+      "collision": 3
+    },
+    "n_success": 36,
+    "n_episodes": 40
+  },
+  "episodes_uri": null,
+  "bottleneck_uri": null,
+  "wall_time_s": 91.964
+}

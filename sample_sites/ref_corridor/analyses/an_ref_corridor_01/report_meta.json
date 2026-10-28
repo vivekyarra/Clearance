@@ -1,0 +1,139 @@
+{
+  "writer": "hybrid",
+  "mode": "live",
+  "analysis_id": "an_ref_corridor_01",
+  "sections": {
+    "summary": {
+      "llm_calls": 1,
+      "first_pass_errors": 0,
+      "regenerated": false,
+      "errors_after_regeneration": null,
+      "sentences_removed": 0,
+      "fallback": null,
+      "allowed_facts": 32,
+      "tokens_out": 1174,
+      "errors_first_pass_types": [],
+      "wall_s": 24.5
+    },
+    "why|keenon_w3": {
+      "llm_calls": 2,
+      "first_pass_errors": 1,
+      "regenerated": true,
+      "errors_after_regeneration": 0,
+      "sentences_removed": 0,
+      "fallback": null,
+      "allowed_facts": 27,
+      "tokens_out": 2451,
+      "errors_first_pass_types": [
+        "value_mismatch"
+      ],
+      "wall_s": 85.4
+    },
+    "why|bear_servi": {
+      "llm_calls": 2,
+      "first_pass_errors": 1,
+      "regenerated": true,
+      "errors_after_regeneration": 1,
+      "sentences_removed": 1,
+      "fallback": null,
+      "allowed_facts": 28,
+      "tokens_out": 5116,
+      "errors_first_pass_types": [
+        "value_mismatch"
+      ],
+      "wall_s": 82.5
+    },
+    "why|keenon_dinerbot_t9": {
+      "llm_calls": 2,
+      "first_pass_errors": 2,
+      "regenerated": true,
+      "errors_after_regeneration": 1,
+      "sentences_removed": 1,
+      "fallback": null,
+      "allowed_facts": 28,
+      "tokens_out": 7803,
+      "errors_first_pass_types": [
+        "value_mismatch"
+      ],
+      "wall_s": 146.1
+    },
+    "why|keenon_dinerbot_t8": {
+      "llm_calls": 2,
+      "first_pass_errors": 2,
+      "regenerated": true,
+      "errors_after_regeneration": 0,
+      "sentences_removed": 0,
+      "fallback": null,
+      "allowed_facts": 28,
+      "tokens_out": 6070,
+      "errors_first_pass_types": [
+        "unit_mismatch",
+        "value_mismatch"
+      ],
+      "wall_s": 141.3
+    },
+    "why|pudu_kettybot": {
+      "llm_calls": 1,
+      "first_pass_errors": 0,
+      "regenerated": false,
+      "errors_after_regeneration": null,
+      "sentences_removed": 0,
+      "fallback": null,
+      "allowed_facts": 28,
+      "tokens_out": 2995,
+      "errors_first_pass_types": [],
+      "wall_s": 55.4
+    },
+    "why|pudu_t300": {
+      "llm_calls": 2,
+      "first_pass_errors": 1,
+      "regenerated": true,
+      "errors_after_regeneration": 0,
+      "sentences_removed": 0,
+      "fallback": null,
+      "allowed_facts": 28,
+      "tokens_out": 2750,
+      "errors_first_pass_types": [
+        "value_mismatch"
+      ],
+      "wall_s": 44.9
+    },
+    "tradeoffs": {
+      "llm_calls": 2,
+      "first_pass_errors": 125,
+      "regenerated": true,
+      "errors_after_regeneration": 0,
+      "sentences_removed": 0,
+      "fallback": null,
+      "allowed_facts": 48,
+      "tokens_out": 8980,
+      "errors_first_pass_types": [
+        "non_numeric_fact",
+        "unit_mismatch",
+        "untagged_number",
+        "value_mismatch"
+      ],
+      "wall_s": 116.9
+    }
+  },
+  "totals": {
+    "sections": 8,
+    "llm_calls": 14,
+    "first_pass_errors": 132,
+    "regenerations": 6,
+    "sentences_removed": 2,
+    "fallbacks": []
+  },
+  "final_check": {
+    "ok": true,
+    "errors": 0
+  },
+  "required_blocks": {
+    "comparison_table": true,
+    "verdict_rule_tables": true,
+    "awaiting_review_labels": true,
+    "how_we_investigated": true,
+    "sources": true
+  },
+  "wall_s": 267.8
+}

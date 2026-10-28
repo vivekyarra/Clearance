@@ -1,0 +1,56 @@
+{
+  "batch_id": "sb_938052ccbcec",
+  "twin_id": "twin_ref_storeroom_v1",
+  "twin_version": 1,
+  "robot_id": "otto_100",
+  "task": {
+    "type": "delivery",
+    "sequence": [
+      "DOCK",
+      "PICKUP",
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "DOCK"
+    ]
+  },
+  "density": "normal",
+  "geometry_bound": "nominal",
+  "n_episodes": 40,
+  "seed_base": 1000,
+  "code_version": "f3a233c+sim-d77ef3d9a1",
+  "results": {
+    "success_rate": 0.975,
+    "min_gap_m": 0.0298,
+    "ci95": [
+      0.8711834051199223,
+      0.9955732825922052
+    ],
+    "median_mission_s": 127.3,
+    "near_miss_per_mission": 2.15,
+    "stops_per_mission": 2.4,
+    "fail_reasons": {
+      "no_path_static": 0,
+      "blocked_timeout": 0,
+      "collision": 1
+    },
+    "n_success": 39,
+    "n_episodes": 40
+  },
+  "episodes_uri": "analyses/an_ref_storeroom_01/batches/sb_938052ccbcec.episodes.jsonl",
+  "bottleneck_uri": "analyses/an_ref_storeroom_01/batches/sb_938052ccbcec.bottleneck.npy",
+  "wall_time_s": 394.283,
+  "replay_episodes": {
+    "kept_episode_indexes": [
+      0,
+      24
+    ],
+    "note": "replay subset; the full batch is summarized in results"
+  },
+  "pinch_map_scale": {
+    "dtype": "uint8",
+    "max_value": 10.899999618530273,
+    "note": "Pinch Map stored as relative intensity 0-255"
+  }
+}

@@ -1,0 +1,999 @@
+{
+  "investigation_id": "inv_79f1d1adda",
+  "analysis_id": "an_ref_cafe_01",
+  "model_id": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+  "mode": "live",
+  "steps": [
+    {
+      "i": 1,
+      "thought": "",
+      "tool": "get_batch_summary",
+      "args": {
+        "batch_id": "sb_663a4ebd9d8"
+      },
+      "result_summary": {
+        "ok": false,
+        "error": "unknown batch_id 'sb_663a4ebd9d8'; known: ['sb_663a4ebd9d98', 'sb_7ac2d8341045', 'sb_827ac98ffe28', 'sb_8c51cf1c3e6e', 'sb_a6d97fff8d54', 'sb_a9f1db9cdd23', 'sb_d792ff9bac89', 'sb_de0cdafad0af', 'sb_f2a4f4e48ab2']"
+      },
+      "fact_ids": []
+    },
+    {
+      "i": 2,
+      "thought": "",
+      "tool": "get_batch_summary",
+      "args": {
+        "batch_id": "sb_663a4ebd9d98"
+      },
+      "result_summary": {
+        "ok": true,
+        "robot_id": "bear_servi",
+        "batches": [
+          {
+            "batch_id": "sb_663a4ebd9d98",
+            "density": "normal",
+            "bound": "optimistic",
+            "success_rate": {
+              "value": 0.95,
+              "unit": "ratio",
+              "fact_id": "f_i79f1d_001"
+            },
+            "ci95_low": {
+              "value": 0.835,
+              "unit": "ratio",
+              "fact_id": "f_i79f1d_002"
+            },
+            "ci95_high": {
+              "value": 0.9862,
+              "unit": "ratio",
+              "fact_id": "f_i79f1d_003"
+            },
+            "n_episodes": {
+              "value": 40,
+              "unit": "episodes",
+              "fact_id": "f_i79f1d_004"
+            },
+            "median_mission_s": {
+              "value": 101.95,
+              "unit": "s",
+              "fact_id": "f_i79f1d_005"
+            },
+            "min_gap_m": {
+              "value": 0.0293,
+              "unit": "m",
+              "fact_id": "f_i79f1d_006"
+            },
+            "near_miss_per_mission": {
+              "value": 1.775,
+              "unit": "per mission",
+              "fact_id": "f_i79f1d_007"
+            },
+            "stops_per_mission": {
+              "value": 3.875,
+              "unit": "per mission",
+              "fact_id": "f_i79f1d_008"
+            },
+            "fail_reasons": {
+              "no_path_static": {
+                "value": 2,
+                "unit": "episodes",
+                "fact_id": "f_i79f1d_009"
+              }
+            }
+          }
+        ]
+      },
+      "fact_ids": [
+        "f_i79f1d_001",
+        "f_i79f1d_002",
+        "f_i79f1d_003",
+        "f_i79f1d_004",
+        "f_i79f1d_005",
+        "f_i79f1d_006",
+        "f_i79f1d_007",
+        "f_i79f1d_008",
+        "f_i79f1d_009"
+      ]
+    },
+    {
+      "i": 3,
+      "thought": "",
+      "tool": "get_batch_summary",
+      "args": {
+        "batch_id": "sb_7ac2d8341045"
+      },
+      "result_summary": {
+        "ok": true,
+        "robot_id": "bear_servi",
+        "batches": [
+          {
+            "batch_id": "sb_7ac2d8341045",
+            "density": "peak",
+            "bound": "nominal",
+            "success_rate": {
+              "value": 0.75,
+              "unit": "ratio",
+              "fact_id": "f_i79f1d_010"
+            },
+            "ci95_low": {
+              "value": 0.5981,
+              "unit": "ratio",
+              "fact_id": "f_i79f1d_011"
+            },
+            "ci95_high": {
+              "value": 0.8581,
+              "unit": "ratio",
+              "fact_id": "f_i79f1d_012"
+            },
+            "n_episodes": {
+              "value": 40,
+              "unit": "episodes",
+              "fact_id": "f_i79f1d_013"
+            },
+            "median_mission_s": {
+              "value": 115.15,
+              "unit": "s",
+              "fact_id": "f_i79f1d_014"
+            },
+            "min_gap_m": {
+              "value": 0.035,
+              "unit": "m",
+              "fact_id": "f_i79f1d_015"
+            },
+            "near_miss_per_mission": {
+              "value": 2.775,
+              "unit": "per mission",
+              "fact_id": "f_i79f1d_016"
+            },
+            "stops_per_mission": {
+              "value": 5.5,
+              "unit": "per mission",
+              "fact_id": "f_i79f1d_017"
+            },
+            "fail_reasons": {
+              "no_path_static": {
+                "value": 10,
+                "unit": "episodes",
+                "fact_id": "f_i79f1d_018"
+              }
+            }
+          }
+        ]
+      },
+      "fact_ids": [
+        "f_i79f1d_010",
+        "f_i79f1d_011",
+        "f_i79f1d_012",
+        "f_i79f1d_013",
+        "f_i79f1d_014",
+        "f_i79f1d_015",
+        "f_i79f1d_016",
+        "f_i79f1d_017",
+        "f_i79f1d_018"
+      ]
+    },
+    {
+      "i": 4,
+      "thought": "",
+      "tool": "get_bottlenecks",
+      "args": {
+        "top_k": 10
+      },
+      "result_summary": {
+        "ok": true,
+        "bottlenecks": [
+          {
+            "rank": 1,
+            "xy": [
+              0.663,
+              2.488
+            ],
+            "share_of_total": {
+              "value": 0.4411,
+              "unit": "ratio",
+              "fact_id": "f_i79f1d_019"
+            },
+            "nearby_object_ids": [
+              "CH4W",
+              "TABLE4",
+              "TABLE1",
+              "CH1W",
+              "CH4E"
+            ],
+            "nearby_zone_ids": [
+              "seating"
+            ],
+            "examined": false
+          },
+          {
+            "rank": 2,
+            "xy": [
+              0.588,
+              3.788
+            ],
+            "share_of_total": {
+              "value": 0.1569,
+              "unit": "ratio",
+              "fact_id": "f_i79f1d_020"
+            },
+            "nearby_object_ids": [
+              "DOCKSTN",
+              "CH4W",
+              "TABLE4",
+              "PLANT1"
+            ],
+            "nearby_zone_ids": [
+              "seating"
+            ],
+            "examined": false
+          },
+          {
+            "rank": 3,
+            "xy": [
+              1.688,
+              2.188
+            ],
+            "share_of_total": {
+              "value": 0.1232,
+              "unit": "ratio",
+              "fact_id": "f_i79f1d_021"
+            },
+            "nearby_object_ids": [
+              "TABLE4",
+              "TABLE1",
+              "CH4E",
+              "CH1E",
+              "CH4W",
+              "CH1W",
+              "CH5W",
+              "CH2W"
+            ],
+            "nearby_zone_ids": [
+              "seating",
+              "entrance"
+            ],
+            "examined": false
+          },
+          {
+            "rank": 4,
+            "xy": [
+              7.188,
+              4.263
+            ],
+            "share_of_total": {
+              "value": 0.0575,
+              "unit": "ratio",
+              "fact_id": "f_i79f1d_022"
+            },
+            "nearby_object_ids": [
+              "KITCHEN_PASS",
+              "CH6E",
+              "TABLE6"
+            ],
+            "nearby_zone_ids": [
+              "kitchen",
+              "seating"
+            ],
+            "examined": false
+          },
+          {
+            "rank": 5,
+            "xy": [
+              6.938,
+              2.488
+            ],
+            "share_of_total": {
+              "value": 0.0557,
+              "unit": "ratio",
+              "fact_id": "f_i79f1d_023"
+            },
+            "nearby_object_ids": [
+              "CH6E",
+              "TABLE6",
+              "CH3E",
+              "TABLE3"
+            ],
+            "nearby_zone_ids": [
+              "seating",
+              "kitchen"
+            ],
+            "examined": false
+          }
+        ],
+        "batches_used": [
+          "sb_7ac2d8341045",
+          "sb_d792ff9bac89",
+          "sb_de0cdafad0af"
+        ],
+        "threshold_share": 0.05
+      },
+      "fact_ids": [
+        "f_i79f1d_019",
+        "f_i79f1d_020",
+        "f_i79f1d_021",
+        "f_i79f1d_022",
+        "f_i79f1d_023"
+      ]
+    },
+    {
+      "i": 5,
+      "thought": "",
+      "tool": "get_gap_at",
+      "args": {
+        "xy": [
+          0.663,
+          2.488
+        ]
+      },
+      "result_summary": {
+        "ok": true,
+        "xy": [
+          0.663,
+          2.488
+        ],
+        "in_obstacle": false,
+        "nearest_obstacle_m": {
+          "value": 0.3288,
+          "unit": "m",
+          "fact_id": "f_i79f1d_024"
+        },
+        "gap_m": {
+          "value": 0.6576,
+          "unit": "m",
+          "fact_id": "f_i79f1d_025"
+        },
+        "robot_width_m": {
+          "value": 0.445,
+          "unit": "m",
+          "fact_id": "f_i79f1d_026"
+        },
+        "gap_margin_m": {
+          "value": 0.2126,
+          "unit": "m",
+          "fact_id": "f_i79f1d_027"
+        }
+      },
+      "fact_ids": [
+        "f_i79f1d_024",
+        "f_i79f1d_025",
+        "f_i79f1d_026",
+        "f_i79f1d_027"
+      ]
+    },
+    {
+      "i": 6,
+      "thought": "",
+      "tool": "get_gap_at",
+      "args": {
+        "xy": [
+          0.588,
+          3.788
+        ]
+      },
+      "result_summary": {
+        "ok": true,
+        "xy": [
+          0.588,
+          3.788
+        ],
+        "in_obstacle": false,
+        "nearest_obstacle_m": {
+          "value": 0.285,
+          "unit": "m",
+          "fact_id": "f_i79f1d_028"
+        },
+        "gap_m": {
+          "value": 0.5701,
+          "unit": "m",
+          "fact_id": "f_i79f1d_029"
+        },
+        "robot_width_m": {
+          "value": 0.445,
+          "unit": "m",
+          "fact_id": "f_i79f1d_030"
+        },
+        "gap_margin_m": {
+          "value": 0.1251,
+          "unit": "m",
+          "fact_id": "f_i79f1d_031"
+        }
+      },
+      "fact_ids": [
+        "f_i79f1d_028",
+        "f_i79f1d_029",
+        "f_i79f1d_030",
+        "f_i79f1d_031"
+      ]
+    },
+    {
+      "i": 7,
+      "thought": "",
+      "tool": "get_gap_at",
+      "args": {
+        "xy": [
+          1.688,
+          2.188
+        ]
+      },
+      "result_summary": {
+        "ok": true,
+        "xy": [
+          1.688,
+          2.188
+        ],
+        "in_obstacle": false,
+        "nearest_obstacle_m": {
+          "value": 0.45,
+          "unit": "m",
+          "fact_id": "f_i79f1d_032"
+        },
+        "gap_m": {
+          "value": 0.9,
+          "unit": "m",
+          "fact_id": "f_i79f1d_033"
+        },
+        "robot_width_m": {
+          "value": 0.445,
+          "unit": "m",
+          "fact_id": "f_i79f1d_034"
+        },
+        "gap_margin_m": {
+          "value": 0.455,
+          "unit": "m",
+          "fact_id": "f_i79f1d_035"
+        }
+      },
+      "fact_ids": [
+        "f_i79f1d_032",
+        "f_i79f1d_033",
+        "f_i79f1d_034",
+        "f_i79f1d_035"
+      ]
+    },
+    {
+      "i": 8,
+      "thought": "",
+      "tool": "get_episode_events",
+      "args": {
+        "batch_id": "sb_7ac2d8341045",
+        "type": "fail",
+        "limit": 20
+      },
+      "result_summary": {
+        "ok": true,
+        "batch_id": "sb_7ac2d8341045",
+        "type": "fail",
+        "count": {
+          "value": 10,
+          "unit": "events",
+          "fact_id": "f_i79f1d_036"
+        },
+        "episodes_with_event": {
+          "value": 10,
+          "unit": "episodes",
+          "fact_id": "f_i79f1d_037"
+        },
+        "per_mission": {
+          "value": 0.25,
+          "unit": "per mission",
+          "fact_id": "f_i79f1d_038"
+        },
+        "sample": [
+          {
+            "episode": 4,
+            "t": 0.0,
+            "xy": [
+              0.815,
+              4.185
+            ],
+            "detail": {
+              "reason": "no_path_static",
+              "why": "leg DOCK->PICKUP: search_limit"
+            }
+          },
+          {
+            "episode": 13,
+            "t": 0.0,
+            "xy": [
+              0.815,
+              4.185
+            ],
+            "detail": {
+              "reason": "no_path_static",
+              "why": "leg DOCK->PICKUP: search_limit"
+            }
+          },
+          {
+            "episode": 18,
+            "t": 0.0,
+            "xy": [
+              0.815,
+              4.185
+            ],
+            "detail": {
+              "reason": "no_path_static",
+              "why": "leg DOCK->PICKUP: no_path"
+            }
+          },
+          {
+            "episode": 19,
+            "t": 0.0,
+            "xy": [
+              0.815,
+              4.185
+            ],
+            "detail": {
+              "reason": "no_path_static",
+              "why": "leg DOCK->PICKUP: search_limit"
+            }
+          },
+          {
+            "episode": 29,
+            "t": 0.0,
+            "xy": [
+              0.815,
+              4.185
+            ],
+            "detail": {
+              "reason": "no_path_static",
+              "why": "leg DOCK->PICKUP: search_limit"
+            }
+          },
+          {
+            "episode": 34,
+            "t": 0.0,
+            "xy": [
+              0.815,
+              4.185
+            ],
+            "detail": {
+              "reason": "no_path_static",
+              "why": "leg DOCK->PICKUP: search_limit"
+            }
+          },
+          {
+            "episode": 35,
+            "t": 0.0,
+            "xy": [
+              0.815,
+              4.185
+            ],
+            "detail": {
+              "reason": "no_path_static",
+              "why": "leg DOCK->PICKUP: search_limit"
+            }
+          },
+          {
+            "episode": 37,
+            "t": 0.0,
+            "xy": [
+              0.815,
+              4.185
+            ],
+            "detail": {
+              "reason": "no_path_static",
+              "why": "leg DOCK->PICKUP: search_limit"
+            }
+          },
+          {
+            "episode": 38,
+            "t": 0.0,
+            "xy": [
+              0.815,
+              4.185
+            ],
+            "detail": {
+              "reason": "no_path_static",
+              "why": "leg DOCK->PICKUP: search_limit"
+            }
+          },
+          {
+            "episode": 39,
+            "t": 0.0,
+            "xy": [
+              0.815,
+              4.185
+            ],
+            "detail": {
+              "reason": "no_path_static",
+              "why": "leg DOCK->PICKUP: search_limit"
+            }
+          }
+        ]
+      },
+      "fact_ids": [
+        "f_i79f1d_036",
+        "f_i79f1d_037",
+        "f_i79f1d_038"
+      ]
+    }
+  ],
+  "experiments": [],
+  "findings": [],
+  "facts": [
+    {
+      "fact_id": "f_i79f1d_001",
+      "value": 0.95,
+      "unit": "ratio",
+      "label": "Success rate, bear_servi, normal traffic, optimistic geometry (sb_663a4ebd9d98)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step2"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_002",
+      "value": 0.835,
+      "unit": "ratio",
+      "label": "Success rate 95% CI low, bear_servi, normal traffic, optimistic geometry (sb_663a4ebd9d98)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step2"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_003",
+      "value": 0.9862,
+      "unit": "ratio",
+      "label": "Success rate 95% CI high, bear_servi, normal traffic, optimistic geometry (sb_663a4ebd9d98)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step2"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_004",
+      "value": 40.0,
+      "unit": "episodes",
+      "label": "Episodes, bear_servi, normal traffic, optimistic geometry (sb_663a4ebd9d98)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step2"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_005",
+      "value": 101.95,
+      "unit": "s",
+      "label": "Median mission time, bear_servi, normal traffic, optimistic geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step2"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_006",
+      "value": 0.0293,
+      "unit": "m",
+      "label": "Median smallest robot-to-obstacle gap, bear_servi, normal traffic, optimistic geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step2"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_007",
+      "value": 1.775,
+      "unit": "per mission",
+      "label": "Near-misses per mission, bear_servi, normal traffic, optimistic geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step2"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_008",
+      "value": 3.875,
+      "unit": "per mission",
+      "label": "Safety stops per mission, bear_servi, normal traffic, optimistic geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step2"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_009",
+      "value": 2.0,
+      "unit": "episodes",
+      "label": "Failures 'no_path_static', bear_servi, normal traffic, optimistic geometry (sb_663a4ebd9d98)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step2"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_010",
+      "value": 0.75,
+      "unit": "ratio",
+      "label": "Success rate, bear_servi, peak traffic, nominal geometry (sb_7ac2d8341045)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step3"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_011",
+      "value": 0.5981,
+      "unit": "ratio",
+      "label": "Success rate 95% CI low, bear_servi, peak traffic, nominal geometry (sb_7ac2d8341045)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step3"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_012",
+      "value": 0.8581,
+      "unit": "ratio",
+      "label": "Success rate 95% CI high, bear_servi, peak traffic, nominal geometry (sb_7ac2d8341045)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step3"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_013",
+      "value": 40.0,
+      "unit": "episodes",
+      "label": "Episodes, bear_servi, peak traffic, nominal geometry (sb_7ac2d8341045)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step3"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_014",
+      "value": 115.15,
+      "unit": "s",
+      "label": "Median mission time, bear_servi, peak traffic, nominal geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step3"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_015",
+      "value": 0.035,
+      "unit": "m",
+      "label": "Median smallest robot-to-obstacle gap, bear_servi, peak traffic, nominal geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step3"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_016",
+      "value": 2.775,
+      "unit": "per mission",
+      "label": "Near-misses per mission, bear_servi, peak traffic, nominal geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step3"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_017",
+      "value": 5.5,
+      "unit": "per mission",
+      "label": "Safety stops per mission, bear_servi, peak traffic, nominal geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step3"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_018",
+      "value": 10.0,
+      "unit": "episodes",
+      "label": "Failures 'no_path_static', bear_servi, peak traffic, nominal geometry (sb_7ac2d8341045)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step3"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_019",
+      "value": 0.4411,
+      "unit": "ratio",
+      "label": "Pinch Map spot #1: share of accumulated stop/near-miss/blocked score within 0.5 m, bear_servi",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step4"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_020",
+      "value": 0.1569,
+      "unit": "ratio",
+      "label": "Pinch Map spot #2: share of accumulated stop/near-miss/blocked score within 0.5 m, bear_servi",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step4"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_021",
+      "value": 0.1232,
+      "unit": "ratio",
+      "label": "Pinch Map spot #3: share of accumulated stop/near-miss/blocked score within 0.5 m, bear_servi",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step4"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_022",
+      "value": 0.0575,
+      "unit": "ratio",
+      "label": "Pinch Map spot #4: share of accumulated stop/near-miss/blocked score within 0.5 m, bear_servi",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step4"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_023",
+      "value": 0.0557,
+      "unit": "ratio",
+      "label": "Pinch Map spot #5: share of accumulated stop/near-miss/blocked score within 0.5 m, bear_servi",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step4"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_024",
+      "value": 0.3288,
+      "unit": "m",
+      "label": "Distance from (0.66, 2.49) to nearest obstacle (nominal grid)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step5"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_025",
+      "value": 0.6576,
+      "unit": "m",
+      "label": "Approximate free gap through (0.66, 2.49) (2 x nearest-obstacle distance, nominal grid)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step5"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_026",
+      "value": 0.445,
+      "unit": "m",
+      "label": "Footprint width, bear_servi",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step5"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_027",
+      "value": 0.2126,
+      "unit": "m",
+      "label": "Approximate gap minus robot width at (0.66, 2.49)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step5"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_028",
+      "value": 0.285,
+      "unit": "m",
+      "label": "Distance from (0.59, 3.79) to nearest obstacle (nominal grid)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step6"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_029",
+      "value": 0.5701,
+      "unit": "m",
+      "label": "Approximate free gap through (0.59, 3.79) (2 x nearest-obstacle distance, nominal grid)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step6"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_030",
+      "value": 0.445,
+      "unit": "m",
+      "label": "Footprint width, bear_servi",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step6"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_031",
+      "value": 0.1251,
+      "unit": "m",
+      "label": "Approximate gap minus robot width at (0.59, 3.79)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step6"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_032",
+      "value": 0.45,
+      "unit": "m",
+      "label": "Distance from (1.69, 2.19) to nearest obstacle (nominal grid)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step7"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_033",
+      "value": 0.9,
+      "unit": "m",
+      "label": "Approximate free gap through (1.69, 2.19) (2 x nearest-obstacle distance, nominal grid)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step7"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_034",
+      "value": 0.445,
+      "unit": "m",
+      "label": "Footprint width, bear_servi",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step7"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_035",
+      "value": 0.455,
+      "unit": "m",
+      "label": "Approximate gap minus robot width at (1.69, 2.19)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step7"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_036",
+      "value": 10.0,
+      "unit": "events",
+      "label": "'fail' events in sb_7ac2d8341045",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step8"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_037",
+      "value": 10.0,
+      "unit": "episodes",
+      "label": "Episodes with a 'fail' event, sb_7ac2d8341045",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step8"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_038",
+      "value": 0.25,
+      "unit": "per mission",
+      "label": "'fail' events per mission, sb_7ac2d8341045",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step8"
+      }
+    }
+  ],
+  "stop_reason": "max_steps",
+  "robot_id": "bear_servi",
+  "policy": "llm",
+  "sim_runs": 0,
+  "sim_source": "jobs.sim.api"
+}

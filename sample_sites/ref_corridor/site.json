@@ -1,0 +1,11 @@
+{
+  "site_id": "ref_corridor",
+  "name": "Reference corridor (seed 0)",
+  "type": "office",
+  "kind": "corridor",
+  "seed": 0,
+  "geometry_source": "reference",
+  "area_m2": 28.8,
+  "latest_version": 1,
+  "twin": "sites/ref_corridor/twin_v1/twin.json"
+}
