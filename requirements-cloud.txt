@@ -1,0 +1,7 @@
+# Extras for the hosted API and job containers on Nebius AI Cloud.
+# boto3: Nebius Object Storage (S3-compatible) when CLEARANCE_S3_BUCKET is set.
+# psycopg: Postgres when CLEARANCE_DATABASE_URL=postgresql+psycopg://...
+# Versions: latest on PyPI on 2026-10-27.
+-r requirements.txt
+boto3==1.43.119
+psycopg[binary]==3.3.6
