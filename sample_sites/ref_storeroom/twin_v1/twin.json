@@ -1,0 +1,402 @@
+{
+  "twin_id": "twin_ref_storeroom_v1",
+  "site_id": "ref_storeroom",
+  "version": 1,
+  "accuracy": {
+    "method": "reference_ground_truth",
+    "median_abs_err_m": 0.0,
+    "p90_abs_err_m": 0.0
+  },
+  "floor": {
+    "plane": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "bounds_polygon": [
+      [
+        0.014832972528886395,
+        0.010039148399467391
+      ],
+      [
+        10.014832972528886,
+        0.010039148399467391
+      ],
+      [
+        10.014832972528886,
+        8.010039148399468
+      ],
+      [
+        0.014832972528886395,
+        8.010039148399468
+      ]
+    ]
+  },
+  "occupancy": {
+    "uri": "sites/ref_storeroom/twin_v1/occ.png",
+    "resolution_m": 0.025,
+    "origin_xy": [
+      -0.5,
+      -0.5
+    ],
+    "width": 441,
+    "height": 361,
+    "height_band_m": [
+      0.03,
+      2.0
+    ]
+  },
+  "primitives": [
+    {
+      "id": "SHELF_A",
+      "type": "box",
+      "label": "shelf",
+      "pose": {
+        "xyz": [
+          5.264832972528886,
+          2.5100391483994673,
+          1.0
+        ],
+        "yaw": 0.0
+      },
+      "size": [
+        6.5,
+        0.5999999999999996,
+        2.0
+      ],
+      "movable": false,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "SHELF_B",
+      "type": "box",
+      "label": "shelf",
+      "pose": {
+        "xyz": [
+          5.264832972528886,
+          4.310039148399468,
+          1.0
+        ],
+        "yaw": 0.0
+      },
+      "size": [
+        6.5,
+        0.5999999999999996,
+        2.0
+      ],
+      "movable": false,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "SHELF_C",
+      "type": "box",
+      "label": "shelf",
+      "pose": {
+        "xyz": [
+          5.264832972528886,
+          5.710039148399468,
+          1.0
+        ],
+        "yaw": 0.0
+      },
+      "size": [
+        6.5,
+        0.5999999999999996,
+        2.0
+      ],
+      "movable": false,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "SHELF_D",
+      "type": "box",
+      "label": "shelf",
+      "pose": {
+        "xyz": [
+          5.264832972528886,
+          7.710039148399468,
+          1.0
+        ],
+        "yaw": 0.0
+      },
+      "size": [
+        6.5,
+        0.5999999999999996,
+        2.0
+      ],
+      "movable": false,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "PALLET1",
+      "type": "box",
+      "label": "pallet",
+      "pose": {
+        "xyz": [
+          4.014832972528886,
+          1.0100391483994673,
+          0.075
+        ],
+        "yaw": 0.0
+      },
+      "size": [
+        1.1999999999999997,
+        0.7999999999999999,
+        0.15
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "CART1",
+      "type": "box",
+      "label": "cart",
+      "pose": {
+        "xyz": [
+          6.528529141261031,
+          0.9870178197758545,
+          0.45
+        ],
+        "yaw": -0.045902647606380534
+      },
+      "size": [
+        0.9,
+        0.6,
+        0.9
+      ],
+      "movable": true,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "PILLAR1",
+      "type": "cylinder",
+      "label": "pillar",
+      "pose": {
+        "xyz": [
+          1.0148329725288865,
+          5.710039148399468,
+          1.25
+        ],
+        "yaw": 0.0
+      },
+      "size": [
+        0.4,
+        0.4,
+        2.5
+      ],
+      "movable": false,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    },
+    {
+      "id": "DOCKSTN",
+      "type": "box",
+      "label": "dock",
+      "pose": {
+        "xyz": [
+          0.1648329725288864,
+          0.7600391483994674,
+          0.15
+        ],
+        "yaw": 0.0
+      },
+      "size": [
+        0.3,
+        0.5,
+        0.3
+      ],
+      "movable": false,
+      "fragile": false,
+      "confidence": 1.0,
+      "source": "reference"
+    }
+  ],
+  "thresholds": [],
+  "keepout_zones": [],
+  "waypoints": [
+    {
+      "id": "DOCK",
+      "xy": [
+        0.7148329725288863,
+        0.7600391483994674
+      ],
+      "yaw": 0.0,
+      "kind": "dock"
+    },
+    {
+      "id": "PICKUP",
+      "xy": [
+        4.014832972528886,
+        1.8100391483994673
+      ],
+      "yaw": -1.5707963267948966,
+      "kind": "pickup"
+    },
+    {
+      "id": "S1",
+      "xy": [
+        5.014832972528886,
+        3.410039148399467
+      ],
+      "yaw": 0.0,
+      "kind": "dest"
+    },
+    {
+      "id": "S2",
+      "xy": [
+        5.014832972528886,
+        5.010039148399468
+      ],
+      "yaw": 0.0,
+      "kind": "dest"
+    },
+    {
+      "id": "S3",
+      "xy": [
+        5.014832972528886,
+        6.710039148399468
+      ],
+      "yaw": 0.0,
+      "kind": "dest"
+    },
+    {
+      "id": "S4",
+      "xy": [
+        9.214832972528885,
+        7.010039148399468
+      ],
+      "yaw": 0.0,
+      "kind": "dest"
+    },
+    {
+      "id": "ENTRANCE",
+      "xy": [
+        1.3148329725288865,
+        0.3600391483994674
+      ],
+      "yaw": 0.0,
+      "kind": "entrance"
+    },
+    {
+      "id": "EXIT",
+      "xy": [
+        1.1148329725288866,
+        -0.08996085160053262
+      ],
+      "yaw": 0.0,
+      "kind": "exit"
+    }
+  ],
+  "hazards": [],
+  "traffic": {
+    "source": "user_estimated",
+    "zones": [
+      {
+        "id": "door",
+        "polygon": [
+          [
+            0.5148329725288864,
+            0.010039148399467391
+          ],
+          [
+            1.7148329725288864,
+            0.010039148399467391
+          ],
+          [
+            1.7148329725288864,
+            0.8100391483994674
+          ],
+          [
+            0.5148329725288864,
+            0.8100391483994674
+          ]
+        ]
+      },
+      {
+        "id": "staging",
+        "polygon": [
+          [
+            2.0148329725288865,
+            0.2100391483994674
+          ],
+          [
+            8.014832972528886,
+            0.2100391483994674
+          ],
+          [
+            8.014832972528886,
+            2.1100391483994674
+          ],
+          [
+            2.0148329725288865,
+            2.1100391483994674
+          ]
+        ]
+      },
+      {
+        "id": "aisles",
+        "polygon": [
+          [
+            2.0148329725288865,
+            2.910039148399467
+          ],
+          [
+            8.514832972528886,
+            2.910039148399467
+          ],
+          [
+            8.514832972528886,
+            7.310039148399468
+          ],
+          [
+            2.0148329725288865,
+            7.310039148399468
+          ]
+        ]
+      }
+    ],
+    "od_pairs": [
+      [
+        "door",
+        "staging",
+        0.5
+      ],
+      [
+        "staging",
+        "aisles",
+        0.4
+      ],
+      [
+        "aisles",
+        "door",
+        0.1
+      ]
+    ],
+    "persons_per_min": {
+      "quiet": 2.0,
+      "normal": 6.0,
+      "peak": 14.0
+    },
+    "walk_speed_mps": [
+      1.2,
+      0.25
+    ],
+    "heatmap_uri": null
+  },
+  "assets": {},
+  "geometry_source": "reference"
+}

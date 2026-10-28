@@ -1,0 +1,949 @@
+{
+  "investigation_id": "inv_892174b67c",
+  "analysis_id": "an_ref_cafe_01",
+  "model_id": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+  "mode": "live",
+  "steps": [
+    {
+      "i": 1,
+      "thought": "",
+      "tool": "get_batch_summary",
+      "args": {
+        "batch_id": "sb_10b39fe71742"
+      },
+      "result_summary": {
+        "ok": true,
+        "robot_id": "keenon_dinerbot_t9",
+        "batches": [
+          {
+            "batch_id": "sb_10b39fe71742",
+            "density": "quiet",
+            "bound": "nominal",
+            "success_rate": {
+              "value": 0.475,
+              "unit": "ratio",
+              "fact_id": "f_i89217_001"
+            },
+            "ci95_low": {
+              "value": 0.3294,
+              "unit": "ratio",
+              "fact_id": "f_i89217_002"
+            },
+            "ci95_high": {
+              "value": 0.625,
+              "unit": "ratio",
+              "fact_id": "f_i89217_003"
+            },
+            "n_episodes": {
+              "value": 40,
+              "unit": "episodes",
+              "fact_id": "f_i89217_004"
+            },
+            "median_mission_s": {
+              "value": 132.1,
+              "unit": "s",
+              "fact_id": "f_i89217_005"
+            },
+            "min_gap_m": {
+              "value": 0.0319,
+              "unit": "m",
+              "fact_id": "f_i89217_006"
+            },
+            "near_miss_per_mission": {
+              "value": 0.275,
+              "unit": "per mission",
+              "fact_id": "f_i89217_007"
+            },
+            "stops_per_mission": {
+              "value": 1.15,
+              "unit": "per mission",
+              "fact_id": "f_i89217_008"
+            },
+            "fail_reasons": {
+              "no_path_static": {
+                "value": 21,
+                "unit": "episodes",
+                "fact_id": "f_i89217_009"
+              }
+            }
+          }
+        ]
+      },
+      "fact_ids": [
+        "f_i89217_001",
+        "f_i89217_002",
+        "f_i89217_003",
+        "f_i89217_004",
+        "f_i89217_005",
+        "f_i89217_006",
+        "f_i89217_007",
+        "f_i89217_008",
+        "f_i89217_009"
+      ]
+    },
+    {
+      "i": 2,
+      "thought": "",
+      "tool": "get_bottlenecks",
+      "args": {
+        "top_k": 10
+      },
+      "result_summary": {
+        "ok": true,
+        "bottlenecks": [
+          {
+            "rank": 1,
+            "xy": [
+              0.588,
+              2.488
+            ],
+            "share_of_total": {
+              "value": 0.4212,
+              "unit": "ratio",
+              "fact_id": "f_i89217_010"
+            },
+            "nearby_object_ids": [
+              "CH4W",
+              "TABLE4",
+              "CH1W",
+              "TABLE1",
+              "CH4E",
+              "DOCKSTN"
+            ],
+            "nearby_zone_ids": [
+              "seating"
+            ],
+            "examined": false
+          },
+          {
+            "rank": 2,
+            "xy": [
+              0.588,
+              3.763
+            ],
+            "share_of_total": {
+              "value": 0.2672,
+              "unit": "ratio",
+              "fact_id": "f_i89217_011"
+            },
+            "nearby_object_ids": [
+              "DOCKSTN",
+              "CH4W",
+              "TABLE4",
+              "PLANT1"
+            ],
+            "nearby_zone_ids": [
+              "seating"
+            ],
+            "examined": false
+          },
+          {
+            "rank": 3,
+            "xy": [
+              7.138,
+              4.338
+            ],
+            "share_of_total": {
+              "value": 0.0782,
+              "unit": "ratio",
+              "fact_id": "f_i89217_012"
+            },
+            "nearby_object_ids": [
+              "KITCHEN_PASS",
+              "CH6E",
+              "TABLE6"
+            ],
+            "nearby_zone_ids": [
+              "kitchen",
+              "seating"
+            ],
+            "examined": false
+          },
+          {
+            "rank": 4,
+            "xy": [
+              1.638,
+              2.088
+            ],
+            "share_of_total": {
+              "value": 0.0588,
+              "unit": "ratio",
+              "fact_id": "f_i89217_013"
+            },
+            "nearby_object_ids": [
+              "TABLE1",
+              "TABLE4",
+              "CH1E",
+              "CH1W",
+              "CH4E",
+              "CH4W",
+              "CH2W",
+              "CH5W"
+            ],
+            "nearby_zone_ids": [
+              "seating",
+              "entrance"
+            ],
+            "examined": false
+          }
+        ],
+        "batches_used": [
+          "sb_10b39fe71742",
+          "sb_1619524945d0",
+          "sb_b0d47fd66d27"
+        ],
+        "threshold_share": 0.05
+      },
+      "fact_ids": [
+        "f_i89217_010",
+        "f_i89217_011",
+        "f_i89217_012",
+        "f_i89217_013"
+      ]
+    },
+    {
+      "i": 3,
+      "thought": "",
+      "tool": "get_gap_at",
+      "args": {
+        "xy": [
+          0.588,
+          2.488
+        ]
+      },
+      "result_summary": {
+        "ok": true,
+        "xy": [
+          0.588,
+          2.488
+        ],
+        "in_obstacle": false,
+        "nearest_obstacle_m": {
+          "value": 0.3482,
+          "unit": "m",
+          "fact_id": "f_i89217_014"
+        },
+        "gap_m": {
+          "value": 0.6964,
+          "unit": "m",
+          "fact_id": "f_i89217_015"
+        },
+        "robot_width_m": {
+          "value": 0.5,
+          "unit": "m",
+          "fact_id": "f_i89217_016"
+        },
+        "gap_margin_m": {
+          "value": 0.1964,
+          "unit": "m",
+          "fact_id": "f_i89217_017"
+        }
+      },
+      "fact_ids": [
+        "f_i89217_014",
+        "f_i89217_015",
+        "f_i89217_016",
+        "f_i89217_017"
+      ]
+    },
+    {
+      "i": 4,
+      "thought": "",
+      "tool": "get_gap_at",
+      "args": {
+        "xy": [
+          0.588,
+          3.763
+        ]
+      },
+      "result_summary": {
+        "ok": true,
+        "xy": [
+          0.588,
+          3.763
+        ],
+        "in_obstacle": false,
+        "nearest_obstacle_m": {
+          "value": 0.301,
+          "unit": "m",
+          "fact_id": "f_i89217_018"
+        },
+        "gap_m": {
+          "value": 0.6021,
+          "unit": "m",
+          "fact_id": "f_i89217_019"
+        },
+        "robot_width_m": {
+          "value": 0.5,
+          "unit": "m",
+          "fact_id": "f_i89217_020"
+        },
+        "gap_margin_m": {
+          "value": 0.1021,
+          "unit": "m",
+          "fact_id": "f_i89217_021"
+        }
+      },
+      "fact_ids": [
+        "f_i89217_018",
+        "f_i89217_019",
+        "f_i89217_020",
+        "f_i89217_021"
+      ]
+    },
+    {
+      "i": 5,
+      "thought": "",
+      "tool": "get_objects_near",
+      "args": {
+        "xy": [
+          0.588,
+          2.488
+        ],
+        "r": 1.5
+      },
+      "result_summary": {
+        "ok": true,
+        "xy": [
+          0.588,
+          2.488
+        ],
+        "r": 1.5,
+        "objects": [
+          {
+            "id": "CH4W",
+            "label": "chair",
+            "movable": true,
+            "fragile": false,
+            "center_xy": [
+              0.942,
+              3.042
+            ],
+            "distance_m": {
+              "value": 0.3494,
+              "unit": "m",
+              "fact_id": "f_i89217_022"
+            },
+            "confidence": 1.0
+          },
+          {
+            "id": "TABLE4",
+            "label": "table",
+            "movable": true,
+            "fragile": false,
+            "center_xy": [
+              1.622,
+              3.003
+            ],
+            "distance_m": {
+              "value": 0.6735,
+              "unit": "m",
+              "fact_id": "f_i89217_023"
+            },
+            "confidence": 1.0
+          },
+          {
+            "id": "CH1W",
+            "label": "chair",
+            "movable": true,
+            "fragile": false,
+            "center_xy": [
+              1.039,
+              1.258
+            ],
+            "distance_m": {
+              "value": 1.0395,
+              "unit": "m",
+              "fact_id": "f_i89217_024"
+            },
+            "confidence": 1.0
+          },
+          {
+            "id": "TABLE1",
+            "label": "table",
+            "movable": true,
+            "fragile": false,
+            "center_xy": [
+              1.623,
+              1.296
+            ],
+            "distance_m": {
+              "value": 1.0501,
+              "unit": "m",
+              "fact_id": "f_i89217_025"
+            },
+            "confidence": 1.0
+          },
+          {
+            "id": "CH4E",
+            "label": "chair",
+            "movable": true,
+            "fragile": false,
+            "center_xy": [
+              2.267,
+              3.018
+            ],
+            "distance_m": {
+              "value": 1.4824,
+              "unit": "m",
+              "fact_id": "f_i89217_026"
+            },
+            "confidence": 1.0
+          },
+          {
+            "id": "DOCKSTN",
+            "label": "dock",
+            "movable": false,
+            "fragile": false,
+            "center_xy": [
+              0.19,
+              4.185
+            ],
+            "distance_m": {
+              "value": 1.4889,
+              "unit": "m",
+              "fact_id": "f_i89217_027"
+            },
+            "confidence": 1.0
+          }
+        ],
+        "zone_ids": [
+          "seating"
+        ]
+      },
+      "fact_ids": [
+        "f_i89217_022",
+        "f_i89217_023",
+        "f_i89217_024",
+        "f_i89217_025",
+        "f_i89217_026",
+        "f_i89217_027"
+      ]
+    },
+    {
+      "i": 6,
+      "thought": "I've gathered initial data. Let me analyze:\n\n- **Batch sb_10b39fe71742**: success_rate 0.475 (CI [0.3294, 0.625]), 40 episodes. Fail reason \"no_path_static\" = 21 episodes \u2014 more than half the failures.\n- **Bottlenecks**: Rank 1 at [[n?], [n?]] (42.1% share), Rank [n?] at [[n?], [n?]] (26.7% share). Both in seating zone.\n- **Gap at rank 1**: 0.6964m total, robot width 0.5m, margin 0.1964m. CH4W chair is nearest at 0.3494m.\n- **Gap at rank [n?]**: 0.6021m total, margin 0.1021m.\n- **min_gap_m**: 0.0319m \u2014 extremely tight somewhere, suggesting a near-blocked passage.\n\nThe static gap at the top bottlenecks is technically sufficient (>0.5m), but margins are thin, and CH4W is the closest movable object to the #1 bottleneck. The \"no_path_static\" failures suggest a passage that's effectively blocked. Let me test whether moving CH4W away from the bottleneck improves success.",
+      "tool": "run_probe",
+      "args": {
+        "hypothesis": "Moving chair CH4W away from the top bottleneck at [0.588, 2.488] widens the critical passage and reduces no_path_static failures, raising success rate.",
+        "overrides": {
+          "move": {
+            "CH4W": {
+              "dx": 0.5,
+              "dy": 0.5,
+              "dyaw": 0
+            }
+          }
+        },
+        "n_episodes": 40
+      },
+      "result_summary": {
+        "ok": false,
+        "error": "numbers ['0.588', '2.488'] are not values of the cited facts; every number must come from a cited tool fact"
+      },
+      "fact_ids": []
+    },
+    {
+      "i": 7,
+      "thought": "Let me be careful with citations. The bottleneck coordinates don't have individual fact IDs, so I'll reference only cited values. Let me run the probe moving CH4W.",
+      "tool": "run_probe",
+      "args": {
+        "hypothesis": "Moving chair CH4W away from the top bottleneck widens the critical passage and reduces no_path_static failures, raising success rate.",
+        "overrides": {
+          "move": {
+            "CH4W": {
+              "dx": 0.5,
+              "dy": 0.5,
+              "dyaw": 0
+            }
+          }
+        },
+        "n_episodes": 40
+      },
+      "result_summary": {
+        "ok": true,
+        "probe_id": "sb_fc5575585fe8",
+        "overrides": {
+          "move": {
+            "CH4W": {
+              "dx": 0.5,
+              "dy": 0.5,
+              "dyaw": 0.0
+            }
+          }
+        },
+        "density": "normal",
+        "robot_id": "keenon_dinerbot_t9",
+        "baseline_ref": "sb_1619524945d0",
+        "ran_baseline_probe": false,
+        "success_rate": {
+          "value": 1.0,
+          "unit": "ratio",
+          "fact_id": "f_i89217_028"
+        },
+        "ci95_low": {
+          "value": 0.8865,
+          "unit": "ratio",
+          "fact_id": "f_i89217_029"
+        },
+        "ci95_high": {
+          "value": 1.0,
+          "unit": "ratio",
+          "fact_id": "f_i89217_030"
+        },
+        "n_episodes": {
+          "value": 30,
+          "unit": "episodes",
+          "fact_id": "f_i89217_031"
+        },
+        "baseline_success_rate": {
+          "value": 0.475,
+          "unit": "ratio",
+          "fact_id": "f_i89217_032"
+        },
+        "improvement": {
+          "value": 0.525,
+          "unit": "ratio",
+          "fact_id": "f_i89217_033"
+        },
+        "ci_half_width": {
+          "value": 0.0568,
+          "unit": "ratio",
+          "fact_id": "f_i89217_034"
+        },
+        "experiment_id": "ex_i89217_01",
+        "kind": "move_object",
+        "outcome": "supported",
+        "improved_beyond_ci": true,
+        "experiments_left": 5
+      },
+      "fact_ids": [
+        "f_i89217_028",
+        "f_i89217_029",
+        "f_i89217_030",
+        "f_i89217_031",
+        "f_i89217_032",
+        "f_i89217_033",
+        "f_i89217_034"
+      ]
+    },
+    {
+      "i": 8,
+      "thought": "The experiment confirms the hypothesis decisively:\n\n- **Baseline success rate**: 0.475 [f_i89217_032]\n- **After moving CH4W**: 1.0 [f_i89217_028]\n- **Improvement**: 0.525 [f_i89217_033], far exceeding the CI half-width of 0.0568 [f_i89217_034]\n- **Outcome**: supported, improved beyond CI [ex_i89217_01]\n\nThe root cause is confirmed: chair **CH4W** sits too close to the top bottleneck at [[n?], [n?]] (42.1% of total stop/blocked time [f_i89217_010]), narrowing the passage below what the Keenon DINERBOT T9 (0.5m wide [f_i89217_016]) can reliably navigate. This caused 21 of 40 episodes to fail with \"no_path_static\" [f_i89217_009]. Moving CH4W by (0.5, 0.5) m cleared the passage and raised success to 100%.",
+      "tool": "record_finding",
+      "args": {
+        "claim": "The Keenon DINERBOT T9 fails because chair CH4W obstructs the top bottleneck passage at [0.588, 2.488] in the seating zone, causing no_path_static failures (21/40 episodes, baseline success 0.475). Moving CH4W by (0.5, 0.5) m raised success to 1.0 (improvement 0.525, CI half-width 0.0568), confirming the obstruction is the root cause.",
+        "evidence_fact_ids": [
+          "f_i89217_001",
+          "f_i89217_009",
+          "f_i89217_010",
+          "f_i89217_016",
+          "f_i89217_028",
+          "f_i89217_032",
+          "f_i89217_033",
+          "f_i89217_034"
+        ],
+        "object_ids": [
+          "CH4W"
+        ],
+        "suggested_change": {
+          "object_id": "CH4W",
+          "dx": 0.5,
+          "dy": 0.5,
+          "dyaw": 0
+        },
+        "location_xy": [
+          0.588,
+          2.488
+        ],
+        "experiment_id": "ex_i89217_01"
+      },
+      "result_summary": {
+        "ok": false,
+        "error": "finding rejected: numbers ['0.588', '2.488', '40'] are not values of the cited facts; every number must come from a cited tool fact"
+      },
+      "fact_ids": []
+    }
+  ],
+  "experiments": [
+    {
+      "experiment_id": "ex_i89217_01",
+      "robot_id": "keenon_dinerbot_t9",
+      "hypothesis": "Moving chair CH4W away from the top bottleneck widens the critical passage and reduces no_path_static failures, raising success rate.",
+      "kind": "move_object",
+      "change": {
+        "move": {
+          "CH4W": {
+            "dx": 0.5,
+            "dy": 0.5,
+            "dyaw": 0.0
+          }
+        },
+        "density": "normal"
+      },
+      "batch_id": "sb_fc5575585fe8",
+      "baseline_fact_ids": [
+        "f_i89217_032"
+      ],
+      "result_fact_ids": [
+        "f_i89217_028",
+        "f_i89217_029",
+        "f_i89217_030",
+        "f_i89217_031",
+        "f_i89217_033",
+        "f_i89217_034"
+      ],
+      "outcome": "supported",
+      "next_action": "conclude",
+      "conclusion": "Hypothesis supported: success-rate change [f_i89217_033] vs probe CI half-width [f_i89217_034] (probe [f_i89217_028] vs baseline [f_i89217_032])."
+    }
+  ],
+  "findings": [],
+  "facts": [
+    {
+      "fact_id": "f_i89217_001",
+      "value": 0.475,
+      "unit": "ratio",
+      "label": "Success rate, keenon_dinerbot_t9, quiet traffic, nominal geometry (sb_10b39fe71742)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step1"
+      }
+    },
+    {
+      "fact_id": "f_i89217_002",
+      "value": 0.3294,
+      "unit": "ratio",
+      "label": "Success rate 95% CI low, keenon_dinerbot_t9, quiet traffic, nominal geometry (sb_10b39fe71742)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step1"
+      }
+    },
+    {
+      "fact_id": "f_i89217_003",
+      "value": 0.625,
+      "unit": "ratio",
+      "label": "Success rate 95% CI high, keenon_dinerbot_t9, quiet traffic, nominal geometry (sb_10b39fe71742)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step1"
+      }
+    },
+    {
+      "fact_id": "f_i89217_004",
+      "value": 40.0,
+      "unit": "episodes",
+      "label": "Episodes, keenon_dinerbot_t9, quiet traffic, nominal geometry (sb_10b39fe71742)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step1"
+      }
+    },
+    {
+      "fact_id": "f_i89217_005",
+      "value": 132.1,
+      "unit": "s",
+      "label": "Median mission time, keenon_dinerbot_t9, quiet traffic, nominal geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step1"
+      }
+    },
+    {
+      "fact_id": "f_i89217_006",
+      "value": 0.0319,
+      "unit": "m",
+      "label": "Median smallest robot-to-obstacle gap, keenon_dinerbot_t9, quiet traffic, nominal geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step1"
+      }
+    },
+    {
+      "fact_id": "f_i89217_007",
+      "value": 0.275,
+      "unit": "per mission",
+      "label": "Near-misses per mission, keenon_dinerbot_t9, quiet traffic, nominal geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step1"
+      }
+    },
+    {
+      "fact_id": "f_i89217_008",
+      "value": 1.15,
+      "unit": "per mission",
+      "label": "Safety stops per mission, keenon_dinerbot_t9, quiet traffic, nominal geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step1"
+      }
+    },
+    {
+      "fact_id": "f_i89217_009",
+      "value": 21.0,
+      "unit": "episodes",
+      "label": "Failures 'no_path_static', keenon_dinerbot_t9, quiet traffic, nominal geometry (sb_10b39fe71742)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step1"
+      }
+    },
+    {
+      "fact_id": "f_i89217_010",
+      "value": 0.4212,
+      "unit": "ratio",
+      "label": "Pinch Map spot #1: share of accumulated stop/near-miss/blocked score within 0.5 m, keenon_dinerbot_t9",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step2"
+      }
+    },
+    {
+      "fact_id": "f_i89217_011",
+      "value": 0.2672,
+      "unit": "ratio",
+      "label": "Pinch Map spot #2: share of accumulated stop/near-miss/blocked score within 0.5 m, keenon_dinerbot_t9",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step2"
+      }
+    },
+    {
+      "fact_id": "f_i89217_012",
+      "value": 0.0782,
+      "unit": "ratio",
+      "label": "Pinch Map spot #3: share of accumulated stop/near-miss/blocked score within 0.5 m, keenon_dinerbot_t9",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step2"
+      }
+    },
+    {
+      "fact_id": "f_i89217_013",
+      "value": 0.0588,
+      "unit": "ratio",
+      "label": "Pinch Map spot #4: share of accumulated stop/near-miss/blocked score within 0.5 m, keenon_dinerbot_t9",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step2"
+      }
+    },
+    {
+      "fact_id": "f_i89217_014",
+      "value": 0.3482,
+      "unit": "m",
+      "label": "Distance from (0.59, 2.49) to nearest obstacle (nominal grid)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step3"
+      }
+    },
+    {
+      "fact_id": "f_i89217_015",
+      "value": 0.6964,
+      "unit": "m",
+      "label": "Approximate free gap through (0.59, 2.49) (2 x nearest-obstacle distance, nominal grid)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step3"
+      }
+    },
+    {
+      "fact_id": "f_i89217_016",
+      "value": 0.5,
+      "unit": "m",
+      "label": "Footprint width, keenon_dinerbot_t9",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step3"
+      }
+    },
+    {
+      "fact_id": "f_i89217_017",
+      "value": 0.1964,
+      "unit": "m",
+      "label": "Approximate gap minus robot width at (0.59, 2.49)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step3"
+      }
+    },
+    {
+      "fact_id": "f_i89217_018",
+      "value": 0.301,
+      "unit": "m",
+      "label": "Distance from (0.59, 3.76) to nearest obstacle (nominal grid)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step4"
+      }
+    },
+    {
+      "fact_id": "f_i89217_019",
+      "value": 0.6021,
+      "unit": "m",
+      "label": "Approximate free gap through (0.59, 3.76) (2 x nearest-obstacle distance, nominal grid)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step4"
+      }
+    },
+    {
+      "fact_id": "f_i89217_020",
+      "value": 0.5,
+      "unit": "m",
+      "label": "Footprint width, keenon_dinerbot_t9",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step4"
+      }
+    },
+    {
+      "fact_id": "f_i89217_021",
+      "value": 0.1021,
+      "unit": "m",
+      "label": "Approximate gap minus robot width at (0.59, 3.76)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step4"
+      }
+    },
+    {
+      "fact_id": "f_i89217_022",
+      "value": 0.3494,
+      "unit": "m",
+      "label": "Distance from (0.59, 2.49) to the edge of object CH4W (chair)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step5"
+      }
+    },
+    {
+      "fact_id": "f_i89217_023",
+      "value": 0.6735,
+      "unit": "m",
+      "label": "Distance from (0.59, 2.49) to the edge of object TABLE4 (table)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step5"
+      }
+    },
+    {
+      "fact_id": "f_i89217_024",
+      "value": 1.0395,
+      "unit": "m",
+      "label": "Distance from (0.59, 2.49) to the edge of object CH1W (chair)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step5"
+      }
+    },
+    {
+      "fact_id": "f_i89217_025",
+      "value": 1.0501,
+      "unit": "m",
+      "label": "Distance from (0.59, 2.49) to the edge of object TABLE1 (table)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step5"
+      }
+    },
+    {
+      "fact_id": "f_i89217_026",
+      "value": 1.4824,
+      "unit": "m",
+      "label": "Distance from (0.59, 2.49) to the edge of object CH4E (chair)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step5"
+      }
+    },
+    {
+      "fact_id": "f_i89217_027",
+      "value": 1.4889,
+      "unit": "m",
+      "label": "Distance from (0.59, 2.49) to the edge of object DOCKSTN (dock)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step5"
+      }
+    },
+    {
+      "fact_id": "f_i89217_028",
+      "value": 1.0,
+      "unit": "ratio",
+      "label": "Probe sb_fc5575585fe8 success rate ({\"density\": \"normal\", \"overrides\": {\"move\": {\"CH4W\": {\"dx\": 0.5, \"dy\": 0.5, \"dyaw\": 0.0}}}, \"robot_id\": \"keenon_dinerbot_t9\"}, nominal geometry)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step7"
+      }
+    },
+    {
+      "fact_id": "f_i89217_029",
+      "value": 0.8865,
+      "unit": "ratio",
+      "label": "Probe sb_fc5575585fe8 95% CI low",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step7"
+      }
+    },
+    {
+      "fact_id": "f_i89217_030",
+      "value": 1.0,
+      "unit": "ratio",
+      "label": "Probe sb_fc5575585fe8 95% CI high",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step7"
+      }
+    },
+    {
+      "fact_id": "f_i89217_031",
+      "value": 30.0,
+      "unit": "episodes",
+      "label": "Probe sb_fc5575585fe8 episodes",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step7"
+      }
+    },
+    {
+      "fact_id": "f_i89217_032",
+      "value": 0.475,
+      "unit": "ratio",
+      "label": "Baseline success rate for probe sb_fc5575585fe8 (sb_1619524945d0, keenon_dinerbot_t9)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step7"
+      }
+    },
+    {
+      "fact_id": "f_i89217_033",
+      "value": 0.525,
+      "unit": "ratio",
+      "label": "Probe sb_fc5575585fe8 success-rate change vs baseline",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step7"
+      }
+    },
+    {
+      "fact_id": "f_i89217_034",
+      "value": 0.0568,
+      "unit": "ratio",
+      "label": "Probe sb_fc5575585fe8 95% CI half-width",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_892174b67c#step7"
+      }
+    }
+  ],
+  "stop_reason": "max_steps",
+  "robot_id": "keenon_dinerbot_t9",
+  "policy": "llm",
+  "sim_runs": 1,
+  "sim_source": "jobs.sim.api"
+}
