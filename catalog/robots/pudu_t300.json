@@ -1,0 +1,89 @@
+{
+  "robot_id": "pudu_t300",
+  "class": "B_amr",
+  "vendor": "Pudu Robotics",
+  "model": "T300",
+  "footprint_polygon_m": [
+    [
+      0.4175,
+      0.25
+    ],
+    [
+      -0.4175,
+      0.25
+    ],
+    [
+      -0.4175,
+      -0.25
+    ],
+    [
+      0.4175,
+      -0.25
+    ]
+  ],
+  "footprint_approx": true,
+  "height_m": 1.35,
+  "drive": "diff_drive",
+  "in_place_rotation": true,
+  "min_turn_radius_m": 0.0,
+  "max_speed_mps": 1.2,
+  "nominal_speed_mps": null,
+  "max_threshold_m": 0.02,
+  "max_slope_deg": null,
+  "min_aisle_width_vendor_m": 0.6,
+  "payload_kg": 300.0,
+  "runtime_h": 8.0,
+  "safety_stop_distance_m": null,
+  "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": null
+  },
+  "fields_sources": {
+    "footprint_polygon_m": {
+      "url": "https://www.pudurobotics.com/en/products/pudut300",
+      "quote": "835 mm * 500 mm * 1350 mm",
+      "retrieved_at": "2026-10-27T13:53:27Z"
+    },
+    "height_m": {
+      "url": "https://www.pudurobotics.com/en/products/pudut300",
+      "quote": "835 mm * 500 mm * 1350 mm",
+      "retrieved_at": "2026-10-27T13:53:27Z"
+    },
+    "max_speed_mps": {
+      "url": "https://www.pudurobotics.com/en/products/pudut300",
+      "quote": "Max. Speed 1.2 m/s",
+      "retrieved_at": "2026-10-27T13:53:27Z"
+    },
+    "payload_kg": {
+      "url": "https://www.pudurobotics.com/en/products/pudut300",
+      "quote": "Maximum load 300 kg",
+      "retrieved_at": "2026-10-27T13:53:27Z"
+    },
+    "max_threshold_m": {
+      "url": "https://www.pudurobotics.com/en/products/pudut300",
+      "quote": "Threshold Overcoming Height 20 mm",
+      "retrieved_at": "2026-10-27T13:53:27Z"
+    },
+    "min_aisle_width_vendor_m": {
+      "url": "https://www.pudurobotics.com/en/products/pudut300",
+      "quote": "Path Clearance \u226560 cm",
+      "retrieved_at": "2026-10-27T13:53:27Z"
+    },
+    "runtime_h": {
+      "url": "https://www.pudurobotics.com/en/products/pudut300",
+      "quote": "Run-time (Full Load) 8 h",
+      "retrieved_at": "2026-10-27T13:53:27Z"
+    }
+  },
+  "verified_by_human": true,
+  "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://www.pudurobotics.com/en/products/pudut300\"], \"null_fields\": [\"nominal_speed_mps\", \"max_slope_deg\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"values are the 'PUDU T300 Standard' column (the Lifting variant differs in weight and path width)\", \"runtime is the full-load figure; the page lists 12 h with no load\", \"dimensions order on page is not labelled; read as length x width x height\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.pudurobotics.com/en/products/pudut300\", \"https://www.pudurobotics.com/en/news/pudu-t300-amr-powers-ennoconn-ems-logistics-case-study\", \"https://www.pudurobotics.com/en/news/904\", \"https://cdn.robotshop.com/media/P/Pud/RB-Pud-04/pdf/pudu-t300-20240828-operational-guide.pdf\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_threshold_m\", \"min_aisle_width_vendor_m\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [], \"fields_rejected_by_validator\": 4, \"other_pages_differing\": [{\"field\": \"runtime_h\", \"value\": 6.0, \"url\": \"https://cdn.robotshop.com/media/P/Pud/RB-Pud-04/pdf/pudu-t300-20240828-operational-guide.pdf\"}]}}",
+  "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:20.031Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "robot_id": "mir_mir100",
+  "class": "B_amr",
+  "vendor": "MiR",
+  "model": "MiR100",
+  "footprint_polygon_m": [
+    [
+      0.445,
+      0.29
+    ],
+    [
+      -0.445,
+      0.29
+    ],
+    [
+      -0.445,
+      -0.29
+    ],
+    [
+      0.445,
+      -0.29
+    ]
+  ],
+  "footprint_approx": true,
+  "height_m": 0.352,
+  "drive": "diff_drive",
+  "in_place_rotation": true,
+  "min_turn_radius_m": 0.0,
+  "max_speed_mps": 1.5,
+  "nominal_speed_mps": null,
+  "max_threshold_m": 0.02,
+  "max_slope_deg": 2.86241,
+  "min_aisle_width_vendor_m": 1.0,
+  "payload_kg": 100.0,
+  "runtime_h": 10.0,
+  "safety_stop_distance_m": null,
+  "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": null
+  },
+  "fields_sources": {
+    "footprint_polygon_m": {
+      "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+      "quote": "Length 890 mm / 35 in Width 580 mm / 22.8 in Height 352 mm",
+      "retrieved_at": "2026-10-27T13:52:59Z"
+    },
+    "height_m": {
+      "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+      "quote": "Length 890 mm / 35 in Width 580 mm / 22.8 in Height 352 mm",
+      "retrieved_at": "2026-10-27T13:52:59Z"
+    },
+    "max_speed_mps": {
+      "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+      "quote": "Forwards: 1.5 m/s (5.4 km/h)",
+      "retrieved_at": "2026-10-27T13:52:59Z"
+    },
+    "payload_kg": {
+      "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+      "quote": "Maximum payload 100 kg / 220 lbs (maximum 5% incline)",
+      "retrieved_at": "2026-10-27T13:52:59Z"
+    },
+    "max_slope_deg": {
+      "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+      "quote": "Maximum payload 100 kg / 220 lbs (maximum 5% incline)",
+      "retrieved_at": "2026-10-27T13:52:59Z"
+    },
+    "max_threshold_m": {
+      "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+      "quote": "Traversable gap and sill tolerance 20 mm / 0.8 in",
+      "retrieved_at": "2026-10-27T13:52:59Z"
+    },
+    "min_aisle_width_vendor_m": {
+      "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+      "quote": "Minimum corridor width 1.0 m (default footprint)",
+      "retrieved_at": "2026-10-27T13:52:59Z"
+    },
+    "runtime_h": {
+      "url": "https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf",
+      "quote": "Active operation time with maximum payload 10 hours",
+      "retrieved_at": "2026-10-27T13:52:59Z"
+    }
+  },
+  "verified_by_human": true,
+  "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://howtorobot.com/sites/default/files/2021-02/MiR100%E2%84%A2%20_%20Mobile%20Industrial%20Robots_0.pdf\"], \"null_fields\": [\"nominal_speed_mps\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"source is a MiR100 datasheet copy hosted by howtorobot.com; MiR's current lineup should be checked\", \"max_slope_deg converted by code from the 5% incline stated for maximum payload (atan 0.05)\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://24279054.fs1.hubspotusercontent-na1.net/hubfs/24279054/Resources/MiR/MiR100%20Specifications%202.57.pdf\", \"https://www.nord-modules.com/the-mir100\", \"https://sp-automation.co.uk/sp-elements/mir-autonomous-mobile-robots/mir100\", \"https://shop.hartfiel.com/products/MiR100%20Mobile%20Robot\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_slope_deg\", \"payload_kg\"], \"fields_added\": [], \"values_differing\": [{\"field\": \"min_aisle_width_vendor_m\", \"catalog\": 1.0, \"live\": 1.1, \"live_url\": \"https://24279054.fs1.hubspotusercontent-na1.net/hubfs/24279054/Resources/MiR/MiR100%20Specifications%202.57.pdf\", \"live_quote\": \"With minimized footprint and SICK safety configuration and no payload: 1 100 mm | 43.3 in\", \"kept\": \"catalog\", \"why\": \"the live value is for the minimized footprint, SICK safety configuration and no payload; the catalog keeps the default-footprint corridor width\"}, {\"field\": \"runtime_h\", \"catalog\": 10.0, \"live\": 6.88333, \"live_url\": \"https://24279054.fs1.hubspotusercontent-na1.net/hubfs/24279054/Resources/MiR/MiR100%20Specifications%202.57.pdf\", \"live_quote\": \"Up to 6 h 53 min (24V Standard battery)\", \"kept\": \"catalog\", \"why\": \"the live page (MiR100 Specifications 2.57, hosted by a third party) states 'Up to 6 h 53 min (24V Standard battery)'; the catalog keeps the MiR datasheet's 10 h active operation time at maximum payload. The two documents describe different versions or batteries; please confirm which applies\"}], \"fields_rejected_by_validator\": 1, \"other_pages_differing\": []}}",
+  "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:17.615Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+  }
+}

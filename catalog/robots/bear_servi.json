@@ -1,0 +1,84 @@
+{
+  "robot_id": "bear_servi",
+  "class": "A_service",
+  "vendor": "Bear Robotics",
+  "model": "Servi",
+  "footprint_polygon_m": [
+    [
+      0.215,
+      0.2225
+    ],
+    [
+      -0.215,
+      0.2225
+    ],
+    [
+      -0.215,
+      -0.2225
+    ],
+    [
+      0.215,
+      -0.2225
+    ]
+  ],
+  "footprint_approx": true,
+  "height_m": 1.046,
+  "drive": "diff_drive",
+  "in_place_rotation": true,
+  "min_turn_radius_m": 0.0,
+  "max_speed_mps": 1.2,
+  "nominal_speed_mps": null,
+  "max_threshold_m": null,
+  "max_slope_deg": null,
+  "min_aisle_width_vendor_m": null,
+  "payload_kg": 30.0,
+  "runtime_h": 10.0,
+  "safety_stop_distance_m": null,
+  "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": "https://www.bearrobotics.ai/faq"
+  },
+  "fields_sources": {
+    "footprint_polygon_m": {
+      "url": "https://www.bearrobotics.ai/servi",
+      "quote": "17.5 \u00d7 16.9 \u00d7 41.2 in (44.5 \u00d7 43 \u00d7 104.6 cm)",
+      "retrieved_at": "2026-10-27T13:51:40Z"
+    },
+    "height_m": {
+      "url": "https://www.bearrobotics.ai/servi",
+      "quote": "17.5 \u00d7 16.9 \u00d7 41.2 in (44.5 \u00d7 43 \u00d7 104.6 cm)",
+      "retrieved_at": "2026-10-27T13:51:40Z"
+    },
+    "max_speed_mps": {
+      "url": "https://www.bearrobotics.ai/servi",
+      "quote": "Drive speed 0.1~1.2 m/s",
+      "retrieved_at": "2026-10-27T13:51:40Z"
+    },
+    "payload_kg": {
+      "url": "https://www.bearrobotics.ai/servi",
+      "quote": "22 lb (10kg) per tray, total 66 lb (30kg)",
+      "retrieved_at": "2026-10-27T13:51:40Z"
+    },
+    "runtime_h": {
+      "url": "https://www.bearrobotics.ai/servi",
+      "quote": "Battery life 10-12 hrs",
+      "retrieved_at": "2026-10-27T13:51:40Z"
+    },
+    "price": {
+      "url": "https://www.bearrobotics.ai/faq",
+      "quote": "Costs can vary depending on certain conditions.",
+      "retrieved_at": "2026-10-27T13:49:53Z"
+    }
+  },
+  "verified_by_human": true,
+  "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://www.bearrobotics.ai/servi\", \"https://www.bearrobotics.ai/faq\"], \"null_fields\": [\"nominal_speed_mps\", \"max_threshold_m\", \"max_slope_deg\", \"min_aisle_width_vendor_m\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"specs are the first Servi column on the page (2 trays, 1 bus tub)\", \"runtime is the lower end of the vendor's 10-12 hrs range\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.bearrobotics.ai/servi\", \"https://restauranttools.ai/tools/bear-robotics\", \"https://www.therobotreport.com/servi-bussing-robot-product-bear-robotics-softbank-partnership\", \"https://www.softbankrobotics.com/news/20200928a\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [], \"fields_rejected_by_validator\": 1, \"other_pages_differing\": [{\"field\": \"runtime_h\", \"value\": 8.0, \"url\": \"https://restauranttools.ai/tools/bear-robotics\"}], \"note\": \"A first live run ranked a sibling model's page (Servi Plus) above this model's page; values from that page were not used. The search ranking now puts pages that name the exact model first, and the re-run agrees with the catalog.\"}}",
+  "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:15.082Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+  }
+}
