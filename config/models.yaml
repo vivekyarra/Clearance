@@ -1,0 +1,72 @@
+# Token Factory model configuration for agents/llm/client.py.
+# Every ID and price below is UNVERIFIED until scripts/verify_token_factory.py runs with NEBIUS_API_KEY
+# (it calls GET /v1/models, rewrites this file with verified IDs, and writes docs/VERIFIED.md "Token Factory").
+# Do not quote any of these IDs or prices in README/video until `verified: true`.
+provider: nebius_token_factory
+base_url: https://api.tokenfactory.nebius.com/v1/
+base_url_verified: false
+base_url_source: https://docs.tokenfactory.nebius.com/api-reference/introduction.md
+api_key_env: NEBIUS_API_KEY
+timeout_s: 120
+max_retries: 4
+backoff_base_s: 1.0
+backoff_max_s: 30.0
+# How JSON mode is requested: json_schema (OpenAI-style strict schema) | json_object | prompt_only. confirm with account which
+# Token Factory honours per model; the client always validates locally and does one repair retry either way.
+structured_output: json_schema
+roles:
+  nano:
+    # Token Factory retires Nemotron-3-Nano-30B-A3B on 2026-11-09 (docs/VERIFIED.md); 3.5 Lightning is its successor.
+    active: 0
+    candidates:
+    - provider: token_factory
+      model_id: nvidia/Nemotron-3_5-Lightning
+      request_extra: {chat_template_kwargs: {enable_thinking: false}}  # strict-JSON extraction: answer directly
+      verified: false
+      source: docs/VERIFIED.md (Token Factory deprecation notice)
+      price_per_1m_usd: {input: null, output: null, verified: false, note: confirm with account}
+    - provider: token_factory
+      model_id: nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B
+      verified: false
+      source: https://benchlm.ai/hosts/nebius
+      retires: 2026-11-09
+      price_per_1m_usd: {input: 0.06, output: 0.24, verified: false, note: third-party listing as of 2026-10-20}
+  super:
+    # Nemotron 3 Super retires on Token Factory 2026-11-09; Nemotron 3.5 Super VL is the listed successor.
+    active: 0
+    candidates:
+    - provider: token_factory
+      model_id: nvidia/Nemotron-3.5-Super-VL
+      verified: false
+      source: docs/VERIFIED.md (Token Factory deprecation notice)
+      price_per_1m_usd: {input: 0.30, output: 0.90, verified: false, note: third-party listing as of 2026-10-20}
+    - provider: token_factory
+      model_id: nvidia/nemotron-3-super-120b-a12b
+      verified: false
+      source: https://nebius.com/services/token-factory/nemotron
+      retires: 2026-11-09
+      price_per_1m_usd: {input: 0.30, output: 0.90, verified: false, note: price from https://benchlm.ai/hosts/nebius}
+  ultra:
+    active: 0
+    candidates:
+    - provider: token_factory
+      model_id: nvidia/Nemotron-3-Ultra-550b-a55b
+      verified: false
+      source: https://benchlm.ai/hosts/nebius
+      price_per_1m_usd: {input: 1.00, output: 3.00, verified: false, note: third-party listing as of 2026-10-20}
+  vision:
+    # Primary: Cosmos Reason 2 self-hosted on Nebius AI Cloud via vLLM. Alternative: Nemotron 3.5 Super VL on Token Factory.
+    active: 0
+    candidates:
+    - provider: self_hosted_vllm
+      model_id: nvidia/Cosmos-Reason2-8B
+      base_url_env: CLEARANCE_VISION_BASE_URL
+      api_key_env: CLEARANCE_VISION_API_KEY
+      verified: false
+      source: https://docs.nvidia.com/cosmos/latest/reason2/reference.html
+      price_per_1m_usd: {input: 0.0, output: 0.0, verified: false, note: self-hosted, cost is GPU time not tokens}
+    - provider: token_factory
+      model_id: nvidia/Nemotron-3.5-Super-VL
+      verified: false
+      source: https://benchlm.ai/hosts/nebius
+      price_per_1m_usd: {input: 0.30, output: 0.90, verified: false, note: third-party listing as of 2026-10-20}

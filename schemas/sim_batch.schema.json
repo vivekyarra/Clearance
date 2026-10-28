@@ -1,0 +1,221 @@
+{
+  "$defs": {
+    "BatchResults": {
+      "properties": {
+        "ci95": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Ci95",
+          "type": "array"
+        },
+        "fail_reasons": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "default": {},
+          "title": "Fail Reasons",
+          "type": "object"
+        },
+        "median_mission_s": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Median Mission S"
+        },
+        "min_gap_m": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Min Gap M"
+        },
+        "n_episodes": {
+          "default": 0,
+          "title": "N Episodes",
+          "type": "integer"
+        },
+        "n_success": {
+          "default": 0,
+          "title": "N Success",
+          "type": "integer"
+        },
+        "near_miss_per_mission": {
+          "default": 0.0,
+          "title": "Near Miss Per Mission",
+          "type": "number"
+        },
+        "stops_per_mission": {
+          "default": 0.0,
+          "title": "Stops Per Mission",
+          "type": "number"
+        },
+        "success_rate": {
+          "title": "Success Rate",
+          "type": "number"
+        }
+      },
+      "required": [
+        "success_rate",
+        "ci95"
+      ],
+      "title": "BatchResults",
+      "type": "object"
+    },
+    "Task": {
+      "properties": {
+        "sequence": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Sequence",
+          "type": "array"
+        },
+        "type": {
+          "const": "delivery",
+          "default": "delivery",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "sequence"
+      ],
+      "title": "Task",
+      "type": "object"
+    }
+  },
+  "$id": "clearance/sim_batch",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "batch_id": {
+      "title": "Batch Id",
+      "type": "string"
+    },
+    "bottleneck_uri": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Bottleneck Uri"
+    },
+    "code_version": {
+      "default": "dev",
+      "title": "Code Version",
+      "type": "string"
+    },
+    "density": {
+      "enum": [
+        "none",
+        "quiet",
+        "normal",
+        "peak"
+      ],
+      "title": "Density",
+      "type": "string"
+    },
+    "episodes_uri": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Episodes Uri"
+    },
+    "geometry_bound": {
+      "enum": [
+        "optimistic",
+        "nominal",
+        "conservative"
+      ],
+      "title": "Geometry Bound",
+      "type": "string"
+    },
+    "n_episodes": {
+      "title": "N Episodes",
+      "type": "integer"
+    },
+    "results": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/BatchResults"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "robot_id": {
+      "title": "Robot Id",
+      "type": "string"
+    },
+    "seed_base": {
+      "title": "Seed Base",
+      "type": "integer"
+    },
+    "task": {
+      "$ref": "#/$defs/Task"
+    },
+    "twin_id": {
+      "title": "Twin Id",
+      "type": "string"
+    },
+    "twin_version": {
+      "title": "Twin Version",
+      "type": "integer"
+    },
+    "wall_time_s": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Wall Time S"
+    }
+  },
+  "required": [
+    "batch_id",
+    "twin_id",
+    "twin_version",
+    "robot_id",
+    "task",
+    "density",
+    "geometry_bound",
+    "n_episodes",
+    "seed_base"
+  ],
+  "title": "SimBatch",
+  "type": "object"
+}

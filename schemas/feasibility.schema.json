@@ -1,0 +1,152 @@
+{
+  "$defs": {
+    "LegFeasibility": {
+      "properties": {
+        "blocking_threshold": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Blocking Threshold"
+        },
+        "from_wp": {
+          "title": "From Wp",
+          "type": "string"
+        },
+        "narrowest_gap_m": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Narrowest Gap M"
+        },
+        "narrowest_xy": {
+          "anyOf": [
+            {
+              "maxItems": 2,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Narrowest Xy"
+        },
+        "path_length_m": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Path Length M"
+        },
+        "reachable": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Reachable"
+        },
+        "reason": {
+          "default": "",
+          "title": "Reason",
+          "type": "string"
+        },
+        "required_gap_m": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Required Gap M"
+        },
+        "to_wp": {
+          "title": "To Wp",
+          "type": "string"
+        }
+      },
+      "required": [
+        "from_wp",
+        "to_wp",
+        "reachable"
+      ],
+      "title": "LegFeasibility",
+      "type": "object"
+    }
+  },
+  "$id": "clearance/feasibility",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "all_reachable": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "All Reachable"
+    },
+    "legs": {
+      "items": {
+        "$ref": "#/$defs/LegFeasibility"
+      },
+      "title": "Legs",
+      "type": "array"
+    },
+    "robot_id": {
+      "title": "Robot Id",
+      "type": "string"
+    },
+    "twin_id": {
+      "title": "Twin Id",
+      "type": "string"
+    },
+    "twin_version": {
+      "title": "Twin Version",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "robot_id",
+    "twin_id",
+    "twin_version",
+    "legs",
+    "all_reachable"
+  ],
+  "title": "Feasibility",
+  "type": "object"
+}

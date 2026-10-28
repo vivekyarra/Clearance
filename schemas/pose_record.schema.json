@@ -1,0 +1,61 @@
+{
+  "$id": "clearance/pose_record",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "One line of poses.jsonl. T_world_cam is row-major 4x4, camera frame = ARKit convention\n(x right, y up, z backward / camera looks along -Z). World = site frame after marker anchoring.",
+  "properties": {
+    "K": {
+      "items": {
+        "type": "number"
+      },
+      "maxItems": 4,
+      "minItems": 4,
+      "title": "K",
+      "type": "array"
+    },
+    "T_world_cam": {
+      "items": {
+        "type": "number"
+      },
+      "maxItems": 16,
+      "minItems": 16,
+      "title": "T World Cam",
+      "type": "array"
+    },
+    "frame": {
+      "title": "Frame",
+      "type": "string"
+    },
+    "h": {
+      "title": "H",
+      "type": "integer"
+    },
+    "t": {
+      "title": "T",
+      "type": "number"
+    },
+    "tracking": {
+      "default": "normal",
+      "enum": [
+        "normal",
+        "limited",
+        "not_available"
+      ],
+      "title": "Tracking",
+      "type": "string"
+    },
+    "w": {
+      "title": "W",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "t",
+    "frame",
+    "T_world_cam",
+    "K",
+    "w",
+    "h"
+  ],
+  "title": "PoseRecord",
+  "type": "object"
+}

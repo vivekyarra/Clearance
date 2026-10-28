@@ -1,0 +1,367 @@
+{
+  "$defs": {
+    "Experiment": {
+      "description": "One entry of the investigation trail shown as \"How we investigated\" in the Clearance Report.",
+      "properties": {
+        "baseline_fact_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Baseline Fact Ids",
+          "type": "array"
+        },
+        "batch_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Batch Id"
+        },
+        "change": {
+          "additionalProperties": true,
+          "default": {},
+          "title": "Change",
+          "type": "object"
+        },
+        "conclusion": {
+          "default": "",
+          "title": "Conclusion",
+          "type": "string"
+        },
+        "experiment_id": {
+          "title": "Experiment Id",
+          "type": "string"
+        },
+        "hypothesis": {
+          "title": "Hypothesis",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "reduce_pedestrians_zone",
+            "move_object",
+            "remove_object",
+            "change_density",
+            "swap_robot",
+            "measure_threshold",
+            "other"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "next_action": {
+          "default": "conclude",
+          "enum": [
+            "dig_further",
+            "conclude"
+          ],
+          "title": "Next Action",
+          "type": "string"
+        },
+        "outcome": {
+          "default": "inconclusive",
+          "enum": [
+            "supported",
+            "refuted",
+            "inconclusive"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "result_fact_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Result Fact Ids",
+          "type": "array"
+        },
+        "robot_id": {
+          "title": "Robot Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "experiment_id",
+        "robot_id",
+        "hypothesis",
+        "kind"
+      ],
+      "title": "Experiment",
+      "type": "object"
+    },
+    "Fact": {
+      "properties": {
+        "fact_id": {
+          "title": "Fact Id",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "origin": {
+          "$ref": "#/$defs/FactOrigin"
+        },
+        "unit": {
+          "default": "",
+          "title": "Unit",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "fact_id",
+        "value",
+        "label",
+        "origin"
+      ],
+      "title": "Fact",
+      "type": "object"
+    },
+    "FactOrigin": {
+      "properties": {
+        "ref": {
+          "title": "Ref",
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "sim_batch",
+            "measurement",
+            "source_url",
+            "user_input",
+            "formula",
+            "investigation"
+          ],
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "ref"
+      ],
+      "title": "FactOrigin",
+      "type": "object"
+    },
+    "Finding": {
+      "properties": {
+        "claim": {
+          "title": "Claim",
+          "type": "string"
+        },
+        "confirmed_by_probe": {
+          "default": false,
+          "title": "Confirmed By Probe",
+          "type": "boolean"
+        },
+        "evidence_fact_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Fact Ids",
+          "type": "array"
+        },
+        "finding_id": {
+          "title": "Finding Id",
+          "type": "string"
+        },
+        "location_xy": {
+          "anyOf": [
+            {
+              "maxItems": 2,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Location Xy"
+        },
+        "object_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Object Ids",
+          "type": "array"
+        },
+        "robot_id": {
+          "title": "Robot Id",
+          "type": "string"
+        },
+        "suggested_change": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Suggested Change"
+        }
+      },
+      "required": [
+        "finding_id",
+        "robot_id",
+        "claim",
+        "evidence_fact_ids"
+      ],
+      "title": "Finding",
+      "type": "object"
+    },
+    "InvestigationStep": {
+      "description": "One tool call inside the loop. Numbers in result_summary come from code only.",
+      "properties": {
+        "args": {
+          "additionalProperties": true,
+          "default": {},
+          "title": "Args",
+          "type": "object"
+        },
+        "fact_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Fact Ids",
+          "type": "array"
+        },
+        "i": {
+          "title": "I",
+          "type": "integer"
+        },
+        "result_summary": {
+          "additionalProperties": true,
+          "default": {},
+          "title": "Result Summary",
+          "type": "object"
+        },
+        "thought": {
+          "default": "",
+          "title": "Thought",
+          "type": "string"
+        },
+        "tool": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tool"
+        }
+      },
+      "required": [
+        "i"
+      ],
+      "title": "InvestigationStep",
+      "type": "object"
+    }
+  },
+  "$id": "clearance/investigation",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "analysis_id": {
+      "title": "Analysis Id",
+      "type": "string"
+    },
+    "experiments": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Experiment"
+      },
+      "title": "Experiments",
+      "type": "array"
+    },
+    "facts": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Fact"
+      },
+      "title": "Facts",
+      "type": "array"
+    },
+    "findings": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Finding"
+      },
+      "title": "Findings",
+      "type": "array"
+    },
+    "investigation_id": {
+      "title": "Investigation Id",
+      "type": "string"
+    },
+    "mode": {
+      "default": "offline",
+      "enum": [
+        "live",
+        "offline"
+      ],
+      "title": "Mode",
+      "type": "string"
+    },
+    "model_id": {
+      "title": "Model Id",
+      "type": "string"
+    },
+    "steps": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/InvestigationStep"
+      },
+      "title": "Steps",
+      "type": "array"
+    },
+    "stop_reason": {
+      "default": "",
+      "title": "Stop Reason",
+      "type": "string"
+    }
+  },
+  "required": [
+    "investigation_id",
+    "analysis_id",
+    "model_id"
+  ],
+  "title": "Investigation",
+  "type": "object"
+}
