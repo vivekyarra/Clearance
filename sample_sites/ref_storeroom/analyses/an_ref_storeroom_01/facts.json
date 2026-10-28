@@ -611,7 +611,7 @@
     "label": "Success rate, Pudu Robotics T300, quiet traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_62a4a91d455f"
+      "ref": "sb_e686299f0283"
     },
     "key": "sim.success|pudu_t300|quiet|conservative"
   },
@@ -622,7 +622,7 @@
     "label": "Episodes simulated, Pudu Robotics T300, quiet traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_62a4a91d455f"
+      "ref": "sb_e686299f0283"
     },
     "key": "sim.n|pudu_t300|quiet|conservative"
   },
@@ -633,7 +633,7 @@
     "label": "Success rate, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_318479d649c5"
+      "ref": "sb_31ed5960038a"
     },
     "key": "sim.success|pudu_t300|quiet|nominal"
   },
@@ -644,7 +644,7 @@
     "label": "Episodes simulated, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_318479d649c5"
+      "ref": "sb_31ed5960038a"
     },
     "key": "sim.n|pudu_t300|quiet|nominal"
   },
@@ -655,7 +655,7 @@
     "label": "Success rate CI95 low, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_318479d649c5"
+      "ref": "sb_31ed5960038a"
     },
     "key": "sim.ci_lo|pudu_t300|quiet"
   },
@@ -666,7 +666,7 @@
     "label": "Success rate CI95 high, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_318479d649c5"
+      "ref": "sb_31ed5960038a"
     },
     "key": "sim.ci_hi|pudu_t300|quiet"
   },
@@ -677,7 +677,7 @@
     "label": "Median mission time, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_318479d649c5"
+      "ref": "sb_31ed5960038a"
     },
     "key": "sim.mission_s|pudu_t300|quiet"
   },
@@ -688,7 +688,7 @@
     "label": "Near-misses per mission, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_318479d649c5"
+      "ref": "sb_31ed5960038a"
     },
     "key": "sim.near_miss|pudu_t300|quiet"
   },
@@ -699,7 +699,7 @@
     "label": "Safety stops per mission, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_318479d649c5"
+      "ref": "sb_31ed5960038a"
     },
     "key": "sim.stops|pudu_t300|quiet"
   },
@@ -710,7 +710,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_318479d649c5"
+      "ref": "sb_31ed5960038a"
     },
     "key": "sim.min_gap_m|pudu_t300|quiet"
   },
@@ -721,7 +721,7 @@
     "label": "Success rate, Pudu Robotics T300, quiet traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_774e5753d4d9"
+      "ref": "sb_4d84f24e3024"
     },
     "key": "sim.success|pudu_t300|quiet|optimistic"
   },
@@ -732,7 +732,7 @@
     "label": "Episodes simulated, Pudu Robotics T300, quiet traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_774e5753d4d9"
+      "ref": "sb_4d84f24e3024"
     },
     "key": "sim.n|pudu_t300|quiet|optimistic"
   },
@@ -743,7 +743,7 @@
     "label": "Success rate, Pudu Robotics T300, normal traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ae5621cead7c"
+      "ref": "sb_c688bfcd6e5c"
     },
     "key": "sim.success|pudu_t300|normal|conservative"
   },
@@ -754,7 +754,7 @@
     "label": "Episodes simulated, Pudu Robotics T300, normal traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ae5621cead7c"
+      "ref": "sb_c688bfcd6e5c"
     },
     "key": "sim.n|pudu_t300|normal|conservative"
   },
@@ -765,7 +765,7 @@
     "label": "Success rate, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a83843d81092"
+      "ref": "sb_41bc4c2ba2f9"
     },
     "key": "sim.success|pudu_t300|normal|nominal"
   },
@@ -776,7 +776,7 @@
     "label": "Episodes simulated, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a83843d81092"
+      "ref": "sb_41bc4c2ba2f9"
     },
     "key": "sim.n|pudu_t300|normal|nominal"
   },
@@ -787,7 +787,7 @@
     "label": "Success rate CI95 low, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a83843d81092"
+      "ref": "sb_41bc4c2ba2f9"
     },
     "key": "sim.ci_lo|pudu_t300|normal"
   },
@@ -798,7 +798,7 @@
     "label": "Success rate CI95 high, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a83843d81092"
+      "ref": "sb_41bc4c2ba2f9"
     },
     "key": "sim.ci_hi|pudu_t300|normal"
   },
@@ -809,7 +809,7 @@
     "label": "Median mission time, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a83843d81092"
+      "ref": "sb_41bc4c2ba2f9"
     },
     "key": "sim.mission_s|pudu_t300|normal"
   },
@@ -820,7 +820,7 @@
     "label": "Near-misses per mission, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a83843d81092"
+      "ref": "sb_41bc4c2ba2f9"
     },
     "key": "sim.near_miss|pudu_t300|normal"
   },
@@ -831,7 +831,7 @@
     "label": "Safety stops per mission, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a83843d81092"
+      "ref": "sb_41bc4c2ba2f9"
     },
     "key": "sim.stops|pudu_t300|normal"
   },
@@ -842,7 +842,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a83843d81092"
+      "ref": "sb_41bc4c2ba2f9"
     },
     "key": "sim.min_gap_m|pudu_t300|normal"
   },
@@ -853,7 +853,7 @@
     "label": "Unsuccessful episodes (collision), Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a83843d81092"
+      "ref": "sb_41bc4c2ba2f9"
     },
     "key": "sim.fail|pudu_t300|normal|collision"
   },
@@ -864,7 +864,7 @@
     "label": "Success rate, Pudu Robotics T300, normal traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_6228255866e2"
+      "ref": "sb_500ce3d2553a"
     },
     "key": "sim.success|pudu_t300|normal|optimistic"
   },
@@ -875,7 +875,7 @@
     "label": "Episodes simulated, Pudu Robotics T300, normal traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_6228255866e2"
+      "ref": "sb_500ce3d2553a"
     },
     "key": "sim.n|pudu_t300|normal|optimistic"
   },
@@ -886,7 +886,7 @@
     "label": "Success rate, Pudu Robotics T300, peak traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_fbd802602b39"
+      "ref": "sb_9fffb4df20bc"
     },
     "key": "sim.success|pudu_t300|peak|conservative"
   },
@@ -897,7 +897,7 @@
     "label": "Episodes simulated, Pudu Robotics T300, peak traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_fbd802602b39"
+      "ref": "sb_9fffb4df20bc"
     },
     "key": "sim.n|pudu_t300|peak|conservative"
   },
@@ -908,7 +908,7 @@
     "label": "Success rate, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_02f8291b72d1"
+      "ref": "sb_b960825d5106"
     },
     "key": "sim.success|pudu_t300|peak|nominal"
   },
@@ -919,7 +919,7 @@
     "label": "Episodes simulated, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_02f8291b72d1"
+      "ref": "sb_b960825d5106"
     },
     "key": "sim.n|pudu_t300|peak|nominal"
   },
@@ -930,7 +930,7 @@
     "label": "Success rate CI95 low, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_02f8291b72d1"
+      "ref": "sb_b960825d5106"
     },
     "key": "sim.ci_lo|pudu_t300|peak"
   },
@@ -941,7 +941,7 @@
     "label": "Success rate CI95 high, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_02f8291b72d1"
+      "ref": "sb_b960825d5106"
     },
     "key": "sim.ci_hi|pudu_t300|peak"
   },
@@ -952,7 +952,7 @@
     "label": "Median mission time, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_02f8291b72d1"
+      "ref": "sb_b960825d5106"
     },
     "key": "sim.mission_s|pudu_t300|peak"
   },
@@ -963,7 +963,7 @@
     "label": "Near-misses per mission, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_02f8291b72d1"
+      "ref": "sb_b960825d5106"
     },
     "key": "sim.near_miss|pudu_t300|peak"
   },
@@ -974,7 +974,7 @@
     "label": "Safety stops per mission, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_02f8291b72d1"
+      "ref": "sb_b960825d5106"
     },
     "key": "sim.stops|pudu_t300|peak"
   },
@@ -985,7 +985,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_02f8291b72d1"
+      "ref": "sb_b960825d5106"
     },
     "key": "sim.min_gap_m|pudu_t300|peak"
   },
@@ -996,7 +996,7 @@
     "label": "Success rate, Pudu Robotics T300, peak traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_599522a223fa"
+      "ref": "sb_e3632d209752"
     },
     "key": "sim.success|pudu_t300|peak|optimistic"
   },
@@ -1007,7 +1007,7 @@
     "label": "Episodes simulated, Pudu Robotics T300, peak traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_599522a223fa"
+      "ref": "sb_e3632d209752"
     },
     "key": "sim.n|pudu_t300|peak|optimistic"
   },
@@ -1134,1051 +1134,6 @@
   },
   {
     "fact_id": "f_104",
-    "value": "MiR MiR250",
-    "unit": "",
-    "label": "Robot model (mir_mir250)",
-    "origin": {
-      "type": "source_url",
-      "ref": "catalog:mir_mir250"
-    },
-    "key": "robot.name|mir_mir250"
-  },
-  {
-    "fact_id": "f_105",
-    "value": "indoor AMR",
-    "unit": "",
-    "label": "Robot class, MiR MiR250",
-    "origin": {
-      "type": "source_url",
-      "ref": "catalog:mir_mir250"
-    },
-    "key": "robot.class|mir_mir250"
-  },
-  {
-    "fact_id": "f_106",
-    "value": 0.8,
-    "unit": "m",
-    "label": "Footprint length, MiR MiR250 (bounding box)",
-    "origin": {
-      "type": "source_url",
-      "ref": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf"
-    },
-    "key": "robot.length_m|mir_mir250"
-  },
-  {
-    "fact_id": "f_107",
-    "value": 0.58,
-    "unit": "m",
-    "label": "Footprint width, MiR MiR250 (bounding box)",
-    "origin": {
-      "type": "source_url",
-      "ref": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf"
-    },
-    "key": "robot.width_m|mir_mir250"
-  },
-  {
-    "fact_id": "f_108",
-    "value": 0.3,
-    "unit": "m",
-    "label": "Height, MiR MiR250",
-    "origin": {
-      "type": "source_url",
-      "ref": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf"
-    },
-    "key": "robot.height_m|mir_mir250"
-  },
-  {
-    "fact_id": "f_109",
-    "value": 2.0,
-    "unit": "m/s",
-    "label": "Max speed (vendor), MiR MiR250",
-    "origin": {
-      "type": "source_url",
-      "ref": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf"
-    },
-    "key": "robot.max_speed_mps|mir_mir250"
-  },
-  {
-    "fact_id": "f_110",
-    "value": 0.02,
-    "unit": "m",
-    "label": "Max threshold height (vendor), MiR MiR250",
-    "origin": {
-      "type": "source_url",
-      "ref": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf"
-    },
-    "key": "robot.max_threshold_m|mir_mir250"
-  },
-  {
-    "fact_id": "f_111",
-    "value": 2.86241,
-    "unit": "deg",
-    "label": "Max slope (vendor), MiR MiR250",
-    "origin": {
-      "type": "source_url",
-      "ref": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf"
-    },
-    "key": "robot.max_slope_deg|mir_mir250"
-  },
-  {
-    "fact_id": "f_112",
-    "value": 1.45,
-    "unit": "m",
-    "label": "Minimum aisle width (vendor), MiR MiR250",
-    "origin": {
-      "type": "source_url",
-      "ref": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf"
-    },
-    "key": "robot.min_aisle_m|mir_mir250"
-  },
-  {
-    "fact_id": "f_113",
-    "value": 250.0,
-    "unit": "kg",
-    "label": "Payload (vendor), MiR MiR250",
-    "origin": {
-      "type": "source_url",
-      "ref": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf"
-    },
-    "key": "robot.payload_kg|mir_mir250"
-  },
-  {
-    "fact_id": "f_114",
-    "value": 13.0,
-    "unit": "h",
-    "label": "Runtime per charge (vendor), MiR MiR250",
-    "origin": {
-      "type": "source_url",
-      "ref": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf"
-    },
-    "key": "robot.runtime_h|mir_mir250"
-  },
-  {
-    "fact_id": "f_115",
-    "value": "price on request",
-    "unit": "",
-    "label": "Price, MiR MiR250",
-    "origin": {
-      "type": "source_url",
-      "ref": "https://mobile-industrial-robots.com/products/robots/mir250"
-    },
-    "key": "robot.price_status|mir_mir250"
-  },
-  {
-    "fact_id": "f_116",
-    "value": "human-reviewed",
-    "unit": "",
-    "label": "Catalog review status, MiR MiR250",
-    "origin": {
-      "type": "source_url",
-      "ref": "catalog:mir_mir250"
-    },
-    "key": "robot.verified|mir_mir250"
-  },
-  {
-    "fact_id": "f_117",
-    "value": 6.0,
-    "unit": "count",
-    "label": "Task legs, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1"
-    },
-    "key": "feas.legs_total|mir_mir250"
-  },
-  {
-    "fact_id": "f_118",
-    "value": 6.0,
-    "unit": "count",
-    "label": "Task legs feasible (static check), MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1"
-    },
-    "key": "feas.legs_ok|mir_mir250"
-  },
-  {
-    "fact_id": "f_119",
-    "value": 1.0,
-    "unit": "ratio",
-    "label": "Fraction of task legs feasible, MiR MiR250 (pending legs count as not feasible)",
-    "origin": {
-      "type": "formula",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:feasible/total"
-    },
-    "key": "feas.frac|mir_mir250"
-  },
-  {
-    "fact_id": "f_120",
-    "value": 0.775,
-    "unit": "m",
-    "label": "Narrowest gap on route, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg0"
-    },
-    "key": "feas.narrowest_gap_m|mir_mir250"
-  },
-  {
-    "fact_id": "f_121",
-    "value": 0.58,
-    "unit": "m",
-    "label": "Gap the robot needs at the narrowest point, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg0"
-    },
-    "key": "feas.narrowest_required_m|mir_mir250"
-  },
-  {
-    "fact_id": "f_122",
-    "value": "feasible",
-    "unit": "",
-    "label": "Leg DOCK to PICKUP, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg0"
-    },
-    "key": "feas.leg_status|mir_mir250|0"
-  },
-  {
-    "fact_id": "f_123",
-    "value": 0.775,
-    "unit": "m",
-    "label": "Narrowest gap, leg DOCK to PICKUP, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg0"
-    },
-    "key": "feas.leg_gap|mir_mir250|0"
-  },
-  {
-    "fact_id": "f_124",
-    "value": 0.58,
-    "unit": "m",
-    "label": "Gap needed, leg DOCK to PICKUP, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg0"
-    },
-    "key": "feas.leg_required|mir_mir250|0"
-  },
-  {
-    "fact_id": "f_125",
-    "value": 3.579,
-    "unit": "m",
-    "label": "Path length, leg DOCK to PICKUP, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg0"
-    },
-    "key": "feas.leg_len|mir_mir250|0"
-  },
-  {
-    "fact_id": "f_126",
-    "value": "feasible",
-    "unit": "",
-    "label": "Leg PICKUP to S1, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg1"
-    },
-    "key": "feas.leg_status|mir_mir250|1"
-  },
-  {
-    "fact_id": "f_127",
-    "value": 0.775,
-    "unit": "m",
-    "label": "Narrowest gap, leg PICKUP to S1, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg1"
-    },
-    "key": "feas.leg_gap|mir_mir250|1"
-  },
-  {
-    "fact_id": "f_128",
-    "value": 0.58,
-    "unit": "m",
-    "label": "Gap needed, leg PICKUP to S1, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg1"
-    },
-    "key": "feas.leg_required|mir_mir250|1"
-  },
-  {
-    "fact_id": "f_129",
-    "value": 10.13,
-    "unit": "m",
-    "label": "Path length, leg PICKUP to S1, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg1"
-    },
-    "key": "feas.leg_len|mir_mir250|1"
-  },
-  {
-    "fact_id": "f_130",
-    "value": "feasible",
-    "unit": "",
-    "label": "Leg S1 to S2, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg2"
-    },
-    "key": "feas.leg_status|mir_mir250|2"
-  },
-  {
-    "fact_id": "f_131",
-    "value": 0.775,
-    "unit": "m",
-    "label": "Narrowest gap, leg S1 to S2, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg2"
-    },
-    "key": "feas.leg_gap|mir_mir250|2"
-  },
-  {
-    "fact_id": "f_132",
-    "value": 0.58,
-    "unit": "m",
-    "label": "Gap needed, leg S1 to S2, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg2"
-    },
-    "key": "feas.leg_required|mir_mir250|2"
-  },
-  {
-    "fact_id": "f_133",
-    "value": 8.021,
-    "unit": "m",
-    "label": "Path length, leg S1 to S2, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg2"
-    },
-    "key": "feas.leg_len|mir_mir250|2"
-  },
-  {
-    "fact_id": "f_134",
-    "value": "feasible",
-    "unit": "",
-    "label": "Leg S2 to S3, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg3"
-    },
-    "key": "feas.leg_status|mir_mir250|3"
-  },
-  {
-    "fact_id": "f_135",
-    "value": 0.775,
-    "unit": "m",
-    "label": "Narrowest gap, leg S2 to S3, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg3"
-    },
-    "key": "feas.leg_gap|mir_mir250|3"
-  },
-  {
-    "fact_id": "f_136",
-    "value": 0.58,
-    "unit": "m",
-    "label": "Gap needed, leg S2 to S3, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg3"
-    },
-    "key": "feas.leg_required|mir_mir250|3"
-  },
-  {
-    "fact_id": "f_137",
-    "value": 9.13,
-    "unit": "m",
-    "label": "Path length, leg S2 to S3, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg3"
-    },
-    "key": "feas.leg_len|mir_mir250|3"
-  },
-  {
-    "fact_id": "f_138",
-    "value": "feasible",
-    "unit": "",
-    "label": "Leg S3 to S4, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg4"
-    },
-    "key": "feas.leg_status|mir_mir250|4"
-  },
-  {
-    "fact_id": "f_139",
-    "value": 1.375,
-    "unit": "m",
-    "label": "Narrowest gap, leg S3 to S4, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg4"
-    },
-    "key": "feas.leg_gap|mir_mir250|4"
-  },
-  {
-    "fact_id": "f_140",
-    "value": 0.58,
-    "unit": "m",
-    "label": "Gap needed, leg S3 to S4, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg4"
-    },
-    "key": "feas.leg_required|mir_mir250|4"
-  },
-  {
-    "fact_id": "f_141",
-    "value": 4.196,
-    "unit": "m",
-    "label": "Path length, leg S3 to S4, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg4"
-    },
-    "key": "feas.leg_len|mir_mir250|4"
-  },
-  {
-    "fact_id": "f_142",
-    "value": "feasible",
-    "unit": "",
-    "label": "Leg S4 to DOCK, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg5"
-    },
-    "key": "feas.leg_status|mir_mir250|5"
-  },
-  {
-    "fact_id": "f_143",
-    "value": 1.1752,
-    "unit": "m",
-    "label": "Narrowest gap, leg S4 to DOCK, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg5"
-    },
-    "key": "feas.leg_gap|mir_mir250|5"
-  },
-  {
-    "fact_id": "f_144",
-    "value": 0.58,
-    "unit": "m",
-    "label": "Gap needed, leg S4 to DOCK, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg5"
-    },
-    "key": "feas.leg_required|mir_mir250|5"
-  },
-  {
-    "fact_id": "f_145",
-    "value": 13.425,
-    "unit": "m",
-    "label": "Path length, leg S4 to DOCK, MiR MiR250",
-    "origin": {
-      "type": "measurement",
-      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg5"
-    },
-    "key": "feas.leg_len|mir_mir250|5"
-  },
-  {
-    "fact_id": "f_146",
-    "value": 0.9,
-    "unit": "ratio",
-    "label": "Success rate, MiR MiR250, quiet traffic, conservative geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_de2db6c9bb85"
-    },
-    "key": "sim.success|mir_mir250|quiet|conservative"
-  },
-  {
-    "fact_id": "f_147",
-    "value": 40.0,
-    "unit": "episodes",
-    "label": "Episodes simulated, MiR MiR250, quiet traffic, conservative geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_de2db6c9bb85"
-    },
-    "key": "sim.n|mir_mir250|quiet|conservative"
-  },
-  {
-    "fact_id": "f_148",
-    "value": 0.9,
-    "unit": "ratio",
-    "label": "Success rate, MiR MiR250, quiet traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_6c0e4e92553b"
-    },
-    "key": "sim.success|mir_mir250|quiet|nominal"
-  },
-  {
-    "fact_id": "f_149",
-    "value": 40.0,
-    "unit": "episodes",
-    "label": "Episodes simulated, MiR MiR250, quiet traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_6c0e4e92553b"
-    },
-    "key": "sim.n|mir_mir250|quiet|nominal"
-  },
-  {
-    "fact_id": "f_150",
-    "value": 0.7694792561952611,
-    "unit": "ratio",
-    "label": "Success rate CI95 low, MiR MiR250, quiet traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_6c0e4e92553b"
-    },
-    "key": "sim.ci_lo|mir_mir250|quiet"
-  },
-  {
-    "fact_id": "f_151",
-    "value": 0.9604211124044252,
-    "unit": "ratio",
-    "label": "Success rate CI95 high, MiR MiR250, quiet traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_6c0e4e92553b"
-    },
-    "key": "sim.ci_hi|mir_mir250|quiet"
-  },
-  {
-    "fact_id": "f_152",
-    "value": 123.80000000000001,
-    "unit": "s",
-    "label": "Median mission time, MiR MiR250, quiet traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_6c0e4e92553b"
-    },
-    "key": "sim.mission_s|mir_mir250|quiet"
-  },
-  {
-    "fact_id": "f_153",
-    "value": 0.575,
-    "unit": "per_mission",
-    "label": "Near-misses per mission, MiR MiR250, quiet traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_6c0e4e92553b"
-    },
-    "key": "sim.near_miss|mir_mir250|quiet"
-  },
-  {
-    "fact_id": "f_154",
-    "value": 0.875,
-    "unit": "per_mission",
-    "label": "Safety stops per mission, MiR MiR250, quiet traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_6c0e4e92553b"
-    },
-    "key": "sim.stops|mir_mir250|quiet"
-  },
-  {
-    "fact_id": "f_155",
-    "value": 0.0225,
-    "unit": "m",
-    "label": "Median smallest robot-to-obstacle gap per episode, MiR MiR250, quiet traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_6c0e4e92553b"
-    },
-    "key": "sim.min_gap_m|mir_mir250|quiet"
-  },
-  {
-    "fact_id": "f_156",
-    "value": 4.0,
-    "unit": "episodes",
-    "label": "Unsuccessful episodes (no path static), MiR MiR250, quiet traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_6c0e4e92553b"
-    },
-    "key": "sim.fail|mir_mir250|quiet|no_path_static"
-  },
-  {
-    "fact_id": "f_157",
-    "value": 0.9,
-    "unit": "ratio",
-    "label": "Success rate, MiR MiR250, quiet traffic, optimistic geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_acaad38c39e9"
-    },
-    "key": "sim.success|mir_mir250|quiet|optimistic"
-  },
-  {
-    "fact_id": "f_158",
-    "value": 40.0,
-    "unit": "episodes",
-    "label": "Episodes simulated, MiR MiR250, quiet traffic, optimistic geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_acaad38c39e9"
-    },
-    "key": "sim.n|mir_mir250|quiet|optimistic"
-  },
-  {
-    "fact_id": "f_159",
-    "value": 0.875,
-    "unit": "ratio",
-    "label": "Success rate, MiR MiR250, normal traffic, conservative geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_1e9ef8dcdf61"
-    },
-    "key": "sim.success|mir_mir250|normal|conservative"
-  },
-  {
-    "fact_id": "f_160",
-    "value": 40.0,
-    "unit": "episodes",
-    "label": "Episodes simulated, MiR MiR250, normal traffic, conservative geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_1e9ef8dcdf61"
-    },
-    "key": "sim.n|mir_mir250|normal|conservative"
-  },
-  {
-    "fact_id": "f_161",
-    "value": 0.875,
-    "unit": "ratio",
-    "label": "Success rate, MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_e3ccc14c1476"
-    },
-    "key": "sim.success|mir_mir250|normal|nominal"
-  },
-  {
-    "fact_id": "f_162",
-    "value": 40.0,
-    "unit": "episodes",
-    "label": "Episodes simulated, MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_e3ccc14c1476"
-    },
-    "key": "sim.n|mir_mir250|normal|nominal"
-  },
-  {
-    "fact_id": "f_163",
-    "value": 0.7388757932976187,
-    "unit": "ratio",
-    "label": "Success rate CI95 low, MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_e3ccc14c1476"
-    },
-    "key": "sim.ci_lo|mir_mir250|normal"
-  },
-  {
-    "fact_id": "f_164",
-    "value": 0.9454058022645873,
-    "unit": "ratio",
-    "label": "Success rate CI95 high, MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_e3ccc14c1476"
-    },
-    "key": "sim.ci_hi|mir_mir250|normal"
-  },
-  {
-    "fact_id": "f_165",
-    "value": 125.1,
-    "unit": "s",
-    "label": "Median mission time, MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_e3ccc14c1476"
-    },
-    "key": "sim.mission_s|mir_mir250|normal"
-  },
-  {
-    "fact_id": "f_166",
-    "value": 2.05,
-    "unit": "per_mission",
-    "label": "Near-misses per mission, MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_e3ccc14c1476"
-    },
-    "key": "sim.near_miss|mir_mir250|normal"
-  },
-  {
-    "fact_id": "f_167",
-    "value": 2.6,
-    "unit": "per_mission",
-    "label": "Safety stops per mission, MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_e3ccc14c1476"
-    },
-    "key": "sim.stops|mir_mir250|normal"
-  },
-  {
-    "fact_id": "f_168",
-    "value": 0.0225,
-    "unit": "m",
-    "label": "Median smallest robot-to-obstacle gap per episode, MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_e3ccc14c1476"
-    },
-    "key": "sim.min_gap_m|mir_mir250|normal"
-  },
-  {
-    "fact_id": "f_169",
-    "value": 1.0,
-    "unit": "episodes",
-    "label": "Unsuccessful episodes (collision), MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_e3ccc14c1476"
-    },
-    "key": "sim.fail|mir_mir250|normal|collision"
-  },
-  {
-    "fact_id": "f_170",
-    "value": 4.0,
-    "unit": "episodes",
-    "label": "Unsuccessful episodes (no path static), MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_e3ccc14c1476"
-    },
-    "key": "sim.fail|mir_mir250|normal|no_path_static"
-  },
-  {
-    "fact_id": "f_171",
-    "value": 0.875,
-    "unit": "ratio",
-    "label": "Success rate, MiR MiR250, normal traffic, optimistic geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_4fab0640ed9b"
-    },
-    "key": "sim.success|mir_mir250|normal|optimistic"
-  },
-  {
-    "fact_id": "f_172",
-    "value": 40.0,
-    "unit": "episodes",
-    "label": "Episodes simulated, MiR MiR250, normal traffic, optimistic geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_4fab0640ed9b"
-    },
-    "key": "sim.n|mir_mir250|normal|optimistic"
-  },
-  {
-    "fact_id": "f_173",
-    "value": 0.875,
-    "unit": "ratio",
-    "label": "Success rate, MiR MiR250, peak traffic, conservative geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_923ab3c5e4a0"
-    },
-    "key": "sim.success|mir_mir250|peak|conservative"
-  },
-  {
-    "fact_id": "f_174",
-    "value": 40.0,
-    "unit": "episodes",
-    "label": "Episodes simulated, MiR MiR250, peak traffic, conservative geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_923ab3c5e4a0"
-    },
-    "key": "sim.n|mir_mir250|peak|conservative"
-  },
-  {
-    "fact_id": "f_175",
-    "value": 0.875,
-    "unit": "ratio",
-    "label": "Success rate, MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_0b19d69ffc27"
-    },
-    "key": "sim.success|mir_mir250|peak|nominal"
-  },
-  {
-    "fact_id": "f_176",
-    "value": 40.0,
-    "unit": "episodes",
-    "label": "Episodes simulated, MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_0b19d69ffc27"
-    },
-    "key": "sim.n|mir_mir250|peak|nominal"
-  },
-  {
-    "fact_id": "f_177",
-    "value": 0.7388757932976187,
-    "unit": "ratio",
-    "label": "Success rate CI95 low, MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_0b19d69ffc27"
-    },
-    "key": "sim.ci_lo|mir_mir250|peak"
-  },
-  {
-    "fact_id": "f_178",
-    "value": 0.9454058022645873,
-    "unit": "ratio",
-    "label": "Success rate CI95 high, MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_0b19d69ffc27"
-    },
-    "key": "sim.ci_hi|mir_mir250|peak"
-  },
-  {
-    "fact_id": "f_179",
-    "value": 139.5,
-    "unit": "s",
-    "label": "Median mission time, MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_0b19d69ffc27"
-    },
-    "key": "sim.mission_s|mir_mir250|peak"
-  },
-  {
-    "fact_id": "f_180",
-    "value": 4.875,
-    "unit": "per_mission",
-    "label": "Near-misses per mission, MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_0b19d69ffc27"
-    },
-    "key": "sim.near_miss|mir_mir250|peak"
-  },
-  {
-    "fact_id": "f_181",
-    "value": 6.375,
-    "unit": "per_mission",
-    "label": "Safety stops per mission, MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_0b19d69ffc27"
-    },
-    "key": "sim.stops|mir_mir250|peak"
-  },
-  {
-    "fact_id": "f_182",
-    "value": 0.0225,
-    "unit": "m",
-    "label": "Median smallest robot-to-obstacle gap per episode, MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_0b19d69ffc27"
-    },
-    "key": "sim.min_gap_m|mir_mir250|peak"
-  },
-  {
-    "fact_id": "f_183",
-    "value": 1.0,
-    "unit": "episodes",
-    "label": "Unsuccessful episodes (collision), MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_0b19d69ffc27"
-    },
-    "key": "sim.fail|mir_mir250|peak|collision"
-  },
-  {
-    "fact_id": "f_184",
-    "value": 4.0,
-    "unit": "episodes",
-    "label": "Unsuccessful episodes (no path static), MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_0b19d69ffc27"
-    },
-    "key": "sim.fail|mir_mir250|peak|no_path_static"
-  },
-  {
-    "fact_id": "f_185",
-    "value": 0.875,
-    "unit": "ratio",
-    "label": "Success rate, MiR MiR250, peak traffic, optimistic geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_ff68d24cd9f5"
-    },
-    "key": "sim.success|mir_mir250|peak|optimistic"
-  },
-  {
-    "fact_id": "f_186",
-    "value": 40.0,
-    "unit": "episodes",
-    "label": "Episodes simulated, MiR MiR250, peak traffic, optimistic geometry (simulation-based estimate)",
-    "origin": {
-      "type": "sim_batch",
-      "ref": "sb_ff68d24cd9f5"
-    },
-    "key": "sim.n|mir_mir250|peak|optimistic"
-  },
-  {
-    "fact_id": "f_187",
-    "value": 0.875,
-    "unit": "ratio",
-    "label": "Automatable share of the task, MiR MiR250 (success rate x feasible leg fraction)",
-    "origin": {
-      "type": "formula",
-      "ref": "roi:mir_mir250"
-    },
-    "key": "roi.share|mir_mir250"
-  },
-  {
-    "fact_id": "f_188",
-    "value": 1668.3333333333333,
-    "unit": "USD/month",
-    "label": "Monthly staff-time saving, MiR MiR250",
-    "origin": {
-      "type": "formula",
-      "ref": "roi:mir_mir250"
-    },
-    "key": "roi.saving|mir_mir250"
-  },
-  {
-    "fact_id": "f_189",
-    "value": "enter a quote",
-    "unit": "",
-    "label": "Payback status, MiR MiR250",
-    "origin": {
-      "type": "formula",
-      "ref": "roi:mir_mir250"
-    },
-    "key": "roi.status|mir_mir250"
-  },
-  {
-    "fact_id": "f_190",
-    "value": "Not cleared",
-    "unit": "",
-    "label": "Verdict, MiR MiR250",
-    "origin": {
-      "type": "formula",
-      "ref": "verdict:mir_mir250"
-    },
-    "key": "verdict|mir_mir250"
-  },
-  {
-    "fact_id": "f_191",
-    "value": "success 88% at normal traffic (needs 90%)",
-    "unit": "",
-    "label": "Verdict main reason, MiR MiR250",
-    "origin": {
-      "type": "formula",
-      "ref": "verdict:mir_mir250"
-    },
-    "key": "verdict.reason|mir_mir250"
-  },
-  {
-    "fact_id": "f_192",
-    "value": 0.88,
-    "unit": "ratio",
-    "label": "Verdict main reason, MiR MiR250 (value 1)",
-    "origin": {
-      "type": "formula",
-      "ref": "verdict:mir_mir250"
-    },
-    "key": "verdict.reason_num|mir_mir250|0"
-  },
-  {
-    "fact_id": "f_193",
-    "value": 0.9,
-    "unit": "ratio",
-    "label": "Verdict main reason, MiR MiR250 (value 2)",
-    "origin": {
-      "type": "formula",
-      "ref": "verdict:mir_mir250"
-    },
-    "key": "verdict.reason_num|mir_mir250|1"
-  },
-  {
-    "fact_id": "f_194",
-    "value": 6.0,
-    "unit": "",
-    "label": "Verdict check value, MiR MiR250 (value 1)",
-    "origin": {
-      "type": "formula",
-      "ref": "verdict:mir_mir250:as_is:0"
-    },
-    "key": "verdict.value_num|mir_mir250|as_is|0|0"
-  },
-  {
-    "fact_id": "f_195",
-    "value": 6.0,
-    "unit": "legs",
-    "label": "Verdict check value, MiR MiR250 (value 2)",
-    "origin": {
-      "type": "formula",
-      "ref": "verdict:mir_mir250:as_is:0"
-    },
-    "key": "verdict.value_num|mir_mir250|as_is|0|1"
-  },
-  {
-    "fact_id": "f_196",
-    "value": 0.9,
-    "unit": "",
-    "label": "Verdict rule, MiR MiR250 (value 1)",
-    "origin": {
-      "type": "formula",
-      "ref": "verdict:mir_mir250:as_is:2"
-    },
-    "key": "verdict.rule_num|mir_mir250|as_is|2|0"
-  },
-  {
-    "fact_id": "f_197",
-    "value": 0.875,
-    "unit": "ratio",
-    "label": "Verdict check value (as-is), MiR MiR250",
-    "origin": {
-      "type": "formula",
-      "ref": "verdict:mir_mir250:as_is:2"
-    },
-    "key": "verdict.value|mir_mir250|as_is|2"
-  },
-  {
-    "fact_id": "f_198",
-    "value": 0.9,
-    "unit": "ratio",
-    "label": "Verdict rule threshold, MiR MiR250",
-    "origin": {
-      "type": "formula",
-      "ref": "verdict:mir_mir250:as_is:2"
-    },
-    "key": "verdict.threshold|mir_mir250|as_is|2"
-  },
-  {
-    "fact_id": "f_199",
     "value": "OTTO Motors OTTO 100",
     "unit": "",
     "label": "Robot model (otto_100)",
@@ -2189,7 +1144,7 @@
     "key": "robot.name|otto_100"
   },
   {
-    "fact_id": "f_200",
+    "fact_id": "f_105",
     "value": "indoor AMR",
     "unit": "",
     "label": "Robot class, OTTO Motors OTTO 100",
@@ -2200,7 +1155,7 @@
     "key": "robot.class|otto_100"
   },
   {
-    "fact_id": "f_201",
+    "fact_id": "f_106",
     "value": 0.74,
     "unit": "m",
     "label": "Footprint length, OTTO Motors OTTO 100 (bounding box)",
@@ -2211,7 +1166,7 @@
     "key": "robot.length_m|otto_100"
   },
   {
-    "fact_id": "f_202",
+    "fact_id": "f_107",
     "value": 0.55,
     "unit": "m",
     "label": "Footprint width, OTTO Motors OTTO 100 (bounding box)",
@@ -2222,7 +1177,7 @@
     "key": "robot.width_m|otto_100"
   },
   {
-    "fact_id": "f_203",
+    "fact_id": "f_108",
     "value": 0.308,
     "unit": "m",
     "label": "Height, OTTO Motors OTTO 100",
@@ -2233,7 +1188,7 @@
     "key": "robot.height_m|otto_100"
   },
   {
-    "fact_id": "f_204",
+    "fact_id": "f_109",
     "value": 2.0,
     "unit": "m/s",
     "label": "Max speed (vendor), OTTO Motors OTTO 100",
@@ -2244,7 +1199,7 @@
     "key": "robot.max_speed_mps|otto_100"
   },
   {
-    "fact_id": "f_205",
+    "fact_id": "f_110",
     "value": 0.013,
     "unit": "m",
     "label": "Max threshold height (vendor), OTTO Motors OTTO 100",
@@ -2255,7 +1210,7 @@
     "key": "robot.max_threshold_m|otto_100"
   },
   {
-    "fact_id": "f_206",
+    "fact_id": "f_111",
     "value": 1.099,
     "unit": "m",
     "label": "Minimum aisle width (vendor), OTTO Motors OTTO 100",
@@ -2266,7 +1221,7 @@
     "key": "robot.min_aisle_m|otto_100"
   },
   {
-    "fact_id": "f_207",
+    "fact_id": "f_112",
     "value": 150.0,
     "unit": "kg",
     "label": "Payload (vendor), OTTO Motors OTTO 100",
@@ -2277,7 +1232,7 @@
     "key": "robot.payload_kg|otto_100"
   },
   {
-    "fact_id": "f_208",
+    "fact_id": "f_113",
     "value": 6.0,
     "unit": "h",
     "label": "Runtime per charge (vendor), OTTO Motors OTTO 100",
@@ -2288,7 +1243,7 @@
     "key": "robot.runtime_h|otto_100"
   },
   {
-    "fact_id": "f_209",
+    "fact_id": "f_114",
     "value": "price on request",
     "unit": "",
     "label": "Price, OTTO Motors OTTO 100",
@@ -2299,7 +1254,7 @@
     "key": "robot.price_status|otto_100"
   },
   {
-    "fact_id": "f_210",
+    "fact_id": "f_115",
     "value": "human-reviewed",
     "unit": "",
     "label": "Catalog review status, OTTO Motors OTTO 100",
@@ -2310,7 +1265,7 @@
     "key": "robot.verified|otto_100"
   },
   {
-    "fact_id": "f_211",
+    "fact_id": "f_116",
     "value": 6.0,
     "unit": "count",
     "label": "Task legs, OTTO Motors OTTO 100",
@@ -2321,7 +1276,7 @@
     "key": "feas.legs_total|otto_100"
   },
   {
-    "fact_id": "f_212",
+    "fact_id": "f_117",
     "value": 6.0,
     "unit": "count",
     "label": "Task legs feasible (static check), OTTO Motors OTTO 100",
@@ -2332,7 +1287,7 @@
     "key": "feas.legs_ok|otto_100"
   },
   {
-    "fact_id": "f_213",
+    "fact_id": "f_118",
     "value": 1.0,
     "unit": "ratio",
     "label": "Fraction of task legs feasible, OTTO Motors OTTO 100 (pending legs count as not feasible)",
@@ -2343,7 +1298,7 @@
     "key": "feas.frac|otto_100"
   },
   {
-    "fact_id": "f_214",
+    "fact_id": "f_119",
     "value": 0.775,
     "unit": "m",
     "label": "Narrowest gap on route, OTTO Motors OTTO 100",
@@ -2354,7 +1309,7 @@
     "key": "feas.narrowest_gap_m|otto_100"
   },
   {
-    "fact_id": "f_215",
+    "fact_id": "f_120",
     "value": 0.55,
     "unit": "m",
     "label": "Gap the robot needs at the narrowest point, OTTO Motors OTTO 100",
@@ -2365,7 +1320,7 @@
     "key": "feas.narrowest_required_m|otto_100"
   },
   {
-    "fact_id": "f_216",
+    "fact_id": "f_121",
     "value": "feasible",
     "unit": "",
     "label": "Leg DOCK to PICKUP, OTTO Motors OTTO 100",
@@ -2376,7 +1331,7 @@
     "key": "feas.leg_status|otto_100|0"
   },
   {
-    "fact_id": "f_217",
+    "fact_id": "f_122",
     "value": 0.7777,
     "unit": "m",
     "label": "Narrowest gap, leg DOCK to PICKUP, OTTO Motors OTTO 100",
@@ -2387,7 +1342,7 @@
     "key": "feas.leg_gap|otto_100|0"
   },
   {
-    "fact_id": "f_218",
+    "fact_id": "f_123",
     "value": 0.55,
     "unit": "m",
     "label": "Gap needed, leg DOCK to PICKUP, OTTO Motors OTTO 100",
@@ -2398,7 +1353,7 @@
     "key": "feas.leg_required|otto_100|0"
   },
   {
-    "fact_id": "f_219",
+    "fact_id": "f_124",
     "value": 3.625,
     "unit": "m",
     "label": "Path length, leg DOCK to PICKUP, OTTO Motors OTTO 100",
@@ -2409,7 +1364,7 @@
     "key": "feas.leg_len|otto_100|0"
   },
   {
-    "fact_id": "f_220",
+    "fact_id": "f_125",
     "value": "feasible",
     "unit": "",
     "label": "Leg PICKUP to S1, OTTO Motors OTTO 100",
@@ -2420,7 +1375,7 @@
     "key": "feas.leg_status|otto_100|1"
   },
   {
-    "fact_id": "f_221",
+    "fact_id": "f_126",
     "value": 0.775,
     "unit": "m",
     "label": "Narrowest gap, leg PICKUP to S1, OTTO Motors OTTO 100",
@@ -2431,7 +1386,7 @@
     "key": "feas.leg_gap|otto_100|1"
   },
   {
-    "fact_id": "f_222",
+    "fact_id": "f_127",
     "value": 0.55,
     "unit": "m",
     "label": "Gap needed, leg PICKUP to S1, OTTO Motors OTTO 100",
@@ -2442,7 +1397,7 @@
     "key": "feas.leg_required|otto_100|1"
   },
   {
-    "fact_id": "f_223",
+    "fact_id": "f_128",
     "value": 10.099,
     "unit": "m",
     "label": "Path length, leg PICKUP to S1, OTTO Motors OTTO 100",
@@ -2453,7 +1408,7 @@
     "key": "feas.leg_len|otto_100|1"
   },
   {
-    "fact_id": "f_224",
+    "fact_id": "f_129",
     "value": "feasible",
     "unit": "",
     "label": "Leg S1 to S2, OTTO Motors OTTO 100",
@@ -2464,7 +1419,7 @@
     "key": "feas.leg_status|otto_100|2"
   },
   {
-    "fact_id": "f_225",
+    "fact_id": "f_130",
     "value": 0.7751,
     "unit": "m",
     "label": "Narrowest gap, leg S1 to S2, OTTO Motors OTTO 100",
@@ -2475,7 +1430,7 @@
     "key": "feas.leg_gap|otto_100|2"
   },
   {
-    "fact_id": "f_226",
+    "fact_id": "f_131",
     "value": 0.55,
     "unit": "m",
     "label": "Gap needed, leg S1 to S2, OTTO Motors OTTO 100",
@@ -2486,7 +1441,7 @@
     "key": "feas.leg_required|otto_100|2"
   },
   {
-    "fact_id": "f_227",
+    "fact_id": "f_132",
     "value": 8.02,
     "unit": "m",
     "label": "Path length, leg S1 to S2, OTTO Motors OTTO 100",
@@ -2497,7 +1452,7 @@
     "key": "feas.leg_len|otto_100|2"
   },
   {
-    "fact_id": "f_228",
+    "fact_id": "f_133",
     "value": "feasible",
     "unit": "",
     "label": "Leg S2 to S3, OTTO Motors OTTO 100",
@@ -2508,7 +1463,7 @@
     "key": "feas.leg_status|otto_100|3"
   },
   {
-    "fact_id": "f_229",
+    "fact_id": "f_134",
     "value": 0.7751,
     "unit": "m",
     "label": "Narrowest gap, leg S2 to S3, OTTO Motors OTTO 100",
@@ -2519,7 +1474,7 @@
     "key": "feas.leg_gap|otto_100|3"
   },
   {
-    "fact_id": "f_230",
+    "fact_id": "f_135",
     "value": 0.55,
     "unit": "m",
     "label": "Gap needed, leg S2 to S3, OTTO Motors OTTO 100",
@@ -2530,7 +1485,7 @@
     "key": "feas.leg_required|otto_100|3"
   },
   {
-    "fact_id": "f_231",
+    "fact_id": "f_136",
     "value": 9.076,
     "unit": "m",
     "label": "Path length, leg S2 to S3, OTTO Motors OTTO 100",
@@ -2541,7 +1496,7 @@
     "key": "feas.leg_len|otto_100|3"
   },
   {
-    "fact_id": "f_232",
+    "fact_id": "f_137",
     "value": "feasible",
     "unit": "",
     "label": "Leg S3 to S4, OTTO Motors OTTO 100",
@@ -2552,7 +1507,7 @@
     "key": "feas.leg_status|otto_100|4"
   },
   {
-    "fact_id": "f_233",
+    "fact_id": "f_138",
     "value": 1.3786,
     "unit": "m",
     "label": "Narrowest gap, leg S3 to S4, OTTO Motors OTTO 100",
@@ -2563,7 +1518,7 @@
     "key": "feas.leg_gap|otto_100|4"
   },
   {
-    "fact_id": "f_234",
+    "fact_id": "f_139",
     "value": 0.55,
     "unit": "m",
     "label": "Gap needed, leg S3 to S4, OTTO Motors OTTO 100",
@@ -2574,7 +1529,7 @@
     "key": "feas.leg_required|otto_100|4"
   },
   {
-    "fact_id": "f_235",
+    "fact_id": "f_140",
     "value": 4.246,
     "unit": "m",
     "label": "Path length, leg S3 to S4, OTTO Motors OTTO 100",
@@ -2585,7 +1540,7 @@
     "key": "feas.leg_len|otto_100|4"
   },
   {
-    "fact_id": "f_236",
+    "fact_id": "f_141",
     "value": "feasible",
     "unit": "",
     "label": "Leg S4 to DOCK, OTTO Motors OTTO 100",
@@ -2596,7 +1551,7 @@
     "key": "feas.leg_status|otto_100|5"
   },
   {
-    "fact_id": "f_237",
+    "fact_id": "f_142",
     "value": 1.1752,
     "unit": "m",
     "label": "Narrowest gap, leg S4 to DOCK, OTTO Motors OTTO 100",
@@ -2607,7 +1562,7 @@
     "key": "feas.leg_gap|otto_100|5"
   },
   {
-    "fact_id": "f_238",
+    "fact_id": "f_143",
     "value": 0.55,
     "unit": "m",
     "label": "Gap needed, leg S4 to DOCK, OTTO Motors OTTO 100",
@@ -2618,7 +1573,7 @@
     "key": "feas.leg_required|otto_100|5"
   },
   {
-    "fact_id": "f_239",
+    "fact_id": "f_144",
     "value": 13.388,
     "unit": "m",
     "label": "Path length, leg S4 to DOCK, OTTO Motors OTTO 100",
@@ -2629,425 +1584,425 @@
     "key": "feas.leg_len|otto_100|5"
   },
   {
-    "fact_id": "f_240",
+    "fact_id": "f_145",
     "value": 0.975,
     "unit": "ratio",
     "label": "Success rate, OTTO Motors OTTO 100, quiet traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_c63223f5d0bf"
+      "ref": "sb_c804a5a2613a"
     },
     "key": "sim.success|otto_100|quiet|conservative"
   },
   {
-    "fact_id": "f_241",
+    "fact_id": "f_146",
     "value": 40.0,
     "unit": "episodes",
     "label": "Episodes simulated, OTTO Motors OTTO 100, quiet traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_c63223f5d0bf"
+      "ref": "sb_c804a5a2613a"
     },
     "key": "sim.n|otto_100|quiet|conservative"
   },
   {
-    "fact_id": "f_242",
+    "fact_id": "f_147",
     "value": 0.975,
     "unit": "ratio",
     "label": "Success rate, OTTO Motors OTTO 100, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_9ce556cb4d55"
+      "ref": "sb_ec68fa07d4d9"
     },
     "key": "sim.success|otto_100|quiet|nominal"
   },
   {
-    "fact_id": "f_243",
+    "fact_id": "f_148",
     "value": 40.0,
     "unit": "episodes",
     "label": "Episodes simulated, OTTO Motors OTTO 100, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_9ce556cb4d55"
+      "ref": "sb_ec68fa07d4d9"
     },
     "key": "sim.n|otto_100|quiet|nominal"
   },
   {
-    "fact_id": "f_244",
+    "fact_id": "f_149",
     "value": 0.8711834051199223,
     "unit": "ratio",
     "label": "Success rate CI95 low, OTTO Motors OTTO 100, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_9ce556cb4d55"
+      "ref": "sb_ec68fa07d4d9"
     },
     "key": "sim.ci_lo|otto_100|quiet"
   },
   {
-    "fact_id": "f_245",
+    "fact_id": "f_150",
     "value": 0.9955732825922052,
     "unit": "ratio",
     "label": "Success rate CI95 high, OTTO Motors OTTO 100, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_9ce556cb4d55"
+      "ref": "sb_ec68fa07d4d9"
     },
     "key": "sim.ci_hi|otto_100|quiet"
   },
   {
-    "fact_id": "f_246",
+    "fact_id": "f_151",
     "value": 121.7,
     "unit": "s",
     "label": "Median mission time, OTTO Motors OTTO 100, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_9ce556cb4d55"
+      "ref": "sb_ec68fa07d4d9"
     },
     "key": "sim.mission_s|otto_100|quiet"
   },
   {
-    "fact_id": "f_247",
+    "fact_id": "f_152",
     "value": 0.75,
     "unit": "per_mission",
     "label": "Near-misses per mission, OTTO Motors OTTO 100, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_9ce556cb4d55"
+      "ref": "sb_ec68fa07d4d9"
     },
     "key": "sim.near_miss|otto_100|quiet"
   },
   {
-    "fact_id": "f_248",
+    "fact_id": "f_153",
     "value": 0.875,
     "unit": "per_mission",
     "label": "Safety stops per mission, OTTO Motors OTTO 100, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_9ce556cb4d55"
+      "ref": "sb_ec68fa07d4d9"
     },
     "key": "sim.stops|otto_100|quiet"
   },
   {
-    "fact_id": "f_249",
+    "fact_id": "f_154",
     "value": 0.0298,
     "unit": "m",
     "label": "Median smallest robot-to-obstacle gap per episode, OTTO Motors OTTO 100, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_9ce556cb4d55"
+      "ref": "sb_ec68fa07d4d9"
     },
     "key": "sim.min_gap_m|otto_100|quiet"
   },
   {
-    "fact_id": "f_250",
+    "fact_id": "f_155",
     "value": 1.0,
     "unit": "episodes",
     "label": "Unsuccessful episodes (collision), OTTO Motors OTTO 100, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_9ce556cb4d55"
+      "ref": "sb_ec68fa07d4d9"
     },
     "key": "sim.fail|otto_100|quiet|collision"
   },
   {
-    "fact_id": "f_251",
+    "fact_id": "f_156",
     "value": 0.975,
     "unit": "ratio",
     "label": "Success rate, OTTO Motors OTTO 100, quiet traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_4cc055a97e39"
+      "ref": "sb_21f530537cb3"
     },
     "key": "sim.success|otto_100|quiet|optimistic"
   },
   {
-    "fact_id": "f_252",
+    "fact_id": "f_157",
     "value": 40.0,
     "unit": "episodes",
     "label": "Episodes simulated, OTTO Motors OTTO 100, quiet traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_4cc055a97e39"
+      "ref": "sb_21f530537cb3"
     },
     "key": "sim.n|otto_100|quiet|optimistic"
   },
   {
-    "fact_id": "f_253",
+    "fact_id": "f_158",
     "value": 0.975,
     "unit": "ratio",
     "label": "Success rate, OTTO Motors OTTO 100, normal traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a0511c46ab27"
+      "ref": "sb_2c8ce07eed75"
     },
     "key": "sim.success|otto_100|normal|conservative"
   },
   {
-    "fact_id": "f_254",
+    "fact_id": "f_159",
     "value": 40.0,
     "unit": "episodes",
     "label": "Episodes simulated, OTTO Motors OTTO 100, normal traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a0511c46ab27"
+      "ref": "sb_2c8ce07eed75"
     },
     "key": "sim.n|otto_100|normal|conservative"
   },
   {
-    "fact_id": "f_255",
+    "fact_id": "f_160",
     "value": 0.975,
     "unit": "ratio",
     "label": "Success rate, OTTO Motors OTTO 100, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_938052ccbcec"
+      "ref": "sb_d96dd2fb87d4"
     },
     "key": "sim.success|otto_100|normal|nominal"
   },
   {
-    "fact_id": "f_256",
+    "fact_id": "f_161",
     "value": 40.0,
     "unit": "episodes",
     "label": "Episodes simulated, OTTO Motors OTTO 100, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_938052ccbcec"
+      "ref": "sb_d96dd2fb87d4"
     },
     "key": "sim.n|otto_100|normal|nominal"
   },
   {
-    "fact_id": "f_257",
+    "fact_id": "f_162",
     "value": 0.8711834051199223,
     "unit": "ratio",
     "label": "Success rate CI95 low, OTTO Motors OTTO 100, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_938052ccbcec"
+      "ref": "sb_d96dd2fb87d4"
     },
     "key": "sim.ci_lo|otto_100|normal"
   },
   {
-    "fact_id": "f_258",
+    "fact_id": "f_163",
     "value": 0.9955732825922052,
     "unit": "ratio",
     "label": "Success rate CI95 high, OTTO Motors OTTO 100, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_938052ccbcec"
+      "ref": "sb_d96dd2fb87d4"
     },
     "key": "sim.ci_hi|otto_100|normal"
   },
   {
-    "fact_id": "f_259",
+    "fact_id": "f_164",
     "value": 127.3,
     "unit": "s",
     "label": "Median mission time, OTTO Motors OTTO 100, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_938052ccbcec"
+      "ref": "sb_d96dd2fb87d4"
     },
     "key": "sim.mission_s|otto_100|normal"
   },
   {
-    "fact_id": "f_260",
+    "fact_id": "f_165",
     "value": 2.15,
     "unit": "per_mission",
     "label": "Near-misses per mission, OTTO Motors OTTO 100, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_938052ccbcec"
+      "ref": "sb_d96dd2fb87d4"
     },
     "key": "sim.near_miss|otto_100|normal"
   },
   {
-    "fact_id": "f_261",
+    "fact_id": "f_166",
     "value": 2.4,
     "unit": "per_mission",
     "label": "Safety stops per mission, OTTO Motors OTTO 100, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_938052ccbcec"
+      "ref": "sb_d96dd2fb87d4"
     },
     "key": "sim.stops|otto_100|normal"
   },
   {
-    "fact_id": "f_262",
+    "fact_id": "f_167",
     "value": 0.0298,
     "unit": "m",
     "label": "Median smallest robot-to-obstacle gap per episode, OTTO Motors OTTO 100, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_938052ccbcec"
+      "ref": "sb_d96dd2fb87d4"
     },
     "key": "sim.min_gap_m|otto_100|normal"
   },
   {
-    "fact_id": "f_263",
+    "fact_id": "f_168",
     "value": 1.0,
     "unit": "episodes",
     "label": "Unsuccessful episodes (collision), OTTO Motors OTTO 100, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_938052ccbcec"
+      "ref": "sb_d96dd2fb87d4"
     },
     "key": "sim.fail|otto_100|normal|collision"
   },
   {
-    "fact_id": "f_264",
+    "fact_id": "f_169",
     "value": 0.975,
     "unit": "ratio",
     "label": "Success rate, OTTO Motors OTTO 100, normal traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d2c34af60fbd"
+      "ref": "sb_912ecd05aa47"
     },
     "key": "sim.success|otto_100|normal|optimistic"
   },
   {
-    "fact_id": "f_265",
+    "fact_id": "f_170",
     "value": 40.0,
     "unit": "episodes",
     "label": "Episodes simulated, OTTO Motors OTTO 100, normal traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d2c34af60fbd"
+      "ref": "sb_912ecd05aa47"
     },
     "key": "sim.n|otto_100|normal|optimistic"
   },
   {
-    "fact_id": "f_266",
+    "fact_id": "f_171",
     "value": 1.0,
     "unit": "ratio",
     "label": "Success rate, OTTO Motors OTTO 100, peak traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_9de38e6e6c78"
+      "ref": "sb_de57212d3e22"
     },
     "key": "sim.success|otto_100|peak|conservative"
   },
   {
-    "fact_id": "f_267",
+    "fact_id": "f_172",
     "value": 40.0,
     "unit": "episodes",
     "label": "Episodes simulated, OTTO Motors OTTO 100, peak traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_9de38e6e6c78"
+      "ref": "sb_de57212d3e22"
     },
     "key": "sim.n|otto_100|peak|conservative"
   },
   {
-    "fact_id": "f_268",
+    "fact_id": "f_173",
     "value": 1.0,
     "unit": "ratio",
     "label": "Success rate, OTTO Motors OTTO 100, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_880ee587be27"
+      "ref": "sb_8c2e684f240f"
     },
     "key": "sim.success|otto_100|peak|nominal"
   },
   {
-    "fact_id": "f_269",
+    "fact_id": "f_174",
     "value": 40.0,
     "unit": "episodes",
     "label": "Episodes simulated, OTTO Motors OTTO 100, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_880ee587be27"
+      "ref": "sb_8c2e684f240f"
     },
     "key": "sim.n|otto_100|peak|nominal"
   },
   {
-    "fact_id": "f_270",
+    "fact_id": "f_175",
     "value": 0.9123754607496077,
     "unit": "ratio",
     "label": "Success rate CI95 low, OTTO Motors OTTO 100, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_880ee587be27"
+      "ref": "sb_8c2e684f240f"
     },
     "key": "sim.ci_lo|otto_100|peak"
   },
   {
-    "fact_id": "f_271",
+    "fact_id": "f_176",
     "value": 1.0,
     "unit": "ratio",
     "label": "Success rate CI95 high, OTTO Motors OTTO 100, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_880ee587be27"
+      "ref": "sb_8c2e684f240f"
     },
     "key": "sim.ci_hi|otto_100|peak"
   },
   {
-    "fact_id": "f_272",
+    "fact_id": "f_177",
     "value": 147.45,
     "unit": "s",
     "label": "Median mission time, OTTO Motors OTTO 100, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_880ee587be27"
+      "ref": "sb_8c2e684f240f"
     },
     "key": "sim.mission_s|otto_100|peak"
   },
   {
-    "fact_id": "f_273",
+    "fact_id": "f_178",
     "value": 5.525,
     "unit": "per_mission",
     "label": "Near-misses per mission, OTTO Motors OTTO 100, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_880ee587be27"
+      "ref": "sb_8c2e684f240f"
     },
     "key": "sim.near_miss|otto_100|peak"
   },
   {
-    "fact_id": "f_274",
+    "fact_id": "f_179",
     "value": 7.1,
     "unit": "per_mission",
     "label": "Safety stops per mission, OTTO Motors OTTO 100, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_880ee587be27"
+      "ref": "sb_8c2e684f240f"
     },
     "key": "sim.stops|otto_100|peak"
   },
   {
-    "fact_id": "f_275",
+    "fact_id": "f_180",
     "value": 0.0298,
     "unit": "m",
     "label": "Median smallest robot-to-obstacle gap per episode, OTTO Motors OTTO 100, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_880ee587be27"
+      "ref": "sb_8c2e684f240f"
     },
     "key": "sim.min_gap_m|otto_100|peak"
   },
   {
-    "fact_id": "f_276",
+    "fact_id": "f_181",
     "value": 1.0,
     "unit": "ratio",
     "label": "Success rate, OTTO Motors OTTO 100, peak traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_7ac96c8888b0"
+      "ref": "sb_821fc6c11009"
     },
     "key": "sim.success|otto_100|peak|optimistic"
   },
   {
-    "fact_id": "f_277",
+    "fact_id": "f_182",
     "value": 40.0,
     "unit": "episodes",
     "label": "Episodes simulated, OTTO Motors OTTO 100, peak traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_7ac96c8888b0"
+      "ref": "sb_821fc6c11009"
     },
     "key": "sim.n|otto_100|peak|optimistic"
   },
   {
-    "fact_id": "f_278",
+    "fact_id": "f_183",
     "value": 0.975,
     "unit": "ratio",
     "label": "Automatable share of the task, OTTO Motors OTTO 100 (success rate x feasible leg fraction)",
@@ -3058,7 +2013,7 @@
     "key": "roi.share|otto_100"
   },
   {
-    "fact_id": "f_279",
+    "fact_id": "f_184",
     "value": 1858.9999999999998,
     "unit": "USD/month",
     "label": "Monthly staff-time saving, OTTO Motors OTTO 100",
@@ -3069,7 +2024,7 @@
     "key": "roi.saving|otto_100"
   },
   {
-    "fact_id": "f_280",
+    "fact_id": "f_185",
     "value": "enter a quote",
     "unit": "",
     "label": "Payback status, OTTO Motors OTTO 100",
@@ -3080,7 +2035,7 @@
     "key": "roi.status|otto_100"
   },
   {
-    "fact_id": "f_281",
+    "fact_id": "f_186",
     "value": "Cleared",
     "unit": "",
     "label": "Verdict, OTTO Motors OTTO 100",
@@ -3091,7 +2046,7 @@
     "key": "verdict|otto_100"
   },
   {
-    "fact_id": "f_282",
+    "fact_id": "f_187",
     "value": "meets every rule as-is",
     "unit": "",
     "label": "Verdict main reason, OTTO Motors OTTO 100",
@@ -3102,7 +2057,7 @@
     "key": "verdict.reason|otto_100"
   },
   {
-    "fact_id": "f_283",
+    "fact_id": "f_188",
     "value": 6.0,
     "unit": "",
     "label": "Verdict check value, OTTO Motors OTTO 100 (value 1)",
@@ -3113,7 +2068,7 @@
     "key": "verdict.value_num|otto_100|as_is|0|0"
   },
   {
-    "fact_id": "f_284",
+    "fact_id": "f_189",
     "value": 6.0,
     "unit": "legs",
     "label": "Verdict check value, OTTO Motors OTTO 100 (value 2)",
@@ -3124,7 +2079,7 @@
     "key": "verdict.value_num|otto_100|as_is|0|1"
   },
   {
-    "fact_id": "f_285",
+    "fact_id": "f_190",
     "value": 0.9,
     "unit": "",
     "label": "Verdict rule, OTTO Motors OTTO 100 (value 1)",
@@ -3135,7 +2090,7 @@
     "key": "verdict.rule_num|otto_100|as_is|2|0"
   },
   {
-    "fact_id": "f_286",
+    "fact_id": "f_191",
     "value": 0.975,
     "unit": "ratio",
     "label": "Verdict check value (as-is), OTTO Motors OTTO 100",
@@ -3146,7 +2101,7 @@
     "key": "verdict.value|otto_100|as_is|2"
   },
   {
-    "fact_id": "f_287",
+    "fact_id": "f_192",
     "value": 0.9,
     "unit": "ratio",
     "label": "Verdict rule threshold, OTTO Motors OTTO 100",
@@ -3155,6 +2110,1051 @@
       "ref": "verdict:otto_100:as_is:2"
     },
     "key": "verdict.threshold|otto_100|as_is|2"
+  },
+  {
+    "fact_id": "f_193",
+    "value": "MiR MiR250",
+    "unit": "",
+    "label": "Robot model (mir_mir250)",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:mir_mir250"
+    },
+    "key": "robot.name|mir_mir250"
+  },
+  {
+    "fact_id": "f_194",
+    "value": "indoor AMR",
+    "unit": "",
+    "label": "Robot class, MiR MiR250",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:mir_mir250"
+    },
+    "key": "robot.class|mir_mir250"
+  },
+  {
+    "fact_id": "f_195",
+    "value": 0.8,
+    "unit": "m",
+    "label": "Footprint length, MiR MiR250 (bounding box)",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf"
+    },
+    "key": "robot.length_m|mir_mir250"
+  },
+  {
+    "fact_id": "f_196",
+    "value": 0.58,
+    "unit": "m",
+    "label": "Footprint width, MiR MiR250 (bounding box)",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf"
+    },
+    "key": "robot.width_m|mir_mir250"
+  },
+  {
+    "fact_id": "f_197",
+    "value": 0.3,
+    "unit": "m",
+    "label": "Height, MiR MiR250",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf"
+    },
+    "key": "robot.height_m|mir_mir250"
+  },
+  {
+    "fact_id": "f_198",
+    "value": 2.0,
+    "unit": "m/s",
+    "label": "Max speed (vendor), MiR MiR250",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf"
+    },
+    "key": "robot.max_speed_mps|mir_mir250"
+  },
+  {
+    "fact_id": "f_199",
+    "value": 0.02,
+    "unit": "m",
+    "label": "Max threshold height (vendor), MiR MiR250",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf"
+    },
+    "key": "robot.max_threshold_m|mir_mir250"
+  },
+  {
+    "fact_id": "f_200",
+    "value": 2.86241,
+    "unit": "deg",
+    "label": "Max slope (vendor), MiR MiR250",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf"
+    },
+    "key": "robot.max_slope_deg|mir_mir250"
+  },
+  {
+    "fact_id": "f_201",
+    "value": 1.45,
+    "unit": "m",
+    "label": "Minimum aisle width (vendor), MiR MiR250",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf"
+    },
+    "key": "robot.min_aisle_m|mir_mir250"
+  },
+  {
+    "fact_id": "f_202",
+    "value": 250.0,
+    "unit": "kg",
+    "label": "Payload (vendor), MiR MiR250",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf"
+    },
+    "key": "robot.payload_kg|mir_mir250"
+  },
+  {
+    "fact_id": "f_203",
+    "value": 13.0,
+    "unit": "h",
+    "label": "Runtime per charge (vendor), MiR MiR250",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf"
+    },
+    "key": "robot.runtime_h|mir_mir250"
+  },
+  {
+    "fact_id": "f_204",
+    "value": "price on request",
+    "unit": "",
+    "label": "Price, MiR MiR250",
+    "origin": {
+      "type": "source_url",
+      "ref": "https://mobile-industrial-robots.com/products/robots/mir250"
+    },
+    "key": "robot.price_status|mir_mir250"
+  },
+  {
+    "fact_id": "f_205",
+    "value": "human-reviewed",
+    "unit": "",
+    "label": "Catalog review status, MiR MiR250",
+    "origin": {
+      "type": "source_url",
+      "ref": "catalog:mir_mir250"
+    },
+    "key": "robot.verified|mir_mir250"
+  },
+  {
+    "fact_id": "f_206",
+    "value": 6.0,
+    "unit": "count",
+    "label": "Task legs, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1"
+    },
+    "key": "feas.legs_total|mir_mir250"
+  },
+  {
+    "fact_id": "f_207",
+    "value": 6.0,
+    "unit": "count",
+    "label": "Task legs feasible (static check), MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1"
+    },
+    "key": "feas.legs_ok|mir_mir250"
+  },
+  {
+    "fact_id": "f_208",
+    "value": 1.0,
+    "unit": "ratio",
+    "label": "Fraction of task legs feasible, MiR MiR250 (pending legs count as not feasible)",
+    "origin": {
+      "type": "formula",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:feasible/total"
+    },
+    "key": "feas.frac|mir_mir250"
+  },
+  {
+    "fact_id": "f_209",
+    "value": 0.775,
+    "unit": "m",
+    "label": "Narrowest gap on route, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg0"
+    },
+    "key": "feas.narrowest_gap_m|mir_mir250"
+  },
+  {
+    "fact_id": "f_210",
+    "value": 0.58,
+    "unit": "m",
+    "label": "Gap the robot needs at the narrowest point, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg0"
+    },
+    "key": "feas.narrowest_required_m|mir_mir250"
+  },
+  {
+    "fact_id": "f_211",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg DOCK to PICKUP, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg0"
+    },
+    "key": "feas.leg_status|mir_mir250|0"
+  },
+  {
+    "fact_id": "f_212",
+    "value": 0.775,
+    "unit": "m",
+    "label": "Narrowest gap, leg DOCK to PICKUP, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg0"
+    },
+    "key": "feas.leg_gap|mir_mir250|0"
+  },
+  {
+    "fact_id": "f_213",
+    "value": 0.58,
+    "unit": "m",
+    "label": "Gap needed, leg DOCK to PICKUP, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg0"
+    },
+    "key": "feas.leg_required|mir_mir250|0"
+  },
+  {
+    "fact_id": "f_214",
+    "value": 3.579,
+    "unit": "m",
+    "label": "Path length, leg DOCK to PICKUP, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg0"
+    },
+    "key": "feas.leg_len|mir_mir250|0"
+  },
+  {
+    "fact_id": "f_215",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg PICKUP to S1, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg1"
+    },
+    "key": "feas.leg_status|mir_mir250|1"
+  },
+  {
+    "fact_id": "f_216",
+    "value": 0.775,
+    "unit": "m",
+    "label": "Narrowest gap, leg PICKUP to S1, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg1"
+    },
+    "key": "feas.leg_gap|mir_mir250|1"
+  },
+  {
+    "fact_id": "f_217",
+    "value": 0.58,
+    "unit": "m",
+    "label": "Gap needed, leg PICKUP to S1, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg1"
+    },
+    "key": "feas.leg_required|mir_mir250|1"
+  },
+  {
+    "fact_id": "f_218",
+    "value": 10.13,
+    "unit": "m",
+    "label": "Path length, leg PICKUP to S1, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg1"
+    },
+    "key": "feas.leg_len|mir_mir250|1"
+  },
+  {
+    "fact_id": "f_219",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg S1 to S2, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg2"
+    },
+    "key": "feas.leg_status|mir_mir250|2"
+  },
+  {
+    "fact_id": "f_220",
+    "value": 0.775,
+    "unit": "m",
+    "label": "Narrowest gap, leg S1 to S2, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg2"
+    },
+    "key": "feas.leg_gap|mir_mir250|2"
+  },
+  {
+    "fact_id": "f_221",
+    "value": 0.58,
+    "unit": "m",
+    "label": "Gap needed, leg S1 to S2, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg2"
+    },
+    "key": "feas.leg_required|mir_mir250|2"
+  },
+  {
+    "fact_id": "f_222",
+    "value": 8.021,
+    "unit": "m",
+    "label": "Path length, leg S1 to S2, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg2"
+    },
+    "key": "feas.leg_len|mir_mir250|2"
+  },
+  {
+    "fact_id": "f_223",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg S2 to S3, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg3"
+    },
+    "key": "feas.leg_status|mir_mir250|3"
+  },
+  {
+    "fact_id": "f_224",
+    "value": 0.775,
+    "unit": "m",
+    "label": "Narrowest gap, leg S2 to S3, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg3"
+    },
+    "key": "feas.leg_gap|mir_mir250|3"
+  },
+  {
+    "fact_id": "f_225",
+    "value": 0.58,
+    "unit": "m",
+    "label": "Gap needed, leg S2 to S3, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg3"
+    },
+    "key": "feas.leg_required|mir_mir250|3"
+  },
+  {
+    "fact_id": "f_226",
+    "value": 9.13,
+    "unit": "m",
+    "label": "Path length, leg S2 to S3, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg3"
+    },
+    "key": "feas.leg_len|mir_mir250|3"
+  },
+  {
+    "fact_id": "f_227",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg S3 to S4, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg4"
+    },
+    "key": "feas.leg_status|mir_mir250|4"
+  },
+  {
+    "fact_id": "f_228",
+    "value": 1.375,
+    "unit": "m",
+    "label": "Narrowest gap, leg S3 to S4, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg4"
+    },
+    "key": "feas.leg_gap|mir_mir250|4"
+  },
+  {
+    "fact_id": "f_229",
+    "value": 0.58,
+    "unit": "m",
+    "label": "Gap needed, leg S3 to S4, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg4"
+    },
+    "key": "feas.leg_required|mir_mir250|4"
+  },
+  {
+    "fact_id": "f_230",
+    "value": 4.196,
+    "unit": "m",
+    "label": "Path length, leg S3 to S4, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg4"
+    },
+    "key": "feas.leg_len|mir_mir250|4"
+  },
+  {
+    "fact_id": "f_231",
+    "value": "feasible",
+    "unit": "",
+    "label": "Leg S4 to DOCK, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg5"
+    },
+    "key": "feas.leg_status|mir_mir250|5"
+  },
+  {
+    "fact_id": "f_232",
+    "value": 1.1752,
+    "unit": "m",
+    "label": "Narrowest gap, leg S4 to DOCK, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg5"
+    },
+    "key": "feas.leg_gap|mir_mir250|5"
+  },
+  {
+    "fact_id": "f_233",
+    "value": 0.58,
+    "unit": "m",
+    "label": "Gap needed, leg S4 to DOCK, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg5"
+    },
+    "key": "feas.leg_required|mir_mir250|5"
+  },
+  {
+    "fact_id": "f_234",
+    "value": 13.425,
+    "unit": "m",
+    "label": "Path length, leg S4 to DOCK, MiR MiR250",
+    "origin": {
+      "type": "measurement",
+      "ref": "feasibility:mir_mir250:twin_ref_storeroom_v1:v1:leg5"
+    },
+    "key": "feas.leg_len|mir_mir250|5"
+  },
+  {
+    "fact_id": "f_235",
+    "value": 0.9,
+    "unit": "ratio",
+    "label": "Success rate, MiR MiR250, quiet traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_b1623866f4ad"
+    },
+    "key": "sim.success|mir_mir250|quiet|conservative"
+  },
+  {
+    "fact_id": "f_236",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, MiR MiR250, quiet traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_b1623866f4ad"
+    },
+    "key": "sim.n|mir_mir250|quiet|conservative"
+  },
+  {
+    "fact_id": "f_237",
+    "value": 0.9,
+    "unit": "ratio",
+    "label": "Success rate, MiR MiR250, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_5d0a216a21de"
+    },
+    "key": "sim.success|mir_mir250|quiet|nominal"
+  },
+  {
+    "fact_id": "f_238",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, MiR MiR250, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_5d0a216a21de"
+    },
+    "key": "sim.n|mir_mir250|quiet|nominal"
+  },
+  {
+    "fact_id": "f_239",
+    "value": 0.7694792561952611,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, MiR MiR250, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_5d0a216a21de"
+    },
+    "key": "sim.ci_lo|mir_mir250|quiet"
+  },
+  {
+    "fact_id": "f_240",
+    "value": 0.9604211124044252,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, MiR MiR250, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_5d0a216a21de"
+    },
+    "key": "sim.ci_hi|mir_mir250|quiet"
+  },
+  {
+    "fact_id": "f_241",
+    "value": 123.80000000000001,
+    "unit": "s",
+    "label": "Median mission time, MiR MiR250, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_5d0a216a21de"
+    },
+    "key": "sim.mission_s|mir_mir250|quiet"
+  },
+  {
+    "fact_id": "f_242",
+    "value": 0.575,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, MiR MiR250, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_5d0a216a21de"
+    },
+    "key": "sim.near_miss|mir_mir250|quiet"
+  },
+  {
+    "fact_id": "f_243",
+    "value": 0.875,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, MiR MiR250, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_5d0a216a21de"
+    },
+    "key": "sim.stops|mir_mir250|quiet"
+  },
+  {
+    "fact_id": "f_244",
+    "value": 0.0225,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, MiR MiR250, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_5d0a216a21de"
+    },
+    "key": "sim.min_gap_m|mir_mir250|quiet"
+  },
+  {
+    "fact_id": "f_245",
+    "value": 4.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (no path static), MiR MiR250, quiet traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_5d0a216a21de"
+    },
+    "key": "sim.fail|mir_mir250|quiet|no_path_static"
+  },
+  {
+    "fact_id": "f_246",
+    "value": 0.9,
+    "unit": "ratio",
+    "label": "Success rate, MiR MiR250, quiet traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32365863145e"
+    },
+    "key": "sim.success|mir_mir250|quiet|optimistic"
+  },
+  {
+    "fact_id": "f_247",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, MiR MiR250, quiet traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_32365863145e"
+    },
+    "key": "sim.n|mir_mir250|quiet|optimistic"
+  },
+  {
+    "fact_id": "f_248",
+    "value": 0.875,
+    "unit": "ratio",
+    "label": "Success rate, MiR MiR250, normal traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_810fb36d5b55"
+    },
+    "key": "sim.success|mir_mir250|normal|conservative"
+  },
+  {
+    "fact_id": "f_249",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, MiR MiR250, normal traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_810fb36d5b55"
+    },
+    "key": "sim.n|mir_mir250|normal|conservative"
+  },
+  {
+    "fact_id": "f_250",
+    "value": 0.875,
+    "unit": "ratio",
+    "label": "Success rate, MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_c0efaf479af5"
+    },
+    "key": "sim.success|mir_mir250|normal|nominal"
+  },
+  {
+    "fact_id": "f_251",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_c0efaf479af5"
+    },
+    "key": "sim.n|mir_mir250|normal|nominal"
+  },
+  {
+    "fact_id": "f_252",
+    "value": 0.7388757932976187,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_c0efaf479af5"
+    },
+    "key": "sim.ci_lo|mir_mir250|normal"
+  },
+  {
+    "fact_id": "f_253",
+    "value": 0.9454058022645873,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_c0efaf479af5"
+    },
+    "key": "sim.ci_hi|mir_mir250|normal"
+  },
+  {
+    "fact_id": "f_254",
+    "value": 125.1,
+    "unit": "s",
+    "label": "Median mission time, MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_c0efaf479af5"
+    },
+    "key": "sim.mission_s|mir_mir250|normal"
+  },
+  {
+    "fact_id": "f_255",
+    "value": 2.05,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_c0efaf479af5"
+    },
+    "key": "sim.near_miss|mir_mir250|normal"
+  },
+  {
+    "fact_id": "f_256",
+    "value": 2.6,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_c0efaf479af5"
+    },
+    "key": "sim.stops|mir_mir250|normal"
+  },
+  {
+    "fact_id": "f_257",
+    "value": 0.0225,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_c0efaf479af5"
+    },
+    "key": "sim.min_gap_m|mir_mir250|normal"
+  },
+  {
+    "fact_id": "f_258",
+    "value": 1.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (collision), MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_c0efaf479af5"
+    },
+    "key": "sim.fail|mir_mir250|normal|collision"
+  },
+  {
+    "fact_id": "f_259",
+    "value": 4.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (no path static), MiR MiR250, normal traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_c0efaf479af5"
+    },
+    "key": "sim.fail|mir_mir250|normal|no_path_static"
+  },
+  {
+    "fact_id": "f_260",
+    "value": 0.875,
+    "unit": "ratio",
+    "label": "Success rate, MiR MiR250, normal traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_413fb2a390ae"
+    },
+    "key": "sim.success|mir_mir250|normal|optimistic"
+  },
+  {
+    "fact_id": "f_261",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, MiR MiR250, normal traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_413fb2a390ae"
+    },
+    "key": "sim.n|mir_mir250|normal|optimistic"
+  },
+  {
+    "fact_id": "f_262",
+    "value": 0.875,
+    "unit": "ratio",
+    "label": "Success rate, MiR MiR250, peak traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d49f4d0bc2b6"
+    },
+    "key": "sim.success|mir_mir250|peak|conservative"
+  },
+  {
+    "fact_id": "f_263",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, MiR MiR250, peak traffic, conservative geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_d49f4d0bc2b6"
+    },
+    "key": "sim.n|mir_mir250|peak|conservative"
+  },
+  {
+    "fact_id": "f_264",
+    "value": 0.875,
+    "unit": "ratio",
+    "label": "Success rate, MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_9425af669c72"
+    },
+    "key": "sim.success|mir_mir250|peak|nominal"
+  },
+  {
+    "fact_id": "f_265",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_9425af669c72"
+    },
+    "key": "sim.n|mir_mir250|peak|nominal"
+  },
+  {
+    "fact_id": "f_266",
+    "value": 0.7388757932976187,
+    "unit": "ratio",
+    "label": "Success rate CI95 low, MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_9425af669c72"
+    },
+    "key": "sim.ci_lo|mir_mir250|peak"
+  },
+  {
+    "fact_id": "f_267",
+    "value": 0.9454058022645873,
+    "unit": "ratio",
+    "label": "Success rate CI95 high, MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_9425af669c72"
+    },
+    "key": "sim.ci_hi|mir_mir250|peak"
+  },
+  {
+    "fact_id": "f_268",
+    "value": 139.5,
+    "unit": "s",
+    "label": "Median mission time, MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_9425af669c72"
+    },
+    "key": "sim.mission_s|mir_mir250|peak"
+  },
+  {
+    "fact_id": "f_269",
+    "value": 4.875,
+    "unit": "per_mission",
+    "label": "Near-misses per mission, MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_9425af669c72"
+    },
+    "key": "sim.near_miss|mir_mir250|peak"
+  },
+  {
+    "fact_id": "f_270",
+    "value": 6.375,
+    "unit": "per_mission",
+    "label": "Safety stops per mission, MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_9425af669c72"
+    },
+    "key": "sim.stops|mir_mir250|peak"
+  },
+  {
+    "fact_id": "f_271",
+    "value": 0.0225,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap per episode, MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_9425af669c72"
+    },
+    "key": "sim.min_gap_m|mir_mir250|peak"
+  },
+  {
+    "fact_id": "f_272",
+    "value": 1.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (collision), MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_9425af669c72"
+    },
+    "key": "sim.fail|mir_mir250|peak|collision"
+  },
+  {
+    "fact_id": "f_273",
+    "value": 4.0,
+    "unit": "episodes",
+    "label": "Unsuccessful episodes (no path static), MiR MiR250, peak traffic, nominal geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_9425af669c72"
+    },
+    "key": "sim.fail|mir_mir250|peak|no_path_static"
+  },
+  {
+    "fact_id": "f_274",
+    "value": 0.875,
+    "unit": "ratio",
+    "label": "Success rate, MiR MiR250, peak traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_51a58e3d9cf6"
+    },
+    "key": "sim.success|mir_mir250|peak|optimistic"
+  },
+  {
+    "fact_id": "f_275",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes simulated, MiR MiR250, peak traffic, optimistic geometry (simulation-based estimate)",
+    "origin": {
+      "type": "sim_batch",
+      "ref": "sb_51a58e3d9cf6"
+    },
+    "key": "sim.n|mir_mir250|peak|optimistic"
+  },
+  {
+    "fact_id": "f_276",
+    "value": 0.875,
+    "unit": "ratio",
+    "label": "Automatable share of the task, MiR MiR250 (success rate x feasible leg fraction)",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:mir_mir250"
+    },
+    "key": "roi.share|mir_mir250"
+  },
+  {
+    "fact_id": "f_277",
+    "value": 1668.3333333333333,
+    "unit": "USD/month",
+    "label": "Monthly staff-time saving, MiR MiR250",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:mir_mir250"
+    },
+    "key": "roi.saving|mir_mir250"
+  },
+  {
+    "fact_id": "f_278",
+    "value": "enter a quote",
+    "unit": "",
+    "label": "Payback status, MiR MiR250",
+    "origin": {
+      "type": "formula",
+      "ref": "roi:mir_mir250"
+    },
+    "key": "roi.status|mir_mir250"
+  },
+  {
+    "fact_id": "f_279",
+    "value": "Not cleared",
+    "unit": "",
+    "label": "Verdict, MiR MiR250",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:mir_mir250"
+    },
+    "key": "verdict|mir_mir250"
+  },
+  {
+    "fact_id": "f_280",
+    "value": "success 88% at normal traffic (needs 90%)",
+    "unit": "",
+    "label": "Verdict main reason, MiR MiR250",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:mir_mir250"
+    },
+    "key": "verdict.reason|mir_mir250"
+  },
+  {
+    "fact_id": "f_281",
+    "value": 0.88,
+    "unit": "ratio",
+    "label": "Verdict main reason, MiR MiR250 (value 1)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:mir_mir250"
+    },
+    "key": "verdict.reason_num|mir_mir250|0"
+  },
+  {
+    "fact_id": "f_282",
+    "value": 0.9,
+    "unit": "ratio",
+    "label": "Verdict main reason, MiR MiR250 (value 2)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:mir_mir250"
+    },
+    "key": "verdict.reason_num|mir_mir250|1"
+  },
+  {
+    "fact_id": "f_283",
+    "value": 6.0,
+    "unit": "",
+    "label": "Verdict check value, MiR MiR250 (value 1)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:mir_mir250:as_is:0"
+    },
+    "key": "verdict.value_num|mir_mir250|as_is|0|0"
+  },
+  {
+    "fact_id": "f_284",
+    "value": 6.0,
+    "unit": "legs",
+    "label": "Verdict check value, MiR MiR250 (value 2)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:mir_mir250:as_is:0"
+    },
+    "key": "verdict.value_num|mir_mir250|as_is|0|1"
+  },
+  {
+    "fact_id": "f_285",
+    "value": 0.9,
+    "unit": "",
+    "label": "Verdict rule, MiR MiR250 (value 1)",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:mir_mir250:as_is:2"
+    },
+    "key": "verdict.rule_num|mir_mir250|as_is|2|0"
+  },
+  {
+    "fact_id": "f_286",
+    "value": 0.875,
+    "unit": "ratio",
+    "label": "Verdict check value (as-is), MiR MiR250",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:mir_mir250:as_is:2"
+    },
+    "key": "verdict.value|mir_mir250|as_is|2"
+  },
+  {
+    "fact_id": "f_287",
+    "value": 0.9,
+    "unit": "ratio",
+    "label": "Verdict rule threshold, MiR MiR250",
+    "origin": {
+      "type": "formula",
+      "ref": "verdict:mir_mir250:as_is:2"
+    },
+    "key": "verdict.threshold|mir_mir250|as_is|2"
   },
   {
     "fact_id": "f_288",
@@ -3625,7 +3625,7 @@
     "label": "Success rate, MiR MiR100, quiet traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_539ba4b20ade"
+      "ref": "sb_03df66d32580"
     },
     "key": "sim.success|mir_mir100|quiet|conservative"
   },
@@ -3636,7 +3636,7 @@
     "label": "Episodes simulated, MiR MiR100, quiet traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_539ba4b20ade"
+      "ref": "sb_03df66d32580"
     },
     "key": "sim.n|mir_mir100|quiet|conservative"
   },
@@ -3647,7 +3647,7 @@
     "label": "Success rate, MiR MiR100, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_03d73fe6bf9a"
+      "ref": "sb_66564fd490c1"
     },
     "key": "sim.success|mir_mir100|quiet|nominal"
   },
@@ -3658,7 +3658,7 @@
     "label": "Episodes simulated, MiR MiR100, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_03d73fe6bf9a"
+      "ref": "sb_66564fd490c1"
     },
     "key": "sim.n|mir_mir100|quiet|nominal"
   },
@@ -3669,7 +3669,7 @@
     "label": "Success rate CI95 low, MiR MiR100, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_03d73fe6bf9a"
+      "ref": "sb_66564fd490c1"
     },
     "key": "sim.ci_lo|mir_mir100|quiet"
   },
@@ -3680,7 +3680,7 @@
     "label": "Success rate CI95 high, MiR MiR100, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_03d73fe6bf9a"
+      "ref": "sb_66564fd490c1"
     },
     "key": "sim.ci_hi|mir_mir100|quiet"
   },
@@ -3691,7 +3691,7 @@
     "label": "Median mission time, MiR MiR100, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_03d73fe6bf9a"
+      "ref": "sb_66564fd490c1"
     },
     "key": "sim.mission_s|mir_mir100|quiet"
   },
@@ -3702,7 +3702,7 @@
     "label": "Near-misses per mission, MiR MiR100, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_03d73fe6bf9a"
+      "ref": "sb_66564fd490c1"
     },
     "key": "sim.near_miss|mir_mir100|quiet"
   },
@@ -3713,7 +3713,7 @@
     "label": "Safety stops per mission, MiR MiR100, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_03d73fe6bf9a"
+      "ref": "sb_66564fd490c1"
     },
     "key": "sim.stops|mir_mir100|quiet"
   },
@@ -3724,7 +3724,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, MiR MiR100, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_03d73fe6bf9a"
+      "ref": "sb_66564fd490c1"
     },
     "key": "sim.min_gap_m|mir_mir100|quiet"
   },
@@ -3735,7 +3735,7 @@
     "label": "Unsuccessful episodes (no path static), MiR MiR100, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_03d73fe6bf9a"
+      "ref": "sb_66564fd490c1"
     },
     "key": "sim.fail|mir_mir100|quiet|no_path_static"
   },
@@ -3746,7 +3746,7 @@
     "label": "Success rate, MiR MiR100, quiet traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a7c4b4c8f285"
+      "ref": "sb_605a9842767b"
     },
     "key": "sim.success|mir_mir100|quiet|optimistic"
   },
@@ -3757,7 +3757,7 @@
     "label": "Episodes simulated, MiR MiR100, quiet traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a7c4b4c8f285"
+      "ref": "sb_605a9842767b"
     },
     "key": "sim.n|mir_mir100|quiet|optimistic"
   },
@@ -3768,7 +3768,7 @@
     "label": "Success rate, MiR MiR100, normal traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_82a57c4f9f6d"
+      "ref": "sb_6d6729f9de89"
     },
     "key": "sim.success|mir_mir100|normal|conservative"
   },
@@ -3779,7 +3779,7 @@
     "label": "Episodes simulated, MiR MiR100, normal traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_82a57c4f9f6d"
+      "ref": "sb_6d6729f9de89"
     },
     "key": "sim.n|mir_mir100|normal|conservative"
   },
@@ -3790,7 +3790,7 @@
     "label": "Success rate, MiR MiR100, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_fc4853bd9207"
+      "ref": "sb_849435d8d9f3"
     },
     "key": "sim.success|mir_mir100|normal|nominal"
   },
@@ -3801,7 +3801,7 @@
     "label": "Episodes simulated, MiR MiR100, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_fc4853bd9207"
+      "ref": "sb_849435d8d9f3"
     },
     "key": "sim.n|mir_mir100|normal|nominal"
   },
@@ -3812,7 +3812,7 @@
     "label": "Success rate CI95 low, MiR MiR100, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_fc4853bd9207"
+      "ref": "sb_849435d8d9f3"
     },
     "key": "sim.ci_lo|mir_mir100|normal"
   },
@@ -3823,7 +3823,7 @@
     "label": "Success rate CI95 high, MiR MiR100, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_fc4853bd9207"
+      "ref": "sb_849435d8d9f3"
     },
     "key": "sim.ci_hi|mir_mir100|normal"
   },
@@ -3834,7 +3834,7 @@
     "label": "Median mission time, MiR MiR100, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_fc4853bd9207"
+      "ref": "sb_849435d8d9f3"
     },
     "key": "sim.mission_s|mir_mir100|normal"
   },
@@ -3845,7 +3845,7 @@
     "label": "Near-misses per mission, MiR MiR100, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_fc4853bd9207"
+      "ref": "sb_849435d8d9f3"
     },
     "key": "sim.near_miss|mir_mir100|normal"
   },
@@ -3856,7 +3856,7 @@
     "label": "Safety stops per mission, MiR MiR100, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_fc4853bd9207"
+      "ref": "sb_849435d8d9f3"
     },
     "key": "sim.stops|mir_mir100|normal"
   },
@@ -3867,7 +3867,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, MiR MiR100, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_fc4853bd9207"
+      "ref": "sb_849435d8d9f3"
     },
     "key": "sim.min_gap_m|mir_mir100|normal"
   },
@@ -3878,7 +3878,7 @@
     "label": "Unsuccessful episodes (no path static), MiR MiR100, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_fc4853bd9207"
+      "ref": "sb_849435d8d9f3"
     },
     "key": "sim.fail|mir_mir100|normal|no_path_static"
   },
@@ -3889,7 +3889,7 @@
     "label": "Success rate, MiR MiR100, normal traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_96f02e78896e"
+      "ref": "sb_c9e6d358e6f0"
     },
     "key": "sim.success|mir_mir100|normal|optimistic"
   },
@@ -3900,7 +3900,7 @@
     "label": "Episodes simulated, MiR MiR100, normal traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_96f02e78896e"
+      "ref": "sb_c9e6d358e6f0"
     },
     "key": "sim.n|mir_mir100|normal|optimistic"
   },
@@ -3911,7 +3911,7 @@
     "label": "Success rate, MiR MiR100, peak traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_63697ef211c7"
+      "ref": "sb_37cdbf0abde7"
     },
     "key": "sim.success|mir_mir100|peak|conservative"
   },
@@ -3922,7 +3922,7 @@
     "label": "Episodes simulated, MiR MiR100, peak traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_63697ef211c7"
+      "ref": "sb_37cdbf0abde7"
     },
     "key": "sim.n|mir_mir100|peak|conservative"
   },
@@ -3933,7 +3933,7 @@
     "label": "Success rate, MiR MiR100, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ccb6e9e6b36c"
+      "ref": "sb_cc0f521eeb77"
     },
     "key": "sim.success|mir_mir100|peak|nominal"
   },
@@ -3944,7 +3944,7 @@
     "label": "Episodes simulated, MiR MiR100, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ccb6e9e6b36c"
+      "ref": "sb_cc0f521eeb77"
     },
     "key": "sim.n|mir_mir100|peak|nominal"
   },
@@ -3955,7 +3955,7 @@
     "label": "Success rate CI95 low, MiR MiR100, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ccb6e9e6b36c"
+      "ref": "sb_cc0f521eeb77"
     },
     "key": "sim.ci_lo|mir_mir100|peak"
   },
@@ -3966,7 +3966,7 @@
     "label": "Success rate CI95 high, MiR MiR100, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ccb6e9e6b36c"
+      "ref": "sb_cc0f521eeb77"
     },
     "key": "sim.ci_hi|mir_mir100|peak"
   },
@@ -3977,7 +3977,7 @@
     "label": "Median mission time, MiR MiR100, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ccb6e9e6b36c"
+      "ref": "sb_cc0f521eeb77"
     },
     "key": "sim.mission_s|mir_mir100|peak"
   },
@@ -3988,7 +3988,7 @@
     "label": "Near-misses per mission, MiR MiR100, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ccb6e9e6b36c"
+      "ref": "sb_cc0f521eeb77"
     },
     "key": "sim.near_miss|mir_mir100|peak"
   },
@@ -3999,7 +3999,7 @@
     "label": "Safety stops per mission, MiR MiR100, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ccb6e9e6b36c"
+      "ref": "sb_cc0f521eeb77"
     },
     "key": "sim.stops|mir_mir100|peak"
   },
@@ -4010,7 +4010,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, MiR MiR100, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ccb6e9e6b36c"
+      "ref": "sb_cc0f521eeb77"
     },
     "key": "sim.min_gap_m|mir_mir100|peak"
   },
@@ -4021,7 +4021,7 @@
     "label": "Unsuccessful episodes (collision), MiR MiR100, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ccb6e9e6b36c"
+      "ref": "sb_cc0f521eeb77"
     },
     "key": "sim.fail|mir_mir100|peak|collision"
   },
@@ -4032,7 +4032,7 @@
     "label": "Unsuccessful episodes (no path static), MiR MiR100, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ccb6e9e6b36c"
+      "ref": "sb_cc0f521eeb77"
     },
     "key": "sim.fail|mir_mir100|peak|no_path_static"
   },
@@ -4043,7 +4043,7 @@
     "label": "Success rate, MiR MiR100, peak traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a88b8f4302ab"
+      "ref": "sb_1b2444254746"
     },
     "key": "sim.success|mir_mir100|peak|optimistic"
   },
@@ -4054,7 +4054,7 @@
     "label": "Episodes simulated, MiR MiR100, peak traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a88b8f4302ab"
+      "ref": "sb_1b2444254746"
     },
     "key": "sim.n|mir_mir100|peak|optimistic"
   },
@@ -4192,9 +4192,9 @@
   },
   {
     "fact_id": "f_iaf721_001",
-    "value": 0.875,
+    "value": 0.9,
     "unit": "ratio",
-    "label": "Success rate, mir_mir250, peak traffic, nominal geometry (sb_0b19d69ffc27)",
+    "label": "Success rate, mir_mir250, quiet traffic, optimistic geometry (sb_32365863145e)",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step1"
@@ -4203,9 +4203,9 @@
   },
   {
     "fact_id": "f_iaf721_002",
-    "value": 0.7389,
+    "value": 0.7695,
     "unit": "ratio",
-    "label": "Success rate 95% CI low, mir_mir250, peak traffic, nominal geometry (sb_0b19d69ffc27)",
+    "label": "Success rate 95% CI low, mir_mir250, quiet traffic, optimistic geometry (sb_32365863145e)",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step1"
@@ -4214,9 +4214,9 @@
   },
   {
     "fact_id": "f_iaf721_003",
-    "value": 0.9454,
+    "value": 0.9604,
     "unit": "ratio",
-    "label": "Success rate 95% CI high, mir_mir250, peak traffic, nominal geometry (sb_0b19d69ffc27)",
+    "label": "Success rate 95% CI high, mir_mir250, quiet traffic, optimistic geometry (sb_32365863145e)",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step1"
@@ -4227,7 +4227,7 @@
     "fact_id": "f_iaf721_004",
     "value": 40.0,
     "unit": "episodes",
-    "label": "Episodes, mir_mir250, peak traffic, nominal geometry (sb_0b19d69ffc27)",
+    "label": "Episodes, mir_mir250, quiet traffic, optimistic geometry (sb_32365863145e)",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step1"
@@ -4236,9 +4236,9 @@
   },
   {
     "fact_id": "f_iaf721_005",
-    "value": 139.5,
+    "value": 123.8,
     "unit": "s",
-    "label": "Median mission time, mir_mir250, peak traffic, nominal geometry",
+    "label": "Median mission time, mir_mir250, quiet traffic, optimistic geometry",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step1"
@@ -4249,7 +4249,7 @@
     "fact_id": "f_iaf721_006",
     "value": 0.0225,
     "unit": "m",
-    "label": "Median smallest robot-to-obstacle gap, mir_mir250, peak traffic, nominal geometry",
+    "label": "Median smallest robot-to-obstacle gap, mir_mir250, quiet traffic, optimistic geometry",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step1"
@@ -4258,9 +4258,9 @@
   },
   {
     "fact_id": "f_iaf721_007",
-    "value": 4.875,
+    "value": 0.575,
     "unit": "per mission",
-    "label": "Near-misses per mission, mir_mir250, peak traffic, nominal geometry",
+    "label": "Near-misses per mission, mir_mir250, quiet traffic, optimistic geometry",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step1"
@@ -4269,9 +4269,9 @@
   },
   {
     "fact_id": "f_iaf721_008",
-    "value": 6.375,
+    "value": 0.875,
     "unit": "per mission",
-    "label": "Safety stops per mission, mir_mir250, peak traffic, nominal geometry",
+    "label": "Safety stops per mission, mir_mir250, quiet traffic, optimistic geometry",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step1"
@@ -4280,9 +4280,9 @@
   },
   {
     "fact_id": "f_iaf721_009",
-    "value": 1.0,
+    "value": 4.0,
     "unit": "episodes",
-    "label": "Failures 'collision', mir_mir250, peak traffic, nominal geometry (sb_0b19d69ffc27)",
+    "label": "Failures 'no_path_static', mir_mir250, quiet traffic, optimistic geometry (sb_32365863145e)",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step1"
@@ -4291,20 +4291,20 @@
   },
   {
     "fact_id": "f_iaf721_010",
-    "value": 4.0,
-    "unit": "episodes",
-    "label": "Failures 'no_path_static', mir_mir250, peak traffic, nominal geometry (sb_0b19d69ffc27)",
+    "value": 0.1622,
+    "unit": "ratio",
+    "label": "Pinch Map spot #1: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
     "origin": {
       "type": "investigation",
-      "ref": "inv_af72142b9b#step1"
+      "ref": "inv_af72142b9b#step2"
     },
     "key": "inv|inv_af72142b9b|f_iaf721_010"
   },
   {
     "fact_id": "f_iaf721_011",
-    "value": 0.1622,
+    "value": 0.1288,
     "unit": "ratio",
-    "label": "Pinch Map spot #1: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
+    "label": "Pinch Map spot #2: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step2"
@@ -4313,9 +4313,9 @@
   },
   {
     "fact_id": "f_iaf721_012",
-    "value": 0.1288,
+    "value": 0.1263,
     "unit": "ratio",
-    "label": "Pinch Map spot #2: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
+    "label": "Pinch Map spot #3: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step2"
@@ -4324,9 +4324,9 @@
   },
   {
     "fact_id": "f_iaf721_013",
-    "value": 0.1263,
+    "value": 0.0769,
     "unit": "ratio",
-    "label": "Pinch Map spot #3: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
+    "label": "Pinch Map spot #4: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step2"
@@ -4335,9 +4335,9 @@
   },
   {
     "fact_id": "f_iaf721_014",
-    "value": 0.0769,
+    "value": 0.0753,
     "unit": "ratio",
-    "label": "Pinch Map spot #4: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
+    "label": "Pinch Map spot #5: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step2"
@@ -4346,9 +4346,9 @@
   },
   {
     "fact_id": "f_iaf721_015",
-    "value": 0.0753,
+    "value": 0.0746,
     "unit": "ratio",
-    "label": "Pinch Map spot #5: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
+    "label": "Pinch Map spot #6: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step2"
@@ -4357,9 +4357,9 @@
   },
   {
     "fact_id": "f_iaf721_016",
-    "value": 0.0746,
+    "value": 0.0538,
     "unit": "ratio",
-    "label": "Pinch Map spot #6: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
+    "label": "Pinch Map spot #7: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step2"
@@ -4368,9 +4368,9 @@
   },
   {
     "fact_id": "f_iaf721_017",
-    "value": 0.0538,
+    "value": 0.0513,
     "unit": "ratio",
-    "label": "Pinch Map spot #7: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
+    "label": "Pinch Map spot #8: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step2"
@@ -4379,20 +4379,20 @@
   },
   {
     "fact_id": "f_iaf721_018",
-    "value": 0.0513,
-    "unit": "ratio",
-    "label": "Pinch Map spot #8: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir250",
+    "value": 0.285,
+    "unit": "m",
+    "label": "Distance from (3.34, 1.69) to nearest obstacle (nominal grid)",
     "origin": {
       "type": "investigation",
-      "ref": "inv_af72142b9b#step2"
+      "ref": "inv_af72142b9b#step3"
     },
     "key": "inv|inv_af72142b9b|f_iaf721_018"
   },
   {
     "fact_id": "f_iaf721_019",
-    "value": 0.285,
+    "value": 0.5701,
     "unit": "m",
-    "label": "Distance from (3.34, 1.69) to nearest obstacle (nominal grid)",
+    "label": "Approximate free gap through (3.34, 1.69) (2 x nearest-obstacle distance, nominal grid)",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step3"
@@ -4401,9 +4401,9 @@
   },
   {
     "fact_id": "f_iaf721_020",
-    "value": 0.5701,
+    "value": 0.58,
     "unit": "m",
-    "label": "Approximate free gap through (3.34, 1.69) (2 x nearest-obstacle distance, nominal grid)",
+    "label": "Footprint width, mir_mir250",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step3"
@@ -4412,9 +4412,9 @@
   },
   {
     "fact_id": "f_iaf721_021",
-    "value": 0.58,
+    "value": -0.0099,
     "unit": "m",
-    "label": "Footprint width, mir_mir250",
+    "label": "Approximate gap minus robot width at (3.34, 1.69)",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step3"
@@ -4423,20 +4423,20 @@
   },
   {
     "fact_id": "f_iaf721_022",
-    "value": -0.0099,
+    "value": 0.2884,
     "unit": "m",
-    "label": "Approximate gap minus robot width at (3.34, 1.69)",
+    "label": "Distance from (3.34, 1.69) to the edge of object PALLET1 (pallet)",
     "origin": {
       "type": "investigation",
-      "ref": "inv_af72142b9b#step3"
+      "ref": "inv_af72142b9b#step4"
     },
     "key": "inv|inv_af72142b9b|f_iaf721_022"
   },
   {
     "fact_id": "f_iaf721_023",
-    "value": 0.535,
+    "value": 0.522,
     "unit": "m",
-    "label": "Distance from (1.69, 3.24) to nearest obstacle (nominal grid)",
+    "label": "Distance from (3.34, 1.69) to the edge of object SHELF_A (shelf)",
     "origin": {
       "type": "investigation",
       "ref": "inv_af72142b9b#step4"
@@ -4445,108 +4445,152 @@
   },
   {
     "fact_id": "f_iaf721_024",
-    "value": 1.07,
-    "unit": "m",
-    "label": "Approximate free gap through (1.69, 3.24) (2 x nearest-obstacle distance, nominal grid)",
+    "value": 0.9,
+    "unit": "ratio",
+    "label": "Probe sb_7c72dd6fafbe success rate ({\"density\": \"normal\", \"overrides\": {\"move\": {\"PALLET1\": {\"dx\": 0.5, \"dy\": -0.5, \"dyaw\": 0.0}}}, \"robot_id\": \"mir_mir250\"}, nominal geometry)",
     "origin": {
       "type": "investigation",
-      "ref": "inv_af72142b9b#step4"
+      "ref": "inv_af72142b9b#step6"
     },
     "key": "inv|inv_af72142b9b|f_iaf721_024"
   },
   {
     "fact_id": "f_iaf721_025",
-    "value": 0.58,
-    "unit": "m",
-    "label": "Footprint width, mir_mir250",
+    "value": 0.7438,
+    "unit": "ratio",
+    "label": "Probe sb_7c72dd6fafbe 95% CI low",
     "origin": {
       "type": "investigation",
-      "ref": "inv_af72142b9b#step4"
+      "ref": "inv_af72142b9b#step6"
     },
     "key": "inv|inv_af72142b9b|f_iaf721_025"
   },
   {
     "fact_id": "f_iaf721_026",
-    "value": 0.49,
-    "unit": "m",
-    "label": "Approximate gap minus robot width at (1.69, 3.24)",
+    "value": 0.9654,
+    "unit": "ratio",
+    "label": "Probe sb_7c72dd6fafbe 95% CI high",
     "origin": {
       "type": "investigation",
-      "ref": "inv_af72142b9b#step4"
+      "ref": "inv_af72142b9b#step6"
     },
     "key": "inv|inv_af72142b9b|f_iaf721_026"
   },
   {
     "fact_id": "f_iaf721_027",
-    "value": 0.45,
-    "unit": "m",
-    "label": "Distance from (0.76, 0.96) to nearest obstacle (nominal grid)",
+    "value": 30.0,
+    "unit": "episodes",
+    "label": "Probe sb_7c72dd6fafbe episodes",
     "origin": {
       "type": "investigation",
-      "ref": "inv_af72142b9b#step5"
+      "ref": "inv_af72142b9b#step6"
     },
     "key": "inv|inv_af72142b9b|f_iaf721_027"
   },
   {
     "fact_id": "f_iaf721_028",
-    "value": 0.9,
-    "unit": "m",
-    "label": "Approximate free gap through (0.76, 0.96) (2 x nearest-obstacle distance, nominal grid)",
+    "value": 0.875,
+    "unit": "ratio",
+    "label": "Baseline success rate for probe sb_7c72dd6fafbe (sb_c0efaf479af5, mir_mir250)",
     "origin": {
       "type": "investigation",
-      "ref": "inv_af72142b9b#step5"
+      "ref": "inv_af72142b9b#step6"
     },
     "key": "inv|inv_af72142b9b|f_iaf721_028"
   },
   {
     "fact_id": "f_iaf721_029",
-    "value": 0.58,
-    "unit": "m",
-    "label": "Footprint width, mir_mir250",
+    "value": 0.025,
+    "unit": "ratio",
+    "label": "Probe sb_7c72dd6fafbe success-rate change vs baseline",
     "origin": {
       "type": "investigation",
-      "ref": "inv_af72142b9b#step5"
+      "ref": "inv_af72142b9b#step6"
     },
     "key": "inv|inv_af72142b9b|f_iaf721_029"
   },
   {
     "fact_id": "f_iaf721_030",
-    "value": 0.32,
-    "unit": "m",
-    "label": "Approximate gap minus robot width at (0.76, 0.96)",
+    "value": 0.1108,
+    "unit": "ratio",
+    "label": "Probe sb_7c72dd6fafbe 95% CI half-width",
     "origin": {
       "type": "investigation",
-      "ref": "inv_af72142b9b#step5"
+      "ref": "inv_af72142b9b#step6"
     },
     "key": "inv|inv_af72142b9b|f_iaf721_030"
   },
   {
     "fact_id": "f_iaf721_031",
-    "value": 0.2884,
+    "value": 0.535,
     "unit": "m",
-    "label": "Distance from (3.34, 1.69) to the edge of object PALLET1 (pallet)",
+    "label": "Distance from (1.69, 3.24) to nearest obstacle (nominal grid)",
     "origin": {
       "type": "investigation",
-      "ref": "inv_af72142b9b#step6"
+      "ref": "inv_af72142b9b#step7"
     },
     "key": "inv|inv_af72142b9b|f_iaf721_031"
   },
   {
     "fact_id": "f_iaf721_032",
-    "value": 0.522,
+    "value": 1.07,
     "unit": "m",
-    "label": "Distance from (3.34, 1.69) to the edge of object SHELF_A (shelf)",
+    "label": "Approximate free gap through (1.69, 3.24) (2 x nearest-obstacle distance, nominal grid)",
     "origin": {
       "type": "investigation",
-      "ref": "inv_af72142b9b#step6"
+      "ref": "inv_af72142b9b#step7"
     },
     "key": "inv|inv_af72142b9b|f_iaf721_032"
+  },
+  {
+    "fact_id": "f_iaf721_033",
+    "value": 0.58,
+    "unit": "m",
+    "label": "Footprint width, mir_mir250",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_af72142b9b#step7"
+    },
+    "key": "inv|inv_af72142b9b|f_iaf721_033"
+  },
+  {
+    "fact_id": "f_iaf721_034",
+    "value": 0.49,
+    "unit": "m",
+    "label": "Approximate gap minus robot width at (1.69, 3.24)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_af72142b9b#step7"
+    },
+    "key": "inv|inv_af72142b9b|f_iaf721_034"
+  },
+  {
+    "fact_id": "f_iaf721_035",
+    "value": 0.5385,
+    "unit": "m",
+    "label": "Distance from (1.69, 3.24) to the edge of object SHELF_A (shelf)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_af72142b9b#step8"
+    },
+    "key": "inv|inv_af72142b9b|f_iaf721_035"
+  },
+  {
+    "fact_id": "f_iaf721_036",
+    "value": 0.8384,
+    "unit": "m",
+    "label": "Distance from (1.69, 3.24) to the edge of object SHELF_B (shelf)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_af72142b9b#step8"
+    },
+    "key": "inv|inv_af72142b9b|f_iaf721_036"
   },
   {
     "fact_id": "f_ifc10c_001",
     "value": 0.875,
     "unit": "ratio",
-    "label": "Success rate, mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+    "label": "Success rate, mir_mir100, quiet traffic, conservative geometry (sb_03df66d32580)",
     "origin": {
       "type": "investigation",
       "ref": "inv_fc10c27957#step1"
@@ -4557,7 +4601,7 @@
     "fact_id": "f_ifc10c_002",
     "value": 0.7389,
     "unit": "ratio",
-    "label": "Success rate 95% CI low, mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+    "label": "Success rate 95% CI low, mir_mir100, quiet traffic, conservative geometry (sb_03df66d32580)",
     "origin": {
       "type": "investigation",
       "ref": "inv_fc10c27957#step1"
@@ -4568,7 +4612,7 @@
     "fact_id": "f_ifc10c_003",
     "value": 0.9454,
     "unit": "ratio",
-    "label": "Success rate 95% CI high, mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+    "label": "Success rate 95% CI high, mir_mir100, quiet traffic, conservative geometry (sb_03df66d32580)",
     "origin": {
       "type": "investigation",
       "ref": "inv_fc10c27957#step1"
@@ -4579,7 +4623,7 @@
     "fact_id": "f_ifc10c_004",
     "value": 40.0,
     "unit": "episodes",
-    "label": "Episodes, mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+    "label": "Episodes, mir_mir100, quiet traffic, conservative geometry (sb_03df66d32580)",
     "origin": {
       "type": "investigation",
       "ref": "inv_fc10c27957#step1"
@@ -4590,7 +4634,7 @@
     "fact_id": "f_ifc10c_005",
     "value": 144.7,
     "unit": "s",
-    "label": "Median mission time, mir_mir100, quiet traffic, nominal geometry",
+    "label": "Median mission time, mir_mir100, quiet traffic, conservative geometry",
     "origin": {
       "type": "investigation",
       "ref": "inv_fc10c27957#step1"
@@ -4601,7 +4645,7 @@
     "fact_id": "f_ifc10c_006",
     "value": 0.0275,
     "unit": "m",
-    "label": "Median smallest robot-to-obstacle gap, mir_mir100, quiet traffic, nominal geometry",
+    "label": "Median smallest robot-to-obstacle gap, mir_mir100, quiet traffic, conservative geometry",
     "origin": {
       "type": "investigation",
       "ref": "inv_fc10c27957#step1"
@@ -4612,7 +4656,7 @@
     "fact_id": "f_ifc10c_007",
     "value": 0.75,
     "unit": "per mission",
-    "label": "Near-misses per mission, mir_mir100, quiet traffic, nominal geometry",
+    "label": "Near-misses per mission, mir_mir100, quiet traffic, conservative geometry",
     "origin": {
       "type": "investigation",
       "ref": "inv_fc10c27957#step1"
@@ -4623,7 +4667,7 @@
     "fact_id": "f_ifc10c_008",
     "value": 1.225,
     "unit": "per mission",
-    "label": "Safety stops per mission, mir_mir100, quiet traffic, nominal geometry",
+    "label": "Safety stops per mission, mir_mir100, quiet traffic, conservative geometry",
     "origin": {
       "type": "investigation",
       "ref": "inv_fc10c27957#step1"
@@ -4634,7 +4678,7 @@
     "fact_id": "f_ifc10c_009",
     "value": 5.0,
     "unit": "episodes",
-    "label": "Failures 'no_path_static', mir_mir100, quiet traffic, nominal geometry (sb_03d73fe6bf9a)",
+    "label": "Failures 'no_path_static', mir_mir100, quiet traffic, conservative geometry (sb_03df66d32580)",
     "origin": {
       "type": "investigation",
       "ref": "inv_fc10c27957#step1"
@@ -4643,9 +4687,9 @@
   },
   {
     "fact_id": "f_ifc10c_010",
-    "value": 0.2074,
+    "value": 0.825,
     "unit": "ratio",
-    "label": "Pinch Map spot #1: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+    "label": "Success rate, mir_mir100, peak traffic, optimistic geometry (sb_1b2444254746)",
     "origin": {
       "type": "investigation",
       "ref": "inv_fc10c27957#step2"
@@ -4654,9 +4698,9 @@
   },
   {
     "fact_id": "f_ifc10c_011",
-    "value": 0.1082,
+    "value": 0.6805,
     "unit": "ratio",
-    "label": "Pinch Map spot #2: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+    "label": "Success rate 95% CI low, mir_mir100, peak traffic, optimistic geometry (sb_1b2444254746)",
     "origin": {
       "type": "investigation",
       "ref": "inv_fc10c27957#step2"
@@ -4665,9 +4709,9 @@
   },
   {
     "fact_id": "f_ifc10c_012",
-    "value": 0.1015,
+    "value": 0.9125,
     "unit": "ratio",
-    "label": "Pinch Map spot #3: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+    "label": "Success rate 95% CI high, mir_mir100, peak traffic, optimistic geometry (sb_1b2444254746)",
     "origin": {
       "type": "investigation",
       "ref": "inv_fc10c27957#step2"
@@ -4676,9 +4720,9 @@
   },
   {
     "fact_id": "f_ifc10c_013",
-    "value": 0.0716,
-    "unit": "ratio",
-    "label": "Pinch Map spot #4: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes, mir_mir100, peak traffic, optimistic geometry (sb_1b2444254746)",
     "origin": {
       "type": "investigation",
       "ref": "inv_fc10c27957#step2"
@@ -4687,9 +4731,9 @@
   },
   {
     "fact_id": "f_ifc10c_014",
-    "value": 0.0509,
-    "unit": "ratio",
-    "label": "Pinch Map spot #5: share of accumulated stop/near-miss/blocked score within 0.5 m, mir_mir100",
+    "value": 161.5,
+    "unit": "s",
+    "label": "Median mission time, mir_mir100, peak traffic, optimistic geometry",
     "origin": {
       "type": "investigation",
       "ref": "inv_fc10c27957#step2"
@@ -4698,222 +4742,695 @@
   },
   {
     "fact_id": "f_ifc10c_015",
-    "value": 0.5506,
+    "value": 0.0275,
     "unit": "m",
-    "label": "Distance from (1.66, 3.59) to nearest obstacle (nominal grid)",
+    "label": "Median smallest robot-to-obstacle gap, mir_mir100, peak traffic, optimistic geometry",
     "origin": {
       "type": "investigation",
-      "ref": "inv_fc10c27957#step3"
+      "ref": "inv_fc10c27957#step2"
     },
     "key": "inv|inv_fc10c27957|f_ifc10c_015"
   },
   {
     "fact_id": "f_ifc10c_016",
-    "value": 1.1011,
-    "unit": "m",
-    "label": "Approximate free gap through (1.66, 3.59) (2 x nearest-obstacle distance, nominal grid)",
+    "value": 3.925,
+    "unit": "per mission",
+    "label": "Near-misses per mission, mir_mir100, peak traffic, optimistic geometry",
     "origin": {
       "type": "investigation",
-      "ref": "inv_fc10c27957#step3"
+      "ref": "inv_fc10c27957#step2"
     },
     "key": "inv|inv_fc10c27957|f_ifc10c_016"
   },
   {
     "fact_id": "f_ifc10c_017",
-    "value": 0.58,
-    "unit": "m",
-    "label": "Footprint width, mir_mir100",
+    "value": 7.1,
+    "unit": "per mission",
+    "label": "Safety stops per mission, mir_mir100, peak traffic, optimistic geometry",
     "origin": {
       "type": "investigation",
-      "ref": "inv_fc10c27957#step3"
+      "ref": "inv_fc10c27957#step2"
     },
     "key": "inv|inv_fc10c27957|f_ifc10c_017"
   },
   {
     "fact_id": "f_ifc10c_018",
-    "value": 0.5211,
-    "unit": "m",
-    "label": "Approximate gap minus robot width at (1.66, 3.59)",
+    "value": 2.0,
+    "unit": "episodes",
+    "label": "Failures 'collision', mir_mir100, peak traffic, optimistic geometry (sb_1b2444254746)",
     "origin": {
       "type": "investigation",
-      "ref": "inv_fc10c27957#step3"
+      "ref": "inv_fc10c27957#step2"
     },
     "key": "inv|inv_fc10c27957|f_ifc10c_018"
   },
   {
     "fact_id": "f_ifc10c_019",
-    "value": 0.5495,
-    "unit": "m",
-    "label": "Distance from (1.66, 3.59) to the edge of object SHELF_B (shelf)",
+    "value": 5.0,
+    "unit": "episodes",
+    "label": "Failures 'no_path_static', mir_mir100, peak traffic, optimistic geometry (sb_1b2444254746)",
     "origin": {
       "type": "investigation",
-      "ref": "inv_fc10c27957#step4"
+      "ref": "inv_fc10c27957#step2"
     },
     "key": "inv|inv_fc10c27957|f_ifc10c_019"
   },
   {
     "fact_id": "f_ifc10c_020",
-    "value": 0.8538,
-    "unit": "m",
-    "label": "Distance from (1.66, 3.59) to the edge of object SHELF_A (shelf)",
+    "value": 0.825,
+    "unit": "ratio",
+    "label": "Success rate, mir_mir100, peak traffic, conservative geometry (sb_37cdbf0abde7)",
     "origin": {
       "type": "investigation",
-      "ref": "inv_fc10c27957#step4"
+      "ref": "inv_fc10c27957#step3"
     },
     "key": "inv|inv_fc10c27957|f_ifc10c_020"
   },
   {
     "fact_id": "f_ifc10c_021",
-    "value": 1.8557,
-    "unit": "m",
-    "label": "Distance from (1.66, 3.59) to the edge of object SHELF_C (shelf)",
+    "value": 0.6805,
+    "unit": "ratio",
+    "label": "Success rate 95% CI low, mir_mir100, peak traffic, conservative geometry (sb_37cdbf0abde7)",
     "origin": {
       "type": "investigation",
-      "ref": "inv_fc10c27957#step4"
+      "ref": "inv_fc10c27957#step3"
     },
     "key": "inv|inv_fc10c27957|f_ifc10c_021"
   },
   {
     "fact_id": "f_ifc10c_022",
-    "value": 0.3905,
-    "unit": "m",
-    "label": "Distance from (3.11, 1.66) to nearest obstacle (nominal grid)",
+    "value": 0.9125,
+    "unit": "ratio",
+    "label": "Success rate 95% CI high, mir_mir100, peak traffic, conservative geometry (sb_37cdbf0abde7)",
     "origin": {
       "type": "investigation",
-      "ref": "inv_fc10c27957#step5"
+      "ref": "inv_fc10c27957#step3"
     },
     "key": "inv|inv_fc10c27957|f_ifc10c_022"
   },
   {
     "fact_id": "f_ifc10c_023",
-    "value": 0.781,
-    "unit": "m",
-    "label": "Approximate free gap through (3.11, 1.66) (2 x nearest-obstacle distance, nominal grid)",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes, mir_mir100, peak traffic, conservative geometry (sb_37cdbf0abde7)",
     "origin": {
       "type": "investigation",
-      "ref": "inv_fc10c27957#step5"
+      "ref": "inv_fc10c27957#step3"
     },
     "key": "inv|inv_fc10c27957|f_ifc10c_023"
   },
   {
     "fact_id": "f_ifc10c_024",
-    "value": 0.58,
-    "unit": "m",
-    "label": "Footprint width, mir_mir100",
+    "value": 161.5,
+    "unit": "s",
+    "label": "Median mission time, mir_mir100, peak traffic, conservative geometry",
     "origin": {
       "type": "investigation",
-      "ref": "inv_fc10c27957#step5"
+      "ref": "inv_fc10c27957#step3"
     },
     "key": "inv|inv_fc10c27957|f_ifc10c_024"
   },
   {
     "fact_id": "f_ifc10c_025",
-    "value": 0.201,
+    "value": 0.0275,
     "unit": "m",
-    "label": "Approximate gap minus robot width at (3.11, 1.66)",
+    "label": "Median smallest robot-to-obstacle gap, mir_mir100, peak traffic, conservative geometry",
     "origin": {
       "type": "investigation",
-      "ref": "inv_fc10c27957#step5"
+      "ref": "inv_fc10c27957#step3"
     },
     "key": "inv|inv_fc10c27957|f_ifc10c_025"
   },
   {
     "fact_id": "f_ifc10c_026",
-    "value": 0.3938,
-    "unit": "m",
-    "label": "Distance from (3.11, 1.66) to the edge of object PALLET1 (pallet)",
+    "value": 3.925,
+    "unit": "per mission",
+    "label": "Near-misses per mission, mir_mir100, peak traffic, conservative geometry",
     "origin": {
       "type": "investigation",
-      "ref": "inv_fc10c27957#step6"
+      "ref": "inv_fc10c27957#step3"
     },
     "key": "inv|inv_fc10c27957|f_ifc10c_026"
   },
   {
     "fact_id": "f_ifc10c_027",
-    "value": 0.547,
-    "unit": "m",
-    "label": "Distance from (3.11, 1.66) to the edge of object SHELF_A (shelf)",
+    "value": 7.1,
+    "unit": "per mission",
+    "label": "Safety stops per mission, mir_mir100, peak traffic, conservative geometry",
     "origin": {
       "type": "investigation",
-      "ref": "inv_fc10c27957#step6"
+      "ref": "inv_fc10c27957#step3"
     },
     "key": "inv|inv_fc10c27957|f_ifc10c_027"
   },
   {
     "fact_id": "f_ifc10c_028",
-    "value": 1.0296,
-    "unit": "m",
-    "label": "Distance from (1.11, 1.71) to nearest obstacle (nominal grid)",
+    "value": 2.0,
+    "unit": "episodes",
+    "label": "Failures 'collision', mir_mir100, peak traffic, conservative geometry (sb_37cdbf0abde7)",
     "origin": {
       "type": "investigation",
-      "ref": "inv_fc10c27957#step7"
+      "ref": "inv_fc10c27957#step3"
     },
     "key": "inv|inv_fc10c27957|f_ifc10c_028"
   },
   {
     "fact_id": "f_ifc10c_029",
-    "value": 2.0591,
-    "unit": "m",
-    "label": "Approximate free gap through (1.11, 1.71) (2 x nearest-obstacle distance, nominal grid)",
+    "value": 5.0,
+    "unit": "episodes",
+    "label": "Failures 'no_path_static', mir_mir100, peak traffic, conservative geometry (sb_37cdbf0abde7)",
     "origin": {
       "type": "investigation",
-      "ref": "inv_fc10c27957#step7"
+      "ref": "inv_fc10c27957#step3"
     },
     "key": "inv|inv_fc10c27957|f_ifc10c_029"
   },
   {
     "fact_id": "f_ifc10c_030",
-    "value": 0.58,
-    "unit": "m",
-    "label": "Footprint width, mir_mir100",
+    "value": 0.875,
+    "unit": "ratio",
+    "label": "Success rate, mir_mir100, quiet traffic, optimistic geometry (sb_605a9842767b)",
     "origin": {
       "type": "investigation",
-      "ref": "inv_fc10c27957#step7"
+      "ref": "inv_fc10c27957#step4"
     },
     "key": "inv|inv_fc10c27957|f_ifc10c_030"
   },
   {
     "fact_id": "f_ifc10c_031",
-    "value": 1.4791,
-    "unit": "m",
-    "label": "Approximate gap minus robot width at (1.11, 1.71)",
+    "value": 0.7389,
+    "unit": "ratio",
+    "label": "Success rate 95% CI low, mir_mir100, quiet traffic, optimistic geometry (sb_605a9842767b)",
     "origin": {
       "type": "investigation",
-      "ref": "inv_fc10c27957#step7"
+      "ref": "inv_fc10c27957#step4"
     },
     "key": "inv|inv_fc10c27957|f_ifc10c_031"
   },
   {
     "fact_id": "f_ifc10c_032",
-    "value": 5.0,
-    "unit": "events",
-    "label": "'fail' events in sb_03d73fe6bf9a",
+    "value": 0.9454,
+    "unit": "ratio",
+    "label": "Success rate 95% CI high, mir_mir100, quiet traffic, optimistic geometry (sb_605a9842767b)",
     "origin": {
       "type": "investigation",
-      "ref": "inv_fc10c27957#step8"
+      "ref": "inv_fc10c27957#step4"
     },
     "key": "inv|inv_fc10c27957|f_ifc10c_032"
   },
   {
     "fact_id": "f_ifc10c_033",
-    "value": 5.0,
+    "value": 40.0,
     "unit": "episodes",
-    "label": "Episodes with a 'fail' event, sb_03d73fe6bf9a",
+    "label": "Episodes, mir_mir100, quiet traffic, optimistic geometry (sb_605a9842767b)",
     "origin": {
       "type": "investigation",
-      "ref": "inv_fc10c27957#step8"
+      "ref": "inv_fc10c27957#step4"
     },
     "key": "inv|inv_fc10c27957|f_ifc10c_033"
   },
   {
     "fact_id": "f_ifc10c_034",
-    "value": 0.125,
+    "value": 144.7,
+    "unit": "s",
+    "label": "Median mission time, mir_mir100, quiet traffic, optimistic geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step4"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_034"
+  },
+  {
+    "fact_id": "f_ifc10c_035",
+    "value": 0.0275,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap, mir_mir100, quiet traffic, optimistic geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step4"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_035"
+  },
+  {
+    "fact_id": "f_ifc10c_036",
+    "value": 0.75,
     "unit": "per mission",
-    "label": "'fail' events per mission, sb_03d73fe6bf9a",
+    "label": "Near-misses per mission, mir_mir100, quiet traffic, optimistic geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step4"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_036"
+  },
+  {
+    "fact_id": "f_ifc10c_037",
+    "value": 1.225,
+    "unit": "per mission",
+    "label": "Safety stops per mission, mir_mir100, quiet traffic, optimistic geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step4"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_037"
+  },
+  {
+    "fact_id": "f_ifc10c_038",
+    "value": 5.0,
+    "unit": "episodes",
+    "label": "Failures 'no_path_static', mir_mir100, quiet traffic, optimistic geometry (sb_605a9842767b)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step4"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_038"
+  },
+  {
+    "fact_id": "f_ifc10c_039",
+    "value": 0.875,
+    "unit": "ratio",
+    "label": "Success rate, mir_mir100, quiet traffic, nominal geometry (sb_66564fd490c1)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step5"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_039"
+  },
+  {
+    "fact_id": "f_ifc10c_040",
+    "value": 0.7389,
+    "unit": "ratio",
+    "label": "Success rate 95% CI low, mir_mir100, quiet traffic, nominal geometry (sb_66564fd490c1)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step5"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_040"
+  },
+  {
+    "fact_id": "f_ifc10c_041",
+    "value": 0.9454,
+    "unit": "ratio",
+    "label": "Success rate 95% CI high, mir_mir100, quiet traffic, nominal geometry (sb_66564fd490c1)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step5"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_041"
+  },
+  {
+    "fact_id": "f_ifc10c_042",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes, mir_mir100, quiet traffic, nominal geometry (sb_66564fd490c1)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step5"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_042"
+  },
+  {
+    "fact_id": "f_ifc10c_043",
+    "value": 144.7,
+    "unit": "s",
+    "label": "Median mission time, mir_mir100, quiet traffic, nominal geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step5"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_043"
+  },
+  {
+    "fact_id": "f_ifc10c_044",
+    "value": 0.0275,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap, mir_mir100, quiet traffic, nominal geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step5"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_044"
+  },
+  {
+    "fact_id": "f_ifc10c_045",
+    "value": 0.75,
+    "unit": "per mission",
+    "label": "Near-misses per mission, mir_mir100, quiet traffic, nominal geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step5"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_045"
+  },
+  {
+    "fact_id": "f_ifc10c_046",
+    "value": 1.225,
+    "unit": "per mission",
+    "label": "Safety stops per mission, mir_mir100, quiet traffic, nominal geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step5"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_046"
+  },
+  {
+    "fact_id": "f_ifc10c_047",
+    "value": 5.0,
+    "unit": "episodes",
+    "label": "Failures 'no_path_static', mir_mir100, quiet traffic, nominal geometry (sb_66564fd490c1)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step5"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_047"
+  },
+  {
+    "fact_id": "f_ifc10c_048",
+    "value": 0.875,
+    "unit": "ratio",
+    "label": "Success rate, mir_mir100, normal traffic, conservative geometry (sb_6d6729f9de89)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step6"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_048"
+  },
+  {
+    "fact_id": "f_ifc10c_049",
+    "value": 0.7389,
+    "unit": "ratio",
+    "label": "Success rate 95% CI low, mir_mir100, normal traffic, conservative geometry (sb_6d6729f9de89)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step6"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_049"
+  },
+  {
+    "fact_id": "f_ifc10c_050",
+    "value": 0.9454,
+    "unit": "ratio",
+    "label": "Success rate 95% CI high, mir_mir100, normal traffic, conservative geometry (sb_6d6729f9de89)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step6"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_050"
+  },
+  {
+    "fact_id": "f_ifc10c_051",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes, mir_mir100, normal traffic, conservative geometry (sb_6d6729f9de89)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step6"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_051"
+  },
+  {
+    "fact_id": "f_ifc10c_052",
+    "value": 151.9,
+    "unit": "s",
+    "label": "Median mission time, mir_mir100, normal traffic, conservative geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step6"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_052"
+  },
+  {
+    "fact_id": "f_ifc10c_053",
+    "value": 0.0275,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap, mir_mir100, normal traffic, conservative geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step6"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_053"
+  },
+  {
+    "fact_id": "f_ifc10c_054",
+    "value": 1.75,
+    "unit": "per mission",
+    "label": "Near-misses per mission, mir_mir100, normal traffic, conservative geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step6"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_054"
+  },
+  {
+    "fact_id": "f_ifc10c_055",
+    "value": 2.925,
+    "unit": "per mission",
+    "label": "Safety stops per mission, mir_mir100, normal traffic, conservative geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step6"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_055"
+  },
+  {
+    "fact_id": "f_ifc10c_056",
+    "value": 5.0,
+    "unit": "episodes",
+    "label": "Failures 'no_path_static', mir_mir100, normal traffic, conservative geometry (sb_6d6729f9de89)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step6"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_056"
+  },
+  {
+    "fact_id": "f_ifc10c_057",
+    "value": 0.875,
+    "unit": "ratio",
+    "label": "Success rate, mir_mir100, normal traffic, nominal geometry (sb_849435d8d9f3)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step7"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_057"
+  },
+  {
+    "fact_id": "f_ifc10c_058",
+    "value": 0.7389,
+    "unit": "ratio",
+    "label": "Success rate 95% CI low, mir_mir100, normal traffic, nominal geometry (sb_849435d8d9f3)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step7"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_058"
+  },
+  {
+    "fact_id": "f_ifc10c_059",
+    "value": 0.9454,
+    "unit": "ratio",
+    "label": "Success rate 95% CI high, mir_mir100, normal traffic, nominal geometry (sb_849435d8d9f3)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step7"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_059"
+  },
+  {
+    "fact_id": "f_ifc10c_060",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes, mir_mir100, normal traffic, nominal geometry (sb_849435d8d9f3)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step7"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_060"
+  },
+  {
+    "fact_id": "f_ifc10c_061",
+    "value": 151.9,
+    "unit": "s",
+    "label": "Median mission time, mir_mir100, normal traffic, nominal geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step7"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_061"
+  },
+  {
+    "fact_id": "f_ifc10c_062",
+    "value": 0.0275,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap, mir_mir100, normal traffic, nominal geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step7"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_062"
+  },
+  {
+    "fact_id": "f_ifc10c_063",
+    "value": 1.75,
+    "unit": "per mission",
+    "label": "Near-misses per mission, mir_mir100, normal traffic, nominal geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step7"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_063"
+  },
+  {
+    "fact_id": "f_ifc10c_064",
+    "value": 2.925,
+    "unit": "per mission",
+    "label": "Safety stops per mission, mir_mir100, normal traffic, nominal geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step7"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_064"
+  },
+  {
+    "fact_id": "f_ifc10c_065",
+    "value": 5.0,
+    "unit": "episodes",
+    "label": "Failures 'no_path_static', mir_mir100, normal traffic, nominal geometry (sb_849435d8d9f3)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step7"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_065"
+  },
+  {
+    "fact_id": "f_ifc10c_066",
+    "value": 0.875,
+    "unit": "ratio",
+    "label": "Success rate, mir_mir100, normal traffic, optimistic geometry (sb_c9e6d358e6f0)",
     "origin": {
       "type": "investigation",
       "ref": "inv_fc10c27957#step8"
     },
-    "key": "inv|inv_fc10c27957|f_ifc10c_034"
+    "key": "inv|inv_fc10c27957|f_ifc10c_066"
+  },
+  {
+    "fact_id": "f_ifc10c_067",
+    "value": 0.7389,
+    "unit": "ratio",
+    "label": "Success rate 95% CI low, mir_mir100, normal traffic, optimistic geometry (sb_c9e6d358e6f0)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step8"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_067"
+  },
+  {
+    "fact_id": "f_ifc10c_068",
+    "value": 0.9454,
+    "unit": "ratio",
+    "label": "Success rate 95% CI high, mir_mir100, normal traffic, optimistic geometry (sb_c9e6d358e6f0)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step8"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_068"
+  },
+  {
+    "fact_id": "f_ifc10c_069",
+    "value": 40.0,
+    "unit": "episodes",
+    "label": "Episodes, mir_mir100, normal traffic, optimistic geometry (sb_c9e6d358e6f0)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step8"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_069"
+  },
+  {
+    "fact_id": "f_ifc10c_070",
+    "value": 151.9,
+    "unit": "s",
+    "label": "Median mission time, mir_mir100, normal traffic, optimistic geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step8"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_070"
+  },
+  {
+    "fact_id": "f_ifc10c_071",
+    "value": 0.0275,
+    "unit": "m",
+    "label": "Median smallest robot-to-obstacle gap, mir_mir100, normal traffic, optimistic geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step8"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_071"
+  },
+  {
+    "fact_id": "f_ifc10c_072",
+    "value": 1.75,
+    "unit": "per mission",
+    "label": "Near-misses per mission, mir_mir100, normal traffic, optimistic geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step8"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_072"
+  },
+  {
+    "fact_id": "f_ifc10c_073",
+    "value": 2.925,
+    "unit": "per mission",
+    "label": "Safety stops per mission, mir_mir100, normal traffic, optimistic geometry",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step8"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_073"
+  },
+  {
+    "fact_id": "f_ifc10c_074",
+    "value": 5.0,
+    "unit": "episodes",
+    "label": "Failures 'no_path_static', mir_mir100, normal traffic, optimistic geometry (sb_c9e6d358e6f0)",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_fc10c27957#step8"
+    },
+    "key": "inv|inv_fc10c27957|f_ifc10c_074"
+  },
+  {
+    "fact_id": "f_382",
+    "value": 0.5,
+    "unit": "m",
+    "label": "Experiment ex_iaf721_01 setting move.PALLET1.dx, MiR MiR250",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_af72142b9b:ex_iaf721_01:sb_7c72dd6fafbe"
+    },
+    "key": "exp.param|inv_af72142b9b|ex_iaf721_01|move.PALLET1.dx"
+  },
+  {
+    "fact_id": "f_383",
+    "value": -0.5,
+    "unit": "m",
+    "label": "Experiment ex_iaf721_01 setting move.PALLET1.dy, MiR MiR250",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_af72142b9b:ex_iaf721_01:sb_7c72dd6fafbe"
+    },
+    "key": "exp.param|inv_af72142b9b|ex_iaf721_01|move.PALLET1.dy"
+  },
+  {
+    "fact_id": "f_384",
+    "value": 0.0,
+    "unit": "deg",
+    "label": "Experiment ex_iaf721_01 setting move.PALLET1.dyaw, MiR MiR250",
+    "origin": {
+      "type": "investigation",
+      "ref": "inv_af72142b9b:ex_iaf721_01:sb_7c72dd6fafbe"
+    },
+    "key": "exp.param|inv_af72142b9b|ex_iaf721_01|move.PALLET1.dyaw"
   }
 ]

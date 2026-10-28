@@ -4,16 +4,19 @@
   "analysis_id": "an_ref_cafe_01",
   "sections": {
     "summary": {
-      "llm_calls": 1,
-      "first_pass_errors": 0,
-      "regenerated": false,
-      "errors_after_regeneration": null,
+      "llm_calls": 2,
+      "first_pass_errors": 1,
+      "regenerated": true,
+      "errors_after_regeneration": 0,
       "sentences_removed": 0,
       "fallback": null,
       "allowed_facts": 24,
-      "tokens_out": 3792,
-      "errors_first_pass_types": [],
-      "wall_s": 62.3
+      "tokens_out": 4191,
+      "first_pass_words": 129,
+      "errors_first_pass_types": [
+        "unit_mismatch"
+      ],
+      "wall_s": 13.1
     },
     "why|keenon_dinerbot_t8": {
       "llm_calls": 2,
@@ -23,11 +26,12 @@
       "sentences_removed": 0,
       "fallback": null,
       "allowed_facts": 33,
-      "tokens_out": 9113,
+      "tokens_out": 3520,
+      "first_pass_words": 110,
       "errors_first_pass_types": [
         "value_mismatch"
       ],
-      "wall_s": 226.1
+      "wall_s": 11.8
     },
     "why|bear_servi": {
       "llm_calls": 1,
@@ -37,9 +41,10 @@
       "sentences_removed": 0,
       "fallback": null,
       "allowed_facts": 28,
-      "tokens_out": 2506,
+      "tokens_out": 1567,
+      "first_pass_words": 83,
       "errors_first_pass_types": [],
-      "wall_s": 70.4
+      "wall_s": 5.2
     },
     "why|keenon_w3": {
       "llm_calls": 1,
@@ -48,10 +53,11 @@
       "errors_after_regeneration": null,
       "sentences_removed": 0,
       "fallback": null,
-      "allowed_facts": 28,
-      "tokens_out": 2130,
+      "allowed_facts": 37,
+      "tokens_out": 2787,
+      "first_pass_words": 101,
       "errors_first_pass_types": [],
-      "wall_s": 34.6
+      "wall_s": 8.3
     },
     "why|keenon_dinerbot_t9": {
       "llm_calls": 1,
@@ -60,10 +66,11 @@
       "errors_after_regeneration": null,
       "sentences_removed": 0,
       "fallback": null,
-      "allowed_facts": 37,
-      "tokens_out": 1689,
+      "allowed_facts": 28,
+      "tokens_out": 1579,
+      "first_pass_words": 107,
       "errors_first_pass_types": [],
-      "wall_s": 28.8
+      "wall_s": 5.2
     },
     "investigation": {
       "llm_calls": 1,
@@ -72,10 +79,11 @@
       "errors_after_regeneration": null,
       "sentences_removed": 0,
       "fallback": null,
-      "allowed_facts": 10,
-      "tokens_out": 1023,
+      "allowed_facts": 27,
+      "tokens_out": 2201,
+      "first_pass_words": 176,
       "errors_first_pass_types": [],
-      "wall_s": 15.3
+      "wall_s": 6.2
     },
     "tradeoffs": {
       "llm_calls": 2,
@@ -85,18 +93,19 @@
       "sentences_removed": 0,
       "fallback": null,
       "allowed_facts": 34,
-      "tokens_out": 3757,
+      "tokens_out": 5529,
+      "first_pass_words": 170,
       "errors_first_pass_types": [
         "value_mismatch"
       ],
-      "wall_s": 163.4
+      "wall_s": 13.5
     }
   },
   "totals": {
     "sections": 7,
-    "llm_calls": 9,
-    "first_pass_errors": 2,
-    "regenerations": 2,
+    "llm_calls": 10,
+    "first_pass_errors": 3,
+    "regenerations": 3,
     "sentences_removed": 0,
     "fallbacks": []
   },
@@ -111,5 +120,5 @@
     "how_we_investigated": true,
     "sources": true
   },
-  "wall_s": 227.0
+  "wall_s": 25.0
 }

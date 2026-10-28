@@ -1081,6 +1081,10 @@ def _run_section(spec: NarrativeSpec, c: _Ctx, call: Callable[[list[dict], Narra
     if not text:
         m["fallback"] = "every sentence failed the fact check"
         return spec.fallback
+    if len(text.split()) > 2 * spec.max_words or len(out["removed"]) > 3:
+        # an answer far over budget, or one the fact check had to cut apart, is not section prose
+        m["fallback"] = "answer did not fit the section"
+        return spec.fallback
     return text
 
 

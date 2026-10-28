@@ -1,0 +1,904 @@
+{
+  "investigation_id": "inv_7dc179ad84",
+  "analysis_id": "an_ref_cafe_01",
+  "model_id": "nvidia/Nemotron-3.5-Super-VL",
+  "mode": "live",
+  "steps": [
+    {
+      "i": 1,
+      "thought": "I'll start by observing the batch summaries to understand the robot's performance.",
+      "tool": "get_batch_summary",
+      "args": {
+        "batch_id": "sb_00854aa9c707"
+      },
+      "result_summary": {
+        "ok": true,
+        "robot_id": "keenon_w3",
+        "batches": [
+          {
+            "batch_id": "sb_00854aa9c707",
+            "density": "normal",
+            "bound": "optimistic",
+            "success_rate": {
+              "value": 0.75,
+              "unit": "ratio",
+              "fact_id": "f_i7dc17_001"
+            },
+            "ci95_low": {
+              "value": 0.5981,
+              "unit": "ratio",
+              "fact_id": "f_i7dc17_002"
+            },
+            "ci95_high": {
+              "value": 0.8581,
+              "unit": "ratio",
+              "fact_id": "f_i7dc17_003"
+            },
+            "n_episodes": {
+              "value": 40,
+              "unit": "episodes",
+              "fact_id": "f_i7dc17_004"
+            },
+            "median_mission_s": {
+              "value": 109.8,
+              "unit": "s",
+              "fact_id": "f_i7dc17_005"
+            },
+            "min_gap_m": {
+              "value": 0.0166,
+              "unit": "m",
+              "fact_id": "f_i7dc17_006"
+            },
+            "near_miss_per_mission": {
+              "value": 1.15,
+              "unit": "per mission",
+              "fact_id": "f_i7dc17_007"
+            },
+            "stops_per_mission": {
+              "value": 2.575,
+              "unit": "per mission",
+              "fact_id": "f_i7dc17_008"
+            },
+            "fail_reasons": {
+              "no_path_static": {
+                "value": 10,
+                "unit": "episodes",
+                "fact_id": "f_i7dc17_009"
+              }
+            }
+          }
+        ]
+      },
+      "fact_ids": [
+        "f_i7dc17_001",
+        "f_i7dc17_002",
+        "f_i7dc17_003",
+        "f_i7dc17_004",
+        "f_i7dc17_005",
+        "f_i7dc17_006",
+        "f_i7dc17_007",
+        "f_i7dc17_008",
+        "f_i7dc17_009"
+      ]
+    },
+    {
+      "i": 2,
+      "thought": "Let me check the Pinch Map to find where the robot is getting stuck.",
+      "tool": "get_bottlenecks",
+      "args": {
+        "top_k": 10
+      },
+      "result_summary": {
+        "ok": true,
+        "bottlenecks": [
+          {
+            "rank": 1,
+            "xy": [
+              0.463,
+              2.663
+            ],
+            "share_of_total": {
+              "value": 0.391,
+              "unit": "ratio",
+              "fact_id": "f_i7dc17_010"
+            },
+            "nearby_object_ids": [
+              "CH4W",
+              "TABLE4",
+              "CH1W",
+              "TABLE1",
+              "DOCKSTN"
+            ],
+            "nearby_zone_ids": [
+              "seating"
+            ],
+            "examined": false
+          },
+          {
+            "rank": 2,
+            "xy": [
+              1.488,
+              2.263
+            ],
+            "share_of_total": {
+              "value": 0.1724,
+              "unit": "ratio",
+              "fact_id": "f_i7dc17_011"
+            },
+            "nearby_object_ids": [
+              "TABLE4",
+              "TABLE1",
+              "CH4W",
+              "CH4E",
+              "CH1W",
+              "CH1E",
+              "CH5W",
+              "CH2W"
+            ],
+            "nearby_zone_ids": [
+              "seating",
+              "entrance"
+            ],
+            "examined": false
+          },
+          {
+            "rank": 3,
+            "xy": [
+              0.763,
+              3.737
+            ],
+            "share_of_total": {
+              "value": 0.1247,
+              "unit": "ratio",
+              "fact_id": "f_i7dc17_012"
+            },
+            "nearby_object_ids": [
+              "DOCKSTN",
+              "CH4W",
+              "TABLE4",
+              "PLANT1",
+              "CH4E"
+            ],
+            "nearby_zone_ids": [
+              "seating"
+            ],
+            "examined": false
+          },
+          {
+            "rank": 4,
+            "xy": [
+              6.838,
+              2.438
+            ],
+            "share_of_total": {
+              "value": 0.0963,
+              "unit": "ratio",
+              "fact_id": "f_i7dc17_013"
+            },
+            "nearby_object_ids": [
+              "CH6E",
+              "TABLE6",
+              "CH3E",
+              "TABLE3"
+            ],
+            "nearby_zone_ids": [
+              "seating",
+              "kitchen"
+            ],
+            "examined": false
+          }
+        ],
+        "batches_used": [
+          "sb_1b4bd2da3dc2",
+          "sb_2ce25c65f4f4",
+          "sb_63ba7afea424"
+        ],
+        "threshold_share": 0.05
+      },
+      "fact_ids": [
+        "f_i7dc17_010",
+        "f_i7dc17_011",
+        "f_i7dc17_012",
+        "f_i7dc17_013"
+      ]
+    },
+    {
+      "i": 3,
+      "thought": "The top bottleneck is at [[n?], [n?]] with 39.1% of total stop/near-miss time. Let me check the gap there versus the robot width.",
+      "tool": "get_gap_at",
+      "args": {
+        "xy": [
+          0.463,
+          2.663
+        ]
+      },
+      "result_summary": {
+        "ok": true,
+        "xy": [
+          0.463,
+          2.663
+        ],
+        "in_obstacle": false,
+        "nearest_obstacle_m": {
+          "value": 0.2915,
+          "unit": "m",
+          "fact_id": "f_i7dc17_014"
+        },
+        "gap_m": {
+          "value": 0.5831,
+          "unit": "m",
+          "fact_id": "f_i7dc17_015"
+        },
+        "robot_width_m": {
+          "value": 0.459,
+          "unit": "m",
+          "fact_id": "f_i7dc17_016"
+        },
+        "gap_margin_m": {
+          "value": 0.1241,
+          "unit": "m",
+          "fact_id": "f_i7dc17_017"
+        }
+      },
+      "fact_ids": [
+        "f_i7dc17_014",
+        "f_i7dc17_015",
+        "f_i7dc17_016",
+        "f_i7dc17_017"
+      ]
+    },
+    {
+      "i": 4,
+      "thought": "The gap is 0.5831m vs robot width 0.459m \u2014 a tight margin of only 0.1241m. Let me see what objects are near this bottleneck point.",
+      "tool": "get_objects_near",
+      "args": {
+        "xy": [
+          0.463,
+          2.663
+        ],
+        "r": 1.5
+      },
+      "result_summary": {
+        "ok": true,
+        "xy": [
+          0.463,
+          2.663
+        ],
+        "r": 1.5,
+        "objects": [
+          {
+            "id": "CH4W",
+            "label": "chair",
+            "movable": true,
+            "fragile": false,
+            "center_xy": [
+              0.942,
+              3.042
+            ],
+            "distance_m": {
+              "value": 0.2994,
+              "unit": "m",
+              "fact_id": "f_i7dc17_018"
+            },
+            "confidence": 1.0
+          },
+          {
+            "id": "TABLE4",
+            "label": "table",
+            "movable": true,
+            "fragile": false,
+            "center_xy": [
+              1.622,
+              3.003
+            ],
+            "distance_m": {
+              "value": 0.7838,
+              "unit": "m",
+              "fact_id": "f_i7dc17_019"
+            },
+            "confidence": 1.0
+          },
+          {
+            "id": "CH1W",
+            "label": "chair",
+            "movable": true,
+            "fragile": false,
+            "center_xy": [
+              1.039,
+              1.258
+            ],
+            "distance_m": {
+              "value": 1.2395,
+              "unit": "m",
+              "fact_id": "f_i7dc17_020"
+            },
+            "confidence": 1.0
+          },
+          {
+            "id": "TABLE1",
+            "label": "table",
+            "movable": true,
+            "fragile": false,
+            "center_xy": [
+              1.623,
+              1.296
+            ],
+            "distance_m": {
+              "value": 1.2649,
+              "unit": "m",
+              "fact_id": "f_i7dc17_021"
+            },
+            "confidence": 1.0
+          },
+          {
+            "id": "DOCKSTN",
+            "label": "dock",
+            "movable": false,
+            "fragile": false,
+            "center_xy": [
+              0.19,
+              4.185
+            ],
+            "distance_m": {
+              "value": 1.3007,
+              "unit": "m",
+              "fact_id": "f_i7dc17_022"
+            },
+            "confidence": 1.0
+          }
+        ],
+        "zone_ids": [
+          "seating"
+        ]
+      },
+      "fact_ids": [
+        "f_i7dc17_018",
+        "f_i7dc17_019",
+        "f_i7dc17_020",
+        "f_i7dc17_021",
+        "f_i7dc17_022"
+      ]
+    },
+    {
+      "i": 5,
+      "thought": "The bottleneck at [0.463, [n?]] accounts for 39.1% of all stop/near-miss time. The gap there is only 0.5831m vs the robot's 0.459m width (margin 0.1241m). The nearest movable object is chair CH4W at [[n?], [n?]], just 0.2994m from the bottleneck point. \n\n**Hypothesis:** CH4W is encroaching on the path, narrowing the gap and causing stops/near-misses. Moving it away should widen the gap and raise success.\n\nLet me run a probe moving CH4W away from the bottleneck.",
+      "tool": "run_probe",
+      "args": {
+        "hypothesis": "Moving chair CH4W away from the bottleneck at [0.463, 2.663] widens the narrow gap (0.5831m vs 0.459m robot width), reducing stops/near-misses and raising success rate.",
+        "overrides": {
+          "move": {
+            "CH4W": {
+              "dx": 0.6,
+              "dy": 0.5,
+              "dyaw": 0
+            }
+          }
+        },
+        "n_episodes": 30
+      },
+      "result_summary": {
+        "ok": false,
+        "error": "numbers ['0.463', '2.663', '0.5831', '0.459'] are not values of the cited facts; every number must come from a cited tool fact"
+      },
+      "fact_ids": []
+    },
+    {
+      "i": 6,
+      "thought": "I need to cite the numbers in my hypothesis. Let me rewrite with proper citations.",
+      "tool": "run_probe",
+      "args": {
+        "hypothesis": "Moving chair CH4W away from the top bottleneck widens the narrow gap (gap 0.5831m [f_i7dc17_015] vs robot width 0.459m [f_i7dc17_016] at [0.463, 2.663] [f_i7dc17_010]), reducing stops/near-misses and raising success rate (currently 0.75 [f_i7dc17_001]).",
+        "overrides": {
+          "move": {
+            "CH4W": {
+              "dx": 0.6,
+              "dy": 0.5,
+              "dyaw": 0
+            }
+          }
+        },
+        "n_episodes": 30
+      },
+      "result_summary": {
+        "ok": false,
+        "error": "numbers ['2.663'] are not values of the cited facts; every number must come from a cited tool fact"
+      },
+      "fact_ids": []
+    },
+    {
+      "i": 7,
+      "thought": "Let me avoid the coordinates (which don't have separate fact IDs) and focus on the measured values.",
+      "tool": "run_probe",
+      "args": {
+        "hypothesis": "Moving chair CH4W away from the top bottleneck widens the narrow gap (gap 0.5831m [f_i7dc17_015] vs robot width 0.459m [f_i7dc17_016]), reducing stops/near-misses and raising success rate (currently 0.75 [f_i7dc17_001]).",
+        "overrides": {
+          "move": {
+            "CH4W": {
+              "dx": 0.6,
+              "dy": 0.5,
+              "dyaw": 0
+            }
+          }
+        },
+        "n_episodes": 30
+      },
+      "result_summary": {
+        "ok": true,
+        "probe_id": "sb_2fe17c062b68",
+        "overrides": {
+          "move": {
+            "CH4W": {
+              "dx": 0.6,
+              "dy": 0.5,
+              "dyaw": 0.0
+            }
+          }
+        },
+        "density": "normal",
+        "robot_id": "keenon_w3",
+        "baseline_ref": "sb_2ce25c65f4f4",
+        "ran_baseline_probe": false,
+        "success_rate": {
+          "value": 1.0,
+          "unit": "ratio",
+          "fact_id": "f_i7dc17_023"
+        },
+        "ci95_low": {
+          "value": 0.8865,
+          "unit": "ratio",
+          "fact_id": "f_i7dc17_024"
+        },
+        "ci95_high": {
+          "value": 1.0,
+          "unit": "ratio",
+          "fact_id": "f_i7dc17_025"
+        },
+        "n_episodes": {
+          "value": 30,
+          "unit": "episodes",
+          "fact_id": "f_i7dc17_026"
+        },
+        "baseline_success_rate": {
+          "value": 0.7,
+          "unit": "ratio",
+          "fact_id": "f_i7dc17_027"
+        },
+        "improvement": {
+          "value": 0.3,
+          "unit": "ratio",
+          "fact_id": "f_i7dc17_028"
+        },
+        "ci_half_width": {
+          "value": 0.0568,
+          "unit": "ratio",
+          "fact_id": "f_i7dc17_029"
+        },
+        "experiment_id": "ex_i7dc17_01",
+        "kind": "move_object",
+        "outcome": "supported",
+        "improved_beyond_ci": true,
+        "experiments_left": 5
+      },
+      "fact_ids": [
+        "f_i7dc17_023",
+        "f_i7dc17_024",
+        "f_i7dc17_025",
+        "f_i7dc17_026",
+        "f_i7dc17_027",
+        "f_i7dc17_028",
+        "f_i7dc17_029"
+      ]
+    },
+    {
+      "i": 8,
+      "thought": "The experiment confirms the hypothesis. Moving CH4W raised success from 0.7 [f_i7dc17_027] to 1.0 [f_i7dc17_023], an improvement of 0.3 [f_i7dc17_028] which far exceeds the CI half-width of 0.0568 [f_i7dc17_029]. The outcome is \"supported\" with `improved_beyond_ci: true`.\n\nLet me record this finding.",
+      "tool": "record_finding",
+      "args": {
+        "claim": "Chair CH4W encroaches on the top bottleneck (39.1% of stop/near-miss time [f_i7dc17_010]), where the gap is only 0.5831m [f_i7dc17_015] vs the robot's 0.459m width [f_i7dc17_016]. Moving CH4W away from this point raised success from 0.7 [f_i7dc17_027] to 1.0 [f_i7dc17_023], an improvement of 0.3 [f_i7dc17_028] exceeding the CI half-width of 0.0568 [f_i7dc17_029].",
+        "evidence_fact_ids": [
+          "f_i7dc17_010",
+          "f_i7dc17_015",
+          "f_i7dc17_016",
+          "f_i7dc17_027",
+          "f_i7dc17_023",
+          "f_i7dc17_028",
+          "f_i7dc17_029"
+        ],
+        "object_ids": [
+          "CH4W"
+        ],
+        "suggested_change": {
+          "object_id": "CH4W",
+          "dx": 0.6,
+          "dy": 0.5,
+          "dyaw": 0
+        },
+        "location_xy": [
+          0.463,
+          2.663
+        ],
+        "experiment_id": "ex_i7dc17_01"
+      },
+      "result_summary": {
+        "ok": true,
+        "finding_id": "fd_i7dc17_01",
+        "confirmed_by_probe": true,
+        "probe_id": "sb_2fe17c062b68",
+        "experiment_id": "ex_i7dc17_01",
+        "evidence_fact_ids": [
+          "f_i7dc17_010",
+          "f_i7dc17_015",
+          "f_i7dc17_016",
+          "f_i7dc17_027",
+          "f_i7dc17_023",
+          "f_i7dc17_028",
+          "f_i7dc17_029"
+        ]
+      },
+      "fact_ids": []
+    }
+  ],
+  "experiments": [
+    {
+      "experiment_id": "ex_i7dc17_01",
+      "robot_id": "keenon_w3",
+      "hypothesis": "Moving chair CH4W away from the top bottleneck widens the narrow gap (gap 0.5831m [f_i7dc17_015] vs robot width 0.459m [f_i7dc17_016]), reducing stops/near-misses and raising success rate (currently 0.75 [f_i7dc17_001]).",
+      "kind": "move_object",
+      "change": {
+        "move": {
+          "CH4W": {
+            "dx": 0.6,
+            "dy": 0.5,
+            "dyaw": 0.0
+          }
+        },
+        "density": "normal"
+      },
+      "batch_id": "sb_2fe17c062b68",
+      "baseline_fact_ids": [
+        "f_i7dc17_027"
+      ],
+      "result_fact_ids": [
+        "f_i7dc17_023",
+        "f_i7dc17_024",
+        "f_i7dc17_025",
+        "f_i7dc17_026",
+        "f_i7dc17_028",
+        "f_i7dc17_029"
+      ],
+      "outcome": "supported",
+      "next_action": "conclude",
+      "conclusion": "Chair CH4W encroaches on the top bottleneck (39.1% of stop/near-miss time [f_i7dc17_010]), where the gap is only 0.5831m [f_i7dc17_015] vs the robot's 0.459m width [f_i7dc17_016]. Moving CH4W away from this point raised success from 0.7 [f_i7dc17_027] to 1.0 [f_i7dc17_023], an improvement of 0.3 [f_i7dc17_028] exceeding the CI half-width of 0.0568 [f_i7dc17_029]."
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "fd_i7dc17_01",
+      "robot_id": "keenon_w3",
+      "claim": "Chair CH4W encroaches on the top bottleneck (39.1% of stop/near-miss time [f_i7dc17_010]), where the gap is only 0.5831m [f_i7dc17_015] vs the robot's 0.459m width [f_i7dc17_016]. Moving CH4W away from this point raised success from 0.7 [f_i7dc17_027] to 1.0 [f_i7dc17_023], an improvement of 0.3 [f_i7dc17_028] exceeding the CI half-width of 0.0568 [f_i7dc17_029].",
+      "evidence_fact_ids": [
+        "f_i7dc17_010",
+        "f_i7dc17_015",
+        "f_i7dc17_016",
+        "f_i7dc17_027",
+        "f_i7dc17_023",
+        "f_i7dc17_028",
+        "f_i7dc17_029"
+      ],
+      "location_xy": [
+        0.463,
+        2.663
+      ],
+      "object_ids": [
+        "CH4W"
+      ],
+      "confirmed_by_probe": true,
+      "suggested_change": {
+        "move": {
+          "CH4W": {
+            "dx": 0.6,
+            "dy": 0.5,
+            "dyaw": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "f_i7dc17_001",
+      "value": 0.75,
+      "unit": "ratio",
+      "label": "Success rate, keenon_w3, normal traffic, optimistic geometry (sb_00854aa9c707)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step1"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_002",
+      "value": 0.5981,
+      "unit": "ratio",
+      "label": "Success rate 95% CI low, keenon_w3, normal traffic, optimistic geometry (sb_00854aa9c707)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step1"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_003",
+      "value": 0.8581,
+      "unit": "ratio",
+      "label": "Success rate 95% CI high, keenon_w3, normal traffic, optimistic geometry (sb_00854aa9c707)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step1"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_004",
+      "value": 40.0,
+      "unit": "episodes",
+      "label": "Episodes, keenon_w3, normal traffic, optimistic geometry (sb_00854aa9c707)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step1"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_005",
+      "value": 109.8,
+      "unit": "s",
+      "label": "Median mission time, keenon_w3, normal traffic, optimistic geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step1"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_006",
+      "value": 0.0166,
+      "unit": "m",
+      "label": "Median smallest robot-to-obstacle gap, keenon_w3, normal traffic, optimistic geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step1"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_007",
+      "value": 1.15,
+      "unit": "per mission",
+      "label": "Near-misses per mission, keenon_w3, normal traffic, optimistic geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step1"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_008",
+      "value": 2.575,
+      "unit": "per mission",
+      "label": "Safety stops per mission, keenon_w3, normal traffic, optimistic geometry",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step1"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_009",
+      "value": 10.0,
+      "unit": "episodes",
+      "label": "Failures 'no_path_static', keenon_w3, normal traffic, optimistic geometry (sb_00854aa9c707)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step1"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_010",
+      "value": 0.391,
+      "unit": "ratio",
+      "label": "Pinch Map spot #1: share of accumulated stop/near-miss/blocked score within 0.5 m, keenon_w3",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step2"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_011",
+      "value": 0.1724,
+      "unit": "ratio",
+      "label": "Pinch Map spot #2: share of accumulated stop/near-miss/blocked score within 0.5 m, keenon_w3",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step2"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_012",
+      "value": 0.1247,
+      "unit": "ratio",
+      "label": "Pinch Map spot #3: share of accumulated stop/near-miss/blocked score within 0.5 m, keenon_w3",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step2"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_013",
+      "value": 0.0963,
+      "unit": "ratio",
+      "label": "Pinch Map spot #4: share of accumulated stop/near-miss/blocked score within 0.5 m, keenon_w3",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step2"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_014",
+      "value": 0.2915,
+      "unit": "m",
+      "label": "Distance from (0.46, 2.66) to nearest obstacle (nominal grid)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step3"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_015",
+      "value": 0.5831,
+      "unit": "m",
+      "label": "Approximate free gap through (0.46, 2.66) (2 x nearest-obstacle distance, nominal grid)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step3"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_016",
+      "value": 0.459,
+      "unit": "m",
+      "label": "Footprint width, keenon_w3",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step3"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_017",
+      "value": 0.1241,
+      "unit": "m",
+      "label": "Approximate gap minus robot width at (0.46, 2.66)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step3"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_018",
+      "value": 0.2994,
+      "unit": "m",
+      "label": "Distance from (0.46, 2.66) to the edge of object CH4W (chair)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step4"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_019",
+      "value": 0.7838,
+      "unit": "m",
+      "label": "Distance from (0.46, 2.66) to the edge of object TABLE4 (table)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step4"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_020",
+      "value": 1.2395,
+      "unit": "m",
+      "label": "Distance from (0.46, 2.66) to the edge of object CH1W (chair)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step4"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_021",
+      "value": 1.2649,
+      "unit": "m",
+      "label": "Distance from (0.46, 2.66) to the edge of object TABLE1 (table)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step4"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_022",
+      "value": 1.3007,
+      "unit": "m",
+      "label": "Distance from (0.46, 2.66) to the edge of object DOCKSTN (dock)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step4"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_023",
+      "value": 1.0,
+      "unit": "ratio",
+      "label": "Probe sb_2fe17c062b68 success rate ({\"density\": \"normal\", \"overrides\": {\"move\": {\"CH4W\": {\"dx\": 0.6, \"dy\": 0.5, \"dyaw\": 0.0}}}, \"robot_id\": \"keenon_w3\"}, nominal geometry)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step7"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_024",
+      "value": 0.8865,
+      "unit": "ratio",
+      "label": "Probe sb_2fe17c062b68 95% CI low",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step7"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_025",
+      "value": 1.0,
+      "unit": "ratio",
+      "label": "Probe sb_2fe17c062b68 95% CI high",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step7"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_026",
+      "value": 30.0,
+      "unit": "episodes",
+      "label": "Probe sb_2fe17c062b68 episodes",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step7"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_027",
+      "value": 0.7,
+      "unit": "ratio",
+      "label": "Baseline success rate for probe sb_2fe17c062b68 (sb_2ce25c65f4f4, keenon_w3)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step7"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_028",
+      "value": 0.3,
+      "unit": "ratio",
+      "label": "Probe sb_2fe17c062b68 success-rate change vs baseline",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step7"
+      }
+    },
+    {
+      "fact_id": "f_i7dc17_029",
+      "value": 0.0568,
+      "unit": "ratio",
+      "label": "Probe sb_2fe17c062b68 95% CI half-width",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_7dc179ad84#step7"
+      }
+    }
+  ],
+  "stop_reason": "max_steps",
+  "robot_id": "keenon_w3",
+  "policy": "llm",
+  "sim_runs": 1,
+  "sim_source": "jobs.sim.api"
+}

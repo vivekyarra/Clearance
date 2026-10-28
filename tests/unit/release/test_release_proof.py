@@ -285,7 +285,7 @@ def test_cost_not_metered_when_price_unknown(tmp_path):
         ("nvidia/super-a", "token_factory", "super", 1000, 500, 2.0, 0.0003, None, "live", True)])
     md = rp.write_proof(db, [], config=cfg)
     assert "| nvidia/nano-a | token_factory | 1 | 0 | 100 | 50 | 1.000 | not metered |" in md
-    assert "0.0003 (price VERIFY)" in md and "0.0000 (price VERIFY)" not in md
+    assert "0.0003 (list-price estimate)" in md and "0.0000 (list-price estimate)" not in md
     assert "0.0003 USD for the metered rows" in md
     only = make_db(tmp_path / "o.db", [("nvidia/nano-a", "token_factory", "nano", 100, 50, 1.0, 0.0, None, "live", True)])
     assert "cost not metered." in rp.write_proof(only, [], config=cfg)

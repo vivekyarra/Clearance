@@ -1,7 +1,7 @@
 {
   "investigation_id": "inv_79f1d1adda",
   "analysis_id": "an_ref_cafe_01",
-  "model_id": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+  "model_id": "nvidia/Nemotron-3.5-Super-VL",
   "mode": "live",
   "steps": [
     {
@@ -9,41 +9,28 @@
       "thought": "",
       "tool": "get_batch_summary",
       "args": {
-        "batch_id": "sb_663a4ebd9d8"
-      },
-      "result_summary": {
-        "ok": false,
-        "error": "unknown batch_id 'sb_663a4ebd9d8'; known: ['sb_663a4ebd9d98', 'sb_7ac2d8341045', 'sb_827ac98ffe28', 'sb_8c51cf1c3e6e', 'sb_a6d97fff8d54', 'sb_a9f1db9cdd23', 'sb_d792ff9bac89', 'sb_de0cdafad0af', 'sb_f2a4f4e48ab2']"
-      },
-      "fact_ids": []
-    },
-    {
-      "i": 2,
-      "thought": "",
-      "tool": "get_batch_summary",
-      "args": {
-        "batch_id": "sb_663a4ebd9d98"
+        "batch_id": "sb_0892c7fd6e53"
       },
       "result_summary": {
         "ok": true,
         "robot_id": "bear_servi",
         "batches": [
           {
-            "batch_id": "sb_663a4ebd9d98",
-            "density": "normal",
+            "batch_id": "sb_0892c7fd6e53",
+            "density": "peak",
             "bound": "optimistic",
             "success_rate": {
-              "value": 0.95,
+              "value": 0.875,
               "unit": "ratio",
               "fact_id": "f_i79f1d_001"
             },
             "ci95_low": {
-              "value": 0.835,
+              "value": 0.7389,
               "unit": "ratio",
               "fact_id": "f_i79f1d_002"
             },
             "ci95_high": {
-              "value": 0.9862,
+              "value": 0.9454,
               "unit": "ratio",
               "fact_id": "f_i79f1d_003"
             },
@@ -53,30 +40,35 @@
               "fact_id": "f_i79f1d_004"
             },
             "median_mission_s": {
-              "value": 101.95,
+              "value": 119.9,
               "unit": "s",
               "fact_id": "f_i79f1d_005"
             },
             "min_gap_m": {
-              "value": 0.0293,
+              "value": 0.03,
               "unit": "m",
               "fact_id": "f_i79f1d_006"
             },
             "near_miss_per_mission": {
-              "value": 1.775,
+              "value": 3.45,
               "unit": "per mission",
               "fact_id": "f_i79f1d_007"
             },
             "stops_per_mission": {
-              "value": 3.875,
+              "value": 6.65,
               "unit": "per mission",
               "fact_id": "f_i79f1d_008"
             },
             "fail_reasons": {
+              "collision": {
+                "value": 3,
+                "unit": "episodes",
+                "fact_id": "f_i79f1d_009"
+              },
               "no_path_static": {
                 "value": 2,
                 "unit": "episodes",
-                "fact_id": "f_i79f1d_009"
+                "fact_id": "f_i79f1d_010"
               }
             }
           }
@@ -91,88 +83,12 @@
         "f_i79f1d_006",
         "f_i79f1d_007",
         "f_i79f1d_008",
-        "f_i79f1d_009"
+        "f_i79f1d_009",
+        "f_i79f1d_010"
       ]
     },
     {
-      "i": 3,
-      "thought": "",
-      "tool": "get_batch_summary",
-      "args": {
-        "batch_id": "sb_7ac2d8341045"
-      },
-      "result_summary": {
-        "ok": true,
-        "robot_id": "bear_servi",
-        "batches": [
-          {
-            "batch_id": "sb_7ac2d8341045",
-            "density": "peak",
-            "bound": "nominal",
-            "success_rate": {
-              "value": 0.75,
-              "unit": "ratio",
-              "fact_id": "f_i79f1d_010"
-            },
-            "ci95_low": {
-              "value": 0.5981,
-              "unit": "ratio",
-              "fact_id": "f_i79f1d_011"
-            },
-            "ci95_high": {
-              "value": 0.8581,
-              "unit": "ratio",
-              "fact_id": "f_i79f1d_012"
-            },
-            "n_episodes": {
-              "value": 40,
-              "unit": "episodes",
-              "fact_id": "f_i79f1d_013"
-            },
-            "median_mission_s": {
-              "value": 115.15,
-              "unit": "s",
-              "fact_id": "f_i79f1d_014"
-            },
-            "min_gap_m": {
-              "value": 0.035,
-              "unit": "m",
-              "fact_id": "f_i79f1d_015"
-            },
-            "near_miss_per_mission": {
-              "value": 2.775,
-              "unit": "per mission",
-              "fact_id": "f_i79f1d_016"
-            },
-            "stops_per_mission": {
-              "value": 5.5,
-              "unit": "per mission",
-              "fact_id": "f_i79f1d_017"
-            },
-            "fail_reasons": {
-              "no_path_static": {
-                "value": 10,
-                "unit": "episodes",
-                "fact_id": "f_i79f1d_018"
-              }
-            }
-          }
-        ]
-      },
-      "fact_ids": [
-        "f_i79f1d_010",
-        "f_i79f1d_011",
-        "f_i79f1d_012",
-        "f_i79f1d_013",
-        "f_i79f1d_014",
-        "f_i79f1d_015",
-        "f_i79f1d_016",
-        "f_i79f1d_017",
-        "f_i79f1d_018"
-      ]
-    },
-    {
-      "i": 4,
+      "i": 2,
       "thought": "",
       "tool": "get_bottlenecks",
       "args": {
@@ -190,7 +106,7 @@
             "share_of_total": {
               "value": 0.4411,
               "unit": "ratio",
-              "fact_id": "f_i79f1d_019"
+              "fact_id": "f_i79f1d_011"
             },
             "nearby_object_ids": [
               "CH4W",
@@ -213,7 +129,7 @@
             "share_of_total": {
               "value": 0.1569,
               "unit": "ratio",
-              "fact_id": "f_i79f1d_020"
+              "fact_id": "f_i79f1d_012"
             },
             "nearby_object_ids": [
               "DOCKSTN",
@@ -235,7 +151,7 @@
             "share_of_total": {
               "value": 0.1232,
               "unit": "ratio",
-              "fact_id": "f_i79f1d_021"
+              "fact_id": "f_i79f1d_013"
             },
             "nearby_object_ids": [
               "TABLE4",
@@ -262,7 +178,7 @@
             "share_of_total": {
               "value": 0.0575,
               "unit": "ratio",
-              "fact_id": "f_i79f1d_022"
+              "fact_id": "f_i79f1d_014"
             },
             "nearby_object_ids": [
               "KITCHEN_PASS",
@@ -284,7 +200,7 @@
             "share_of_total": {
               "value": 0.0557,
               "unit": "ratio",
-              "fact_id": "f_i79f1d_023"
+              "fact_id": "f_i79f1d_015"
             },
             "nearby_object_ids": [
               "CH6E",
@@ -300,22 +216,22 @@
           }
         ],
         "batches_used": [
-          "sb_7ac2d8341045",
-          "sb_d792ff9bac89",
-          "sb_de0cdafad0af"
+          "sb_16a6142633b2",
+          "sb_6cd106692d29",
+          "sb_7ba654db295d"
         ],
         "threshold_share": 0.05
       },
       "fact_ids": [
-        "f_i79f1d_019",
-        "f_i79f1d_020",
-        "f_i79f1d_021",
-        "f_i79f1d_022",
-        "f_i79f1d_023"
+        "f_i79f1d_011",
+        "f_i79f1d_012",
+        "f_i79f1d_013",
+        "f_i79f1d_014",
+        "f_i79f1d_015"
       ]
     },
     {
-      "i": 5,
+      "i": 3,
       "thought": "",
       "tool": "get_gap_at",
       "args": {
@@ -334,437 +250,597 @@
         "nearest_obstacle_m": {
           "value": 0.3288,
           "unit": "m",
-          "fact_id": "f_i79f1d_024"
+          "fact_id": "f_i79f1d_016"
         },
         "gap_m": {
           "value": 0.6576,
           "unit": "m",
-          "fact_id": "f_i79f1d_025"
+          "fact_id": "f_i79f1d_017"
         },
         "robot_width_m": {
           "value": 0.445,
           "unit": "m",
-          "fact_id": "f_i79f1d_026"
+          "fact_id": "f_i79f1d_018"
         },
         "gap_margin_m": {
           "value": 0.2126,
           "unit": "m",
-          "fact_id": "f_i79f1d_027"
+          "fact_id": "f_i79f1d_019"
         }
       },
       "fact_ids": [
-        "f_i79f1d_024",
-        "f_i79f1d_025",
-        "f_i79f1d_026",
-        "f_i79f1d_027"
+        "f_i79f1d_016",
+        "f_i79f1d_017",
+        "f_i79f1d_018",
+        "f_i79f1d_019"
       ]
     },
     {
-      "i": 6,
+      "i": 4,
       "thought": "",
-      "tool": "get_gap_at",
+      "tool": "get_objects_near",
       "args": {
         "xy": [
-          0.588,
-          3.788
-        ]
+          0.663,
+          2.488
+        ],
+        "r": 2
       },
       "result_summary": {
         "ok": true,
         "xy": [
-          0.588,
-          3.788
+          0.663,
+          2.488
         ],
-        "in_obstacle": false,
-        "nearest_obstacle_m": {
-          "value": 0.285,
-          "unit": "m",
-          "fact_id": "f_i79f1d_028"
-        },
-        "gap_m": {
-          "value": 0.5701,
-          "unit": "m",
-          "fact_id": "f_i79f1d_029"
-        },
-        "robot_width_m": {
-          "value": 0.445,
-          "unit": "m",
-          "fact_id": "f_i79f1d_030"
-        },
-        "gap_margin_m": {
-          "value": 0.1251,
-          "unit": "m",
-          "fact_id": "f_i79f1d_031"
-        }
+        "r": 2.0,
+        "objects": [
+          {
+            "id": "CH4W",
+            "label": "chair",
+            "movable": true,
+            "fragile": false,
+            "center_xy": [
+              0.942,
+              3.042
+            ],
+            "distance_m": {
+              "value": 0.3276,
+              "unit": "m",
+              "fact_id": "f_i79f1d_020"
+            },
+            "confidence": 1.0
+          },
+          {
+            "id": "TABLE4",
+            "label": "table",
+            "movable": true,
+            "fragile": false,
+            "center_xy": [
+              1.622,
+              3.003
+            ],
+            "distance_m": {
+              "value": 0.6003,
+              "unit": "m",
+              "fact_id": "f_i79f1d_021"
+            },
+            "confidence": 1.0
+          },
+          {
+            "id": "TABLE1",
+            "label": "table",
+            "movable": true,
+            "fragile": false,
+            "center_xy": [
+              1.623,
+              1.296
+            ],
+            "distance_m": {
+              "value": 1.0047,
+              "unit": "m",
+              "fact_id": "f_i79f1d_022"
+            },
+            "confidence": 1.0
+          },
+          {
+            "id": "CH1W",
+            "label": "chair",
+            "movable": true,
+            "fragile": false,
+            "center_xy": [
+              1.039,
+              1.258
+            ],
+            "distance_m": {
+              "value": 1.0266,
+              "unit": "m",
+              "fact_id": "f_i79f1d_023"
+            },
+            "confidence": 1.0
+          },
+          {
+            "id": "CH4E",
+            "label": "chair",
+            "movable": true,
+            "fragile": false,
+            "center_xy": [
+              2.267,
+              3.018
+            ],
+            "distance_m": {
+              "value": 1.4092,
+              "unit": "m",
+              "fact_id": "f_i79f1d_024"
+            },
+            "confidence": 1.0
+          },
+          {
+            "id": "DOCKSTN",
+            "label": "dock",
+            "movable": false,
+            "fragile": false,
+            "center_xy": [
+              0.19,
+              4.185
+            ],
+            "distance_m": {
+              "value": 1.5019,
+              "unit": "m",
+              "fact_id": "f_i79f1d_025"
+            },
+            "confidence": 1.0
+          },
+          {
+            "id": "CH1E",
+            "label": "chair",
+            "movable": true,
+            "fragile": false,
+            "center_xy": [
+              2.294,
+              1.305
+            ],
+            "distance_m": {
+              "value": 1.6998,
+              "unit": "m",
+              "fact_id": "f_i79f1d_026"
+            },
+            "confidence": 1.0
+          }
+        ],
+        "zone_ids": [
+          "seating",
+          "entrance"
+        ]
       },
       "fact_ids": [
+        "f_i79f1d_020",
+        "f_i79f1d_021",
+        "f_i79f1d_022",
+        "f_i79f1d_023",
+        "f_i79f1d_024",
+        "f_i79f1d_025",
+        "f_i79f1d_026"
+      ]
+    },
+    {
+      "i": 5,
+      "thought": "",
+      "tool": "run_probe",
+      "args": {
+        "hypothesis": "Moving chair CH4W away from the top bottleneck point [0.663, 2.488] will widen the narrow passage in the seating zone, reducing stops and near-misses and increasing success rate.",
+        "overrides": {
+          "move": {
+            "CH4W": {
+              "dx": 0.5,
+              "dy": 0.5
+            }
+          }
+        },
+        "n_episodes": 30
+      },
+      "result_summary": {
+        "ok": false,
+        "error": "numbers ['0.663', '2.488'] are not values of the cited facts; every number must come from a cited tool fact"
+      },
+      "fact_ids": []
+    },
+    {
+      "i": 6,
+      "thought": "",
+      "tool": "run_probe",
+      "args": {
+        "hypothesis": "Moving chair CH4W away from the top-ranked bottleneck cell in the seating zone will widen the narrow passage, reducing stops and near-misses and increasing success rate.",
+        "overrides": {
+          "move": {
+            "CH4W": {
+              "dx": 0.5,
+              "dy": 0.5
+            }
+          }
+        },
+        "n_episodes": 30
+      },
+      "result_summary": {
+        "ok": true,
+        "probe_id": "sb_338d3604eb3e",
+        "overrides": {
+          "move": {
+            "CH4W": {
+              "dx": 0.5,
+              "dy": 0.5,
+              "dyaw": 0.0
+            }
+          }
+        },
+        "density": "normal",
+        "robot_id": "bear_servi",
+        "baseline_ref": "sb_6cd106692d29",
+        "ran_baseline_probe": false,
+        "success_rate": {
+          "value": 1.0,
+          "unit": "ratio",
+          "fact_id": "f_i79f1d_027"
+        },
+        "ci95_low": {
+          "value": 0.8865,
+          "unit": "ratio",
+          "fact_id": "f_i79f1d_028"
+        },
+        "ci95_high": {
+          "value": 1.0,
+          "unit": "ratio",
+          "fact_id": "f_i79f1d_029"
+        },
+        "n_episodes": {
+          "value": 30,
+          "unit": "episodes",
+          "fact_id": "f_i79f1d_030"
+        },
+        "baseline_success_rate": {
+          "value": 0.75,
+          "unit": "ratio",
+          "fact_id": "f_i79f1d_031"
+        },
+        "improvement": {
+          "value": 0.25,
+          "unit": "ratio",
+          "fact_id": "f_i79f1d_032"
+        },
+        "ci_half_width": {
+          "value": 0.0568,
+          "unit": "ratio",
+          "fact_id": "f_i79f1d_033"
+        },
+        "experiment_id": "ex_i79f1d_01",
+        "kind": "move_object",
+        "outcome": "supported",
+        "improved_beyond_ci": true,
+        "experiments_left": 5
+      },
+      "fact_ids": [
+        "f_i79f1d_027",
         "f_i79f1d_028",
         "f_i79f1d_029",
         "f_i79f1d_030",
-        "f_i79f1d_031"
+        "f_i79f1d_031",
+        "f_i79f1d_032",
+        "f_i79f1d_033"
       ]
     },
     {
       "i": 7,
       "thought": "",
-      "tool": "get_gap_at",
+      "tool": "record_finding",
       "args": {
-        "xy": [
-          1.688,
-          2.188
-        ]
+        "claim": "The robot fails because chair CH4W sits too close to the top-ranked bottleneck cell [0.663, 2.488] in the seating zone, narrowing the passage and causing stops/near-misses. Moving CH4W by (0.5, 0.5) m raised success rate from 0.75 to 1.0 (improvement 0.25, CI half-width 0.0568), confirming the obstruction is the cause.",
+        "evidence_fact_ids": [
+          "f_i79f1d_011",
+          "f_i79f1d_016",
+          "f_i79f1d_017",
+          "f_i79f1d_018",
+          "f_i79f1d_019",
+          "f_i79f1d_027",
+          "f_i79f1d_028",
+          "f_i79f1d_029",
+          "f_i79f1d_031",
+          "f_i79f1d_032",
+          "f_i79f1d_033"
+        ],
+        "object_ids": [
+          "CH4W"
+        ],
+        "suggested_change": {
+          "object_id": "CH4W",
+          "dx": 0.5,
+          "dy": 0.5,
+          "dyaw": 0.0
+        },
+        "location_xy": [
+          0.663,
+          2.488
+        ],
+        "experiment_id": "ex_i79f1d_01"
       },
       "result_summary": {
-        "ok": true,
-        "xy": [
-          1.688,
-          2.188
-        ],
-        "in_obstacle": false,
-        "nearest_obstacle_m": {
-          "value": 0.45,
-          "unit": "m",
-          "fact_id": "f_i79f1d_032"
-        },
-        "gap_m": {
-          "value": 0.9,
-          "unit": "m",
-          "fact_id": "f_i79f1d_033"
-        },
-        "robot_width_m": {
-          "value": 0.445,
-          "unit": "m",
-          "fact_id": "f_i79f1d_034"
-        },
-        "gap_margin_m": {
-          "value": 0.455,
-          "unit": "m",
-          "fact_id": "f_i79f1d_035"
-        }
+        "ok": false,
+        "error": "finding rejected: numbers ['2.488', '0.5', '0.5'] are not values of the cited facts; every number must come from a cited tool fact"
       },
-      "fact_ids": [
-        "f_i79f1d_032",
-        "f_i79f1d_033",
-        "f_i79f1d_034",
-        "f_i79f1d_035"
-      ]
+      "fact_ids": []
     },
     {
       "i": 8,
       "thought": "",
-      "tool": "get_episode_events",
+      "tool": "record_finding",
       "args": {
-        "batch_id": "sb_7ac2d8341045",
-        "type": "fail",
-        "limit": 20
+        "claim": "The robot fails because a movable chair obstructs the top-ranked bottleneck cell in the seating zone, which accounts for 0.4411 of total stop/near-miss/blocked time. The gap at that cell is 0.6576 m against a robot width of 0.445 m, leaving only 0.2126 m margin. Moving the obstructing chair raised success rate from 0.75 to 1.0 (improvement 0.25, CI half-width 0.0568), confirming the obstruction is the cause.",
+        "evidence_fact_ids": [
+          "f_i79f1d_011",
+          "f_i79f1d_017",
+          "f_i79f1d_018",
+          "f_i79f1d_019",
+          "f_i79f1d_027",
+          "f_i79f1d_031",
+          "f_i79f1d_032",
+          "f_i79f1d_033"
+        ],
+        "object_ids": [
+          "CH4W"
+        ],
+        "suggested_change": {
+          "object_id": "CH4W",
+          "dx": 0.5,
+          "dy": 0.5,
+          "dyaw": 0.0
+        },
+        "location_xy": [
+          0.663,
+          2.488
+        ],
+        "experiment_id": "ex_i79f1d_01"
       },
       "result_summary": {
         "ok": true,
-        "batch_id": "sb_7ac2d8341045",
-        "type": "fail",
-        "count": {
-          "value": 10,
-          "unit": "events",
-          "fact_id": "f_i79f1d_036"
-        },
-        "episodes_with_event": {
-          "value": 10,
-          "unit": "episodes",
-          "fact_id": "f_i79f1d_037"
-        },
-        "per_mission": {
-          "value": 0.25,
-          "unit": "per mission",
-          "fact_id": "f_i79f1d_038"
-        },
-        "sample": [
-          {
-            "episode": 4,
-            "t": 0.0,
-            "xy": [
-              0.815,
-              4.185
-            ],
-            "detail": {
-              "reason": "no_path_static",
-              "why": "leg DOCK->PICKUP: search_limit"
-            }
-          },
-          {
-            "episode": 13,
-            "t": 0.0,
-            "xy": [
-              0.815,
-              4.185
-            ],
-            "detail": {
-              "reason": "no_path_static",
-              "why": "leg DOCK->PICKUP: search_limit"
-            }
-          },
-          {
-            "episode": 18,
-            "t": 0.0,
-            "xy": [
-              0.815,
-              4.185
-            ],
-            "detail": {
-              "reason": "no_path_static",
-              "why": "leg DOCK->PICKUP: no_path"
-            }
-          },
-          {
-            "episode": 19,
-            "t": 0.0,
-            "xy": [
-              0.815,
-              4.185
-            ],
-            "detail": {
-              "reason": "no_path_static",
-              "why": "leg DOCK->PICKUP: search_limit"
-            }
-          },
-          {
-            "episode": 29,
-            "t": 0.0,
-            "xy": [
-              0.815,
-              4.185
-            ],
-            "detail": {
-              "reason": "no_path_static",
-              "why": "leg DOCK->PICKUP: search_limit"
-            }
-          },
-          {
-            "episode": 34,
-            "t": 0.0,
-            "xy": [
-              0.815,
-              4.185
-            ],
-            "detail": {
-              "reason": "no_path_static",
-              "why": "leg DOCK->PICKUP: search_limit"
-            }
-          },
-          {
-            "episode": 35,
-            "t": 0.0,
-            "xy": [
-              0.815,
-              4.185
-            ],
-            "detail": {
-              "reason": "no_path_static",
-              "why": "leg DOCK->PICKUP: search_limit"
-            }
-          },
-          {
-            "episode": 37,
-            "t": 0.0,
-            "xy": [
-              0.815,
-              4.185
-            ],
-            "detail": {
-              "reason": "no_path_static",
-              "why": "leg DOCK->PICKUP: search_limit"
-            }
-          },
-          {
-            "episode": 38,
-            "t": 0.0,
-            "xy": [
-              0.815,
-              4.185
-            ],
-            "detail": {
-              "reason": "no_path_static",
-              "why": "leg DOCK->PICKUP: search_limit"
-            }
-          },
-          {
-            "episode": 39,
-            "t": 0.0,
-            "xy": [
-              0.815,
-              4.185
-            ],
-            "detail": {
-              "reason": "no_path_static",
-              "why": "leg DOCK->PICKUP: search_limit"
-            }
-          }
+        "finding_id": "fd_i79f1d_01",
+        "confirmed_by_probe": true,
+        "probe_id": "sb_338d3604eb3e",
+        "experiment_id": "ex_i79f1d_01",
+        "evidence_fact_ids": [
+          "f_i79f1d_011",
+          "f_i79f1d_017",
+          "f_i79f1d_018",
+          "f_i79f1d_019",
+          "f_i79f1d_027",
+          "f_i79f1d_031",
+          "f_i79f1d_032",
+          "f_i79f1d_033"
         ]
       },
-      "fact_ids": [
-        "f_i79f1d_036",
-        "f_i79f1d_037",
-        "f_i79f1d_038"
-      ]
+      "fact_ids": []
     }
   ],
-  "experiments": [],
-  "findings": [],
+  "experiments": [
+    {
+      "experiment_id": "ex_i79f1d_01",
+      "robot_id": "bear_servi",
+      "hypothesis": "Moving chair CH4W away from the top-ranked bottleneck cell in the seating zone will widen the narrow passage, reducing stops and near-misses and increasing success rate.",
+      "kind": "move_object",
+      "change": {
+        "move": {
+          "CH4W": {
+            "dx": 0.5,
+            "dy": 0.5,
+            "dyaw": 0.0
+          }
+        },
+        "density": "normal"
+      },
+      "batch_id": "sb_338d3604eb3e",
+      "baseline_fact_ids": [
+        "f_i79f1d_031"
+      ],
+      "result_fact_ids": [
+        "f_i79f1d_027",
+        "f_i79f1d_028",
+        "f_i79f1d_029",
+        "f_i79f1d_030",
+        "f_i79f1d_032",
+        "f_i79f1d_033"
+      ],
+      "outcome": "supported",
+      "next_action": "conclude",
+      "conclusion": "The robot fails because a movable chair obstructs the top-ranked bottleneck cell in the seating zone, which accounts for 0.4411 of total stop/near-miss/blocked time. The gap at that cell is 0.6576 m against a robot width of 0.445 m, leaving only 0.2126 m margin. Moving the obstructing chair raised success rate from 0.75 to 1.0 (improvement 0.25, CI half-width 0.0568), confirming the obstruction is the cause."
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "fd_i79f1d_01",
+      "robot_id": "bear_servi",
+      "claim": "The robot fails because a movable chair obstructs the top-ranked bottleneck cell in the seating zone, which accounts for 0.4411 of total stop/near-miss/blocked time. The gap at that cell is 0.6576 m against a robot width of 0.445 m, leaving only 0.2126 m margin. Moving the obstructing chair raised success rate from 0.75 to 1.0 (improvement 0.25, CI half-width 0.0568), confirming the obstruction is the cause.",
+      "evidence_fact_ids": [
+        "f_i79f1d_011",
+        "f_i79f1d_017",
+        "f_i79f1d_018",
+        "f_i79f1d_019",
+        "f_i79f1d_027",
+        "f_i79f1d_031",
+        "f_i79f1d_032",
+        "f_i79f1d_033"
+      ],
+      "location_xy": [
+        0.663,
+        2.488
+      ],
+      "object_ids": [
+        "CH4W"
+      ],
+      "confirmed_by_probe": true,
+      "suggested_change": {
+        "move": {
+          "CH4W": {
+            "dx": 0.5,
+            "dy": 0.5,
+            "dyaw": 0.0
+          }
+        }
+      }
+    }
+  ],
   "facts": [
     {
       "fact_id": "f_i79f1d_001",
-      "value": 0.95,
+      "value": 0.875,
       "unit": "ratio",
-      "label": "Success rate, bear_servi, normal traffic, optimistic geometry (sb_663a4ebd9d98)",
+      "label": "Success rate, bear_servi, peak traffic, optimistic geometry (sb_0892c7fd6e53)",
       "origin": {
         "type": "investigation",
-        "ref": "inv_79f1d1adda#step2"
+        "ref": "inv_79f1d1adda#step1"
       }
     },
     {
       "fact_id": "f_i79f1d_002",
-      "value": 0.835,
+      "value": 0.7389,
       "unit": "ratio",
-      "label": "Success rate 95% CI low, bear_servi, normal traffic, optimistic geometry (sb_663a4ebd9d98)",
+      "label": "Success rate 95% CI low, bear_servi, peak traffic, optimistic geometry (sb_0892c7fd6e53)",
       "origin": {
         "type": "investigation",
-        "ref": "inv_79f1d1adda#step2"
+        "ref": "inv_79f1d1adda#step1"
       }
     },
     {
       "fact_id": "f_i79f1d_003",
-      "value": 0.9862,
+      "value": 0.9454,
       "unit": "ratio",
-      "label": "Success rate 95% CI high, bear_servi, normal traffic, optimistic geometry (sb_663a4ebd9d98)",
+      "label": "Success rate 95% CI high, bear_servi, peak traffic, optimistic geometry (sb_0892c7fd6e53)",
       "origin": {
         "type": "investigation",
-        "ref": "inv_79f1d1adda#step2"
+        "ref": "inv_79f1d1adda#step1"
       }
     },
     {
       "fact_id": "f_i79f1d_004",
       "value": 40.0,
       "unit": "episodes",
-      "label": "Episodes, bear_servi, normal traffic, optimistic geometry (sb_663a4ebd9d98)",
+      "label": "Episodes, bear_servi, peak traffic, optimistic geometry (sb_0892c7fd6e53)",
       "origin": {
         "type": "investigation",
-        "ref": "inv_79f1d1adda#step2"
+        "ref": "inv_79f1d1adda#step1"
       }
     },
     {
       "fact_id": "f_i79f1d_005",
-      "value": 101.95,
+      "value": 119.9,
       "unit": "s",
-      "label": "Median mission time, bear_servi, normal traffic, optimistic geometry",
+      "label": "Median mission time, bear_servi, peak traffic, optimistic geometry",
       "origin": {
         "type": "investigation",
-        "ref": "inv_79f1d1adda#step2"
+        "ref": "inv_79f1d1adda#step1"
       }
     },
     {
       "fact_id": "f_i79f1d_006",
-      "value": 0.0293,
+      "value": 0.03,
       "unit": "m",
-      "label": "Median smallest robot-to-obstacle gap, bear_servi, normal traffic, optimistic geometry",
+      "label": "Median smallest robot-to-obstacle gap, bear_servi, peak traffic, optimistic geometry",
       "origin": {
         "type": "investigation",
-        "ref": "inv_79f1d1adda#step2"
+        "ref": "inv_79f1d1adda#step1"
       }
     },
     {
       "fact_id": "f_i79f1d_007",
-      "value": 1.775,
+      "value": 3.45,
       "unit": "per mission",
-      "label": "Near-misses per mission, bear_servi, normal traffic, optimistic geometry",
+      "label": "Near-misses per mission, bear_servi, peak traffic, optimistic geometry",
       "origin": {
         "type": "investigation",
-        "ref": "inv_79f1d1adda#step2"
+        "ref": "inv_79f1d1adda#step1"
       }
     },
     {
       "fact_id": "f_i79f1d_008",
-      "value": 3.875,
+      "value": 6.65,
       "unit": "per mission",
-      "label": "Safety stops per mission, bear_servi, normal traffic, optimistic geometry",
+      "label": "Safety stops per mission, bear_servi, peak traffic, optimistic geometry",
       "origin": {
         "type": "investigation",
-        "ref": "inv_79f1d1adda#step2"
+        "ref": "inv_79f1d1adda#step1"
       }
     },
     {
       "fact_id": "f_i79f1d_009",
+      "value": 3.0,
+      "unit": "episodes",
+      "label": "Failures 'collision', bear_servi, peak traffic, optimistic geometry (sb_0892c7fd6e53)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step1"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_010",
       "value": 2.0,
       "unit": "episodes",
-      "label": "Failures 'no_path_static', bear_servi, normal traffic, optimistic geometry (sb_663a4ebd9d98)",
+      "label": "Failures 'no_path_static', bear_servi, peak traffic, optimistic geometry (sb_0892c7fd6e53)",
+      "origin": {
+        "type": "investigation",
+        "ref": "inv_79f1d1adda#step1"
+      }
+    },
+    {
+      "fact_id": "f_i79f1d_011",
+      "value": 0.4411,
+      "unit": "ratio",
+      "label": "Pinch Map spot #1: share of accumulated stop/near-miss/blocked score within 0.5 m, bear_servi",
       "origin": {
         "type": "investigation",
         "ref": "inv_79f1d1adda#step2"
       }
     },
     {
-      "fact_id": "f_i79f1d_010",
-      "value": 0.75,
-      "unit": "ratio",
-      "label": "Success rate, bear_servi, peak traffic, nominal geometry (sb_7ac2d8341045)",
-      "origin": {
-        "type": "investigation",
-        "ref": "inv_79f1d1adda#step3"
-      }
-    },
-    {
-      "fact_id": "f_i79f1d_011",
-      "value": 0.5981,
-      "unit": "ratio",
-      "label": "Success rate 95% CI low, bear_servi, peak traffic, nominal geometry (sb_7ac2d8341045)",
-      "origin": {
-        "type": "investigation",
-        "ref": "inv_79f1d1adda#step3"
-      }
-    },
-    {
       "fact_id": "f_i79f1d_012",
-      "value": 0.8581,
+      "value": 0.1569,
       "unit": "ratio",
-      "label": "Success rate 95% CI high, bear_servi, peak traffic, nominal geometry (sb_7ac2d8341045)",
+      "label": "Pinch Map spot #2: share of accumulated stop/near-miss/blocked score within 0.5 m, bear_servi",
       "origin": {
         "type": "investigation",
-        "ref": "inv_79f1d1adda#step3"
+        "ref": "inv_79f1d1adda#step2"
       }
     },
     {
       "fact_id": "f_i79f1d_013",
-      "value": 40.0,
-      "unit": "episodes",
-      "label": "Episodes, bear_servi, peak traffic, nominal geometry (sb_7ac2d8341045)",
+      "value": 0.1232,
+      "unit": "ratio",
+      "label": "Pinch Map spot #3: share of accumulated stop/near-miss/blocked score within 0.5 m, bear_servi",
       "origin": {
         "type": "investigation",
-        "ref": "inv_79f1d1adda#step3"
+        "ref": "inv_79f1d1adda#step2"
       }
     },
     {
       "fact_id": "f_i79f1d_014",
-      "value": 115.15,
-      "unit": "s",
-      "label": "Median mission time, bear_servi, peak traffic, nominal geometry",
+      "value": 0.0575,
+      "unit": "ratio",
+      "label": "Pinch Map spot #4: share of accumulated stop/near-miss/blocked score within 0.5 m, bear_servi",
       "origin": {
         "type": "investigation",
-        "ref": "inv_79f1d1adda#step3"
+        "ref": "inv_79f1d1adda#step2"
       }
     },
     {
       "fact_id": "f_i79f1d_015",
-      "value": 0.035,
-      "unit": "m",
-      "label": "Median smallest robot-to-obstacle gap, bear_servi, peak traffic, nominal geometry",
+      "value": 0.0557,
+      "unit": "ratio",
+      "label": "Pinch Map spot #5: share of accumulated stop/near-miss/blocked score within 0.5 m, bear_servi",
       "origin": {
         "type": "investigation",
-        "ref": "inv_79f1d1adda#step3"
+        "ref": "inv_79f1d1adda#step2"
       }
     },
     {
       "fact_id": "f_i79f1d_016",
-      "value": 2.775,
-      "unit": "per mission",
-      "label": "Near-misses per mission, bear_servi, peak traffic, nominal geometry",
+      "value": 0.3288,
+      "unit": "m",
+      "label": "Distance from (0.66, 2.49) to nearest obstacle (nominal grid)",
       "origin": {
         "type": "investigation",
         "ref": "inv_79f1d1adda#step3"
@@ -772,9 +848,9 @@
     },
     {
       "fact_id": "f_i79f1d_017",
-      "value": 5.5,
-      "unit": "per mission",
-      "label": "Safety stops per mission, bear_servi, peak traffic, nominal geometry",
+      "value": 0.6576,
+      "unit": "m",
+      "label": "Approximate free gap through (0.66, 2.49) (2 x nearest-obstacle distance, nominal grid)",
       "origin": {
         "type": "investigation",
         "ref": "inv_79f1d1adda#step3"
@@ -782,9 +858,9 @@
     },
     {
       "fact_id": "f_i79f1d_018",
-      "value": 10.0,
-      "unit": "episodes",
-      "label": "Failures 'no_path_static', bear_servi, peak traffic, nominal geometry (sb_7ac2d8341045)",
+      "value": 0.445,
+      "unit": "m",
+      "label": "Footprint width, bear_servi",
       "origin": {
         "type": "investigation",
         "ref": "inv_79f1d1adda#step3"
@@ -792,19 +868,19 @@
     },
     {
       "fact_id": "f_i79f1d_019",
-      "value": 0.4411,
-      "unit": "ratio",
-      "label": "Pinch Map spot #1: share of accumulated stop/near-miss/blocked score within 0.5 m, bear_servi",
+      "value": 0.2126,
+      "unit": "m",
+      "label": "Approximate gap minus robot width at (0.66, 2.49)",
       "origin": {
         "type": "investigation",
-        "ref": "inv_79f1d1adda#step4"
+        "ref": "inv_79f1d1adda#step3"
       }
     },
     {
       "fact_id": "f_i79f1d_020",
-      "value": 0.1569,
-      "unit": "ratio",
-      "label": "Pinch Map spot #2: share of accumulated stop/near-miss/blocked score within 0.5 m, bear_servi",
+      "value": 0.3276,
+      "unit": "m",
+      "label": "Distance from (0.66, 2.49) to the edge of object CH4W (chair)",
       "origin": {
         "type": "investigation",
         "ref": "inv_79f1d1adda#step4"
@@ -812,9 +888,9 @@
     },
     {
       "fact_id": "f_i79f1d_021",
-      "value": 0.1232,
-      "unit": "ratio",
-      "label": "Pinch Map spot #3: share of accumulated stop/near-miss/blocked score within 0.5 m, bear_servi",
+      "value": 0.6003,
+      "unit": "m",
+      "label": "Distance from (0.66, 2.49) to the edge of object TABLE4 (table)",
       "origin": {
         "type": "investigation",
         "ref": "inv_79f1d1adda#step4"
@@ -822,9 +898,9 @@
     },
     {
       "fact_id": "f_i79f1d_022",
-      "value": 0.0575,
-      "unit": "ratio",
-      "label": "Pinch Map spot #4: share of accumulated stop/near-miss/blocked score within 0.5 m, bear_servi",
+      "value": 1.0047,
+      "unit": "m",
+      "label": "Distance from (0.66, 2.49) to the edge of object TABLE1 (table)",
       "origin": {
         "type": "investigation",
         "ref": "inv_79f1d1adda#step4"
@@ -832,9 +908,9 @@
     },
     {
       "fact_id": "f_i79f1d_023",
-      "value": 0.0557,
-      "unit": "ratio",
-      "label": "Pinch Map spot #5: share of accumulated stop/near-miss/blocked score within 0.5 m, bear_servi",
+      "value": 1.0266,
+      "unit": "m",
+      "label": "Distance from (0.66, 2.49) to the edge of object CH1W (chair)",
       "origin": {
         "type": "investigation",
         "ref": "inv_79f1d1adda#step4"
@@ -842,49 +918,49 @@
     },
     {
       "fact_id": "f_i79f1d_024",
-      "value": 0.3288,
+      "value": 1.4092,
       "unit": "m",
-      "label": "Distance from (0.66, 2.49) to nearest obstacle (nominal grid)",
+      "label": "Distance from (0.66, 2.49) to the edge of object CH4E (chair)",
       "origin": {
         "type": "investigation",
-        "ref": "inv_79f1d1adda#step5"
+        "ref": "inv_79f1d1adda#step4"
       }
     },
     {
       "fact_id": "f_i79f1d_025",
-      "value": 0.6576,
+      "value": 1.5019,
       "unit": "m",
-      "label": "Approximate free gap through (0.66, 2.49) (2 x nearest-obstacle distance, nominal grid)",
+      "label": "Distance from (0.66, 2.49) to the edge of object DOCKSTN (dock)",
       "origin": {
         "type": "investigation",
-        "ref": "inv_79f1d1adda#step5"
+        "ref": "inv_79f1d1adda#step4"
       }
     },
     {
       "fact_id": "f_i79f1d_026",
-      "value": 0.445,
+      "value": 1.6998,
       "unit": "m",
-      "label": "Footprint width, bear_servi",
+      "label": "Distance from (0.66, 2.49) to the edge of object CH1E (chair)",
       "origin": {
         "type": "investigation",
-        "ref": "inv_79f1d1adda#step5"
+        "ref": "inv_79f1d1adda#step4"
       }
     },
     {
       "fact_id": "f_i79f1d_027",
-      "value": 0.2126,
-      "unit": "m",
-      "label": "Approximate gap minus robot width at (0.66, 2.49)",
+      "value": 1.0,
+      "unit": "ratio",
+      "label": "Probe sb_338d3604eb3e success rate ({\"density\": \"normal\", \"overrides\": {\"move\": {\"CH4W\": {\"dx\": 0.5, \"dy\": 0.5, \"dyaw\": 0.0}}}, \"robot_id\": \"bear_servi\"}, nominal geometry)",
       "origin": {
         "type": "investigation",
-        "ref": "inv_79f1d1adda#step5"
+        "ref": "inv_79f1d1adda#step6"
       }
     },
     {
       "fact_id": "f_i79f1d_028",
-      "value": 0.285,
-      "unit": "m",
-      "label": "Distance from (0.59, 3.79) to nearest obstacle (nominal grid)",
+      "value": 0.8865,
+      "unit": "ratio",
+      "label": "Probe sb_338d3604eb3e 95% CI low",
       "origin": {
         "type": "investigation",
         "ref": "inv_79f1d1adda#step6"
@@ -892,9 +968,9 @@
     },
     {
       "fact_id": "f_i79f1d_029",
-      "value": 0.5701,
-      "unit": "m",
-      "label": "Approximate free gap through (0.59, 3.79) (2 x nearest-obstacle distance, nominal grid)",
+      "value": 1.0,
+      "unit": "ratio",
+      "label": "Probe sb_338d3604eb3e 95% CI high",
       "origin": {
         "type": "investigation",
         "ref": "inv_79f1d1adda#step6"
@@ -902,9 +978,9 @@
     },
     {
       "fact_id": "f_i79f1d_030",
-      "value": 0.445,
-      "unit": "m",
-      "label": "Footprint width, bear_servi",
+      "value": 30.0,
+      "unit": "episodes",
+      "label": "Probe sb_338d3604eb3e episodes",
       "origin": {
         "type": "investigation",
         "ref": "inv_79f1d1adda#step6"
@@ -912,9 +988,9 @@
     },
     {
       "fact_id": "f_i79f1d_031",
-      "value": 0.1251,
-      "unit": "m",
-      "label": "Approximate gap minus robot width at (0.59, 3.79)",
+      "value": 0.75,
+      "unit": "ratio",
+      "label": "Baseline success rate for probe sb_338d3604eb3e (sb_6cd106692d29, bear_servi)",
       "origin": {
         "type": "investigation",
         "ref": "inv_79f1d1adda#step6"
@@ -922,78 +998,28 @@
     },
     {
       "fact_id": "f_i79f1d_032",
-      "value": 0.45,
-      "unit": "m",
-      "label": "Distance from (1.69, 2.19) to nearest obstacle (nominal grid)",
+      "value": 0.25,
+      "unit": "ratio",
+      "label": "Probe sb_338d3604eb3e success-rate change vs baseline",
       "origin": {
         "type": "investigation",
-        "ref": "inv_79f1d1adda#step7"
+        "ref": "inv_79f1d1adda#step6"
       }
     },
     {
       "fact_id": "f_i79f1d_033",
-      "value": 0.9,
-      "unit": "m",
-      "label": "Approximate free gap through (1.69, 2.19) (2 x nearest-obstacle distance, nominal grid)",
+      "value": 0.0568,
+      "unit": "ratio",
+      "label": "Probe sb_338d3604eb3e 95% CI half-width",
       "origin": {
         "type": "investigation",
-        "ref": "inv_79f1d1adda#step7"
-      }
-    },
-    {
-      "fact_id": "f_i79f1d_034",
-      "value": 0.445,
-      "unit": "m",
-      "label": "Footprint width, bear_servi",
-      "origin": {
-        "type": "investigation",
-        "ref": "inv_79f1d1adda#step7"
-      }
-    },
-    {
-      "fact_id": "f_i79f1d_035",
-      "value": 0.455,
-      "unit": "m",
-      "label": "Approximate gap minus robot width at (1.69, 2.19)",
-      "origin": {
-        "type": "investigation",
-        "ref": "inv_79f1d1adda#step7"
-      }
-    },
-    {
-      "fact_id": "f_i79f1d_036",
-      "value": 10.0,
-      "unit": "events",
-      "label": "'fail' events in sb_7ac2d8341045",
-      "origin": {
-        "type": "investigation",
-        "ref": "inv_79f1d1adda#step8"
-      }
-    },
-    {
-      "fact_id": "f_i79f1d_037",
-      "value": 10.0,
-      "unit": "episodes",
-      "label": "Episodes with a 'fail' event, sb_7ac2d8341045",
-      "origin": {
-        "type": "investigation",
-        "ref": "inv_79f1d1adda#step8"
-      }
-    },
-    {
-      "fact_id": "f_i79f1d_038",
-      "value": 0.25,
-      "unit": "per mission",
-      "label": "'fail' events per mission, sb_7ac2d8341045",
-      "origin": {
-        "type": "investigation",
-        "ref": "inv_79f1d1adda#step8"
+        "ref": "inv_79f1d1adda#step6"
       }
     }
   ],
   "stop_reason": "max_steps",
   "robot_id": "bear_servi",
   "policy": "llm",
-  "sim_runs": 0,
+  "sim_runs": 1,
   "sim_source": "jobs.sim.api"
 }

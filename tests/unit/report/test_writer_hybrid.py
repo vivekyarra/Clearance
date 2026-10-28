@@ -264,3 +264,13 @@ def test_runaway_draft_gets_a_length_note(analysis):
     retry = [c for c in llm.calls if c[1] == "tradeoffs"][1][2]
     assert "the section allows" in retry[-1]["content"] and len(retry[-2]["content"]) < len(runaway)
     assert "Steady versus fast." in md and "88%" not in md
+
+
+def test_rambling_answer_uses_the_template(analysis):
+    facts, *rest = _inputs(analysis)
+    notes = " ".join(["I am weighing which instruction applies here and how to word the section."] * 60)
+    llm = SectionLLM({"tradeoffs": [notes]})
+    md = write_report(facts, *rest, mode="live", llm=llm)
+    assert md.meta["sections"]["tradeoffs"]["fallback"] == "answer did not fit the section"
+    assert "weighing which instruction" not in md
+    assert offline_narratives(_Ctx(facts, *rest))["tradeoffs"] in md

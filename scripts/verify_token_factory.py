@@ -56,15 +56,15 @@ def apply_model_list(cfg: dict, served: list[str] | None, vision_served: list[st
     vlower = {s.lower(): s for s in (vision_served or [])}
     for role, rc in cfg["roles"].items():
         listed: list[int] = []
+        unchecked: list[int] = []
         for i, c in enumerate(rc.get("candidates", [])):
-            if c.get("local"):  # machine-local candidate (models.local.yaml): outside the Token Factory check
-                continue
             pool = vlower if c.get("provider") == "self_hosted_vllm" else lower
             listing = vision_served if c.get("provider") == "self_hosted_vllm" else served
             if listing is None:  # could not check this provider
                 c["verified"] = False
                 c.pop("available", None)
                 c["verify_note"] = "endpoint not checked (env unset or unreachable)"
+                unchecked.append(i)
                 continue
             exact = pool.get(str(c.get("model_id") or "").lower())
             if exact:
@@ -84,6 +84,9 @@ def apply_model_list(cfg: dict, served: list[str] | None, vision_served: list[st
         cands = rc.get("candidates", [])
         steady = [i for i in listed if retires_on(cands[i]) is None]
         active = (steady or listed or [None])[0]
+        prev = int(rc.get("active", 0) or 0)
+        if prev in unchecked:  # a self-hosted primary (Cosmos Reason 2) stays primary; the client falls back when unset
+            active = prev
         rc["active"] = active if active is not None else int(rc.get("active", 0) or 0)
     return {r: rc["active"] for r, rc in cfg["roles"].items()}
 

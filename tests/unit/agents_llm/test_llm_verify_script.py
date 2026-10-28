@@ -27,6 +27,7 @@ def test_apply_model_list_marks_and_selects():
     ids = list(dict.fromkeys(_tf_ids(cfg)))
     missing = ids[-1]
     served = [i.upper() for i in ids if i != missing] + ["meta/llama"]  # case differs from config
+    prev = {role: rc.get("active", 0) for role, rc in cfg["roles"].items()}
     vt.apply_model_list(cfg, served, None, "now", today=dt.date(2026, 10, 27))
     for role, rc in cfg["roles"].items():
         listed = []
@@ -40,7 +41,9 @@ def test_apply_model_list_marks_and_selects():
                 listed.append(i)
             assert c["price_per_1m_usd"]["verified"] is False  # prices never auto-verified
         steady = [i for i in listed if retires_on(rc["candidates"][i]) is None]
-        if listed:
+        if rc["candidates"][prev[role]]["provider"] == "self_hosted_vllm":
+            assert rc["active"] == prev[role], role  # an unchecked self-hosted primary stays primary
+        elif listed:
             assert rc["active"] == (steady or listed)[0], role
 
 
@@ -105,3 +108,14 @@ def test_main_without_key(monkeypatch, tmp_path):
     vt = load_script()
     monkeypatch.delenv("NEBIUS_API_KEY", raising=False)
     assert vt.main(["--config", str(DEFAULT_CONFIG), "--dry-run"]) == 2
+
+
+def test_unchecked_self_hosted_primary_stays_active():
+    vt = load_script()
+    cfg = load_models_config()
+    vis = cfg["roles"]["vision"]["candidates"]
+    hosted_i = next(i for i, c in enumerate(vis) if c["provider"] == "self_hosted_vllm")
+    cfg["roles"]["vision"]["active"] = hosted_i
+    vt.apply_model_list(cfg, _tf_ids(cfg), None, "now")
+    assert cfg["roles"]["vision"]["active"] == hosted_i
+    assert vis[hosted_i]["verified"] is False

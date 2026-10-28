@@ -611,7 +611,7 @@
     "label": "Success rate, Keenon Robotics DINERBOT T8, quiet traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_8139cf5c4470"
+      "ref": "sb_7ed92fb4bc85"
     },
     "key": "sim.success|keenon_dinerbot_t8|quiet|conservative"
   },
@@ -622,7 +622,7 @@
     "label": "Episodes simulated, Keenon Robotics DINERBOT T8, quiet traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_8139cf5c4470"
+      "ref": "sb_7ed92fb4bc85"
     },
     "key": "sim.n|keenon_dinerbot_t8|quiet|conservative"
   },
@@ -633,7 +633,7 @@
     "label": "Success rate, Keenon Robotics DINERBOT T8, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_979ad47ec78c"
+      "ref": "sb_cf31a2438cab"
     },
     "key": "sim.success|keenon_dinerbot_t8|quiet|nominal"
   },
@@ -644,7 +644,7 @@
     "label": "Episodes simulated, Keenon Robotics DINERBOT T8, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_979ad47ec78c"
+      "ref": "sb_cf31a2438cab"
     },
     "key": "sim.n|keenon_dinerbot_t8|quiet|nominal"
   },
@@ -655,7 +655,7 @@
     "label": "Success rate CI95 low, Keenon Robotics DINERBOT T8, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_979ad47ec78c"
+      "ref": "sb_cf31a2438cab"
     },
     "key": "sim.ci_lo|keenon_dinerbot_t8|quiet"
   },
@@ -666,7 +666,7 @@
     "label": "Success rate CI95 high, Keenon Robotics DINERBOT T8, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_979ad47ec78c"
+      "ref": "sb_cf31a2438cab"
     },
     "key": "sim.ci_hi|keenon_dinerbot_t8|quiet"
   },
@@ -677,7 +677,7 @@
     "label": "Median mission time, Keenon Robotics DINERBOT T8, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_979ad47ec78c"
+      "ref": "sb_cf31a2438cab"
     },
     "key": "sim.mission_s|keenon_dinerbot_t8|quiet"
   },
@@ -688,7 +688,7 @@
     "label": "Near-misses per mission, Keenon Robotics DINERBOT T8, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_979ad47ec78c"
+      "ref": "sb_cf31a2438cab"
     },
     "key": "sim.near_miss|keenon_dinerbot_t8|quiet"
   },
@@ -699,7 +699,7 @@
     "label": "Safety stops per mission, Keenon Robotics DINERBOT T8, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_979ad47ec78c"
+      "ref": "sb_cf31a2438cab"
     },
     "key": "sim.stops|keenon_dinerbot_t8|quiet"
   },
@@ -710,7 +710,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Keenon Robotics DINERBOT T8, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_979ad47ec78c"
+      "ref": "sb_cf31a2438cab"
     },
     "key": "sim.min_gap_m|keenon_dinerbot_t8|quiet"
   },
@@ -721,7 +721,7 @@
     "label": "Success rate, Keenon Robotics DINERBOT T8, quiet traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d0e6e2070eb5"
+      "ref": "sb_058d9c7c1975"
     },
     "key": "sim.success|keenon_dinerbot_t8|quiet|optimistic"
   },
@@ -732,7 +732,7 @@
     "label": "Episodes simulated, Keenon Robotics DINERBOT T8, quiet traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d0e6e2070eb5"
+      "ref": "sb_058d9c7c1975"
     },
     "key": "sim.n|keenon_dinerbot_t8|quiet|optimistic"
   },
@@ -743,7 +743,7 @@
     "label": "Success rate, Keenon Robotics DINERBOT T8, normal traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a2efc5b0931b"
+      "ref": "sb_b2182b67d2f7"
     },
     "key": "sim.success|keenon_dinerbot_t8|normal|conservative"
   },
@@ -754,7 +754,7 @@
     "label": "Episodes simulated, Keenon Robotics DINERBOT T8, normal traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a2efc5b0931b"
+      "ref": "sb_b2182b67d2f7"
     },
     "key": "sim.n|keenon_dinerbot_t8|normal|conservative"
   },
@@ -765,7 +765,7 @@
     "label": "Success rate, Keenon Robotics DINERBOT T8, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ef707dea6880"
+      "ref": "sb_d37139145d7e"
     },
     "key": "sim.success|keenon_dinerbot_t8|normal|nominal"
   },
@@ -776,7 +776,7 @@
     "label": "Episodes simulated, Keenon Robotics DINERBOT T8, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ef707dea6880"
+      "ref": "sb_d37139145d7e"
     },
     "key": "sim.n|keenon_dinerbot_t8|normal|nominal"
   },
@@ -787,7 +787,7 @@
     "label": "Success rate CI95 low, Keenon Robotics DINERBOT T8, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ef707dea6880"
+      "ref": "sb_d37139145d7e"
     },
     "key": "sim.ci_lo|keenon_dinerbot_t8|normal"
   },
@@ -798,7 +798,7 @@
     "label": "Success rate CI95 high, Keenon Robotics DINERBOT T8, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ef707dea6880"
+      "ref": "sb_d37139145d7e"
     },
     "key": "sim.ci_hi|keenon_dinerbot_t8|normal"
   },
@@ -809,7 +809,7 @@
     "label": "Median mission time, Keenon Robotics DINERBOT T8, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ef707dea6880"
+      "ref": "sb_d37139145d7e"
     },
     "key": "sim.mission_s|keenon_dinerbot_t8|normal"
   },
@@ -820,7 +820,7 @@
     "label": "Near-misses per mission, Keenon Robotics DINERBOT T8, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ef707dea6880"
+      "ref": "sb_d37139145d7e"
     },
     "key": "sim.near_miss|keenon_dinerbot_t8|normal"
   },
@@ -831,7 +831,7 @@
     "label": "Safety stops per mission, Keenon Robotics DINERBOT T8, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ef707dea6880"
+      "ref": "sb_d37139145d7e"
     },
     "key": "sim.stops|keenon_dinerbot_t8|normal"
   },
@@ -842,7 +842,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Keenon Robotics DINERBOT T8, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ef707dea6880"
+      "ref": "sb_d37139145d7e"
     },
     "key": "sim.min_gap_m|keenon_dinerbot_t8|normal"
   },
@@ -853,7 +853,7 @@
     "label": "Unsuccessful episodes (collision), Keenon Robotics DINERBOT T8, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_ef707dea6880"
+      "ref": "sb_d37139145d7e"
     },
     "key": "sim.fail|keenon_dinerbot_t8|normal|collision"
   },
@@ -864,7 +864,7 @@
     "label": "Success rate, Keenon Robotics DINERBOT T8, normal traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_b1b83bffe50f"
+      "ref": "sb_27f3f97fa2d1"
     },
     "key": "sim.success|keenon_dinerbot_t8|normal|optimistic"
   },
@@ -875,7 +875,7 @@
     "label": "Episodes simulated, Keenon Robotics DINERBOT T8, normal traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_b1b83bffe50f"
+      "ref": "sb_27f3f97fa2d1"
     },
     "key": "sim.n|keenon_dinerbot_t8|normal|optimistic"
   },
@@ -886,7 +886,7 @@
     "label": "Success rate, Keenon Robotics DINERBOT T8, peak traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_cad387bf7378"
+      "ref": "sb_6815bdadb98b"
     },
     "key": "sim.success|keenon_dinerbot_t8|peak|conservative"
   },
@@ -897,7 +897,7 @@
     "label": "Episodes simulated, Keenon Robotics DINERBOT T8, peak traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_cad387bf7378"
+      "ref": "sb_6815bdadb98b"
     },
     "key": "sim.n|keenon_dinerbot_t8|peak|conservative"
   },
@@ -908,7 +908,7 @@
     "label": "Success rate, Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_071d393f5171"
+      "ref": "sb_8f302f31b557"
     },
     "key": "sim.success|keenon_dinerbot_t8|peak|nominal"
   },
@@ -919,7 +919,7 @@
     "label": "Episodes simulated, Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_071d393f5171"
+      "ref": "sb_8f302f31b557"
     },
     "key": "sim.n|keenon_dinerbot_t8|peak|nominal"
   },
@@ -930,7 +930,7 @@
     "label": "Success rate CI95 low, Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_071d393f5171"
+      "ref": "sb_8f302f31b557"
     },
     "key": "sim.ci_lo|keenon_dinerbot_t8|peak"
   },
@@ -941,7 +941,7 @@
     "label": "Success rate CI95 high, Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_071d393f5171"
+      "ref": "sb_8f302f31b557"
     },
     "key": "sim.ci_hi|keenon_dinerbot_t8|peak"
   },
@@ -952,7 +952,7 @@
     "label": "Median mission time, Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_071d393f5171"
+      "ref": "sb_8f302f31b557"
     },
     "key": "sim.mission_s|keenon_dinerbot_t8|peak"
   },
@@ -963,7 +963,7 @@
     "label": "Near-misses per mission, Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_071d393f5171"
+      "ref": "sb_8f302f31b557"
     },
     "key": "sim.near_miss|keenon_dinerbot_t8|peak"
   },
@@ -974,7 +974,7 @@
     "label": "Safety stops per mission, Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_071d393f5171"
+      "ref": "sb_8f302f31b557"
     },
     "key": "sim.stops|keenon_dinerbot_t8|peak"
   },
@@ -985,7 +985,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_071d393f5171"
+      "ref": "sb_8f302f31b557"
     },
     "key": "sim.min_gap_m|keenon_dinerbot_t8|peak"
   },
@@ -996,7 +996,7 @@
     "label": "Unsuccessful episodes (blocked timeout), Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_071d393f5171"
+      "ref": "sb_8f302f31b557"
     },
     "key": "sim.fail|keenon_dinerbot_t8|peak|blocked_timeout"
   },
@@ -1007,7 +1007,7 @@
     "label": "Unsuccessful episodes (collision), Keenon Robotics DINERBOT T8, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_071d393f5171"
+      "ref": "sb_8f302f31b557"
     },
     "key": "sim.fail|keenon_dinerbot_t8|peak|collision"
   },
@@ -1018,7 +1018,7 @@
     "label": "Success rate, Keenon Robotics DINERBOT T8, peak traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_17063cd9b267"
+      "ref": "sb_004759d24ecf"
     },
     "key": "sim.success|keenon_dinerbot_t8|peak|optimistic"
   },
@@ -1029,7 +1029,7 @@
     "label": "Episodes simulated, Keenon Robotics DINERBOT T8, peak traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_17063cd9b267"
+      "ref": "sb_004759d24ecf"
     },
     "key": "sim.n|keenon_dinerbot_t8|peak|optimistic"
   },
@@ -1590,7 +1590,7 @@
     "label": "Success rate, Bear Robotics Servi, quiet traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_593c904f1842"
+      "ref": "sb_4006b0ed5dee"
     },
     "key": "sim.success|bear_servi|quiet|conservative"
   },
@@ -1601,7 +1601,7 @@
     "label": "Episodes simulated, Bear Robotics Servi, quiet traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_593c904f1842"
+      "ref": "sb_4006b0ed5dee"
     },
     "key": "sim.n|bear_servi|quiet|conservative"
   },
@@ -1612,7 +1612,7 @@
     "label": "Success rate, Bear Robotics Servi, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d693ff018637"
+      "ref": "sb_60f9b75a199d"
     },
     "key": "sim.success|bear_servi|quiet|nominal"
   },
@@ -1623,7 +1623,7 @@
     "label": "Episodes simulated, Bear Robotics Servi, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d693ff018637"
+      "ref": "sb_60f9b75a199d"
     },
     "key": "sim.n|bear_servi|quiet|nominal"
   },
@@ -1634,7 +1634,7 @@
     "label": "Success rate CI95 low, Bear Robotics Servi, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d693ff018637"
+      "ref": "sb_60f9b75a199d"
     },
     "key": "sim.ci_lo|bear_servi|quiet"
   },
@@ -1645,7 +1645,7 @@
     "label": "Success rate CI95 high, Bear Robotics Servi, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d693ff018637"
+      "ref": "sb_60f9b75a199d"
     },
     "key": "sim.ci_hi|bear_servi|quiet"
   },
@@ -1656,7 +1656,7 @@
     "label": "Median mission time, Bear Robotics Servi, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d693ff018637"
+      "ref": "sb_60f9b75a199d"
     },
     "key": "sim.mission_s|bear_servi|quiet"
   },
@@ -1667,7 +1667,7 @@
     "label": "Near-misses per mission, Bear Robotics Servi, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d693ff018637"
+      "ref": "sb_60f9b75a199d"
     },
     "key": "sim.near_miss|bear_servi|quiet"
   },
@@ -1678,7 +1678,7 @@
     "label": "Safety stops per mission, Bear Robotics Servi, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d693ff018637"
+      "ref": "sb_60f9b75a199d"
     },
     "key": "sim.stops|bear_servi|quiet"
   },
@@ -1689,7 +1689,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Bear Robotics Servi, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d693ff018637"
+      "ref": "sb_60f9b75a199d"
     },
     "key": "sim.min_gap_m|bear_servi|quiet"
   },
@@ -1700,7 +1700,7 @@
     "label": "Success rate, Bear Robotics Servi, quiet traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_95b878470915"
+      "ref": "sb_7f700eda8eb6"
     },
     "key": "sim.success|bear_servi|quiet|optimistic"
   },
@@ -1711,7 +1711,7 @@
     "label": "Episodes simulated, Bear Robotics Servi, quiet traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_95b878470915"
+      "ref": "sb_7f700eda8eb6"
     },
     "key": "sim.n|bear_servi|quiet|optimistic"
   },
@@ -1722,7 +1722,7 @@
     "label": "Success rate, Bear Robotics Servi, normal traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_75858c483564"
+      "ref": "sb_03dd3900cce9"
     },
     "key": "sim.success|bear_servi|normal|conservative"
   },
@@ -1733,7 +1733,7 @@
     "label": "Episodes simulated, Bear Robotics Servi, normal traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_75858c483564"
+      "ref": "sb_03dd3900cce9"
     },
     "key": "sim.n|bear_servi|normal|conservative"
   },
@@ -1744,7 +1744,7 @@
     "label": "Success rate, Bear Robotics Servi, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_32f58c01c786"
+      "ref": "sb_c0ff128b4956"
     },
     "key": "sim.success|bear_servi|normal|nominal"
   },
@@ -1755,7 +1755,7 @@
     "label": "Episodes simulated, Bear Robotics Servi, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_32f58c01c786"
+      "ref": "sb_c0ff128b4956"
     },
     "key": "sim.n|bear_servi|normal|nominal"
   },
@@ -1766,7 +1766,7 @@
     "label": "Success rate CI95 low, Bear Robotics Servi, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_32f58c01c786"
+      "ref": "sb_c0ff128b4956"
     },
     "key": "sim.ci_lo|bear_servi|normal"
   },
@@ -1777,7 +1777,7 @@
     "label": "Success rate CI95 high, Bear Robotics Servi, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_32f58c01c786"
+      "ref": "sb_c0ff128b4956"
     },
     "key": "sim.ci_hi|bear_servi|normal"
   },
@@ -1788,7 +1788,7 @@
     "label": "Median mission time, Bear Robotics Servi, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_32f58c01c786"
+      "ref": "sb_c0ff128b4956"
     },
     "key": "sim.mission_s|bear_servi|normal"
   },
@@ -1799,7 +1799,7 @@
     "label": "Near-misses per mission, Bear Robotics Servi, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_32f58c01c786"
+      "ref": "sb_c0ff128b4956"
     },
     "key": "sim.near_miss|bear_servi|normal"
   },
@@ -1810,7 +1810,7 @@
     "label": "Safety stops per mission, Bear Robotics Servi, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_32f58c01c786"
+      "ref": "sb_c0ff128b4956"
     },
     "key": "sim.stops|bear_servi|normal"
   },
@@ -1821,7 +1821,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Bear Robotics Servi, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_32f58c01c786"
+      "ref": "sb_c0ff128b4956"
     },
     "key": "sim.min_gap_m|bear_servi|normal"
   },
@@ -1832,7 +1832,7 @@
     "label": "Unsuccessful episodes (collision), Bear Robotics Servi, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_32f58c01c786"
+      "ref": "sb_c0ff128b4956"
     },
     "key": "sim.fail|bear_servi|normal|collision"
   },
@@ -1843,7 +1843,7 @@
     "label": "Success rate, Bear Robotics Servi, normal traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_1db01426f956"
+      "ref": "sb_3a7e89cd5e0d"
     },
     "key": "sim.success|bear_servi|normal|optimistic"
   },
@@ -1854,7 +1854,7 @@
     "label": "Episodes simulated, Bear Robotics Servi, normal traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_1db01426f956"
+      "ref": "sb_3a7e89cd5e0d"
     },
     "key": "sim.n|bear_servi|normal|optimistic"
   },
@@ -1865,7 +1865,7 @@
     "label": "Success rate, Bear Robotics Servi, peak traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d4a855fc7576"
+      "ref": "sb_8a25748cc473"
     },
     "key": "sim.success|bear_servi|peak|conservative"
   },
@@ -1876,7 +1876,7 @@
     "label": "Episodes simulated, Bear Robotics Servi, peak traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d4a855fc7576"
+      "ref": "sb_8a25748cc473"
     },
     "key": "sim.n|bear_servi|peak|conservative"
   },
@@ -1887,7 +1887,7 @@
     "label": "Success rate, Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_32be9cf2a263"
+      "ref": "sb_65a828a0d2c4"
     },
     "key": "sim.success|bear_servi|peak|nominal"
   },
@@ -1898,7 +1898,7 @@
     "label": "Episodes simulated, Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_32be9cf2a263"
+      "ref": "sb_65a828a0d2c4"
     },
     "key": "sim.n|bear_servi|peak|nominal"
   },
@@ -1909,7 +1909,7 @@
     "label": "Success rate CI95 low, Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_32be9cf2a263"
+      "ref": "sb_65a828a0d2c4"
     },
     "key": "sim.ci_lo|bear_servi|peak"
   },
@@ -1920,7 +1920,7 @@
     "label": "Success rate CI95 high, Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_32be9cf2a263"
+      "ref": "sb_65a828a0d2c4"
     },
     "key": "sim.ci_hi|bear_servi|peak"
   },
@@ -1931,7 +1931,7 @@
     "label": "Median mission time, Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_32be9cf2a263"
+      "ref": "sb_65a828a0d2c4"
     },
     "key": "sim.mission_s|bear_servi|peak"
   },
@@ -1942,7 +1942,7 @@
     "label": "Near-misses per mission, Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_32be9cf2a263"
+      "ref": "sb_65a828a0d2c4"
     },
     "key": "sim.near_miss|bear_servi|peak"
   },
@@ -1953,7 +1953,7 @@
     "label": "Safety stops per mission, Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_32be9cf2a263"
+      "ref": "sb_65a828a0d2c4"
     },
     "key": "sim.stops|bear_servi|peak"
   },
@@ -1964,7 +1964,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_32be9cf2a263"
+      "ref": "sb_65a828a0d2c4"
     },
     "key": "sim.min_gap_m|bear_servi|peak"
   },
@@ -1975,7 +1975,7 @@
     "label": "Unsuccessful episodes (blocked timeout), Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_32be9cf2a263"
+      "ref": "sb_65a828a0d2c4"
     },
     "key": "sim.fail|bear_servi|peak|blocked_timeout"
   },
@@ -1986,7 +1986,7 @@
     "label": "Unsuccessful episodes (collision), Bear Robotics Servi, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_32be9cf2a263"
+      "ref": "sb_65a828a0d2c4"
     },
     "key": "sim.fail|bear_servi|peak|collision"
   },
@@ -1997,7 +1997,7 @@
     "label": "Success rate, Bear Robotics Servi, peak traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_72cce149076d"
+      "ref": "sb_faa467622c63"
     },
     "key": "sim.success|bear_servi|peak|optimistic"
   },
@@ -2008,7 +2008,7 @@
     "label": "Episodes simulated, Bear Robotics Servi, peak traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_72cce149076d"
+      "ref": "sb_faa467622c63"
     },
     "key": "sim.n|bear_servi|peak|optimistic"
   },
@@ -2591,7 +2591,7 @@
     "label": "Success rate, Pudu Robotics KettyBot, quiet traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_8233589f1bf0"
+      "ref": "sb_ec39f1999209"
     },
     "key": "sim.success|pudu_kettybot|quiet|conservative"
   },
@@ -2602,7 +2602,7 @@
     "label": "Episodes simulated, Pudu Robotics KettyBot, quiet traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_8233589f1bf0"
+      "ref": "sb_ec39f1999209"
     },
     "key": "sim.n|pudu_kettybot|quiet|conservative"
   },
@@ -2613,7 +2613,7 @@
     "label": "Success rate, Pudu Robotics KettyBot, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_fcb635af5f24"
+      "ref": "sb_569ad7e85c40"
     },
     "key": "sim.success|pudu_kettybot|quiet|nominal"
   },
@@ -2624,7 +2624,7 @@
     "label": "Episodes simulated, Pudu Robotics KettyBot, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_fcb635af5f24"
+      "ref": "sb_569ad7e85c40"
     },
     "key": "sim.n|pudu_kettybot|quiet|nominal"
   },
@@ -2635,7 +2635,7 @@
     "label": "Success rate CI95 low, Pudu Robotics KettyBot, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_fcb635af5f24"
+      "ref": "sb_569ad7e85c40"
     },
     "key": "sim.ci_lo|pudu_kettybot|quiet"
   },
@@ -2646,7 +2646,7 @@
     "label": "Success rate CI95 high, Pudu Robotics KettyBot, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_fcb635af5f24"
+      "ref": "sb_569ad7e85c40"
     },
     "key": "sim.ci_hi|pudu_kettybot|quiet"
   },
@@ -2657,7 +2657,7 @@
     "label": "Median mission time, Pudu Robotics KettyBot, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_fcb635af5f24"
+      "ref": "sb_569ad7e85c40"
     },
     "key": "sim.mission_s|pudu_kettybot|quiet"
   },
@@ -2668,7 +2668,7 @@
     "label": "Near-misses per mission, Pudu Robotics KettyBot, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_fcb635af5f24"
+      "ref": "sb_569ad7e85c40"
     },
     "key": "sim.near_miss|pudu_kettybot|quiet"
   },
@@ -2679,7 +2679,7 @@
     "label": "Safety stops per mission, Pudu Robotics KettyBot, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_fcb635af5f24"
+      "ref": "sb_569ad7e85c40"
     },
     "key": "sim.stops|pudu_kettybot|quiet"
   },
@@ -2690,7 +2690,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Pudu Robotics KettyBot, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_fcb635af5f24"
+      "ref": "sb_569ad7e85c40"
     },
     "key": "sim.min_gap_m|pudu_kettybot|quiet"
   },
@@ -2701,7 +2701,7 @@
     "label": "Success rate, Pudu Robotics KettyBot, quiet traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_66f267bd7c2d"
+      "ref": "sb_cb3f2f090ffc"
     },
     "key": "sim.success|pudu_kettybot|quiet|optimistic"
   },
@@ -2712,7 +2712,7 @@
     "label": "Episodes simulated, Pudu Robotics KettyBot, quiet traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_66f267bd7c2d"
+      "ref": "sb_cb3f2f090ffc"
     },
     "key": "sim.n|pudu_kettybot|quiet|optimistic"
   },
@@ -2723,7 +2723,7 @@
     "label": "Success rate, Pudu Robotics KettyBot, normal traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_f96c7e949eff"
+      "ref": "sb_c1fae27bf0a8"
     },
     "key": "sim.success|pudu_kettybot|normal|conservative"
   },
@@ -2734,7 +2734,7 @@
     "label": "Episodes simulated, Pudu Robotics KettyBot, normal traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_f96c7e949eff"
+      "ref": "sb_c1fae27bf0a8"
     },
     "key": "sim.n|pudu_kettybot|normal|conservative"
   },
@@ -2745,7 +2745,7 @@
     "label": "Success rate, Pudu Robotics KettyBot, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_816a16f412c5"
+      "ref": "sb_d8b3b4d3a3c5"
     },
     "key": "sim.success|pudu_kettybot|normal|nominal"
   },
@@ -2756,7 +2756,7 @@
     "label": "Episodes simulated, Pudu Robotics KettyBot, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_816a16f412c5"
+      "ref": "sb_d8b3b4d3a3c5"
     },
     "key": "sim.n|pudu_kettybot|normal|nominal"
   },
@@ -2767,7 +2767,7 @@
     "label": "Success rate CI95 low, Pudu Robotics KettyBot, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_816a16f412c5"
+      "ref": "sb_d8b3b4d3a3c5"
     },
     "key": "sim.ci_lo|pudu_kettybot|normal"
   },
@@ -2778,7 +2778,7 @@
     "label": "Success rate CI95 high, Pudu Robotics KettyBot, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_816a16f412c5"
+      "ref": "sb_d8b3b4d3a3c5"
     },
     "key": "sim.ci_hi|pudu_kettybot|normal"
   },
@@ -2789,7 +2789,7 @@
     "label": "Median mission time, Pudu Robotics KettyBot, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_816a16f412c5"
+      "ref": "sb_d8b3b4d3a3c5"
     },
     "key": "sim.mission_s|pudu_kettybot|normal"
   },
@@ -2800,7 +2800,7 @@
     "label": "Near-misses per mission, Pudu Robotics KettyBot, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_816a16f412c5"
+      "ref": "sb_d8b3b4d3a3c5"
     },
     "key": "sim.near_miss|pudu_kettybot|normal"
   },
@@ -2811,7 +2811,7 @@
     "label": "Safety stops per mission, Pudu Robotics KettyBot, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_816a16f412c5"
+      "ref": "sb_d8b3b4d3a3c5"
     },
     "key": "sim.stops|pudu_kettybot|normal"
   },
@@ -2822,7 +2822,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Pudu Robotics KettyBot, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_816a16f412c5"
+      "ref": "sb_d8b3b4d3a3c5"
     },
     "key": "sim.min_gap_m|pudu_kettybot|normal"
   },
@@ -2833,7 +2833,7 @@
     "label": "Unsuccessful episodes (collision), Pudu Robotics KettyBot, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_816a16f412c5"
+      "ref": "sb_d8b3b4d3a3c5"
     },
     "key": "sim.fail|pudu_kettybot|normal|collision"
   },
@@ -2844,7 +2844,7 @@
     "label": "Success rate, Pudu Robotics KettyBot, normal traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_194838a95e6c"
+      "ref": "sb_284c214b6e25"
     },
     "key": "sim.success|pudu_kettybot|normal|optimistic"
   },
@@ -2855,7 +2855,7 @@
     "label": "Episodes simulated, Pudu Robotics KettyBot, normal traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_194838a95e6c"
+      "ref": "sb_284c214b6e25"
     },
     "key": "sim.n|pudu_kettybot|normal|optimistic"
   },
@@ -2866,7 +2866,7 @@
     "label": "Success rate, Pudu Robotics KettyBot, peak traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_c937c9e505c9"
+      "ref": "sb_908941eab776"
     },
     "key": "sim.success|pudu_kettybot|peak|conservative"
   },
@@ -2877,7 +2877,7 @@
     "label": "Episodes simulated, Pudu Robotics KettyBot, peak traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_c937c9e505c9"
+      "ref": "sb_908941eab776"
     },
     "key": "sim.n|pudu_kettybot|peak|conservative"
   },
@@ -2888,7 +2888,7 @@
     "label": "Success rate, Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_11ee6f0782f4"
+      "ref": "sb_fa5d213d320f"
     },
     "key": "sim.success|pudu_kettybot|peak|nominal"
   },
@@ -2899,7 +2899,7 @@
     "label": "Episodes simulated, Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_11ee6f0782f4"
+      "ref": "sb_fa5d213d320f"
     },
     "key": "sim.n|pudu_kettybot|peak|nominal"
   },
@@ -2910,7 +2910,7 @@
     "label": "Success rate CI95 low, Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_11ee6f0782f4"
+      "ref": "sb_fa5d213d320f"
     },
     "key": "sim.ci_lo|pudu_kettybot|peak"
   },
@@ -2921,7 +2921,7 @@
     "label": "Success rate CI95 high, Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_11ee6f0782f4"
+      "ref": "sb_fa5d213d320f"
     },
     "key": "sim.ci_hi|pudu_kettybot|peak"
   },
@@ -2932,7 +2932,7 @@
     "label": "Median mission time, Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_11ee6f0782f4"
+      "ref": "sb_fa5d213d320f"
     },
     "key": "sim.mission_s|pudu_kettybot|peak"
   },
@@ -2943,7 +2943,7 @@
     "label": "Near-misses per mission, Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_11ee6f0782f4"
+      "ref": "sb_fa5d213d320f"
     },
     "key": "sim.near_miss|pudu_kettybot|peak"
   },
@@ -2954,7 +2954,7 @@
     "label": "Safety stops per mission, Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_11ee6f0782f4"
+      "ref": "sb_fa5d213d320f"
     },
     "key": "sim.stops|pudu_kettybot|peak"
   },
@@ -2965,7 +2965,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_11ee6f0782f4"
+      "ref": "sb_fa5d213d320f"
     },
     "key": "sim.min_gap_m|pudu_kettybot|peak"
   },
@@ -2976,7 +2976,7 @@
     "label": "Unsuccessful episodes (blocked timeout), Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_11ee6f0782f4"
+      "ref": "sb_fa5d213d320f"
     },
     "key": "sim.fail|pudu_kettybot|peak|blocked_timeout"
   },
@@ -2987,7 +2987,7 @@
     "label": "Unsuccessful episodes (collision), Pudu Robotics KettyBot, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_11ee6f0782f4"
+      "ref": "sb_fa5d213d320f"
     },
     "key": "sim.fail|pudu_kettybot|peak|collision"
   },
@@ -2998,7 +2998,7 @@
     "label": "Success rate, Pudu Robotics KettyBot, peak traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_37916d2b47fd"
+      "ref": "sb_e9784dfbe6b2"
     },
     "key": "sim.success|pudu_kettybot|peak|optimistic"
   },
@@ -3009,7 +3009,7 @@
     "label": "Episodes simulated, Pudu Robotics KettyBot, peak traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_37916d2b47fd"
+      "ref": "sb_e9784dfbe6b2"
     },
     "key": "sim.n|pudu_kettybot|peak|optimistic"
   },
@@ -3581,7 +3581,7 @@
     "label": "Success rate, Keenon Robotics W3, quiet traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_5ebd9f921581"
+      "ref": "sb_cbe53288c8ff"
     },
     "key": "sim.success|keenon_w3|quiet|conservative"
   },
@@ -3592,7 +3592,7 @@
     "label": "Episodes simulated, Keenon Robotics W3, quiet traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_5ebd9f921581"
+      "ref": "sb_cbe53288c8ff"
     },
     "key": "sim.n|keenon_w3|quiet|conservative"
   },
@@ -3603,7 +3603,7 @@
     "label": "Success rate, Keenon Robotics W3, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d2b53511b957"
+      "ref": "sb_ed15fc03efe4"
     },
     "key": "sim.success|keenon_w3|quiet|nominal"
   },
@@ -3614,7 +3614,7 @@
     "label": "Episodes simulated, Keenon Robotics W3, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d2b53511b957"
+      "ref": "sb_ed15fc03efe4"
     },
     "key": "sim.n|keenon_w3|quiet|nominal"
   },
@@ -3625,7 +3625,7 @@
     "label": "Success rate CI95 low, Keenon Robotics W3, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d2b53511b957"
+      "ref": "sb_ed15fc03efe4"
     },
     "key": "sim.ci_lo|keenon_w3|quiet"
   },
@@ -3636,7 +3636,7 @@
     "label": "Success rate CI95 high, Keenon Robotics W3, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d2b53511b957"
+      "ref": "sb_ed15fc03efe4"
     },
     "key": "sim.ci_hi|keenon_w3|quiet"
   },
@@ -3647,7 +3647,7 @@
     "label": "Median mission time, Keenon Robotics W3, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d2b53511b957"
+      "ref": "sb_ed15fc03efe4"
     },
     "key": "sim.mission_s|keenon_w3|quiet"
   },
@@ -3658,7 +3658,7 @@
     "label": "Near-misses per mission, Keenon Robotics W3, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d2b53511b957"
+      "ref": "sb_ed15fc03efe4"
     },
     "key": "sim.near_miss|keenon_w3|quiet"
   },
@@ -3669,7 +3669,7 @@
     "label": "Safety stops per mission, Keenon Robotics W3, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d2b53511b957"
+      "ref": "sb_ed15fc03efe4"
     },
     "key": "sim.stops|keenon_w3|quiet"
   },
@@ -3680,7 +3680,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Keenon Robotics W3, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d2b53511b957"
+      "ref": "sb_ed15fc03efe4"
     },
     "key": "sim.min_gap_m|keenon_w3|quiet"
   },
@@ -3691,7 +3691,7 @@
     "label": "Success rate, Keenon Robotics W3, quiet traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d729ed67dd11"
+      "ref": "sb_8eaa6a7a07c2"
     },
     "key": "sim.success|keenon_w3|quiet|optimistic"
   },
@@ -3702,7 +3702,7 @@
     "label": "Episodes simulated, Keenon Robotics W3, quiet traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d729ed67dd11"
+      "ref": "sb_8eaa6a7a07c2"
     },
     "key": "sim.n|keenon_w3|quiet|optimistic"
   },
@@ -3713,7 +3713,7 @@
     "label": "Success rate, Keenon Robotics W3, normal traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_61c46ec0af64"
+      "ref": "sb_8f90c5b1978c"
     },
     "key": "sim.success|keenon_w3|normal|conservative"
   },
@@ -3724,7 +3724,7 @@
     "label": "Episodes simulated, Keenon Robotics W3, normal traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_61c46ec0af64"
+      "ref": "sb_8f90c5b1978c"
     },
     "key": "sim.n|keenon_w3|normal|conservative"
   },
@@ -3735,7 +3735,7 @@
     "label": "Success rate, Keenon Robotics W3, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_47a26669243f"
+      "ref": "sb_5fe24c869732"
     },
     "key": "sim.success|keenon_w3|normal|nominal"
   },
@@ -3746,7 +3746,7 @@
     "label": "Episodes simulated, Keenon Robotics W3, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_47a26669243f"
+      "ref": "sb_5fe24c869732"
     },
     "key": "sim.n|keenon_w3|normal|nominal"
   },
@@ -3757,7 +3757,7 @@
     "label": "Success rate CI95 low, Keenon Robotics W3, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_47a26669243f"
+      "ref": "sb_5fe24c869732"
     },
     "key": "sim.ci_lo|keenon_w3|normal"
   },
@@ -3768,7 +3768,7 @@
     "label": "Success rate CI95 high, Keenon Robotics W3, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_47a26669243f"
+      "ref": "sb_5fe24c869732"
     },
     "key": "sim.ci_hi|keenon_w3|normal"
   },
@@ -3779,7 +3779,7 @@
     "label": "Median mission time, Keenon Robotics W3, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_47a26669243f"
+      "ref": "sb_5fe24c869732"
     },
     "key": "sim.mission_s|keenon_w3|normal"
   },
@@ -3790,7 +3790,7 @@
     "label": "Near-misses per mission, Keenon Robotics W3, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_47a26669243f"
+      "ref": "sb_5fe24c869732"
     },
     "key": "sim.near_miss|keenon_w3|normal"
   },
@@ -3801,7 +3801,7 @@
     "label": "Safety stops per mission, Keenon Robotics W3, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_47a26669243f"
+      "ref": "sb_5fe24c869732"
     },
     "key": "sim.stops|keenon_w3|normal"
   },
@@ -3812,7 +3812,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Keenon Robotics W3, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_47a26669243f"
+      "ref": "sb_5fe24c869732"
     },
     "key": "sim.min_gap_m|keenon_w3|normal"
   },
@@ -3823,7 +3823,7 @@
     "label": "Success rate, Keenon Robotics W3, normal traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_e285a50405f3"
+      "ref": "sb_91db9c44274c"
     },
     "key": "sim.success|keenon_w3|normal|optimistic"
   },
@@ -3834,7 +3834,7 @@
     "label": "Episodes simulated, Keenon Robotics W3, normal traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_e285a50405f3"
+      "ref": "sb_91db9c44274c"
     },
     "key": "sim.n|keenon_w3|normal|optimistic"
   },
@@ -3845,7 +3845,7 @@
     "label": "Success rate, Keenon Robotics W3, peak traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_9121f3fe6d23"
+      "ref": "sb_323ea21b2ba7"
     },
     "key": "sim.success|keenon_w3|peak|conservative"
   },
@@ -3856,7 +3856,7 @@
     "label": "Episodes simulated, Keenon Robotics W3, peak traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_9121f3fe6d23"
+      "ref": "sb_323ea21b2ba7"
     },
     "key": "sim.n|keenon_w3|peak|conservative"
   },
@@ -3867,7 +3867,7 @@
     "label": "Success rate, Keenon Robotics W3, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a6ff401274e6"
+      "ref": "sb_b3e9b3c5173e"
     },
     "key": "sim.success|keenon_w3|peak|nominal"
   },
@@ -3878,7 +3878,7 @@
     "label": "Episodes simulated, Keenon Robotics W3, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a6ff401274e6"
+      "ref": "sb_b3e9b3c5173e"
     },
     "key": "sim.n|keenon_w3|peak|nominal"
   },
@@ -3889,7 +3889,7 @@
     "label": "Success rate CI95 low, Keenon Robotics W3, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a6ff401274e6"
+      "ref": "sb_b3e9b3c5173e"
     },
     "key": "sim.ci_lo|keenon_w3|peak"
   },
@@ -3900,7 +3900,7 @@
     "label": "Success rate CI95 high, Keenon Robotics W3, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a6ff401274e6"
+      "ref": "sb_b3e9b3c5173e"
     },
     "key": "sim.ci_hi|keenon_w3|peak"
   },
@@ -3911,7 +3911,7 @@
     "label": "Median mission time, Keenon Robotics W3, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a6ff401274e6"
+      "ref": "sb_b3e9b3c5173e"
     },
     "key": "sim.mission_s|keenon_w3|peak"
   },
@@ -3922,7 +3922,7 @@
     "label": "Near-misses per mission, Keenon Robotics W3, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a6ff401274e6"
+      "ref": "sb_b3e9b3c5173e"
     },
     "key": "sim.near_miss|keenon_w3|peak"
   },
@@ -3933,7 +3933,7 @@
     "label": "Safety stops per mission, Keenon Robotics W3, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a6ff401274e6"
+      "ref": "sb_b3e9b3c5173e"
     },
     "key": "sim.stops|keenon_w3|peak"
   },
@@ -3944,7 +3944,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Keenon Robotics W3, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_a6ff401274e6"
+      "ref": "sb_b3e9b3c5173e"
     },
     "key": "sim.min_gap_m|keenon_w3|peak"
   },
@@ -3955,7 +3955,7 @@
     "label": "Success rate, Keenon Robotics W3, peak traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_78ce66ca7b50"
+      "ref": "sb_40938549beb6"
     },
     "key": "sim.success|keenon_w3|peak|optimistic"
   },
@@ -3966,7 +3966,7 @@
     "label": "Episodes simulated, Keenon Robotics W3, peak traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_78ce66ca7b50"
+      "ref": "sb_40938549beb6"
     },
     "key": "sim.n|keenon_w3|peak|optimistic"
   },
@@ -4538,7 +4538,7 @@
     "label": "Success rate, Keenon Robotics DINERBOT T9, quiet traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_3bc2a9c7de83"
+      "ref": "sb_c55dbd32c0f7"
     },
     "key": "sim.success|keenon_dinerbot_t9|quiet|conservative"
   },
@@ -4549,7 +4549,7 @@
     "label": "Episodes simulated, Keenon Robotics DINERBOT T9, quiet traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_3bc2a9c7de83"
+      "ref": "sb_c55dbd32c0f7"
     },
     "key": "sim.n|keenon_dinerbot_t9|quiet|conservative"
   },
@@ -4560,7 +4560,7 @@
     "label": "Success rate, Keenon Robotics DINERBOT T9, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_765cb6f48709"
+      "ref": "sb_579fe4285a5a"
     },
     "key": "sim.success|keenon_dinerbot_t9|quiet|nominal"
   },
@@ -4571,7 +4571,7 @@
     "label": "Episodes simulated, Keenon Robotics DINERBOT T9, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_765cb6f48709"
+      "ref": "sb_579fe4285a5a"
     },
     "key": "sim.n|keenon_dinerbot_t9|quiet|nominal"
   },
@@ -4582,7 +4582,7 @@
     "label": "Success rate CI95 low, Keenon Robotics DINERBOT T9, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_765cb6f48709"
+      "ref": "sb_579fe4285a5a"
     },
     "key": "sim.ci_lo|keenon_dinerbot_t9|quiet"
   },
@@ -4593,7 +4593,7 @@
     "label": "Success rate CI95 high, Keenon Robotics DINERBOT T9, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_765cb6f48709"
+      "ref": "sb_579fe4285a5a"
     },
     "key": "sim.ci_hi|keenon_dinerbot_t9|quiet"
   },
@@ -4604,7 +4604,7 @@
     "label": "Median mission time, Keenon Robotics DINERBOT T9, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_765cb6f48709"
+      "ref": "sb_579fe4285a5a"
     },
     "key": "sim.mission_s|keenon_dinerbot_t9|quiet"
   },
@@ -4615,7 +4615,7 @@
     "label": "Near-misses per mission, Keenon Robotics DINERBOT T9, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_765cb6f48709"
+      "ref": "sb_579fe4285a5a"
     },
     "key": "sim.near_miss|keenon_dinerbot_t9|quiet"
   },
@@ -4626,7 +4626,7 @@
     "label": "Safety stops per mission, Keenon Robotics DINERBOT T9, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_765cb6f48709"
+      "ref": "sb_579fe4285a5a"
     },
     "key": "sim.stops|keenon_dinerbot_t9|quiet"
   },
@@ -4637,7 +4637,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Keenon Robotics DINERBOT T9, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_765cb6f48709"
+      "ref": "sb_579fe4285a5a"
     },
     "key": "sim.min_gap_m|keenon_dinerbot_t9|quiet"
   },
@@ -4648,7 +4648,7 @@
     "label": "Success rate, Keenon Robotics DINERBOT T9, quiet traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_b333c272994a"
+      "ref": "sb_3f4e69595532"
     },
     "key": "sim.success|keenon_dinerbot_t9|quiet|optimistic"
   },
@@ -4659,7 +4659,7 @@
     "label": "Episodes simulated, Keenon Robotics DINERBOT T9, quiet traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_b333c272994a"
+      "ref": "sb_3f4e69595532"
     },
     "key": "sim.n|keenon_dinerbot_t9|quiet|optimistic"
   },
@@ -4670,7 +4670,7 @@
     "label": "Success rate, Keenon Robotics DINERBOT T9, normal traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_26803c956feb"
+      "ref": "sb_4785947f1f89"
     },
     "key": "sim.success|keenon_dinerbot_t9|normal|conservative"
   },
@@ -4681,7 +4681,7 @@
     "label": "Episodes simulated, Keenon Robotics DINERBOT T9, normal traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_26803c956feb"
+      "ref": "sb_4785947f1f89"
     },
     "key": "sim.n|keenon_dinerbot_t9|normal|conservative"
   },
@@ -4692,7 +4692,7 @@
     "label": "Success rate, Keenon Robotics DINERBOT T9, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_00fab14fa702"
+      "ref": "sb_c64b9c81df4e"
     },
     "key": "sim.success|keenon_dinerbot_t9|normal|nominal"
   },
@@ -4703,7 +4703,7 @@
     "label": "Episodes simulated, Keenon Robotics DINERBOT T9, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_00fab14fa702"
+      "ref": "sb_c64b9c81df4e"
     },
     "key": "sim.n|keenon_dinerbot_t9|normal|nominal"
   },
@@ -4714,7 +4714,7 @@
     "label": "Success rate CI95 low, Keenon Robotics DINERBOT T9, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_00fab14fa702"
+      "ref": "sb_c64b9c81df4e"
     },
     "key": "sim.ci_lo|keenon_dinerbot_t9|normal"
   },
@@ -4725,7 +4725,7 @@
     "label": "Success rate CI95 high, Keenon Robotics DINERBOT T9, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_00fab14fa702"
+      "ref": "sb_c64b9c81df4e"
     },
     "key": "sim.ci_hi|keenon_dinerbot_t9|normal"
   },
@@ -4736,7 +4736,7 @@
     "label": "Median mission time, Keenon Robotics DINERBOT T9, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_00fab14fa702"
+      "ref": "sb_c64b9c81df4e"
     },
     "key": "sim.mission_s|keenon_dinerbot_t9|normal"
   },
@@ -4747,7 +4747,7 @@
     "label": "Near-misses per mission, Keenon Robotics DINERBOT T9, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_00fab14fa702"
+      "ref": "sb_c64b9c81df4e"
     },
     "key": "sim.near_miss|keenon_dinerbot_t9|normal"
   },
@@ -4758,7 +4758,7 @@
     "label": "Safety stops per mission, Keenon Robotics DINERBOT T9, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_00fab14fa702"
+      "ref": "sb_c64b9c81df4e"
     },
     "key": "sim.stops|keenon_dinerbot_t9|normal"
   },
@@ -4769,7 +4769,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Keenon Robotics DINERBOT T9, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_00fab14fa702"
+      "ref": "sb_c64b9c81df4e"
     },
     "key": "sim.min_gap_m|keenon_dinerbot_t9|normal"
   },
@@ -4780,7 +4780,7 @@
     "label": "Unsuccessful episodes (collision), Keenon Robotics DINERBOT T9, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_00fab14fa702"
+      "ref": "sb_c64b9c81df4e"
     },
     "key": "sim.fail|keenon_dinerbot_t9|normal|collision"
   },
@@ -4791,7 +4791,7 @@
     "label": "Success rate, Keenon Robotics DINERBOT T9, normal traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_efc1fa3c1770"
+      "ref": "sb_1ff06d056f2c"
     },
     "key": "sim.success|keenon_dinerbot_t9|normal|optimistic"
   },
@@ -4802,7 +4802,7 @@
     "label": "Episodes simulated, Keenon Robotics DINERBOT T9, normal traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_efc1fa3c1770"
+      "ref": "sb_1ff06d056f2c"
     },
     "key": "sim.n|keenon_dinerbot_t9|normal|optimistic"
   },
@@ -4813,7 +4813,7 @@
     "label": "Success rate, Keenon Robotics DINERBOT T9, peak traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_33ec807bc9a0"
+      "ref": "sb_9eac456452cf"
     },
     "key": "sim.success|keenon_dinerbot_t9|peak|conservative"
   },
@@ -4824,7 +4824,7 @@
     "label": "Episodes simulated, Keenon Robotics DINERBOT T9, peak traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_33ec807bc9a0"
+      "ref": "sb_9eac456452cf"
     },
     "key": "sim.n|keenon_dinerbot_t9|peak|conservative"
   },
@@ -4835,7 +4835,7 @@
     "label": "Success rate, Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_55222ab9a89d"
+      "ref": "sb_0806d0cb5c4c"
     },
     "key": "sim.success|keenon_dinerbot_t9|peak|nominal"
   },
@@ -4846,7 +4846,7 @@
     "label": "Episodes simulated, Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_55222ab9a89d"
+      "ref": "sb_0806d0cb5c4c"
     },
     "key": "sim.n|keenon_dinerbot_t9|peak|nominal"
   },
@@ -4857,7 +4857,7 @@
     "label": "Success rate CI95 low, Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_55222ab9a89d"
+      "ref": "sb_0806d0cb5c4c"
     },
     "key": "sim.ci_lo|keenon_dinerbot_t9|peak"
   },
@@ -4868,7 +4868,7 @@
     "label": "Success rate CI95 high, Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_55222ab9a89d"
+      "ref": "sb_0806d0cb5c4c"
     },
     "key": "sim.ci_hi|keenon_dinerbot_t9|peak"
   },
@@ -4879,7 +4879,7 @@
     "label": "Median mission time, Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_55222ab9a89d"
+      "ref": "sb_0806d0cb5c4c"
     },
     "key": "sim.mission_s|keenon_dinerbot_t9|peak"
   },
@@ -4890,7 +4890,7 @@
     "label": "Near-misses per mission, Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_55222ab9a89d"
+      "ref": "sb_0806d0cb5c4c"
     },
     "key": "sim.near_miss|keenon_dinerbot_t9|peak"
   },
@@ -4901,7 +4901,7 @@
     "label": "Safety stops per mission, Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_55222ab9a89d"
+      "ref": "sb_0806d0cb5c4c"
     },
     "key": "sim.stops|keenon_dinerbot_t9|peak"
   },
@@ -4912,7 +4912,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_55222ab9a89d"
+      "ref": "sb_0806d0cb5c4c"
     },
     "key": "sim.min_gap_m|keenon_dinerbot_t9|peak"
   },
@@ -4923,7 +4923,7 @@
     "label": "Unsuccessful episodes (blocked timeout), Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_55222ab9a89d"
+      "ref": "sb_0806d0cb5c4c"
     },
     "key": "sim.fail|keenon_dinerbot_t9|peak|blocked_timeout"
   },
@@ -4934,7 +4934,7 @@
     "label": "Unsuccessful episodes (collision), Keenon Robotics DINERBOT T9, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_55222ab9a89d"
+      "ref": "sb_0806d0cb5c4c"
     },
     "key": "sim.fail|keenon_dinerbot_t9|peak|collision"
   },
@@ -4945,7 +4945,7 @@
     "label": "Success rate, Keenon Robotics DINERBOT T9, peak traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_f673be977fba"
+      "ref": "sb_d52a206e77b3"
     },
     "key": "sim.success|keenon_dinerbot_t9|peak|optimistic"
   },
@@ -4956,7 +4956,7 @@
     "label": "Episodes simulated, Keenon Robotics DINERBOT T9, peak traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_f673be977fba"
+      "ref": "sb_d52a206e77b3"
     },
     "key": "sim.n|keenon_dinerbot_t9|peak|optimistic"
   },
@@ -5528,7 +5528,7 @@
     "label": "Success rate, Pudu Robotics T300, quiet traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_4e9b0ea7d6e0"
+      "ref": "sb_74398a8f2588"
     },
     "key": "sim.success|pudu_t300|quiet|conservative"
   },
@@ -5539,7 +5539,7 @@
     "label": "Episodes simulated, Pudu Robotics T300, quiet traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_4e9b0ea7d6e0"
+      "ref": "sb_74398a8f2588"
     },
     "key": "sim.n|pudu_t300|quiet|conservative"
   },
@@ -5550,7 +5550,7 @@
     "label": "Success rate, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_14767a360968"
+      "ref": "sb_9c3fcfc771b1"
     },
     "key": "sim.success|pudu_t300|quiet|nominal"
   },
@@ -5561,7 +5561,7 @@
     "label": "Episodes simulated, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_14767a360968"
+      "ref": "sb_9c3fcfc771b1"
     },
     "key": "sim.n|pudu_t300|quiet|nominal"
   },
@@ -5572,7 +5572,7 @@
     "label": "Success rate CI95 low, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_14767a360968"
+      "ref": "sb_9c3fcfc771b1"
     },
     "key": "sim.ci_lo|pudu_t300|quiet"
   },
@@ -5583,7 +5583,7 @@
     "label": "Success rate CI95 high, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_14767a360968"
+      "ref": "sb_9c3fcfc771b1"
     },
     "key": "sim.ci_hi|pudu_t300|quiet"
   },
@@ -5594,7 +5594,7 @@
     "label": "Median mission time, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_14767a360968"
+      "ref": "sb_9c3fcfc771b1"
     },
     "key": "sim.mission_s|pudu_t300|quiet"
   },
@@ -5605,7 +5605,7 @@
     "label": "Near-misses per mission, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_14767a360968"
+      "ref": "sb_9c3fcfc771b1"
     },
     "key": "sim.near_miss|pudu_t300|quiet"
   },
@@ -5616,7 +5616,7 @@
     "label": "Safety stops per mission, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_14767a360968"
+      "ref": "sb_9c3fcfc771b1"
     },
     "key": "sim.stops|pudu_t300|quiet"
   },
@@ -5627,7 +5627,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Pudu Robotics T300, quiet traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_14767a360968"
+      "ref": "sb_9c3fcfc771b1"
     },
     "key": "sim.min_gap_m|pudu_t300|quiet"
   },
@@ -5638,7 +5638,7 @@
     "label": "Success rate, Pudu Robotics T300, quiet traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_70c3e78b9785"
+      "ref": "sb_f519c9bab8eb"
     },
     "key": "sim.success|pudu_t300|quiet|optimistic"
   },
@@ -5649,7 +5649,7 @@
     "label": "Episodes simulated, Pudu Robotics T300, quiet traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_70c3e78b9785"
+      "ref": "sb_f519c9bab8eb"
     },
     "key": "sim.n|pudu_t300|quiet|optimistic"
   },
@@ -5660,7 +5660,7 @@
     "label": "Success rate, Pudu Robotics T300, normal traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_c455f4561ac5"
+      "ref": "sb_0a9e7b27f04c"
     },
     "key": "sim.success|pudu_t300|normal|conservative"
   },
@@ -5671,7 +5671,7 @@
     "label": "Episodes simulated, Pudu Robotics T300, normal traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_c455f4561ac5"
+      "ref": "sb_0a9e7b27f04c"
     },
     "key": "sim.n|pudu_t300|normal|conservative"
   },
@@ -5682,7 +5682,7 @@
     "label": "Success rate, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_42dcd6e93645"
+      "ref": "sb_603de7481be1"
     },
     "key": "sim.success|pudu_t300|normal|nominal"
   },
@@ -5693,7 +5693,7 @@
     "label": "Episodes simulated, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_42dcd6e93645"
+      "ref": "sb_603de7481be1"
     },
     "key": "sim.n|pudu_t300|normal|nominal"
   },
@@ -5704,7 +5704,7 @@
     "label": "Success rate CI95 low, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_42dcd6e93645"
+      "ref": "sb_603de7481be1"
     },
     "key": "sim.ci_lo|pudu_t300|normal"
   },
@@ -5715,7 +5715,7 @@
     "label": "Success rate CI95 high, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_42dcd6e93645"
+      "ref": "sb_603de7481be1"
     },
     "key": "sim.ci_hi|pudu_t300|normal"
   },
@@ -5726,7 +5726,7 @@
     "label": "Median mission time, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_42dcd6e93645"
+      "ref": "sb_603de7481be1"
     },
     "key": "sim.mission_s|pudu_t300|normal"
   },
@@ -5737,7 +5737,7 @@
     "label": "Near-misses per mission, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_42dcd6e93645"
+      "ref": "sb_603de7481be1"
     },
     "key": "sim.near_miss|pudu_t300|normal"
   },
@@ -5748,7 +5748,7 @@
     "label": "Safety stops per mission, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_42dcd6e93645"
+      "ref": "sb_603de7481be1"
     },
     "key": "sim.stops|pudu_t300|normal"
   },
@@ -5759,7 +5759,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_42dcd6e93645"
+      "ref": "sb_603de7481be1"
     },
     "key": "sim.min_gap_m|pudu_t300|normal"
   },
@@ -5770,7 +5770,7 @@
     "label": "Unsuccessful episodes (collision), Pudu Robotics T300, normal traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_42dcd6e93645"
+      "ref": "sb_603de7481be1"
     },
     "key": "sim.fail|pudu_t300|normal|collision"
   },
@@ -5781,7 +5781,7 @@
     "label": "Success rate, Pudu Robotics T300, normal traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_f5532b6af279"
+      "ref": "sb_c96226b65141"
     },
     "key": "sim.success|pudu_t300|normal|optimistic"
   },
@@ -5792,7 +5792,7 @@
     "label": "Episodes simulated, Pudu Robotics T300, normal traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_f5532b6af279"
+      "ref": "sb_c96226b65141"
     },
     "key": "sim.n|pudu_t300|normal|optimistic"
   },
@@ -5803,7 +5803,7 @@
     "label": "Success rate, Pudu Robotics T300, peak traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_aa83abd3b65a"
+      "ref": "sb_8249de06ad1f"
     },
     "key": "sim.success|pudu_t300|peak|conservative"
   },
@@ -5814,7 +5814,7 @@
     "label": "Episodes simulated, Pudu Robotics T300, peak traffic, conservative geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_aa83abd3b65a"
+      "ref": "sb_8249de06ad1f"
     },
     "key": "sim.n|pudu_t300|peak|conservative"
   },
@@ -5825,7 +5825,7 @@
     "label": "Success rate, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_4b9bff155af5"
+      "ref": "sb_6ac29fd4afbf"
     },
     "key": "sim.success|pudu_t300|peak|nominal"
   },
@@ -5836,7 +5836,7 @@
     "label": "Episodes simulated, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_4b9bff155af5"
+      "ref": "sb_6ac29fd4afbf"
     },
     "key": "sim.n|pudu_t300|peak|nominal"
   },
@@ -5847,7 +5847,7 @@
     "label": "Success rate CI95 low, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_4b9bff155af5"
+      "ref": "sb_6ac29fd4afbf"
     },
     "key": "sim.ci_lo|pudu_t300|peak"
   },
@@ -5858,7 +5858,7 @@
     "label": "Success rate CI95 high, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_4b9bff155af5"
+      "ref": "sb_6ac29fd4afbf"
     },
     "key": "sim.ci_hi|pudu_t300|peak"
   },
@@ -5869,7 +5869,7 @@
     "label": "Median mission time, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_4b9bff155af5"
+      "ref": "sb_6ac29fd4afbf"
     },
     "key": "sim.mission_s|pudu_t300|peak"
   },
@@ -5880,7 +5880,7 @@
     "label": "Near-misses per mission, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_4b9bff155af5"
+      "ref": "sb_6ac29fd4afbf"
     },
     "key": "sim.near_miss|pudu_t300|peak"
   },
@@ -5891,7 +5891,7 @@
     "label": "Safety stops per mission, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_4b9bff155af5"
+      "ref": "sb_6ac29fd4afbf"
     },
     "key": "sim.stops|pudu_t300|peak"
   },
@@ -5902,7 +5902,7 @@
     "label": "Median smallest robot-to-obstacle gap per episode, Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_4b9bff155af5"
+      "ref": "sb_6ac29fd4afbf"
     },
     "key": "sim.min_gap_m|pudu_t300|peak"
   },
@@ -5913,7 +5913,7 @@
     "label": "Unsuccessful episodes (blocked timeout), Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_4b9bff155af5"
+      "ref": "sb_6ac29fd4afbf"
     },
     "key": "sim.fail|pudu_t300|peak|blocked_timeout"
   },
@@ -5924,7 +5924,7 @@
     "label": "Unsuccessful episodes (collision), Pudu Robotics T300, peak traffic, nominal geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_4b9bff155af5"
+      "ref": "sb_6ac29fd4afbf"
     },
     "key": "sim.fail|pudu_t300|peak|collision"
   },
@@ -5935,7 +5935,7 @@
     "label": "Success rate, Pudu Robotics T300, peak traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d0b7a3db74ce"
+      "ref": "sb_72e2536076f9"
     },
     "key": "sim.success|pudu_t300|peak|optimistic"
   },
@@ -5946,7 +5946,7 @@
     "label": "Episodes simulated, Pudu Robotics T300, peak traffic, optimistic geometry (simulation-based estimate)",
     "origin": {
       "type": "sim_batch",
-      "ref": "sb_d0b7a3db74ce"
+      "ref": "sb_72e2536076f9"
     },
     "key": "sim.n|pudu_t300|peak|optimistic"
   },

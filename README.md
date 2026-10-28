@@ -36,6 +36,7 @@ Cafés, restaurants, clinics and small warehouses are being sold service robots 
 | Go/no-go gate (scan to occupancy) | **GO** on reference rooms and on a real room | `docs/GATE.md` |
 | Robot catalog | 12 real robots, every numeric spec backed by a verbatim quote from its source page | `catalog/README.md` |
 | Live robot research | Tavily Search + Extract + Nemotron extraction: 129 fields validated, 60 rejected by the quote validator | `catalog/README.md` |
+| **Nemotron on Nebius Token Factory**, 3 full reference checks | 90 live calls (39 Super, 51 Ultra), 0 failed, median 2.5 s / 6.9 s per call, about 0.58 USD at list price | `docs/PROOF.md` |
 | Fact-checked reports | 100% of numbers in published Clearance Reports carry a valid fact tag | `docs/EVAL.md` |
 | Automated tests | 2,700+ Python tests, 83 web tests, 94 Swift tests, all green in CI | GitHub Actions |
 
@@ -63,15 +64,49 @@ Tavily is load-bearing in two places:
 
 ## Architecture
 
+```mermaid
+flowchart LR
+    subgraph Devices["📱 On site"]
+        IOS["iPhone<br/>ARKit scan · AR replay"]
+        OBS["Observer phones<br/>on-device face blur"]
+        WEB["Web console<br/>twin editor · report"]
+    end
+
+    API{{"Clearance API<br/>FastAPI · scoped tokens"}}
+
+    subgraph Nebius["☁️ Nebius"]
+        TF["Token Factory<br/>Nemotron Nano · Super · Ultra"]
+        COS["AI Cloud GPU<br/>Cosmos Reason 2 (vLLM)"]
+        JOBS["Serverless Jobs<br/>recon · simulation shards"]
+        OS[("Object Storage<br/>captures · twins · episodes")]
+    end
+
+    TAV["🔎 Tavily<br/>robot specs · market data"]
+
+    IOS --> API
+    OBS --> API
+    WEB <--> API
+    API --> TF
+    API --> COS
+    API --> JOBS
+    API --> OS
+    API --> TAV
 ```
- iPhone (ARKit scan, AR replay) ─┐                 ┌─ Nebius Token Factory: Nemotron Nano / Super / Ultra
- Android observers (blurred) ────┼─► Clearance API ┼─ Nebius AI Cloud: Cosmos Reason 2 (vLLM), GPU recon jobs
- Web console + twin editor ──────┘   (FastAPI)     ├─ Serverless Jobs: simulation shards
-                                                   ├─ Object Storage: captures, twins, episodes
-                                                   └─ Tavily: robot specs and market data
- capture → J1 ingest → J2 depth + fusion → occupancy twin → editor → feasibility → Monte Carlo
-        → Nemotron investigation loop → layout optimizer → code verdicts → facts → Clearance Report → AR replay
+
+```mermaid
+flowchart LR
+    A["Capture"] --> B["Depth + fusion"] --> C["2.5 cm occupancy twin"] --> D["Twin editor"]
+    D --> E["Feasibility<br/>3 geometry bounds"] --> F["Monte Carlo<br/>with pedestrians"]
+    F --> G["Nemotron<br/>investigation loop"] --> H["Layout optimizer"]
+    H --> I["Code verdicts"] --> J["Facts pack"] --> K["Clearance Report<br/>fact-checked"] --> L["AR replay"]
+
+    classDef model fill:#76b900,stroke:#4a7a00,color:#fff
+    classDef code fill:#1f6feb,stroke:#0b3d91,color:#fff
+    class G,K model
+    class E,F,I,J code
 ```
+
+Green steps are Nemotron on Nebius Token Factory; blue steps are deterministic code that decides every number and verdict.
 
 Details: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), data contracts in [`clearance_core/schemas.py`](clearance_core/schemas.py) and [`schemas/`](schemas/).
 
@@ -91,7 +126,7 @@ Open http://localhost:8000. Without keys, Clearance runs in offline mode with a 
 
 **Scan a real room:** create a site in the console, print the marker (or open `/screen-marker.html` on a second phone and lay it flat), join with the iPhone app through the site QR code, scan, then place stops in the editor and press **Run Clearance check**.
 
-**Reproduce the proof:** `python scripts/release_proof.py --fresh-usage` re-runs the reference checks live and rebuilds `docs/PROOF.md`.
+**Reproduce the proof:** `python scripts/release_proof.py --require-provider token_factory --fresh-usage` re-runs the reference checks live on Nebius Token Factory and rebuilds `docs/PROOF.md`.
 
 ## Repository
 

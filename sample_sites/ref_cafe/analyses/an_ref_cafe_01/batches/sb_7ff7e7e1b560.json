@@ -1,0 +1,43 @@
+{
+  "batch_id": "sb_7ff7e7e1b560",
+  "twin_id": "twin_ref_cafe_v1",
+  "twin_version": 1,
+  "robot_id": "bear_servi",
+  "task": {
+    "type": "delivery",
+    "sequence": [
+      "DOCK",
+      "PICKUP",
+      "T1",
+      "T3",
+      "T5",
+      "DOCK"
+    ]
+  },
+  "density": "peak",
+  "geometry_bound": "conservative",
+  "n_episodes": 40,
+  "seed_base": 1000,
+  "code_version": "5e14e66+sim-d77ef3d9a1",
+  "results": {
+    "success_rate": 0.725,
+    "min_gap_m": 0.031549999999999995,
+    "ci95": [
+      0.5716474916687543,
+      0.8389214656685692
+    ],
+    "median_mission_s": 118.2,
+    "near_miss_per_mission": 2.3,
+    "stops_per_mission": 5.15,
+    "fail_reasons": {
+      "no_path_static": 10,
+      "blocked_timeout": 0,
+      "collision": 1
+    },
+    "n_success": 29,
+    "n_episodes": 40
+  },
+  "episodes_uri": null,
+  "bottleneck_uri": null,
+  "wall_time_s": 396.078
+}
