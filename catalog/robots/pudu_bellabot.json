@@ -1,0 +1,94 @@
+{
+  "robot_id": "pudu_bellabot",
+  "class": "A_service",
+  "vendor": "Pudu Robotics",
+  "model": "BellaBot",
+  "footprint_polygon_m": [
+    [
+      0.2825,
+      0.2685
+    ],
+    [
+      -0.2825,
+      0.2685
+    ],
+    [
+      -0.2825,
+      -0.2685
+    ],
+    [
+      0.2825,
+      -0.2685
+    ]
+  ],
+  "footprint_approx": true,
+  "height_m": 1.29,
+  "drive": "diff_drive",
+  "in_place_rotation": true,
+  "min_turn_radius_m": 0.0,
+  "max_speed_mps": 1.2,
+  "nominal_speed_mps": null,
+  "max_threshold_m": 0.01,
+  "max_slope_deg": 5.0,
+  "min_aisle_width_vendor_m": 0.7,
+  "payload_kg": 40.0,
+  "runtime_h": 13.0,
+  "safety_stop_distance_m": null,
+  "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": null
+  },
+  "fields_sources": {
+    "footprint_polygon_m": {
+      "url": "https://academy.pudutech.com/en/docs/chan-pin-jie-shao",
+      "quote": "565 mm\u00d7537 mm\u00d71290 mm",
+      "retrieved_at": "2026-10-27T13:49:47Z"
+    },
+    "height_m": {
+      "url": "https://academy.pudutech.com/en/docs/chan-pin-jie-shao",
+      "quote": "565 mm\u00d7537 mm\u00d71290 mm",
+      "retrieved_at": "2026-10-27T13:49:47Z"
+    },
+    "max_threshold_m": {
+      "url": "https://academy.pudutech.com/en/docs/chan-pin-jie-shao",
+      "quote": "Max. surmountable height 10 mm (0.39 in)",
+      "retrieved_at": "2026-10-27T13:49:47Z"
+    },
+    "max_slope_deg": {
+      "url": "https://academy.pudutech.com/en/docs/chan-pin-jie-shao",
+      "quote": "Max. climbing angle 5 \u00b0",
+      "retrieved_at": "2026-10-27T13:49:47Z"
+    },
+    "min_aisle_width_vendor_m": {
+      "url": "https://academy.pudutech.com/en/docs/chan-pin-jie-shao",
+      "quote": "Min. travel width 70 cm (27.56 in)",
+      "retrieved_at": "2026-10-27T13:49:47Z"
+    },
+    "max_speed_mps": {
+      "url": "https://www.pudurobotics.com/en/products/bellabot",
+      "quote": "Speed: 0.5-1.2 m/s (Adjustable)",
+      "retrieved_at": "2026-10-27T13:49:44Z"
+    },
+    "payload_kg": {
+      "url": "https://www.pudurobotics.com/en/products/bellabot",
+      "quote": "Max 40 kg",
+      "retrieved_at": "2026-10-27T13:49:44Z"
+    },
+    "runtime_h": {
+      "url": "https://www.pudurobotics.com/en/products/bellabot",
+      "quote": "13h (None load)",
+      "retrieved_at": "2026-10-27T13:49:44Z"
+    }
+  },
+  "verified_by_human": true,
+  "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\"], \"sources_considered\": [\"https://academy.pudutech.com/en/docs/chan-pin-jie-shao\", \"https://www.pudurobotics.com/en/products/bellabot\"], \"null_fields\": [\"nominal_speed_mps\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"runtime is the vendor's no-load figure; the product documentation also lists 'Battery life 12\u201324 h'\", \"dimensions order on page is not labelled; read as length x width x height\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.pudurobotics.com/en/products/bellabot\", \"https://www.pudurobotics.com/product/detail/bellabot\", \"https://www.robotlab.com/store/bellabot\", \"https://www.generationrobots.com/en/404257-pudu-bellabot-server-robot.html\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"max_slope_deg\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [], \"values_differing\": [], \"fields_rejected_by_validator\": 7, \"other_pages_differing\": [{\"field\": \"runtime_h\", \"value\": 10.0, \"url\": \"https://www.robotlab.com/store/bellabot\"}, {\"field\": \"runtime_h\", \"value\": 12.0, \"url\": \"https://www.generationrobots.com/en/404257-pudu-bellabot-server-robot.html\"}], \"note\": \"A first live run ranked a sibling model's page (BellaBot Pro) above this model's page; values from that page were not used. The search ranking now puts pages that name the exact model first, and the re-run agrees with the catalog.\"}}",
+  "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:18.938Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+  }
+}

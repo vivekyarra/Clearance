@@ -1,0 +1,94 @@
+{
+  "robot_id": "pudu_pudubot_2",
+  "class": "A_service",
+  "vendor": "Pudu Robotics",
+  "model": "PuduBot 2",
+  "footprint_polygon_m": [
+    [
+      0.29,
+      0.2675
+    ],
+    [
+      -0.29,
+      0.2675
+    ],
+    [
+      -0.29,
+      -0.2675
+    ],
+    [
+      0.29,
+      -0.2675
+    ]
+  ],
+  "footprint_approx": true,
+  "height_m": 1.29,
+  "drive": "diff_drive",
+  "in_place_rotation": true,
+  "min_turn_radius_m": 0.0,
+  "max_speed_mps": 1.2,
+  "nominal_speed_mps": null,
+  "max_threshold_m": 0.01,
+  "max_slope_deg": 5.0,
+  "min_aisle_width_vendor_m": 0.8,
+  "payload_kg": 40.0,
+  "runtime_h": 12.0,
+  "safety_stop_distance_m": null,
+  "price": {
+    "value": null,
+    "currency": "USD",
+    "is_public": false,
+    "note": "price on request",
+    "source_url": null
+  },
+  "fields_sources": {
+    "footprint_polygon_m": {
+      "url": "https://www.pudurobotics.com/en/products/pudubot2",
+      "quote": "Machine Size 58*53.5*129 cm",
+      "retrieved_at": "2026-10-27T13:51:41Z"
+    },
+    "height_m": {
+      "url": "https://www.pudurobotics.com/en/products/pudubot2",
+      "quote": "Machine Size 58*53.5*129 cm",
+      "retrieved_at": "2026-10-27T13:51:41Z"
+    },
+    "max_speed_mps": {
+      "url": "https://www.pudurobotics.com/en/products/pudubot2",
+      "quote": "Cruise Speed 0.5 m/s~1.2 m/s",
+      "retrieved_at": "2026-10-27T13:51:41Z"
+    },
+    "payload_kg": {
+      "url": "https://www.pudurobotics.com/en/products/pudubot2",
+      "quote": "Maximum Loads 40 kg",
+      "retrieved_at": "2026-10-27T13:51:41Z"
+    },
+    "runtime_h": {
+      "url": "https://www.pudurobotics.com/en/products/pudubot2",
+      "quote": "Battery Life 12h (None load)",
+      "retrieved_at": "2026-10-27T13:51:41Z"
+    },
+    "min_aisle_width_vendor_m": {
+      "url": "https://www.pudurobotics.com/en/products/pudubot2",
+      "quote": "Path Width 80 cm",
+      "retrieved_at": "2026-10-27T13:51:41Z"
+    },
+    "max_threshold_m": {
+      "url": "https://antonrobots.com/pudubot-2-review",
+      "quote": "Maximum threshold 10 mm",
+      "retrieved_at": "2026-10-27T17:32:00Z"
+    },
+    "max_slope_deg": {
+      "url": "https://antonrobots.com/pudubot-2-review",
+      "quote": "Maximum slope 5\u00b0",
+      "retrieved_at": "2026-10-27T17:32:00Z"
+    }
+  },
+  "verified_by_human": true,
+  "notes": "{\"agent_quote_validated\": true, \"review_status\": \"awaiting review\", \"extractor\": [\"agent-researched quotes (seed), checked by agents.catalog_builder.validate\", \"llm_nano (live pipeline)\"], \"sources_considered\": [\"https://www.pudurobotics.com/en/products/pudubot2\", \"https://antonrobots.com/pudubot-2-review\"], \"null_fields\": [\"nominal_speed_mps\", \"safety_stop_distance_m\"], \"rejected_fields\": [], \"conflicts\": [], \"comments\": [\"runtime is the vendor's no-load figure\", \"dimensions order on page is not labelled; read as length x width x height\", \"drive and in_place_rotation are schema defaults; awaiting review\", \"footprint is the vendor's L x W bounding rectangle centred on the body\", \"max_threshold_m comes from a third-party review page (antonrobots.com) found by the live pipeline; please confirm with the vendor\", \"max_slope_deg comes from a third-party review page (antonrobots.com) found by the live pipeline; please confirm with the vendor\"], \"live_check\": {\"date\": \"2026-10-27\", \"pipeline\": \"Tavily Search -> Tavily Extract -> Nemotron Nano -> verbatim validator\", \"pages\": [\"https://www.pudurobotics.com/product/detail/pudubot2\", \"https://www.pudurobotics.com/en/products/pudubot2\", \"https://www.pudurobotics.com/my/product/detail/pudubot2\", \"https://antonrobots.com/pudubot-2-review\"], \"fields_agreeing\": [\"footprint_polygon_m\", \"height_m\", \"max_speed_mps\", \"min_aisle_width_vendor_m\", \"payload_kg\", \"runtime_h\"], \"fields_added\": [\"max_threshold_m\", \"max_slope_deg\"], \"values_differing\": [], \"fields_rejected_by_validator\": 3, \"other_pages_differing\": []}}",
+  "review": {
+    "verified_by": "Yarra Vivek",
+    "verified_at": "2026-10-27T19:50:19.696Z",
+    "edited_fields": [],
+    "notes": "Reviewed by the site operator on 2026-10-28; specs quote-validated against vendor pages"
+  }
+}
