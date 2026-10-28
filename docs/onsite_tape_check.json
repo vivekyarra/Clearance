@@ -1,0 +1,17 @@
+{
+  "site_id": "site_e1d3a642f3e64565",
+  "twin_version": 1,
+  "device": "iPhone 13 (iPhone14,5), iOS 18.0, tier T2_VIO_MONO",
+  "date": "2026-10-28",
+  "method": "tape measure vs object extents on the 2.5 cm occupancy grid",
+  "measurements": [
+    {"name": "O1_length", "scan_m": 1.95, "tape_m": 1.91},
+    {"name": "O1_depth", "scan_m": 0.65, "tape_m": 0.64},
+    {"name": "O2_width", "scan_m": 0.75, "tape_m": 0.74},
+    {"name": "O2_length", "scan_m": 2.40, "tape_m": 2.41},
+    {"name": "O3_width", "scan_m": 0.43, "tape_m": 0.44},
+    {"name": "O3_depth", "scan_m": 0.35, "tape_m": 0.35},
+    {"name": "O6_width", "scan_m": 0.88, "tape_m": 0.855},
+    {"name": "O6_depth", "scan_m": 0.45, "tape_m": 0.44}
+  ]
+}
