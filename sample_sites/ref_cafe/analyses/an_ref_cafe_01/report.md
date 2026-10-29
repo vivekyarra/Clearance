@@ -1,6 +1,6 @@
 # Clearance Report
 
-Every number below links to where it came from: an on-site measurement, a cited page, your own inputs, a formula, or a simulation batch you can replay. Simulation results are simulation-based estimates, shown as ranges across scan uncertainty.
+Every number below links to where it came from: an on-site measurement, a cited page, your own inputs, a formula, or a simulation batch you can replay. Simulated results are shown as ranges across scan uncertainty.
 
 ## Summary
 
@@ -29,8 +29,8 @@ Rule checks as the site is today:
 
 | Rule check | Result |
 |---|---|
-| every task leg feasible on the conservative geometry bound | pending (measure on site) (value: 3 [f_097]/5 legs [f_098]) |
-| no unresolved flagged_manual thresholds on the route | pending (measure on site) (value: D1) |
+| every task leg feasible on the conservative geometry bound | measure on site (value: 3 [f_097]/5 legs [f_098]) |
+| no unresolved flagged_manual thresholds on the route | measure on site (value: D1) |
 | simulated success at normal traffic (conservative bound) >= 0.90 [f_099] | met (value: 100% [f_100]) |
 
 Rule checks with the recommended changes:
@@ -53,8 +53,8 @@ Rule checks as the site is today:
 
 | Rule check | Result |
 |---|---|
-| every task leg feasible on the conservative geometry bound | pending (measure on site) (value: 3 [f_187]/5 legs [f_188]) |
-| no unresolved flagged_manual thresholds on the route | pending (measure on site) (value: D1) |
+| every task leg feasible on the conservative geometry bound | measure on site (value: 3 [f_187]/5 legs [f_188]) |
+| no unresolved flagged_manual thresholds on the route | measure on site (value: D1) |
 | simulated success at normal traffic (conservative bound) >= 0.90 [f_189] | not met (value: 72% [f_190]) |
 
 **Why this verdict**
@@ -69,16 +69,16 @@ Rule checks as the site is today:
 
 | Rule check | Result |
 |---|---|
-| every task leg feasible on the conservative geometry bound | pending (measure on site) (value: 3 [f_280]/5 legs [f_281]) |
-| no unresolved flagged_manual thresholds on the route | pending (measure on site) (value: D1) |
+| every task leg feasible on the conservative geometry bound | measure on site (value: 3 [f_280]/5 legs [f_281]) |
+| no unresolved flagged_manual thresholds on the route | measure on site (value: D1) |
 | simulated success at normal traffic (conservative bound) >= 0.90 [f_282] | not met (value: 57% [f_283]) |
 
 Rule checks with the recommended changes:
 
 | Rule check | Result |
 |---|---|
-| every task leg feasible on the conservative geometry bound | pending (measure on site) (value: 3 [f_285]/5 legs [f_286]) |
-| no unresolved flagged_manual thresholds on the route | pending (measure on site) (value: D1) |
+| every task leg feasible on the conservative geometry bound | measure on site (value: 3 [f_285]/5 legs [f_286]) |
+| no unresolved flagged_manual thresholds on the route | measure on site (value: D1) |
 | simulated success at normal traffic (conservative bound) >= 0.90 [f_287] | not met (value: 88% [f_288]) |
 
 **Why this verdict**
@@ -93,8 +93,8 @@ Rule checks as the site is today:
 
 | Rule check | Result |
 |---|---|
-| every task leg feasible on the conservative geometry bound | pending (measure on site) (value: 3 [f_372]/5 legs [f_373]) |
-| no unresolved flagged_manual thresholds on the route | pending (measure on site) (value: D1) |
+| every task leg feasible on the conservative geometry bound | measure on site (value: 3 [f_372]/5 legs [f_373]) |
+| no unresolved flagged_manual thresholds on the route | measure on site (value: D1) |
 | simulated success at normal traffic (conservative bound) >= 0.90 [f_374] | not met (value: 40% [f_375]) |
 
 **Why this verdict**
@@ -121,11 +121,11 @@ For Keenon Robotics W3, the hypothesis was similar: moving CH4W would widen a na
    - **Result:** before: value: 70% [f_i7dc17_027]; after: value: 100% [f_i7dc17_023]; value: 89% [f_i7dc17_024]; value: 100% [f_i7dc17_025]; value: 30 [f_i7dc17_026]; value: 30% [f_i7dc17_028]; value: 6% [f_i7dc17_029].
    - **Conclusion:** Chair CH4W encroaches on the top bottleneck (39.1% of stop/near-miss time [f_i7dc17_010]), where the gap is only 0.5831m [f_i7dc17_015] vs the robot's 0.459m width [f_i7dc17_016]. Moving CH4W away from this point raised success from 0.7 [f_i7dc17_027] to 1.0 [f_i7dc17_023], an gain of 0.3 [f_i7dc17_028] exceeding the CI half-width of 0.0568 [f_i7dc17_029]. Outcome: supported; concluded.
 
-## 4. Why it fails (investigation)
+## 4. Investigation findings
 
 - Keenon Robotics W3: Chair CH4W encroaches on the top bottleneck (39.1% of stop/near-miss time [f_i7dc17_010]), where the gap is only 0.5831m [f_i7dc17_015] vs the robot's 0.459m width [f_i7dc17_016]. Moving CH4W away from this point raised success from 0.7 [f_i7dc17_027] to 1.0 [f_i7dc17_023], an gain of 0.3 [f_i7dc17_028] exceeding the CI half-width of 0.0568 [f_i7dc17_029]. Status: confirmed by a probe; objects involved: `CH4W`.
 
-## 5. Robot comparison (simulation-based estimates)
+## 5. Robot comparison (simulated, conservative to optimistic range)
 
 | Robot | Verdict | Legs feasible | Narrowest gap (needed) | Success, quiet traffic | Success, normal traffic | Success, peak traffic | Median mission | Near-misses per mission | Catalog specs |
 |---|---|---|---|---|---|---|---|---|---|
@@ -193,7 +193,7 @@ Formula: `automatable share = success rate (normal traffic, nominal geometry) x 
 - Bear Robotics Servi price: price on request [f_115]; enter a quote to see payback.
 - Keenon Robotics W3 price: price on request [f_202]; enter a quote to see payback.
 - Keenon Robotics DINERBOT T9 price: price on request [f_300]; enter a quote to see payback.
-- Traffic is user-estimated [f_006]; a fixed observer phone at peak time would replace the estimate.
+- Traffic: operator input [f_006]. Add an observer phone at peak time for measured counts.
 
 ## 11. Methodology
 
@@ -205,10 +205,11 @@ Formula: `automatable share = success rate (normal traffic, nominal geometry) x 
 
 ## 12. Scope
 
-- Results are simulation-based estimates for wheeled service robots and indoor AMRs on flat floors; real deployments also depend on staff routines, Wi-Fi and vendor setup.
-- Stairs, elevators, outdoor routes and manipulation tasks are outside this report.
+- Results cover route geometry and foot traffic on flat floors; vendor setup, Wi-Fi and staff routines are confirmed during installation.
+- This report covers single-floor indoor delivery routes.
 - Thresholds close to the scan noise are marked for on-site measurement rather than guessed.
-- Vendor specs are used as published and cited; prices appear only when public or entered by you.
+- Vendor specs are used as published and cited.
+- Prices come from public pages or your own quote.
 
 ## 13. Sources
 
