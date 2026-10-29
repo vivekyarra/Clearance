@@ -58,7 +58,7 @@ const S = ({ children }: { children: ReactNode }) => <Suspense fallback={<Loadin
 export function App() {
   return (
     <ToastHost>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, "")}>
         <Routes>
           <Route element={<Shell />}>
             <Route path="/" element={<SitesPage />} />

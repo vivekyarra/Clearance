@@ -6,6 +6,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
   const target = env.CLEARANCE_API_URL || "http://localhost:8000";
   return {
+    base: env.CLEARANCE_WEB_BASE || "/",
     plugins: [react()],
     server: {
       host: true,
