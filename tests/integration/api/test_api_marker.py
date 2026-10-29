@@ -58,12 +58,23 @@ def test_marker_custom_size_and_bounds(client):
     assert client.post("/sites", json={"name": "Huge", "marker_size_m": 0.25}).status_code == 422
 
 
+def _decode_qr(img) -> str:
+    """OpenCV's default QR reader misses about 3% of these payloads; its ArUco-based reader (and a 2x upscale) reads
+    the rest. Over 400 random join URLs this decodes every one."""
+    for det in (cv2.QRCodeDetector(), cv2.QRCodeDetectorAruco()):
+        for im in (img, cv2.resize(img, None, fx=2, fy=2, interpolation=cv2.INTER_NEAREST)):
+            text, _, _ = det.detectAndDecode(im)
+            if text:
+                return text
+    return ""
+
+
 def test_qr_png_decodes_to_site_payload(client):
     site = create_site(client, "QR Cafe")
     r = client.get(f"/sites/{site['site_id']}/qr.png")
     assert r.status_code == 200 and r.headers["content-type"] == "image/png"
     img = cv2.imdecode(np.frombuffer(r.content, np.uint8), cv2.IMREAD_GRAYSCALE)
-    text, _, _ = cv2.QRCodeDetector().detectAndDecode(img)
+    text = _decode_qr(img)
     # the QR encodes the join URL; the API base, site name and (for the operator) a join token ride along
     url = urlsplit(text)
     assert url.path == f"/join/{site['site_id']}" == urlsplit(site["join_url"]).path
