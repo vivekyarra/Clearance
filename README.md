@@ -50,7 +50,7 @@ Today that answer costs a vendor visit or a paid pilot. Clearance gives an indep
 |---|---|---|
 | **Real room, iPhone 13 (no LiDAR)**, scan vs tape measure, 8 distances | **median error 1.0 cm**, p90 3.0 cm, max 4.0 cm | on-site tape check, `docs/EVAL.md` |
 | **Real-room Clearance check** (5 café robots, 100 episodes per batch, 202 s end to end) | DINERBOT T8 **Cleared**: 100% / 99% / 95% success at quiet / normal / peak traffic. Bear Servi **Not cleared**: it needs 0.62 m to turn and the gap is 0.52 m. Every verdict names its exact pinch point. | `docs/EVAL.md`, `docs/onsite_clearance_report.md` |
-| **Pinch gaps taped in the real room** (the two gaps the verdicts depend on) | Servi gap: scan 52.4–58.8 cm, tape **56 cm** (needs 61.9 cm to turn: Not cleared confirmed). T8 gap: scan 43.4–50.6 cm, tape **45 cm** (needs 38.4 cm: Cleared confirmed). Both inside the scan's range. | `docs/EVAL.md` §2a |
+| **Pinch gaps taped and footprint-checked in the real room** (the two gaps the verdicts depend on) | Servi gap: scan 52.4–58.8 cm, tape **56 cm** (needs 61.9 cm to turn: Not cleared confirmed). T8 gap: scan 43.4–50.6 cm, tape **45 cm** (needs 38.4 cm: Cleared confirmed). Both inside the scan's range. Cardboard footprints at catalog size: the T8 passed, the Servi could not turn. | `docs/EVAL.md` §2a |
 | **Nemotron on Nebius Token Factory**, 3 full reference checks | 90 live calls (39 Super, 51 Ultra), 0 failed, median 2.5 s / 6.9 s per call, about 0.58 USD at list price | `docs/PROOF.md` |
 | Nemotron investigation, reference café | moved one chair; Bear Servi success went from 75% to 100% | `docs/EVAL.md` |
 | Fact-checked reports | every published number carries a valid fact tag; 0 errors in published reports | `docs/EVAL.md` |

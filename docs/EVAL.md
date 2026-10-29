@@ -78,7 +78,8 @@ verdict uses the conservative bound.
 | B | beside the DOCK stop | 43.4 / 50.1 / 50.6 cm | **45 cm** | DINERBOT T8: 38.4 cm | Cleared, confirmed: 6.6 cm to spare |
 
 Both taped widths fall inside the scan's conservative-to-optimistic range, and both verdicts hold on the taped
-geometry. Gap A matches the nominal estimate to 0.7 cm; at gap B the conservative bound (43.4 cm) is the closer
+geometry. A cardboard cut-out of each footprint at its catalog size (DINERBOT T8 47 x 38 cm, Servi 43 x 44.5 cm) was
+then pushed along the route: the T8 passed gap B, and the Servi could not turn at gap A, matching both verdicts. Gap A matches the nominal estimate to 0.7 cm; at gap B the conservative bound (43.4 cm) is the closer
 estimate, 1.6 cm under the tape.
 
 ## 3. Golden simulation tests
@@ -266,7 +267,8 @@ the real room:
 
 1. **On-site scan run**: GO with an iPhone 13 (T2_VIO_MONO), section 1a. The protocol in `docs/GATE.md` covers 10
    or more distances, the narrowest aisle at its taped width +-5 cm, and a LiDAR iPhone for the T1 tier.
-   Both verdict-deciding pinch gaps are taped (section 2a): both inside the scan's range, both verdicts confirmed.
+   Both verdict-deciding pinch gaps are taped and checked with cardboard footprints (section 2a): both inside the
+   scan's range, both verdicts confirmed.
 2. **Cardboard robot check**: cut cardboard footprints at the true catalog dimensions of two robots (one large,
    for example MiR100 at 0.89 m x 0.58 m, one small, the DINERBOT T8 at 0.47 m x 0.38 m), push each along the
    planned routes in the scanned room, and record pass/fail at every pinch point that static feasibility flags.
