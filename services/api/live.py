@@ -450,8 +450,12 @@ class LiveManager:
                 st.clients.remove(client)
             st.last_seen = time.monotonic()
             if not st.clients and st.sim is not None:
+                # The server may cancel this task as the socket closes; shield the release so the robot always stops.
+                release = asyncio.ensure_future(asyncio.to_thread(st.set_joystick, 0.0, 0.0))
                 try:
-                    await asyncio.to_thread(st.set_joystick, 0.0, 0.0)
+                    await asyncio.shield(release)
+                except asyncio.CancelledError:
+                    raise
                 except Exception:  # noqa: BLE001
                     pass
 
