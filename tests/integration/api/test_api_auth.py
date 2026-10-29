@@ -157,9 +157,9 @@ def test_sample_sites_get_no_join_token(client, env):
 
     app = client.app.state.clearance
     with app.db.session() as s:
-        s.add(SiteRow(id="ref_demo", name="Demo", type="cafe", marker={"family": "tag36h11", "id": 0, "size_m": 0.16},
+        s.add(SiteRow(id="ref_sample", name="Sample", type="cafe", marker={"family": "tag36h11", "id": 0, "size_m": 0.16},
                       geometry_source="reference", sample=True, readonly=True))
-    site = client.get("/sites/ref_demo").json()
+    site = client.get("/sites/ref_sample").json()
     assert "token" not in site["qr"] and "token" not in parse_qs(urlsplit(site["join_url"]).query)
 
 

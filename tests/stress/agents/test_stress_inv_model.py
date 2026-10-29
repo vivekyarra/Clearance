@@ -305,10 +305,10 @@ def test_offline_policy_with_digit_labels_runs_its_probe(scene):
 # ---------------- client failure mid-loop
 
 def test_loop_survives_unexpected_client_exceptions(scene):
-    class Broken(OfflineLLM):
+    class Raising(OfflineLLM):
         def complete(self, *a, **k):
             raise KeyError("surprise")
-    llm = LLM("offline", offline=Broken())
+    llm = LLM("offline", offline=Raising())
     r = run(scene, llm)
     assert r.investigation.stop_reason.startswith("llm_error: KeyError")
     assert storage.read_json("analyses/a1/investigation.json")["stop_reason"].startswith("llm_error")

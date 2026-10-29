@@ -289,7 +289,7 @@ def test_enforce_regenerates_once_with_errors():
     def regen(prev, errors):
         seen.append(errors)
         return "Fixed 93% [f_001]."
-    out = enforce("Broken 93%.", FACTS, regen)
+    out = enforce("Unsourced 93%.", FACTS, regen)
     assert len(seen) == 1 and seen[0][0]["type"] == "untagged_number"
     assert out["regenerated"] and out["ok_after_regeneration"] and out["md"] == "Fixed 93% [f_001]."
 

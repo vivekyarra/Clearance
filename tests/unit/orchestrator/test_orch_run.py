@@ -54,7 +54,7 @@ def test_full_stage_progression(world, data_dir):
     inv = Investigation.model_validate(storage.read_json("analyses/an1/investigation.json"))
     assert inv.investigation_id == doc["investigation_id"] and inv.mode == "offline"
     assert inv.findings and inv.findings[0].confirmed_by_probe
-    # optimizer seeded with the investigation's objects
+    # optimizer starts from the investigation's objects
     assert optimizer_double.hints == ["B1"] and "bot_a" in doc["optimizer"]
     # verdicts from decide_verdict only, with a confirmation batch at normal/conservative
     v = {x["robot_id"]: Verdict.model_validate(x) for x in doc["verdicts"]}
@@ -119,9 +119,9 @@ def test_without_sim_everything_degrades(world, data_dir):
 
 
 def test_critical_stage_failure_stops(world, data_dir):
-    def broken(specs, on_result=None):
+    def failing(specs, on_result=None):
         raise RuntimeError("serverless quota")
-    doc = go(world, dispatcher=broken)
+    doc = go(world, dispatcher=failing)
     assert doc["status"] == "failed"
     assert doc["stages"]["batches"]["state"].startswith("failed: RuntimeError")
     assert all(doc["stages"][s]["state"] == "skipped: stage 'batches' failed" for s in STAGES[3:])

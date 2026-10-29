@@ -173,7 +173,7 @@ def test_narrative_text_parsing():
     assert narrative_text('<think>x</think>```json\n{"markdown": "A.\\n\\n## Heading\\n| a | b |\\nB."}\n```') == "A.\n\nB."
     assert narrative_text("Plain text answer.") == "Plain text answer."
     assert narrative_text('{"markdown": "- one item\\n- two"}') == "- one item\n- two"
-    assert narrative_text('{"broken": ') == ""
+    assert narrative_text('{"partial": ') == ""
 
 
 @pytest.mark.parametrize("seed", range(4))

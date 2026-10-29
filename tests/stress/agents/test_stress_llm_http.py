@@ -142,7 +142,7 @@ def test_trickling_body_hits_total_deadline(monkeypatch):
         llm.chat("nano", MSG)
 
 
-# ---------------- broken bodies
+# ---------------- malformed bodies
 
 def test_truncated_json_is_retried_then_clean_error(monkeypatch):
     full = json.dumps(completion("whole")).encode()

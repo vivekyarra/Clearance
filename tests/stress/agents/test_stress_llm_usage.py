@@ -1,4 +1,4 @@
-"""Usage DB under a process pool, summary correctness, and token/cost accounting with null or broken prices."""
+"""Usage DB under a process pool, summary correctness, and token/cost accounting with null or malformed prices."""
 import json
 import math
 import sqlite3
@@ -91,7 +91,7 @@ def test_known_prices_are_charged(monkeypatch):
 @pytest.mark.parametrize("price", [{"input": None, "output": None}, {"input": 0.3, "output": None}, None,
                                    {"input": "n/a", "output": "0.9"}, {"input": float("nan"), "output": 1},
                                    {"input": -1, "output": 1}, {"input": True, "output": 1}])
-def test_null_or_broken_prices_are_reported_as_unpriced(monkeypatch, price):
+def test_null_or_malformed_prices_are_reported_as_unpriced(monkeypatch, price):
     r = call(monkeypatch, price, completion("a", pt=1000, ct=1000))
     assert r.content == "a"  # a bad price never breaks the call
     s = usage.summary()
@@ -124,7 +124,7 @@ def test_price_value():
     assert price_value("0.30") == 0.3 and price_value(0) == 0.0
 
 
-def test_estimate_cost_tolerates_broken_prices():
+def test_estimate_cost_tolerates_malformed_prices():
     cfg = cfg_with({"input": "n/a", "output": None})
     assert usage.estimate_cost("pm", 10, 10, cfg) == 0.0
     assert usage.estimate_cost("pm", float("nan"), None, cfg_with({"input": 1, "output": 1})) == 0.0
