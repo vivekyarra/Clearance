@@ -59,7 +59,7 @@ def _json_safe(obj):
 
 
 def _log_job_usage(kind: str, job_id: str, duration_s: float, status: str, backend: str = "local") -> None:
-    """Best effort: jobs appear in the usage table next to model calls (PLAN Section 8)."""
+    """Best effort: jobs appear in the usage table next to model calls."""
     try:
         usage = importlib.import_module("agents.llm.usage")
         usage.log_usage(f"job:{kind}", f"compute:{backend}", 0, 0, duration_s, 0.0, {"job_id": job_id, "status": status})

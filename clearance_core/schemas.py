@@ -1,4 +1,4 @@
-"""Clearance frozen data contracts (PLAN.md Section 6). SI units, site frame: origin at marker center, Z up, floor Z=0.
+"""Clearance frozen data contracts (docs/CONTRACTS.md). SI units, site frame: origin at marker center, Z up, floor Z=0.
 
 Change these only with a note in docs/CONTRACTS.md. Every module imports from here; never redefine.
 """
@@ -290,7 +290,7 @@ class Fact(BaseModel):
     origin: FactOrigin
 
 
-# ---------- Investigation loop (PLAN 7.12) ----------
+# ---------- Investigation loop ----------
 class InvestigationStep(BaseModel):
     """One tool call inside the loop. Numbers in result_summary come from code only."""
     i: int

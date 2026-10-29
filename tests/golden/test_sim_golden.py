@@ -1,4 +1,4 @@
-"""Golden simulation tests (PLAN 15.2): reference rooms with analytically known answers."""
+"""Golden simulation tests: reference rooms with analytically known answers."""
 import json
 import math
 

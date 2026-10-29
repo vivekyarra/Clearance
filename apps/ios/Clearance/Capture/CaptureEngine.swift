@@ -5,7 +5,7 @@ import Foundation
 import RealityKit
 import UIKit
 
-/// Scanner capture (PLAN 7.1): ARKit world tracking (+ LiDAR scene depth when available),
+/// Scanner capture: ARKit world tracking (+ LiDAR scene depth when available),
 /// marker anchoring into the site frame, keyframe selection, blur and tracking checks, coverage
 /// grid and prompts. Heavy per-keyframe work (face blur, JPEG, PNG) runs on `FrameWriter`'s queue.
 @MainActor

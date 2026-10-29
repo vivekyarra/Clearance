@@ -1,4 +1,4 @@
-"""Clearance Report fact checker (PLAN 7.11 step 3, 7.13).
+"""Clearance Report fact checker.
 
 Rules
 - Every numeric token (ints, decimals, scientific notation, percents, currency, ranges such as 71–93%,

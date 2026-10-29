@@ -1,4 +1,4 @@
-"""Vision-LLM hazard pass (PLAN 7.3 step 5).
+"""Vision-LLM hazard pass.
 
 Scene model: Cosmos Reason 2 (self-hosted via vLLM, primary) or Nemotron 3.5 Super VL on Token
 Factory (alternative); both reached through `agents.llm.client.LLM.chat(role="vision")` (VERIFY the

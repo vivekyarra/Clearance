@@ -1,4 +1,4 @@
-"""Nemotron investigation loop (PLAN 7.12, v1.2): observe -> hypothesize -> experiment -> read -> dig further or
+"""Nemotron investigation loop: observe -> hypothesize -> experiment -> read -> dig further or
 conclude. Live mode: Nemotron 3 Super drives the tools via tool calling. Offline mode: a deterministic policy
 drives the same tools. Caps: max_steps tool calls, max_experiments sim probes per robot (<= probe_episodes each,
 nominal geometry). Output: Investigation (steps, experiments, findings) persisted to analyses/<id>/investigation.json.

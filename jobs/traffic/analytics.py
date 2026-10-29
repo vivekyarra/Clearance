@@ -1,4 +1,4 @@
-"""Traffic statistics from floor tracks (PLAN 7.5 steps 5-6): zones, OD pairs, arrival rates,
+"""Traffic statistics from floor tracks: zones, OD pairs, arrival rates,
 walking speeds, heatmaps per 15-min window and quiet/normal/peak density levels."""
 from __future__ import annotations
 

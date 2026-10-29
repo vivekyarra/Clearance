@@ -1,5 +1,5 @@
 """J2 geometry: floor fit, TSDF fusion into a voxel grid, occupancy and threshold extraction
-(PLAN 7.2 J2 steps 3-6). Pure numpy + numba; Open3D is not required.
+. Pure numpy + numba; Open3D is not required.
 
 Voxels: 2.5 cm in x/y (= occupancy cells) and DZ in z, with layer edges at band_lo + k*DZ so the
 height band [0.03, 2.0] starts exactly on a layer edge. TSDF update is ray-based: each depth pixel
@@ -287,7 +287,7 @@ def floor_height_map(vg: VoxelGrid, min_frames: int = 2, z_lo: float = -0.16, z_
 def extract_occupancy(vg: VoxelGrid, *, band=BAND, min_frames: int = 2, min_occ_voxels: int = 3, free_ratio: float = 1.0,
                       occ_tsdf_max: float = -0.1, transient_frames: int = 3, transient_ratio: float = 0.5,
                       speckle_cells: int = 3, hole_cells: int = 6):
-    """Occupied / free / unknown per PLAN 7.2 step 5:
+    """Occupied / free / unknown per cell:
     occupied = at least min_occ_voxels voxels of the column's height band, each observed by >= min_frames
     frames, lie behind a surface (mean tsdf < occ_tsdf_max, in units of the truncation distance) and
     were looked through by fewer frames than saw a surface there (free_ratio), and were not looked through

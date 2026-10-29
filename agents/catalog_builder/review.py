@@ -1,4 +1,4 @@
-"""Human review helper for catalog entries (PLAN 7.6 step 5).
+"""Human review helper for catalog entries.
 
   python -m agents.catalog_builder.review <robot_id>                 show fields + sources
   python -m agents.catalog_builder.review <robot_id> --approve [--reviewer NAME]

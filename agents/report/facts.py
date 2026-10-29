@@ -1,4 +1,4 @@
-"""Facts pack builder for the Clearance Report (PLAN 6.5 / 7.11 / 7.13). Every number the report may
+"""Facts pack builder for the Clearance Report. Every number the report may
 print becomes a Fact with a stable id.
 
 `build_facts(analysis)` accepts a hydrated analysis dict (pydantic models or plain dicts):

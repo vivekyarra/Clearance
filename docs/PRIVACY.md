@@ -1,6 +1,6 @@
 # Privacy and consent
 
-Clearance films real places: cafés, storerooms, offices. Real places have people in them. This page says what we capture, what never leaves the phone, what we publish, and how we get permission. It implements PLAN Section 16 and the privacy terms of the hackathon's Official Rules (docs/VERIFIED.md 6.9 and 6.10).
+Clearance films real places: cafés, storerooms, offices. Real places have people in them. This page says what we capture, what never leaves the phone, what we publish, and how we get permission. It implements the privacy terms of the hackathon's Official Rules (docs/VERIFIED.md 6.9 and 6.10).
 
 ## Principles
 

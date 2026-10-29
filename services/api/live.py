@@ -2,7 +2,7 @@
 
 WS protocol (/live/{session_id}?role=console|joystick|scanner|coach|viewer):
   server -> client  {"type":"hello",...} once, then {"type":"state", t, robot, peds, events} at `hz`
-  client -> server  {"type":"joystick","vx":..,"vy":..}   (speed clamped to 1.4 m/s, PLAN 7.10)
+  client -> server  {"type":"joystick","vx":..,"vy":..}   (speed clamped to 1.4 m/s)
                     {"type":"coach","site_id","coverage":{...}|null,"prompt":str|null,"t":float,"status"?:{...}}
                         validated by normalize_coach, relayed to every other client; the latest one is
                         replayed to clients that join later (docs/CONTRACTS.md "Coach message")

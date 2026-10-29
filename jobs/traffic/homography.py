@@ -1,4 +1,4 @@
-"""Image <-> floor (Z=0) homography for a fixed, marker-localized observer camera (PLAN 7.5 step 3).
+"""Image <-> floor (Z=0) homography for a fixed, marker-localized observer camera.
 
 observer_pose.json: {"T_site_cam": [16 row-major], "K": [fx, fy, cx, cy], "w": W, "h": H,
                      "convention": "arkit" | "opencv" (optional)}

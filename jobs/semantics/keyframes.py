@@ -1,4 +1,4 @@
-"""Coverage-maximizing keyframe selection (PLAN 7.3 step 1).
+"""Coverage-maximizing keyframe selection.
 
 The room is sampled with probe points (a 0.5 m floor grid at a few heights). Each frame "covers"
 (probe, view-direction bin) elements it sees. Greedy max-coverage picks frames that first see

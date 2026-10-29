@@ -211,7 +211,7 @@ public enum MeshBuilder {
         return m.doubleSided()
     }
 
-    /// Parametric robot (PLAN 7.9): footprint extrusion, neutral body, no branding.
+    /// Parametric robot: footprint extrusion, neutral body, no branding.
     /// Class A (service robots with trays): base, slim column and tray tiers. Class B: a single body.
     /// Returns the body and an accent mesh (front marker showing the heading, +x).
     public static func robot(_ shape: RobotShape) -> (body: MeshData, accent: MeshData) {

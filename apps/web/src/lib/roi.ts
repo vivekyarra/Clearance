@@ -1,5 +1,5 @@
 /**
- * Port of the ROI rule in PLAN 7.11 (agents/report/roi.py is the source of truth in live mode).
+ * Port of the ROI rule (agents/report/roi.py is the source of truth in live mode).
  *   automatable share = success rate (nominal, normal traffic) x fraction of task legs feasible
  *   monthly saving    = staff cost/h x task hours/day x automatable share x days/month
  *   payback months    = price / (monthly saving - monthly running cost)

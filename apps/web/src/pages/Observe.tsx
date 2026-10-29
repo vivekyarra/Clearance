@@ -27,7 +27,7 @@ function deviceModel(): { model: string; os: string } {
 
 const fmtTime = (s: number) => `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
 
-/** Android fixed-observer PWA (PLAN 7.1): marker lock, on-device face blur, blurred recording, upload. */
+/** Android fixed-observer PWA: marker lock, on-device face blur, blurred recording, upload. */
 export default function ObservePage() {
   const { site = "" } = useParams();
   const [phase, setPhase] = useState<Phase>("intro");

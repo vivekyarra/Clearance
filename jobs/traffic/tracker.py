@@ -1,4 +1,4 @@
-"""ByteTrack-style multi-object tracker (PLAN 7.5 step 2). Own implementation (Apache-2.0, this repo),
+"""ByteTrack-style multi-object tracker. Own implementation (Apache-2.0, this repo),
 following the published algorithm (Zhang et al., "ByteTrack", ECCV 2022):
 
 * constant-velocity Kalman filter on (cx, cy, aspect, height);

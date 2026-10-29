@@ -1,8 +1,8 @@
-"""Person detectors for J5 (PLAN 7.5 step 1). Ultralytics models are never used (AGPL-3.0).
+"""Person detectors for J5. Ultralytics models are never used (AGPL-3.0).
 
 Backends
 * RTDETRPersonDetector - RT-DETR through transformers (GPU recommended). Code: Apache-2.0
-  (transformers); checkpoint license VERIFY (PLAN Section 9). Install on the GPU job image:
+  (transformers); checkpoint license in THIRD_PARTY_LICENSES.md. Install on the GPU job image:
       pip install torch --index-url https://download.pytorch.org/whl/cu121
       pip install "transformers>=4.40" pillow
   Model id: CLEARANCE_RTDETR_MODEL, default "PekingU/rtdetr_r50vd" (VERIFY on the HF hub).

@@ -1,4 +1,4 @@
-"""Tools for the Nemotron investigation loop (PLAN 7.12, v1.2). Every number returned comes from code and is
+"""Tools for the Nemotron investigation loop. Every number returned comes from code and is
 registered as a Fact (origin.type="investigation"); the model may cite only those fact IDs.
 
 Each counterfactual probe is recorded as an Experiment (hypothesis -> change -> result -> outcome -> next action).

@@ -12,7 +12,7 @@ struct APIError: LocalizedError {
     }
 }
 
-/// Thin JSON client for the Clearance API (services/api, PLAN Section 11).
+/// Thin JSON client for the Clearance API (services/api, docs/CONTRACTS.md).
 struct APIClient: Sendable {
     let join: SiteJoin
     var session: URLSession = .shared

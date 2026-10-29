@@ -1,4 +1,4 @@
-"""J5 entry point: `build_traffic(observer_capture_dirs, twin) -> TrafficModel` (PLAN 7.5).
+"""J5 entry point: `build_traffic(observer_capture_dirs, twin) -> TrafficModel`.
 
 per observer: frames -> person detector -> ByteTrack-style tracker -> foot point -> floor (homography)
 all observers: shared clock (Capture.started_at) -> cross-camera merge -> zones, OD pairs, arrival

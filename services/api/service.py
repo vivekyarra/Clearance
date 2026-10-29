@@ -77,7 +77,7 @@ def rewrite_prefix(obj, old: str, new: str):
 
 
 def default_task(twin: schemas.Twin) -> schemas.Task:
-    """Deliver from pickup to every destination, starting and ending at the dock (PLAN 7.7 task template)."""
+    """Deliver from pickup to every destination, starting and ending at the dock."""
     dock = next((w.id for w in twin.waypoints if w.kind == "dock"), None)
     pickup = next((w.id for w in twin.waypoints if w.kind == "pickup"), None)
     dests = [w.id for w in twin.waypoints if w.kind == "dest"]

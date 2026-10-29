@@ -1,4 +1,4 @@
-"""Analysis orchestrator (CONTRACTS.md run_analysis; PLAN 7.7, 7.11-7.13).
+"""Analysis orchestrator (docs/CONTRACTS.md run_analysis).
 
 Stages: candidates -> feasibility -> batches -> investigation -> optimizer -> verdicts -> report.
 analyses/<id>/analysis.json is rewritten after every stage (and after every finished batch).
