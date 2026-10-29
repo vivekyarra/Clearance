@@ -48,7 +48,7 @@ Cardboard-footprint validation at real pinch points, a real café owner pilot, m
 
 ---
 
-## Video (3:00)
+## Demo video (3:00)
 
 **Watch:** https://youtu.be/sYL-GOtZIys
 

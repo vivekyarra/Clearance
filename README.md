@@ -9,9 +9,9 @@ Built for the **Nebius x NVIDIA Global AI Hackathon**, Physical AI track, with *
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue)
 ![Version](https://img.shields.io/badge/version-0.1.0-informational)
 
-[![Watch the 3-minute video](https://img.youtube.com/vi/sYL-GOtZIys/maxresdefault.jpg)](https://youtu.be/sYL-GOtZIys)
+[![Watch the 3-minute demo video](https://img.youtube.com/vi/sYL-GOtZIys/maxresdefault.jpg)](https://youtu.be/sYL-GOtZIys)
 
-**▶ [Watch the 3-minute video](https://youtu.be/sYL-GOtZIys):** a real room scanned with an iPhone 13, the measured twin, Nemotron on Nebius Token Factory, the verdicts, and the robot driving the route in AR.
+**▶ [Watch the 3-minute demo video](https://youtu.be/sYL-GOtZIys):** a real room scanned with an iPhone 13, the measured twin, Nemotron on Nebius Token Factory, the verdicts, and the robot driving the route in AR.
 
 ---
 
