@@ -209,7 +209,7 @@ function TwinPanel({ site, twin, grid, loading }: { site: SiteDetail; twin?: Twi
         ) : null}
         {flagged.length > 0 && (
           <div className="note row" style={{ background: "var(--amber-soft)", color: "var(--amber)" }}>
-            <Icon name="ruler" size={15} /> Threshold {flagged.map((f) => f.id).join(", ")}: measure on site and enter the height in the editor before trusting the verdict.
+            <Icon name="ruler" size={15} /> Threshold {flagged.map((f) => f.id).join(", ")}: measure on site and enter the height in the editor to finalize the verdict.
           </div>
         )}
         <div className="row small muted" style={{ gap: 16 }}>
