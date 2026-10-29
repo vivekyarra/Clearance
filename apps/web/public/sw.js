@@ -1,7 +1,8 @@
 // Clearance service worker: caches the app shell so the observer page reopens without network.
 const CACHE = "clearance-shell-v1";
+const BASE = new URL("./", self.location).pathname; // "/" locally, "/Clearance/" on GitHub Pages
 self.addEventListener("install", (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(["/", "/manifest.webmanifest", "/icon.svg"])));
+  e.waitUntil(caches.open(CACHE).then((c) => c.addAll([BASE, BASE + "manifest.webmanifest", BASE + "icon.svg"])));
   self.skipWaiting();
 });
 self.addEventListener("activate", (e) => {
@@ -10,12 +11,12 @@ self.addEventListener("activate", (e) => {
 });
 self.addEventListener("fetch", (e) => {
   const url = new URL(e.request.url);
-  if (e.request.method !== "GET" || url.origin !== location.origin || url.pathname.startsWith("/api")) return;
+  if (e.request.method !== "GET" || url.origin !== location.origin || url.pathname.startsWith(BASE + "api")) return;
   if (e.request.mode === "navigate") {
-    e.respondWith(fetch(e.request).catch(() => caches.match("/")));
+    e.respondWith(fetch(e.request).catch(() => caches.match(BASE)));
     return;
   }
-  if (url.pathname.startsWith("/assets/")) {
+  if (url.pathname.startsWith(BASE + "assets/")) {
     e.respondWith(
       caches.match(e.request).then(
         (hit) =>
