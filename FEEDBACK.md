@@ -14,6 +14,13 @@ Products covered: Nebius Token Factory, Nebius AI Cloud (Serverless AI, Object S
 | Nebius AI Cloud (Serverless, Object Storage, CLI) | 8/10 | Excellent docs and CLI. Getting a GPU for a hackathon project means real money on a personal card. |
 | NVIDIA Cosmos Reason 2 | 8/10 | The right model for scene hazards. Too hard to reach for a few calls per scan. |
 
+## AI tools we used to build Clearance
+
+- **Claude Code**, with Claude Opus 5.5 and Claude Fable 5.1. It wrote and reviewed code, ran the tests, fixed CI, helped write the docs, and made the video assets.
+- **Codex**, with Astra 6. It wrote and reviewed code.
+- I made the product decisions, scanned the real room, recorded the video and tested the app on my iPhone.
+- Every number in Clearance comes from code and real measurements, not from an AI tool.
+
 ## The hard parts, plainly
 
 These cost us the most time or forced a change of plan. All are from this build.
