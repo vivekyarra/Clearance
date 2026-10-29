@@ -63,7 +63,7 @@ struct APIClient: Sendable {
         try await send(request("POST", url, json: body, bearer: bearer)).0
     }
 
-    /// Downloads to a temporary file that keeps `ext` (RealityKit picks the loader by extension).
+    /// Downloads to a file in the system temp directory that keeps `ext` (RealityKit picks the loader by extension).
     func download(_ url: URL, ext: String) async throws -> URL {
         var req = URLRequest(url: url, timeoutInterval: 120)
         if url.host == join.apiBase.host, let token = join.token, !token.isEmpty {

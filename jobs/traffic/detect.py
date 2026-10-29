@@ -208,7 +208,7 @@ class RTDETRPersonDetector(PersonDetector):
         try:
             import torch
             return bool(torch.cuda.is_available())
-        except Exception as e:  # broken CUDA / torch install: treat as no GPU
+        except Exception as e:  # CUDA / torch install not usable: treat as no GPU
             log.warning("torch present but unusable (%s); RT-DETR skipped", e)
             return False
 

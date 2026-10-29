@@ -189,9 +189,9 @@ Use an iPhone 13 (T2) and, if available, an iPhone 12 Pro or later (T1). Print t
 
 ## On-device verification checklist
 
-The code was written on a Windows machine, so it has not been compiled yet. Check these items during the first build and run on a Mac:
+CI (`.github/workflows/ios.yml`) builds the app as an unsigned IPA and runs the ClearanceKit tests (`swift test`) on every change to `apps/ios`. The items below need a real device and a real room:
 
-1. **Compile**: the whole app and `swift test` for ClearanceKit. The XCTest suite covers the site-frame conversion, keyframe selection, coverage grid, ZIP writer and reader (plus a `/usr/bin/unzip -t` cross-check on macOS), PNG writer (decoded through ImageIO), checksums, the episode parser and clock, the mesh builder, QR parsing, the upload plan and the API payloads (`APIContractTests`).
+1. **Build and unit tests (CI)**: CI builds the whole app and runs `swift test` for ClearanceKit. The XCTest suite covers the site-frame conversion, keyframe selection, coverage grid, ZIP writer and reader (plus a `/usr/bin/unzip -t` cross-check on macOS), PNG writer (decoded through ImageIO), checksums, the episode parser and clock, the mesh builder, QR parsing, the upload plan and the API payloads (`APIContractTests`).
 2. **Swift concurrency**: the project uses Swift 5 language mode with `SWIFT_STRICT_CONCURRENCY=minimal`. The ARKit, AVFoundation and RealityKit callbacks are `nonisolated` and hop with `MainActor.assumeIsolated`, because they run on the main queue. Building with Xcode 15 (iOS 17 SDK) may show isolation warnings around `@StateObject` initializers. Xcode 16 does not.
 3. **Image anchor axes**: confirm on device that ARKit's anchor axes match the convention above. The RGB gizmo in step 2 of the test plan shows this directly.
 4. **Vision boxes**: `VNDetectFaceRectanglesRequest` runs on an image that has already been made upright (`CIImage.oriented`), then the blurred result is rotated back. Check step 7 in portrait, both landscape directions and upside down.

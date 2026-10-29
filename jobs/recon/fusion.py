@@ -122,7 +122,7 @@ class VoxelGrid:
 
     @staticmethod
     def estimate_bytes(xy_min, xy_max, z_min=-0.20, z_max=2.10, res=RES, dz=DZ, band_lo=BAND[0]) -> int:
-        """Memory of VoxelGrid.create for these bounds, plus the temporaries of extract_occupancy."""
+        """Memory of VoxelGrid.create for these bounds, plus the scratch arrays of extract_occupancy."""
         k0 = int(np.floor((z_min - band_lo) / dz))
         nz = int(np.ceil((z_max - (band_lo + k0 * dz)) / dz))
         nx = int(np.ceil((xy_max[0] - np.floor(xy_min[0] / res) * res) / res))

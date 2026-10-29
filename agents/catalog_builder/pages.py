@@ -1,5 +1,5 @@
 """Page text helpers: HTML/PDF -> plain text, and a direct HTTP fetch used when Tavily Extract is
-unavailable (or by the seed-research scripts). Pure stdlib for HTML; pypdf (optional) for PDFs."""
+unavailable (or by the initial catalog research scripts). Pure stdlib for HTML; pypdf (optional) for PDFs."""
 from __future__ import annotations
 
 import io
