@@ -129,7 +129,7 @@ def test_ocr_hyphenation_joined():
     page = "Maxi-\nmum speed 1.5 m/s\nBattery\nendur-\n  ance 8 h"
     assert check_field(1.5, "Maximum speed 1.5 m/s", page, field="max_speed_mps")[0]
     assert check_field(8.0, "endurance 8 h", page, field="runtime_h")[0]
-    # a range broken over a line is never glued into one number
+    # a range split over a line is never glued into one number
     assert not check_field(0.51, "0.51.2 m/s", "Speed 0.5-\n1.2 m/s", field="max_speed_mps")[0]
 
 

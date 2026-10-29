@@ -172,7 +172,7 @@ class _WorkingHOG:
         return (), ()
 
 
-class _BrokenHOG(_WorkingHOG):
+class _FailingHOG(_WorkingHOG):
     def setSVMDetector(self, svm):
         raise cv2.error("SVM detector unsupported in this build")
 
@@ -180,9 +180,9 @@ class _BrokenHOG(_WorkingHOG):
 @pytest.mark.parametrize("mod", [
     _CV2Without(),
     _CV2Without(raise_on=("xobjdetect", "objdetect")),
-    _CV2Without(extra={"HOGDescriptor": _BrokenHOG}),
-    _CV2Without(extra={"xobjdetect": types.SimpleNamespace(HOGDescriptor=_BrokenHOG)}),
-], ids=["absent", "lazy-import-error", "broken-main", "broken-contrib"])
+    _CV2Without(extra={"HOGDescriptor": _FailingHOG}),
+    _CV2Without(extra={"xobjdetect": types.SimpleNamespace(HOGDescriptor=_FailingHOG)}),
+], ids=["absent", "lazy-import-error", "failing-main", "failing-contrib"])
 def test_no_usable_hog_falls_back_to_motion(monkeypatch, mod):
     monkeypatch.setattr(detect, "cv2", mod)
     monkeypatch.setattr(detect, "_HOG_PROBE", None)

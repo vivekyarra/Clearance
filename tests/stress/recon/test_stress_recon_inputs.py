@@ -43,7 +43,7 @@ def test_symlink_escaping_root_is_rejected(small_capture, tmp_path):
     link = small_capture / "linked"
     try:
         os.symlink(outside, link, target_is_directory=True)
-    except (OSError, NotImplementedError):
+    except (OSError, RuntimeError):  # RuntimeError covers platforms without symlink support
         pytest.skip("symlinks need extra privileges on this system")
     _edit_capture_json(small_capture, depth="linked")
     with pytest.raises(CaptureRejected, match="outside"):

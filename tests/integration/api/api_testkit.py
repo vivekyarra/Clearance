@@ -207,7 +207,7 @@ def make_client(env):
 
     def _make(*, anonymous: bool = False, **overrides):
         """A client for the API. By default it acts as the operator (sends the operator bearer token);
-        anonymous=True sends no token, like a visitor browsing the hosted demo."""
+        anonymous=True sends no token, like a visitor browsing the hosted console."""
         kw = dict(data_dir=env["data"], sample_dir=env["samples"], catalog_dir=env["catalog"],
                   web_dist=env["tmp"] / "no_web_dist", infra_dir=env["tmp"] / "infra", secret="integration-secret",
                   job_workers=4, operator_token=OPERATOR_TOKEN)
