@@ -9,6 +9,10 @@ Built for the **Nebius x NVIDIA Global AI Hackathon**, Physical AI track, with *
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue)
 ![Version](https://img.shields.io/badge/version-0.1.0-informational)
 
+[![Watch the 3-minute demo](https://img.youtube.com/vi/sYL-GOtZIys/maxresdefault.jpg)](https://youtu.be/sYL-GOtZIys)
+
+**▶ [Watch the 3-minute demo](https://youtu.be/sYL-GOtZIys):** a real room scanned with an iPhone 13, the measured twin, Nemotron on Nebius Token Factory, the verdicts, and the robot driving the route in AR.
+
 ---
 
 ## Why
@@ -20,7 +24,7 @@ Cafés, restaurants, clinics and small warehouses are being sold service robots 
 1. **Scan.** The Clearance iPhone app captures ARKit poses and keyframes, anchored to a floor marker. Faces are blurred on the phone. Android phones can join as fixed observers that record foot traffic (also blurred on device).
 2. **Twin.** The server fuses depth (LiDAR, or Depth Anything V2 Small aligned to ARKit feature points on non-LiDAR phones) into a 2.5 cm occupancy grid with furniture primitives, door thresholds and hazards.
 3. **Edit.** The operator places the dock, pickup and delivery stops in the twin editor and fixes any labels.
-4. **Clearance check.** Code filters the robot catalog, checks static feasibility on three geometry bounds, and runs Monte Carlo navigation batches with pedestrians. **Nemotron 3 Super** then investigates every failure with real experiments in the simulator. A layout optimizer searches for furniture moves that help.
+4. **Clearance check.** Code filters the robot catalog, checks static feasibility on three geometry bounds, and runs Monte Carlo navigation batches with pedestrians. **Nemotron 3.5 Super VL** then investigates every failure with real experiments in the simulator. A layout optimizer searches for furniture moves that help.
 5. **Verdict.** Each robot gets exactly one code-decided verdict: **Cleared**, **Cleared with changes**, or **Not cleared**, with the rule that produced it.
 6. **Clearance Report.** **Nemotron 3 Ultra** writes the narrative around code-rendered tables; a fact-checker verifies that every number carries a fact tag that matches its source.
 7. **AR replay.** Point the iPhone at the marker and watch the chosen robot drive the mission in the real room, hidden behind real furniture, stopping for real people.
