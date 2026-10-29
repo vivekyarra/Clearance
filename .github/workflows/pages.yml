@@ -35,6 +35,7 @@ jobs:
         run: npm run build:offline
         env:
           CLEARANCE_WEB_BASE: /Clearance/
+          VITE_OFFLINE: "1"  # apps/web/.env.offline is gitignored with the other .env files
       - name: Deep links open the app
         run: cp dist/index.html dist/404.html
       - uses: actions/upload-pages-artifact@v3
