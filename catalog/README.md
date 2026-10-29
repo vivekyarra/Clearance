@@ -1,12 +1,12 @@
 # Robot catalog
 
-`catalog/robots/<robot_id>.json` holds one `RobotSpec` (`clearance_core/schemas.py`) per robot. Only robots a person has reviewed (`verified_by_human: true`) get loaded for simulation (`agents.catalog_builder.catalog.load_catalog()`). Every entry below is **awaiting review**.
+`catalog/robots/<robot_id>.json` holds one `RobotSpec` (`clearance_core/schemas.py`) per robot. Only robots a person has reviewed (`verified_by_human: true`) get loaded for simulation (`agents.catalog_builder.catalog.load_catalog()`). All 12 entries below are **human-reviewed** (`verified_by_human: true`, reviewed by the site operator on 2026-10-28).
 
 ## How the specs were sourced
 
 1. **Pages.** We read public vendor spec pages and datasheets on 2026-10-27. Where the vendor site blocked automated access or had no spec table, we used a vendor datasheet hosted by a distributor (MiR250 at hartfiel.com, MiR100 at howtorobot.com). We took no reseller prices, no images and no logos.
 2. **Text.** Each page was fetched over HTTP and turned into plain text by `agents/catalog_builder/pages.py`. PDFs go through `pypdf`. The full text is cached outside the repo (`~/.cache/pg/catalog_pages/by_url`). The same text is also stored in the Tavily response shape under `agents/catalog_builder/recorded/tavily/`, so offline mode and the tests can re-check every quote.
-3. **Quotes.** For each field we picked a verbatim span of the page text that contains the number. The agent chose the quotes for this seed set. The pipeline (`build.py`) gets them from Nemotron Nano in live mode, or from a deterministic rule-based reader in offline mode.
+3. **Quotes.** For each field we picked a verbatim span of the page text that contains the number. The agent chose the quotes for the initial catalog. The pipeline (`build.py`) gets them from Nemotron Nano in live mode, or from a deterministic rule-based reader in offline mode.
 4. **Units and validation by code.** `units.py` converts the number written in the quote to SI: mm/cm/in/ft → m, km/h/mph/ft/s → m/s, lb → kg, min → h, and % grade → degrees via atan. `validate.py::validate_field` then accepts the value only if both of these hold:
    - the quote appears in the page text after whitespace and unicode normalization;
    - a quantity of the right dimension in the quote converts to exactly that value.
@@ -59,7 +59,7 @@ We ran the full live pipeline (`build_spec`: Tavily Search → Tavily Extract �
 | measure | value |
 |---|---|
 | robots processed | 15 (10 catalog robots + 5 candidates) |
-| pipeline runs | 22 (15 first runs; 7 re-runs after the ranking fix below, which replayed the recorded searches) |
+| pipeline runs | 22 (15 first runs; 7 re-runs with the exact-model ranking below, which replayed the recorded searches) |
 | Tavily Search calls | 30 (28 pipeline + 2 targeted look-ups), 30 credits |
 | Tavily Extract calls | 20, 65 URLs, about 27 credits (advanced extract; one call during an interrupted run is counted from its recorded pages) |
 | Tavily credits in total | about 57, from the client's per-call `usage.credits` log |
@@ -70,25 +70,25 @@ We ran the full live pipeline (`build_spec`: Tavily Search → Tavily Extract �
 ### What changed in the catalog
 
 - Fields added (were null, the live value passed the validator): `bear_servi_plus.max_slope_deg` = 7°, `pudu_pudubot_2.max_threshold_m` = 0.01 m and `max_slope_deg` = 5°. All three come from a third-party review site (antonrobots.com) and are flagged for the reviewer.
-- Validated but held for review: `keenon_dinerbot_t8.max_threshold_m` = 0.01 m. It comes from a reseller page (somebots.com) and is worded as operating advice ("avoid steps over 1 cm"), not as a vendor capability. With this value the simulator treats the thresholds in the reference cafe as impassable for the T8. It is stored in `notes.candidate_fields` until a reviewer confirms the vendor figure.
+- Validated but held for review: `keenon_dinerbot_t8.max_threshold_m` = 0.01 m. It comes from a reseller page (somebots.com) and is worded as operating advice ("avoid steps over 1 cm"), not as a vendor capability. With this value the simulator treats the thresholds in the reference cafe as impassable for the T8. It is stored in `notes.candidate_fields`, not in the spec.
 - Robots added: `keenon_w3` and `pudu_kettybot`. Footprint, width and max speed all validated for both.
 - Candidates not added: Locus Origin (footprint and payload validated, but Locus publishes no maximum speed on the pages found, even after a targeted search) and Zebra FlexShelf (the search returned no spec page for this model; no field validated).
 - Every other live value either matched the catalog (within 1 %, or the same footprint read in the other orientation) or is listed below. No catalog value was replaced.
 
-### For the reviewer: live values that differ (catalog value kept)
+### Live values that differ (catalog value kept)
 
-- `mir_mir100.runtime_h`: the catalog has 10 h (MiR datasheet, active operation time at maximum payload). A later MiR100 spec document (version 2.57, third-party host) states "Up to 6 h 53 min (24V Standard battery)". The two documents describe different versions or batteries. Please confirm which applies.
+- `mir_mir100.runtime_h`: the catalog has 10 h (MiR datasheet, active operation time at maximum payload). A later MiR100 spec document (version 2.57, third-party host) states "Up to 6 h 53 min (24V Standard battery)". The two documents describe different versions or batteries. The catalog keeps the datasheet figure.
 - `mir_mir100.min_aisle_width_vendor_m`: the catalog has 1.0 m (default footprint). The live value of 1.1 m is for the minimized footprint, SICK safety configuration and no payload.
 - `mir_mir250.min_aisle_width_vendor_m`: the catalog has 1.45 m (default footprint), which two live pages also state. The live value of 1.0 m is for the dynamic footprint.
 - `keenon_dinerbot_t9.max_speed_mps`: a reseller page states 0.8 m/s. The catalog keeps the vendor's 1.0 m/s.
 - Runtimes on reseller or review pages differ from the vendor figures for `bear_servi` and `bear_servi_plus` (8 h vs 10 h), `pudu_bellabot` (10 h and 12 h vs 13 h) and `pudu_t300` (6 h in a distributor-hosted operation guide vs 8 h). The vendor figures are kept.
 - `pudu_kettybot`: the user manual's spec table lists cruise speed "0.5~0.9m/s", and its speed setting range goes up to 1.2 m/s. We keep 1.2 m/s from the setting range. For runtime we keep the manual's ">8h" (8 h) over a reseller's 10 h. Payload (30 kg) appears only on reseller pages.
 
-### Pipeline improvements from this run
+### Pipeline behaviour
 
-- **Search ranking now matches the exact model.** The first live run ranked sibling-model pages, such as "Servi Plus" for Servi and "BellaBot Pro" for BellaBot, above the model's own page. Their values were not used. `build.search_urls` now ranks pages in this order: pages that name the exact model; then vendor-hosted pages, where a vendor word matches the host, e.g. Keenon Robotics → keenon.com; then the Tavily score. Pages that name only a sibling model come last. With the new ranking, the re-runs agree with the catalog.
+- **Search ranking matches the exact model.** Search results can rank sibling-model pages, such as "Servi Plus" for Servi and "BellaBot Pro" for BellaBot, above the model's own page. `build.search_urls` ranks pages in this order: pages that name the exact model; then vendor-hosted pages, where a vendor word matches the host, e.g. Keenon Robotics → keenon.com; then the Tavily score. Pages that name only a sibling model come last, and no catalog value comes from them. With this ranking, the re-runs agree with the catalog.
 - **Units in brackets.** The number reader now reads a unit in brackets after the numbers, e.g. "435*450*1120 (mm)", as that unit.
-- **Malformed model output.** Malformed model output (non-object fields, a missing unit) is rejected with a reason and no longer stops the build.
+- **Malformed model output.** Malformed model output (non-object fields, a missing unit) is rejected with a reason, and the build continues.
 
 ## Commands
 

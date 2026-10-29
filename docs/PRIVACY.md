@@ -71,5 +71,5 @@ The Official Rules require that submissions do not violate anyone's privacy or p
 
 ## Scope
 
-- This policy covers the demo sites captured by the team during the hackathon. A production deployment would add a data processing agreement with each customer and region-specific terms.
+- This policy covers the sites the team captured during the hackathon. A commercial deployment adds a data processing agreement with each customer and region-specific terms.
 - On-device face blurring depends on the detector's recall; the human review step above covers the cases it misses.

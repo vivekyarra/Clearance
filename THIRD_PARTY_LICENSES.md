@@ -46,7 +46,7 @@ fpdf2 and psycopg are LGPL-3.0: we import them as unmodified, separately install
 | gsplat | Apache-2.0 | https://github.com/nerfstudio-project/gsplat/blob/main/LICENSE | Splat training (J3) |
 | Open3D | MIT | https://github.com/isl-org/Open3D/blob/main/LICENSE | TSDF fusion, point clouds (J2/J4) |
 | Grounding DINO | Apache-2.0 | https://github.com/IDEA-Research/GroundingDINO/blob/main/LICENSE | HF port `IDEA-Research/grounding-dino-tiny` is also apache-2.0 |
-| SAM 2 (code and checkpoints) | Apache-2.0 | https://github.com/facebookresearch/sam2/blob/main/LICENSE | Demo fonts in that repo are OFL-1.1; not used |
+| SAM 2 (code and checkpoints) | Apache-2.0 | https://github.com/facebookresearch/sam2/blob/main/LICENSE | Fonts in that repo's sample app are OFL-1.1; not used |
 | ByteTrack | MIT | https://github.com/FoundationVision/ByteTrack/blob/main/LICENSE | Repo moved from ifzhang/ByteTrack; we use the tracker logic only, not its YOLOX detector |
 | PyTorch | BSD-3-Clause style (repo LICENSE); the PyPI wheel metadata also declares Apache-2.0 bundled components | https://github.com/pytorch/pytorch/blob/main/LICENSE | Runtime for the GPU models |
 | Hugging Face transformers | Apache-2.0 | https://github.com/huggingface/transformers/blob/main/LICENSE | Model loading |

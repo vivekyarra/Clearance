@@ -21,7 +21,7 @@ First public release.
 - **Scan-to-occupancy gate:** reference rooms at a median error of 1.2 cm (LiDAR) and 0.9 cm (camera only); a real
   room scanned with an iPhone 13 at a median of 1.0 cm against a tape measure across 8 distances.
 - **Navigation simulator:** footprint-accurate 2D planning at 36 headings, Monte Carlo batches with social-force
-  pedestrians, three geometry bounds from the scan error, Wilson intervals, Pinch Map, deterministic seeds,
+  pedestrians, three geometry bounds from the scan error, Wilson intervals, Pinch Map, repeatable runs,
   and a 20 Hz live session.
 - **Layout optimizer:** furniture moves that open a route, checked against walls and egress.
 - **Scene understanding and traffic:** Cosmos Reason 2 hazard detection from keyframes, observer phones for foot
