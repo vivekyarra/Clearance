@@ -130,7 +130,9 @@ def test_verified_md_keeps_live_section_marker():
 
 # Words the project wording rule keeps out of everything we publish (assembled so this file passes too).
 _BANNED = ["fa" + "ke", "mo" + "ck", "dum" + "my", "st" + "ub", "place" + "holder", "TO" + "DO", "FIX" + "ME",
-           "ha" + "ck", "synthe" + "tic", "to" + "y", "half-" + "done", "not " + "implemented", "demo-" + "only"]
+           "ha" + "ck", "synthe" + "tic", "to" + "y", "half-" + "done", "not " + "implemented", "de" + "mo",
+           "proto" + "type", "work" + "around", "experi" + "mental", "bro" + "ken", "tempo" + "rary", "see" + "ded",
+           "be" + "ta", "limit" + "ation"]
 _OLD = "pro" + "ving"
 
 
@@ -146,6 +148,10 @@ def test_wording_rule(path):
             pat = r"\bha" + r"ck(?!athon)\w*"
         elif w == "to" + "y":
             pat = r"\bto" + r"ys?\b"
+        elif w == "de" + "mo":  # the phrase "... video" is allowed
+            pat = r"\bde" + r"mo(?! video)\w*"
+        elif w == "be" + "ta":
+            pat = r"\bbe" + r"tas?\b"
         else:
             pat = rf"\b{re.escape(w.lower())}\w*"
         hits = [m.group(0) for m in re.finditer(pat, low)]
