@@ -1,70 +1,91 @@
-# Clearance: Know if a robot fits before you buy it
+# Clearance
 
-**Scan a real room with an ordinary iPhone. Clearance builds a measured digital twin, finds which commercial delivery robots and AMRs can actually work there, simulates them against real foot traffic, and tells you what to buy, what to move, and what it pays back. Every number is traceable to a simulation run, a measurement, or a cited source.**
+### Know if a robot fits before you buy it.
 
-Built for the **Nebius x NVIDIA Global AI Hackathon**, Physical AI track, with **NVIDIA Nemotron**, **Nebius Token Factory**, **Nebius AI Cloud**, **Cosmos Reason 2** for scene understanding, and **Tavily** for live robot research.
+> Walk your room with an ordinary iPhone. Clearance turns the walk into a measured digital twin (1.0 cm median error against a tape measure), tests every robot that could do the job against your real aisles, doors and foot traffic, and gives each one a verdict decided by code. NVIDIA Nemotron on Nebius Token Factory investigates every failure and writes the report.
+
+Built for the **Nebius x NVIDIA Global AI Hackathon**, Physical AI track.
 
 [![CI](https://github.com/vivekyarra/Clearance/actions/workflows/ci.yml/badge.svg)](https://github.com/vivekyarra/Clearance/actions/workflows/ci.yml)
 [![iOS](https://github.com/vivekyarra/Clearance/actions/workflows/ios.yml/badge.svg)](https://github.com/vivekyarra/Clearance/actions/workflows/ios.yml)
+![NVIDIA Nemotron](https://img.shields.io/badge/NVIDIA-Nemotron-76B900?logo=nvidia&logoColor=white)
+![Nebius Token Factory](https://img.shields.io/badge/Nebius-Token_Factory-052B42)
+![Tavily](https://img.shields.io/badge/Tavily-Search_%2B_Extract-1A73E8)
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue)
 ![Version](https://img.shields.io/badge/version-0.1.0-informational)
 
 [![Watch the 3-minute demo video](https://img.youtube.com/vi/sYL-GOtZIys/maxresdefault.jpg)](https://youtu.be/sYL-GOtZIys)
 
-**▶ [Watch the 3-minute demo video](https://youtu.be/sYL-GOtZIys):** a real room scanned with an iPhone 13, the measured twin, Nemotron on Nebius Token Factory, the verdicts, and the robot driving the route in AR.
+**▶ [Watch the 3-minute demo video](https://youtu.be/sYL-GOtZIys):** a real room scanned with an iPhone 13, its measured twin, live Nemotron investigations, the verdicts, and the chosen robot driving the route in AR.
 
----
+**🖥 [Open the Clearance console](https://vivekyarra.github.io/Clearance/):** browse the sites, twins, Clearance checks, investigation trails and reports in your browser. No install, no keys.
 
-## Why
+## At a glance
 
-Cafés, restaurants, clinics and small warehouses are being sold service robots and AMRs. Whether a robot works depends on *this* site: aisle widths, turning space, door lips, clutter, and people at peak hours. Today the answer comes from a vendor visit or a paid pilot. Clearance gives the owner an independent answer from a 5-minute phone scan.
+| 1.0 cm | 100% / 99% / 95% | 90 / 0 | 2,700+ |
+|:-:|:-:|:-:|:-:|
+| median scan error in a real room, iPhone 13 with no LiDAR | DINERBOT T8 success in that room at quiet / normal / peak traffic | live Nemotron calls on Nebius Token Factory / failed calls | Python tests, plus 83 web and 94 Swift tests, green in CI |
 
-## What it does
+## The problem
 
-1. **Scan.** The Clearance iPhone app captures ARKit poses and keyframes, anchored to a floor marker. Faces are blurred on the phone. Android phones can join as fixed observers that record foot traffic (also blurred on device).
-2. **Twin.** The server fuses depth (LiDAR, or Depth Anything V2 Small aligned to ARKit feature points on non-LiDAR phones) into a 2.5 cm occupancy grid with furniture primitives, door thresholds and hazards.
-3. **Edit.** The operator places the dock, pickup and delivery stops in the twin editor and fixes any labels.
-4. **Clearance check.** Code filters the robot catalog, checks static feasibility on three geometry bounds, and runs Monte Carlo navigation batches with pedestrians. **Nemotron 3.5 Super VL** then investigates every failure with real experiments in the simulator. A layout optimizer searches for furniture moves that help.
-5. **Verdict.** Each robot gets exactly one code-decided verdict: **Cleared**, **Cleared with changes**, or **Not cleared**, with the rule that produced it.
-6. **Clearance Report.** **Nemotron 3 Ultra** writes the narrative around code-rendered tables; a fact-checker verifies that every number carries a fact tag that matches its source.
-7. **AR replay.** Point the iPhone at the marker and watch the chosen robot drive the mission in the real room, hidden behind real furniture, stopping for real people.
+Robots are for sale now. Cafés, hotels, offices and small warehouses are offered delivery robots and AMRs that cost as much as a year of staff time. Whether one works depends on *that* room: aisle widths, turning space, door lips, clutter, and people at peak hours.
+
+Today that answer costs a vendor visit or a paid pilot. Clearance gives an independent answer from a 5-minute phone scan, before you spend a single dollar.
+
+**Who it is for:** cafés, restaurants, hotels, offices and warehouses today. Homes next.
+
+## How it works
+
+1. **Scan.** The Clearance iPhone app records ARKit poses and keyframes, anchored to a floor marker shown on a second phone. Faces are blurred on the phone before anything leaves it. Android phones can join as fixed observers that count foot traffic, also blurred on device.
+2. **Twin.** The server fuses depth (LiDAR, or Depth Anything V2 Small aligned to ARKit feature points on phones without LiDAR) into a 2.5 cm occupancy grid with furniture, door thresholds and hazards.
+3. **Edit.** The operator confirms the twin, marks the dock, pickup and delivery stops, and runs the check with one click.
+4. **Clearance check.** Code filters the robot catalog, checks static feasibility on three geometry bounds, and runs Monte Carlo navigation batches with people walking past. **Nemotron 3.5 Super VL** investigates every failure with real experiments in the simulator. A layout optimizer searches for furniture moves that help.
+5. **Verdict.** Each robot gets exactly one verdict, **Cleared**, **Cleared with changes** or **Not cleared**, from a deterministic rule. Nemotron explains verdicts. It never sets them.
+6. **Clearance Report.** **Nemotron 3 Ultra** writes the narrative around tables rendered by code. A fact-checker verifies that every number carries a fact tag that matches its source.
+7. **AR replay.** Point the iPhone at the marker and watch the chosen robot drive the mission in your real room.
 
 ## Measured results
 
 | What | Result | Source |
 |---|---|---|
 | **Real room, iPhone 13 (no LiDAR)**, scan vs tape measure, 8 distances | **median error 1.0 cm**, p90 3.0 cm, max 4.0 cm | on-site tape check, `docs/EVAL.md` |
-| **Real-room Clearance check** (5 café robots, 100 episodes per batch) | DINERBOT T8 **Cleared**: 100% / 99% / 95% success at quiet / normal / peak traffic; 4 robots Not cleared with the exact pinch point | `docs/EVAL.md` |
-| Reference rooms, LiDAR tier, 60 distances | median 1.2 cm | `docs/GATE.md` |
-| Reference rooms, camera-only tier, 60 distances | median 0.9 cm | `docs/GATE.md` |
-| Go/no-go gate (scan to occupancy) | **GO** on reference rooms and on a real room | `docs/GATE.md` |
-| Robot catalog | 12 real robots, every numeric spec backed by a verbatim quote from its source page | `catalog/README.md` |
-| Live robot research | Tavily Search + Extract + Nemotron extraction: 129 fields validated, 60 rejected by the quote validator | `catalog/README.md` |
+| **Real-room Clearance check** (5 café robots, 100 episodes per batch, 202 s end to end) | DINERBOT T8 **Cleared**: 100% / 99% / 95% success at quiet / normal / peak traffic. Bear Servi **Not cleared**: it needs 0.62 m to turn and the gap is 0.52 m. Every verdict names its exact pinch point. | `docs/EVAL.md`, `docs/onsite_clearance_report.md` |
 | **Nemotron on Nebius Token Factory**, 3 full reference checks | 90 live calls (39 Super, 51 Ultra), 0 failed, median 2.5 s / 6.9 s per call, about 0.58 USD at list price | `docs/PROOF.md` |
-| Fact-checked reports | 100% of numbers in published Clearance Reports carry a valid fact tag | `docs/EVAL.md` |
+| Nemotron investigation, reference café | moved one chair; Bear Servi success went from 75% to 100% | `docs/EVAL.md` |
+| Fact-checked reports | every published number carries a valid fact tag; 0 errors in published reports | `docs/EVAL.md` |
+| Rendered reference rooms (sensor noise, pose drift), 60 distances per tier | median 1.2 cm with LiDAR, 0.9 cm camera-only | `docs/GATE.md` |
+| Robot catalog | 12 real robots, every numeric spec backed by a verbatim quote from its source page | `catalog/README.md` |
 | Automated tests | 2,700+ Python tests, 83 web tests, 94 Swift tests, all green in CI | GitHub Actions |
 
-Verdicts on the three reference sites, investigation statistics, wall times and simulation throughput are in [`docs/EVAL.md`](docs/EVAL.md). Live model usage is in [`docs/PROOF.md`](docs/PROOF.md).
+## Built on NVIDIA and Nebius
 
-## How we use NVIDIA and Nebius
+**Language models never produce measurements or verdicts.** Every number comes from code. Nemotron plans, investigates, explains and writes, and three Nemotron tiers each have one job.
 
 | Component | Role in Clearance | Status |
 |---|---|---|
-| **Nebius Token Factory** | OpenAI-compatible inference for every Nemotron call. Model IDs are confirmed from `GET /v1/models` by `scripts/verify_token_factory.py` and recorded in `config/models.yaml`. | Integrated (`config/models.yaml`, `agents/llm/client.py`) |
-| **Nemotron 3.5 Lightning (Nano tier)** | Turns Tavily-extracted datasheet text into structured robot specs, one verbatim quote per field. | Live |
-| **Nemotron 3.5 Super VL (Super tier)** | Orchestrator and **investigation loop**: forms a hypothesis about why a robot fails, chooses the next experiment (fewer pedestrians in a zone, a chair moved, a different robot), runs it through the simulator tools, reads the result, and decides whether to dig further. Capped at 6 experiments per robot. | Live |
-| **Nemotron 3 Ultra (Ultra tier)** | Writes the Clearance Report narrative from the facts pack and the investigation trail. | Live |
-| **Cosmos Reason 2** (self-hosted on Nebius AI Cloud via vLLM) | Scene understanding: hazards such as cables, glass partitions and door swings, from keyframes plus the detected object list. It never outputs geometry. | Deployment-ready (`infra/nebius/deploy_vision_endpoint.sh`) |
-| **Nebius AI Cloud / Serverless Jobs** | Reconstruction and splat jobs on GPU; simulation shards as parallel CPU jobs (`infra/jobs/`, `infra/nebius/`). | Deployment-ready (`infra/`) |
-| **Nebius Object Storage** | Captures, twins and episodes (S3-compatible, presigned uploads). | Integrated (`services/api/store.py`) |
+| **Nebius Token Factory** | OpenAI-compatible inference for every Nemotron call. Model IDs are confirmed from `GET /v1/models` by `scripts/verify_token_factory.py` and recorded in `config/models.yaml`. | **Live** (`docs/PROOF.md`) |
+| **Nemotron 3.5 Lightning** (Nano tier) | Turns Tavily-extracted datasheet text into structured robot specs, one verbatim quote per field. | **Live** |
+| **Nemotron 3.5 Super VL** (Super tier) | The orchestrator and the **investigation loop**: forms a hypothesis about why a robot fails, chooses the next experiment (fewer people in a zone, a chair moved, a different robot), runs it through the simulator tools, reads the result, and decides whether to dig further. Up to 6 experiments per robot. Also reads keyframes for scene hazards. | **Live** |
+| **Nemotron 3 Ultra** (Ultra tier) | Writes the Clearance Report narrative from the facts pack and the investigation trail. | **Live** |
+| **Cosmos Reason 2** (vLLM on Nebius AI Cloud) | Dedicated scene-hazard model: cables, glass partitions, door swings. It never outputs geometry. Today Nemotron 3.5 Super VL runs this step live on Token Factory. | One-command deploy (`infra/nebius/deploy_vision_endpoint.sh`) |
+| **Nebius AI Cloud / Serverless Jobs** | Reconstruction and splat jobs on GPU; simulation shards as parallel CPU jobs. The same stages run on the local process pool. | Job definitions shipped (`infra/jobs/`, `infra/nebius/`) |
+| **Nebius Object Storage** | Captures, twins and episodes through an S3-compatible store with presigned uploads. | Integrated (`services/api/store.py`) |
 
-Language models never produce measurements or verdicts. All numbers come from code; Nemotron plans, investigates, explains and writes.
+## Tavily: specs we can defend
 
-## How we use Tavily
+Every robot spec in the catalog is found and read with Tavily, then checked by code:
 
-Tavily is load-bearing in two places:
-- **Catalog builder:** Tavily Search finds datasheets and spec pages, Tavily Extract pulls their text, Nemotron extracts each field with a quote, and a validator accepts a value only if the quote appears verbatim on the page and contains the number. Fields without proof stay empty. Prices are taken only from public pages ("price on request" otherwise).
-- **Live market check:** each Clearance check can pull current public pricing, deployment reviews and safety-standard references, all cited in the report.
+- **Tavily Search** finds datasheets and vendor pages. **Tavily Extract** pulls their text. **Nemotron Nano** extracts each field with a quote.
+- A **validator** accepts a value only if the quote appears verbatim on the page and contains the number. Fields without proof stay empty, and prices appear only when a public page states them ("price on request" otherwise).
+- On the live catalog build: 30 Search calls and 20 Extract calls (65 URLs), **129 fields validated**, and every rejected value logged with its reason (`catalog/README.md`).
+- Each Clearance check can pull current public pricing, deployment reviews and safety-standard references, all cited in the report.
+
+## Hardware
+
+- **Sensor rig:** an iPhone 13 with no LiDAR. ARKit tracking plus monocular depth gives the 1.0 cm result above.
+- **Floor marker:** a second phone lying flat on the floor shows an AprilTag (`/screen-marker.html`). It sets the room origin and the scale check.
+- **AR replay:** the same iPhone plays the simulated robot back in the real room, hidden behind real furniture.
+- In the demo video, 0:26–1:20 is one continuous hardware take of the scan, and 2:32–2:52 is the AR replay.
 
 ## Architecture
 
@@ -79,7 +100,7 @@ flowchart LR
     API{{"Clearance API<br/>FastAPI · scoped tokens"}}
 
     subgraph Nebius["☁️ Nebius"]
-        TF["Token Factory<br/>Nemotron Nano · Super · Ultra"]
+        TF["Token Factory<br/>Nemotron Nano · Super VL · Ultra"]
         COS["AI Cloud GPU<br/>Cosmos Reason 2 (vLLM)"]
         JOBS["Serverless Jobs<br/>recon · simulation shards"]
         OS[("Object Storage<br/>captures · twins · episodes")]
@@ -90,12 +111,14 @@ flowchart LR
     IOS --> API
     OBS --> API
     WEB <--> API
-    API --> TF
-    API --> COS
-    API --> JOBS
-    API --> OS
-    API --> TAV
+    API ==>|live| TF
+    API -.->|deploy script| COS
+    API -.->|job definitions| JOBS
+    API -.->|S3 store| OS
+    API ==>|live| TAV
 ```
+
+Thick arrows run live in every Clearance check. Dotted arrows ship with deploy scripts and run locally by default.
 
 ```mermaid
 flowchart LR
@@ -110,13 +133,15 @@ flowchart LR
     class E,F,I,J code
 ```
 
-Green steps are Nemotron on Nebius Token Factory; blue steps are deterministic code that decides every number and verdict.
+Green steps are Nemotron on Nebius Token Factory. Blue steps are deterministic code that decides every number and verdict.
 
 Details: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), data contracts in [`clearance_core/schemas.py`](clearance_core/schemas.py) and [`schemas/`](schemas/).
 
-## Try it
+## Run it
 
-The repo ships three reference sites (café, storeroom, corridor) with recorded Clearance checks, so the console works without a scan.
+**In your browser:** [vivekyarra.github.io/Clearance](https://vivekyarra.github.io/Clearance/) opens the console on the reference sites with their recorded Clearance checks.
+
+**Locally:**
 
 ```bash
 pip install -r requirements.txt
@@ -124,11 +149,11 @@ cd apps/web && npm ci && npm run build && cd ../..
 PYTHONPATH=. python -m uvicorn services.api.main:app --port 8000 --ws-max-size 131072
 ```
 
-Open http://localhost:8000. Without keys, Clearance runs in offline mode with a deterministic policy in place of the language models. For live runs, copy `.env.example` to `.env` and set `NEBIUS_API_KEY` and `TAVILY_API_KEY`.
+Open http://localhost:8000. The console opens straight onto three reference sites (café, storeroom, corridor) with recorded Clearance checks; no scan or keys required. Without keys, Clearance runs fully offline: a deterministic policy drives the same tools. For live runs, copy `.env.example` to `.env` and set `NEBIUS_API_KEY` and `TAVILY_API_KEY`.
 
 **iPhone app:** CI builds an unsigned `.ipa` on every change (`iOS` workflow artifact). Install it with Sideloadly, or build from `apps/ios` with XcodeGen and Xcode 16. See [`apps/ios/README.md`](apps/ios/README.md).
 
-**Scan a real room:** create a site in the console, print the marker (or open `/screen-marker.html` on a second phone and lay it flat), join with the iPhone app through the site QR code, scan, then place stops in the editor and press **Run Clearance check**.
+**Scan a real room:** create a site in the console, open `/screen-marker.html` on a second phone and lay it flat (or print the marker), join with the iPhone app through the site QR code, scan, place the stops in the editor and press **Run Clearance check**.
 
 **Reproduce the proof:** `python scripts/release_proof.py --require-provider token_factory --fresh-usage` re-runs the reference checks live on Nebius Token Factory and rebuilds `docs/PROOF.md`.
 
@@ -146,11 +171,11 @@ Open http://localhost:8000. Without keys, Clearance runs in offline mode with a 
 | `catalog/robots` | Robot specs with sources |
 | `sample_sites` | Reference sites with recorded Clearance checks |
 | `infra` | Dockerfiles, Nebius job and endpoint definitions |
-| `docs` | Plan, architecture, evaluation, proof, privacy, verification notes |
+| `docs` | Architecture, evaluation, proof, privacy and verification notes |
 
-## Scope
+## Built for
 
-Clearance covers wheeled service and delivery robots (Class A) and indoor AMRs (Class B) on point-to-point delivery missions on one floor. Humanoids, manipulation, outdoor sites, stairs and elevators are outside the current scope. Simulation results are simulation-based estimates, shown as ranges across scan uncertainty with their sample sizes; door thresholds near the scan's noise floor are flagged "measure on site".
+Clearance is purpose-built for the robots cafés, hotels and warehouses buy today: wheeled service and delivery robots (Class A) and indoor AMRs (Class B) on point-to-point missions on one floor. Every simulated result ships as a range across scan uncertainty with its sample size, and any door lip too small for the scan to settle is routed to a one-minute ruler check.
 
 ## Privacy
 
