@@ -6,6 +6,40 @@ Products covered: Nebius Token Factory, Nebius AI Cloud (Serverless AI, Object S
 
 ---
 
+## 2026-10-28/29 — Live runs on Token Factory
+
+Measured on three full Clearance checks: 90 calls (39 Nemotron 3.5 Super VL, 51 Nemotron 3 Ultra), 0 failed, 272,121 tokens in, 146,806 tokens out (`docs/PROOF.md`).
+
+### Token Factory
+
+**L1. Reliability under an agent loop**
+- What worked: 90 calls, 0 failures, across hours of tool-calling and long report sections. Median wall time per call was 2.5 s for Super VL and 6.9 s for Ultra, fast enough that the investigation loop feels interactive.
+- Even better: a `usage` breakdown of reasoning vs. answer tokens in the response would let us budget Ultra precisely; today one number covers both.
+
+**L2. Ultra writes long**
+- What worked: Ultra's narrative quality is the best we tested for the report; it explains trade-offs the way an engineer would.
+- Even better: Ultra produced 129,173 output tokens over 51 calls, about 2,500 per call, for sections we budget at 120–250 words. In one regenerated section the answer was the model's working notes instead of prose. A documented way to cap or switch off reasoning per request on Ultra (as some hosts expose with `reasoning_effort` or a thinking toggle) would cut cost and keep answers on format. We now replace any section over twice its word budget with a code template.
+
+**L3. Structured output and tool calling**
+- What worked: the OpenAI-compatible tool-calling format worked unchanged with our client, and Super VL picked sensible simulator experiments (in the reference café it moved one chair and success went from 75% to 100%).
+- Even better: a per-model table in the docs of what `response_format: json_schema`, `tools` and `tool_choice` support, with a minimal example, would save trial calls during setup.
+
+**L4. Vision on the same endpoint**
+- What worked: Nemotron 3.5 Super VL takes keyframes on the same chat endpoint, so scene-hazard checks needed no extra service.
+- Even better: Cosmos Reason 2 on Token Factory. Today it needs a dedicated GPU endpoint, which is a large step up in setup and cost for a model called a few times per scan.
+
+**L5. Cost visibility**
+- What worked: per-call usage in every response made our cost table exact: about 0.58 USD for three full checks at list price.
+- Even better: the prices page needs a signed-in browser; the `pricing` object in `GET /v1/models?verbose=true` is the reliable source, and pointing to it from the prices page would help scripts and agents.
+
+### Tavily
+
+**L6. Search + Extract for verified specs**
+- What worked: 30 Search calls and 20 Extract calls (65 URLs) built a 12-robot catalog where every number is backed by a verbatim quote; Extract's clean text made the quote validator simple.
+- Even better: ranking sometimes put a sibling model's page ("Servi Plus" for "Servi") above the exact model's own page. An exact-phrase boost option in Search would remove the re-ranking step we added.
+
+---
+
 ## 2026-10-27 — Day 1 research (docs and rules)
 
 ### Token Factory
