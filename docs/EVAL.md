@@ -66,6 +66,21 @@ on 2026-10-28 with live models: five café robots, task DOCK -> PICKUP -> TBL1 -
 The DINERBOT T8 replay then played in AR on the iPhone, anchored to the same floor marker. Full report:
 [`docs/onsite_clearance_report.md`](onsite_clearance_report.md); fact-check 0 errors.
 
+### 2a. Pinch gaps checked with a tape measure
+
+The two gaps the verdicts depend on were taped in the room on 2026-10-30, at floor level, with the furniture in its
+scanned position. The scan reports each gap on three geometry bounds (conservative / nominal / optimistic); the
+verdict uses the conservative bound.
+
+| Gap | Where | Scan: conservative / nominal / optimistic | Tape | Robot needs | Verdict it decides |
+|---|---|---|---|---|---|
+| A | at the PICKUP stop | 52.4 / 56.7 / 58.8 cm | **56 cm** | Bear Servi: 61.9 cm to turn | Not cleared, confirmed: 56 cm is 5.9 cm short |
+| B | beside the DOCK stop | 43.4 / 50.1 / 50.6 cm | **45 cm** | DINERBOT T8: 38.4 cm | Cleared, confirmed: 6.6 cm to spare |
+
+Both taped widths fall inside the scan's conservative-to-optimistic range, and both verdicts hold on the taped
+geometry. Gap A matches the nominal estimate to 0.7 cm; at gap B the conservative bound (43.4 cm) is the closer
+estimate, 1.6 cm under the tape.
+
 ## 3. Golden simulation tests
 
 `pytest tests/golden`: **7 passed** (9.8 s). Full suite `pytest -q tests`: 2698 passed, 2 skipped (symlink tests need extra privileges on Windows).
@@ -251,6 +266,7 @@ the real room:
 
 1. **On-site scan run**: GO with an iPhone 13 (T2_VIO_MONO), section 1a. The protocol in `docs/GATE.md` covers 10
    or more distances, the narrowest aisle at its taped width +-5 cm, and a LiDAR iPhone for the T1 tier.
+   Both verdict-deciding pinch gaps are taped (section 2a): both inside the scan's range, both verdicts confirmed.
 2. **Cardboard robot check**: cut cardboard footprints at the true catalog dimensions of two robots (one large,
    for example MiR100 at 0.89 m x 0.58 m, one small, the DINERBOT T8 at 0.47 m x 0.38 m), push each along the
    planned routes in the scanned room, and record pass/fail at every pinch point that static feasibility flags.
