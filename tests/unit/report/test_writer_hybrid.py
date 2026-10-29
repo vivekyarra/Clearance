@@ -63,7 +63,7 @@ def test_required_blocks_present_offline_and_live(analysis):
         assert re.findall(r"^## \d+\. (.+)$", md, re.M) == SECTIONS
         assert check_report(md, facts)["ok"]
         assert md.count("| Rule check | Result |") >= 3 and "awaiting review" in md
-        comp = _sec(md, "Robot comparison (simulation-based estimates)")
+        comp = _sec(md, "Robot comparison (simulated, conservative to optimistic range)")
         assert len([ln for ln in comp.splitlines() if ln.startswith("| ") and not ln.startswith("| Robot |")]) == 3
 
 

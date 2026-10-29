@@ -38,8 +38,8 @@ log = logging.getLogger("clearance.report")
 
 SUMMARY_TITLE = "Summary"
 SECTIONS = [
-    "Site evidence", "Verdicts", "How we investigated", "Why it fails (investigation)",
-    "Robot comparison (simulation-based estimates)", "Pinch Map", "Recommended changes", "Payback",
+    "Site evidence", "Verdicts", "How we investigated", "Investigation findings",
+    "Robot comparison (simulated, conservative to optimistic range)", "Pinch Map", "Recommended changes", "Payback",
     "Trade-offs between the robots", "Hazards and manual checks", "Methodology", "Scope", "Sources",
 ]
 CURRENCY_SYMBOL = {"USD": "$", "EUR": "€", "GBP": "£", "INR": "₹"}
@@ -304,30 +304,51 @@ def _no_investigation_text(c: _Ctx) -> str:
     parts = ["The investigation loop runs simulator experiments on robots that can drive the route but fall short "
              "of the success rule."]
     if cleared:
-        parts.append(f"{', '.join(cleared)} already met every rule, so there was nothing to investigate.")
+        parts.append(f"{', '.join(cleared)} met every rule as-is; no investigation needed.")
     if blocked:
-        parts.append(f"{', '.join(blocked)} cannot complete every task leg on the measured geometry; the reasons "
-                     "are in the Pinch Map below, and the recommended changes show what would open the route.")
+        parts.append(f"{', '.join(blocked)} {'is' if len(blocked) == 1 else 'are'} blocked on the measured geometry at the points shown in the Pinch "
+                     "Map; the recommended changes show what would open the route.")
     if not cleared and not blocked:
         parts.append("No robot in this check needed an experiment.")
     return " ".join(parts)
 
 
+def _is_success_rule(chk: dict) -> bool:
+    """The simulated-success check (the only rule whose value comes from a simulation batch)."""
+    return str(chk.get("rule", "")).startswith("simulated success")
+
+
 def _rule_rows(c: _Ctx, rid: str, phase: str) -> list[tuple[str, str]]:
     """(rule text, result) of each rule check of one verdict phase, every number tagged."""
     out = []
-    for i, chk in enumerate((c.verdicts.get(rid) or {}).get(phase) or []):
-        chk = _d(chk)
+    checks = [_d(chk) for chk in (c.verdicts.get(rid) or {}).get(phase) or []]
+    # an open result on a route check means a threshold awaits measurement; on the success check it means the
+    # batch never ran, because the route is blocked or still waits on that measurement
+    route_blocked = any(chk.get("passed") is False and not _is_success_rule(chk) for chk in checks)
+    for i, chk in enumerate(checks):
         k = f"{rid}|{phase}|{i}"
         rule = tag_text_numbers(chk.get("rule", ""), c.k, f"verdict.rule_num|{k}")
-        state = {True: "met", False: "not met", None: "pending (measure on site)"}[chk.get("passed")]
+        success_rule = _is_success_rule(chk)
+        if chk.get("passed") is None:
+            if not success_rule:
+                state = "measure on site"
+            elif route_blocked:
+                state = "not evaluated (route blocked)"
+            else:
+                state = "not evaluated (measure on site first)"
+        else:
+            state = "met" if chk.get("passed") else "not met"
         val = chk.get("value")
         if isinstance(val, str):
             shown = tag_text_numbers(val, c.k, f"verdict.value_num|{k}")
         elif c.f(f"verdict.value|{k}") is not None:
             shown = ft(c.f(f"verdict.value|{k}"))
+        elif route_blocked:
+            shown = "blocked before simulation"
+        elif chk.get("passed") is None:
+            shown = "awaiting on-site measurement"
         else:
-            shown = "not simulated"
+            shown = "not recorded"
         out.append((rule, f"{state} (value: {shown})"))
     return out
 
@@ -382,8 +403,8 @@ def assemble(c: _Ctx, narratives: dict[str, str], *, title: str | None = None) -
     add(f"# {title or 'Clearance Report'}")
     add("")
     add("Every number below links to where it came from: an on-site measurement, a cited page, your own "
-        "inputs, a formula, or a simulation batch you can replay. Simulation results are simulation-based "
-        "estimates, shown as ranges across scan uncertainty.")
+        "inputs, a formula, or a simulation batch you can replay. Simulated results are shown as ranges "
+        "across scan uncertainty.")
     add("")
     if (narratives.get("summary") or "").strip():
         add(f"## {SUMMARY_TITLE}")
@@ -480,7 +501,7 @@ def assemble(c: _Ctx, narratives: dict[str, str], *, title: str | None = None) -
         L.extend(_trail_lines(c))
 
     # why it fails: findings recorded by the investigation
-    add(_h("Why it fails (investigation)"))
+    add(_h("Investigation findings"))
     add("")
     shown = 0
     for fd in c.findings:
@@ -494,11 +515,11 @@ def assemble(c: _Ctx, narratives: dict[str, str], *, title: str | None = None) -
             add(line + f" Status: {status}" + (f"; objects involved: {objs}." if objs else "."))
             shown += 1
     if not shown:
-        add("No findings were recorded; the comparison and Pinch Map below show where time is lost.")
+        add("No experiment was needed; the comparison and Pinch Map below show where each robot spends its time.")
     add("")
 
     # comparison
-    add(_h("Robot comparison (simulation-based estimates)"))
+    add(_h("Robot comparison (simulated, conservative to optimistic range)"))
     add("")
     dens = [d for d in DENSITY_ORDER if any(c.f(f"sim.success|{r}|{d}|nominal") or c.f(f"sim.success|{r}|{d}|conservative")
                                            for r in c.robots)]
@@ -686,7 +707,7 @@ def assemble(c: _Ctx, narratives: dict[str, str], *, title: str | None = None) -
             checks += 1
     ts = c.f("site.traffic_source")
     if ts is not None and _get(ts, "value") != "observed":
-        add(f"- Traffic is {_get(ts, 'value')} {tag(ts)}; a fixed observer phone at peak time would replace the estimate.")
+        add(f"- Traffic: operator input {tag(ts)}. Add an observer phone at peak time for measured counts.")
         checks += 1
     if not checks:
         add("- Nothing flagged for a manual check.")
@@ -723,11 +744,12 @@ def assemble(c: _Ctx, narratives: dict[str, str], *, title: str | None = None) -
     # scope
     add(_h("Scope"))
     add("")
-    add("- Results are simulation-based estimates for wheeled service robots and indoor AMRs on flat floors; "
-        "real deployments also depend on staff routines, Wi-Fi and vendor setup.")
-    add("- Stairs, elevators, outdoor routes and manipulation tasks are outside this report.")
+    add("- Results cover route geometry and foot traffic on flat floors; vendor setup, Wi-Fi and staff routines "
+        "are confirmed during installation.")
+    add("- This report covers single-floor indoor delivery routes.")
     add("- Thresholds close to the scan noise are marked for on-site measurement rather than guessed.")
-    add("- Vendor specs are used as published and cited; prices appear only when public or entered by you.")
+    add("- Vendor specs are used as published and cited.")
+    add("- Prices come from public pages or your own quote.")
     add("")
 
     # sources
@@ -853,7 +875,7 @@ Hard rules:
 1. Every number must be copied exactly from ALLOWED_FACTS: write the fact's "write_as" text verbatim (the value with its unit, then its tag), e.g. "71% [f_012]". Each number is followed directly by its own tag. Never compute, convert, round, sum or invent numbers, and never write numbers as words ("two", "half", "twice", "a third"). Counts and item numbers are numbers too: write "each robot", "the experiments", "the recommended layout change", not "four robots" or "change 1". If a number you want is not in ALLOWED_FACTS, say it without a number.
 2. Verdict labels are exactly "Cleared", "Cleared with changes" and "Not cleared". Use a label only for the robot it belongs to in VERDICTS, and never use the word "cleared" for anything else.
 3. Write object, zone, waypoint and batch ids in backticks, e.g. `T4`.
-4. Neutral, factual tone. Simulation results are simulation-based estimates. Keep unknowns explicit ("price on request", "measure on site").
+4. Neutral, factual tone. Describe simulated results as ranges with sample sizes. Keep unknowns explicit ("price on request", "measure on site").
 5. No headings, no tables, no code blocks. Plain sentences, or a short bullet list when asked.
 6. Answer with only a JSON object: {"markdown": "<the section text>"}"""
 
@@ -1235,7 +1257,7 @@ def write_report(facts, citations, findings, verdicts=None, investigation=None, 
 
 def required_blocks(md: str, c: _Ctx) -> dict[str, bool]:
     """Which required report blocks are present in `md`."""
-    comp = md.split("Robot comparison (simulation-based estimates)", 1)[-1].split("\n## ", 1)[0]
+    comp = md.split("Robot comparison (simulated, conservative to optimistic range)", 1)[-1].split("\n## ", 1)[0]
     rows = [ln for ln in comp.splitlines() if ln.startswith("| ") and not ln.startswith("| Robot |")]
     pend = any(_get(c.f(f"robot.verified|{r}"), "value") == "awaiting review" for r in c.robots
                if c.f(f"robot.verified|{r}") is not None)
@@ -1266,7 +1288,7 @@ Hard rules:
 1. Every number you write (integers, decimals, percentages, money, ranges, table cells) must come from the FACTS list, written with digits, and be followed directly (before the next number) in the same sentence or table cell by its tag, e.g. "71–93% [f_012][f_013]". Never write numbers as words, never compute, round into new numbers, or invent numbers. If no fact exists, write the sentence without a number.
 2. Ratios are printed as percentages (0.93 -> 93%). Lengths under 0.1 m may be printed in cm.
 3. Each robot gets exactly one verdict and it must be the code verdict given in VERDICTS, written exactly as "Cleared", "Cleared with changes" or "Not cleared". Explain the verdict with the rule checks it came from, tagging each value. Never use these three labels for anything else.
-4. Describe simulation results as simulation-based estimates, as ranges from the conservative to the optimistic geometry bound, with sample size.
+4. Describe simulated results as ranges with sample sizes, from the conservative to the optimistic geometry bound.
 5. Lead with the real-world evidence: scan accuracy and on-site measurements.
 6. Write "How we investigated" from the INVESTIGATION TRAIL: for each experiment give hypothesis -> experiment -> result -> conclusion, citing only the trail's fact tags.
 7. Neutral, factual tone. Unknowns stay explicit: "price on request", "measure on site".
