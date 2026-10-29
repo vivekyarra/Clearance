@@ -35,7 +35,9 @@ def test_offline_report_sections_and_wording(analysis):
     heads = re.findall(r"^## \d+\. (.+)$", md, re.M)
     assert heads == SECTIONS
     assert md.index("Scan accuracy") < md.index("## 2. Verdicts")          # real-world evidence leads
-    assert "simulation-based estimates" in md
+    assert "Simulated results are shown as ranges" in md
+    assert "Robot comparison (simulated, conservative to optimistic range)" in heads
+    assert "Investigation findings" in heads
     assert not BANNED.search(md), BANNED.search(md)
     assert "price on request" in md and "measure on site" in md
     assert "clearance" not in re.sub(r"Clearance (Report|console)", "", md).lower().replace("cleared", "")
@@ -198,3 +200,24 @@ def test_offline_report_robust_to_varied_results(analysis, seed):
     facts, *rest = _inputs(analysis)
     md = write_report(facts, *rest, mode="offline")
     assert check_report(md, facts)["ok"]
+
+
+def _rows(phase_checks):
+    from agents.report.writer import _Ctx, _rule_rows
+    c = _Ctx([], [], [], [{"robot_id": "rb", "as_is": phase_checks}], None)
+    return [r for _, r in _rule_rows(c, "rb", "as_is")]
+
+
+def test_open_rule_results_name_their_reason():
+    legs = "every task leg feasible on the conservative geometry bound"
+    thr = "no unresolved flagged_manual thresholds on the route"
+    succ = "simulated success at normal traffic (conservative bound) >= 0.90"
+    blocked = _rows([{"rule": legs, "passed": False, "value": "2/5 legs"},
+                     {"rule": thr, "passed": True, "value": "none"},
+                     {"rule": succ, "passed": None, "value": None}])
+    assert blocked[2] == "not evaluated (route blocked) (value: blocked before simulation)"
+    pending = _rows([{"rule": legs, "passed": None, "value": "3/5 legs"},
+                     {"rule": thr, "passed": None, "value": "D1"},
+                     {"rule": succ, "passed": None, "value": None}])
+    assert pending[0].startswith("measure on site (") and pending[1].startswith("measure on site (")
+    assert pending[2] == "not evaluated (measure on site first) (value: awaiting on-site measurement)"
