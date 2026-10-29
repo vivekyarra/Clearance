@@ -2,7 +2,7 @@
 
 Clearance is licensed under Apache-2.0 (see `LICENSE`). This file lists the third-party software and models Clearance uses or can use, with the license confirmed at the primary source (repository LICENSE file or Hugging Face model card) on 2026-10-27. Versions are the ones pinned in `requirements.txt`, `requirements-gpu.txt` and `apps/web/package.json`.
 
-Rules we follow (PLAN Section 9):
+Rules we follow:
 - Only permissive licenses (Apache-2.0, MIT, BSD, ISC, MIT-CMU) or NVIDIA open model licenses for anything we ship or run.
 - Non-commercial and network-copyleft components are excluded (see "Excluded" below).
 - Robot shapes are drawn from spec dimensions; no vendor meshes, logos or photos are bundled.

@@ -1,1 +1,1 @@
-"""Robot catalog builder: Tavily + Nemotron Nano extraction with a verbatim-quote validator (PLAN 7.6)."""
+"""Robot catalog builder: Tavily + Nemotron Nano extraction with a verbatim-quote validator."""

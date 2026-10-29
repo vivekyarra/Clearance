@@ -1,7 +1,7 @@
 /**
  * Compact 2D navigation model used only in offline mode, so replays, Pinch Map data and the live
  * session behave plausibly without the Python simulator (jobs/sim). It follows the same rules as
- * PLAN 7.7 in simplified form: global A* path, safety stop, near-miss detection, replan, timeout.
+ * jobs/sim in simplified form: global A* path, safety stop, near-miss detection, replan, timeout.
  */
 import { type OccGrid, isBlocked, worldToCell } from "../lib/grid";
 import { gauss, mulberry32 } from "../lib/rng";

@@ -20,7 +20,7 @@ enum DeviceInfo {
 
     static var osVersion: String { "iOS \(UIDevice.current.systemVersion)" }
 
-    /// T1 when ARKit offers LiDAR scene depth, otherwise T2 (PLAN 7.1 tiers).
+    /// T1 when ARKit offers LiDAR scene depth, otherwise T2.
     static var tier: CaptureTier {
         ARWorldTrackingConfiguration.supportsFrameSemantics(.sceneDepth) ? .lidar : .vioMono
     }

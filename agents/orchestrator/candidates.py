@@ -1,4 +1,4 @@
-"""Code-first candidate selection (PLAN 7.11): static filters before any simulation or LLM.
+"""Code-first candidate selection: static filters before any simulation or LLM.
 
 Filters: human-verified only (unless include_awaiting_review=True, which admits specs awaiting review and marks
 them "awaiting review"); footprint published; robot class (optional); payload vs task; footprint width vs the

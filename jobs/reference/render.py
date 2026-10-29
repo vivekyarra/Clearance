@@ -1,4 +1,4 @@
-"""Render an ARKit-format Capture of a reference room (PLAN Phase 0.5 software half).
+"""Render an ARKit-format Capture of a reference room (software half of the scan gate, docs/GATE.md).
 
 Geometry: walls 2.5 m, every Solid extruded between its z0..z1, floor Z = 0, ceiling at 2.5 m over
 the room. The camera is hand-held at ~1.4 m and walks the room's scan_path while sweeping its heading.

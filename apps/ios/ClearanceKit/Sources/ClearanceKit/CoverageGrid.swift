@@ -1,7 +1,7 @@
 import Foundation
 import simd
 
-/// Top-down coverage grid (PLAN 7.1): 0.5 m cells in the site frame. A cell counts as covered
+/// Top-down coverage grid: 0.5 m cells in the site frame. A cell counts as covered
 /// once it has been observed from at least two viewing directions that differ by 30 degrees or
 /// more. Directions are the bearing from the camera to the cell centre, binned into 12 sectors
 /// of 30 degrees; two occupied sectors at circular distance >= 2 guarantee >= 30 degrees apart.

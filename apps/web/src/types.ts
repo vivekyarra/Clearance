@@ -1,12 +1,12 @@
 /**
- * Hand-written mirror of clearance_core/schemas.py (frozen contracts, PLAN Section 6).
+ * Hand-written mirror of clearance_core/schemas.py (frozen contracts, docs/CONTRACTS.md).
  * Field names, optionality and defaults follow the pydantic models exactly.
  * Python tuples become fixed-length TS tuples; Optional[...] becomes `T | null`.
  * Fields with pydantic defaults are optional (`?`) because the server may omit them
  * (it serialises with model_dump(mode="json", by_alias=True), so in practice they are present).
  *
  * Below the "API envelopes" marker are shapes the HTTP API wraps around the frozen models.
- * Those are NOT in clearance_core and are written against PLAN Section 11 + docs/CONTRACTS.md.
+ * Those are NOT in clearance_core and are written against docs/CONTRACTS.md.
  */
 
 export type XY = [number, number];
@@ -305,7 +305,7 @@ export interface Fact {
   origin: FactOrigin;
 }
 
-// ---------- Investigation loop (PLAN 7.12) ----------
+// ---------- Investigation loop ----------
 export interface InvestigationStep {
   i: number;
   thought?: string;
@@ -399,7 +399,7 @@ export interface EpisodeFrame {
 }
 
 // =====================================================================
-// API envelopes (not in clearance_core; built against PLAN Section 11 / CONTRACTS.md)
+// API envelopes (not in clearance_core; built against docs/CONTRACTS.md)
 // =====================================================================
 
 export type SiteKind = "cafe" | "restaurant" | "storeroom" | "warehouse" | "corridor" | "office" | "other";

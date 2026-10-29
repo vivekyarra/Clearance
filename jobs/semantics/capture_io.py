@@ -1,4 +1,4 @@
-"""Reading Capture directories (PLAN 6.1) and twin point clouds. Shared by J3/J4/J5."""
+"""Reading Capture directories and twin point clouds. Shared by J3/J4/J5."""
 from __future__ import annotations
 
 import json

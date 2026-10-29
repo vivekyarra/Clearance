@@ -1,4 +1,4 @@
-"""Build splat-training datasets from our ARKit poses (PLAN 7.2 J3).
+"""Build splat-training datasets from our ARKit poses.
 
 Two layouts are written side by side:
 * nerfstudio `transforms.json`: per-frame camera-to-world in the OpenGL/Blender camera convention

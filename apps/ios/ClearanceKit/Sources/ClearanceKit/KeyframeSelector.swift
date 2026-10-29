@@ -1,7 +1,7 @@
 import Foundation
 import simd
 
-/// Keyframe rule (PLAN 7.1): save when the camera moved more than 10 cm or rotated more than 10
+/// Keyframe rule: save when the camera moved more than 10 cm or rotated more than 10
 /// degrees since the last saved keyframe, never faster than 15 fps.
 ///
 /// `isCandidate` does not change state; call `commit` once the frame passed the blur check and

@@ -6,7 +6,7 @@ import type { CoachMessage } from "../types";
 
 type Coverage = Extract<CoachMessage, { type: "coverage" }>;
 
-/** Capture coach screen (PLAN 7.1): live coverage map + latest prompt from the scanner, via WebSocket. */
+/** Capture coach screen: live coverage map + latest prompt from the scanner, via WebSocket. */
 export default function CoachPage() {
   const { site = "" } = useParams();
   const [cov, setCov] = useState<Coverage | null>(null);

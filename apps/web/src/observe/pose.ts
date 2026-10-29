@@ -1,5 +1,5 @@
 /**
- * Marker-based camera pose for fixed observers (PLAN 7.1). Site frame: origin at marker center, Z up,
+ * Marker-based camera pose for fixed observers. Site frame: origin at marker center, Z up,
  * marker lying flat on the floor with its image "up" direction along site +Y.
  * Output T_site_cam is row-major 4x4 in the ARKit camera convention used by PoseRecord
  * (x right, y up, camera looks along -Z), converted from OpenCV's (x right, y down, z forward).

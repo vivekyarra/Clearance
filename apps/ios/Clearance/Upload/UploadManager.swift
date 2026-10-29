@@ -3,7 +3,7 @@ import CryptoKit
 import Foundation
 import UIKit
 
-/// Resumable capture upload (PLAN 7.1 / Section 11):
+/// Resumable capture upload (docs/CONTRACTS.md):
 /// 1. `POST /sites/{site}/captures` with the device, marker and part count (RegisterCaptureRequest);
 ///    the server answers with a capture_id and `upload.chunks`, one presigned URL per ZIP part.
 /// 2. Each part is zipped on demand, hashed (SHA-256) and `PUT` to its URL; receipts are saved to

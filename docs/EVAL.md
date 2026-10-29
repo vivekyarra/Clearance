@@ -6,7 +6,7 @@ cores, CPU only) on 2026-10-27/28, plus one on-site phone scan (section 1b). Sou
 --fresh-usage --force` through `scripts/run_reference_checks.py` (run records in
 `sample_sites/<site>/analyses/<analysis_id>/run.json`). Simulation results are simulation-based estimates.
 
-## 1. Scan accuracy on reference rooms (PLAN 15.1)
+## 1. Scan accuracy on reference rooms
 
 From `scripts/gate_scan_to_occupancy.py` (see `docs/GATE.md`, regenerated 2026-10-27 23:53, wall time 1.9 min):
 reference rooms rendered into phone-like captures with sensor noise, pose drift and tracking dropouts,
@@ -65,7 +65,7 @@ on 2026-10-28 with live models: five café robots, task DOCK -> PICKUP -> TBL1 -
 The DINERBOT T8 replay was then shown in AR on the iPhone, anchored to the same floor marker. Full report:
 [`docs/onsite_clearance_report.md`](onsite_clearance_report.md); fact-check 0 errors.
 
-## 2. Golden simulation tests (PLAN 15.2)
+## 2. Golden simulation tests
 
 `pytest tests/golden`: **7 passed** (9.8 s). Full suite `pytest -q tests`: 2698 passed, 2 skipped (symlink tests need extra privileges on Windows).
 

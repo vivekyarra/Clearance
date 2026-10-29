@@ -1,4 +1,4 @@
-"""Hard constraints for candidate layout changes (PLAN 7.8).
+"""Hard constraints for candidate layout changes.
 
 A change (one or more moved primitives) is admissible when every moved footprint:
   1. stays inside the floor bounds polygon (grid extent if the twin has none),

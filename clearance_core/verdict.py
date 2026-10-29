@@ -23,7 +23,7 @@ from clearance_core.schemas import LegFeasibility, Verdict, VerdictCheck
 CONFIG = Path(__file__).resolve().parent.parent / "config" / "sim_defaults.yaml"
 
 
-DEFAULTS = {"success_min": 0.90, "density": "normal", "bound": "conservative"}  # PLAN 7.13 defaults
+DEFAULTS = {"success_min": 0.90, "density": "normal", "bound": "conservative"}  # built-in defaults
 EPS = 1e-9  # float noise in success rates (0.7 + 0.2 < 0.9) never flips a verdict
 
 
@@ -37,7 +37,7 @@ def _file_config() -> dict:
 
 
 def load_config() -> dict:
-    """Verdict thresholds: config/sim_defaults.yaml `verdict`, with PLAN defaults for missing keys."""
+    """Verdict thresholds: config/sim_defaults.yaml `verdict`, with built-in defaults for missing keys."""
     return {**DEFAULTS, **_file_config()}
 
 

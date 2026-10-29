@@ -1,5 +1,5 @@
 """Render Clearance Report markdown for the UI: [f_xxx] tags become chip objects (JSON) or chip
-elements (HTML). Chip actions follow PLAN 7.11: sim batch -> replay, URL -> source, measurement -> twin view,
+elements (HTML). Chip actions: sim batch -> replay, URL -> source, measurement -> twin view,
 user input -> inputs panel, formula -> formula view, investigation -> trace."""
 from __future__ import annotations
 

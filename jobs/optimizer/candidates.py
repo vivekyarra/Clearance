@@ -1,4 +1,4 @@
-"""Candidate objects, candidate moves and human-readable descriptions (PLAN 7.8).
+"""Candidate objects, candidate moves and human-readable descriptions.
 
 Move generation and pruning, per object:
   * Lattice: every (dx, dy) on a `step_m` grid with 0 < |d| <= `max_shift_m` (112 offsets for

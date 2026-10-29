@@ -1,4 +1,4 @@
-"""Verbatim-quote validator (PLAN 7.6 step 4).
+"""Verbatim-quote validator.
 
 A field value is accepted only when
   1. its quote appears in the page text after whitespace/unicode normalization, starting and ending on

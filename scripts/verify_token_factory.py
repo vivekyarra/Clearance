@@ -1,4 +1,4 @@
-"""Day-1 verification of Token Factory model IDs (PLAN 13 Phase 0 / 21 step 3).
+"""Verification of Token Factory model IDs.
 
     NEBIUS_API_KEY=... python scripts/verify_token_factory.py [--dry-run] [--skip-hello]
 

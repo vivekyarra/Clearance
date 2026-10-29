@@ -1,4 +1,4 @@
-"""Deterministic ROI (PLAN 7.11). No LLM ever touches these numbers.
+"""Deterministic ROI. No LLM ever touches these numbers.
 
 automatable_share = success_rate (nominal geometry, normal traffic) x feasible_leg_frac
 monthly_saving    = staff_cost_per_hour x task_hours_per_day x automatable_share x days_per_month

@@ -1,7 +1,7 @@
 """Grounding DINO (open-vocabulary boxes) + SAM 2 (masks) backend. GPU recommended.
 
 Licenses: Grounding DINO (IDEA-Research) Apache-2.0; SAM 2 (Meta) Apache-2.0; transformers Apache-2.0.
-VERIFY the license of the exact checkpoints before shipping (PLAN Section 9).
+Checkpoint licenses: see THIRD_PARTY_LICENSES.md.
 
 Install (on the GPU job image, NOT in the dev venv; weights go to ~/.cache/clearance or the
 job's cache volume via HF_HOME):

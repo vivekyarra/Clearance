@@ -1,4 +1,4 @@
-"""J2 depth sources (PLAN 7.2 J2 steps 1-2).
+"""J2 depth sources.
 
 - LidarDepth: ARKit sceneDepth PNGs (uint16 mm), keeping pixels with confidence >= medium.
 - MonoAlignedDepth: a relative-depth backend (output affine in inverse depth) aligned per frame to

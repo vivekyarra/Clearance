@@ -1,5 +1,5 @@
 """Image tracks -> floor tracks (foot point through the floor homography), and cross-camera merging
-by floor proximity over overlapping time (PLAN 7.5 steps 3-4)."""
+by floor proximity over overlapping time."""
 from __future__ import annotations
 
 from dataclasses import dataclass, field

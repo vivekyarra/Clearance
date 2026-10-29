@@ -4,7 +4,7 @@ import { api } from "../api";
 import type { ConnState } from "../api/types";
 import type { LiveFrame } from "../types";
 
-const MAX = 1.4; // m/s, PLAN 7.10
+const MAX = 1.4; // m/s
 
 /** Touch joystick: drives one pedestrian in the live session over WS /live/{session}. */
 export default function JoystickPage() {

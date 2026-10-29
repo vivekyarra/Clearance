@@ -35,7 +35,7 @@ class Grid:
         return x, y
 
     def blocked(self) -> np.ndarray:
-        """Unknown is treated as blocked in sim (PLAN 7.2 step 5)."""
+        """Unknown is treated as blocked in sim."""
         return self.data != FREE
 
     def meta(self, uri: str) -> Occupancy:

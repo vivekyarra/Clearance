@@ -1,4 +1,4 @@
-"""Primitive fitting (PLAN 7.3 step 4): oriented box from the footprint + height percentile, or an
+"""Primitive fitting: oriented box from the footprint + height percentile, or an
 upright cylinder for round objects. Pure numpy/cv2 so it runs anywhere."""
 from __future__ import annotations
 

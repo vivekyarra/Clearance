@@ -58,7 +58,7 @@ def load_spec(robot_id_or_path: str | Path) -> RobotSpec:
 
 
 def load_catalog(*, verified_only: bool = True) -> list[RobotSpec]:
-    """All catalog robots; by default only human-reviewed ones (PLAN 7.6: only verified robots simulate)."""
+    """All catalog robots; by default only human-reviewed ones (only verified robots simulate)."""
     out = []
     for p in sorted(catalog_dir().glob("*.json")):
         s = load_spec(p)

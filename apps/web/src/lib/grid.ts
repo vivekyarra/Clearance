@@ -49,7 +49,7 @@ export function cellValue(g: OccGrid, r: number, c: number): number {
   return inBounds(g, r, c) ? g.data[r * g.width + c] : UNKNOWN;
 }
 
-/** Unknown is treated as blocked in sim (PLAN 7.2 step 5), like Grid.blocked(). */
+/** Unknown is treated as blocked in sim, like Grid.blocked(). */
 export function isBlocked(g: OccGrid, r: number, c: number): boolean {
   return cellValue(g, r, c) !== FREE;
 }

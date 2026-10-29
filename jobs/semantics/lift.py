@@ -1,5 +1,5 @@
 """Lift 2D masks to 3D (depth + pose, or the recon point cloud), vote across views, cluster per label
-(PLAN 7.3 step 3)."""
+."""
 from __future__ import annotations
 
 from collections import defaultdict

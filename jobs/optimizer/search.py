@@ -1,4 +1,4 @@
-"""Layout optimizer (PLAN 7.8, job J7): find small furniture moves that raise robot success.
+"""Layout optimizer (job J7): find small furniture moves that raise robot success.
 
 Pipeline
   1. Peaks: top-3 bottleneck (Pinch Map) cells, non-maximum suppressed (>= 0.5 m apart).

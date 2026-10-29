@@ -1,6 +1,6 @@
 import Foundation
 
-/// Codable mirror of clearance_core/schemas.py `Capture` (PLAN 6.1). Field names match the Python
+/// Codable mirror of clearance_core/schemas.py `Capture`. Field names match the Python
 /// models exactly; extra top-level keys (anchoring, clock, app, stats) are ignored by pydantic
 /// and carry details the reconstruction jobs can use.
 public enum CaptureTier: String, Codable, Sendable {

@@ -1,4 +1,4 @@
-"""J4 entry point: `extract_semantics(capture_dir, twin) -> Twin` (PLAN 7.3).
+"""J4 entry point: `extract_semantics(capture_dir, twin) -> Twin`.
 
 keyframes -> detector (Grounding DINO + SAM 2, or geometry-based) -> 3D objects -> primitives
 (source="auto", with confidence) -> detector hazards + vision-LLM hazards -> new Twin.

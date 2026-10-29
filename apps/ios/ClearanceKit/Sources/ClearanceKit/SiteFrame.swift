@@ -5,7 +5,7 @@ public typealias Mat4 = simd_double4x4
 
 @inline(__always) func v3(_ c: SIMD4<Double>) -> SIMD3<Double> { SIMD3(c.x, c.y, c.z) }
 
-/// Site frame conversion (PLAN Section 6, `PoseRecord` in clearance_core/schemas.py).
+/// Site frame conversion (`PoseRecord` in clearance_core/schemas.py).
 ///
 /// Frames involved:
 /// * ARKit world (`W`): right-handed, +Y up (opposite gravity), metres, origin where the session started.

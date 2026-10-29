@@ -1,4 +1,4 @@
-"""J1 ingest: load and validate a Capture directory (PLAN 7.2 J1).
+"""J1 ingest: load and validate a Capture directory.
 
 Paths in capture.json come from an upload: every one is resolved inside the capture root (see
 jobs.common.imageio.confined_path) and the capture is rejected otherwise. Individual bad records are

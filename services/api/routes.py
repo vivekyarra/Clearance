@@ -1,4 +1,4 @@
-"""HTTP + WebSocket routes (PLAN Section 11 + docs/CONTRACTS.md). Mounted at / and at /api.
+"""HTTP + WebSocket routes (docs/CONTRACTS.md). Mounted at / and at /api.
 
 Authorization (services/api/auth.py): GET routes are public. Writes need `Authorization: Bearer <token>`:
 the operator token for everything, or the site join token (from the QR) / per-capture device token for the

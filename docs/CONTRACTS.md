@@ -63,7 +63,7 @@ class LLM: chat(role: Literal["nano","super","ultra","vision"], messages, *, too
 
 # agents/orchestrator/run.py
 def run_analysis(analysis_id, twin, robots: list[RobotSpec], task, business: dict, *, budget: dict) -> dict  # writes analysis artifacts
-# agents/investigate/loop.py           (Nemotron investigation loop, PLAN 7.12)
+# agents/investigate/loop.py           (Nemotron investigation loop)
 def investigate(analysis_id, twin, robot, task, batches: list[SimBatch], *, max_steps=8, max_experiments=6, probe_episodes=30, other_robots=None) -> Investigation
 #   fills Investigation.experiments (hypothesis/kind/change/batch_id/result facts/outcome/next_action/conclusion)
 

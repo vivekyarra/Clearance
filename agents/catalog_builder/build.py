@@ -1,4 +1,4 @@
-"""Catalog builder (PLAN 7.6): Tavily Search -> Tavily Extract -> Nemotron Nano extraction ->
+"""Catalog builder: Tavily Search -> Tavily Extract -> Nemotron Nano extraction ->
 code unit conversion -> verbatim-quote validator -> RobotSpec (verified_by_human=False).
 
 CLI:

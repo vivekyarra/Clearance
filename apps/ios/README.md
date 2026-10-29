@@ -2,8 +2,8 @@
 
 The Clearance iPhone app does two jobs:
 
-1. **Scan** (PLAN 7.1). ARKit world tracking, plus LiDAR scene depth on Pro devices, captures keyframes in the site frame defined by the printed floor marker. Faces are blurred on the phone, coverage is checked live, and the capture uploads to the joined site in resumable ZIP parts.
-2. **AR replay** (PLAN 7.9). A simulated episode plays back in the real room, anchored to the same marker. Real furniture hides the robot through the twin's occluder mesh, and ARKit people occlusion hides it behind real people. Safety stops, near misses and failures appear where they happened. You can switch between the as-is layout and the layout with changes, and the screen shows the verdict for the robot: **Cleared**, **Cleared with changes** or **Not cleared**.
+1. **Scan**. ARKit world tracking, plus LiDAR scene depth on Pro devices, captures keyframes in the site frame defined by the printed floor marker. Faces are blurred on the phone, coverage is checked live, and the capture uploads to the joined site in resumable ZIP parts.
+2. **AR replay**. A simulated episode plays back in the real room, anchored to the same marker. Real furniture hides the robot through the twin's occluder mesh, and ARKit people occlusion hides it behind real people. Safety stops, near misses and failures appear where they happened. You can switch between the as-is layout and the layout with changes, and the screen shows the verdict for the robot: **Cleared**, **Cleared with changes** or **Not cleared**.
 
 ```
 apps/ios/

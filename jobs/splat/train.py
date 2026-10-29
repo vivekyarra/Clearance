@@ -1,4 +1,4 @@
-"""J3: Gaussian splat training from posed keyframes with gsplat (PLAN 7.2). GPU only.
+"""J3: Gaussian splat training from posed keyframes with gsplat. GPU only.
 
     python -m jobs.splat.train --capture <capture_dir> --out <dir> [--iters 7000] [--prepare-only]
 

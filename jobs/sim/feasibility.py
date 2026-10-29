@@ -1,4 +1,4 @@
-"""Static feasibility per task leg (PLAN 7.7): reachability, tightest point, thresholds."""
+"""Static feasibility per task leg: reachability, tightest point, thresholds."""
 from __future__ import annotations
 
 import numpy as np

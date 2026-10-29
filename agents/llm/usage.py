@@ -1,4 +1,4 @@
-"""Usage table (PLAN 8): every model call and job is logged to SQLite at data/usage.db (or CLEARANCE_USAGE_DB)."""
+"""Usage table: every model call and job is logged to SQLite at data/usage.db (or CLEARANCE_USAGE_DB)."""
 from __future__ import annotations
 
 import json

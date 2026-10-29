@@ -1,5 +1,5 @@
 /**
- * Live-mode client for services/api (PLAN Section 11 + docs/CONTRACTS.md). The Vite dev server
+ * Live-mode client for services/api (docs/CONTRACTS.md). The Vite dev server
  * proxies /api/* to http://localhost:8000/* (prefix stripped), including WebSockets.
  */
 import { twinAssetUrl } from "../lib/assets";

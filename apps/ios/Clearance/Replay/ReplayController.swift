@@ -5,7 +5,7 @@ import Foundation
 import RealityKit
 import UIKit
 
-/// AR replay of a simulated episode in the real room (PLAN 7.9).
+/// AR replay of a simulated episode in the real room.
 ///
 /// Scene graph (site frame = marker frame, +Z up, metres):
 ///   AnchorEntity(world: identity)

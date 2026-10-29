@@ -144,7 +144,7 @@ Prices in config/models.yaml are not checked by this script (no pricing API): co
 | **GR00T N1.7** (3B; DROID, LIBERO, SimplerEnv fine-tunes) | Yes (`nvidia/GR00T-N1.7-3B`, created 2026-02-25) | Self-host only (robot policy, not a chat model) | NVIDIA Open Model License (card "License" section) | https://huggingface.co/nvidia/GR00T-N1.7-3B | Confirmed from docs |
 | Nemotron 3 Nano Omni 30B-A3B | Yes on HF | Removed from Token Factory 2026-08-31 | NVIDIA Open Model Agreement | https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16 | Confirmed from docs |
 
-**Scene model decision (PLAN v1.2):** primary = Cosmos Reason 2 (8B) self-hosted on a Nebius Serverless Endpoint via vLLM; alternative = `nvidia/Nemotron-3.5-Super-VL` on Token Factory (no GPU to manage, and it also serves as the Super successor).
+**Scene model decision:** primary = Cosmos Reason 2 (8B) self-hosted on a Nebius Serverless Endpoint via vLLM; alternative = `nvidia/Nemotron-3.5-Super-VL` on Token Factory (no GPU to manage, and it also serves as the Super successor).
 
 ## 6. Hackathon official rules (Devpost)
 
