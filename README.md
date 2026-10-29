@@ -177,6 +177,14 @@ Open http://localhost:8000. The console opens straight onto three reference site
 
 Clearance is purpose-built for the robots cafés, hotels and warehouses buy today: wheeled service and delivery robots (Class A) and indoor AMRs (Class B) on point-to-point missions on one floor. Every simulated result ships as a range across scan uncertainty with its sample size, and any door lip too small for the scan to settle is routed to a one-minute ruler check.
 
+## What's next
+
+- **Scan with Android phones.** Android already works as the floor marker, as a traffic observer with on-device face blur, and as the full console in Chrome. Next, ARCore scanning in the browser, so any recent phone can scan a room.
+- **More robot classes:** cleaning robots, more warehouse AMRs, and humanoids.
+- **Rollouts** with cafés, hotels, offices and warehouses, and a hosted service so integrators can qualify a site from one phone scan.
+- **Scale on Nebius AI Cloud:** Cosmos Reason 2 and Serverless Jobs switched on for many sites at once.
+- **Homes:** scan your living room and know which home robot fits before it ships.
+
 ## Privacy
 
 Faces are blurred on the phone before any image is saved or uploaded; raw frames never leave the device. Published sites contain only twins, blurred imagery and aggregate traffic. See [`docs/PRIVACY.md`](docs/PRIVACY.md).
