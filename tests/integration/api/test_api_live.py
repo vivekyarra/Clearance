@@ -60,7 +60,7 @@ def test_live_chaos_session(client, site_with_twin, live_sim, env):
     (vx, vy), second = sim.joystick[0], sim.joystick[1]
     assert abs((vx ** 2 + vy ** 2) ** 0.5 - 1.4) < 1e-9 and abs(vx / vy - 0.75) < 1e-9
     assert second == (0.5, -0.2)
-    deadline = time.monotonic() + 2
+    deadline = time.monotonic() + 10  # the release runs after the socket closes; slow runners need the margin
     while sim.joystick[-1] != (0.0, 0.0) and time.monotonic() < deadline:
         time.sleep(0.01)
     assert sim.joystick[-1] == (0.0, 0.0)  # released when the last client leaves
