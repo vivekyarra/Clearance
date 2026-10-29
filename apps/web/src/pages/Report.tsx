@@ -307,7 +307,7 @@ function Report({ id, d }: { id: string; d: Loaded }) {
                   </div>
                 ))}
                 <div className="note">
-                  Every number links to its origin: a simulation batch, a measurement on the twin, a cited page, your input, or a formula. Results are simulation-based estimates on the measured twin, not field trials.
+                  Every number links to its origin: a simulation batch, a measurement on the twin, a cited page, your input, or a formula. Results are simulated on the measured twin.
                 </div>
               </div>
             </Section>

@@ -14,7 +14,7 @@ export function ReferenceBadge() {
 export function EstimateBadge() {
   return (
     <span className="badge violet" title="Results come from Monte Carlo simulation on the measured twin">
-      Simulation-based estimate
+      Simulated result
     </span>
   );
 }

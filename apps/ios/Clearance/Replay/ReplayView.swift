@@ -23,7 +23,7 @@ struct ReplaySetupView: View {
                 TextField("Analysis id (optional)", text: $analysisId)
                     .textInputAutocapitalization(.never).autocorrectionDisabled()
                 Picker("Robot", selection: $robotId) {
-                    Text("Approximate shape").tag("")
+                    Text("Standard 0.5 m shape").tag("")
                     ForEach(robots) { r in Text(r.title).tag(r.id) }
                 }
             } header: {

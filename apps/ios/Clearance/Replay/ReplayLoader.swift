@@ -82,8 +82,15 @@ enum ReplayLoader {
         if let r = robots.first(where: { $0.id == robotId }) {
             shape = RobotShape.from(json: r.json)
         }
-        if !shape.heightKnown || shape.footprintApprox {
-            notes.append("Robot shape is approximate: the catalog entry has no exact footprint or height.")
+        if robots.first(where: { $0.id == robotId }) == nil {
+            notes.append("Robot shape is the standard 0.5 m body; pick a robot to use its catalog shape.")
+        } else {
+            if shape.footprintApprox {
+                notes.append("Robot shape is built from the catalog's overall dimensions.")
+            }
+            if !shape.heightKnown {
+                notes.append("Robot height uses the standard 1.2 m; the catalog entry lists no height.")
+            }
         }
 
         let twin = await twinObj as? [String: Any]

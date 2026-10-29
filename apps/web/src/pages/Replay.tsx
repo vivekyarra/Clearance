@@ -253,7 +253,7 @@ function Player({ d, ep, go, analysis }: { d: Data; ep: number; go: (n: number) 
               <>
                 <span>
                   <i style={{ background: "var(--accent)" }} />
-                  robot ({foot.approx ? "approx. footprint" : "spec footprint"})
+                  robot ({foot.approx ? "standard 0.5 m footprint" : robot?.footprint_approx ? "footprint from vendor L×W" : "spec footprint"})
                 </span>
                 <span>
                   <i style={{ background: "var(--fg-muted)", borderRadius: 5 }} />
