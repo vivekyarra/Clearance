@@ -15,7 +15,7 @@ Restaurants, cafés, clinics and small warehouses are being sold service robots 
 - **Scan:** the Clearance iPhone app records ARKit poses and keyframes anchored to a floor marker; faces are blurred on the phone. Android phones join as fixed observers for foot traffic.
 - **Twin:** the server turns the scan into a measured 2.5 cm occupancy twin. On a real room scanned with an iPhone 13 (no LiDAR), object sizes matched a tape measure with a **median error of 1.0 cm** across 8 distances.
 - **Clearance check:** code filters a 12-robot catalog built with Tavily, checks static feasibility on three geometry bounds, and runs Monte Carlo navigation batches with pedestrians.
-- **Nemotron investigation loop:** Nemotron 3 Super forms a hypothesis about why a robot fails, picks the next experiment (fewer pedestrians in a zone, a chair moved, a different robot), runs it in the simulator, reads the result and decides whether to dig further. The trail appears in the report as "How we investigated".
+- **Nemotron investigation loop:** Nemotron 3.5 Super VL forms a hypothesis about why a robot fails, picks the next experiment (fewer pedestrians in a zone, a chair moved, a different robot), runs it in the simulator, reads the result and decides whether to dig further. The trail appears in the report as "How we investigated".
 - **Verdicts by code:** every robot gets exactly one verdict, Cleared, Cleared with changes, or Not cleared, from a deterministic rule with thresholds in config. Nemotron explains verdicts and never sets them.
 - **Clearance Report:** Nemotron 3 Ultra writes the narrative; every number carries a fact tag that a fact-checker verifies against its source.
 - **AR replay:** point the iPhone at the marker and watch the robot drive the mission in the real room.
@@ -50,17 +50,20 @@ Cardboard-footprint validation at real pinch points, a real café owner pilot, m
 
 ## Demo video (3:00, real world first)
 
-Record narration last. Say "Nebius Token Factory", "Nemotron" and "Cosmos Reason" out loud. Captions on.
+**Watch:** https://youtu.be/sYL-GOtZIys
 
-| Time | Shot | Narration (draft) |
-|---|---|---|
-| 0:00–0:12 | Owner's problem: a café or room, a robot brochure | "Delivery robots cost as much as a year of staff time. Will one actually work in *this* room?" |
-| 0:12–1:15 | **Continuous hardware clip (60 s+):** marker phone on the floor, iPhone locking the marker, you scanning the room (side camera), coverage map on the iPhone screen, laptop console receiving the upload | "Clearance starts with an ordinary iPhone. No LiDAR. The phone locks to a marker, blurs faces on the device, and uploads the scan." |
-| 1:15–1:35 | Twin appears; tape measure vs scan (show 1.91 m vs 1.95 m) | "The twin is measured: against a tape measure, a median error of one centimetre." |
-| 1:35–1:50 | Editor: place dock, pickup, destination; Run Clearance check | "We mark where the robot docks, picks up and delivers." |
-| 1:50–2:15 | Check running: stages, Tavily sources on robot specs, Nemotron investigation trail | "Nemotron on Nebius Token Factory investigates every failure: it forms a hypothesis, runs an experiment in the simulator, and decides whether to dig further. Robot specs come from Tavily, each with a quote from the vendor's page." |
-| 2:15–2:40 | **AR hero shot:** robot in the real room, stopping, passing the pinch point (or failing it) | "Then you see it in your own room." |
-| 2:40–3:00 | Clearance Report: verdict badges, Pinch Map, payback, clickable fact chips; end card | "Cleared, Cleared with changes, or Not cleared, decided by code, every number traceable. Clearance: know if a robot fits before you buy it." |
+| Time | What it shows |
+|---|---|
+| 0:00 | Robots are for sale now. Will one fit in your space? |
+| 0:14 | Clearance: for cafés, hotels and warehouses today, every home tomorrow |
+| 0:20 | Join the site with a QR code; the marker phone on the floor |
+| 0:26 | **Hardware:** scanning a real room with an iPhone 13 (no LiDAR), faces blurred on the phone |
+| 1:20 | The scan becomes a 2.5 cm floor twin |
+| 1:30 | Tape measure 1.91 m vs scan 1.95 m; median error 1.0 cm over 8 checks |
+| 1:42 | Editor: confirm a clear patch, place the dock, pickup and table, run the check |
+| 1:52 | How it works: robot specs from Tavily, Nemotron on Nebius Token Factory investigates and writes the report |
+| 2:16 | Code-decided verdicts: DINERBOT T8 Cleared, Bear Servi Not cleared (0.52 m gap, needs 0.62 m) |
+| 2:32 | **Hardware:** AR replay, the robot drives the route in the real room |
 
 ### Clips recorded on 2026-10-28
 - iPhone screen recording of the scan (marker lock, coverage map, upload).
