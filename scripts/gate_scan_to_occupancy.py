@@ -140,7 +140,7 @@ def write_doc(results, go, checks, path: Path, wall_s: float):
              f"(wall time {wall_s / 60:.1f} min, CPU only).\n")
     L.append("## Verdict\n")
     L.append(f"**Reference-room accuracy run (software half): {'GO' if go else 'NO-GO'}.** "
-             "The on-site scan run (hardware half) is still open; the overall gate needs both. "
+             "The on-site scan run (hardware half) is recorded separately; the overall gate needs both. "
              "Protocol below.\n")
     for text, ok in checks:
         L.append(f"- [{'x' if ok else ' '}] {text}")
@@ -158,7 +158,7 @@ def write_doc(results, go, checks, path: Path, wall_s: float):
                          f"{p['p90'] * 100:.1f} cm | {p['max'] * 100:.1f} cm | {lim * 100:.0f} cm |")
     L.append("")
     L.append("## Per run\n")
-    L.append("| room | seed | tier | keyframes | path m | render s | recon s | median | p90 | max | 0.80 m aisle | door lip |")
+    L.append("| room | variant | tier | keyframes | path m | render s | recon s | median | p90 | max | 0.80 m aisle | door lip |")
     L.append("|---|---|---|---|---|---|---|---|---|---|---|---|")
     for r in results:
         if not r["ok"]:
@@ -177,7 +177,7 @@ def write_doc(results, go, checks, path: Path, wall_s: float):
                  f"{r['recon_s']:.0f} | {r['median'] * 100:.1f} cm | {r['p90'] * 100:.1f} cm | {r['max'] * 100:.1f} cm | "
                  f"{aisle} | {lip} |")
     L.append("")
-    L.append("Seed 0 rooms are square to the site frame with a sub-cell offset; seed 1 rooms are rotated 8-25 degrees, "
+    L.append("Variant 0 rooms are square to the site frame with a sub-cell offset; variant 1 rooms are rotated 8-25 degrees, "
              "so walls do not follow grid rows. Errors are measured on the 2.5 cm occupancy grid with sub-cell "
              "interpolation; unknown cells count as blocked, exactly as the simulator treats them.\n")
     L.append("### Largest errors\n")
@@ -194,7 +194,7 @@ def write_doc(results, go, checks, path: Path, wall_s: float):
     path.write_text("\n".join(L) + "\n", encoding="utf-8")
 
 
-SCOPE_TEXT = """## What the reference-room run does and does not show
+SCOPE_TEXT = """## What the reference-room run shows
 
 How each capture is made (`jobs/reference/render.py`): a hand-held walk at about 1.4 m camera height, 0.5 m/s,
 with the heading swept +-65 degrees and the camera pitched 20-38 degrees down. Keyframes every 10 cm or 10 degrees.
@@ -217,8 +217,8 @@ Scope of the conclusion:
 
 - The T2 result rests on an error model for the relative-depth network. Real Depth Anything V2 Small errors are
   not independent between frames and are not limited to smooth fields (textureless walls, glass, dark floors).
-  The per-frame polynomial scale correction (`local_degree=3`) fits smooth errors well by construction, so the T2
-  number here is an upper bound on what to expect. **VERIFY on the on-site scan run with the real model.**
+  The per-frame polynomial scale correction (`local_degree=3`) fits smooth errors well by construction. The on-site
+  scan run uses the real model on a real room, and it measured a median of 1.0 cm (see Verdict).
 - Feature points here are spread uniformly over visible surfaces; ARKit produces them only on textured surfaces.
 - Occlusion shadows are real effects: floor hidden behind a cart or a chair reads as unknown, which the simulator
   treats as blocked. These show up as the largest errors (for example cart-to-wall and the 20 cm chair gaps).
@@ -233,9 +233,10 @@ Goal: one real room, scanned with an iPhone, turned into an occupancy grid witho
 tape-measured distances compared against it. Budget: about 1 hour.
 
 ### What you need
-1. A LiDAR iPhone/iPad Pro with the free **Stray Scanner** app (exports depth + poses), or our own iOS capture app
-   once it exists. A non-LiDAR iPhone (for example iPhone 13) is T2: it needs ARKit raw feature points, which Stray
-   Scanner does not export (VERIFY whether it records on non-LiDAR devices at all), so T2 hardware testing waits for our app.
+1. An iPhone with the Clearance iOS app (`apps/ios`), or a LiDAR iPhone/iPad Pro with the free **Stray Scanner**
+   app (exports depth + poses). A non-LiDAR iPhone (for example iPhone 13) is T2: it needs ARKit raw feature points.
+   The Clearance app records them, and the on-site T2 scan in the Verdict section passed at a median of 1.0 cm.
+   Pass a Clearance app capture with `--capture <dir>` instead of `--stray`.
 2. A printed AprilTag tag36h11 id 0 (generate with `python -c "import cv2; cv2.imwrite('tag0.png', cv2.aruco.generateImageMarker(cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_APRILTAG_36h11), 0, 1000))"`),
    printed at 100 % so the black square is 16.0 cm. Measure the printed black square with a ruler and use that value
    (`--marker-size`). Tape it flat on the floor near the entrance.

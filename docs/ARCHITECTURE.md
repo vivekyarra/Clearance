@@ -37,7 +37,7 @@ Every number in the Clearance Report comes from code (a measurement, a simulatio
                                           Tavily Search / Extract (robot specs, prices, citations)
 ```
 
-Model IDs per tier live in `config/models.yaml` and are confirmed against `GET /v1/models` (docs/VERIFIED.md Section 1A). The Nano and Super tiers move to `nvidia/Nemotron-3_5-Lightning` and `nvidia/Nemotron-3.5-Super-VL` before the judging period, because the current IDs leave Token Factory Serverless on 2026-11-09.
+Model IDs per tier live in `config/models.yaml` and are confirmed against `GET /v1/models` (docs/VERIFIED.md Section 1A). The Nano and Super tiers run on `nvidia/Nemotron-3_5-Lightning` and `nvidia/Nemotron-3.5-Super-VL`, which serve through the judging period. The older Nano and Super IDs, which leave Token Factory Serverless on 2026-11-09, stay listed as second candidates.
 
 ## 2. End-to-end flow with the gate and the investigation loop
 
@@ -48,7 +48,7 @@ Model IDs per tier live in `config/models.yaml` and are confirmed against `GET /
  J1 ingest ─▶ J2 geometry (ARKit poses + LiDAR or DA-V2 Small depth, TSDF, floor fit, occupancy)
           │
           ▼
- ┌──────────────────────── Phase 0.5 GATE: can a scan become a trustworthy occupancy grid? ───────┐
+ ┌───────────────────────────── SCAN GATE: can a scan become a trustworthy occupancy grid? ───────┐
  │  Reference rooms with known geometry (jobs/reference) + one tape-checked real room             │
  │  GO  : median error ≤ 3 cm (T1) / ≤ 5 cm (T2), 0.80 m aisle reads passable ±5 cm               │
  │        → scan geometry is the primary twin source                                              │
@@ -80,7 +80,7 @@ Model IDs per tier live in `config/models.yaml` and are confirmed against `GET /
  │  Every tool result is a Fact (origin.type = "investigation"); the model cites only fact IDs.   │
  │  Offline mode: a deterministic policy drives the same tools (CI, offline runs).                │
  └───────────────────────────────────────────────────────────────────────────────────────────────┘
-          │ findings seed hint_object_ids
+          │ findings feed hint_object_ids
           ▼
  J7 layout optimizer ─▶ confirming batch at normal traffic, conservative bound
           │
@@ -135,7 +135,7 @@ Locally the same API runs with the in-process dispatcher (`CLEARANCE_DISPATCHER=
 |---|---|---|
 | What leads the story | Real world first: phones in a real room, AR robot in the real room | It is what a buyer trusts; simulation explains the result |
 | Simulation fidelity | 2D footprint-accurate navigation on an occupancy grid | Wheeled robots on flat floors are dominated by geometry and traffic; fast enough for thousands of trials and easy to explain |
-| Geometry | Fused depth + editable primitives, gated by Phase 0.5 | Humans can verify primitives; the gate decides how much we trust the scan |
+| Geometry | Fused depth + editable primitives, checked by the scan gate (`docs/GATE.md`) | Humans can verify primitives; the gate decides how much we trust the scan |
 | LLM role | Planning, investigation, extraction, writing | Numbers and verdicts come from code |
 | Scene model | Cosmos Reason 2 self-hosted; Nemotron 3.5 Super VL alternative | Physical-AI reasoning model on our own endpoint, with a managed option that needs no GPU |
 | Robot rendering | Parametric shapes from spec dimensions | No vendor IP; visibly a model of the robot |
@@ -143,6 +143,6 @@ Locally the same API runs with the in-process dispatcher (`CLEARANCE_DISPATCHER=
 
 ## 6. Scope
 
-- Robot classes: wheeled service/delivery robots and indoor AMRs; point-to-point delivery tasks.
-- Out of scope for this version: humanoids, manipulation, outdoor sites, multiple floors and elevators, fleet management, vendor certification.
+- Built for wheeled service and delivery robots and indoor AMRs doing point-to-point delivery tasks.
+- Built for indoor sites on one floor. Humanoids, manipulation, outdoor sites, elevators, fleet management and vendor certification are outside what this version checks.
 - Results are simulation-based estimates, shown as ranges across scan uncertainty with sample sizes.

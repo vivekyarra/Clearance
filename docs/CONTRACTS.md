@@ -21,7 +21,7 @@ Model weights, pip/npm caches and large downloads go outside the repo (`CLEARANC
 - **Site join token** (4 h, site-scoped) is carried in the site QR / join link (`?token=`); phones use it to register captures and join the coach session.
 - **Device token** (48 h, one capture) is returned when a capture is registered; it authorizes that capture's chunk uploads and `complete`.
 - **Live session token**: `POST /live` returns `joystick_url` with `?token=`; WebSocket clients present it (or the operator token).
-- **Upload URLs** are signed and single-use per file. Read routes for sites, reports, replays and the catalog stay public so the hosted demo can be browsed without signing in.
+- **Upload URLs** are signed and single-use per file. Read routes for sites, reports, replays and the catalog stay public so anyone can browse the hosted console without signing in.
 - **WebSocket limits**: Origin allowlist, at most 8 clients per session, message rate limit, 128 KB max frame (`uvicorn --ws-max-size 131072`); at most 4 live sessions per site, unjoined sessions close after 120 s.
 
 ## Python entry points each module MUST expose (others code against these)
@@ -91,7 +91,8 @@ analyses/<analysis_id>/investigation.json
 analyses/<analysis_id>/facts.json, report.md, citations.json
 ```
 
-## HTTP API (services/api) — PLAN Section 11, plus
+## HTTP API (services/api)
+Routes live in `services/api/routes.py`. Other modules code against these:
 - `GET /sites` list (reference sites carry `geometry_source: "reference"`), `GET /sites/{id}/twin/occupancy.png`
 - `GET /analyses/{id}/investigation`, `GET /analyses/{id}/facts`
 - `POST /catalog/robots/{id}/verify` (human review), `GET /catalog/robots?all=1`

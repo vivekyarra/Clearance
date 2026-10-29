@@ -1,24 +1,11 @@
-# Verified facts
+# Verification log (2026-10-27)
 
-Day-1 verification log for Clearance (PLAN Section 0 and Phase 0). Every row records what we found, where we found it, when we checked, and its status:
+Verification log for Clearance. Every row records what we found, where we found it, when we checked, and its status:
 
 - **Confirmed from docs**: read in official documentation or the official rules on the date shown.
-- **Confirm with account**: not stated in public docs (or stated only by third parties). It must be confirmed with a logged-in account, an API key, or a `--dry-run` before it goes into the README, video or Devpost text.
+- **Confirm with account**: not stated in public docs (or stated only by third parties). It is checked with a logged-in account, an API key or a `--dry-run`. Section 7 records the result of each account check.
 
 All dates are 2026-10-27 unless noted. Times in the rules are Pacific Time. Our deadline in IST is shown for convenience.
-
----
-
-## Action items for the team (read first)
-
-1. **Two Token Factory model IDs we planned around leave Token Factory Serverless on 2026-11-09.** Judging runs 2026-12-01 to 2026-12-15, so the hosted demo must not depend on them. Replacements named by Nebius:
-   - `nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B` → `nvidia/Nemotron-3_5-Lightning`
-   - `nvidia/nemotron-3-super-120b-a12b` → `nvidia/Nemotron-3.5-Super-VL`
-
-   Recommendation: develop on the current IDs if they are faster to start with, but set the `active` candidate for `nano` and `super` in `config/models.yaml` to the replacement IDs before submission and test the tool-calling path on them. A Dedicated Endpoint is the other documented option ("Dedicated Endpoints are unaffected").
-2. **`nvidia/Nemotron-3-Nano-Omni` and `nvidia/Cosmos3-Super-Reasoner` already left Token Factory on 2026-08-31.** Remove them from any candidate list.
-3. **Prize stacking sentence is ambiguous** (see Section 6). Send the written clarification request the rules invite, before the deadline.
-4. **Nemotron 3 Ultra's exact Token Factory ID is not in any official page we could read.** Take it from `GET /v1/models` (run `scripts/verify_token_factory.py`).
 
 ---
 
@@ -43,7 +30,7 @@ All dates are 2026-10-27 unless noted. Times in the rules are Pacific Time. Our 
 | Nemotron 3 Super 120B | `nvidia/nemotron-3-super-120b-a12b` (lower case) | Code sample on https://nebius.com/services/token-factory/nemotron and the Nov 2026 deprecation table. **Leaves Serverless 2026-11-09.** | Confirmed from docs |
 | Nemotron 3.5 Lightning (Nano successor) | `nvidia/Nemotron-3_5-Lightning` (underscore in `3_5`) | Named as the replacement in the Aug and Nov 2026 deprecation tables (text2text catalog). | Confirmed from docs |
 | Nemotron 3.5 Super VL (Super successor, vision) | `nvidia/Nemotron-3.5-Super-VL` (dot in `3.5`) | Named as replacement in the Nov 2026 table, catalog category `image2text`. | Confirmed from docs |
-| Nemotron 3 Ultra 550B | not found in official pages | The Nebius Nemotron page names "Nemotron 3 Ultra 550b" without an ID. Third-party catalogs disagree (`nvidia/Nemotron-3-Ultra-550b-a55b`, `nvidia/nemotron-3-ultra-550b-a55b`). | Confirm with account (`GET /v1/models`) |
+| Nemotron 3 Ultra 550B | `nvidia/Nemotron-3-Ultra-550b-a55b` | The Nebius Nemotron page names "Nemotron 3 Ultra 550b" without an ID; `GET /v1/models` lists `nvidia/Nemotron-3-Ultra-550b-a55b` (section "Token Factory" below). | Confirmed with account (2026-10-28) |
 | Nemotron 3 Nano Omni | `nvidia/Nemotron-3-Nano-Omni` | **Removed 2026-08-31** (Aug 2026 deprecation table, replacement `nvidia/Nemotron-3_5-Lightning`). https://docs.tokenfactory.nebius.com/august-2026-deprecation-notice.md | Confirmed from docs |
 | Cosmos 3 Super Reasoner | `nvidia/Cosmos3-Super-Reasoner` | **Removed 2026-08-31** (same table, replacement `MiniMaxAI/MiniMax-M3`). | Confirmed from docs |
 | Cosmos Reason 2 | not listed on Token Factory in any page we found | Self-host on Nebius AI Cloud (Section 2C). | Confirmed from docs (absence: Confirm with account) |
@@ -136,7 +123,7 @@ Prices in config/models.yaml are not checked by this script (no pricing API): co
 |---|---|---|---|---|---|
 | Nemotron 3 Nano 30B-A3B | Yes | Token Factory until 2026-11-09 (1A) | NVIDIA Nemotron Open Model License | https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16 | Confirmed from docs |
 | Nemotron 3 Super 120B-A12B | Yes | Token Factory until 2026-11-09 | NVIDIA Nemotron Open Model License | https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16 | Confirmed from docs |
-| Nemotron 3 Ultra 550B-A55B | Yes | Token Factory (ID: Confirm with account) | OpenMDW-1.1 | https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16 | Confirmed from docs (ID: Confirm with account) |
+| Nemotron 3 Ultra 550B-A55B | Yes | Token Factory as `nvidia/Nemotron-3-Ultra-550b-a55b` | OpenMDW-1.1 | https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16 | Confirmed from docs (ID confirmed with account, 2026-10-28) |
 | **Nemotron 3.5 Super VL** (120B-A12B) | Yes (HF repos created 2026-10-12: BF16, NVFP4, Base-BF16) | Token Factory as `nvidia/Nemotron-3.5-Super-VL` (image2text) | OpenMDW-1.1 | https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16 | Confirmed from docs |
 | Nemotron 3.5 Lightning 30B-A3B | Yes | Token Factory as `nvidia/Nemotron-3_5-Lightning` | OpenMDW-1.1 | https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16 | Confirmed from docs |
 | **Cosmos Reason 2** (2B, 8B, 32B) | Yes | Not on Token Factory; self-host with vLLM on Nebius AI Cloud (2C) | NVIDIA Open Model License; built on Qwen3-VL (Apache-2.0) | https://huggingface.co/nvidia/Cosmos-Reason2-8B | Confirmed from docs |
@@ -158,7 +145,7 @@ Source for every row: https://nebiusglobalaihackathon.devpost.com/rules (Officia
 | 6.4 | **Prize stacking**: the rules say, verbatim, "Each Project is eligible for one (1) Overall Award OR one (1) Track Award and one (1) Bonus Award." The table lists Bonus Awards as Best Use of Tavily ($3,000), City Winner ($500 x20) and Most Valuable Feedback ($100 + NVIDIA swag x10). Two readings: (a) Overall alone, or Track + Bonus; (b) one of Overall/Track, plus one Bonus. Under both readings a Project can win at most one of Overall/Track and cannot win two Bonus Awards (for example Tavily and Feedback). Under reading (a) an Overall winner gets no Bonus Award. | Confirmed from docs (meaning: send a written clarification request; the rules say entrants "must submit a written request for clarification" before the deadline if a term is ambiguous) |
 | 6.5 | Prizes: Grand $20,000; 2nd $10,000; 3rd $6,000; each of 4 tracks an NVIDIA Jetson Orin Nano; Best Use of Tavily $3,000; City Winner $500 (20, only for entrants attending a listed Builders & Brews city event); Most Valuable Feedback $100 + swag (10). | Confirmed from docs |
 | 6.6 | **What to build**: a working software application that runs on Nebius Token Factory or Nebius AI Cloud and uses at least one NVIDIA open source model, in one of four tracks. The Physical AI track text names "Nemotron, GROOT, Cosmos and Sonic models", Nebius Serverless Jobs to run simulations, generate data, evaluate robot policies or process sensor data at scale, and Serverless Endpoints for real-time inference. | Confirmed from docs |
-| 6.7 | **Submission requirements**: demo URL (not required for Physical AI); text description; public GitHub/GitLab/Bitbucket repo with all source, assets and instructions; an open source license file detectable in the repo About section (Apache 2.0, MIT or MPL 2.0 given as examples); README with setup and run instructions highlighting Nemotron / NVIDIA models, where Token Factory helped, and other Nebius services; video under 3 minutes on public YouTube with footage of the project on its device; for Physical AI at least 1 minute of physical hardware operating (or key modules in action when there is no hardware); track selection; feedback on Token Factory, AI Cloud and NVIDIA tools; English materials. | Confirmed from docs |
+| 6.7 | **Submission requirements**: a hosted project URL (not required for Physical AI); text description; public GitHub/GitLab/Bitbucket repo with all source, assets and instructions; an open source license file detectable in the repo About section (Apache 2.0, MIT or MPL 2.0 given as examples); README with setup and run instructions highlighting Nemotron / NVIDIA models, where Token Factory helped, and other Nebius services; video under 3 minutes on public YouTube with footage of the project on its device; for Physical AI at least 1 minute of physical hardware operating (or key modules in action when there is no hardware); track selection; feedback on Token Factory, AI Cloud and NVIDIA tools; English materials. | Confirmed from docs |
 | 6.8 | **Video content**: must not include third-party trademarks or copyrighted music or other material without permission. | Confirmed from docs |
 | 6.9 | **Third-party data and integrations**: entrants must be authorized to use any third-party SDK, API or data under its terms. Submissions must not violate others' copyright, trademark, patent, contract or **privacy rights**; content must not be subject to third-party rights "including privacy and publicity rights" unless the entrant owns them or has permission. Open source use is allowed if licenses are respected. | Confirmed from docs |
 | 6.10 | **Filming people**: no rule specific to filming the public. The privacy/publicity warranty in 6.9 applies, so anyone identifiable in the video or published data needs permission. Sponsor and Devpost may later allow edits that remove personally identifiable information. Our approach: docs/PRIVACY.md. | Confirmed from docs |
@@ -167,16 +154,19 @@ Source for every row: https://nebiusglobalaihackathon.devpost.com/rules (Officia
 | 6.13 | Not eligible: residents of Brazil, Quebec, Russia, Crimea, Cuba, Iran, North Korea and other OFAC-sanctioned regions; Sponsor/Administrator staff and families; judges and their employers. | Confirmed from docs |
 | 6.14 | Sponsor and Devpost may use the name, likeness, voice and image of all contributors in promotion for three years. | Confirmed from docs |
 
-## 7. Open items (Confirm with account)
+## 7. Account checks
 
-| Item | How to confirm |
-|---|---|
-| Token Factory model IDs actually served, incl. Ultra and the 3.5 successors | `python scripts/verify_token_factory.py` with `NEBIUS_API_KEY` |
-| Per-model price, context length, tool-calling / JSON support | `GET /v1/models?verbose=true` |
-| Base rate limits for our project | Token Factory console, Rate Limits section |
-| Serverless CPU job on `cpu-d3` | `bash infra/nebius/submit_sim_shards.sh --dry-run` |
-| Compute quotas (VMs, vCPUs, GPUs per platform) | console.nebius.com/quota |
-| Presigned PUT/GET on `storage.eu-north1.nebius.cloud` | `bash infra/nebius/create_bucket.sh` then one upload from a phone |
-| WebSocket through the endpoint's managed HTTPS URL | open `wss://<endpoint>/live/<session>` after `deploy_api_endpoint.sh` |
-| Hackathon credits for Nebius and Tavily | account dashboards |
-| Prize stacking meaning | written clarification request to the organizers |
+| Item | How to check | Status |
+|---|---|---|
+| Token Factory model IDs actually served, incl. Ultra and the 3.5 successors | `python scripts/verify_token_factory.py` with `NEBIUS_API_KEY` | Done 2026-10-28: every active ID is listed and answers (section "Token Factory") |
+| Retiring IDs (`NVIDIA-Nemotron-3-Nano-30B-A3B`, `nemotron-3-super-120b-a12b`, leave 2026-11-09) | `config/models.yaml` `active` candidates | Done: `nano` and `super` run on `nvidia/Nemotron-3_5-Lightning` and `nvidia/Nemotron-3.5-Super-VL`; the retiring IDs are second candidates |
+| Models removed 2026-08-31 (`Nemotron-3-Nano-Omni`, `Cosmos3-Super-Reasoner`) | `config/models.yaml` | Done: in no candidate list |
+| Tool calling on the Super tier | live investigation loop | Done 2026-10-28: the live investigation loop called the Super tier with tool schemas; 39 Super calls in total, 0 failed (`docs/PROOF.md`) |
+| Per-model price and context length | `GET /v1/models?verbose=true` | Prices in `config/models.yaml` are list-price estimates; the Token Factory billing page is the reference |
+| Base rate limits for our project | Token Factory console, Rate Limits section | Live runs on 2026-10-28: 90 calls, 0 failed (`docs/PROOF.md`) |
+| Serverless CPU job on `cpu-d3` | `bash infra/nebius/submit_sim_shards.sh --dry-run` | Open |
+| Compute quotas (VMs, vCPUs, GPUs per platform) | console.nebius.com/quota | Open |
+| Presigned PUT/GET on `storage.eu-north1.nebius.cloud` | `bash infra/nebius/create_bucket.sh` then one upload from a phone | Open |
+| WebSocket through the endpoint's managed HTTPS URL | open `wss://<endpoint>/live/<session>` after `deploy_api_endpoint.sh` | Open |
+| Hackathon credits for Nebius and Tavily | account dashboards | Open |
+| Prize stacking meaning | written clarification request to the organizers | Open |
