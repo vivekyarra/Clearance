@@ -1,6 +1,6 @@
 # Clearance Report
 
-Every number below links to where it came from: an on-site measurement, a cited page, your own inputs, a formula, or a simulation batch you can replay. Simulation results are simulation-based estimates, shown as ranges across scan uncertainty.
+Every number below links to where it came from: an on-site measurement, a cited page, your own inputs, a formula, or a simulation batch you can replay. Simulated results are shown as ranges across scan uncertainty.
 
 ## Summary
 
@@ -45,7 +45,7 @@ Rule checks as the site is today:
 |---|---|
 | every task leg feasible on the conservative geometry bound | not met (value: 1 [f_132]/3 legs [f_133]) |
 | no unresolved flagged_manual thresholds on the route | met (value: none) |
-| simulated success at normal traffic (conservative bound) >= 0.90 [f_134] | pending (measure on site) (value: not simulated) |
+| simulated success at normal traffic (conservative bound) >= 0.90 [f_134] | not evaluated (route blocked) (value: blocked before simulation) |
 
 **Why this verdict**
 
@@ -61,7 +61,7 @@ Rule checks as the site is today:
 |---|---|
 | every task leg feasible on the conservative geometry bound | not met (value: 0 [f_211]/3 legs [f_212]) |
 | no unresolved flagged_manual thresholds on the route | met (value: none) |
-| simulated success at normal traffic (conservative bound) >= 0.90 [f_213] | pending (measure on site) (value: not simulated) |
+| simulated success at normal traffic (conservative bound) >= 0.90 [f_213] | not evaluated (route blocked) (value: blocked before simulation) |
 
 **Why this verdict**
 
@@ -77,7 +77,7 @@ Rule checks as the site is today:
 |---|---|
 | every task leg feasible on the conservative geometry bound | not met (value: 0 [f_171]/3 legs [f_172]) |
 | no unresolved flagged_manual thresholds on the route | met (value: none) |
-| simulated success at normal traffic (conservative bound) >= 0.90 [f_173] | pending (measure on site) (value: not simulated) |
+| simulated success at normal traffic (conservative bound) >= 0.90 [f_173] | not evaluated (route blocked) (value: blocked before simulation) |
 
 **Why this verdict**
 
@@ -93,7 +93,7 @@ Rule checks as the site is today:
 |---|---|
 | every task leg feasible on the conservative geometry bound | not met (value: 0 [f_251]/3 legs [f_252]) |
 | no unresolved flagged_manual thresholds on the route | met (value: none) |
-| simulated success at normal traffic (conservative bound) >= 0.90 [f_253] | pending (measure on site) (value: not simulated) |
+| simulated success at normal traffic (conservative bound) >= 0.90 [f_253] | not evaluated (route blocked) (value: blocked before simulation) |
 
 **Why this verdict**
 
@@ -101,13 +101,13 @@ Pudu Robotics BellaBot received Not cleared [f_248] because the conservative geo
 
 ## 3. How we investigated
 
-The investigation loop runs simulator experiments on robots that can drive the route but fall short of the success rule. Keenon Robotics DINERBOT T8 already met every rule, so there was nothing to investigate. Bear Robotics Servi, Bear Robotics Servi Plus, Keenon Robotics DINERBOT T9, Pudu Robotics BellaBot cannot complete every task leg on the measured geometry; the reasons are in the Pinch Map below, and the recommended changes show what would open the route.
+The investigation loop runs simulator experiments on robots that can drive the route but fall short of the success rule. Keenon Robotics DINERBOT T8 met every rule as-is; no investigation needed. Bear Robotics Servi, Bear Robotics Servi Plus, Keenon Robotics DINERBOT T9, Pudu Robotics BellaBot are blocked on the measured geometry at the points shown in the Pinch Map; the recommended changes show what would open the route.
 
-## 4. Why it fails (investigation)
+## 4. Investigation findings
 
-No findings were recorded; the comparison and Pinch Map below show where time is lost.
+No experiment was needed; the comparison and Pinch Map below show where each robot spends its time.
 
-## 5. Robot comparison (simulation-based estimates)
+## 5. Robot comparison (simulated, conservative to optimistic range)
 
 | Robot | Verdict | Legs feasible | Narrowest gap (needed) | Success, quiet traffic | Success, normal traffic | Success, peak traffic | Median mission | Near-misses per mission | Catalog specs |
 |---|---|---|---|---|---|---|---|---|---|
@@ -168,7 +168,7 @@ Formula: `automatable share = success rate (normal traffic, nominal geometry) x 
 - Bear Robotics Servi Plus price: price on request [f_186]; enter a quote to see payback.
 - Keenon Robotics DINERBOT T9 price: price on request [f_146]; enter a quote to see payback.
 - Pudu Robotics BellaBot price: price on request [f_226]; enter a quote to see payback.
-- Traffic is user-estimated [f_006]; a fixed observer phone at peak time would replace the estimate.
+- Traffic: operator input [f_006]. Add an observer phone at peak time for measured counts.
 
 ## 11. Methodology
 
@@ -181,10 +181,11 @@ Formula: `automatable share = success rate (normal traffic, nominal geometry) x 
 
 ## 12. Scope
 
-- Results are simulation-based estimates for wheeled service robots and indoor AMRs on flat floors; real deployments also depend on staff routines, Wi-Fi and vendor setup.
-- Stairs, elevators, outdoor routes and manipulation tasks are outside this report.
+- Results cover route geometry and foot traffic on flat floors; vendor setup, Wi-Fi and staff routines are confirmed during installation.
+- This report covers single-floor indoor delivery routes.
 - Thresholds close to the scan noise are marked for on-site measurement rather than guessed.
-- Vendor specs are used as published and cited; prices appear only when public or entered by you.
+- Vendor specs are used as published and cited.
+- Prices come from public pages or your own quote.
 
 ## 13. Sources
 

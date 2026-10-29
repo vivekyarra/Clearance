@@ -4,7 +4,7 @@
  "sites": [
   {
    "site_id": "ref_cafe",
-   "name": "Reference cafe (seed 0)",
+   "name": "Reference cafe",
    "type": "cafe",
    "area_m2": 48.0,
    "marker": {
@@ -21,7 +21,7 @@
   },
   {
    "site_id": "ref_corridor",
-   "name": "Reference corridor (seed 0)",
+   "name": "Reference corridor",
    "type": "other",
    "area_m2": 28.8,
    "marker": {
@@ -38,7 +38,7 @@
   },
   {
    "site_id": "ref_storeroom",
-   "name": "Reference storeroom (seed 0)",
+   "name": "Reference storeroom",
    "type": "storeroom",
    "area_m2": 80.0,
    "marker": {

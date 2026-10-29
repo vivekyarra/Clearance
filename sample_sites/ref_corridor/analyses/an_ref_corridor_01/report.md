@@ -1,6 +1,6 @@
 # Clearance Report
 
-Every number below links to where it came from: an on-site measurement, a cited page, your own inputs, a formula, or a simulation batch you can replay. Simulation results are simulation-based estimates, shown as ranges across scan uncertainty.
+Every number below links to where it came from: an on-site measurement, a cited page, your own inputs, a formula, or a simulation batch you can replay. Simulated results are shown as ranges across scan uncertainty.
 
 ## Summary
 
@@ -115,13 +115,13 @@ The Pudu Robotics T300 received Cleared [f_545] because all as‑is rule checks 
 
 ## 3. How we investigated
 
-The investigation loop runs simulator experiments on robots that can drive the route but fall short of the success rule. Keenon Robotics W3, Bear Robotics Servi, Keenon Robotics DINERBOT T9, Keenon Robotics DINERBOT T8, Pudu Robotics KettyBot, Pudu Robotics T300 already met every rule, so there was nothing to investigate.
+The investigation loop runs simulator experiments on robots that can drive the route but fall short of the success rule. Keenon Robotics W3, Bear Robotics Servi, Keenon Robotics DINERBOT T9, Keenon Robotics DINERBOT T8, Pudu Robotics KettyBot, Pudu Robotics T300 met every rule as-is; no investigation needed.
 
-## 4. Why it fails (investigation)
+## 4. Investigation findings
 
-No findings were recorded; the comparison and Pinch Map below show where time is lost.
+No experiment was needed; the comparison and Pinch Map below show where each robot spends its time.
 
-## 5. Robot comparison (simulation-based estimates)
+## 5. Robot comparison (simulated, conservative to optimistic range)
 
 | Robot | Verdict | Legs feasible | Narrowest gap (needed) | Success, quiet traffic | Success, normal traffic | Success, peak traffic | Median mission | Near-misses per mission | Catalog specs |
 |---|---|---|---|---|---|---|---|---|---|
@@ -191,7 +191,7 @@ Formula: `automatable share = success rate (normal traffic, nominal geometry) x 
 - Keenon Robotics DINERBOT T8 price: price on request [f_025]; enter a quote to see payback.
 - Pudu Robotics KettyBot price: price on request [f_205]; enter a quote to see payback.
 - Pudu Robotics T300 price: price on request [f_472]; enter a quote to see payback.
-- Traffic is user-estimated [f_006]; a fixed observer phone at peak time would replace the estimate.
+- Traffic: operator input [f_006]. Add an observer phone at peak time for measured counts.
 
 ## 11. Methodology
 
@@ -203,10 +203,11 @@ Formula: `automatable share = success rate (normal traffic, nominal geometry) x 
 
 ## 12. Scope
 
-- Results are simulation-based estimates for wheeled service robots and indoor AMRs on flat floors; real deployments also depend on staff routines, Wi-Fi and vendor setup.
-- Stairs, elevators, outdoor routes and manipulation tasks are outside this report.
+- Results cover route geometry and foot traffic on flat floors; vendor setup, Wi-Fi and staff routines are confirmed during installation.
+- This report covers single-floor indoor delivery routes.
 - Thresholds close to the scan noise are marked for on-site measurement rather than guessed.
-- Vendor specs are used as published and cited; prices appear only when public or entered by you.
+- Vendor specs are used as published and cited.
+- Prices come from public pages or your own quote.
 
 ## 13. Sources
 

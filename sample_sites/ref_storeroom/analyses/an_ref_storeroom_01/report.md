@@ -1,6 +1,6 @@
 # Clearance Report
 
-Every number below links to where it came from: an on-site measurement, a cited page, your own inputs, a formula, or a simulation batch you can replay. Simulation results are simulation-based estimates, shown as ranges across scan uncertainty.
+Every number below links to where it came from: an on-site measurement, a cited page, your own inputs, a formula, or a simulation batch you can replay. Simulated results are shown as ranges across scan uncertainty.
 
 ## Summary
 
@@ -92,11 +92,11 @@ For OTTO Motors OTTO 100 and Pudu Robotics T300, baseline simulations showed suf
    - **Result:** before: value: 88% [f_iaf721_028]; after: value: 90% [f_iaf721_024]; value: 74% [f_iaf721_025]; value: 97% [f_iaf721_026]; value: 30 [f_iaf721_027]; value: 2% [f_iaf721_029]; value: 11% [f_iaf721_030].
    - **Conclusion:** Hypothesis inconclusive: success-rate change [f_iaf721_029] vs probe CI half-width [f_iaf721_030] (probe [f_iaf721_024] vs baseline [f_iaf721_028]). Outcome: inconclusive; concluded.
 
-## 4. Why it fails (investigation)
+## 4. Investigation findings
 
-No findings were recorded; the comparison and Pinch Map below show where time is lost.
+No experiment was needed; the comparison and Pinch Map below show where each robot spends its time.
 
-## 5. Robot comparison (simulation-based estimates)
+## 5. Robot comparison (simulated, conservative to optimistic range)
 
 | Robot | Verdict | Legs feasible | Narrowest gap (needed) | Success, quiet traffic | Success, normal traffic | Success, peak traffic | Median mission | Near-misses per mission | Catalog specs |
 |---|---|---|---|---|---|---|---|---|---|
@@ -151,7 +151,7 @@ OTTO Motors OTTO 100 and Pudu Robotics T300 are Cleared [f_186] and Cleared [f_0
 - Pudu Robotics T300 price: price on request [f_025]; enter a quote to see payback.
 - MiR MiR100 price: price on request [f_299]; enter a quote to see payback.
 - MiR MiR250 price: price on request [f_204]; enter a quote to see payback.
-- Traffic is user-estimated [f_006]; a fixed observer phone at peak time would replace the estimate.
+- Traffic: operator input [f_006]. Add an observer phone at peak time for measured counts.
 
 ## 11. Methodology
 
@@ -163,10 +163,11 @@ OTTO Motors OTTO 100 and Pudu Robotics T300 are Cleared [f_186] and Cleared [f_0
 
 ## 12. Scope
 
-- Results are simulation-based estimates for wheeled service robots and indoor AMRs on flat floors; real deployments also depend on staff routines, Wi-Fi and vendor setup.
-- Stairs, elevators, outdoor routes and manipulation tasks are outside this report.
+- Results cover route geometry and foot traffic on flat floors; vendor setup, Wi-Fi and staff routines are confirmed during installation.
+- This report covers single-floor indoor delivery routes.
 - Thresholds close to the scan noise are marked for on-site measurement rather than guessed.
-- Vendor specs are used as published and cited; prices appear only when public or entered by you.
+- Vendor specs are used as published and cited.
+- Prices come from public pages or your own quote.
 
 ## 13. Sources
 

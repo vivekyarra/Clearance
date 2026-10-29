@@ -458,7 +458,7 @@ def save_sample_site(kind: str, site_id: str, seed: int = 0, root: str | Path | 
     dump(tdir / "gt_measurements.json", room.gt_measurements)
     site_type = {"cafe": "cafe", "storeroom": "storeroom", "corridor": "office"}.get(kind, "golden")
     dump(base / site_id / "site.json", {
-        "site_id": site_id, "name": f"Reference {kind.replace('_', ' ')} (seed {seed})", "type": site_type,
+        "site_id": site_id, "name": f"Reference {kind.replace('_', ' ')}", "type": site_type,
         "kind": kind, "seed": seed, "geometry_source": "reference", "area_m2": round(room.width * room.depth, 2),
         "latest_version": 1, "twin": key_prefix + "twin.json"})
     return twin
