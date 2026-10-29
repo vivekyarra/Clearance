@@ -4,6 +4,29 @@ Running log kept while building Clearance for the Nebius x NVIDIA Global AI Hack
 
 Products covered: Nebius Token Factory, Nebius AI Cloud (Serverless AI, Object Storage, Container Registry, CLI), NVIDIA Nemotron and Cosmos models, plus Tavily (part of the Nebius portfolio).
 
+## Scores
+
+| Product | Score | One line |
+|---|:-:|---|
+| Nebius Token Factory | 9/10 | 90 live calls, 0 failures. Fast, stable, OpenAI-compatible. Pricing and model lifecycle cost us time. |
+| NVIDIA Nemotron (3.5 Super VL, 3 Ultra, 3.5 Lightning) | 9/10 | Super VL runs our investigation loop well. Ultra writes the best reports we tested, but far too long. |
+| Tavily | 9/10 | Search + Extract gave us specs we can quote word for word. Ranking needs an exact-model option. |
+| Nebius AI Cloud (Serverless, Object Storage, CLI) | 8/10 | Excellent docs and CLI. Getting a GPU for a hackathon project means real money on a personal card. |
+| NVIDIA Cosmos Reason 2 | 8/10 | The right model for scene hazards. Too hard to reach for a few calls per scan. |
+
+## The hard parts, plainly
+
+These cost us the most time or forced a change of plan. All are from this build.
+
+1. **A GPU means a personal card charge.** The Builder Program gives $25 of Token Factory credit, and that covers model calls only. Cosmos Reason 2 and Serverless Jobs need Nebius AI Cloud, which bills the card on file. As a solo builder we could not risk an open-ended charge, so our Cosmos endpoint and simulation jobs ship as deploy scripts instead of running live. **Ask:** hackathon AI Cloud credits, or a hard spend cap that refuses to charge the card once credits run out.
+2. **Cosmos Reason 2 is not on Token Factory.** Using it means a dedicated GPU endpoint, a Hugging Face token, a vLLM image and a preset choice, for a model we call a few times per scan. We ran scene hazards on Nemotron 3.5 Super VL instead. **Ask:** Cosmos Reason 2 as a serverless Token Factory model, billed per token.
+3. **The models we built on retire during judging.** Nemotron 3 Nano 30B and Nemotron 3 Super 120B leave Serverless on 2026-11-09. Submissions close 2026-10-30 and judging runs 2026-12-01 to 12-15. We migrated to the 3.5 models mid-build. **Ask:** keep event-recommended models live until judging ends, or offer stable aliases such as `nemotron-super-latest`.
+4. **Prices are behind a sign-in.** The prices page renders only in a signed-in browser, so our scripts and coding agents saw an empty page and we had to mark our cost table as a list-price estimate. **Ask:** a public, static price table, and a link to the `pricing` object in `GET /v1/models?verbose=true`.
+5. **Four model ID styles.** `NVIDIA-Nemotron-3-Nano-30B-A3B`, `nemotron-3-super-120b-a12b`, `Nemotron-3_5-Lightning`, `Nemotron-3.5-Super-VL`. Each style difference was a "model not found" until we normalised IDs in our own script. **Ask:** one naming convention, or case- and punctuation-insensitive matching.
+6. **Ultra writes ten times what we ask for.** About 2,500 output tokens per call for sections budgeted at 120–250 words. Once, a regenerated section came back as the model's working notes instead of prose, and our fact checker had to cut it apart. We now replace any section over twice its budget with a code template. **Ask:** a per-request switch for reasoning length on Ultra, and reasoning tokens reported separately in `usage`.
+7. **The API key arrived on day 2.** We planned and built day 1 without a key, from the docs alone. **Ask:** issue keys (even rate-limited ones) at registration.
+8. **Credits arrived the day before the deadline.** The Builder Program welcome email came on 2026-10-29, with the Token Factory credit "in a separate email". **Ask:** send credits at kickoff so teams can plan their spend.
+
 ---
 
 ## 2026-10-28/29 — Live runs on Token Factory
